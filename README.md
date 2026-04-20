@@ -250,6 +250,24 @@ python3 scripts/build_site.py reports/2026-04-20-uiux-web-service-weekly-trend-r
 python3 scripts/build_site.py
 ```
 
+## 매거진 사이트 배포하기
+
+프로젝트 루트의 `.env`에 FTP 값을 설정한 뒤 `site/`를 업로드합니다. 기본 원격 경로는 `/cttd-email/magazine`입니다.
+
+```dotenv
+FTP_HOST=ftp.example.com
+FTP_PORT=21
+FTP_USER=ftp-user
+FTP_PASSWORD=ftp-password
+FTP_SECURE=false
+FTP_REMOTE_DIR=/cttd-email/magazine
+```
+
+```bash
+MAGAZINE_BASE_URL=https://email.cttd.co.kr/magazine python3 scripts/build_site.py reports/2026-04-20-uiux-web-service-weekly-trend-report.md
+python3 scripts/deploy_magazine.py
+```
+
 ## 뉴스레터 발송하기
 
 프로젝트 루트의 `.env` 또는 셸 환경변수에 SMTP 값을 설정한 뒤 `--send`를 붙입니다.
