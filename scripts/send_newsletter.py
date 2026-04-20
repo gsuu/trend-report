@@ -17,7 +17,7 @@ SITE_MARK_FALLBACK_COLOR = "#f9ffc1"
 SITE_MARK_BACKGROUND = f"background:{SITE_MARK_FALLBACK_COLOR};background:{SITE_MARK_COLOR}"
 SITE_MARK_BORDER_LEFT = f"border-left:4px solid {SITE_MARK_FALLBACK_COLOR};border-left:4px solid {SITE_MARK_COLOR}"
 TEST_RECIPIENT = "jisuk@cttd.co.kr"
-FINAL_RECIPIENT = "cxd@cttd.co.kr"
+UIUX_FINAL_RECIPIENT = "cxd@cttd.co.kr"
 DEV_FINAL_SUBSCRIBERS_PATH = ROOT / "config" / "dev-final-subscribers.txt"
 PRODUCTION_MAGAZINE_BASE_URL = "https://email.cttd.co.kr/magazine"
 EMAIL_LOGO_ASSET_NAME = "cttd-logo-email.png"
@@ -331,7 +331,7 @@ def read_subscribers(path: str | None) -> list[str]:
 def final_recipients_for_audience(audience: str) -> list[str]:
     if normalize_audience(audience) == "dev":
         return read_subscribers(str(DEV_FINAL_SUBSCRIBERS_PATH))
-    return [FINAL_RECIPIENT]
+    return [UIUX_FINAL_RECIPIENT]
 
 
 def split_recipients(values: list[str]) -> list[str]:
@@ -1589,9 +1589,9 @@ def enforce_send_stage(args: argparse.Namespace, recipients: list[str], magazine
         return
 
     if args.stage == "preview":
-        if FINAL_RECIPIENT in recipients:
+        if UIUX_FINAL_RECIPIENT in recipients:
             raise SystemExit(
-                f"{FINAL_RECIPIENT} 최종 발송은 --stage final --approved 조합에서만 가능합니다. "
+                f"{UIUX_FINAL_RECIPIENT} UIUX 최종 발송은 --stage final --approved 조합에서만 가능합니다. "
                 "먼저 --stage test로 테스트 메일을 보내고 확인을 받으세요."
             )
         return
@@ -1609,7 +1609,7 @@ def enforce_send_stage(args: argparse.Namespace, recipients: list[str], magazine
         if recipients != expected_recipients:
             if normalize_audience(args.audience) == "dev":
                 raise SystemExit(f"Dev 최종 발송 수신자는 {DEV_FINAL_SUBSCRIBERS_PATH} 목록만 허용됩니다.")
-            raise SystemExit(f"최종 발송 수신자는 {FINAL_RECIPIENT}만 허용됩니다.")
+            raise SystemExit(f"UIUX 최종 발송 수신자는 {UIUX_FINAL_RECIPIENT}만 허용됩니다.")
 
 
 def smtp_config() -> dict[str, str | int | bool]:

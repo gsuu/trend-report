@@ -274,7 +274,7 @@ python3 scripts/deploy_magazine.py
 
 프로젝트 루트의 `.env` 또는 셸 환경변수에 SMTP 값을 설정한 뒤 `--send`를 붙입니다.
 
-PDF 기반 자료 수집 후 뉴스레터를 보낼 때는 먼저 `jisuk@cttd.co.kr`로 테스트 메일을 보내고, 사용자가 확인한 뒤에만 `cxd@cttd.co.kr`로 최종 발송합니다. 자세한 운영 규칙은 `AGENTS.md`를 따릅니다.
+PDF 기반 자료 수집 후 UIUX 뉴스레터를 보낼 때는 먼저 `jisuk@cttd.co.kr`로 테스트 메일을 보내고, 사용자가 확인한 뒤에만 `cxd@cttd.co.kr`로 최종 발송합니다. 자세한 운영 규칙은 `AGENTS.md`를 따릅니다.
 
 처음 설정할 때는 예시 파일을 복사해 실제 값을 채웁니다.
 
@@ -321,6 +321,16 @@ MAGAZINE_BASE_URL=https://magazine.example.com
 python3 scripts/send_newsletter.py \
   reports/2026-04-20-uiux-web-service-weekly-trend-report.md \
   --subscribers config/subscribers.txt \
+  --send
+```
+
+UIUX 최종 발송 수신자는 `cxd@cttd.co.kr`입니다. 테스트 메일 확인 후 아래 명령으로 발송합니다.
+
+```bash
+python3 scripts/send_newsletter.py \
+  reports/2026-04-20-uiux-web-service-weekly-trend-report.md \
+  --stage final \
+  --approved \
   --send
 ```
 
