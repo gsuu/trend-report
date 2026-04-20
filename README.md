@@ -333,3 +333,14 @@ python3 scripts/send_newsletter.py \
   --stage test \
   --send
 ```
+
+dev 최종 발송 수신자는 `config/dev-final-subscribers.txt` 목록만 사용합니다. 테스트 메일 확인 후 아래 명령으로 발송합니다.
+
+```bash
+python3 scripts/send_newsletter.py \
+  reports/2026-04-20-uiux-web-service-weekly-trend-report.md \
+  --audience dev \
+  --stage final \
+  --approved \
+  --send
+```

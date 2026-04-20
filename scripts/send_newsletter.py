@@ -18,6 +18,7 @@ SITE_MARK_BACKGROUND = f"background:{SITE_MARK_FALLBACK_COLOR};background:{SITE_
 SITE_MARK_BORDER_LEFT = f"border-left:4px solid {SITE_MARK_FALLBACK_COLOR};border-left:4px solid {SITE_MARK_COLOR}"
 TEST_RECIPIENT = "jisuk@cttd.co.kr"
 FINAL_RECIPIENT = "cxd@cttd.co.kr"
+DEV_FINAL_SUBSCRIBERS_PATH = ROOT / "config" / "dev-final-subscribers.txt"
 PRODUCTION_MAGAZINE_BASE_URL = "https://email.cttd.co.kr/magazine"
 EMAIL_LOGO_ASSET_NAME = "cttd-logo-email.png"
 EMAIL_LOGO_CONTENT_ID = "cttd-logo-email@cttd"
@@ -325,6 +326,12 @@ def read_subscribers(path: str | None) -> list[str]:
         if value and not value.startswith("#"):
             emails.append(value)
     return emails
+
+
+def final_recipients_for_audience(audience: str) -> list[str]:
+    if normalize_audience(audience) == "dev":
+        return read_subscribers(str(DEV_FINAL_SUBSCRIBERS_PATH))
+    return [FINAL_RECIPIENT]
 
 
 def split_recipients(values: list[str]) -> list[str]:
@@ -1571,7 +1578,7 @@ def resolve_recipients(args: argparse.Namespace) -> list[str]:
     if args.stage == "test":
         return [TEST_RECIPIENT]
     if args.stage == "final":
-        return [FINAL_RECIPIENT]
+        return final_recipients_for_audience(args.audience)
 
     recipients = split_recipients(args.to) + read_subscribers(args.subscribers)
     return sorted(set(recipients))
@@ -1598,7 +1605,10 @@ def enforce_send_stage(args: argparse.Namespace, recipients: list[str], magazine
     if args.stage == "final":
         if not args.approved:
             raise SystemExit("최종 발송에는 테스트 메일 확인 후 --approved를 명시해야 합니다.")
-        if recipients != [FINAL_RECIPIENT]:
+        expected_recipients = final_recipients_for_audience(args.audience)
+        if recipients != expected_recipients:
+            if normalize_audience(args.audience) == "dev":
+                raise SystemExit(f"Dev 최종 발송 수신자는 {DEV_FINAL_SUBSCRIBERS_PATH} 목록만 허용됩니다.")
             raise SystemExit(f"최종 발송 수신자는 {FINAL_RECIPIENT}만 허용됩니다.")
 
 
