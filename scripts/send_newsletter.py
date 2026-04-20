@@ -25,6 +25,7 @@ EMAIL_LOGO_CONTENT_ID = "cttd-logo-email@cttd"
 
 SECTION_LABELS = {
     "서비스 변화 요약": "BRIEF",
+    "기술 변화 요약": "TECH BRIEF",
     "핵심 업데이트": "UPDATE",
     "핵심 수치": "METRIC",
     "핵심 캠페인": "CAMPAIGN",
@@ -45,8 +46,8 @@ SECTION_LABELS = {
 }
 
 NEWSLETTER_SKIP_SECTIONS = {"매거진 상세", "사이트 매거진 상세", "웹사이트 상세", "매거진 인사이트"}
-NEWSLETTER_HEADLINE_SECTIONS = {"서비스 변화 요약", "핵심 업데이트"}
-NEWSLETTER_DESCRIPTION_LABELS = {"서비스 맥락", "변경 후"}
+NEWSLETTER_HEADLINE_SECTIONS = {"서비스 변화 요약", "기술 변화 요약", "핵심 업데이트"}
+NEWSLETTER_DESCRIPTION_LABELS = {"서비스 맥락", "기술 맥락", "변경 후"}
 NEWSLETTER_DETAIL_SUMMARY_SECTIONS = {"매거진 인사이트", "인사이트"}
 DEV_SECTION_HEADING_REPLACEMENTS = {
     "Frontend Development 관점": "프론트엔드 개발 전문가 관점",
@@ -363,7 +364,7 @@ def split_issue_heading(heading: str) -> tuple[str, str, list[str]]:
 
 def clean_newsletter_headline(text: str) -> str:
     headline = clean_newsletter_text(text)
-    for label in ("업데이트", "핵심 업데이트", "서비스 맥락"):
+    for label in ("업데이트", "핵심 업데이트", "기술 맥락", "서비스 맥락"):
         prefix = f"{label}:"
         if headline.startswith(prefix):
             headline = headline[len(prefix):].strip()
@@ -827,7 +828,7 @@ def markdown_to_html(markdown: str) -> str:
     pending_image_url = ""
     pending_image_caption = ""
     summary_brief_open = False
-    summary_brief_sections = {"서비스 변화 요약", "핵심 업데이트", "핵심 캠페인", "변경 전/후"}
+    summary_brief_sections = {"서비스 변화 요약", "기술 변화 요약", "핵심 업데이트", "핵심 캠페인", "변경 전/후"}
     fact_note_sections = {"수치·팩트", "팩트", "핵심 수치"}
     skip_section = False
 

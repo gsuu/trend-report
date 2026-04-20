@@ -69,15 +69,15 @@
         
         
             <section class="article-section">
-              <h2>서비스 변화 요약</h2>
+              <h2>기술 변화 요약</h2>
               
               <ul class="summary-list">
-                <li><span class="summary-key">업데이트</span><span class="summary-value">Astro 6가 built-in Fonts API, Content Security Policy API, Live Content Collections, 재설계된 <code>astro dev</code>를 포함해 공개됐습니다.</span></li><li><span class="summary-key">서비스 맥락</span><span class="summary-value">Astro는 Vite Environment API를 활용해 개발 환경에서도 실제 production runtime을 더 가깝게 실행하는 방향으로 dev server와 build pipeline을 개편했습니다.</span></li><li><span class="summary-key">변경 전</span><span class="summary-value">Cloudflare Workers, Bun, Deno 같은 non-Node runtime을 목표로 할 때 로컬 개발은 Node 기반 시뮬레이션에 가까웠고, 배포 후에야 런타임 차이가 드러나는 경우가 있었습니다.</span></li><li><span class="summary-key">변경 후</span><span class="summary-value">Cloudflare adapter는 개발, prerendering, production 단계에서 <code>workerd</code>를 사용해 KV, D1, R2, Durable Objects 같은 platform binding을 로컬에서 다룰 수 있게 했습니다.</span></li>
+                <li><span class="summary-key">업데이트</span><span class="summary-value">Astro 6가 built-in Fonts API, Content Security Policy API, Live Content Collections, 재설계된 <code>astro dev</code>를 포함해 공개됐습니다.</span></li><li><span class="summary-key">기술 맥락</span><span class="summary-value">Astro는 Vite Environment API를 활용해 개발 환경에서도 실제 production runtime을 더 가깝게 실행하는 방향으로 dev server와 build pipeline을 개편했습니다.</span></li><li><span class="summary-key">변경 전</span><span class="summary-value">Cloudflare Workers, Bun, Deno 같은 non-Node runtime을 목표로 할 때 로컬 개발은 Node 기반 시뮬레이션에 가까웠고, 배포 후에야 런타임 차이가 드러나는 경우가 있었습니다.</span></li><li><span class="summary-key">변경 후</span><span class="summary-value">Cloudflare adapter는 개발, prerendering, production 단계에서 <code>workerd</code>를 사용해 KV, D1, R2, Durable Objects 같은 platform binding을 로컬에서 다룰 수 있게 했습니다.</span></li>
               </ul>
               
               <div class="summary-facts">
                 <ul class="summary-fact-list">
-                  <li><span class="summary-key">주요 변화</span><span class="summary-value">redesigned <code>astro dev</code>, Cloudflare runtime parity, Fonts API, CSP API, Live Content Collections, experimental Rust compiler</span></li><li><span class="summary-key">확인 한계</span><span class="summary-value">Rust compiler, queued rendering, route caching은 experimental이므로 production 도입 전 별도 검증이 필요합니다.</span></li>
+                  <li><span class="summary-key">확인할 영향</span><span class="summary-value">주요 변화 redesigned <code>astro dev</code>, Cloudflare runtime parity, Fonts API, CSP API, Live Content Collections, experimental Rust compiler / 확인 한계 Rust compiler, queued rendering, route caching은 experimental이므로 production 도입 전 별도 검증이 필요합니다.</span></li>
                 </ul>
               </div>
             

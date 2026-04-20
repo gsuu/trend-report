@@ -110,7 +110,7 @@ DEV_SECTION_HEADING_REPLACEMENTS = {
 }
 SECTION_BLOCK_PATTERN = re.compile(r"^@@(?P<kind>quote|subhead|paragraph|list)@@(?P<text>.*)")
 SUMMARY_LABEL_PATTERN = re.compile(r"^(?P<label>[^:：]{2,18})[:：]\s*(?P<value>.+)$")
-CORE_SUMMARY_LABELS = {"업데이트", "서비스 맥락", "변경 전", "변경 후"}
+CORE_SUMMARY_LABELS = {"업데이트", "서비스 맥락", "기술 맥락", "변경 전", "변경 후"}
 HIDDEN_FACT_KEYS = {"출처 URL", "서비스 URL"}
 SOURCE_TITLE_CACHE: dict[str, str] = {}
 
@@ -770,7 +770,7 @@ def issue_takeaway(issue: Issue) -> str:
     if detail_quote:
         return detail_quote
 
-    for section_name in ("인사이트", "서비스 변화 요약", "핵심 업데이트", "변경 전/후"):
+    for section_name in ("인사이트", "기술 변화 요약", "서비스 변화 요약", "핵심 업데이트", "변경 전/후"):
         items = issue.sections.get(section_name, [])
         if items:
             return strip_brief_label(items[0])
@@ -778,7 +778,7 @@ def issue_takeaway(issue: Issue) -> str:
 
 
 def issue_deck(issue: Issue) -> str:
-    items = issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
+    items = issue.sections.get("기술 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
     if items:
         return strip_brief_label(items[0])
     return issue.meta.get("출처", "")
@@ -808,7 +808,7 @@ def issue_newsletter_summary(issue: Issue, limit: int = 76) -> str:
 
 
 def strip_brief_label(text: str) -> str:
-    for label in ("업데이트", "핵심 업데이트", "서비스 맥락"):
+    for label in ("업데이트", "핵심 업데이트", "기술 맥락", "서비스 맥락"):
         prefix = f"{label}:"
         if text.startswith(prefix):
             return text[len(prefix):].strip()
@@ -1232,7 +1232,7 @@ def render_index(report: Report) -> str:
         isSummaryFact(item) {{
           const text = String(item);
           const match = text.match(/^([^:：]{{2,18}})[:：]\\s*(.+)$/);
-          return !match || !["업데이트", "서비스 맥락", "변경 전", "변경 후"].includes(match[1]);
+          return !match || !["업데이트", "서비스 맥락", "기술 맥락", "변경 전", "변경 후"].includes(match[1]);
         }},
         summaryCoreItems(items) {{
           return items.filter((item) => !this.isSummaryFact(item));
