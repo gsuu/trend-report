@@ -10,13 +10,15 @@ import ssl
 from email.message import EmailMessage
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 PREVIEW_DIR = ROOT / "newsletters"
 SITE_MARK_COLOR = "rgba(238, 255, 72, 0.34)"
 SITE_MARK_FALLBACK_COLOR = "#f9ffc1"
 SITE_MARK_BACKGROUND = f"background:{SITE_MARK_FALLBACK_COLOR};background:{SITE_MARK_COLOR}"
 SITE_MARK_BORDER_LEFT = f"border-left:4px solid {SITE_MARK_FALLBACK_COLOR};border-left:4px solid {SITE_MARK_COLOR}"
+TEST_RECIPIENT = "jisuk@cttd.co.kr"
+FINAL_RECIPIENT = "cxd@cttd.co.kr"
+PRODUCTION_MAGAZINE_BASE_URL = "https://email.cttd.co.kr/magazine"
 
 
 SECTION_LABELS = {
@@ -44,6 +46,15 @@ NEWSLETTER_SKIP_SECTIONS = {"매거진 상세", "사이트 매거진 상세", "�
 NEWSLETTER_HEADLINE_SECTIONS = {"서비스 변화 요약", "핵심 업데이트"}
 NEWSLETTER_DESCRIPTION_LABELS = {"서비스 맥락", "변경 후"}
 NEWSLETTER_DETAIL_SUMMARY_SECTIONS = {"매거진 인사이트", "인사이트"}
+DEVELOP_CATEGORY_KEYS = {
+    "dev",
+    "develop",
+    "development",
+    "engineering",
+    "frontend",
+    "backend",
+    "web_develop",
+}
 
 
 def load_env_file(path: Path) -> None:
@@ -69,12 +80,29 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--to", action="append", default=[], help="수신자 이메일. 쉼표 구분 또는 여러 번 입력 가능")
     parser.add_argument("--subscribers", help="수신자 목록 txt 파일")
     parser.add_argument("--magazine-base-url", help="매거진 공개 URL. 없으면 MAGAZINE_BASE_URL 환경변수 또는 로컬 미리보기 링크를 사용합니다.")
+    parser.add_argument(
+        "--audience",
+        choices=("general", "develop", "all"),
+        default="general",
+        help="뉴스레터 대상. general은 develop 이슈 제외, develop은 develop 이슈만, all은 전체 이슈를 포함합니다.",
+    )
+    parser.add_argument(
+        "--stage",
+        choices=("preview", "test", "final"),
+        default="preview",
+        help="발송 단계. preview는 미리보기만, test는 테스트 수신자, final은 최종 수신자로 발송합니다.",
+    )
+    parser.add_argument("--approved", action="store_true", help="테스트 메일 확인 후 최종 발송을 승인합니다. --stage final에서 필요합니다.")
     parser.add_argument("--send", action="store_true", help="실제 메일을 발송합니다. 없으면 HTML 미리보기만 생성합니다.")
     return parser.parse_args()
 
 
-def resolve_magazine_base_url(value: str | None) -> str:
-    return (value or os.getenv("MAGAZINE_BASE_URL", "")).strip()
+def resolve_magazine_base_url(value: str | None, stage: str) -> str:
+    if value:
+        return value.strip()
+    if stage in {"test", "final"}:
+        return os.getenv("MAGAZINE_BASE_URL", PRODUCTION_MAGAZINE_BASE_URL).strip()
+    return os.getenv("MAGAZINE_BASE_URL", "").strip()
 
 
 def read_subscribers(path: str | None) -> list[str]:
@@ -162,10 +190,11 @@ def split_newsletter_label(text: str) -> tuple[str, str]:
     return label.strip(), value.strip()
 
 
-def parse_newsletter_items(markdown: str) -> list[dict[str, object]]:
+def parse_newsletter_items(markdown: str, audience: str = "general") -> list[dict[str, object]]:
     items: list[dict[str, object]] = []
     current: dict[str, object] | None = None
     current_section = ""
+    current_category = ""
 
     def append_current() -> None:
         nonlocal current
@@ -181,6 +210,10 @@ def parse_newsletter_items(markdown: str) -> list[dict[str, object]]:
     for raw_line in markdown.splitlines():
         line = raw_line.strip()
 
+        if line.startswith("### ") and not line.startswith("#### "):
+            current_category = line[4:].strip()
+            continue
+
         if line.startswith("#### "):
             heading = line[5:].strip()
             if not re.match(r"\d+\.\s*", heading):
@@ -189,6 +222,11 @@ def parse_newsletter_items(markdown: str) -> list[dict[str, object]]:
             append_current()
 
             number, platform, tags = split_issue_heading(heading)
+            if not should_include_issue_for_audience(current_category, tags, audience):
+                current = None
+                current_section = ""
+                continue
+
             current = {
                 "number": number,
                 "platform": platform,
@@ -230,6 +268,29 @@ def parse_newsletter_items(markdown: str) -> list[dict[str, object]]:
     append_current()
 
     return items
+
+
+def should_include_issue_for_audience(category: str, tags: list[str], audience: str) -> bool:
+    is_develop = is_develop_issue(category, tags)
+    if audience == "develop":
+        return is_develop
+    if audience == "all":
+        return True
+    return not is_develop
+
+
+def audience_label(audience: str) -> str:
+    return {
+        "general": "일반",
+        "develop": "Develop",
+        "all": "전체",
+    }.get(audience, audience)
+
+
+def is_develop_issue(category: str, tags: list[str]) -> bool:
+    category_key = category.strip().lower()
+    tag_keys = {tag.strip().lower() for tag in tags}
+    return category_key in DEVELOP_CATEGORY_KEYS or bool(tag_keys.intersection(DEVELOP_CATEGORY_KEYS))
 
 
 def magazine_href(report_path: Path, number: str, magazine_base_url: str | None) -> str:
@@ -660,9 +721,26 @@ def render_newsletter_item(report_path: Path, item: dict[str, object], magazine_
     )
 
 
-def render_newsletter(title: str, markdown: str, report_path: Path, magazine_base_url: str | None = None) -> str:
-    items = parse_newsletter_items(markdown)
+def render_newsletter(
+    title: str,
+    markdown: str,
+    report_path: Path,
+    magazine_base_url: str | None = None,
+    audience: str = "general",
+    items: list[dict[str, object]] | None = None,
+) -> str:
+    if items is None:
+        items = parse_newsletter_items(markdown, audience)
     body = "\n".join(render_newsletter_item(report_path, item, magazine_base_url) for item in items)
+    if not body:
+        body = (
+            '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" '
+            'style="margin:0;border-top:1px solid #eeeeee;border-bottom:1px solid #eeeeee;">'
+            '<tr><td style="padding:24px 0;color:#555555;font-size:14px;line-height:1.6;'
+            'font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">'
+            f"{html.escape(audience_label(audience))} 대상에 포함되는 이슈가 없습니다."
+            '</td></tr></table>'
+        )
     logo_src = html.escape(magazine_asset_href("cttd-logo.svg", magazine_base_url), quote=True)
     return f"""<!doctype html>
 <html lang="ko">
@@ -940,7 +1018,7 @@ def render_newsletter(title: str, markdown: str, report_path: Path, magazine_bas
                 </tr>
                 <tr>
                   <td style="padding:0;color:#666666;font-size:13px;line-height:1.6;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">
-                    이번 주 매거진에 업데이트된 UIUX/Web Service 이슈입니다. 상세 내용은 각 매거진 링크에서 확인하세요.
+                    이번 주 매거진에 업데이트된 {html.escape(audience_label(audience))} 대상 UIUX/Web Service 이슈입니다. 상세 내용은 각 매거진 링크에서 확인하세요.
                   </td>
                 </tr>
               </table>
@@ -967,9 +1045,22 @@ def markdown_to_plain_text(markdown: str) -> str:
     return text
 
 
-def newsletter_plain_text(title: str, markdown: str, report_path: Path, magazine_base_url: str | None) -> str:
+def newsletter_plain_text(
+    title: str,
+    markdown: str,
+    report_path: Path,
+    magazine_base_url: str | None,
+    audience: str = "general",
+    items: list[dict[str, object]] | None = None,
+) -> str:
     lines = [title, ""]
-    for item in parse_newsletter_items(markdown):
+    if items is None:
+        items = parse_newsletter_items(markdown, audience)
+    if not items:
+        lines.append(f"{audience_label(audience)} 대상에 포함되는 이슈가 없습니다.")
+        return "\n".join(lines)
+
+    for item in items:
         number = str(item["number"]).zfill(2)
         platform = str(item["platform"])
         headline = str(item.get("headline") or "").strip()
@@ -990,11 +1081,47 @@ def newsletter_plain_text(title: str, markdown: str, report_path: Path, magazine
     return "\n".join(lines)
 
 
-def save_preview(report_path: Path, newsletter_html: str) -> Path:
+def save_preview(report_path: Path, newsletter_html: str, audience: str = "general") -> Path:
     PREVIEW_DIR.mkdir(exist_ok=True)
-    output_path = PREVIEW_DIR / f"{report_path.stem}.html"
+    suffix = "" if audience == "general" else f"-{audience}"
+    output_path = PREVIEW_DIR / f"{report_path.stem}{suffix}.html"
     output_path.write_text(newsletter_html, encoding="utf-8")
     return output_path
+
+
+def resolve_recipients(args: argparse.Namespace) -> list[str]:
+    if args.stage == "test":
+        return [TEST_RECIPIENT]
+    if args.stage == "final":
+        return [FINAL_RECIPIENT]
+
+    recipients = split_recipients(args.to) + read_subscribers(args.subscribers)
+    return sorted(set(recipients))
+
+
+def enforce_send_stage(args: argparse.Namespace, recipients: list[str], magazine_base_url: str) -> None:
+    if not args.send:
+        return
+
+    if args.stage == "preview":
+        if FINAL_RECIPIENT in recipients:
+            raise SystemExit(
+                f"{FINAL_RECIPIENT} 최종 발송은 --stage final --approved 조합에서만 가능합니다. "
+                "먼저 --stage test로 테스트 메일을 보내고 확인을 받으세요."
+            )
+        return
+
+    if magazine_base_url.rstrip("/") != PRODUCTION_MAGAZINE_BASE_URL:
+        raise SystemExit(f"{args.stage} 발송에는 MAGAZINE_BASE_URL={PRODUCTION_MAGAZINE_BASE_URL} 이 필요합니다.")
+
+    if args.stage == "test" and recipients != [TEST_RECIPIENT]:
+        raise SystemExit(f"테스트 발송 수신자는 {TEST_RECIPIENT}만 허용됩니다.")
+
+    if args.stage == "final":
+        if not args.approved:
+            raise SystemExit("최종 발송에는 테스트 메일 확인 후 --approved를 명시해야 합니다.")
+        if recipients != [FINAL_RECIPIENT]:
+            raise SystemExit(f"최종 발송 수신자는 {FINAL_RECIPIENT}만 허용됩니다.")
 
 
 def smtp_config() -> dict[str, str | int | bool]:
@@ -1056,7 +1183,7 @@ def main() -> None:
     markdown = report_path.read_text(encoding="utf-8")
     title = extract_title(markdown, report_path.stem)
     subject = args.subject or title
-    magazine_base_url = resolve_magazine_base_url(args.magazine_base_url)
+    magazine_base_url = resolve_magazine_base_url(args.magazine_base_url, args.stage)
 
     if args.send and not magazine_base_url:
         raise SystemExit(
@@ -1064,21 +1191,23 @@ def main() -> None:
             "--magazine-base-url 또는 MAGAZINE_BASE_URL을 설정하세요."
         )
 
-    newsletter_html = render_newsletter(title, markdown, report_path, magazine_base_url or None)
-    preview_path = save_preview(report_path, newsletter_html)
+    newsletter_html = render_newsletter(title, markdown, report_path, magazine_base_url or None, args.audience)
+    preview_path = save_preview(report_path, newsletter_html, args.audience)
 
-    recipients = split_recipients(args.to) + read_subscribers(args.subscribers)
-    recipients = sorted(set(recipients))
+    recipients = resolve_recipients(args)
+    enforce_send_stage(args, recipients, magazine_base_url)
 
     if not args.send:
         print(f"미리보기 생성: {preview_path}")
+        if args.stage in {"test", "final"}:
+            print(f"{args.stage} 단계 수신자: {', '.join(recipients)}")
         return
 
     if not recipients:
         raise SystemExit("수신자가 없습니다. --to 또는 --subscribers를 입력하세요.")
 
     sender = os.getenv("SMTP_FROM", "")
-    plain_text = newsletter_plain_text(title, markdown, report_path, magazine_base_url or None)
+    plain_text = newsletter_plain_text(title, markdown, report_path, magazine_base_url or None, args.audience)
     send_email(subject, sender, recipients, plain_text, newsletter_html)
     print(f"발송 완료: {len(recipients)}명")
 
