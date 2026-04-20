@@ -1,0 +1,259 @@
+{
+  "contentPriority": [
+    "fashion",
+    "ecommerce",
+    "department_store",
+    "beauty",
+    "book_content"
+  ],
+  "domestic": [
+    {
+      "name": "무신사",
+      "category": "fashion",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "Musinsa newsroom"
+      ]
+    },
+    {
+      "name": "SSF SHOP",
+      "category": "fashion",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "SSF SHOP",
+        "Samsung C&T Fashion news",
+        "media"
+      ]
+    },
+    {
+      "name": "코오롱몰",
+      "category": "fashion",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "Kolon Mall",
+        "Kolon FnC news",
+        "media"
+      ]
+    },
+    {
+      "name": "LF몰",
+      "category": "fashion",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "LFmall",
+        "LF news",
+        "media"
+      ]
+    },
+    {
+      "name": "W Concept",
+      "category": "fashion",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "W Concept",
+        "Shinsegae newsroom",
+        "media"
+      ]
+    },
+    {
+      "name": "29CM",
+      "category": "fashion",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "29CM",
+        "Musinsa newsroom",
+        "media"
+      ]
+    },
+    {
+      "name": "EQL",
+      "category": "fashion",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "EQL",
+        "Handsome news",
+        "media"
+      ]
+    },
+    {
+      "name": "쿠팡",
+      "category": "ecommerce",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "Coupang newsroom",
+        "media"
+      ]
+    },
+    {
+      "name": "SSG.COM",
+      "category": "ecommerce",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "Shinsegae newsroom"
+      ]
+    },
+    {
+      "name": "롯데ON",
+      "category": "ecommerce",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "Lotte Shopping newsroom",
+        "media"
+      ]
+    },
+    {
+      "name": "G마켓",
+      "category": "ecommerce",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "Shinsegae newsroom",
+        "Gmarket notice"
+      ]
+    },
+    {
+      "name": "네이버플러스 스토어",
+      "category": "ecommerce",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "Naver newsroom",
+        "media"
+      ]
+    },
+    {
+      "name": "당근마켓",
+      "category": "ecommerce",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "Daangn newsroom"
+      ]
+    },
+    {
+      "name": "신세계백화점",
+      "category": "department_store",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "Shinsegae Department Store",
+        "Shinsegae newsroom",
+        "media"
+      ]
+    },
+    {
+      "name": "롯데백화점",
+      "category": "department_store",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "Lotte Department Store",
+        "Lotte Shopping newsroom",
+        "media"
+      ]
+    },
+    {
+      "name": "현대백화점",
+      "category": "department_store",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "The Hyundai",
+        "Hyundai Department Store news",
+        "media"
+      ]
+    },
+    {
+      "name": "갤러리아",
+      "category": "department_store",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "Galleria",
+        "Hanwha newsroom",
+        "media"
+      ]
+    },
+    {
+      "name": "올리브영",
+      "category": "beauty",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "CJ Olive Young newsroom",
+        "media"
+      ]
+    },
+    {
+      "name": "화해",
+      "category": "beauty",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "company blog",
+        "media"
+      ]
+    },
+    {
+      "name": "YES24",
+      "category": "book_content",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "YES24 notice",
+        "media"
+      ]
+    },
+    {
+      "name": "교보문고",
+      "category": "book_content",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "Kyobo Book Centre notice",
+        "media"
+      ]
+    },
+    {
+      "name": "알라딘",
+      "category": "book_content",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "Aladin notice",
+        "media"
+      ]
+    },
+    {
+      "name": "리디",
+      "category": "book_content",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "RIDI notice",
+        "RIDI newsroom",
+        "media"
+      ]
+    },
+    {
+      "name": "밀리의서재",
+      "category": "book_content",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "Millie notice",
+        "media"
+      ]
+    }
+  ]
+}
