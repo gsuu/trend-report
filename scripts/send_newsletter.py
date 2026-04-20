@@ -46,6 +46,22 @@ NEWSLETTER_DESCRIPTION_LABELS = {"서비스 맥락", "변경 후"}
 NEWSLETTER_DETAIL_SUMMARY_SECTIONS = {"매거진 인사이트", "인사이트"}
 
 
+def load_env_file(path: Path) -> None:
+    if not path.exists():
+        return
+
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip("\"'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Markdown 리포트를 뉴스레터 HTML로 만들고 메일로 발송합니다.")
     parser.add_argument("report", help="발송할 Markdown 리포트 경로")
@@ -987,13 +1003,17 @@ def smtp_config() -> dict[str, str | int | bool]:
     if missing:
         raise SystemExit(f"필수 SMTP 환경변수가 없습니다: {', '.join(missing)}")
 
+    port = int(os.getenv("SMTP_PORT", "587"))
+    use_ssl = os.getenv("SMTP_SSL", "").lower() == "true" or port == 465
+
     return {
         "host": os.environ["SMTP_HOST"],
-        "port": int(os.getenv("SMTP_PORT", "587")),
+        "port": port,
         "user": os.getenv("SMTP_USER", ""),
         "password": os.getenv("SMTP_PASSWORD", ""),
         "sender": os.environ["SMTP_FROM"],
-        "use_tls": os.getenv("SMTP_TLS", "true").lower() != "false",
+        "use_tls": os.getenv("SMTP_TLS", "true").lower() != "false" and not use_ssl,
+        "use_ssl": use_ssl,
     }
 
 
@@ -1006,6 +1026,13 @@ def send_email(subject: str, sender: str, recipients: list[str], plain_text: str
     message["To"] = ", ".join(recipients)
     message.set_content(plain_text)
     message.add_alternative(newsletter_html, subtype="html")
+
+    if config["use_ssl"]:
+        with smtplib.SMTP_SSL(str(config["host"]), int(config["port"]), context=ssl.create_default_context()) as smtp:
+            if config["user"]:
+                smtp.login(str(config["user"]), str(config["password"]))
+            smtp.send_message(message)
+        return
 
     if config["use_tls"]:
         with smtplib.SMTP(str(config["host"]), int(config["port"])) as smtp:
@@ -1022,6 +1049,8 @@ def send_email(subject: str, sender: str, recipients: list[str], plain_text: str
 
 
 def main() -> None:
+    load_env_file(ROOT / ".env")
+
     args = parse_args()
     report_path = Path(args.report)
     markdown = report_path.read_text(encoding="utf-8")

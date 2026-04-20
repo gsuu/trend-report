@@ -208,7 +208,17 @@ python3 scripts/build_site.py
 
 ## 뉴스레터 발송하기
 
-SMTP 환경변수를 설정한 뒤 `--send`를 붙입니다.
+프로젝트 루트의 `.env` 또는 셸 환경변수에 SMTP 값을 설정한 뒤 `--send`를 붙입니다.
+
+PDF 기반 자료 수집 후 뉴스레터를 보낼 때는 먼저 `jisuk@cttd.co.kr`로 테스트 메일을 보내고, 사용자가 확인한 뒤에만 `cxd@cttd.co.kr`로 최종 발송합니다. 자세한 운영 규칙은 `AGENTS.md`를 따릅니다.
+
+처음 설정할 때는 예시 파일을 복사해 실제 값을 채웁니다.
+
+```bash
+cp .env.example .env
+```
+
+`.env`는 git에 올라가지 않습니다.
 
 ```bash
 export SMTP_HOST=smtp.example.com
@@ -216,6 +226,8 @@ export SMTP_PORT=587
 export SMTP_USER=sender@example.com
 export SMTP_PASSWORD=app-password
 export SMTP_FROM=sender@example.com
+export SMTP_TLS=true
+export SMTP_SSL=false
 export MAGAZINE_BASE_URL=https://magazine.example.com
 
 python3 scripts/send_newsletter.py \
@@ -225,6 +237,19 @@ python3 scripts/send_newsletter.py \
 ```
 
 발송 시 `더보기` 링크는 `MAGAZINE_BASE_URL` 또는 `--magazine-base-url` 기준의 매거진 사이트 이슈별 아티클로 연결됩니다.
+
+하이웍스 계정으로 보낼 때는 보통 아래처럼 설정합니다. 하이웍스 웹메일에서 [메일 > 환경설정 > 기본 설정 > POP3/SMTP]를 `사용 함`으로 바꾸고, 메일 전용 비밀번호가 있으면 `SMTP_PASSWORD`에 그 값을 입력합니다.
+
+```dotenv
+SMTP_HOST=smtps.hiworks.com
+SMTP_PORT=465
+SMTP_USER=sender@cttd.co.kr
+SMTP_PASSWORD=mail-app-password
+SMTP_FROM=sender@cttd.co.kr
+SMTP_TLS=false
+SMTP_SSL=true
+MAGAZINE_BASE_URL=https://magazine.example.com
+```
 
 수신자가 많으면 `config/subscribers.example.txt`를 복사해 `config/subscribers.txt`로 만들고 사용합니다.
 
