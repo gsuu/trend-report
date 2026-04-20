@@ -70,9 +70,10 @@
 
 ## 리포트 카테고리
 
-1. UI/UX·서비스 업데이트: 화면, 진입점, 플로우, 기능 변화
-2. 신규 서비스·UX 실험: 멤버십, 보상 구조, AI/추천, 브랜드 탐색, 개인화 기능
-3. 시장·전략: 진출, 제휴, 조직/투자, 카테고리 확장 중 UI/UX 영향이 있는 이슈
+리포트는 먼저 대분류를 `UIUX`, `DEV`로 나누고, 각 대분류 안에 소분류를 둡니다.
+
+1. UIUX: 화면, 진입점, 플로우, 기능 변화, 신규 서비스·UX 실험, 시장·전략 중 UI/UX 영향이 있는 이슈
+2. DEV: 프레임워크, 브라우저/웹 플랫폼, 빌드·품질 도구, 런타임, 배포, AI 개발 도구 이슈
 
 ## UI/UX 선정 우선순위
 
@@ -92,15 +93,38 @@
 
 수집은 국내 모니터링 범위의 모든 서비스를 확인합니다. 위 순서는 수집 제외 기준이 아니라, 리포트에 올릴 이슈를 선별하고 배치할 때의 우선순위입니다.
 
-## UI/UX·서비스 업데이트 분류
+## UIUX 소분류
 
-이 섹션은 플랫폼 카테고리 기준으로 나눕니다. 각 카드 안에서 홈, 검색, 추천, 찜, 로그인, 결제, 멤버십 같은 UX 여정을 분석합니다.
+`UIUX` 대분류 안에서는 플랫폼 카테고리 기준으로 나눕니다. 각 카드 안에서 홈, 검색, 추천, 찜, 로그인, 결제, 멤버십 같은 UX 여정을 분석합니다.
 
 1. fashion: 패션 플랫폼, 브랜드관, 룩북, 찜/재입고, 스타일 추천
 2. ecommerce: 종합몰, 마켓플레이스, 홈쇼핑, 배달/생활 커머스
 3. department_store: 백화점 앱, VIP/멤버십, 오프라인 연계, 선물/픽업
 4. beauty: 뷰티 커머스, 리뷰/성분/피부 진단, 개인화 추천
 5. book_content: 도서, 전자책, 웹툰/웹소설, 이어보기, 콘텐츠 추천
+
+## DEV 소분류
+
+`DEV` 대분류 안에서는 개발 영향 범위 기준으로 나눕니다. 사이트 빌드 시 dev 이슈는 플랫폼명, 카테고리, 태그, 요약 문장을 기준으로 아래 소분류에 자동 배치됩니다.
+
+1. HTML: 마크업, DOM, 시맨틱 HTML, 웹 컴포넌트
+2. CSS: 레이아웃, 반응형, 스타일, 애니메이션
+3. JAVASCRIPT: JavaScript, TypeScript, 프레임워크, 런타임, 컴포넌트
+4. 웹접근성: 접근성, WCAG, 스크린리더
+5. AI: AI 개발 도구, 코딩 에이전트, 코드 어시스턴트
+6. TOOL: 테스트, 품질, 빌드, 배포, 모니터링
+7. DATA/API: 데이터, API, 서버, 백엔드, 인증
+
+## DEV 아티클 작성 구조
+
+`DEV` 이슈의 `매거진 인사이트`는 UIUX 이슈와 다른 소제목을 사용합니다. 개발자가 바로 적용할 수 있는 기술 판단과 실행 포인트가 보여야 합니다.
+
+1. `왜 지금 이 업데이트인가`: 릴리즈 배경과 기술 흐름을 설명합니다.
+2. `프론트엔드 개발 전문가 관점`: 프레임워크, 브라우저, 빌드/품질 도구, 런타임, 배포 환경 관점에서 봐야 할 판단을 씁니다.
+3. `실무에 어떻게 적용할 수 있을까`: 화면 구현 실무 기준으로 마크업/CSS, 접근성, 반응형, 브라우저 QA, 배포 검증 포인트를 `- ...` 리스트 3개 이상으로 씁니다.
+4. `같이 보면 좋은 기술`: 함께 검토할 API, 라이브러리, 설정, 런타임, 도구를 `- 기술명: 왜 같이 봐야 하는지` 리스트로 씁니다.
+
+DEV 영역에서는 `Frontend Development 관점`, `개발자는 무엇을 덜 해도 될까`, `클라이언트에게 던질 질문` 소제목을 쓰지 않습니다. `scripts/build_site.py`와 `scripts/send_newsletter.py`는 DEV 영역에서 이 구 소제목이 발견되면 중단합니다.
 
 ## 이미지 사용 기준
 
@@ -186,6 +210,26 @@ HTML 미리보기는 `newsletters/`에 생성됩니다.
 
 뉴스레터 본문은 제목, 짧은 설명, 매거진 링크, 태그 중심으로 발행합니다. 상세 내용은 매거진 사이트의 이슈별 아티클에 둡니다.
 
+Dev 카테고리 또는 태그가 붙은 이슈만 발송용으로 확인하려면 `--audience dev`를 붙입니다. 생성 파일은 일반 뉴스레터와 겹치지 않도록 `newsletters/*-dev.html`로 저장됩니다. dev 뉴스레터는 카테고리, 태그, 플랫폼명, 요약 문장을 기준으로 세부 섹션을 자동으로 나눕니다. 기존 `--audience develop`도 호환용 별칭으로 동작합니다.
+
+dev 세부 섹션은 아래 키워드로 구분합니다.
+
+1. HTML: `html`, `dom`, `markup`, `semantic_html`, `web_components`
+2. CSS: `css`, `css_grid_lanes`, `grid`, `layout`, `responsive`, `animation`
+3. JAVASCRIPT: `javascript`, `typescript`, `node`, `nextjs`, `react`, `vue`, `component`
+4. 웹접근성: `accessibility`, `a11y`, `wcag`, `screen_reader`, `웹접근성`
+5. AI: `ai_development`, `code_assistant`, `copilot`, `ai_coding`, `agent`
+6. TOOL: `testing`, `qa`, `eslint`, `ci`, `build`, `deploy`, `monitoring`
+7. DATA/API: `data`, `api`, `backend`, `graphql`, `server`, `auth`, `node`
+
+예를 들어 `- 카테고리: dev`인 항목의 플랫폼명이 `Next.js`이면 `JAVASCRIPT`로 묶이고, `#AI개발도구` 태그가 있으면 `AI`로 우선 배치됩니다. 특정 세부 키워드가 없으면 `JAVASCRIPT`로 묶입니다.
+
+```bash
+python3 scripts/send_newsletter.py \
+  reports/2026-04-20-uiux-web-service-weekly-trend-report.md \
+  --audience dev
+```
+
 ## 매거진 사이트 만들기
 
 뉴스레터 대신 정적 매거진 사이트로 보고 싶으면 아래 명령을 실행합니다.
@@ -257,5 +301,15 @@ MAGAZINE_BASE_URL=https://magazine.example.com
 python3 scripts/send_newsletter.py \
   reports/2026-04-20-uiux-web-service-weekly-trend-report.md \
   --subscribers config/subscribers.txt \
+  --send
+```
+
+dev용으로 발송할 때도 같은 옵션을 사용합니다. 단, 대상 이슈가 없으면 실제 발송은 중단됩니다.
+
+```bash
+python3 scripts/send_newsletter.py \
+  reports/2026-04-20-uiux-web-service-weekly-trend-report.md \
+  --audience dev \
+  --stage test \
   --send
 ```

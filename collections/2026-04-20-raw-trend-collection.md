@@ -641,6 +641,65 @@
 - 실제 화면 캡처나 공식 기능명을 확인했는가?
 - 기능 개선이 사용자 여정의 어느 단계에 영향을 주는가?
 
+## DEV 보강 수집
+
+### [Vite] #Vite8 #Rolldown #Tooling
+
+- 날짜: 2026-03-12
+- 국가: GLOBAL
+- 카테고리: dev
+- 출처: Vite 공식 블로그
+- 출처 URL: https://vite.dev/blog/announcing-vite8
+- 검증 상태: 공식 확인
+- 채택 여부: 채택
+- 채택 기준:
+  - 실제 변화: Vite 8 stable release에서 Rolldown을 단일 Rust 기반 번들러로 채택했습니다.
+  - 개발자 행동 변화: dev/build 파이프라인 차이를 줄이고, browser console forwarding으로 CLI 및 agent 기반 디버깅 신호를 강화했습니다.
+  - 수치·팩트: Vite 팀은 10~30배 빠른 빌드 가능성과 주간 다운로드 6,500만 회를 안내했습니다.
+
+### [Astro] #Astro6 #Framework #Cloudflare
+
+- 날짜: 2026-03-10
+- 국가: GLOBAL
+- 카테고리: dev
+- 출처: Astro 공식 블로그
+- 출처 URL: https://astro.build/blog/astro-6/
+- 검증 상태: 공식 확인
+- 채택 여부: 채택
+- 채택 기준:
+  - 실제 변화: Astro 6가 Fonts API, Content Security Policy API, Live Content Collections, 재설계된 `astro dev`를 공개했습니다.
+  - 개발자 행동 변화: Vite Environment API 기반으로 개발 환경에서 production runtime을 더 가깝게 재현하는 방향입니다.
+  - 수치·팩트: Cloudflare adapter가 개발, prerendering, production 단계에서 `workerd`를 사용한다고 안내했습니다.
+
+### [Playwright] #Playwright159 #Testing #Observability
+
+- 날짜: 2026-04-01
+- 국가: GLOBAL
+- 카테고리: dev
+- 출처: Playwright 공식 릴리즈 노트 / GitHub Release
+- 출처 URL: https://playwright.dev/docs/release-notes
+- 보조 출처 URL: https://github.com/microsoft/playwright/releases/tag/v1.59.0
+- 검증 상태: 공식 확인
+- 채택 여부: 채택
+- 채택 기준:
+  - 실제 변화: Playwright 1.59에 `page.screencast`, `browser.bind()`, Dashboard, CLI debugger, CLI trace analysis가 추가됐습니다.
+  - 개발자 행동 변화: E2E 테스트 실패 상황을 사람과 AI 에이전트가 같은 브라우저 세션과 영상 증거로 검토할 수 있습니다.
+  - 수치·팩트: v1.59.0 GitHub Release는 2026-04-01에 공개됐습니다.
+
+### [webpack] #Webpack5106 #Tooling #Build
+
+- 날짜: 2026-04-08
+- 국가: GLOBAL
+- 카테고리: dev
+- 출처: webpack 공식 블로그
+- 출처 URL: https://webpack.js.org/blog/2026-04-08-webpack-5-106/
+- 검증 상태: 공식 확인
+- 채택 여부: 채택
+- 채택 기준:
+  - 실제 변화: webpack 5.106에서 source phase Wasm import, `create-webpack-app`, custom JavaScript parser, webpack-cli 7, webpack-dev-middleware 8 업데이트가 안내됐습니다.
+  - 개발자 행동 변화: 신규 프로젝트 scaffold와 custom loader/plugin boilerplate 생성이 단순해지고, parser 성능 실험을 프로젝트 단위로 검증할 수 있습니다.
+  - 수치·팩트: webpack-cli 7, webpack-dev-middleware 8 및 주요 plugin 계열이 최소 Node.js 20.9.0 기준으로 정렬됐습니다.
+
 ## 보류 후보
 
 ### [무신사] #패션UX #멀티스토어 #안정화

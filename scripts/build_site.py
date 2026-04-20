@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import os
 import re
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
@@ -18,6 +19,9 @@ SITE_DIR = ROOT / "site"
 ASSETS_DIR = SITE_DIR / "assets"
 ARTICLES_DIR = SITE_DIR / "articles"
 SHOW_SUBSCRIBE_LINK = False
+PRODUCTION_MAGAZINE_BASE_URL = "https://email.cttd.co.kr/magazine"
+SITE_DESCRIPTION = "CTTD UIUX/Web Service Weekly Trend Magazine"
+SITE_OG_IMAGE = "assets/cttd-logo-email.png"
 
 
 CATEGORY_LABELS = {
@@ -29,8 +33,81 @@ CATEGORY_LABELS = {
     "jp_fashion": "fashion",
     "jp_ecommerce": "ecommerce",
 }
+CATEGORY_KEYS = {
+    "jp_fashion": "fashion",
+    "jp_ecommerce": "ecommerce",
+}
+
+MAIN_CATEGORY_ORDER = {"uiux": 0, "dev": 1}
+MAIN_CATEGORY_LABELS = {
+    "uiux": "UIUX",
+    "dev": "DEV",
+}
+DEVELOP_CATEGORY_KEYS = {
+    "dev",
+    "develop",
+    "development",
+    "engineering",
+    "fe",
+    "frontend",
+    "frontend_development",
+    "backend",
+    "web_development",
+    "web_develop",
+    "개발",
+    "프론트",
+    "프론트엔드",
+}
+DEVELOP_SUBCATEGORY_ORDER = (
+    "html",
+    "css",
+    "javascript",
+    "web_accessibility",
+    "ai",
+    "tool",
+    "data_api",
+)
+DEVELOP_SUBCATEGORY_CLASSIFICATION_ORDER = (
+    "html",
+    "ai",
+    "web_accessibility",
+    "css",
+    "data_api",
+    "tool",
+    "javascript",
+)
+DEVELOP_SUBCATEGORY_LABELS = {
+    "html": "HTML",
+    "css": "CSS",
+    "javascript": "JAVASCRIPT",
+    "web_accessibility": "웹접근성",
+    "ai": "AI",
+    "tool": "TOOL",
+    "data_api": "DATA/API",
+}
+DEVELOP_SUBCATEGORY_KEYWORDS = {
+    "html": {"html", "dom", "markup", "semantic_html", "semantics", "document", "web_components", "custom_elements", "마크업", "시맨틱", "시맨틱_html", "웹컴포넌트"},
+    "css": {"css", "cssgridlanes", "css_grid_lanes", "grid", "grid_lanes", "layout", "style", "styles", "responsive", "animation", "레이아웃", "반응형", "스타일", "애니메이션"},
+    "javascript": {"javascript", "js", "typescript", "ts", "type_script", "es2025", "temporal", "node", "nodejs", "node_js", "eslint", "lint", "next", "nextjs", "next_js", "react", "vue", "svelte", "framework", "frontend", "frontend_development", "front_end", "fe", "web_development", "web_develop", "adapterapi", "adapter_api", "opennext", "runtime", "component", "components", "프론트", "프론트엔드", "웹개발", "컴포넌트"},
+    "web_accessibility": {"accessibility", "a11y", "wcag", "screen_reader", "web_accessibility", "웹접근성", "접근성", "스크린리더"},
+    "ai": {"ai", "ai_development", "ai개발", "ai개발도구", "code_assistant", "copilot", "llm", "ai_coding", "ai_assisted_development", "agent", "agent_devtools", "agent_dev_tools", "agentdevtools", "agents", "코딩어시스턴트"},
+    "tool": {"tool", "tools", "tooling", "quality", "test", "testing", "qa", "ci", "cd", "build", "deploy", "release", "monitoring", "observability", "e2e", "eslint", "lint", "devtools", "dev_tools", "agentdevtools", "agent_devtools", "agent_dev_tools", "browserlogforwarding", "browser_log_forwarding", "테스트", "품질", "도구", "툴", "빌드", "배포", "모니터링"},
+    "data_api": {"data", "api", "data_api", "graphql", "rest", "server", "backend", "database", "db", "auth", "webtransport", "web_transport", "node", "nodejs", "node_js", "runtime", "데이터", "서버", "백엔드", "인증"},
+}
+DEVELOP_DETECTION_EXCLUDED_KEYWORDS = {"ai", "llm"}
+DEVELOP_DETECTION_KEYS = DEVELOP_CATEGORY_KEYS.union(
+    keyword
+    for keywords in DEVELOP_SUBCATEGORY_KEYWORDS.values()
+    for keyword in keywords
+    if keyword not in DEVELOP_DETECTION_EXCLUDED_KEYWORDS
+)
 
 DETAIL_SECTION_TITLES = {"매거진 상세", "사이트 매거진 상세", "웹사이트 상세", "매거진 인사이트"}
+DEV_SECTION_HEADING_REPLACEMENTS = {
+    "Frontend Development 관점": "프론트엔드 개발 전문가 관점",
+    "개발자는 무엇을 덜 해도 될까": "실무에 어떻게 적용할 수 있을까",
+    "클라이언트에게 던질 질문": "같이 보면 좋은 기술",
+}
 SECTION_BLOCK_PATTERN = re.compile(r"^@@(?P<kind>quote|subhead|paragraph|list)@@(?P<text>.*)")
 SUMMARY_LABEL_PATTERN = re.compile(r"^(?P<label>[^:：]{2,18})[:：]\s*(?P<value>.+)$")
 CORE_SUMMARY_LABELS = {"업데이트", "서비스 맥락", "변경 전", "변경 후"}
@@ -75,6 +152,7 @@ class Issue:
     title: str
     tags: list[str]
     category: str
+    area: str
     meta: dict[str, str] = field(default_factory=dict)
     sections: dict[str, list[str]] = field(default_factory=dict)
     image: str = ""
@@ -106,6 +184,38 @@ def clean_inline(text: str) -> str:
         lambda match: f'<a href="{html.escape(match.group(2), quote=True)}">{match.group(1)}</a>',
         escaped,
     )
+
+
+def meta_text(text: str, fallback: str = "", limit: int = 180) -> str:
+    value = text or fallback
+    value = re.sub(r"`([^`]+)`", r"\1", value)
+    value = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", value)
+    value = re.sub(r"<[^>]+>", "", value)
+    value = html.unescape(value)
+    value = re.sub(r"\s+", " ", value).strip()
+    if not value:
+        value = fallback
+    if limit and len(value) > limit:
+        return value[:limit].rstrip() + "..."
+    return value
+
+
+def magazine_base_url() -> str:
+    return os.getenv("MAGAZINE_BASE_URL", PRODUCTION_MAGAZINE_BASE_URL).strip().rstrip("/")
+
+
+def absolute_site_url(path: str = "") -> str:
+    base_url = magazine_base_url()
+    clean_path = path.strip()
+    if not clean_path:
+        return base_url
+    return f"{base_url}/{clean_path.lstrip('/')}"
+
+
+def absolute_asset_url(url: str) -> str:
+    if re.match(r"^https?://", url):
+        return url
+    return absolute_site_url(url)
 
 
 def fetch_source_title(url: str) -> str:
@@ -216,9 +326,174 @@ def is_detail_section(title: str) -> bool:
     return title in DETAIL_SECTION_TITLES
 
 
+def validate_dev_article_headings(path: Path, lines: list[str]) -> None:
+    current_area = ""
+    current_issue = ""
+    in_practical_steps = False
+    practical_step_count = 0
+    in_related_tech = False
+    related_tech_has_item = False
+    errors: list[str] = []
+
+    def close_practical_steps(line_number: int) -> None:
+        nonlocal in_practical_steps, practical_step_count
+        if in_practical_steps and practical_step_count < 3:
+            issue_label = f" ({current_issue})" if current_issue else ""
+            errors.append(
+                f"- {line_number}행{issue_label}: `실무에 어떻게 적용할 수 있을까`는 "
+                "화면 구현 실무 기준 `- ...` 리스트 3개 이상으로 작성해야 합니다."
+            )
+        in_practical_steps = False
+        practical_step_count = 0
+
+    def close_related_tech(line_number: int) -> None:
+        nonlocal in_related_tech, related_tech_has_item
+        if in_related_tech and not related_tech_has_item:
+            issue_label = f" ({current_issue})" if current_issue else ""
+            errors.append(f"- {line_number}행{issue_label}: `같이 보면 좋은 기술`은 `- 기술명: 이유` 리스트로 작성해야 합니다.")
+        in_related_tech = False
+        related_tech_has_item = False
+
+    def close_tracked_sections(line_number: int) -> None:
+        close_practical_steps(line_number)
+        close_related_tech(line_number)
+
+    for line_number, raw_line in enumerate(lines, 1):
+        line = raw_line.strip()
+        if line in {"---", "* * *"}:
+            close_tracked_sections(line_number)
+            continue
+        if line.startswith("## "):
+            close_tracked_sections(line_number)
+            current_area = line[3:].strip()
+            current_issue = ""
+            continue
+        if current_area != "DEV":
+            continue
+        if line.startswith("#### "):
+            close_tracked_sections(line_number)
+            heading = line[5:].strip()
+            if re.match(r"\d+\.\s*", heading):
+                current_issue = heading
+            continue
+        if line.startswith("##### "):
+            close_tracked_sections(line_number)
+            continue
+        if line.startswith("###### "):
+            close_tracked_sections(line_number)
+            heading = line[7:].strip()
+            replacement = DEV_SECTION_HEADING_REPLACEMENTS.get(heading)
+            if replacement:
+                issue_label = f" ({current_issue})" if current_issue else ""
+                errors.append(f"- {line_number}행{issue_label}: `{heading}` -> `{replacement}`")
+            if heading == "실무에 어떻게 적용할 수 있을까":
+                in_practical_steps = True
+            if heading == "같이 보면 좋은 기술":
+                in_related_tech = True
+            continue
+
+        if not line:
+            continue
+
+        if in_practical_steps:
+            if line.startswith("- "):
+                practical_step_count += 1
+                continue
+            if line.startswith("#"):
+                close_practical_steps(line_number)
+            else:
+                issue_label = f" ({current_issue})" if current_issue else ""
+                errors.append(f"- {line_number}행{issue_label}: `실무에 어떻게 적용할 수 있을까` 본문은 bullet 리스트만 허용합니다.")
+            continue
+
+        if not in_related_tech:
+            continue
+
+        if line.startswith("- "):
+            related_tech_has_item = True
+            if ":" not in line[2:] and "：" not in line[2:]:
+                issue_label = f" ({current_issue})" if current_issue else ""
+                errors.append(f"- {line_number}행{issue_label}: 관련 기술 항목은 `- 기술명: 왜 같이 보는지` 형식이어야 합니다.")
+            continue
+
+        if line.startswith("#"):
+            close_related_tech(line_number)
+        else:
+            issue_label = f" ({current_issue})" if current_issue else ""
+            errors.append(f"- {line_number}행{issue_label}: `같이 보면 좋은 기술` 본문은 bullet 리스트만 허용합니다.")
+
+    close_tracked_sections(len(lines) + 1)
+
+    if errors:
+        raise SystemExit(
+            f"{path}: DEV 아티클 형식이 현재 템플릿과 다릅니다.\n"
+            + "\n".join(errors)
+        )
+
+
 def slugify(value: str) -> str:
     slug = re.sub(r"[^0-9a-zA-Z가-힣]+", "-", value.lower()).strip("-")
     return slug or "article"
+
+
+def normalize_category_token(value: str) -> str:
+    content = re.sub(r"`([^`]+)`", r"\1", value.strip().lower())
+    content = content.replace("#", "")
+    content = re.sub(r"[\s./\-]+", "_", content)
+    content = re.sub(r"[^0-9a-z가-힣_]+", "_", content)
+    return re.sub(r"_+", "_", content).strip("_")
+
+
+def issue_tokens(issue: Issue) -> set[str]:
+    values = [
+        issue.area,
+        issue.category,
+        issue.platform,
+        issue.title,
+        issue.meta.get("카테고리", ""),
+        issue_deck(issue),
+    ]
+    values.extend(issue.tags)
+
+    tokens: set[str] = set()
+    for value in values:
+        for part in re.split(r"[,/|>·]+", value):
+            token = normalize_category_token(part)
+            if not token:
+                continue
+            tokens.add(token)
+            tokens.update(segment for segment in token.split("_") if segment)
+    return tokens
+
+
+def is_develop_issue(issue: Issue) -> bool:
+    return bool(issue_tokens(issue).intersection(DEVELOP_DETECTION_KEYS))
+
+
+def issue_area_key(issue: Issue) -> str:
+    return "dev" if is_develop_issue(issue) else "uiux"
+
+
+def issue_area_label(issue: Issue) -> str:
+    return MAIN_CATEGORY_LABELS[issue_area_key(issue)]
+
+
+def issue_category_key(issue: Issue) -> str:
+    if not is_develop_issue(issue):
+        return CATEGORY_KEYS.get(issue.category, issue.category)
+
+    tokens = issue_tokens(issue)
+    for category_key in DEVELOP_SUBCATEGORY_CLASSIFICATION_ORDER:
+        if tokens.intersection(DEVELOP_SUBCATEGORY_KEYWORDS.get(category_key, set())):
+            return category_key
+    return "javascript"
+
+
+def issue_category_label(issue: Issue) -> str:
+    category_key = issue_category_key(issue)
+    if is_develop_issue(issue):
+        return DEVELOP_SUBCATEGORY_LABELS.get(category_key, DEVELOP_SUBCATEGORY_LABELS["javascript"])
+    return CATEGORY_LABELS.get(issue.category, issue.category)
 
 
 def split_issue_title(raw: str) -> tuple[str, str, str, list[str]]:
@@ -241,6 +516,7 @@ def split_issue_title(raw: str) -> tuple[str, str, str, list[str]]:
 
 def parse_report(path: Path) -> Report:
     lines = path.read_text(encoding="utf-8").splitlines()
+    validate_dev_article_headings(path, lines)
     title = path.stem
     period = ""
     summary: list[str] = []
@@ -286,6 +562,7 @@ def parse_report(path: Path) -> Report:
                     title=item_title,
                     tags=tags,
                     category=current_category,
+                    area=current_area,
                 )
                 issues.append(current_issue)
                 current_section = ""
@@ -350,11 +627,55 @@ def parse_report(path: Path) -> Report:
     return Report(path, slug, title, period, summary, issues, next_week)
 
 
-def html_shell(title: str, body: str, active: str = "") -> str:
+def render_header_category_nav(report: Report, active: str = "") -> str:
+    href_prefix = "../index.html" if active == "article" else ""
+    header_labels = {"uiux": "UIUX", "dev": "DEV"}
+    categories: list[dict[str, str]] = []
+    seen_category_keys: set[str] = set()
+    for issue in report.issues:
+        key = issue_area_key(issue)
+        if key in seen_category_keys:
+            continue
+        seen_category_keys.add(key)
+        categories.append({"key": key, "label": header_labels.get(key, issue_area_label(issue))})
+
+    categories = sorted(
+        categories,
+        key=lambda category: MAIN_CATEGORY_ORDER.get(category["key"], 99),
+    )
+    category_links = "\n".join(
+        f'      <a href="{href_prefix}#/category/{html.escape(category["key"], quote=True)}" '
+        f'data-category-nav="{html.escape(category["key"], quote=True)}">{clean_inline(category["label"])}</a>'
+        for category in categories
+    )
+    return f"""    <nav class="header-category-nav" aria-label="매거진 카테고리">
+      <a href="{href_prefix}#magazine" data-category-nav="">전체</a>
+{category_links}
+    </nav>
+"""
+
+
+def html_shell(
+    title: str,
+    body: str,
+    active: str = "",
+    header_nav: str = "",
+    description: str = SITE_DESCRIPTION,
+    image: str = SITE_OG_IMAGE,
+    url: str = "",
+    page_type: str = "website",
+    og_title: str = "",
+    image_alt: str = "",
+) -> str:
     home_href = "../index.html#magazine" if active == "article" else "#magazine"
     stylesheet = "../assets/styles.css" if active == "article" else "assets/styles.css"
     logo = "../assets/cttd-logo.svg" if active == "article" else "assets/cttd-logo.svg"
     body_class = ' class="is-article-page"' if active == "article" else ""
+    meta_title = meta_text(og_title or title, title, 120)
+    meta_description = meta_text(description, SITE_DESCRIPTION, 180)
+    meta_image = absolute_asset_url(image or SITE_OG_IMAGE)
+    meta_url = url or absolute_site_url()
+    meta_image_alt = meta_text(image_alt or meta_title, meta_title, 120)
     subscribe_link = ""
     if SHOW_SUBSCRIBE_LINK:
         subscribe_href = "mailto:project@cttd.co.kr?subject=CTTD%20Trend%20Magazine%20Subscribe"
@@ -377,7 +698,18 @@ def html_shell(title: str, body: str, active: str = "") -> str:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{html.escape(title)}</title>
-  <meta name="description" content="CTTD UIUX/Web Service Weekly Trend Magazine">
+  <meta name="description" content="{html.escape(meta_description, quote=True)}">
+  <meta property="og:type" content="{html.escape(page_type, quote=True)}">
+  <meta property="og:site_name" content="CTTD Trend Magazine">
+  <meta property="og:title" content="{html.escape(meta_title, quote=True)}">
+  <meta property="og:description" content="{html.escape(meta_description, quote=True)}">
+  <meta property="og:image" content="{html.escape(meta_image, quote=True)}">
+  <meta property="og:image:alt" content="{html.escape(meta_image_alt, quote=True)}">
+  <meta property="og:url" content="{html.escape(meta_url, quote=True)}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{html.escape(meta_title, quote=True)}">
+  <meta name="twitter:description" content="{html.escape(meta_description, quote=True)}">
+  <meta name="twitter:image" content="{html.escape(meta_image, quote=True)}">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://unpkg.com">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css">
@@ -392,6 +724,7 @@ def html_shell(title: str, body: str, active: str = "") -> str:
       <img src="{logo}" alt="CTTD">
       <span>Magazine</span>
     </a>
+{header_nav}\
 {header_actions}\
   </header>
   {body}
@@ -510,7 +843,7 @@ def issue_display_date(report: Report) -> str:
 
 def render_issue_row(report: Report, issue: Issue, compact: bool = False) -> str:
     tags = " ".join(f"<span>#{clean_inline(tag)}</span>" for tag in issue.tags[:3])
-    category = CATEGORY_LABELS.get(issue.category, issue.category)
+    category = issue_category_label(issue)
     row_class = "issue-row is-compact" if compact else "issue-row"
     return f"""
     <article class="{row_class}">
@@ -526,7 +859,7 @@ def render_issue_row(report: Report, issue: Issue, compact: bool = False) -> str
 
 def render_latest_card(report: Report, issue: Issue) -> str:
     tags = " ".join(f"<span>#{clean_inline(tag)}</span>" for tag in issue.tags[:2])
-    category = CATEGORY_LABELS.get(issue.category, issue.category)
+    category = issue_category_label(issue)
     image = (
         f'<img src="{html.escape(issue.image, quote=True)}" alt="{html.escape(issue.image_caption or issue.platform, quote=True)}" loading="lazy">'
         if issue.image
@@ -555,7 +888,7 @@ def render_trending_item(index: int, text: str) -> str:
 
 
 def render_feed_item(report: Report, issue: Issue) -> str:
-    category = CATEGORY_LABELS.get(issue.category, issue.category)
+    category = issue_category_label(issue)
     image = (
         f'<img src="{html.escape(issue.image, quote=True)}" alt="{html.escape(issue.image_caption or issue.platform, quote=True)}" loading="lazy">'
         if issue.image
@@ -580,6 +913,10 @@ def render_feed_item(report: Report, issue: Issue) -> str:
 
 def render_index(report: Report) -> str:
     payload_json = json.dumps(report_payload(report), ensure_ascii=False).replace("</", "<\\/")
+    home_description = report.summary[0] if report.summary else SITE_DESCRIPTION
+    if ":" in home_description:
+        home_description = home_description.split(":", 1)[1].strip()
+    home_image = next((issue.image for issue in report.issues if issue.image), SITE_OG_IMAGE)
 
     body = f"""
   <script id="report-data" type="application/json">{payload_json}</script>
@@ -648,13 +985,29 @@ def render_index(report: Report) -> str:
               </a>
             </div>
           </footer>
+          <div class="article-list-actions">
+            <a class="article-list-link" :href="detailReturnRoute" @click.prevent="goToList">목록보기</a>
+          </div>
         </div>
       </article>
 
       <section v-else key="home" id="magazine" class="magazine-home">
-        <section class="guide-grid" aria-label="아티클 목록">
-          <article v-for="issue in report.issues" :key="issue.number" class="guide-card">
-            <a :href="issue.route">
+        <section v-if="activeCategory" class="subcategory-panel" aria-label="소 카테고리">
+          <div class="subcategory-list">
+            <a class="subcategory-link" :class="{{ 'is-active': !activeSubcategory }}" :href="categoryPath(activeCategory.key)">
+              <span>전체</span>
+              <em v-text="categoryIssues.length"></em>
+            </a>
+            <a v-for="subcategory in subcategories" :key="subcategory.key" class="subcategory-link" :class="{{ 'is-active': activeSubcategory === subcategory.key }}" :href="subcategoryPath(activeCategory.key, subcategory.key)">
+              <span v-text="subcategory.label"></span>
+              <em v-text="subcategory.count"></em>
+            </a>
+          </div>
+        </section>
+
+        <section class="guide-grid" :aria-label="activeCategory ? activeCategory.label + ' 아티클 목록' : '아티클 목록'">
+          <article v-for="issue in visibleIssues" :key="issue.number" class="guide-card">
+            <a :href="storyRoute(issue)">
               <div v-if="issue.image" class="guide-thumb">
                 <img :src="issue.image" :alt="issue.imageCaption || issue.platform">
               </div>
@@ -691,9 +1044,94 @@ def render_index(report: Report) -> str:
           if (!match) return null;
           return this.report.issues.find((issue) => issue.number === match[1]) || null;
         }},
+        activeCategoryKey() {{
+          const match = this.route.match(/^#\\/category\\/([^/]+)/);
+          if (match) return decodeURIComponent(match[1]);
+          if (this.activeIssue) {{
+            const returnMatch = this.detailReturnRoute.match(/^#\\/category\\/([^/]+)/);
+            if (returnMatch) return decodeURIComponent(returnMatch[1]);
+            return this.activeIssue.areaKey || "";
+          }}
+          return "";
+        }},
+        activeSubcategory() {{
+          const match = this.route.match(/^#\\/category\\/[^/]+\\/(.+)$/);
+          return match ? decodeURIComponent(match[1]) : "";
+        }},
+        categories() {{
+          const categoryMap = new Map();
+          this.report.issues.forEach((issue) => {{
+            const key = issue.areaKey || issue.area || "uncategorized";
+            if (!categoryMap.has(key)) {{
+              categoryMap.set(key, {{
+                key,
+                label: issue.area || "분류 없음",
+                count: 0,
+              }});
+            }}
+            categoryMap.get(key).count += 1;
+          }});
+          const order = {json.dumps(MAIN_CATEGORY_ORDER)};
+          return Array.from(categoryMap.values()).sort((a, b) => (order[a.key] ?? 99) - (order[b.key] ?? 99));
+        }},
+        activeCategory() {{
+          if (!this.activeCategoryKey) return null;
+          return this.categories.find((category) => category.key === this.activeCategoryKey) || null;
+        }},
+        categoryIssues() {{
+          if (!this.activeCategory) return this.report.issues;
+          return this.report.issues.filter((issue) => (issue.areaKey || issue.area || "uncategorized") === this.activeCategory.key);
+        }},
+        subcategories() {{
+          if (!this.activeCategory) return [];
+          const subcategoryMap = new Map();
+          const devOrder = {json.dumps({key: index for index, key in enumerate(DEVELOP_SUBCATEGORY_ORDER)})};
+          const devLabels = {json.dumps({key: DEVELOP_SUBCATEGORY_LABELS[key] for key in DEVELOP_SUBCATEGORY_ORDER})};
+          if (this.activeCategory.key === "dev") {{
+            Object.keys(devOrder).forEach((key) => {{
+              subcategoryMap.set(key, {{
+                key,
+                label: devLabels[key] || key,
+                count: 0,
+              }});
+            }});
+          }}
+          this.categoryIssues.forEach((issue) => {{
+            const key = issue.categoryKey || issue.category;
+            if (!subcategoryMap.has(key)) {{
+              subcategoryMap.set(key, {{
+                key,
+                label: issue.category,
+                count: 0,
+              }});
+            }}
+            subcategoryMap.get(key).count += 1;
+          }});
+          const subcategories = Array.from(subcategoryMap.values());
+          if (this.activeCategory.key === "dev") {{
+            return subcategories.sort((a, b) => (devOrder[a.key] ?? 99) - (devOrder[b.key] ?? 99));
+          }}
+          return subcategories;
+        }},
+        visibleIssues() {{
+          if (!this.activeCategory) return this.report.issues;
+          if (!this.activeSubcategory) return this.categoryIssues;
+          return this.categoryIssues.filter((issue) => (issue.categoryKey || issue.category) === this.activeSubcategory);
+        }},
+        currentListRoute() {{
+          if (this.validListRoute(this.route)) return this.route;
+          return "#magazine";
+        }},
+        detailReturnRoute() {{
+          const routeParam = this.routeReturnParam();
+          if (routeParam) return routeParam;
+          if (this.activeIssue && this.activeIssue.areaKey) return this.categoryPath(this.activeIssue.areaKey);
+          return "#magazine";
+        }},
       }},
       mounted() {{
         this.syncDocumentState();
+        this.syncHeaderCategoryState();
         window.addEventListener("hashchange", this.updateRoute);
       }},
       unmounted() {{
@@ -704,10 +1142,51 @@ def render_index(report: Report) -> str:
         updateRoute() {{
           this.route = window.location.hash || "#magazine";
           this.syncDocumentState();
+          this.syncHeaderCategoryState();
           window.scrollTo({{ top: 0, left: 0, behavior: "instant" }});
         }},
         syncDocumentState() {{
           document.body.classList.toggle("is-story-open", Boolean(this.activeIssue));
+          document.querySelectorAll(".header-back-link").forEach((link) => {{
+            link.setAttribute("href", this.activeIssue ? this.detailReturnRoute : "#magazine");
+          }});
+        }},
+        syncHeaderCategoryState() {{
+          document.querySelectorAll(".header-category-nav a").forEach((link) => {{
+            const key = link.dataset.categoryNav || "";
+            const isActive = key === this.activeCategoryKey;
+            link.classList.toggle("is-active", isActive);
+            if (isActive) {{
+              link.setAttribute("aria-current", "page");
+            }} else {{
+              link.removeAttribute("aria-current");
+            }}
+          }});
+        }},
+        categoryPath(categoryKey) {{
+          return `#/category/${{encodeURIComponent(categoryKey)}}`;
+        }},
+        subcategoryPath(categoryKey, subcategory) {{
+          return `#/category/${{encodeURIComponent(categoryKey)}}/${{encodeURIComponent(subcategory)}}`;
+        }},
+        storyRoute(issue) {{
+          return issue.href || `${{issue.route}}?from=${{encodeURIComponent(this.currentListRoute)}}`;
+        }},
+        validListRoute(route) {{
+          return route === "#magazine" || /^#\\/category\\/(uiux|dev)(?:\\/[^?&]+)?$/.test(route || "");
+        }},
+        routeReturnParam() {{
+          const match = this.route.match(/[?&]from=([^&]+)/);
+          if (!match) return "";
+          const route = decodeURIComponent(match[1]);
+          return this.validListRoute(route) ? route : "";
+        }},
+        goToList() {{
+          const targetRoute = this.detailReturnRoute;
+          if (window.location.hash !== targetRoute) {{
+            window.history.pushState(null, "", targetRoute);
+          }}
+          this.updateRoute();
         }},
         plainText(htmlText) {{
           const node = document.createElement("span");
@@ -720,7 +1199,7 @@ def render_index(report: Report) -> str:
           const shareData = {{
             title: `${{issue.platform}} | Magazine`,
             text: this.plainText(issue.takeawayHtml),
-            url: window.location.href,
+            url: issue.articleUrl || window.location.href,
           }};
 
           if (navigator.share) {{
@@ -765,7 +1244,17 @@ def render_index(report: Report) -> str:
     }}).mount("#app");
   </script>
 """
-    return html_shell("CTTD Trend Magazine", body, "home")
+    return html_shell(
+        "CTTD Trend Magazine",
+        body,
+        "home",
+        render_header_category_nav(report, "home"),
+        description=home_description,
+        image=home_image,
+        url=absolute_site_url(),
+        og_title=report.title,
+        image_alt="CTTD Trend Magazine",
+    )
 
 
 def section_display_title(title: str) -> str:
@@ -877,9 +1366,14 @@ def report_payload(report: Report) -> dict[str, object]:
             {
                 "number": issue.number.zfill(2),
                 "platform": issue.platform,
-                "category": CATEGORY_LABELS.get(issue.category, issue.category),
+                "areaKey": issue_area_key(issue),
+                "area": issue_area_label(issue),
+                "categoryKey": issue_category_key(issue),
+                "category": issue_category_label(issue),
                 "date": issue_display_date(report),
                 "route": issue_route(issue),
+                "href": issue_href(report, issue),
+                "articleUrl": absolute_site_url(issue_href(report, issue)),
                 "image": issue.image,
                 "imageCaption": issue.image_caption,
                 "tags": issue.tags,
@@ -973,7 +1467,7 @@ def render_article(report: Report, issue: Issue) -> str:
           <div class="article-meta">
             <time>{clean_inline(issue_display_date(report))}</time>
             <span aria-hidden="true">|</span>
-            <span class="category-label">{CATEGORY_LABELS.get(issue.category, issue.category)}</span>
+            <span class="category-label">{issue_category_label(issue)}</span>
           </div>
           <button class="article-share-button" type="button" data-share-title="{html.escape(issue.platform, quote=True)} | Magazine" data-share-text="{html.escape(issue_takeaway(issue), quote=True)}" aria-label="공유하기" title="공유하기">
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -993,6 +1487,9 @@ def render_article(report: Report, issue: Issue) -> str:
           <div class="tag-row">{tags}</div>
           {source_notes}
         </footer>
+        <div class="article-list-actions">
+          <a class="article-list-link" href="../index.html#magazine">목록보기</a>
+        </div>
       </div>
     </article>
   </main>
@@ -1027,7 +1524,18 @@ def render_article(report: Report, issue: Issue) -> str:
     }});
   </script>
         """
-    return html_shell(f"{issue.platform} | CTTD Trend Magazine", body, "article")
+    return html_shell(
+        f"{issue.platform} | CTTD Trend Magazine",
+        body,
+        "article",
+        render_header_category_nav(report, "article"),
+        description=issue_deck(issue),
+        image=issue.image or SITE_OG_IMAGE,
+        url=absolute_site_url(issue_href(report, issue)),
+        page_type="article",
+        og_title=f"{issue.platform} | {issue_takeaway(issue)}",
+        image_alt=issue.image_caption or issue.platform,
+    )
 
 
 def write_site(report: Report) -> None:

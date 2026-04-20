@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astro | CTTD Trend Magazine</title>
+  <meta name="description" content="Astro 6가 built-in Fonts API, Content Security Policy API, Live Content Collections, 재설계된 astro dev를 포함해 공개됐습니다.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CTTD Trend Magazine">
+  <meta property="og:title" content="Astro | 프레임워크의 개발 경험은 이제 빠른 HMR보다, 배포될 런타임을 로컬에서 얼마나 정확히 재현하는가로 평가됩니다.">
+  <meta property="og:description" content="Astro 6가 built-in Fonts API, Content Security Policy API, Live Content Collections, 재설계된 astro dev를 포함해 공개됐습니다.">
+  <meta property="og:image" content="https://astro.build/_astro/og-astro-6.DDjHPVzL.webp">
+  <meta property="og:image:alt" content="Astro 공식 이미지">
+  <meta property="og:url" content="https://email.cttd.co.kr/magazine/articles/2026-04-20-story-23.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Astro | 프레임워크의 개발 경험은 이제 빠른 HMR보다, 배포될 런타임을 로컬에서 얼마나 정확히 재현하는가로 평가됩니다.">
+  <meta name="twitter:description" content="Astro 6가 built-in Fonts API, Content Security Policy API, Live Content Collections, 재설계된 astro dev를 포함해 공개됐습니다.">
+  <meta name="twitter:image" content="https://astro.build/_astro/og-astro-6.DDjHPVzL.webp">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="is-article-page">
+  <header class="site-header">
+    <a class="header-back-link" href="../index.html#magazine" aria-label="목록으로 돌아가기">
+      <span aria-hidden="true">←</span>
+    </a>
+    <a class="brand" href="../index.html#magazine" aria-label="CTTD Trend Magazine home">
+      <img src="../assets/cttd-logo.svg" alt="CTTD">
+      <span>Magazine</span>
+    </a>
+    <nav class="header-category-nav" aria-label="매거진 카테고리">
+      <a href="../index.html#magazine" data-category-nav="">전체</a>
+      <a href="../index.html#/category/uiux" data-category-nav="uiux">UIUX</a>
+      <a href="../index.html#/category/dev" data-category-nav="dev">DEV</a>
+    </nav>
+  </header>
+  
+  <main class="article-main">
+    <article class="article-layout">
+      <header class="article-hero">
+        <p class="article-brand">Astro</p>
+        <h1>프레임워크의 개발 경험은 이제 빠른 HMR보다, 배포될 런타임을 로컬에서 얼마나 정확히 재현하는가로 평가됩니다.</h1>
+        <p class="article-deck">Astro 6가 built-in Fonts API, Content Security Policy API, Live Content Collections, 재설계된 <code>astro dev</code>를 포함해 공개됐습니다.</p>
+        <div class="article-meta-row">
+          <div class="article-meta">
+            <time>2026-04-20</time>
+            <span aria-hidden="true">|</span>
+            <span class="category-label">DATA/API</span>
+          </div>
+          <button class="article-share-button" type="button" data-share-title="Astro | Magazine" data-share-text="프레임워크의 개발 경험은 이제 빠른 HMR보다, 배포될 런타임을 로컬에서 얼마나 정확히 재현하는가로 평가됩니다." aria-label="공유하기" title="공유하기">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="18" cy="5" r="3" />
+              <circle cx="6" cy="12" r="3" />
+              <circle cx="18" cy="19" r="3" />
+              <path d="M8.6 10.7 15.4 6.3" />
+              <path d="M8.6 13.3 15.4 17.7" />
+            </svg>
+          </button>
+        </div>
+      </header>
+      <div class="article-body">
+        
+        <figure class="article-image">
+          <img src="https://astro.build/_astro/og-astro-6.DDjHPVzL.webp" alt="Astro 공식 이미지">
+          <figcaption>Astro 공식 이미지</figcaption>
+        </figure>
+        
+        
+            <section class="article-section">
+              <h2>서비스 변화 요약</h2>
+              
+              <ul class="summary-list">
+                <li><span class="summary-key">업데이트</span><span class="summary-value">Astro 6가 built-in Fonts API, Content Security Policy API, Live Content Collections, 재설계된 <code>astro dev</code>를 포함해 공개됐습니다.</span></li><li><span class="summary-key">서비스 맥락</span><span class="summary-value">Astro는 Vite Environment API를 활용해 개발 환경에서도 실제 production runtime을 더 가깝게 실행하는 방향으로 dev server와 build pipeline을 개편했습니다.</span></li><li><span class="summary-key">변경 전</span><span class="summary-value">Cloudflare Workers, Bun, Deno 같은 non-Node runtime을 목표로 할 때 로컬 개발은 Node 기반 시뮬레이션에 가까웠고, 배포 후에야 런타임 차이가 드러나는 경우가 있었습니다.</span></li><li><span class="summary-key">변경 후</span><span class="summary-value">Cloudflare adapter는 개발, prerendering, production 단계에서 <code>workerd</code>를 사용해 KV, D1, R2, Durable Objects 같은 platform binding을 로컬에서 다룰 수 있게 했습니다.</span></li>
+              </ul>
+              
+              <div class="summary-facts">
+                <ul class="summary-fact-list">
+                  <li><span class="summary-key">주요 변화</span><span class="summary-value">redesigned <code>astro dev</code>, Cloudflare runtime parity, Fonts API, CSP API, Live Content Collections, experimental Rust compiler</span></li><li><span class="summary-key">확인 한계</span><span class="summary-value">Rust compiler, queued rendering, route caching은 experimental이므로 production 도입 전 별도 검증이 필요합니다.</span></li>
+                </ul>
+              </div>
+            
+        
+            </section>
+            
+            <section class="article-section is-deep-dive">
+              <h2>인사이트</h2>
+              <div class="section-prose">
+<blockquote>프레임워크의 개발 경험은 이제 빠른 HMR보다, 배포될 런타임을 로컬에서 얼마나 정확히 재현하는가로 평가됩니다.</blockquote>
+<h3>왜 지금 이 업데이트인가</h3>
+<p>Astro 6의 핵심은 기능 목록보다 production parity입니다. 정적 사이트 중심 프레임워크였던 Astro가 Cloudflare Workers, Bun, Deno 같은 런타임을 직접 개발 경험 안으로 끌어들이고 있습니다.</p>
+<p>이는 프론트엔드 앱이 CDN에 정적 파일을 올리는 단계를 넘어, edge runtime, content layer, 보안 정책, 폰트 최적화를 하나의 배포 단위로 다루게 됐기 때문입니다. 로컬에서 production runtime을 확인하지 못하면 가장 비싼 버그는 배포 후에 발견됩니다.</p>
+<h3>프론트엔드 개발 전문가 관점</h3>
+<p>Astro를 쓰는 팀은 Astro 6 업그레이드에서 adapter와 runtime binding을 먼저 확인해야 합니다. Cloudflare의 KV, D1, R2, Durable Objects를 실제로 쓰는 프로젝트라면 개발 환경의 mock layer를 줄일 기회가 생깁니다.</p>
+<p>또한 Fonts API와 CSP API는 UI 품질과 보안 정책을 프레임워크 설정으로 끌어올립니다. 디자인 시스템 폰트 로딩, fallback, preload, self-hosting 정책을 개별 페이지 구현이 아니라 프로젝트 규칙으로 정리할 수 있습니다.</p>
+<h3>실무에 어떻게 적용할 수 있을까</h3>
+<ul class="prose-list">
+<li>정적 페이지, 콘텐츠 컬렉션, Cloudflare adapter 페이지를 나눠 화면 산출물이 dev/prod에서 같은지 먼저 확인합니다.</li>
+<li>Fonts API는 브랜드 폰트 preload, fallback font, CLS 영향을 디자인 시스템 기준으로 정리하는 데 씁니다.</li>
+<li>CSP API 적용 후 inline style/script, 외부 이미지, 폼/위젯 삽입이 막히지 않는지 QA 항목에 추가합니다.</li>
+</ul>
+<h3>같이 보면 좋은 기술</h3>
+<ul class="prose-list">
+<li>Vite Environment API: Astro dev server가 실제 production runtime을 로컬에서 재현하는 기반입니다.</li>
+<li>Cloudflare <code>workerd</code>: Workers 배포 프로젝트는 Node 시뮬레이션이 아니라 실제 런타임 차이를 로컬에서 확인해야 합니다.</li>
+<li>KV/D1/R2/Durable Objects: Cloudflare binding을 쓰는 앱은 데이터 접근과 상태 저장이 dev/prod에서 같은지 검증해야 합니다.</li>
+<li>Fonts API: 폰트 로딩, preload, self-hosting 정책을 페이지 구현이 아니라 프레임워크 설정으로 관리할 수 있습니다.</li>
+<li>CSP API: 보안 헤더를 앱 구조와 함께 선언해 배포 후 CSP 오류를 줄이는 데 연결됩니다.</li>
+</ul>
+</div>
+            </section>
+            
+        <footer class="article-footer">
+          <div class="tag-row"><span>#Astro6</span> <span>#Framework</span> <span>#Cloudflare</span></div>
+          <div class="source-link-list"><a class="source-url" href="https://astro.build/blog/astro-6/" target="_blank" rel="noreferrer"><span class="source-label">출처:</span> Astro 6.0 | Astro</a></div>
+        </footer>
+        <div class="article-list-actions">
+          <a class="article-list-link" href="../index.html#magazine">목록보기</a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <script>
+    document.querySelectorAll(".article-share-button[data-share-title]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const shareData = {
+          title: button.dataset.shareTitle || document.title,
+          text: button.dataset.shareText || "",
+          url: window.location.href,
+        };
+
+        if (navigator.share) {
+          try {
+            await navigator.share(shareData);
+            return;
+          } catch (error) {
+            if (error && error.name === "AbortError") return;
+          }
+        }
+
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(shareData.url);
+          button.setAttribute("aria-label", "링크 복사됨");
+          button.setAttribute("title", "링크 복사됨");
+          window.setTimeout(() => {
+            button.setAttribute("aria-label", "공유하기");
+            button.setAttribute("title", "공유하기");
+          }, 1600);
+        }
+      });
+    });
+  </script>
+        
+  <footer class="site-footer">
+    <p>Copyright &copy; 2026 CTTD. All rights reserved.</p>
+    <a class="footer-site-link" href="https://www.cttd.co.kr/" target="_blank" rel="noreferrer" aria-label="CTTD 웹사이트 바로가기">
+      <span>CTTD 웹사이트 바로가기</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 17 17 7" />
+        <path d="M9 7h8v8" />
+      </svg>
+    </a>
+  </footer>
+</body>
+</html>

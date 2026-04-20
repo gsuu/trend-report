@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebKit/Safari | CTTD Trend Magazine</title>
+  <meta name="description" content="Safari 26.4에 CSS Grid Lanes, WebTransport, Keyboard Lock API 등 웹 플랫폼 기능과 191개 수정 사항이 포함됐습니다.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CTTD Trend Magazine">
+  <meta property="og:title" content="WebKit/Safari | 프론트엔드 구현의 난이도는 새 기능 자체보다, 브라우저 간 격차가 언제 줄어드는지에 달려 있습니다.">
+  <meta property="og:description" content="Safari 26.4에 CSS Grid Lanes, WebTransport, Keyboard Lock API 등 웹 플랫폼 기능과 191개 수정 사항이 포함됐습니다.">
+  <meta property="og:image" content="https://webkit.org/apple-touch-icon.png">
+  <meta property="og:image:alt" content="WebKit/Safari 공식 이미지">
+  <meta property="og:url" content="https://email.cttd.co.kr/magazine/articles/2026-04-20-story-20.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WebKit/Safari | 프론트엔드 구현의 난이도는 새 기능 자체보다, 브라우저 간 격차가 언제 줄어드는지에 달려 있습니다.">
+  <meta name="twitter:description" content="Safari 26.4에 CSS Grid Lanes, WebTransport, Keyboard Lock API 등 웹 플랫폼 기능과 191개 수정 사항이 포함됐습니다.">
+  <meta name="twitter:image" content="https://webkit.org/apple-touch-icon.png">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="is-article-page">
+  <header class="site-header">
+    <a class="header-back-link" href="../index.html#magazine" aria-label="목록으로 돌아가기">
+      <span aria-hidden="true">←</span>
+    </a>
+    <a class="brand" href="../index.html#magazine" aria-label="CTTD Trend Magazine home">
+      <img src="../assets/cttd-logo.svg" alt="CTTD">
+      <span>Magazine</span>
+    </a>
+    <nav class="header-category-nav" aria-label="매거진 카테고리">
+      <a href="../index.html#magazine" data-category-nav="">전체</a>
+      <a href="../index.html#/category/uiux" data-category-nav="uiux">UIUX</a>
+      <a href="../index.html#/category/dev" data-category-nav="dev">DEV</a>
+    </nav>
+  </header>
+  
+  <main class="article-main">
+    <article class="article-layout">
+      <header class="article-hero">
+        <p class="article-brand">WebKit/Safari</p>
+        <h1>프론트엔드 구현의 난이도는 새 기능 자체보다, 브라우저 간 격차가 언제 줄어드는지에 달려 있습니다.</h1>
+        <p class="article-deck">Safari 26.4에 CSS Grid Lanes, WebTransport, Keyboard Lock API 등 웹 플랫폼 기능과 191개 수정 사항이 포함됐습니다.</p>
+        <div class="article-meta-row">
+          <div class="article-meta">
+            <time>2026-04-20</time>
+            <span aria-hidden="true">|</span>
+            <span class="category-label">CSS</span>
+          </div>
+          <button class="article-share-button" type="button" data-share-title="WebKit/Safari | Magazine" data-share-text="프론트엔드 구현의 난이도는 새 기능 자체보다, 브라우저 간 격차가 언제 줄어드는지에 달려 있습니다." aria-label="공유하기" title="공유하기">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="18" cy="5" r="3" />
+              <circle cx="6" cy="12" r="3" />
+              <circle cx="18" cy="19" r="3" />
+              <path d="M8.6 10.7 15.4 6.3" />
+              <path d="M8.6 13.3 15.4 17.7" />
+            </svg>
+          </button>
+        </div>
+      </header>
+      <div class="article-body">
+        
+        <figure class="article-image">
+          <img src="https://webkit.org/apple-touch-icon.png" alt="WebKit/Safari 공식 이미지">
+          <figcaption>WebKit/Safari 공식 이미지</figcaption>
+        </figure>
+        
+        
+            <section class="article-section">
+              <h2>서비스 변화 요약</h2>
+              
+              <ul class="summary-list">
+                <li><span class="summary-key">업데이트</span><span class="summary-value">Safari 26.4에 CSS Grid Lanes, WebTransport, Keyboard Lock API 등 웹 플랫폼 기능과 191개 수정 사항이 포함됐습니다.</span></li><li><span class="summary-key">서비스 맥락</span><span class="summary-value">WebKit은 이번 릴리즈를 새로운 기능보다 기존 웹 표준과의 호환성, 레이아웃 엔진 개선, 개발자 요청 반영에 초점을 둔 업데이트로 설명했습니다.</span></li><li><span class="summary-key">변경 전</span><span class="summary-value">masonry 스타일 레이아웃, 저지연 양방향 통신, 키보드 단축키 제어 같은 기능은 브라우저별 구현 차이가 컸습니다.</span></li><li><span class="summary-key">변경 후</span><span class="summary-value">Safari에서도 Grid Lanes, WebTransport, Keyboard Lock API 지원 범위가 넓어져 복잡한 웹 앱 구현 선택지가 늘어납니다.</span></li>
+              </ul>
+              
+              <div class="summary-facts">
+                <ul class="summary-fact-list">
+                  <li><span class="summary-key">주요 기능</span><span class="summary-value">CSS Grid Lanes, WebTransport, Keyboard Lock API, <code>sizes</code> 속성 안의 <code>min()</code>/<code>max()</code>/<code>clamp()</code> 지원</span></li><li><span class="summary-key">수정 규모</span><span class="summary-value">44개 기능, 191개 수정, 1개 deprecation</span></li>
+                </ul>
+              </div>
+            
+        
+            </section>
+            
+            <section class="article-section is-deep-dive">
+              <h2>인사이트</h2>
+              <div class="section-prose">
+<blockquote>프론트엔드 구현의 난이도는 새 기능 자체보다, 브라우저 간 격차가 언제 줄어드는지에 달려 있습니다.</blockquote>
+<h3>왜 지금 이 업데이트인가</h3>
+<p>Safari 26.4는 프론트엔드 팀이 다시 확인해야 할 브라우저 업데이트입니다. 특히 CSS Grid Lanes와 WebTransport는 UI 레이아웃과 실시간 경험 구현에 영향을 줍니다.</p>
+<p>다만 중요한 것은 &quot;Safari가 새 기능을 넣었다&quot;가 아니라, 기존 표준과의 차이를 줄이는 방향입니다. WebKit은 이번 릴리즈에서 개발자들이 요구한 호환성, 버그 수정, spec coverage를 강조했습니다.</p>
+<h3>프론트엔드 개발 전문가 관점</h3>
+<p>프론트엔드 팀은 CSS/브라우저 기능을 도입할 때 Chrome 기준만으로 판단하면 안 됩니다. Safari 지원이 넓어질 때 비로소 polyfill, fallback, custom JavaScript 레이아웃 코드를 줄일 수 있습니다.</p>
+<p>Grid Lanes는 카드형 피드, 갤러리, 대시보드 레이아웃에 영향을 줄 수 있고, WebTransport는 협업 도구나 실시간 인터랙션에서 WebSocket 대체 옵션으로 검토할 수 있습니다.</p>
+<h3>실무에 어떻게 적용할 수 있을까</h3>
+<ul class="prose-list">
+<li>카드 그리드, 상품 리스트, 갤러리처럼 레이아웃이 복잡한 화면부터 Safari 26.4와 구버전 Safari fallback을 나눠 확인합니다.</li>
+<li>WebTransport 같은 기능은 화면 구현 단계에서 feature detection 상태와 대체 UI 문구를 먼저 준비합니다.</li>
+<li>Keyboard Lock과 단축키 UX는 포커스 이동, input 입력, 스크린리더 사용 시 충돌이 없는지 QA 체크리스트에 넣습니다.</li>
+</ul>
+<h3>같이 보면 좋은 기술</h3>
+<ul class="prose-list">
+<li>CSS Grid Lanes: masonry 스타일 UI를 JavaScript 측정 코드 없이 구현할 수 있는지 확인해야 합니다.</li>
+<li>Masonry layout fallback: Safari 외 브라우저나 구버전 환경에서 레이아웃이 무너지지 않도록 대체 구조가 필요합니다.</li>
+<li>WebTransport: 저지연 양방향 통신을 WebSocket 이후 옵션으로 검토할 수 있습니다.</li>
+<li>WebSocket fallback: WebTransport 지원이 완전하지 않은 환경에서도 실시간 기능을 유지해야 합니다.</li>
+<li>Safari Technology Preview: Safari 안정 버전 도입 전 웹 플랫폼 기능과 버그 수정 흐름을 미리 검증할 수 있습니다.</li>
+</ul>
+</div>
+            </section>
+            
+        <footer class="article-footer">
+          <div class="tag-row"><span>#Safari264</span> <span>#CSSGridLanes</span> <span>#WebTransport</span></div>
+          <div class="source-link-list"><a class="source-url" href="https://webkit.org/blog/17862/webkit-features-for-safari-26-4/" target="_blank" rel="noreferrer"><span class="source-label">출처:</span> WebKit Features for Safari 26.4</a></div>
+        </footer>
+        <div class="article-list-actions">
+          <a class="article-list-link" href="../index.html#magazine">목록보기</a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <script>
+    document.querySelectorAll(".article-share-button[data-share-title]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const shareData = {
+          title: button.dataset.shareTitle || document.title,
+          text: button.dataset.shareText || "",
+          url: window.location.href,
+        };
+
+        if (navigator.share) {
+          try {
+            await navigator.share(shareData);
+            return;
+          } catch (error) {
+            if (error && error.name === "AbortError") return;
+          }
+        }
+
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(shareData.url);
+          button.setAttribute("aria-label", "링크 복사됨");
+          button.setAttribute("title", "링크 복사됨");
+          window.setTimeout(() => {
+            button.setAttribute("aria-label", "공유하기");
+            button.setAttribute("title", "공유하기");
+          }, 1600);
+        }
+      });
+    });
+  </script>
+        
+  <footer class="site-footer">
+    <p>Copyright &copy; 2026 CTTD. All rights reserved.</p>
+    <a class="footer-site-link" href="https://www.cttd.co.kr/" target="_blank" rel="noreferrer" aria-label="CTTD 웹사이트 바로가기">
+      <span>CTTD 웹사이트 바로가기</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 17 17 7" />
+        <path d="M9 7h8v8" />
+      </svg>
+    </a>
+  </footer>
+</body>
+</html>

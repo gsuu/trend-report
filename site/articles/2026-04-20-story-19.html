@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ESLint | CTTD Trend Magazine</title>
+  <meta name="description" content="ESLint v10.2.1 패치가 공개됐고, 직전 v10.2.0에서는 language-aware rules와 Temporal 인식이 추가됐습니다.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CTTD Trend Magazine">
+  <meta property="og:title" content="ESLint | 프론트엔드 품질 도구는 이제 파일 확장자를 넘어서 언어별 의미를 구분하는 단계로 가고 있습니다.">
+  <meta property="og:description" content="ESLint v10.2.1 패치가 공개됐고, 직전 v10.2.0에서는 language-aware rules와 Temporal 인식이 추가됐습니다.">
+  <meta property="og:image" content="https://eslint.org/apple-touch-icon.png">
+  <meta property="og:image:alt" content="ESLint 공식 이미지">
+  <meta property="og:url" content="https://email.cttd.co.kr/magazine/articles/2026-04-20-story-19.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ESLint | 프론트엔드 품질 도구는 이제 파일 확장자를 넘어서 언어별 의미를 구분하는 단계로 가고 있습니다.">
+  <meta name="twitter:description" content="ESLint v10.2.1 패치가 공개됐고, 직전 v10.2.0에서는 language-aware rules와 Temporal 인식이 추가됐습니다.">
+  <meta name="twitter:image" content="https://eslint.org/apple-touch-icon.png">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="is-article-page">
+  <header class="site-header">
+    <a class="header-back-link" href="../index.html#magazine" aria-label="목록으로 돌아가기">
+      <span aria-hidden="true">←</span>
+    </a>
+    <a class="brand" href="../index.html#magazine" aria-label="CTTD Trend Magazine home">
+      <img src="../assets/cttd-logo.svg" alt="CTTD">
+      <span>Magazine</span>
+    </a>
+    <nav class="header-category-nav" aria-label="매거진 카테고리">
+      <a href="../index.html#magazine" data-category-nav="">전체</a>
+      <a href="../index.html#/category/uiux" data-category-nav="uiux">UIUX</a>
+      <a href="../index.html#/category/dev" data-category-nav="dev">DEV</a>
+    </nav>
+  </header>
+  
+  <main class="article-main">
+    <article class="article-layout">
+      <header class="article-hero">
+        <p class="article-brand">ESLint</p>
+        <h1>프론트엔드 품질 도구는 이제 파일 확장자를 넘어서 언어별 의미를 구분하는 단계로 가고 있습니다.</h1>
+        <p class="article-deck">ESLint v10.2.1 패치가 공개됐고, 직전 v10.2.0에서는 language-aware rules와 Temporal 인식이 추가됐습니다.</p>
+        <div class="article-meta-row">
+          <div class="article-meta">
+            <time>2026-04-20</time>
+            <span aria-hidden="true">|</span>
+            <span class="category-label">TOOL</span>
+          </div>
+          <button class="article-share-button" type="button" data-share-title="ESLint | Magazine" data-share-text="프론트엔드 품질 도구는 이제 파일 확장자를 넘어서 언어별 의미를 구분하는 단계로 가고 있습니다." aria-label="공유하기" title="공유하기">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="18" cy="5" r="3" />
+              <circle cx="6" cy="12" r="3" />
+              <circle cx="18" cy="19" r="3" />
+              <path d="M8.6 10.7 15.4 6.3" />
+              <path d="M8.6 13.3 15.4 17.7" />
+            </svg>
+          </button>
+        </div>
+      </header>
+      <div class="article-body">
+        
+        <figure class="article-image">
+          <img src="https://eslint.org/apple-touch-icon.png" alt="ESLint 공식 이미지">
+          <figcaption>ESLint 공식 이미지</figcaption>
+        </figure>
+        
+        
+            <section class="article-section">
+              <h2>서비스 변화 요약</h2>
+              
+              <ul class="summary-list">
+                <li><span class="summary-key">업데이트</span><span class="summary-value">ESLint v10.2.1 패치가 공개됐고, 직전 v10.2.0에서는 language-aware rules와 Temporal 인식이 추가됐습니다.</span></li><li><span class="summary-key">서비스 맥락</span><span class="summary-value">ESLint가 JavaScript 전용 lint를 넘어 언어별 rule 적용 범위를 명시하는 방향으로 확장되고 있습니다.</span></li><li><span class="summary-key">변경 전</span><span class="summary-value">rule이 어떤 언어/파서 조합을 지원하는지 명확하지 않으면 TypeScript, Markdown, JSON 등 다언어 lint 구성에서 오동작 위험이 있었습니다.</span></li><li><span class="summary-key">변경 후</span><span class="summary-value">custom rule의 <code>meta.languages</code>로 지원 언어를 선언할 수 있고, 지원되지 않는 언어에 rule이 켜지면 런타임 오류로 드러납니다.</span></li>
+              </ul>
+              
+              <div class="summary-facts">
+                <ul class="summary-fact-list">
+                  <li><span class="summary-key">주요 변화</span><span class="summary-value"><code>meta.languages</code>, Temporal global 인식, <code>no-obj-calls</code> Temporal 처리</span></li><li><span class="summary-key">최신 패치</span><span class="summary-value">v10.2.1에서 code path analysis와 <code>no-async-promise-executor</code> false positive 등 버그 수정</span></li>
+                </ul>
+              </div>
+            
+        
+            </section>
+            
+            <section class="article-section is-deep-dive">
+              <h2>인사이트</h2>
+              <div class="section-prose">
+<blockquote>프론트엔드 품질 도구는 이제 파일 확장자를 넘어서 언어별 의미를 구분하는 단계로 가고 있습니다.</blockquote>
+<h3>왜 지금 이 업데이트인가</h3>
+<p>현대 프론트엔드 저장소는 JavaScript와 TypeScript만으로 구성되지 않습니다. Markdown, JSON, CSS-in-JS, MDX, 설정 파일이 한 모노레포 안에서 함께 lint됩니다. ESLint가 language-aware rule을 도입한 것은 이 복잡한 구성에서 rule 적용 범위를 더 명확히 하려는 변화입니다.</p>
+<p>Temporal 지원도 같은 흐름입니다. 표준 API가 추가될 때 lint 도구가 이를 모르면 <code>no-undef</code> 같은 기본 rule이 잘못된 경고를 만들 수 있습니다.</p>
+<h3>프론트엔드 개발 전문가 관점</h3>
+<p>팀은 ESLint v10 계열을 단순 버전 업데이트로 보면 안 됩니다. 사내 custom rule이나 플러그인이 있다면 어떤 language option에서 동작하는지 명시해야 하고, TypeScript/Markdown/JSON lint 범위가 섞인 구성에서는 rule 충돌을 점검해야 합니다.</p>
+<h3>실무에 어떻게 적용할 수 있을까</h3>
+<ul class="prose-list">
+<li>화면 구현 산출물에 섞이는 JS, TS, MDX, JSON, CSS-in-JS 파일을 패턴별로 분리해 lint rule 적용 범위를 정합니다.</li>
+<li>접근성, alt, button type, aria 속성처럼 마크업 품질에 직접 연결되는 rule은 PR에서 반드시 실패하도록 둡니다.</li>
+<li>문서나 JSON에 JavaScript rule이 잘못 적용되는 경우를 줄이기 위해 flat config를 파일 타입별로 나눕니다.</li>
+</ul>
+<h3>같이 보면 좋은 기술</h3>
+<ul class="prose-list">
+<li>ESLint flat config: 파일 패턴별 rule 적용 범위를 명시해야 language-aware rules의 효과가 납니다.</li>
+<li><code>@typescript-eslint</code>: TypeScript 파서와 rule이 ESLint v10의 언어 구분과 충돌하지 않는지 확인해야 합니다.</li>
+<li>Markdown/JSON lint plugins: 다언어 저장소에서 JavaScript rule이 문서나 설정 파일에 잘못 적용되는 문제를 줄일 수 있습니다.</li>
+<li>custom rule <code>meta.languages</code>: 사내 rule이 어떤 언어에서 동작하는지 선언해야 예기치 않은 런타임 오류를 막을 수 있습니다.</li>
+<li>monorepo lint pipeline: 패키지별 lint 범위와 CI 실행 순서가 rule 적용 범위와 맞는지 같이 점검해야 합니다.</li>
+</ul>
+</div>
+            </section>
+            
+        <footer class="article-footer">
+          <div class="tag-row"><span>#ESLint10</span> <span>#LanguageAwareRules</span> <span>#Temporal</span></div>
+          <div class="source-link-list"><a class="source-url" href="https://eslint.org/blog/2026/04/eslint-v10.2.1-released/" target="_blank" rel="noreferrer"><span class="source-label">출처:</span> ESLint v10.2.1 released - ESLint - Pluggable JavaScript Linter</a><a class="source-url" href="https://eslint.org/blog/2026/04/eslint-v10.2.0-released/" target="_blank" rel="noreferrer"><span class="source-label">관련 뉴스:</span> ESLint v10.2.0 released</a></div>
+        </footer>
+        <div class="article-list-actions">
+          <a class="article-list-link" href="../index.html#magazine">목록보기</a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <script>
+    document.querySelectorAll(".article-share-button[data-share-title]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const shareData = {
+          title: button.dataset.shareTitle || document.title,
+          text: button.dataset.shareText || "",
+          url: window.location.href,
+        };
+
+        if (navigator.share) {
+          try {
+            await navigator.share(shareData);
+            return;
+          } catch (error) {
+            if (error && error.name === "AbortError") return;
+          }
+        }
+
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(shareData.url);
+          button.setAttribute("aria-label", "링크 복사됨");
+          button.setAttribute("title", "링크 복사됨");
+          window.setTimeout(() => {
+            button.setAttribute("aria-label", "공유하기");
+            button.setAttribute("title", "공유하기");
+          }, 1600);
+        }
+      });
+    });
+  </script>
+        
+  <footer class="site-footer">
+    <p>Copyright &copy; 2026 CTTD. All rights reserved.</p>
+    <a class="footer-site-link" href="https://www.cttd.co.kr/" target="_blank" rel="noreferrer" aria-label="CTTD 웹사이트 바로가기">
+      <span>CTTD 웹사이트 바로가기</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 17 17 7" />
+        <path d="M9 7h8v8" />
+      </svg>
+    </a>
+  </footer>
+</body>
+</html>

@@ -15,6 +15,12 @@
       <use href="#t" x="1484.900" y="38.818" width="425.809" height="425.784" />
       <use href="#d" x="2225.465" y="5.604" width="441.201" height="490.817" />
     </symbol>
+    <symbol id="emblem" viewBox="0 0 1333 1309">
+      <use href="#c" x="0" y="0" width="488" height="509" />
+      <use href="#t" x="892" y="38" width="433" height="435" />
+      <use href="#t" x="28" y="842" width="433" height="435" />
+      <use href="#d" x="884" y="809" width="449" height="500" />
+    </symbol>
   </defs>
   <use href="#basic" />
 </svg>
