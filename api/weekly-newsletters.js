@@ -87,19 +87,19 @@ function previousKstWeekRange() {
     ? new Date(`${process.env.WEEKLY_NEWSLETTER_DATE}T00:00:00+09:00`)
     : new Date();
   const endKst = startOfKstWeek(base);
+  endKst.setUTCHours(16, 0, 0, 0);
   const startKst = new Date(endKst);
   startKst.setUTCDate(startKst.getUTCDate() - 7);
+  startKst.setUTCMinutes(1, 0, 0);
   return { startKst, endKst };
 }
 
-function formatKstDate(date) {
-  return date.toISOString().slice(0, 10);
+function formatKstDateTime(date) {
+  return `${date.toISOString().slice(0, 10)} ${String(date.getUTCHours()).padStart(2, "0")}:${String(date.getUTCMinutes()).padStart(2, "0")} KST`;
 }
 
 function weekRangeLabel(range) {
-  const endInclusive = new Date(range.endKst);
-  endInclusive.setUTCDate(endInclusive.getUTCDate() - 1);
-  return `${formatKstDate(range.startKst)} ~ ${formatKstDate(endInclusive)}`;
+  return `${formatKstDateTime(range.startKst)} ~ ${formatKstDateTime(range.endKst)} 전`;
 }
 
 function dateInKstWeek(value, range) {
@@ -351,7 +351,7 @@ async function archiveMarkdownToGithub(markdown, weekRange) {
   const { token, repo, branch, directory } = githubArchiveConfig();
   if (!token || !repo) return { archived: false, reason: "missing GitHub archive configuration" };
 
-  const fileName = `${formatKstDate(weekRange.startKst)}_weekly-newsletter.md`;
+  const fileName = `${weekRange.startKst.toISOString().slice(0, 10)}_weekly-newsletter.md`;
   const filePath = `${directory}/${fileName}`;
   const apiUrl = `https://api.github.com/repos/${repo}/contents/${encodeURIComponent(filePath).replaceAll("%2F", "/")}`;
   const headers = {
@@ -374,7 +374,7 @@ async function archiveMarkdownToGithub(markdown, weekRange) {
     method: "PUT",
     headers,
     body: JSON.stringify({
-      message: `chore: archive weekly newsletter ${formatKstDate(weekRange.startKst)}`,
+      message: `chore: archive weekly newsletter ${weekRange.startKst.toISOString().slice(0, 10)}`,
       content: Buffer.from(markdown, "utf8").toString("base64"),
       branch,
       ...(sha ? { sha } : {}),
