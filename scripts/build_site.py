@@ -59,19 +59,19 @@ DEVELOP_CATEGORY_KEYS = {
     "프론트엔드",
 }
 DEVELOP_SUBCATEGORY_ORDER = (
+    "ai",
     "html",
     "css",
     "javascript",
     "web_accessibility",
-    "ai",
     "tool",
     "data_api",
 )
 DEVELOP_SUBCATEGORY_CLASSIFICATION_ORDER = (
-    "html",
     "ai",
     "web_accessibility",
     "css",
+    "html",
     "data_api",
     "tool",
     "javascript",
@@ -86,12 +86,12 @@ DEVELOP_SUBCATEGORY_LABELS = {
     "data_api": "DATA/API",
 }
 DEVELOP_SUBCATEGORY_KEYWORDS = {
-    "html": {"html", "dom", "markup", "semantic_html", "semantics", "document", "web_components", "custom_elements", "마크업", "시맨틱", "시맨틱_html", "웹컴포넌트"},
-    "css": {"css", "cssgridlanes", "css_grid_lanes", "grid", "grid_lanes", "layout", "style", "styles", "responsive", "animation", "레이아웃", "반응형", "스타일", "애니메이션"},
-    "javascript": {"javascript", "js", "typescript", "ts", "type_script", "es2025", "temporal", "node", "nodejs", "node_js", "eslint", "lint", "next", "nextjs", "next_js", "react", "vue", "svelte", "framework", "frontend", "frontend_development", "front_end", "fe", "web_development", "web_develop", "adapterapi", "adapter_api", "opennext", "runtime", "component", "components", "프론트", "프론트엔드", "웹개발", "컴포넌트"},
-    "web_accessibility": {"accessibility", "a11y", "wcag", "screen_reader", "web_accessibility", "웹접근성", "접근성", "스크린리더"},
-    "ai": {"ai", "ai_development", "ai개발", "ai개발도구", "code_assistant", "copilot", "llm", "ai_coding", "ai_assisted_development", "agent", "agent_devtools", "agent_dev_tools", "agentdevtools", "agents", "코딩어시스턴트"},
-    "tool": {"tool", "tools", "tooling", "quality", "test", "testing", "qa", "ci", "cd", "build", "deploy", "release", "monitoring", "observability", "e2e", "eslint", "lint", "devtools", "dev_tools", "agentdevtools", "agent_devtools", "agent_dev_tools", "browserlogforwarding", "browser_log_forwarding", "테스트", "품질", "도구", "툴", "빌드", "배포", "모니터링"},
+    "html": {"html", "dom", "markup", "semantic_html", "semantics", "document", "web_components", "custom_elements", "custom_element", "template", "popover", "dialog", "details", "마크업", "시맨틱", "시맨틱_html", "웹컴포넌트"},
+    "css": {"css", "cssgridlanes", "css_grid_lanes", "grid", "grid_lanes", "layout", "style", "styles", "responsive", "animation", "container_query", "container_queries", "anchor_positioning", "view_transition", "scroll_driven_animation", "baseline", "레이아웃", "반응형", "스타일", "애니메이션"},
+    "javascript": {"javascript", "js", "typescript", "ts", "type_script", "es2025", "es2026", "temporal", "node", "nodejs", "node_js", "eslint", "lint", "next", "nextjs", "next_js", "react", "vue", "svelte", "astro", "framework", "frontend", "frontend_development", "front_end", "fe", "web_development", "web_develop", "adapterapi", "adapter_api", "opennext", "runtime", "component", "components", "design_system", "storybook", "프론트", "프론트엔드", "웹개발", "컴포넌트", "디자인시스템"},
+    "web_accessibility": {"accessibility", "a11y", "wcag", "aria", "screen_reader", "screenreader", "web_accessibility", "inert", "focus", "keyboard", "웹접근성", "접근성", "스크린리더"},
+    "ai": {"ai", "ai_development", "ai개발", "ai개발도구", "code_assistant", "copilot", "llm", "ai_coding", "ai_assisted_development", "agent", "agentic", "agent_devtools", "agent_dev_tools", "agentdevtools", "agents", "mcp", "model_context_protocol", "코딩어시스턴트"},
+    "tool": {"tool", "tools", "tooling", "quality", "test", "testing", "qa", "ci", "cd", "build", "deploy", "release", "monitoring", "observability", "e2e", "eslint", "lint", "devtools", "dev_tools", "chrome", "chromium", "firefox", "mozilla", "safari", "webkit", "ios", "ipados", "browser", "browserlogforwarding", "browser_log_forwarding", "테스트", "품질", "도구", "툴", "빌드", "배포", "모니터링", "브라우저"},
     "data_api": {"data", "api", "data_api", "graphql", "rest", "server", "backend", "database", "db", "auth", "webtransport", "web_transport", "node", "nodejs", "node_js", "runtime", "데이터", "서버", "백엔드", "인증"},
 }
 DEVELOP_DETECTION_EXCLUDED_KEYWORDS = {"ai", "llm"}

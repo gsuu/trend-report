@@ -47,6 +47,24 @@ CATEGORY_SIGNAL_RULES = {
     ],
 }
 
+DEV_SIGNAL_RULES = {
+    "ai": [
+        "AI 개발 도구, 코딩 에이전트, 디자인/프론트엔드 워크플로우 자동화",
+        "Figma, Storybook, Playwright, 브라우저 MCP처럼 UIUX 팀 검토 방식이 바뀌는 도구",
+        "AI 결과를 사람이 검증할 수 있는 로그, diff, screenshot, trace, 평가 기능",
+    ],
+    "web_platform": [
+        "접근성, CSS, JavaScript, HTML 속성·API·브라우저 동작 변경",
+        "Chrome, Firefox, Safari/WebKit, iOS/iPadOS의 이번 주 릴리즈와 호환성 변화",
+        "Baseline, MDN, W3C/WICG, WebKit, Chrome Developers, Mozilla Hacks의 최신 업데이트",
+    ],
+    "frontend_system": [
+        "디자인 시스템, 컴포넌트, 토큰, 접근성 QA, 시각 회귀 테스트 사례",
+        "Astro, React, Next.js, Vue, Svelte, Web Components처럼 화면 구현 방식에 영향이 있는 프레임워크",
+        "빌드/배포보다 UI 구현 품질, 반응형, 성능, 브라우저 QA에 직접 연결되는 변화",
+    ],
+}
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="우선순위 기반 원천 수집 체크리스트를 생성합니다.")
@@ -106,6 +124,21 @@ def build_category_signal_checklist(data: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def build_dev_signal_checklist() -> str:
+    lines = [
+        "  - DEV 필수 수집 원칙",
+        "    - [ ] 우리 UIUX 팀의 화면 설계, 디자인 시스템, 접근성 QA, 프론트엔드 구현 판단에 직접 도움이 되는가?",
+        "    - [ ] 이번 주 기준 최신 릴리즈, 공식 블로그, 표준 문서, 브라우저 릴리즈 노트로 확인했는가?",
+        "    - [ ] AI 관련 변화가 있으면 최우선 후보로 올렸는가?",
+        "    - [ ] 접근성, CSS, JavaScript, HTML, iOS, Chrome, Firefox 속성/API 업데이트 사례를 각각 확인했는가?",
+    ]
+    for category, signals in DEV_SIGNAL_RULES.items():
+        lines.append(f"  - {category}")
+        for signal in signals:
+            lines.append(f"    - [ ] {signal}")
+    return "\n".join(lines)
+
+
 def main() -> None:
     args = parse_args()
     collection_date = parse_collection_date(args.date)
@@ -115,6 +148,7 @@ def main() -> None:
         template.replace("{{date}}", collection_date.isoformat())
         .replace("{{platform_checklist}}", build_platform_checklist(data))
         .replace("{{category_signal_checklist}}", build_category_signal_checklist(data))
+        .replace("{{dev_signal_checklist}}", build_dev_signal_checklist())
     )
 
     COLLECTIONS_DIR.mkdir(exist_ok=True)

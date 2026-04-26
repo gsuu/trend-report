@@ -6,3 +6,6 @@ newsletters/
 config/subscribers.txt
 node_modules/
 test-results/
+dist/
+src/data/report.json
+.playwright-mcp/

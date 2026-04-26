@@ -108,13 +108,15 @@
 
 `DEV` 대분류 안에서는 개발 영향 범위 기준으로 나눕니다. 사이트 빌드 시 dev 이슈는 플랫폼명, 카테고리, 태그, 요약 문장을 기준으로 아래 소분류에 자동 배치됩니다.
 
-1. HTML: 마크업, DOM, 시맨틱 HTML, 웹 컴포넌트
-2. CSS: 레이아웃, 반응형, 스타일, 애니메이션
-3. JAVASCRIPT: JavaScript, TypeScript, 프레임워크, 런타임, 컴포넌트
-4. 웹접근성: 접근성, WCAG, 스크린리더
-5. AI: AI 개발 도구, 코딩 에이전트, 코드 어시스턴트
+1. AI: AI 개발 도구, 코딩 에이전트, 코드 어시스턴트, MCP, 에이전트 기반 UI 구현/검증
+2. HTML: 마크업, DOM, 시맨틱 HTML, 웹 컴포넌트
+3. CSS: 레이아웃, 반응형, 스타일, 애니메이션, Baseline, 신규 CSS 속성/API
+4. JAVASCRIPT: JavaScript, TypeScript, 프레임워크, 런타임, 컴포넌트, 디자인 시스템, Astro
+5. 웹접근성: 접근성, WCAG, ARIA, 스크린리더, 키보드/focus 동작
 6. TOOL: 테스트, 품질, 빌드, 배포, 모니터링
 7. DATA/API: 데이터, API, 서버, 백엔드, 인증
+
+DEV 수집은 “개발자에게 흥미로운 뉴스”보다 “UIUX 팀의 화면 설계, 디자인 시스템 운영, 접근성 QA, 브라우저 호환성 판단에 바로 도움이 되는 정보”를 우선합니다. 매주 금주 기준 최신 릴리즈를 확인하고, AI 관련 이슈는 동일 점수라면 가장 먼저 배치합니다. 접근성, CSS, JavaScript, HTML, iOS/Safari/WebKit, Chrome/Chromium, Firefox/Mozilla 속성·API 업데이트 사례는 필수 확인 축으로 둡니다.
 
 ## DEV 아티클 작성 구조
 
@@ -214,13 +216,13 @@ HTML 미리보기는 `newsletters/`에 생성됩니다.
 
 Dev 카테고리 또는 태그가 붙은 이슈만 발송용으로 확인하려면 `--audience dev`를 붙입니다. 생성 파일은 일반 뉴스레터와 겹치지 않도록 `newsletters/*-dev.html`로 저장됩니다. dev 뉴스레터는 카테고리, 태그, 플랫폼명, 요약 문장을 기준으로 세부 섹션을 자동으로 나눕니다. 기존 `--audience develop`도 호환용 별칭으로 동작합니다.
 
-dev 세부 섹션은 아래 키워드로 구분합니다.
+dev 세부 섹션은 아래 키워드로 구분합니다. AI 키워드는 다른 키워드와 함께 있어도 최우선 분류합니다.
 
-1. HTML: `html`, `dom`, `markup`, `semantic_html`, `web_components`
-2. CSS: `css`, `css_grid_lanes`, `grid`, `layout`, `responsive`, `animation`
-3. JAVASCRIPT: `javascript`, `typescript`, `node`, `nextjs`, `react`, `vue`, `component`
-4. 웹접근성: `accessibility`, `a11y`, `wcag`, `screen_reader`, `웹접근성`
-5. AI: `ai_development`, `code_assistant`, `copilot`, `ai_coding`, `agent`
+1. AI: `ai_development`, `code_assistant`, `copilot`, `ai_coding`, `agent`, `mcp`
+2. HTML: `html`, `dom`, `markup`, `semantic_html`, `web_components`, `popover`, `dialog`
+3. CSS: `css`, `css_grid_lanes`, `grid`, `layout`, `responsive`, `animation`, `baseline`, `anchor_positioning`, `view_transition`
+4. JAVASCRIPT: `javascript`, `typescript`, `node`, `nextjs`, `react`, `vue`, `astro`, `component`, `design_system`
+5. 웹접근성: `accessibility`, `a11y`, `wcag`, `aria`, `screen_reader`, `웹접근성`
 6. TOOL: `testing`, `qa`, `eslint`, `ci`, `build`, `deploy`, `monitoring`
 7. DATA/API: `data`, `api`, `backend`, `graphql`, `server`, `auth`, `node`
 
@@ -234,22 +236,61 @@ python3 scripts/send_newsletter.py \
 
 ## 매거진 사이트 만들기
 
-뉴스레터 대신 정적 매거진 사이트로 보고 싶으면 아래 명령을 실행합니다.
+Vercel에 올리는 매거진 사이트는 Vue/Vite 앱으로 구성합니다. 빌드 시점에 Notion 데이터베이스에서 데이터를 가져와 `src/data/report.json`을 만들고, Vue 템플릿이 홈/상세 화면을 렌더링합니다.
+
+```bash
+npm install
+npm run dev
+```
+
+Notion 연동에는 아래 환경변수가 필요합니다.
+
+```dotenv
+NOTION_TOKEN=secret_xxx
+NOTION_DATABASE_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+로컬에서 Notion 환경변수가 없으면 기존 `site/index.html`에 들어 있는 샘플 데이터를 fallback으로 사용합니다. 배포 환경에서는 Vercel Project Settings의 Environment Variables에 `NOTION_TOKEN`, `NOTION_DATABASE_ID`를 등록합니다.
+
+```bash
+npm run build
+```
+
+Vercel 설정은 저장소 루트의 `vercel.json`에 들어 있습니다.
+
+- Build Command: `npm run build`
+- Output Directory: `dist`
+- Framework Preset: `Vite`
+
+## Python 수집 자료를 Notion에 올리기
+
+Python으로 수집/정리한 Markdown 리포트는 Notion 데이터베이스에 먼저 적재하고, Vue 사이트는 Vercel 빌드 시점에 Notion 데이터를 읽습니다.
+
+`.env` 또는 Vercel 환경변수에 아래 값을 설정합니다.
+
+```dotenv
+NOTION_TOKEN=secret_xxx
+NOTION_DATABASE_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+동기화 전에는 dry-run으로 들어갈 항목을 확인합니다.
+
+```bash
+python3 scripts/push_notion.py reports/2026-04-20-uiux-web-service-weekly-trend-report.md --dry-run
+```
+
+문제가 없으면 Notion DB에 추가/업데이트합니다.
+
+```bash
+python3 scripts/push_notion.py reports/2026-04-20-uiux-web-service-weekly-trend-report.md
+```
+
+Notion 데이터베이스에 `Source Key` 또는 `Slug` 속성이 있으면 같은 리포트/번호 항목을 새로 만들지 않고 업데이트합니다. 없으면 매번 새 페이지로 추가됩니다. 권장 속성은 `Title`, `Platform`, `Area`, `Category`, `Date`, `Tags`, `Takeaway`, `Deck`, `Source URL`, `Source Title`, `Image`, `Image Caption`, `Report Slug`, `Source Key`입니다.
+
+기존 Markdown 기반 정적 HTML 생성 스크립트는 유지합니다. 필요할 때 아래 명령으로 `site/` 산출물을 만들 수 있습니다.
 
 ```bash
 python3 scripts/build_site.py reports/2026-04-20-uiux-web-service-weekly-trend-report.md
-```
-
-생성 파일은 `site/`에 저장됩니다.
-
-- `site/index.html`: 매거진 홈
-- `site/articles/*.html`: 이슈별 아티클 페이지
-- `site/assets/styles.css`: CTTD 톤의 흑백 그리드 스타일
-
-최신 리포트 기준으로 만들 때는 인자를 생략할 수 있습니다.
-
-```bash
-python3 scripts/build_site.py
 ```
 
 ## 매거진 사이트 배포하기
