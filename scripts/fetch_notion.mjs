@@ -147,6 +147,22 @@ function blockToProseBlock(block) {
   return null;
 }
 
+function blockPlainText(block) {
+  if (block.type === "heading_2" || block.type === "heading_3") return plainRichText(block[block.type].rich_text);
+  if (block.type === "quote") return plainRichText(block.quote.rich_text);
+  if (block.type === "bulleted_list_item" || block.type === "numbered_list_item") return plainRichText(block[block.type].rich_text);
+  if (block.type === "paragraph") return plainRichText(block.paragraph.rich_text);
+  return "";
+}
+
+function blockHtmlText(block) {
+  if (block.type === "heading_2" || block.type === "heading_3") return htmlRichText(block[block.type].rich_text);
+  if (block.type === "quote") return htmlRichText(block.quote.rich_text);
+  if (block.type === "bulleted_list_item" || block.type === "numbered_list_item") return htmlRichText(block[block.type].rich_text);
+  if (block.type === "paragraph") return htmlRichText(block.paragraph.rich_text);
+  return "";
+}
+
 async function getAllChildBlocks(notion, blockId) {
   const blocks = [];
   let cursor;
@@ -162,9 +178,76 @@ async function getAllChildBlocks(notion, blockId) {
   return blocks;
 }
 
-async function pageSections(notion, page, properties) {
+function extractBlockMeta(blocks) {
+  const meta = {};
+  for (const block of blocks) {
+    if (block.type !== "bulleted_list_item" && block.type !== "numbered_list_item") continue;
+    const match = blockPlainText(block).match(/^([^:：]{1,18})[:：]\s*(.+)$/);
+    if (match) meta[match[1].trim()] = match[2].trim();
+  }
+  return meta;
+}
+
+function buildStructuredSections(blocks) {
+  const sections = [];
+  let current = null;
+
+  const pushCurrent = () => {
+    if (current && (current.blocks.length || current.itemsHtml.length)) sections.push(current);
+  };
+
+  for (const block of blocks) {
+    if (block.type === "heading_2") {
+      const title = blockPlainText(block);
+      if (title === "서비스 변화 요약" || title === "기술 변화 요약") {
+        pushCurrent();
+        current = { title, className: "article-section", prose: false, blocks: [], itemsHtml: [] };
+        continue;
+      }
+      if (title === "매거진 인사이트" || title === "인사이트") {
+        pushCurrent();
+        current = { title: "인사이트", className: "article-section is-deep-dive", prose: true, blocks: [], itemsHtml: [] };
+        continue;
+      }
+      if (title === "기본 정보" || title === "요약") {
+        pushCurrent();
+        current = null;
+        continue;
+      }
+      if (current?.prose) {
+        const proseBlock = { kind: "subhead", html: blockHtmlText(block) };
+        current.blocks.push(proseBlock);
+        current.itemsHtml.push(`@@${proseBlock.kind}@@${proseBlock.html}`);
+      }
+      continue;
+    }
+
+    if (!current) continue;
+
+    if (current.prose) {
+      const proseBlock = blockToProseBlock(block);
+      if (!proseBlock) continue;
+      current.blocks.push(proseBlock);
+      current.itemsHtml.push(`@@${proseBlock.kind}@@${proseBlock.html}`);
+      continue;
+    }
+
+    if (block.type === "bulleted_list_item" || block.type === "numbered_list_item" || block.type === "paragraph") {
+      const html = blockHtmlText(block);
+      if (!html) continue;
+      current.blocks.push({ kind: "list", html });
+      current.itemsHtml.push(html);
+    }
+  }
+
+  pushCurrent();
+  return sections;
+}
+
+async function pageData(notion, page, properties, areaKey) {
   const blocks = await getAllChildBlocks(notion, page.id);
-  const proseBlocks = blocks.map(blockToProseBlock).filter(Boolean);
+  const blockMeta = extractBlockMeta(blocks);
+  const structuredSections = buildStructuredSections(blocks);
   const summaryItems = [
     propertyHtml(properties, ["Summary", "요약", "서비스 변화 요약", "기술 변화 요약"], ""),
     propertyHtml(properties, ["Before", "변경 전"], ""),
@@ -172,24 +255,30 @@ async function pageSections(notion, page, properties) {
     propertyHtml(properties, ["Impact", "영향", "확인할 영향"], ""),
   ].filter(Boolean);
 
+  if (structuredSections.length) return { sections: structuredSections, blockMeta };
+
   const sections = [];
   if (summaryItems.length) {
     sections.push({
-      title: normalizeKey(propertyText(properties, ["Area", "대분류"], "uiux")) === "dev" ? "기술 변화 요약" : "서비스 변화 요약",
+      title: areaKey === "dev" ? "기술 변화 요약" : "서비스 변화 요약",
+      className: "article-section",
       prose: false,
       itemsHtml: summaryItems,
       blocks: summaryItems.map((html) => ({ kind: "list", html })),
     });
   }
+
+  const proseBlocks = blocks.map(blockToProseBlock).filter(Boolean);
   if (proseBlocks.length) {
     sections.push({
       title: "인사이트",
+      className: "article-section is-deep-dive",
       prose: true,
       itemsHtml: proseBlocks.map((block) => `@@${block.kind}@@${block.html}`),
       blocks: proseBlocks,
     });
   }
-  return sections;
+  return { sections, blockMeta };
 }
 
 async function fetchFromNotion() {
@@ -222,25 +311,27 @@ async function fetchFromNotion() {
     const platform = propertyText(properties, ["Platform", "서비스", "플랫폼", "Brand", "브랜드명"], "CTTD");
     const takeawayHtml = propertyHtml(properties, ["Takeaway", "Title", "제목", "한줄 인사이트"], platform);
     const deckHtml = propertyHtml(properties, ["Deck", "Summary", "요약", "목록 요약", "설명"], "");
+    const { sections, blockMeta } = await pageData(notion, page, properties, areaKey);
+    const resolvedNumber = String(blockMeta["번호"] || number).padStart(2, "0");
 
     return {
       id: page.id,
-      number,
+      number: resolvedNumber,
       platform,
       areaKey,
       area: areaKey === "dev" ? "DEV" : "UIUX",
       categoryKey,
       category: CATEGORY_LABELS[categoryKey] || categoryKey,
       date,
-      route: `#/story/${number}`,
-      image: propertyImage(properties, ["Image", "이미지", "Cover", "커버"], page.cover?.external?.url || page.cover?.file?.url || ""),
-      imageCaption: propertyText(properties, ["Image Caption", "이미지 설명", "캡션"], ""),
+      route: `#/story/${resolvedNumber}`,
+      image: propertyImage(properties, ["Image", "이미지", "Cover", "커버"], blockMeta["이미지"] || page.cover?.external?.url || page.cover?.file?.url || ""),
+      imageCaption: propertyText(properties, ["Image Caption", "이미지 설명", "캡션"], blockMeta["이미지 설명"] || ""),
       tags: propertyTags(properties, ["Tags", "태그"]),
       takeawayHtml,
       deckHtml,
-      sourceUrl: propertyText(properties, ["Source URL", "출처 URL", "URL"], ""),
-      sourceTitle: propertyText(properties, ["Source Title", "출처", "출처명"], ""),
-      sections: await pageSections(notion, page, properties),
+      sourceUrl: propertyText(properties, ["Source URL", "출처 URL", "URL"], blockMeta["출처 URL"] || ""),
+      sourceTitle: propertyText(properties, ["Source Title", "출처", "출처명"], blockMeta["출처"] || ""),
+      sections,
     };
   }));
 
