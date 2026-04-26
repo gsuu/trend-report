@@ -92,6 +92,16 @@ function previousKstWeekRange() {
   return { startKst, endKst };
 }
 
+function formatKstDate(date) {
+  return date.toISOString().slice(0, 10);
+}
+
+function weekRangeLabel(range) {
+  const endInclusive = new Date(range.endKst);
+  endInclusive.setUTCDate(endInclusive.getUTCDate() - 1);
+  return `${formatKstDate(range.startKst)} ~ ${formatKstDate(endInclusive)}`;
+}
+
 function dateInKstWeek(value, range) {
   if (!value) return false;
   const date = /^\d{4}-\d{2}-\d{2}$/.test(value)
@@ -159,7 +169,7 @@ async function fetchIssuesFromNotion() {
   });
   const limit = Number.parseInt(process.env.WEEKLY_NEWSLETTER_LIMIT || "30", 10);
 
-  return weeklyPages.slice(0, Number.isFinite(limit) && limit > 0 ? limit : 30).map((page, index) => {
+  const issues = weeklyPages.slice(0, Number.isFinite(limit) && limit > 0 ? limit : 30).map((page, index) => {
     const properties = page.properties || {};
     const areaKey = normalizeKey(propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "uiux"));
     const categoryKey = normalizeKey(propertyText(properties, ["Category", "카테고리", "Subcategory", "소분류", "소카테고리"], areaKey === "dev" ? "javascript" : "ecommerce"));
@@ -183,14 +193,17 @@ async function fetchIssuesFromNotion() {
       magazineUrl: `${(process.env.MAGAZINE_BASE_URL || "https://email.cttd.co.kr/magazine").replace(/\/$/, "")}/#/story/${number}`,
     };
   });
+
+  return { issues, weekRange };
 }
 
-function renderNewsletter(audience, issues) {
+function renderNewsletter(audience, issues, weekRange) {
   const label = audience === "dev" ? "DEV" : "UIUX";
   const description = audience === "dev"
-    ? "이번 주 프론트엔드 구현, 접근성 QA, 브라우저/도구 변화입니다."
-    : "이번 주 커머스와 서비스 UIUX 변화입니다.";
+    ? "지난주 프론트엔드 구현, 접근성 QA, 브라우저/도구 변화입니다."
+    : "지난주 커머스와 서비스 UIUX 변화입니다.";
   const logoSrc = `${(process.env.MAGAZINE_BASE_URL || "https://email.cttd.co.kr/magazine").replace(/\/$/, "")}/assets/cttd-logo-email.png`;
+  const rangeText = weekRangeLabel(weekRange);
 
   const cards = issues.map((issue, index) => `
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0;border-bottom:1px solid #eeeeee;">
@@ -226,7 +239,7 @@ function renderNewsletter(audience, issues) {
               <td style="padding:36px 0 24px;border-top:4px solid #111111;">
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 24px;">
                   <tr><td style="padding:0 0 8px;color:#111111;font-size:34px;line-height:1.1;font-weight:800;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${label} Weekly Trend Report</td></tr>
-                  <tr><td style="padding:0;color:#666666;font-size:13px;line-height:1.6;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${description} 상세 내용은 각 매거진 링크에서 확인하세요.</td></tr>
+                  <tr><td style="padding:0;color:#666666;font-size:13px;line-height:1.6;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${htmlEscape(rangeText)} 기준 ${description} 상세 내용은 각 매거진 링크에서 확인하세요.</td></tr>
                 </table>
                 ${cards || `<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0;border-top:1px solid #eeeeee;border-bottom:1px solid #eeeeee;"><tr><td style="padding:24px 0;color:#555555;font-size:14px;line-height:1.6;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">이번 주 ${label} 대상 이슈가 없습니다.</td></tr></table>`}
               </td>
@@ -240,10 +253,11 @@ function renderNewsletter(audience, issues) {
 </html>`;
 }
 
-function renderPlainText(audience, issues) {
+function renderPlainText(audience, issues, weekRange) {
   const label = audience === "dev" ? "DEV" : "UIUX";
   return [
     `CTTD ${label} Weekly Trend Report`,
+    weekRangeLabel(weekRange),
     "",
     ...issues.flatMap((issue) => [
       `[${issue.platform}] ${issue.title || issue.platform}`,
@@ -254,7 +268,7 @@ function renderPlainText(audience, issues) {
   ].join("\n");
 }
 
-async function sendNewsletter(audience, issues) {
+async function sendNewsletter(audience, issues, weekRange) {
   const recipients = resolveRecipients(audience);
   if (!recipients.length) return { audience, sent: false, reason: "no recipients" };
   if (!issues.length) return { audience, sent: false, reason: "no issues" };
@@ -276,10 +290,100 @@ async function sendNewsletter(audience, issues) {
     from: process.env.SMTP_FROM,
     to: recipients,
     subject: `[CTTD] ${label} Weekly Trend Report`,
-    text: renderPlainText(audience, issues),
-    html: renderNewsletter(audience, issues),
+    text: renderPlainText(audience, issues, weekRange),
+    html: renderNewsletter(audience, issues, weekRange),
   });
   return { audience, sent: true, recipients: recipients.length, issues: issues.length };
+}
+
+function issuesMarkdown(title, issues) {
+  if (!issues.length) return `## ${title}\n\n- 대상 이슈 없음\n`;
+  return [
+    `## ${title}`,
+    "",
+    ...issues.flatMap((issue, index) => [
+      `### ${String(index + 1).padStart(2, "0")}. [${issue.platform}] ${issue.title || issue.platform}`,
+      "",
+      `- 날짜: ${issue.date || ""}`,
+      `- 대카테고리: ${issue.area}`,
+      `- 소카테고리: ${issue.category}`,
+      `- 태그: ${issue.tags.map((tag) => `#${tag}`).join(" ")}`,
+      `- 매거진 URL: ${issue.magazineUrl}`,
+      issue.sourceUrl ? `- 출처 URL: ${issue.sourceUrl}` : "",
+      "",
+      issue.deck || "",
+      "",
+    ]),
+  ].filter((line) => line !== "").join("\n");
+}
+
+function renderArchiveMarkdown({ weekRange, uiuxIssues, devIssues, results }) {
+  const rangeText = weekRangeLabel(weekRange);
+  return [
+    `# CTTD Weekly Newsletter Archive`,
+    "",
+    `- 기간: ${rangeText}`,
+    `- 생성 시각: ${new Date().toISOString()}`,
+    `- UIUX 이슈 수: ${uiuxIssues.length}`,
+    `- DEV 이슈 수: ${devIssues.length}`,
+    `- 발송 결과: ${results.map((result) => `${result.audience}=${result.sent ? "sent" : `skipped(${result.reason})`}`).join(", ")}`,
+    "",
+    issuesMarkdown("UIUX", uiuxIssues),
+    "",
+    issuesMarkdown("DEV", devIssues),
+    "",
+  ].join("\n");
+}
+
+function githubArchiveConfig() {
+  const token = process.env.GITHUB_ARCHIVE_TOKEN || process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+  const repo = process.env.GITHUB_ARCHIVE_REPOSITORY
+    || process.env.GITHUB_REPOSITORY
+    || (process.env.VERCEL_GIT_REPO_OWNER && process.env.VERCEL_GIT_REPO_SLUG
+      ? `${process.env.VERCEL_GIT_REPO_OWNER}/${process.env.VERCEL_GIT_REPO_SLUG}`
+      : "");
+  const branch = process.env.GITHUB_ARCHIVE_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "main";
+  const directory = (process.env.GITHUB_ARCHIVE_DIR || "newsletter-archives").replace(/^\/+|\/+$/g, "");
+  return { token, repo, branch, directory };
+}
+
+async function archiveMarkdownToGithub(markdown, weekRange) {
+  const { token, repo, branch, directory } = githubArchiveConfig();
+  if (!token || !repo) return { archived: false, reason: "missing GitHub archive configuration" };
+
+  const fileName = `${formatKstDate(weekRange.startKst)}_weekly-newsletter.md`;
+  const filePath = `${directory}/${fileName}`;
+  const apiUrl = `https://api.github.com/repos/${repo}/contents/${encodeURIComponent(filePath).replaceAll("%2F", "/")}`;
+  const headers = {
+    Authorization: `Bearer ${token}`,
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+    "Content-Type": "application/json",
+  };
+
+  let sha;
+  const existing = await fetch(`${apiUrl}?ref=${encodeURIComponent(branch)}`, { headers });
+  if (existing.ok) {
+    const data = await existing.json();
+    sha = data.sha;
+  } else if (existing.status !== 404) {
+    throw new Error(`GitHub archive lookup failed: ${existing.status} ${await existing.text()}`);
+  }
+
+  const write = await fetch(apiUrl, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify({
+      message: `chore: archive weekly newsletter ${formatKstDate(weekRange.startKst)}`,
+      content: Buffer.from(markdown, "utf8").toString("base64"),
+      branch,
+      ...(sha ? { sha } : {}),
+    }),
+  });
+
+  if (!write.ok) throw new Error(`GitHub archive write failed: ${write.status} ${await write.text()}`);
+  const data = await write.json();
+  return { archived: true, path: filePath, url: data.content?.html_url || "" };
 }
 
 export default async function handler(request, response) {
@@ -294,14 +398,18 @@ export default async function handler(request, response) {
   }
 
   try {
-    const issues = await fetchIssuesFromNotion();
+    const { issues, weekRange } = await fetchIssuesFromNotion();
     const uiuxIssues = issues.filter((issue) => issue.areaKey !== "dev");
     const devIssues = issues.filter((issue) => issue.areaKey === "dev");
     const results = [
-      await sendNewsletter("uiux", uiuxIssues),
-      await sendNewsletter("dev", devIssues),
+      await sendNewsletter("uiux", uiuxIssues, weekRange),
+      await sendNewsletter("dev", devIssues, weekRange),
     ];
-    response.status(200).json({ ok: true, issues: issues.length, results });
+    const archive = await archiveMarkdownToGithub(
+      renderArchiveMarkdown({ weekRange, uiuxIssues, devIssues, results }),
+      weekRange,
+    );
+    response.status(200).json({ ok: true, issues: issues.length, weekRange: weekRangeLabel(weekRange), results, archive });
   } catch (error) {
     response.status(500).json({ ok: false, error: error.message });
   }

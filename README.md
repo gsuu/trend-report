@@ -300,6 +300,10 @@ CRON_SECRET=random-string-at-least-16-chars
 UIUX_NEWSLETTER_TO=cxd@cttd.co.kr
 DEV_NEWSLETTER_TO=dev@example.com,frontend@example.com
 WEEKLY_NEWSLETTER_LIMIT=30
+GITHUB_ARCHIVE_TOKEN=github_pat_xxx
+GITHUB_ARCHIVE_REPOSITORY=gsuu/trend-report
+GITHUB_ARCHIVE_BRANCH=main
+GITHUB_ARCHIVE_DIR=newsletter-archives
 ```
 
 SMTP와 Notion 환경변수도 Production 환경에 있어야 합니다.
@@ -322,6 +326,8 @@ MAGAZINE_BASE_URL=https://email.cttd.co.kr/magazine
 ```bash
 curl "https://YOUR-DEPLOYMENT.vercel.app/api/weekly-newsletters?secret=$CRON_SECRET"
 ```
+
+메일 발송 후에는 같은 이슈 목록을 Markdown으로 만들어 GitHub에 커밋합니다. 기본 저장 경로는 `newsletter-archives/YYYY-MM-DD_weekly-newsletter.md`입니다. `GITHUB_ARCHIVE_TOKEN`이 없으면 메일 발송만 진행하고 Markdown 아카이브는 건너뜁니다.
 
 기존 Markdown 기반 정적 HTML 생성 스크립트는 유지합니다. 필요할 때 아래 명령으로 `site/` 산출물을 만들 수 있습니다.
 
