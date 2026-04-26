@@ -287,6 +287,42 @@ python3 scripts/push_notion.py reports/2026-04-20-uiux-web-service-weekly-trend-
 
 Notion 데이터베이스에 `Source Key` 또는 `Slug` 속성이 있으면 같은 리포트/번호 항목을 새로 만들지 않고 업데이트합니다. 없으면 매번 새 페이지로 추가됩니다. 권장 속성은 `Title`, `Platform`, `Area`, `Category`, `Date`, `Tags`, `Takeaway`, `Deck`, `Source URL`, `Source Title`, `Image`, `Image Caption`, `Report Slug`, `Source Key`입니다.
 
+## 주간 뉴스레터 자동 발송
+
+Vercel Cron이 매주 월요일 16:00 KST에 `/api/weekly-newsletters`를 호출합니다. Vercel Cron은 UTC 기준이므로 `vercel.json`에는 `0 7 * * 1`로 설정합니다.
+
+Cron 함수는 Notion 데이터베이스를 읽어 `대카테고리=DEV` 이슈와 나머지 UIUX 이슈를 나눈 뒤 각각 메일을 발송합니다.
+
+Vercel Environment Variables에 아래 값을 설정합니다.
+
+```dotenv
+CRON_SECRET=random-string-at-least-16-chars
+UIUX_NEWSLETTER_TO=cxd@cttd.co.kr
+DEV_NEWSLETTER_TO=dev@example.com,frontend@example.com
+WEEKLY_NEWSLETTER_LIMIT=30
+```
+
+SMTP와 Notion 환경변수도 Production 환경에 있어야 합니다.
+
+```dotenv
+SMTP_HOST=smtps.hiworks.com
+SMTP_PORT=465
+SMTP_USER=sender@cttd.co.kr
+SMTP_PASSWORD=mail-app-password
+SMTP_FROM=sender@cttd.co.kr
+SMTP_TLS=false
+SMTP_SSL=true
+NOTION_TOKEN=secret_xxx
+NOTION_DATABASE_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+MAGAZINE_BASE_URL=https://email.cttd.co.kr/magazine
+```
+
+로컬 또는 수동 테스트는 아래처럼 호출합니다.
+
+```bash
+curl "https://YOUR-DEPLOYMENT.vercel.app/api/weekly-newsletters?secret=$CRON_SECRET"
+```
+
 기존 Markdown 기반 정적 HTML 생성 스크립트는 유지합니다. 필요할 때 아래 명령으로 `site/` 산출물을 만들 수 있습니다.
 
 ```bash

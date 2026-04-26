@@ -4,6 +4,12 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "cleanUrls": true,
+  "crons": [
+    {
+      "path": "/api/weekly-newsletters",
+      "schedule": "0 7 * * 1"
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
