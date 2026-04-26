@@ -383,7 +383,7 @@ def report_slug(report_path: Path) -> str:
     return report_path.stem.replace("-uiux-web-service-weekly-trend-report", "")
 
 
-def split_issue_heading(heading: str) -> tuple[str, str, list[str]]:
+def split_issue_heading(heading: str) -> tuple[str, str, str, list[str]]:
     match = re.match(r"(?P<number>\d+)\.\s*(?P<body>.+)", heading)
     number = match.group("number") if match else "0"
     body = match.group("body") if match else heading
@@ -397,7 +397,8 @@ def split_issue_heading(heading: str) -> tuple[str, str, list[str]]:
         rest = body
 
     tags = re.findall(r"#([^\s#]+)", rest)
-    return number, platform, tags
+    title = re.sub(r"#[^\s#]+", "", rest).strip()
+    return number, platform, title, tags
 
 
 def clean_newsletter_headline(text: str) -> str:
@@ -609,6 +610,7 @@ def parse_newsletter_items(markdown: str, audience: str = "general") -> list[dic
             current["audienceCategory"] = develop_subcategory_label(classification_categories, tags)
         current.pop("sectionCategory", None)
         current.pop("category", None)
+        current.pop("headlineSource", None)
         items.append(current)
         current = None
 
@@ -626,14 +628,15 @@ def parse_newsletter_items(markdown: str, audience: str = "general") -> list[dic
 
             append_current()
 
-            number, platform, tags = split_issue_heading(heading)
+            number, platform, heading_title, tags = split_issue_heading(heading)
             current = {
                 "number": number,
                 "platform": platform,
                 "tags": tags,
                 "sectionCategory": current_category,
                 "category": "",
-                "headline": "",
+                "headline": clean_newsletter_headline(heading_title),
+                "headlineSource": "heading" if heading_title else "",
                 "description": "",
                 "detailSummaryParts": [],
             }
@@ -657,11 +660,16 @@ def parse_newsletter_items(markdown: str, audience: str = "general") -> list[dic
             label, value = split_newsletter_label(line[2:])
             if not current["headline"]:
                 current["headline"] = clean_newsletter_headline(line[2:])
+                current["headlineSource"] = "summary"
             if label in NEWSLETTER_DESCRIPTION_LABELS and not current["description"]:
                 current["description"] = value
             continue
 
         if current_section in NEWSLETTER_DETAIL_SUMMARY_SECTIONS:
+            if line.startswith("> ") and current.get("headlineSource") != "heading":
+                current["headline"] = clean_newsletter_headline(line[2:])
+                current["headlineSource"] = "insight"
+                continue
             summary_parts = current["detailSummaryParts"]
             if (
                 isinstance(summary_parts, list)
