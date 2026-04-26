@@ -73,6 +73,35 @@ function splitRecipients(value = "") {
     .filter(Boolean);
 }
 
+function startOfKstWeek(now = new Date()) {
+  const kst = new Date(now.getTime() + 9 * 60 * 60 * 1000);
+  const day = kst.getUTCDay();
+  const daysFromMonday = (day + 6) % 7;
+  const start = new Date(Date.UTC(kst.getUTCFullYear(), kst.getUTCMonth(), kst.getUTCDate()));
+  start.setUTCDate(start.getUTCDate() - daysFromMonday);
+  return start;
+}
+
+function previousKstWeekRange() {
+  const base = process.env.WEEKLY_NEWSLETTER_DATE
+    ? new Date(`${process.env.WEEKLY_NEWSLETTER_DATE}T00:00:00+09:00`)
+    : new Date();
+  const endKst = startOfKstWeek(base);
+  const startKst = new Date(endKst);
+  startKst.setUTCDate(startKst.getUTCDate() - 7);
+  return { startKst, endKst };
+}
+
+function dateInKstWeek(value, range) {
+  if (!value) return false;
+  const date = /^\d{4}-\d{2}-\d{2}$/.test(value)
+    ? new Date(`${value}T00:00:00+09:00`)
+    : new Date(value);
+  if (Number.isNaN(date.getTime())) return false;
+  const kstDate = new Date(date.getTime() + 9 * 60 * 60 * 1000);
+  return kstDate >= range.startKst && kstDate < range.endKst;
+}
+
 function readDevSubscribers() {
   const configured = splitRecipients(process.env.DEV_NEWSLETTER_TO || process.env.DEV_WEEKLY_TO || "");
   if (configured.length) return configured;
@@ -122,8 +151,15 @@ async function fetchIssuesFromNotion() {
     cursor = response.has_more ? response.next_cursor : undefined;
   } while (cursor);
 
+  const weekRange = previousKstWeekRange();
+  const weeklyPages = pages.filter((page) => {
+    const properties = page.properties || {};
+    const dateValue = propertyText(properties, ["Date", "발행날짜", "Published Date", "날짜"], "");
+    return dateInKstWeek(dateValue || page.created_time, weekRange);
+  });
   const limit = Number.parseInt(process.env.WEEKLY_NEWSLETTER_LIMIT || "30", 10);
-  return pages.slice(0, Number.isFinite(limit) && limit > 0 ? limit : 30).map((page, index) => {
+
+  return weeklyPages.slice(0, Number.isFinite(limit) && limit > 0 ? limit : 30).map((page, index) => {
     const properties = page.properties || {};
     const areaKey = normalizeKey(propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "uiux"));
     const categoryKey = normalizeKey(propertyText(properties, ["Category", "카테고리", "Subcategory", "소분류", "소카테고리"], areaKey === "dev" ? "javascript" : "ecommerce"));
@@ -154,26 +190,52 @@ function renderNewsletter(audience, issues) {
   const description = audience === "dev"
     ? "이번 주 프론트엔드 구현, 접근성 QA, 브라우저/도구 변화입니다."
     : "이번 주 커머스와 서비스 UIUX 변화입니다.";
+  const logoSrc = `${(process.env.MAGAZINE_BASE_URL || "https://email.cttd.co.kr/magazine").replace(/\/$/, "")}/assets/cttd-logo-email.png`;
 
-  const cards = issues.map((issue) => `
-    <article style="padding:22px 0;border-top:1px solid #d8d8d8;">
-      <p style="margin:0 0 8px;color:#777;font-size:13px;text-transform:uppercase;">${htmlEscape(issue.platform)} · ${htmlEscape(issue.category)}</p>
-      <h2 style="margin:0 0 10px;color:#242424;font-size:22px;line-height:1.3;font-weight:600;">${htmlEscape(issue.title || issue.platform)}</h2>
-      ${issue.deck ? `<p style="margin:0 0 14px;color:#555;font-size:15px;line-height:1.65;">${htmlEscape(issue.deck)}</p>` : ""}
-      <p style="margin:0;color:#777;font-size:13px;">${issue.tags.map((tag) => `#${htmlEscape(tag)}`).join(" ")}</p>
-      <p style="margin:16px 0 0;"><a href="${htmlEscape(issue.magazineUrl)}" style="color:#111;text-decoration:underline;">매거진에서 보기</a></p>
-    </article>
+  const cards = issues.map((issue, index) => `
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0;border-bottom:1px solid #eeeeee;">
+      <tr>
+        <td width="42" style="width:42px;padding:16px 14px 16px 0;color:#777777;font-size:12px;line-height:1.2;font-weight:800;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;vertical-align:top;">${String(index + 1).padStart(2, "0")}</td>
+        <td style="padding:14px 0 16px;vertical-align:top;">
+          <a href="${htmlEscape(issue.magazineUrl)}" style="display:block;color:#111111;font-size:17px;line-height:1.42;font-weight:700;text-decoration:none;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">[${htmlEscape(issue.platform)}] ${htmlEscape(issue.title || issue.platform)}</a>
+          ${issue.deck ? `<div style="margin:6px 0 0;color:#555555;font-size:13px;line-height:1.55;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${htmlEscape(issue.deck)}</div>` : ""}
+          <div style="margin:10px 0 0;padding:10px 0 0;border-top:1px solid #eeeeee;color:#333333;font-size:13px;line-height:1.58;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">
+            <a href="${htmlEscape(issue.magazineUrl)}" style="color:#111111;text-decoration:underline;text-underline-offset:3px;">더보기</a>
+          </div>
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:8px 0 0;"><tr><td>
+            ${issue.tags.map((tag) => `<span style="display:inline-block;margin:0 5px 5px 0;padding:4px 7px;background:#f9ffc1;background:rgba(238,255,72,0.34);color:#111111;font-size:11px;line-height:1.2;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">#${htmlEscape(tag)}</span>`).join("")}
+          </td></tr></table>
+        </td>
+      </tr>
+    </table>
   `).join("");
 
   return `<!doctype html>
 <html lang="ko">
-  <body style="margin:0;background:#fff;color:#242424;font-family:Apple SD Gothic Neo,Malgun Gothic,Arial,sans-serif;">
-    <main style="max-width:720px;margin:0 auto;padding:36px 22px;">
-      <p style="margin:0 0 10px;color:#777;font-size:13px;letter-spacing:.08em;text-transform:uppercase;">CTTD Trend Magazine</p>
-      <h1 style="margin:0;color:#111;font-size:32px;line-height:1.2;">${label} Weekly Trend Report</h1>
-      <p style="margin:14px 0 28px;color:#555;font-size:16px;line-height:1.7;">${description}</p>
-      ${cards || `<p style="color:#777;">이번 주 ${label} 대상 이슈가 없습니다.</p>`}
-    </main>
+  <body style="margin:0;background:#ffffff;color:#111111;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="display:none;max-height:0;overflow:hidden;">
+      <tr><td>UIUX/Web Service 주간 트렌드 리포트</td></tr>
+    </table>
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#ffffff;">
+      <tr>
+        <td align="center" style="padding:44px 24px 52px;">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:760px;margin:0 auto;">
+            <tr><td style="padding:0 0 14px;"><img src="${htmlEscape(logoSrc)}" width="124" alt="CTTD" style="display:block;width:124px;max-width:124px;height:auto;border:0;outline:none;text-decoration:none;"></td></tr>
+            <tr><td style="padding:0 0 18px;color:#111111;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${label === "DEV" ? "Frontend Development Weekly" : "UIUX/Web Service Weekly"}</td></tr>
+            <tr>
+              <td style="padding:36px 0 24px;border-top:4px solid #111111;">
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 24px;">
+                  <tr><td style="padding:0 0 8px;color:#111111;font-size:34px;line-height:1.1;font-weight:800;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${label} Weekly Trend Report</td></tr>
+                  <tr><td style="padding:0;color:#666666;font-size:13px;line-height:1.6;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${description} 상세 내용은 각 매거진 링크에서 확인하세요.</td></tr>
+                </table>
+                ${cards || `<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0;border-top:1px solid #eeeeee;border-bottom:1px solid #eeeeee;"><tr><td style="padding:24px 0;color:#555555;font-size:14px;line-height:1.6;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">이번 주 ${label} 대상 이슈가 없습니다.</td></tr></table>`}
+              </td>
+            </tr>
+            <tr><td style="padding:18px 0 0;color:#777777;font-size:12px;line-height:1.6;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">이 메일은 CTTD Newsletter 팀에서 발송되었습니다.</td></tr>
+          </table>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>`;
 }
