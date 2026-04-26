@@ -2,13 +2,40 @@
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import report from "./data/report.json";
 
-const route = ref(window.location.hash || "#magazine");
-const listRoute = ref(validListRoute(route.value) ? route.value : "#magazine");
+const basePath = detectBasePath();
+const route = ref(currentRoute());
+const listRoute = ref(validListRoute(route.value) ? route.value : "/");
 const shareStatus = ref("");
 const viewportWidth = ref(typeof window === "undefined" ? 1440 : window.innerWidth);
 
+function detectBasePath() {
+  const path = window.location.pathname.replace(/\/+$/, "") || "/";
+  if (path === "/magazine" || path.startsWith("/magazine/")) return "/magazine";
+  return "";
+}
+
+function stripBasePath(pathname) {
+  if (basePath && (pathname === basePath || pathname.startsWith(`${basePath}/`))) {
+    return pathname.slice(basePath.length) || "/";
+  }
+  return pathname || "/";
+}
+
+function currentRoute() {
+  return `${stripBasePath(window.location.pathname)}${window.location.search || ""}` || "/";
+}
+
+function homePath() {
+  return basePath || "/";
+}
+
+function withBasePath(path) {
+  if (!path || path === "/") return homePath();
+  return `${basePath}${path}`;
+}
+
 function syncRoute() {
-  route.value = window.location.hash || "#magazine";
+  route.value = currentRoute();
   if (validListRoute(route.value)) {
     listRoute.value = route.value;
   }
@@ -26,33 +53,33 @@ function syncViewportWidth() {
 
 onMounted(() => {
   syncDocumentState();
-  window.addEventListener("hashchange", syncRoute);
+  window.addEventListener("popstate", syncRoute);
   window.addEventListener("resize", syncViewportWidth);
 });
 onBeforeUnmount(() => {
   document.body.classList.remove("is-story-open");
-  window.removeEventListener("hashchange", syncRoute);
+  window.removeEventListener("popstate", syncRoute);
   window.removeEventListener("resize", syncViewportWidth);
 });
 
 const issues = computed(() => report.issues || []);
 const activeIssue = computed(() => {
-  const match = route.value.match(/^#\/story\/([^/?]+)/);
+  const match = route.value.match(/^\/articles\/([^/?]+)/);
   if (!match) return null;
   return issues.value.find((issue) => issue.number === match[1]) || null;
 });
 
 const activeCategoryKey = computed(() => {
   const sourceRoute = activeIssue.value ? detailReturnRoute.value : route.value;
-  const match = sourceRoute.match(/^#\/category\/([^/?]+)/);
+  const match = sourceRoute.match(/^\/category\/([^/?]+)/);
   if (match) return decodeURIComponent(match[1]);
   return "";
 });
 
 const activeSubcategory = computed(() => {
   const sourceRoute = activeIssue.value ? detailReturnRoute.value : route.value;
-  const match = sourceRoute.match(/^#\/category\/[^/]+\/([^/?]+)/);
-  return match?.[1] || "";
+  const match = sourceRoute.match(/^\/category\/[^/]+\/([^/?]+)/);
+  return match ? decodeURIComponent(match[1]) : "";
 });
 
 const categories = computed(() => {
@@ -68,7 +95,7 @@ const categories = computed(() => {
     }
     categoryMap.get(key).count += 1;
   }
-  const order = { uiux: 0, dev: 1 };
+  const order = { service: 0, design: 1, dev: 2 };
   return [...categoryMap.values()].sort((a, b) => (order[a.key] ?? 99) - (order[b.key] ?? 99));
 });
 
@@ -79,15 +106,28 @@ const categoryIssues = computed(() => activeCategoryKey.value
 
 const subcategories = computed(() => {
   const counts = new Map();
+  const designOrder = { ai: 0, global: 1 };
+  const designLabels = { ai: "AI", global: "global" };
+  if (activeCategoryKey.value === "design") {
+    for (const [key, order] of Object.entries(designOrder)) {
+      counts.set(key, {
+        key,
+        order,
+        label: designLabels[key] || key,
+        count: 0,
+      });
+    }
+  }
   for (const issue of categoryIssues.value) {
     const key = issue.categoryKey || "other";
     counts.set(key, {
       key,
-      label: issue.category || key,
+      order: counts.get(key)?.order ?? 99,
+      label: counts.get(key)?.label || issue.category || key,
       count: (counts.get(key)?.count || 0) + 1,
     });
   }
-  return [...counts.values()];
+  return [...counts.values()].sort((a, b) => a.order - b.order);
 });
 
 const visibleIssues = computed(() => {
@@ -121,24 +161,25 @@ const currentListRoute = computed(() => listRoute.value);
 const detailReturnRoute = computed(() => {
   const routeParam = routeReturnParam();
   if (routeParam) return routeParam;
-  if (activeIssue.value?.areaKey) return categoryPath(activeIssue.value.areaKey);
-  return "#magazine";
+  if (activeIssue.value?.areaKey) return `/category/${activeIssue.value.areaKey}`;
+  return "/";
 });
 
 function categoryPath(key) {
-  return `#/category/${key}`;
+  return withBasePath(`/category/${key}`);
 }
 
 function subcategoryPath(categoryKey, subcategoryKey) {
-  return `#/category/${categoryKey}/${subcategoryKey}`;
+  return withBasePath(`/category/${categoryKey}/${subcategoryKey}`);
 }
 
 function storyRoute(issue) {
-  return `${issue.route || `#/story/${issue.number}`}?from=${encodeURIComponent(currentListRoute.value)}`;
+  const articlePath = issue.route || `/articles/${issue.number}`;
+  return `${withBasePath(articlePath)}?from=${encodeURIComponent(currentListRoute.value)}`;
 }
 
 function validListRoute(value) {
-  return value === "#magazine" || /^#\/category\/(uiux|dev)(?:\/[^?&]+)?$/.test(value || "");
+  return value === "/" || value === "" || /^\/category\/(service|design|dev|uiux)(?:\/[^?&]+)?$/.test(value || "");
 }
 
 function routeReturnParam() {
@@ -149,7 +190,7 @@ function routeReturnParam() {
 }
 
 function goToList() {
-  window.location.hash = detailReturnRoute.value;
+  window.location.href = withBasePath(detailReturnRoute.value);
 }
 
 function plainText(htmlText) {
@@ -186,7 +227,7 @@ function capTallThumbnail(event) {
 }
 
 async function shareIssue(issue) {
-  const url = issue.articleUrl || `${window.location.origin}${window.location.pathname}${storyRoute(issue)}`;
+  const url = issue.articleUrl || `${window.location.origin}${storyRoute(issue)}`;
   const title = `${issue.platform} | Magazine`;
   if (navigator.share) {
     try {
@@ -232,15 +273,15 @@ function summaryItemClass(item) {
 
 <template>
   <header class="site-header">
-    <a class="header-back-link" :href="detailReturnRoute" aria-label="목록으로 돌아가기">
+    <a class="header-back-link" :href="withBasePath(detailReturnRoute)" aria-label="목록으로 돌아가기">
       <span aria-hidden="true">←</span>
     </a>
-    <a class="brand" href="#magazine" aria-label="CTTD Trend Magazine home">
+    <a class="brand" :href="homePath()" aria-label="CTTD Trend Magazine home">
       <img src="/assets/cttd-logo.svg" alt="CTTD">
       <span>Magazine</span>
     </a>
     <nav class="header-category-nav" aria-label="매거진 카테고리">
-      <a href="#magazine" data-category-nav="" :class="{ 'is-active': !activeCategoryKey && !activeIssue }">전체</a>
+      <a :href="homePath()" data-category-nav="" :class="{ 'is-active': !activeCategoryKey && !activeIssue }">전체</a>
       <a
         v-for="category in categories"
         :key="category.key"
@@ -322,7 +363,7 @@ function summaryItemClass(item) {
             </div>
           </footer>
           <div class="article-list-actions">
-            <a class="article-list-link" :href="detailReturnRoute" @click.prevent="goToList">목록보기</a>
+            <a class="article-list-link" :href="withBasePath(detailReturnRoute)" @click.prevent="goToList">목록보기</a>
           </div>
         </div>
     </article>

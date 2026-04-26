@@ -1,5 +1,5 @@
 import { Client } from "@notionhq/client";
-import { readFile, writeFile } from "node:fs/promises";
+import { writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { readFileSync } from "node:fs";
 import path from "node:path";
@@ -20,14 +20,25 @@ const CATEGORY_LABELS = {
   department_store: "department",
   beauty: "beauty",
   book_content: "book",
+  global_service_ux: "global",
   ai: "AI",
   html: "HTML",
   css: "CSS",
   javascript: "JAVASCRIPT",
   web_accessibility: "웹접근성",
+  update: "Update",
   tool: "TOOL",
   data_api: "DATA/API",
 };
+const AREA_LABELS = {
+  service: "Service",
+  design: "Design",
+  dev: "DEV",
+};
+const SERVICE_AREA_KEYS = new Set(["service", "services", "service_planning", "planning", "pm", "product", "product_management", "ux", "uiux", "ui_ux", "web_service", "webservice", "서비스", "서비스기획", "웹서비스기획"]);
+const DESIGN_AREA_KEYS = new Set(["design", "web_design", "webdesign", "product_design", "visual", "visual_design", "brand", "branding", "design_system", "ui_design", "디자인", "웹디자인", "브랜드", "비주얼", "디자인시스템"]);
+const DEV_AREA_KEYS = new Set(["dev", "develop", "development", "engineering", "fe", "frontend", "frontend_development", "backend", "web_development", "web_develop", "개발", "프론트", "프론트엔드"]);
+const DESIGN_AI_KEYS = new Set(["ai", "ai디자인", "ai이미지", "chatgpt", "claude", "gemini", "figma_ai", "adobe_firefly", "firefly", "photoshop", "canva", "imagen", "veo", "sora", "image_generation", "이미지생성", "프로토타이핑", "디자인ai"]);
 
 function loadDotenv() {
   const envPath = path.join(root, ".env");
@@ -55,8 +66,39 @@ function htmlEscape(value = "") {
     .replaceAll('"', "&quot;");
 }
 
+function sanitizeEditorialHtml(value = "") {
+  return String(value)
+    .replaceAll("UIUX 전문가 관점", "설계 관점")
+    .replaceAll("프론트엔드 개발 전문가 관점", "구현 관점")
+    .replaceAll("Frontend Development 관점", "구현 관점")
+    .replaceAll("클라이언트에게 던질 질문", "점검 질문")
+    .replaceAll("PM과 웹기획자에게 핵심 질문은 ", "핵심 질문은 ")
+    .replaceAll("PM과 웹기획자에게 핵심 질문은", "핵심 질문은")
+    .replaceAll("웹기획자와 PM 관점에서는", "설계 관점에서는")
+    .replaceAll("웹기획자와 PM은", "설계 과정에서는")
+    .replaceAll("웹디자이너와 PM에게", "서비스 설계에")
+    .replaceAll("웹디자이너에게", "제작 흐름에서")
+    .replaceAll("웹디자이너와 PM", "설계 과정")
+    .replaceAll("웹디자이너는", "화면 설계에서는")
+    .replaceAll("디자이너와 기획자는", "제작 과정에서는")
+    .replaceAll("디자이너라면", "설계 관점에서는")
+    .replaceAll("PM은", "운영 기준에서는")
+    .replaceAll("웹기획자는", "플로우 설계에서는")
+    .replaceAll("웹DEV 관점에서는", "구현 관점에서는")
+    .replaceAll("개발자 관전 포인트", "구현 관전 포인트")
+    .replaceAll("프론트엔드 개발자", "프론트엔드 구현")
+    .replaceAll("개발자는 무엇을 덜 해도 될까", "실무에 어떻게 적용할 수 있을까")
+    .replaceAll("개발자에게", "구현 관점에서")
+    .replaceAll("개발자는", "구현 과정에서는")
+    .replaceAll("클라이언트에게 이야기한다면", "이 업데이트를 적용한다면")
+    .replaceAll("클라이언트에게는", "서비스에서는")
+    .replaceAll("클라이언트라면", "서비스라면")
+    .replaceAll("클라이언트에게", "서비스에")
+    .replaceAll("클라이언트가", "서비스가");
+}
+
 function htmlRichText(items = []) {
-  return items
+  const html = items
     .map((item) => {
       let text = htmlEscape(item.plain_text || "");
       if (item.annotations?.code) text = `<code>${text}</code>`;
@@ -67,10 +109,36 @@ function htmlRichText(items = []) {
     })
     .join("")
     .trim();
+  return sanitizeEditorialHtml(html);
 }
 
 function normalizeKey(value = "") {
   return String(value).trim().toLowerCase().replaceAll(/\s+/g, "_").replaceAll("-", "_");
+}
+
+function normalizeAreaKey(value = "", tags = []) {
+  const key = normalizeKey(value || "service");
+  if (DEV_AREA_KEYS.has(key)) return "dev";
+  if (DESIGN_AREA_KEYS.has(key)) return "design";
+  if (SERVICE_AREA_KEYS.has(key)) return "service";
+
+  const tagKeys = tags.map((tag) => normalizeKey(tag));
+  const hasDesign = tagKeys.some((tag) => DESIGN_AREA_KEYS.has(tag));
+  const hasService = tagKeys.some((tag) => SERVICE_AREA_KEYS.has(tag));
+  const hasDev = tagKeys.some((tag) => DEV_AREA_KEYS.has(tag) || tag === "웹dev");
+  if (hasDev && !hasDesign && !hasService) return "dev";
+  if (hasDesign && !hasService && !hasDev) return "design";
+  return "service";
+}
+
+function areaLabel(areaKey) {
+  return AREA_LABELS[areaKey] || AREA_LABELS.service;
+}
+
+function normalizeCategoryKey(categoryKey, areaKey, tags = []) {
+  if (areaKey !== "design") return categoryKey;
+  const tokens = [categoryKey, ...tags.map((tag) => normalizeKey(tag))];
+  return tokens.some((token) => DESIGN_AI_KEYS.has(token)) ? "ai" : categoryKey;
 }
 
 function getProperty(properties, names) {
@@ -100,10 +168,10 @@ function propertyText(properties, names, fallback = "") {
 
 function propertyHtml(properties, names, fallback = "") {
   const prop = getProperty(properties, names);
-  if (!prop) return htmlEscape(fallback);
+  if (!prop) return sanitizeEditorialHtml(htmlEscape(fallback));
   if (prop.type === "title") return htmlRichText(prop.title);
   if (prop.type === "rich_text") return htmlRichText(prop.rich_text);
-  return htmlEscape(propertyText(properties, names, fallback));
+  return sanitizeEditorialHtml(htmlEscape(propertyText(properties, names, fallback)));
 }
 
 function propertyTags(properties, names) {
@@ -191,18 +259,39 @@ function extractBlockMeta(blocks) {
 function referenceLinksFromMeta(meta, properties = {}) {
   const links = [];
   const seen = new Set();
-  const entries = [
-    ["관련 뉴스", meta["관련 뉴스"] || propertyText(properties, ["관련 뉴스", "Related News"], "")],
+  const entries = [];
+
+  for (const [key, value] of Object.entries(meta)) {
+    if (/^관련\s*(뉴스|블로그|매거진)/.test(key)) entries.push(["관련 뉴스", value]);
+  }
+
+  entries.push(
+    ["관련 뉴스", propertyText(properties, ["관련 뉴스", "Related News"], "")],
     ["서비스 URL", meta["서비스 URL"] || propertyText(properties, ["서비스 URL", "Service URL", "서비스 링크"], "")],
     ["보조 출처", meta["보조 출처 URL"] || propertyText(properties, ["보조 출처 URL", "Secondary Source URL", "Reference URL"], "")],
     ["이미지 출처", meta["이미지 출처"] || propertyText(properties, ["이미지 출처", "Image Source"], "")],
-  ];
+  );
 
   for (const [label, rawValue] of entries) {
     const value = String(rawValue || "").trim();
-    if (!value || !/^https?:\/\//.test(value) || seen.has(value)) continue;
-    seen.add(value);
-    links.push({ label, title: value, url: value });
+    if (!value) continue;
+
+    let title = value;
+    let url = value;
+    const markdown = value.match(/^\[([^\]]+)\]\((https?:\/\/[^)]+)\)$/);
+    const pipe = value.match(/^(.+?)\s*\|\s*(https?:\/\/\S+)$/);
+
+    if (markdown) {
+      title = markdown[1].trim();
+      url = markdown[2].trim();
+    } else if (pipe) {
+      title = pipe[1].trim();
+      url = pipe[2].trim();
+    }
+
+    if (!/^https?:\/\//.test(url) || seen.has(url)) continue;
+    seen.add(url);
+    links.push({ label, title, url });
   }
   return links;
 }
@@ -321,10 +410,33 @@ async function fetchFromNotion() {
     cursor = response.has_more ? response.next_cursor : undefined;
   } while (cursor);
 
-  const issues = await Promise.all(pages.map(async (page, index) => {
+  const pageSignature = (page) => {
     const properties = page.properties || {};
-    const areaKey = normalizeKey(propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "uiux"));
-    const categoryKey = normalizeKey(propertyText(properties, ["Category", "카테고리", "Subcategory", "소분류", "소카테고리"], areaKey === "dev" ? "javascript" : "ecommerce"));
+    const title = propertyText(properties, ["Takeaway", "Title", "제목", "한줄 인사이트"], "");
+    const platform = propertyText(properties, ["Platform", "서비스", "플랫폼", "Brand", "브랜드명"], "");
+    const tags = propertyTags(properties, ["Tags", "태그"]);
+    const area = normalizeAreaKey(propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "service"), tags);
+    return [platform, area, title].map((value) => normalizeKey(value)).join("|");
+  };
+
+  const uniquePages = [];
+  const seenPageSignatures = new Set();
+  for (const page of pages) {
+    const signature = pageSignature(page);
+    if (signature && seenPageSignatures.has(signature)) continue;
+    if (signature) seenPageSignatures.add(signature);
+    uniquePages.push(page);
+  }
+
+  const issues = await Promise.all(uniquePages.map(async (page, index) => {
+    const properties = page.properties || {};
+    const tags = propertyTags(properties, ["Tags", "태그"]);
+    const areaKey = normalizeAreaKey(propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "service"), tags);
+    const categoryKey = normalizeCategoryKey(
+      normalizeKey(propertyText(properties, ["Category", "카테고리", "Subcategory", "소분류", "소카테고리"], areaKey === "dev" ? "javascript" : "ecommerce")),
+      areaKey,
+      tags,
+    );
     const number = issueNumber(index, properties);
     const date = propertyText(properties, ["Date", "발행날짜", "Published Date", "날짜"], page.created_time || "").slice(0, 10);
     const platform = propertyText(properties, ["Platform", "서비스", "플랫폼", "Brand", "브랜드명"], "CTTD");
@@ -339,14 +451,14 @@ async function fetchFromNotion() {
       number: resolvedNumber,
       platform,
       areaKey,
-      area: areaKey === "dev" ? "DEV" : "UIUX",
+      area: areaLabel(areaKey),
       categoryKey,
       category: CATEGORY_LABELS[categoryKey] || categoryKey,
       date,
-      route: `#/story/${resolvedNumber}`,
+      route: `/articles/${resolvedNumber}`,
       image: propertyImage(properties, ["Image", "이미지", "Cover", "커버"], blockMeta["이미지"] || page.cover?.external?.url || page.cover?.file?.url || ""),
       imageCaption: propertyText(properties, ["Image Caption", "이미지 설명", "캡션"], blockMeta["이미지 설명"] || ""),
-      tags: propertyTags(properties, ["Tags", "태그"]),
+      tags,
       takeawayHtml,
       deckHtml,
       sourceUrl: propertyText(properties, ["Source URL", "출처 URL", "URL"], blockMeta["출처 URL"] || ""),
@@ -356,39 +468,26 @@ async function fetchFromNotion() {
     };
   }));
 
+  issues.sort((a, b) => {
+    const dateCompare = String(b.date || "").localeCompare(String(a.date || ""));
+    if (dateCompare) return dateCompare;
+    return (Number.parseInt(a.number, 10) || 0) - (Number.parseInt(b.number, 10) || 0);
+  });
+
   const first = issues[0];
   return {
     slug: first?.date || new Date().toISOString().slice(0, 10),
     title: "CTTD Trend Magazine",
-    description: first ? `${first.date} CTTD UIUX/Web Service Weekly Trend Magazine` : "CTTD UIUX/Web Service Weekly Trend Magazine",
+    description: first ? `${first.date} CTTD Service/Design/DEV Weekly Trend Magazine` : "CTTD Service/Design/DEV Weekly Trend Magazine",
     issues,
   };
 }
 
-async function fallbackFromGeneratedSite() {
-  const generatedPath = path.join(root, "site", "index.html");
-  if (!existsSync(generatedPath)) {
-    return {
-      slug: "empty",
-      title: "CTTD Trend Magazine",
-      description: "NOTION_TOKEN과 NOTION_DATABASE_ID를 설정해주세요.",
-      issues: [],
-    };
-  }
-  const html = await readFile(generatedPath, "utf8");
-  const match = html.match(/<script id="report-data" type="application\/json">([\s\S]*?)<\/script>/);
-  if (!match) throw new Error("site/index.html에서 report-data JSON을 찾지 못했습니다.");
-  const report = JSON.parse(match[1]);
-  return {
-    slug: report.slug || "generated",
-    title: "CTTD Trend Magazine",
-    description: "기존 생성 사이트 데이터로 만든 로컬 미리보기입니다.",
-    issues: report.issues || [],
-  };
+if (!notionToken || !databaseId) {
+  throw new Error("NOTION_TOKEN/NOTION_API_KEY와 NOTION_DATABASE_ID가 필요합니다. 사이트 데이터는 Notion에서만 가져옵니다.");
 }
 
-const report = notionToken && databaseId ? await fetchFromNotion() : await fallbackFromGeneratedSite();
+const report = await fetchFromNotion();
 await writeFile(outputPath, `${JSON.stringify(report, null, 2)}\n`, "utf8");
 
-const source = notionToken && databaseId ? "Notion" : "site/index.html fallback";
-console.log(`Wrote ${report.issues.length} issues from ${source} to ${path.relative(root, outputPath)}`);
+console.log(`Wrote ${report.issues.length} issues from Notion to ${path.relative(root, outputPath)}`);

@@ -19,8 +19,8 @@ SITE_DIR = ROOT / "site"
 ASSETS_DIR = SITE_DIR / "assets"
 ARTICLES_DIR = SITE_DIR / "articles"
 SHOW_SUBSCRIBE_LINK = False
-PRODUCTION_MAGAZINE_BASE_URL = "https://email.cttd.co.kr/magazine"
-SITE_DESCRIPTION = "CTTD UIUX/Web Service Weekly Trend Magazine"
+PRODUCTION_SITE_URL = "https://cttd-magazine.vercel.app"
+SITE_DESCRIPTION = "CTTD Service/Design/DEV Weekly Trend Magazine"
 SITE_OG_IMAGE = "assets/cttd-logo-email.png"
 
 
@@ -30,6 +30,8 @@ CATEGORY_LABELS = {
     "department_store": "department",
     "beauty": "beauty",
     "book_content": "book",
+    "global_service_ux": "global",
+    "ai": "AI",
     "jp_fashion": "fashion",
     "jp_ecommerce": "ecommerce",
 }
@@ -38,10 +40,45 @@ CATEGORY_KEYS = {
     "jp_ecommerce": "ecommerce",
 }
 
-MAIN_CATEGORY_ORDER = {"uiux": 0, "dev": 1}
+MAIN_CATEGORY_ORDER = {"service": 0, "design": 1, "dev": 2}
 MAIN_CATEGORY_LABELS = {
-    "uiux": "UIUX",
+    "service": "Service",
+    "design": "Design",
     "dev": "DEV",
+}
+SERVICE_CATEGORY_KEYS = {
+    "service",
+    "services",
+    "service_planning",
+    "planning",
+    "pm",
+    "product",
+    "product_management",
+    "ux",
+    "uiux",
+    "ui_ux",
+    "web_service",
+    "webservice",
+    "서비스",
+    "서비스기획",
+    "웹서비스기획",
+}
+DESIGN_CATEGORY_KEYS = {
+    "design",
+    "web_design",
+    "webdesign",
+    "product_design",
+    "visual",
+    "visual_design",
+    "brand",
+    "branding",
+    "design_system",
+    "ui_design",
+    "디자인",
+    "웹디자인",
+    "브랜드",
+    "비주얼",
+    "디자인시스템",
 }
 DEVELOP_CATEGORY_KEYS = {
     "dev",
@@ -60,6 +97,7 @@ DEVELOP_CATEGORY_KEYS = {
 }
 DEVELOP_SUBCATEGORY_ORDER = (
     "ai",
+    "update",
     "html",
     "css",
     "javascript",
@@ -69,6 +107,7 @@ DEVELOP_SUBCATEGORY_ORDER = (
 )
 DEVELOP_SUBCATEGORY_CLASSIFICATION_ORDER = (
     "ai",
+    "update",
     "web_accessibility",
     "css",
     "html",
@@ -81,6 +120,7 @@ DEVELOP_SUBCATEGORY_LABELS = {
     "css": "CSS",
     "javascript": "JAVASCRIPT",
     "web_accessibility": "웹접근성",
+    "update": "Update",
     "ai": "AI",
     "tool": "TOOL",
     "data_api": "DATA/API",
@@ -90,9 +130,39 @@ DEVELOP_SUBCATEGORY_KEYWORDS = {
     "css": {"css", "cssgridlanes", "css_grid_lanes", "grid", "grid_lanes", "layout", "style", "styles", "responsive", "animation", "container_query", "container_queries", "anchor_positioning", "view_transition", "scroll_driven_animation", "baseline", "레이아웃", "반응형", "스타일", "애니메이션"},
     "javascript": {"javascript", "js", "typescript", "ts", "type_script", "es2025", "es2026", "temporal", "node", "nodejs", "node_js", "eslint", "lint", "next", "nextjs", "next_js", "react", "vue", "svelte", "astro", "framework", "frontend", "frontend_development", "front_end", "fe", "web_development", "web_develop", "adapterapi", "adapter_api", "opennext", "runtime", "component", "components", "design_system", "storybook", "프론트", "프론트엔드", "웹개발", "컴포넌트", "디자인시스템"},
     "web_accessibility": {"accessibility", "a11y", "wcag", "aria", "screen_reader", "screenreader", "web_accessibility", "inert", "focus", "keyboard", "웹접근성", "접근성", "스크린리더"},
+    "update": {"update", "updates", "release", "releases", "release_note", "release_notes", "technology_preview", "safari_technology_preview", "stp", "browser", "browsers", "chrome", "chromium", "firefox", "mozilla", "safari", "webkit", "ios", "ipados", "업데이트", "릴리즈", "브라우저"},
     "ai": {"ai", "ai_development", "ai개발", "ai개발도구", "code_assistant", "copilot", "llm", "ai_coding", "ai_assisted_development", "agent", "agentic", "agent_devtools", "agent_dev_tools", "agentdevtools", "agents", "mcp", "model_context_protocol", "코딩어시스턴트"},
     "tool": {"tool", "tools", "tooling", "quality", "test", "testing", "qa", "ci", "cd", "build", "deploy", "release", "monitoring", "observability", "e2e", "eslint", "lint", "devtools", "dev_tools", "chrome", "chromium", "firefox", "mozilla", "safari", "webkit", "ios", "ipados", "browser", "browserlogforwarding", "browser_log_forwarding", "테스트", "품질", "도구", "툴", "빌드", "배포", "모니터링", "브라우저"},
     "data_api": {"data", "api", "data_api", "graphql", "rest", "server", "backend", "database", "db", "auth", "webtransport", "web_transport", "node", "nodejs", "node_js", "runtime", "데이터", "서버", "백엔드", "인증"},
+}
+DESIGN_SUBCATEGORY_ORDER = (
+    "ai",
+    "global",
+)
+DESIGN_SUBCATEGORY_LABELS = {
+    "ai": "AI",
+    "global": "global",
+}
+DESIGN_AI_KEYWORDS = {
+    "ai",
+    "ai디자인",
+    "ai이미지",
+    "artificial_intelligence",
+    "chatgpt",
+    "claude",
+    "gemini",
+    "figma_ai",
+    "adobe_firefly",
+    "firefly",
+    "photoshop",
+    "canva",
+    "imagen",
+    "veo",
+    "sora",
+    "image_generation",
+    "이미지생성",
+    "프로토타이핑",
+    "디자인ai",
 }
 DEVELOP_DETECTION_EXCLUDED_KEYWORDS = {"ai", "llm"}
 DEVELOP_DETECTION_KEYS = DEVELOP_CATEGORY_KEYS.union(
@@ -104,14 +174,16 @@ DEVELOP_DETECTION_KEYS = DEVELOP_CATEGORY_KEYS.union(
 
 DETAIL_SECTION_TITLES = {"매거진 상세", "사이트 매거진 상세", "웹사이트 상세", "매거진 인사이트"}
 DEV_SECTION_HEADING_REPLACEMENTS = {
-    "Frontend Development 관점": "프론트엔드 개발 전문가 관점",
+    "Frontend Development 관점": "구현 관점",
+    "프론트엔드 개발 전문가 관점": "구현 관점",
+    "UIUX 전문가 관점": "설계 관점",
     "개발자는 무엇을 덜 해도 될까": "실무에 어떻게 적용할 수 있을까",
-    "클라이언트에게 던질 질문": "같이 보면 좋은 기술",
+    "클라이언트에게 던질 질문": "점검 질문",
 }
 SECTION_BLOCK_PATTERN = re.compile(r"^@@(?P<kind>quote|subhead|paragraph|list)@@(?P<text>.*)")
 SUMMARY_LABEL_PATTERN = re.compile(r"^(?P<label>[^:：]{2,18})[:：]\s*(?P<value>.+)$")
 CORE_SUMMARY_LABELS = {"업데이트", "서비스 맥락", "기술 맥락", "변경 전", "변경 후"}
-HIDDEN_FACT_KEYS = {"출처 URL", "서비스 URL"}
+HIDDEN_FACT_KEYS = {"출처 URL", "서비스 URL", "상세페이지 초점"}
 SOURCE_TITLE_CACHE: dict[str, str] = {}
 
 
@@ -201,7 +273,7 @@ def meta_text(text: str, fallback: str = "", limit: int = 180) -> str:
 
 
 def magazine_base_url() -> str:
-    return os.getenv("MAGAZINE_BASE_URL", PRODUCTION_MAGAZINE_BASE_URL).strip().rstrip("/")
+    return os.getenv("SITE_URL", os.getenv("MAGAZINE_BASE_URL", PRODUCTION_SITE_URL)).strip().rstrip("/")
 
 
 def absolute_site_url(path: str = "") -> str:
@@ -467,11 +539,34 @@ def issue_tokens(issue: Issue) -> set[str]:
 
 
 def is_develop_issue(issue: Issue) -> bool:
+    area = normalize_category_token(issue.area)
+    if area in SERVICE_CATEGORY_KEYS or area in DESIGN_CATEGORY_KEYS:
+        return False
+    if area in DEVELOP_CATEGORY_KEYS:
+        return True
     return bool(issue_tokens(issue).intersection(DEVELOP_DETECTION_KEYS))
 
 
+def is_design_issue(issue: Issue) -> bool:
+    area = normalize_category_token(issue.area)
+    if area in DESIGN_CATEGORY_KEYS:
+        return True
+    if area in SERVICE_CATEGORY_KEYS or area in DEVELOP_CATEGORY_KEYS:
+        return False
+    tokens = issue_tokens(issue)
+    if tokens.intersection(DESIGN_CATEGORY_KEYS):
+        service_hits = tokens.intersection({"웹서비스기획", "service_planning", "planning", "pm", "서비스기획"})
+        develop_hits = tokens.intersection({"웹dev", "frontend", "development", "dev"})
+        return not service_hits and not develop_hits
+    return False
+
+
 def issue_area_key(issue: Issue) -> str:
-    return "dev" if is_develop_issue(issue) else "uiux"
+    if is_develop_issue(issue):
+        return "dev"
+    if is_design_issue(issue):
+        return "design"
+    return "service"
 
 
 def issue_area_label(issue: Issue) -> str:
@@ -479,7 +574,14 @@ def issue_area_label(issue: Issue) -> str:
 
 
 def issue_category_key(issue: Issue) -> str:
-    if not is_develop_issue(issue):
+    area_key = issue_area_key(issue)
+    if area_key == "design":
+        tokens = issue_tokens(issue)
+        if issue.category == "ai" or tokens.intersection(DESIGN_AI_KEYWORDS):
+            return "ai"
+        return CATEGORY_KEYS.get(issue.category, issue.category)
+
+    if area_key != "dev":
         return CATEGORY_KEYS.get(issue.category, issue.category)
 
     tokens = issue_tokens(issue)
@@ -491,8 +593,11 @@ def issue_category_key(issue: Issue) -> str:
 
 def issue_category_label(issue: Issue) -> str:
     category_key = issue_category_key(issue)
-    if is_develop_issue(issue):
+    area_key = issue_area_key(issue)
+    if area_key == "dev":
         return DEVELOP_SUBCATEGORY_LABELS.get(category_key, DEVELOP_SUBCATEGORY_LABELS["javascript"])
+    if area_key == "design":
+        return DESIGN_SUBCATEGORY_LABELS.get(category_key, CATEGORY_LABELS.get(category_key, category_key))
     return CATEGORY_LABELS.get(issue.category, issue.category)
 
 
@@ -512,6 +617,14 @@ def split_issue_title(raw: str) -> tuple[str, str, str, list[str]]:
     tags = re.findall(r"#([^\s#]+)", rest)
     title = re.sub(r"#[^\s#]+", "", rest).strip() or platform
     return number, platform, title, tags
+
+
+def split_meta_tags(value: str) -> list[str]:
+    return [
+        tag.strip().lstrip("#")
+        for tag in re.split(r"[,/|]", value)
+        if tag.strip().lstrip("#")
+    ]
 
 
 def parse_report(path: Path) -> Report:
@@ -614,6 +727,10 @@ def parse_report(path: Path) -> Report:
                     current_issue.image_caption = value
                 else:
                     current_issue.meta[key] = value
+                    if key in {"태그", "직무 태그", "직무태그"}:
+                        for tag in split_meta_tags(value):
+                            if tag not in current_issue.tags:
+                                current_issue.tags.append(tag)
 
             continue
 
@@ -629,7 +746,6 @@ def parse_report(path: Path) -> Report:
 
 def render_header_category_nav(report: Report, active: str = "") -> str:
     href_prefix = "../index.html" if active == "article" else ""
-    header_labels = {"uiux": "UIUX", "dev": "DEV"}
     categories: list[dict[str, str]] = []
     seen_category_keys: set[str] = set()
     for issue in report.issues:
@@ -637,19 +753,19 @@ def render_header_category_nav(report: Report, active: str = "") -> str:
         if key in seen_category_keys:
             continue
         seen_category_keys.add(key)
-        categories.append({"key": key, "label": header_labels.get(key, issue_area_label(issue))})
+        categories.append({"key": key, "label": issue_area_label(issue)})
 
     categories = sorted(
         categories,
         key=lambda category: MAIN_CATEGORY_ORDER.get(category["key"], 99),
     )
     category_links = "\n".join(
-        f'      <a href="{href_prefix}#/category/{html.escape(category["key"], quote=True)}" '
+        f'      <a href="{href_prefix}category/{html.escape(category["key"], quote=True)}" '
         f'data-category-nav="{html.escape(category["key"], quote=True)}">{clean_inline(category["label"])}</a>'
         for category in categories
     )
     return f"""    <nav class="header-category-nav" aria-label="매거진 카테고리">
-      <a href="{href_prefix}#magazine" data-category-nav="">전체</a>
+      <a href="{href_prefix or './'}" data-category-nav="">전체</a>
 {category_links}
     </nav>
 """
@@ -667,7 +783,7 @@ def html_shell(
     og_title: str = "",
     image_alt: str = "",
 ) -> str:
-    home_href = "../index.html#magazine" if active == "article" else "#magazine"
+    home_href = "../" if active == "article" else "./"
     stylesheet = "../assets/styles.css" if active == "article" else "assets/styles.css"
     logo = "../assets/cttd-logo.svg" if active == "article" else "assets/cttd-logo.svg"
     body_class = ' class="is-article-page"' if active == "article" else ""
@@ -758,11 +874,11 @@ def summary_payload(item: str) -> dict[str, str]:
 
 
 def issue_href(report: Report, issue: Issue) -> str:
-    return f"articles/{report.slug}-story-{issue.number.zfill(2)}.html"
+    return issue_route(issue)
 
 
 def issue_route(issue: Issue) -> str:
-    return f"#/story/{issue.number.zfill(2)}"
+    return f"/articles/{issue.number.zfill(2)}"
 
 
 def issue_takeaway(issue: Issue) -> str:
@@ -782,6 +898,25 @@ def issue_deck(issue: Issue) -> str:
     if items:
         return strip_brief_label(items[0])
     return issue.meta.get("출처", "")
+
+
+def issue_target_title(issue: Issue) -> str:
+    quote = issue_detail_quote(issue)
+    if quote:
+        return quote
+    return issue_takeaway(issue) or issue.title or issue.platform
+
+
+def issue_target_description(issue: Issue) -> str:
+    return issue_deck(issue) or issue_takeaway(issue) or issue.title or issue.platform
+
+
+def issue_display_title(issue: Issue) -> str:
+    return issue_target_title(issue)
+
+
+def issue_display_description(issue: Issue) -> str:
+    return issue_target_description(issue)
 
 
 def issue_newsletter_summary(issue: Issue, limit: int = 76) -> str:
@@ -850,7 +985,7 @@ def render_issue_row(report: Report, issue: Issue, compact: bool = False) -> str
       <a class="issue-number" href="{issue_href(report, issue)}">{issue.number.zfill(2)}</a>
       <div class="issue-main">
         <p>{clean_inline(category)} / {clean_inline(issue.platform)} / {clean_inline(issue_display_date(report))}</p>
-        <h3><a href="{issue_href(report, issue)}">{clean_inline(issue_takeaway(issue))}</a></h3>
+        <h3><a href="{issue_href(report, issue)}">{clean_inline(issue_display_title(issue))}</a></h3>
       </div>
       <div class="tag-row">{tags}</div>
     </article>
@@ -872,7 +1007,7 @@ def render_latest_card(report: Report, issue: Issue) -> str:
         <span>{clean_inline(category)} / {clean_inline(issue.platform)}</span>
         <span>{clean_inline(issue_display_date(report))}</span>
       </div>
-      <h3><a href="{issue_href(report, issue)}">{clean_inline(issue_takeaway(issue))}</a></h3>
+      <h3><a href="{issue_href(report, issue)}">{clean_inline(issue_display_title(issue))}</a></h3>
       <div class="tag-row">{tags}</div>
     </article>
     """
@@ -904,7 +1039,7 @@ def render_feed_item(report: Report, issue: Issue) -> str:
           <img class="feed-plus" src="assets/cttd-plus.svg" alt="+">
           <span>{clean_inline(category)} / {clean_inline(issue.platform)} ↗</span>
         </p>
-        <h2><a href="{issue_href(report, issue)}">{clean_inline(issue_takeaway(issue))}</a></h2>
+        <h2><a href="{issue_href(report, issue)}">{clean_inline(issue_display_title(issue))}</a></h2>
         <p class="story-date">{clean_inline(issue_display_date(report))}</p>
       </div>
     </article>
@@ -1034,28 +1169,28 @@ def render_index(report: Report) -> str:
       data() {{
         return {{
           report,
-          route: window.location.hash || "#magazine",
+          route: this.currentRoute(),
           shareStatus: "",
         }};
       }},
       computed: {{
         activeIssue() {{
-          const match = this.route.match(/^#\\/story\\/(\\d+)/);
+          const match = this.route.match(/^\\/articles\\/(\\d+)/);
           if (!match) return null;
           return this.report.issues.find((issue) => issue.number === match[1]) || null;
         }},
         activeCategoryKey() {{
-          const match = this.route.match(/^#\\/category\\/([^/]+)/);
+          const match = this.route.match(/^\\/category\\/([^/]+)/);
           if (match) return decodeURIComponent(match[1]);
           if (this.activeIssue) {{
-            const returnMatch = this.detailReturnRoute.match(/^#\\/category\\/([^/]+)/);
+            const returnMatch = this.detailReturnRoute.match(/^\\/category\\/([^/]+)/);
             if (returnMatch) return decodeURIComponent(returnMatch[1]);
             return this.activeIssue.areaKey || "";
           }}
           return "";
         }},
         activeSubcategory() {{
-          const match = this.route.match(/^#\\/category\\/[^/]+\\/(.+)$/);
+          const match = this.route.match(/^\\/category\\/[^/]+\\/([^/?]+)/);
           return match ? decodeURIComponent(match[1]) : "";
         }},
         categories() {{
@@ -1087,11 +1222,21 @@ def render_index(report: Report) -> str:
           const subcategoryMap = new Map();
           const devOrder = {json.dumps({key: index for index, key in enumerate(DEVELOP_SUBCATEGORY_ORDER)})};
           const devLabels = {json.dumps({key: DEVELOP_SUBCATEGORY_LABELS[key] for key in DEVELOP_SUBCATEGORY_ORDER})};
+          const designOrder = {json.dumps({key: index for index, key in enumerate(DESIGN_SUBCATEGORY_ORDER)})};
+          const designLabels = {json.dumps(DESIGN_SUBCATEGORY_LABELS)};
           if (this.activeCategory.key === "dev") {{
             Object.keys(devOrder).forEach((key) => {{
               subcategoryMap.set(key, {{
                 key,
                 label: devLabels[key] || key,
+                count: 0,
+              }});
+            }});
+          }} else if (this.activeCategory.key === "design") {{
+            Object.keys(designOrder).forEach((key) => {{
+              subcategoryMap.set(key, {{
+                key,
+                label: designLabels[key] || key,
                 count: 0,
               }});
             }});
@@ -1111,6 +1256,9 @@ def render_index(report: Report) -> str:
           if (this.activeCategory.key === "dev") {{
             return subcategories.sort((a, b) => (devOrder[a.key] ?? 99) - (devOrder[b.key] ?? 99));
           }}
+          if (this.activeCategory.key === "design") {{
+            return subcategories.sort((a, b) => (designOrder[a.key] ?? 99) - (designOrder[b.key] ?? 99));
+          }}
           return subcategories;
         }},
         visibleIssues() {{
@@ -1120,27 +1268,42 @@ def render_index(report: Report) -> str:
         }},
         currentListRoute() {{
           if (this.validListRoute(this.route)) return this.route;
-          return "#magazine";
+          return "/";
         }},
         detailReturnRoute() {{
           const routeParam = this.routeReturnParam();
           if (routeParam) return routeParam;
-          if (this.activeIssue && this.activeIssue.areaKey) return this.categoryPath(this.activeIssue.areaKey);
-          return "#magazine";
+          if (this.activeIssue && this.activeIssue.areaKey) return `/category/${{encodeURIComponent(this.activeIssue.areaKey)}}`;
+          return "/";
         }},
       }},
       mounted() {{
         this.syncDocumentState();
         this.syncHeaderCategoryState();
-        window.addEventListener("hashchange", this.updateRoute);
+        window.addEventListener("popstate", this.updateRoute);
       }},
       unmounted() {{
         document.body.classList.remove("is-story-open");
-        window.removeEventListener("hashchange", this.updateRoute);
+        window.removeEventListener("popstate", this.updateRoute);
       }},
       methods: {{
+        basePath() {{
+          const path = window.location.pathname.replace(/\\/+$/, "") || "/";
+          return path === "/magazine" || path.startsWith("/magazine/") ? "/magazine" : "";
+        }},
+        currentRoute() {{
+          const base = this.basePath();
+          const path = window.location.pathname;
+          const routePath = base && (path === base || path.startsWith(`${{base}}/`)) ? path.slice(base.length) || "/" : path || "/";
+          return `${{routePath}}${{window.location.search || ""}}`;
+        }},
+        withBasePath(path) {{
+          const base = this.basePath();
+          if (!path || path === "/") return base || "/";
+          return `${{base}}${{path}}`;
+        }},
         updateRoute() {{
-          this.route = window.location.hash || "#magazine";
+          this.route = this.currentRoute();
           this.syncDocumentState();
           this.syncHeaderCategoryState();
           window.scrollTo({{ top: 0, left: 0, behavior: "instant" }});
@@ -1148,7 +1311,7 @@ def render_index(report: Report) -> str:
         syncDocumentState() {{
           document.body.classList.toggle("is-story-open", Boolean(this.activeIssue));
           document.querySelectorAll(".header-back-link").forEach((link) => {{
-            link.setAttribute("href", this.activeIssue ? this.detailReturnRoute : "#magazine");
+            link.setAttribute("href", this.activeIssue ? this.withBasePath(this.detailReturnRoute) : this.withBasePath("/"));
           }});
         }},
         syncHeaderCategoryState() {{
@@ -1164,16 +1327,16 @@ def render_index(report: Report) -> str:
           }});
         }},
         categoryPath(categoryKey) {{
-          return `#/category/${{encodeURIComponent(categoryKey)}}`;
+          return this.withBasePath(`/category/${{encodeURIComponent(categoryKey)}}`);
         }},
         subcategoryPath(categoryKey, subcategory) {{
-          return `#/category/${{encodeURIComponent(categoryKey)}}/${{encodeURIComponent(subcategory)}}`;
+          return this.withBasePath(`/category/${{encodeURIComponent(categoryKey)}}/${{encodeURIComponent(subcategory)}}`);
         }},
         storyRoute(issue) {{
-          return issue.href || `${{issue.route}}?from=${{encodeURIComponent(this.currentListRoute)}}`;
+          return `${{this.withBasePath(issue.route || `/articles/${{issue.number}}`)}}?from=${{encodeURIComponent(this.currentListRoute)}}`;
         }},
         validListRoute(route) {{
-          return route === "#magazine" || /^#\\/category\\/(uiux|dev)(?:\\/[^?&]+)?$/.test(route || "");
+          return route === "/" || route === "" || /^\\/category\\/(service|design|dev|uiux)(?:\\/[^?&]+)?$/.test(route || "");
         }},
         routeReturnParam() {{
           const match = this.route.match(/[?&]from=([^&]+)/);
@@ -1182,11 +1345,7 @@ def render_index(report: Report) -> str:
           return this.validListRoute(route) ? route : "";
         }},
         goToList() {{
-          const targetRoute = this.detailReturnRoute;
-          if (window.location.hash !== targetRoute) {{
-            window.history.pushState(null, "", targetRoute);
-          }}
-          this.updateRoute();
+          window.location.href = this.withBasePath(this.detailReturnRoute);
         }},
         plainText(htmlText) {{
           const node = document.createElement("span");
@@ -1377,8 +1536,8 @@ def report_payload(report: Report) -> dict[str, object]:
                 "image": issue.image,
                 "imageCaption": issue.image_caption,
                 "tags": issue.tags,
-                "takeawayHtml": clean_inline(issue_takeaway(issue)),
-                "deckHtml": clean_inline(issue_deck(issue)),
+                "takeawayHtml": clean_inline(issue_display_title(issue)),
+                "deckHtml": clean_inline(issue_display_description(issue)),
                 "facts": facts,
                 "sourceUrl": issue.meta.get("출처 URL", ""),
                 "sourceTitle": issue_source_title(issue),
@@ -1461,15 +1620,15 @@ def render_article(report: Report, issue: Issue) -> str:
     <article class="article-layout">
       <header class="article-hero">
         <p class="article-brand">{clean_inline(issue.platform)}</p>
-        <h1>{clean_inline(issue_takeaway(issue))}</h1>
-        <p class="article-deck">{clean_inline(issue_deck(issue))}</p>
+        <h1>{clean_inline(issue_display_title(issue))}</h1>
+        <p class="article-deck">{clean_inline(issue_display_description(issue))}</p>
         <div class="article-meta-row">
           <div class="article-meta">
             <time>{clean_inline(issue_display_date(report))}</time>
             <span aria-hidden="true">|</span>
             <span class="category-label">{issue_category_label(issue)}</span>
           </div>
-          <button class="article-share-button" type="button" data-share-title="{html.escape(issue.platform, quote=True)} | Magazine" data-share-text="{html.escape(issue_takeaway(issue), quote=True)}" aria-label="공유하기" title="공유하기">
+          <button class="article-share-button" type="button" data-share-title="{html.escape(issue.platform, quote=True)} | Magazine" data-share-text="{html.escape(issue_display_title(issue), quote=True)}" aria-label="공유하기" title="공유하기">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="18" cy="5" r="3" />
               <circle cx="6" cy="12" r="3" />
@@ -1488,7 +1647,7 @@ def render_article(report: Report, issue: Issue) -> str:
           {source_notes}
         </footer>
         <div class="article-list-actions">
-          <a class="article-list-link" href="../index.html#magazine">목록보기</a>
+          <a class="article-list-link" href="../">목록보기</a>
         </div>
       </div>
     </article>
@@ -1529,26 +1688,23 @@ def render_article(report: Report, issue: Issue) -> str:
         body,
         "article",
         render_header_category_nav(report, "article"),
-        description=issue_deck(issue),
+        description=issue_display_description(issue),
         image=issue.image or SITE_OG_IMAGE,
         url=absolute_site_url(issue_href(report, issue)),
         page_type="article",
-        og_title=f"{issue.platform} | {issue_takeaway(issue)}",
+        og_title=f"{issue.platform} | {issue_display_title(issue)}",
         image_alt=issue.image_caption or issue.platform,
     )
 
 
 def write_site(report: Report) -> None:
     ASSETS_DIR.mkdir(parents=True, exist_ok=True)
-    ARTICLES_DIR.mkdir(parents=True, exist_ok=True)
 
-    for old_article in ARTICLES_DIR.glob("*.html"):
-        old_article.unlink()
+    if ARTICLES_DIR.exists():
+        for old_article in ARTICLES_DIR.glob("*.html"):
+            old_article.unlink()
 
     (SITE_DIR / "index.html").write_text(render_index(report), encoding="utf-8")
-    for issue in report.issues:
-        article_path = ARTICLES_DIR / f"{report.slug}-story-{issue.number.zfill(2)}.html"
-        article_path.write_text(render_article(report, issue), encoding="utf-8")
 
 
 def latest_report() -> Path:

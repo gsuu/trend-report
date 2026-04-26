@@ -9,17 +9,58 @@ const CATEGORY_LABELS = {
   department_store: "department",
   beauty: "beauty",
   book_content: "book",
+  global_service_ux: "global",
   ai: "AI",
   html: "HTML",
   css: "CSS",
   javascript: "JAVASCRIPT",
   web_accessibility: "웹접근성",
+  update: "Update",
   tool: "TOOL",
   data_api: "DATA/API",
 };
+const AREA_LABELS = {
+  service: "Service",
+  design: "Design",
+  dev: "DEV",
+};
+const SERVICE_AREA_KEYS = new Set(["service", "services", "service_planning", "planning", "pm", "product", "product_management", "ux", "uiux", "ui_ux", "web_service", "webservice", "서비스", "서비스기획", "웹서비스기획"]);
+const DESIGN_AREA_KEYS = new Set(["design", "web_design", "webdesign", "product_design", "visual", "visual_design", "brand", "branding", "design_system", "ui_design", "디자인", "웹디자인", "브랜드", "비주얼", "디자인시스템"]);
+const DEV_AREA_KEYS = new Set(["dev", "develop", "development", "engineering", "fe", "frontend", "frontend_development", "backend", "web_development", "web_develop", "개발", "프론트", "프론트엔드"]);
+const DESIGN_AI_KEYS = new Set(["ai", "ai디자인", "ai이미지", "chatgpt", "claude", "gemini", "figma_ai", "adobe_firefly", "firefly", "photoshop", "canva", "imagen", "veo", "sora", "image_generation", "이미지생성", "프로토타이핑", "디자인ai"]);
+const DEFAULT_SITE_URL = "https://cttd-magazine.vercel.app";
+
+function siteUrl() {
+  return (process.env.SITE_URL || process.env.MAGAZINE_BASE_URL || DEFAULT_SITE_URL).replace(/\/$/, "");
+}
 
 function normalizeKey(value = "") {
   return String(value).trim().toLowerCase().replaceAll(/\s+/g, "_").replaceAll("-", "_");
+}
+
+function normalizeAreaKey(value = "", tags = []) {
+  const key = normalizeKey(value || "service");
+  if (DEV_AREA_KEYS.has(key)) return "dev";
+  if (DESIGN_AREA_KEYS.has(key)) return "design";
+  if (SERVICE_AREA_KEYS.has(key)) return "service";
+
+  const tagKeys = tags.map((tag) => normalizeKey(tag));
+  const hasDesign = tagKeys.some((tag) => DESIGN_AREA_KEYS.has(tag));
+  const hasService = tagKeys.some((tag) => SERVICE_AREA_KEYS.has(tag));
+  const hasDev = tagKeys.some((tag) => DEV_AREA_KEYS.has(tag) || tag === "웹dev");
+  if (hasDev && !hasDesign && !hasService) return "dev";
+  if (hasDesign && !hasService && !hasDev) return "design";
+  return "service";
+}
+
+function areaLabel(areaKey) {
+  return AREA_LABELS[areaKey] || AREA_LABELS.service;
+}
+
+function normalizeCategoryKey(categoryKey, areaKey, tags = []) {
+  if (areaKey !== "design") return categoryKey;
+  const tokens = [categoryKey, ...tags.map((tag) => normalizeKey(tag))];
+  return tokens.some((token) => DESIGN_AI_KEYS.has(token)) ? "ai" : categoryKey;
 }
 
 function plainRichText(items = []) {
@@ -167,12 +208,31 @@ async function fetchIssuesFromNotion() {
     const dateValue = propertyText(properties, ["Date", "발행날짜", "Published Date", "날짜"], "");
     return dateInKstWeek(dateValue || page.created_time, weekRange);
   });
-  const limit = Number.parseInt(process.env.WEEKLY_NEWSLETTER_LIMIT || "30", 10);
-
-  const issues = weeklyPages.slice(0, Number.isFinite(limit) && limit > 0 ? limit : 30).map((page, index) => {
+  const pageSignature = (page) => {
     const properties = page.properties || {};
-    const areaKey = normalizeKey(propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "uiux"));
-    const categoryKey = normalizeKey(propertyText(properties, ["Category", "카테고리", "Subcategory", "소분류", "소카테고리"], areaKey === "dev" ? "javascript" : "ecommerce"));
+    const title = propertyText(properties, ["Takeaway", "Title", "제목", "한줄 인사이트"], "");
+    const platform = propertyText(properties, ["Platform", "서비스", "플랫폼", "Brand", "브랜드명"], "");
+    const tags = propertyTags(properties, ["Tags", "태그"]);
+    const area = normalizeAreaKey(propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "service"), tags);
+    return [platform, area, title].map((value) => normalizeKey(value)).join("|");
+  };
+  const uniqueWeeklyPages = [];
+  const seenPageSignatures = new Set();
+  for (const page of weeklyPages) {
+    const signature = pageSignature(page);
+    if (signature && seenPageSignatures.has(signature)) continue;
+    if (signature) seenPageSignatures.add(signature);
+    uniqueWeeklyPages.push(page);
+  }
+  const issues = uniqueWeeklyPages.map((page, index) => {
+    const properties = page.properties || {};
+    const tags = propertyTags(properties, ["Tags", "태그"]);
+    const areaKey = normalizeAreaKey(propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "service"), tags);
+    const categoryKey = normalizeCategoryKey(
+      normalizeKey(propertyText(properties, ["Category", "카테고리", "Subcategory", "소분류", "소카테고리"], areaKey === "dev" ? "javascript" : "ecommerce")),
+      areaKey,
+      tags,
+    );
     const number = String(index + 1).padStart(2, "0");
     const title = propertyText(properties, ["Takeaway", "Title", "제목", "한줄 인사이트"], "");
     const deck = propertyText(properties, ["Deck", "Summary", "요약", "목록 요약", "설명"], "");
@@ -182,15 +242,15 @@ async function fetchIssuesFromNotion() {
       number,
       platform: propertyText(properties, ["Platform", "서비스", "플랫폼", "Brand", "브랜드명"], "CTTD"),
       areaKey,
-      area: areaKey === "dev" ? "DEV" : "UIUX",
+      area: areaLabel(areaKey),
       categoryKey,
       category: CATEGORY_LABELS[categoryKey] || categoryKey,
       date: propertyText(properties, ["Date", "발행날짜", "Published Date", "날짜"], page.created_time || "").slice(0, 10),
       title,
       deck,
-      tags: propertyTags(properties, ["Tags", "태그"]),
+      tags,
       sourceUrl: propertyText(properties, ["Source URL", "출처 URL", "URL"], ""),
-      magazineUrl: `${(process.env.MAGAZINE_BASE_URL || "https://email.cttd.co.kr/magazine").replace(/\/$/, "")}/#/story/${number}`,
+      magazineUrl: `${siteUrl()}/articles/${number}`,
     };
   });
 
@@ -198,11 +258,11 @@ async function fetchIssuesFromNotion() {
 }
 
 function renderNewsletter(audience, issues, weekRange) {
-  const label = audience === "dev" ? "DEV" : "UIUX";
+  const label = audience === "dev" ? "DEV" : "Service/Design";
   const description = audience === "dev"
     ? "지난주 프론트엔드 구현, 접근성 QA, 브라우저/도구 변화입니다."
-    : "지난주 커머스와 서비스 UIUX 변화입니다.";
-  const logoSrc = `${(process.env.MAGAZINE_BASE_URL || "https://email.cttd.co.kr/magazine").replace(/\/$/, "")}/assets/cttd-logo-email.png`;
+    : "지난주 서비스 기획과 웹디자인 관점에서 볼 변화입니다.";
+  const logoSrc = `${siteUrl()}/assets/cttd-logo-email.png`;
   const rangeText = weekRangeLabel(weekRange);
 
   const cards = issues.map((issue, index) => `
@@ -227,14 +287,14 @@ function renderNewsletter(audience, issues, weekRange) {
 <html lang="ko">
   <body style="margin:0;background:#ffffff;color:#111111;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="display:none;max-height:0;overflow:hidden;">
-      <tr><td>UIUX/Web Service 주간 트렌드 리포트</td></tr>
+      <tr><td>Service/Design/DEV 주간 트렌드 리포트</td></tr>
     </table>
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#ffffff;">
       <tr>
         <td align="center" style="padding:44px 24px 52px;">
           <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:760px;margin:0 auto;">
             <tr><td style="padding:0 0 14px;"><img src="${htmlEscape(logoSrc)}" width="124" alt="CTTD" style="display:block;width:124px;max-width:124px;height:auto;border:0;outline:none;text-decoration:none;"></td></tr>
-            <tr><td style="padding:0 0 18px;color:#111111;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${label === "DEV" ? "Frontend Development Weekly" : "UIUX/Web Service Weekly"}</td></tr>
+            <tr><td style="padding:0 0 18px;color:#111111;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${audience === "dev" ? "Frontend Development Weekly" : "Service/Design Weekly"}</td></tr>
             <tr>
               <td style="padding:36px 0 24px;border-top:4px solid #111111;">
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 24px;">
@@ -254,7 +314,7 @@ function renderNewsletter(audience, issues, weekRange) {
 }
 
 function renderPlainText(audience, issues, weekRange) {
-  const label = audience === "dev" ? "DEV" : "UIUX";
+  const label = audience === "dev" ? "DEV" : "Service/Design";
   return [
     `CTTD ${label} Weekly Trend Report`,
     weekRangeLabel(weekRange),
@@ -285,7 +345,7 @@ async function sendNewsletter(audience, issues, weekRange) {
     requireTLS: String(process.env.SMTP_TLS || "true").toLowerCase() !== "false" && !secure,
   });
 
-  const label = audience === "dev" ? "DEV" : "UIUX";
+  const label = audience === "dev" ? "DEV" : "Service/Design";
   await transporter.sendMail({
     from: process.env.SMTP_FROM,
     to: recipients,
@@ -317,18 +377,18 @@ function issuesMarkdown(title, issues) {
   ].filter((line) => line !== "").join("\n");
 }
 
-function renderArchiveMarkdown({ weekRange, uiuxIssues, devIssues, results }) {
+function renderArchiveMarkdown({ weekRange, serviceDesignIssues, devIssues, results }) {
   const rangeText = weekRangeLabel(weekRange);
   return [
     `# CTTD Weekly Newsletter Archive`,
     "",
     `- 기간: ${rangeText}`,
     `- 생성 시각: ${new Date().toISOString()}`,
-    `- UIUX 이슈 수: ${uiuxIssues.length}`,
+    `- Service/Design 이슈 수: ${serviceDesignIssues.length}`,
     `- DEV 이슈 수: ${devIssues.length}`,
     `- 발송 결과: ${results.map((result) => `${result.audience}=${result.sent ? "sent" : `skipped(${result.reason})`}`).join(", ")}`,
     "",
-    issuesMarkdown("UIUX", uiuxIssues),
+    issuesMarkdown("Service/Design", serviceDesignIssues),
     "",
     issuesMarkdown("DEV", devIssues),
     "",
@@ -399,14 +459,14 @@ export default async function handler(request, response) {
 
   try {
     const { issues, weekRange } = await fetchIssuesFromNotion();
-    const uiuxIssues = issues.filter((issue) => issue.areaKey !== "dev");
+    const serviceDesignIssues = issues.filter((issue) => issue.areaKey !== "dev");
     const devIssues = issues.filter((issue) => issue.areaKey === "dev");
     const results = [
-      await sendNewsletter("uiux", uiuxIssues, weekRange),
+      await sendNewsletter("uiux", serviceDesignIssues, weekRange),
       await sendNewsletter("dev", devIssues, weekRange),
     ];
     const archive = await archiveMarkdownToGithub(
-      renderArchiveMarkdown({ weekRange, uiuxIssues, devIssues, results }),
+      renderArchiveMarkdown({ weekRange, serviceDesignIssues, devIssues, results }),
       weekRange,
     );
     response.status(200).json({ ok: true, issues: issues.length, weekRange: weekRangeLabel(weekRange), results, archive });

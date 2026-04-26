@@ -19,7 +19,7 @@ SITE_MARK_BORDER_LEFT = f"border-left:4px solid {SITE_MARK_FALLBACK_COLOR};borde
 TEST_RECIPIENT = "jisuk@cttd.co.kr"
 UIUX_FINAL_RECIPIENT = "cxd@cttd.co.kr"
 DEV_FINAL_SUBSCRIBERS_PATH = ROOT / "config" / "dev-final-subscribers.txt"
-PRODUCTION_MAGAZINE_BASE_URL = "https://email.cttd.co.kr/magazine"
+PRODUCTION_SITE_URL = "https://cttd-magazine.vercel.app"
 EMAIL_LOGO_ASSET_NAME = "cttd-logo-email.png"
 EMAIL_LOGO_CONTENT_ID = "cttd-logo-email@cttd"
 
@@ -312,7 +312,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--subject", help="메일 제목. 없으면 리포트 제목을 사용합니다.")
     parser.add_argument("--to", action="append", default=[], help="수신자 이메일. 쉼표 구분 또는 여러 번 입력 가능")
     parser.add_argument("--subscribers", help="수신자 목록 txt 파일")
-    parser.add_argument("--magazine-base-url", help="매거진 공개 URL. 없으면 MAGAZINE_BASE_URL 환경변수 또는 로컬 미리보기 링크를 사용합니다.")
+    parser.add_argument("--magazine-base-url", help="매거진 공개 URL. 없으면 SITE_URL 환경변수 또는 로컬 미리보기 링크를 사용합니다.")
     parser.add_argument(
         "--audience",
         choices=("general", "dev", "develop", "all"),
@@ -342,8 +342,8 @@ def resolve_magazine_base_url(value: str | None, stage: str) -> str:
     if value:
         return value.strip()
     if stage in {"test", "final"}:
-        return os.getenv("MAGAZINE_BASE_URL", PRODUCTION_MAGAZINE_BASE_URL).strip()
-    return os.getenv("MAGAZINE_BASE_URL", "").strip()
+        return os.getenv("SITE_URL", os.getenv("MAGAZINE_BASE_URL", PRODUCTION_SITE_URL)).strip()
+    return os.getenv("SITE_URL", os.getenv("MAGAZINE_BASE_URL", "")).strip()
 
 
 def read_subscribers(path: str | None) -> list[str]:
@@ -732,18 +732,16 @@ def is_develop_issue(category: str, tags: list[str]) -> bool:
 
 
 def magazine_href(report_path: Path, number: str, magazine_base_url: str | None) -> str:
-    slug = report_slug(report_path)
-    article_name = f"{slug}-story-{number.zfill(2)}.html"
-    base_url = (magazine_base_url or os.getenv("MAGAZINE_BASE_URL", "")).strip()
+    base_url = (magazine_base_url or os.getenv("SITE_URL", os.getenv("MAGAZINE_BASE_URL", ""))).strip()
 
     if base_url:
-        return f"{base_url.rstrip('/')}/articles/{article_name}"
+        return f"{base_url.rstrip('/')}/articles/{number.zfill(2)}"
 
-    return f"../site/articles/{article_name}"
+    return f"../site/articles/{number.zfill(2)}"
 
 
 def magazine_asset_href(asset_name: str, magazine_base_url: str | None) -> str:
-    base_url = (magazine_base_url or os.getenv("MAGAZINE_BASE_URL", "")).strip()
+    base_url = (magazine_base_url or os.getenv("SITE_URL", os.getenv("MAGAZINE_BASE_URL", ""))).strip()
     if base_url:
         return f"{base_url.rstrip('/')}/assets/{asset_name}"
 
@@ -1627,8 +1625,8 @@ def enforce_send_stage(args: argparse.Namespace, recipients: list[str], magazine
             )
         return
 
-    if magazine_base_url.rstrip("/") != PRODUCTION_MAGAZINE_BASE_URL:
-        raise SystemExit(f"{args.stage} 발송에는 MAGAZINE_BASE_URL={PRODUCTION_MAGAZINE_BASE_URL} 이 필요합니다.")
+    if magazine_base_url.rstrip("/") != PRODUCTION_SITE_URL:
+        raise SystemExit(f"{args.stage} 발송에는 SITE_URL={PRODUCTION_SITE_URL} 이 필요합니다.")
 
     if args.stage == "test" and recipients != [TEST_RECIPIENT]:
         raise SystemExit(f"테스트 발송 수신자는 {TEST_RECIPIENT}만 허용됩니다.")
@@ -1709,7 +1707,7 @@ def main() -> None:
     if args.send and not magazine_base_url:
         raise SystemExit(
             "뉴스레터 발송에는 매거진 사이트 공개 URL이 필요합니다. "
-            "--magazine-base-url 또는 MAGAZINE_BASE_URL을 설정하세요."
+            "--magazine-base-url 또는 SITE_URL을 설정하세요."
         )
 
     newsletter_items = parse_newsletter_items(markdown, args.audience)
