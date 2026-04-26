@@ -234,22 +234,61 @@ python3 scripts/send_newsletter.py \
 
 ## 매거진 사이트 만들기
 
-뉴스레터 대신 정적 매거진 사이트로 보고 싶으면 아래 명령을 실행합니다.
+Vercel에 올리는 매거진 사이트는 Vue/Vite 앱으로 구성합니다. 빌드 시점에 Notion 데이터베이스에서 데이터를 가져와 `src/data/report.json`을 만들고, Vue 템플릿이 홈/상세 화면을 렌더링합니다.
+
+```bash
+npm install
+npm run dev
+```
+
+Notion 연동에는 아래 환경변수가 필요합니다.
+
+```dotenv
+NOTION_TOKEN=secret_xxx
+NOTION_DATABASE_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+로컬에서 Notion 환경변수가 없으면 기존 `site/index.html`에 들어 있는 샘플 데이터를 fallback으로 사용합니다. 배포 환경에서는 Vercel Project Settings의 Environment Variables에 `NOTION_TOKEN`, `NOTION_DATABASE_ID`를 등록합니다.
+
+```bash
+npm run build
+```
+
+Vercel 설정은 저장소 루트의 `vercel.json`에 들어 있습니다.
+
+- Build Command: `npm run build`
+- Output Directory: `dist`
+- Framework Preset: `Vite`
+
+## Python 수집 자료를 Notion에 올리기
+
+Python으로 수집/정리한 Markdown 리포트는 Notion 데이터베이스에 먼저 적재하고, Vue 사이트는 Vercel 빌드 시점에 Notion 데이터를 읽습니다.
+
+`.env` 또는 Vercel 환경변수에 아래 값을 설정합니다.
+
+```dotenv
+NOTION_TOKEN=secret_xxx
+NOTION_DATABASE_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+동기화 전에는 dry-run으로 들어갈 항목을 확인합니다.
+
+```bash
+python3 scripts/push_notion.py reports/2026-04-20-uiux-web-service-weekly-trend-report.md --dry-run
+```
+
+문제가 없으면 Notion DB에 추가/업데이트합니다.
+
+```bash
+python3 scripts/push_notion.py reports/2026-04-20-uiux-web-service-weekly-trend-report.md
+```
+
+Notion 데이터베이스에 `Source Key` 또는 `Slug` 속성이 있으면 같은 리포트/번호 항목을 새로 만들지 않고 업데이트합니다. 없으면 매번 새 페이지로 추가됩니다. 권장 속성은 `Title`, `Platform`, `Area`, `Category`, `Date`, `Tags`, `Takeaway`, `Deck`, `Source URL`, `Source Title`, `Image`, `Image Caption`, `Report Slug`, `Source Key`입니다.
+
+기존 Markdown 기반 정적 HTML 생성 스크립트는 유지합니다. 필요할 때 아래 명령으로 `site/` 산출물을 만들 수 있습니다.
 
 ```bash
 python3 scripts/build_site.py reports/2026-04-20-uiux-web-service-weekly-trend-report.md
-```
-
-생성 파일은 `site/`에 저장됩니다.
-
-- `site/index.html`: 매거진 홈
-- `site/articles/*.html`: 이슈별 아티클 페이지
-- `site/assets/styles.css`: CTTD 톤의 흑백 그리드 스타일
-
-최신 리포트 기준으로 만들 때는 인자를 생략할 수 있습니다.
-
-```bash
-python3 scripts/build_site.py
 ```
 
 ## 매거진 사이트 배포하기
