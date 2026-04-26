@@ -108,13 +108,15 @@
 
 `DEV` 대분류 안에서는 개발 영향 범위 기준으로 나눕니다. 사이트 빌드 시 dev 이슈는 플랫폼명, 카테고리, 태그, 요약 문장을 기준으로 아래 소분류에 자동 배치됩니다.
 
-1. HTML: 마크업, DOM, 시맨틱 HTML, 웹 컴포넌트
-2. CSS: 레이아웃, 반응형, 스타일, 애니메이션
-3. JAVASCRIPT: JavaScript, TypeScript, 프레임워크, 런타임, 컴포넌트
-4. 웹접근성: 접근성, WCAG, 스크린리더
-5. AI: AI 개발 도구, 코딩 에이전트, 코드 어시스턴트
+1. AI: AI 개발 도구, 코딩 에이전트, 코드 어시스턴트, MCP, 에이전트 기반 UI 구현/검증
+2. HTML: 마크업, DOM, 시맨틱 HTML, 웹 컴포넌트
+3. CSS: 레이아웃, 반응형, 스타일, 애니메이션, Baseline, 신규 CSS 속성/API
+4. JAVASCRIPT: JavaScript, TypeScript, 프레임워크, 런타임, 컴포넌트, 디자인 시스템, Astro
+5. 웹접근성: 접근성, WCAG, ARIA, 스크린리더, 키보드/focus 동작
 6. TOOL: 테스트, 품질, 빌드, 배포, 모니터링
 7. DATA/API: 데이터, API, 서버, 백엔드, 인증
+
+DEV 수집은 “개발자에게 흥미로운 뉴스”보다 “UIUX 팀의 화면 설계, 디자인 시스템 운영, 접근성 QA, 브라우저 호환성 판단에 바로 도움이 되는 정보”를 우선합니다. 매주 금주 기준 최신 릴리즈를 확인하고, AI 관련 이슈는 동일 점수라면 가장 먼저 배치합니다. 접근성, CSS, JavaScript, HTML, iOS/Safari/WebKit, Chrome/Chromium, Firefox/Mozilla 속성·API 업데이트 사례는 필수 확인 축으로 둡니다.
 
 ## DEV 아티클 작성 구조
 
@@ -214,13 +216,13 @@ HTML 미리보기는 `newsletters/`에 생성됩니다.
 
 Dev 카테고리 또는 태그가 붙은 이슈만 발송용으로 확인하려면 `--audience dev`를 붙입니다. 생성 파일은 일반 뉴스레터와 겹치지 않도록 `newsletters/*-dev.html`로 저장됩니다. dev 뉴스레터는 카테고리, 태그, 플랫폼명, 요약 문장을 기준으로 세부 섹션을 자동으로 나눕니다. 기존 `--audience develop`도 호환용 별칭으로 동작합니다.
 
-dev 세부 섹션은 아래 키워드로 구분합니다.
+dev 세부 섹션은 아래 키워드로 구분합니다. AI 키워드는 다른 키워드와 함께 있어도 최우선 분류합니다.
 
-1. HTML: `html`, `dom`, `markup`, `semantic_html`, `web_components`
-2. CSS: `css`, `css_grid_lanes`, `grid`, `layout`, `responsive`, `animation`
-3. JAVASCRIPT: `javascript`, `typescript`, `node`, `nextjs`, `react`, `vue`, `component`
-4. 웹접근성: `accessibility`, `a11y`, `wcag`, `screen_reader`, `웹접근성`
-5. AI: `ai_development`, `code_assistant`, `copilot`, `ai_coding`, `agent`
+1. AI: `ai_development`, `code_assistant`, `copilot`, `ai_coding`, `agent`, `mcp`
+2. HTML: `html`, `dom`, `markup`, `semantic_html`, `web_components`, `popover`, `dialog`
+3. CSS: `css`, `css_grid_lanes`, `grid`, `layout`, `responsive`, `animation`, `baseline`, `anchor_positioning`, `view_transition`
+4. JAVASCRIPT: `javascript`, `typescript`, `node`, `nextjs`, `react`, `vue`, `astro`, `component`, `design_system`
+5. 웹접근성: `accessibility`, `a11y`, `wcag`, `aria`, `screen_reader`, `웹접근성`
 6. TOOL: `testing`, `qa`, `eslint`, `ci`, `build`, `deploy`, `monitoring`
 7. DATA/API: `data`, `api`, `backend`, `graphql`, `server`, `auth`, `node`
 
