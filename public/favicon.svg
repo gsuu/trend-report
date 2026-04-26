@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 433 433">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .favicon-path {
+        fill: white;
+      }
+    }
+  </style>
+  <path class="favicon-path" fill="black" d="M164 0v167H0v99h164v167h104V266h165v-99H268V0Z" />
+</svg>
