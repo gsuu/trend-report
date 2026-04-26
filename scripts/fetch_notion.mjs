@@ -1,12 +1,15 @@
 import { Client } from "@notionhq/client";
 import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
 const outputPath = path.join(root, "src", "data", "report.json");
+
+loadDotenv();
 
 const notionToken = process.env.NOTION_TOKEN || process.env.NOTION_API_KEY;
 const databaseId = process.env.NOTION_DATABASE_ID;
@@ -25,6 +28,20 @@ const CATEGORY_LABELS = {
   tool: "TOOL",
   data_api: "DATA/API",
 };
+
+function loadDotenv() {
+  const envPath = path.join(root, ".env");
+  if (!existsSync(envPath)) return;
+
+  for (const rawLine of readFileSync(envPath, "utf8").split(/\r?\n/)) {
+    const line = rawLine.trim();
+    if (!line || line.startsWith("#") || !line.includes("=")) continue;
+    const [key, ...valueParts] = line.split("=");
+    const cleanKey = key.trim();
+    if (!cleanKey || process.env[cleanKey]) continue;
+    process.env[cleanKey] = valueParts.join("=").trim().replace(/^['"]|['"]$/g, "");
+  }
+}
 
 function plainRichText(items = []) {
   return items.map((item) => item.plain_text || "").join("").trim();
@@ -58,6 +75,10 @@ function normalizeKey(value = "") {
 
 function getProperty(properties, names) {
   return names.map((name) => properties[name]).find(Boolean);
+}
+
+function hasProperty(properties, names) {
+  return names.find((name) => properties[name]);
 }
 
 function propertyText(properties, names, fallback = "") {
@@ -173,6 +194,12 @@ async function pageSections(notion, page, properties) {
 
 async function fetchFromNotion() {
   const notion = new Client({ auth: notionToken });
+  const database = await notion.databases.retrieve({ database_id: databaseId });
+  const databaseProperties = database.properties || {};
+  const dateProperty = hasProperty(databaseProperties, ["Date", "발행날짜", "Published Date", "날짜"]);
+  const sorts = dateProperty
+    ? [{ property: dateProperty, direction: "descending" }]
+    : [{ timestamp: "created_time", direction: "descending" }];
   const pages = [];
   let cursor;
   do {
@@ -180,25 +207,21 @@ async function fetchFromNotion() {
       database_id: databaseId,
       start_cursor: cursor,
       page_size: 100,
-      sorts: [{ property: "Date", direction: "descending" }],
-    }).catch(async () => notion.databases.query({
-      database_id: databaseId,
-      start_cursor: cursor,
-      page_size: 100,
-    }));
+      sorts,
+    });
     pages.push(...response.results);
     cursor = response.has_more ? response.next_cursor : undefined;
   } while (cursor);
 
   const issues = await Promise.all(pages.map(async (page, index) => {
     const properties = page.properties || {};
-    const areaKey = normalizeKey(propertyText(properties, ["Area", "대분류", "Type"], "uiux"));
-    const categoryKey = normalizeKey(propertyText(properties, ["Category", "카테고리", "Subcategory", "소분류"], areaKey === "dev" ? "javascript" : "ecommerce"));
+    const areaKey = normalizeKey(propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "uiux"));
+    const categoryKey = normalizeKey(propertyText(properties, ["Category", "카테고리", "Subcategory", "소분류", "소카테고리"], areaKey === "dev" ? "javascript" : "ecommerce"));
     const number = issueNumber(index, properties);
-    const date = propertyText(properties, ["Date", "발행날짜", "Published Date"], "").slice(0, 10);
-    const platform = propertyText(properties, ["Platform", "서비스", "플랫폼", "Brand"], "CTTD");
+    const date = propertyText(properties, ["Date", "발행날짜", "Published Date", "날짜"], page.created_time || "").slice(0, 10);
+    const platform = propertyText(properties, ["Platform", "서비스", "플랫폼", "Brand", "브랜드명"], "CTTD");
     const takeawayHtml = propertyHtml(properties, ["Takeaway", "Title", "제목", "한줄 인사이트"], platform);
-    const deckHtml = propertyHtml(properties, ["Deck", "Summary", "요약", "설명"], "");
+    const deckHtml = propertyHtml(properties, ["Deck", "Summary", "요약", "목록 요약", "설명"], "");
 
     return {
       id: page.id,
