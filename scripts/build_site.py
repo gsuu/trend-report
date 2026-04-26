@@ -826,6 +826,7 @@ def html_shell(
   <meta name="twitter:title" content="{html.escape(meta_title, quote=True)}">
   <meta name="twitter:description" content="{html.escape(meta_description, quote=True)}">
   <meta name="twitter:image" content="{html.escape(meta_image, quote=True)}">
+  <link rel="icon" href="/favicon.ico" sizes="16x16">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://unpkg.com">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css">
