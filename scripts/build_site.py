@@ -897,6 +897,11 @@ def issue_takeaway(issue: Issue) -> str:
 
 def issue_deck(issue: Issue) -> str:
     items = issue.sections.get("기술 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
+    for preferred_label in ("서비스 맥락", "기술 맥락", "변경 후", "확인 포인트", "디자인 포인트"):
+        for item in items:
+            label, separator, value = str(item).partition(":")
+            if separator and label.strip() == preferred_label and value.strip():
+                return clean_inline(value.strip())
     if items:
         return strip_brief_label(items[0])
     return issue.meta.get("출처", "")
