@@ -188,6 +188,25 @@ function extractBlockMeta(blocks) {
   return meta;
 }
 
+function referenceLinksFromMeta(meta, properties = {}) {
+  const links = [];
+  const seen = new Set();
+  const entries = [
+    ["관련 뉴스", meta["관련 뉴스"] || propertyText(properties, ["관련 뉴스", "Related News"], "")],
+    ["서비스 URL", meta["서비스 URL"] || propertyText(properties, ["서비스 URL", "Service URL", "서비스 링크"], "")],
+    ["보조 출처", meta["보조 출처 URL"] || propertyText(properties, ["보조 출처 URL", "Secondary Source URL", "Reference URL"], "")],
+    ["이미지 출처", meta["이미지 출처"] || propertyText(properties, ["이미지 출처", "Image Source"], "")],
+  ];
+
+  for (const [label, rawValue] of entries) {
+    const value = String(rawValue || "").trim();
+    if (!value || !/^https?:\/\//.test(value) || seen.has(value)) continue;
+    seen.add(value);
+    links.push({ label, title: value, url: value });
+  }
+  return links;
+}
+
 function buildStructuredSections(blocks) {
   const sections = [];
   let current = null;
@@ -313,6 +332,7 @@ async function fetchFromNotion() {
     const deckHtml = propertyHtml(properties, ["Deck", "Summary", "요약", "목록 요약", "설명"], "");
     const { sections, blockMeta } = await pageData(notion, page, properties, areaKey);
     const resolvedNumber = String(blockMeta["번호"] || number).padStart(2, "0");
+    const referenceLinks = referenceLinksFromMeta(blockMeta, properties);
 
     return {
       id: page.id,
@@ -331,6 +351,7 @@ async function fetchFromNotion() {
       deckHtml,
       sourceUrl: propertyText(properties, ["Source URL", "출처 URL", "URL"], blockMeta["출처 URL"] || ""),
       sourceTitle: propertyText(properties, ["Source Title", "출처", "출처명"], blockMeta["출처"] || ""),
+      referenceLinks,
       sections,
     };
   }));
