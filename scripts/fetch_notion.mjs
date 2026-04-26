@@ -1,12 +1,15 @@
 import { Client } from "@notionhq/client";
 import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
 const outputPath = path.join(root, "src", "data", "report.json");
+
+loadDotenv();
 
 const notionToken = process.env.NOTION_TOKEN || process.env.NOTION_API_KEY;
 const databaseId = process.env.NOTION_DATABASE_ID;
@@ -25,6 +28,20 @@ const CATEGORY_LABELS = {
   tool: "TOOL",
   data_api: "DATA/API",
 };
+
+function loadDotenv() {
+  const envPath = path.join(root, ".env");
+  if (!existsSync(envPath)) return;
+
+  for (const rawLine of readFileSync(envPath, "utf8").split(/\r?\n/)) {
+    const line = rawLine.trim();
+    if (!line || line.startsWith("#") || !line.includes("=")) continue;
+    const [key, ...valueParts] = line.split("=");
+    const cleanKey = key.trim();
+    if (!cleanKey || process.env[cleanKey]) continue;
+    process.env[cleanKey] = valueParts.join("=").trim().replace(/^['"]|['"]$/g, "");
+  }
+}
 
 function plainRichText(items = []) {
   return items.map((item) => item.plain_text || "").join("").trim();
@@ -58,6 +75,10 @@ function normalizeKey(value = "") {
 
 function getProperty(properties, names) {
   return names.map((name) => properties[name]).find(Boolean);
+}
+
+function hasProperty(properties, names) {
+  return names.find((name) => properties[name]);
 }
 
 function propertyText(properties, names, fallback = "") {
@@ -126,6 +147,22 @@ function blockToProseBlock(block) {
   return null;
 }
 
+function blockPlainText(block) {
+  if (block.type === "heading_2" || block.type === "heading_3") return plainRichText(block[block.type].rich_text);
+  if (block.type === "quote") return plainRichText(block.quote.rich_text);
+  if (block.type === "bulleted_list_item" || block.type === "numbered_list_item") return plainRichText(block[block.type].rich_text);
+  if (block.type === "paragraph") return plainRichText(block.paragraph.rich_text);
+  return "";
+}
+
+function blockHtmlText(block) {
+  if (block.type === "heading_2" || block.type === "heading_3") return htmlRichText(block[block.type].rich_text);
+  if (block.type === "quote") return htmlRichText(block.quote.rich_text);
+  if (block.type === "bulleted_list_item" || block.type === "numbered_list_item") return htmlRichText(block[block.type].rich_text);
+  if (block.type === "paragraph") return htmlRichText(block.paragraph.rich_text);
+  return "";
+}
+
 async function getAllChildBlocks(notion, blockId) {
   const blocks = [];
   let cursor;
@@ -141,9 +178,76 @@ async function getAllChildBlocks(notion, blockId) {
   return blocks;
 }
 
-async function pageSections(notion, page, properties) {
+function extractBlockMeta(blocks) {
+  const meta = {};
+  for (const block of blocks) {
+    if (block.type !== "bulleted_list_item" && block.type !== "numbered_list_item") continue;
+    const match = blockPlainText(block).match(/^([^:：]{1,18})[:：]\s*(.+)$/);
+    if (match) meta[match[1].trim()] = match[2].trim();
+  }
+  return meta;
+}
+
+function buildStructuredSections(blocks) {
+  const sections = [];
+  let current = null;
+
+  const pushCurrent = () => {
+    if (current && (current.blocks.length || current.itemsHtml.length)) sections.push(current);
+  };
+
+  for (const block of blocks) {
+    if (block.type === "heading_2") {
+      const title = blockPlainText(block);
+      if (title === "서비스 변화 요약" || title === "기술 변화 요약") {
+        pushCurrent();
+        current = { title, className: "article-section", prose: false, blocks: [], itemsHtml: [] };
+        continue;
+      }
+      if (title === "매거진 인사이트" || title === "인사이트") {
+        pushCurrent();
+        current = { title: "인사이트", className: "article-section is-deep-dive", prose: true, blocks: [], itemsHtml: [] };
+        continue;
+      }
+      if (title === "기본 정보" || title === "요약") {
+        pushCurrent();
+        current = null;
+        continue;
+      }
+      if (current?.prose) {
+        const proseBlock = { kind: "subhead", html: blockHtmlText(block) };
+        current.blocks.push(proseBlock);
+        current.itemsHtml.push(`@@${proseBlock.kind}@@${proseBlock.html}`);
+      }
+      continue;
+    }
+
+    if (!current) continue;
+
+    if (current.prose) {
+      const proseBlock = blockToProseBlock(block);
+      if (!proseBlock) continue;
+      current.blocks.push(proseBlock);
+      current.itemsHtml.push(`@@${proseBlock.kind}@@${proseBlock.html}`);
+      continue;
+    }
+
+    if (block.type === "bulleted_list_item" || block.type === "numbered_list_item" || block.type === "paragraph") {
+      const html = blockHtmlText(block);
+      if (!html) continue;
+      current.blocks.push({ kind: "list", html });
+      current.itemsHtml.push(html);
+    }
+  }
+
+  pushCurrent();
+  return sections;
+}
+
+async function pageData(notion, page, properties, areaKey) {
   const blocks = await getAllChildBlocks(notion, page.id);
-  const proseBlocks = blocks.map(blockToProseBlock).filter(Boolean);
+  const blockMeta = extractBlockMeta(blocks);
+  const structuredSections = buildStructuredSections(blocks);
   const summaryItems = [
     propertyHtml(properties, ["Summary", "요약", "서비스 변화 요약", "기술 변화 요약"], ""),
     propertyHtml(properties, ["Before", "변경 전"], ""),
@@ -151,28 +255,40 @@ async function pageSections(notion, page, properties) {
     propertyHtml(properties, ["Impact", "영향", "확인할 영향"], ""),
   ].filter(Boolean);
 
+  if (structuredSections.length) return { sections: structuredSections, blockMeta };
+
   const sections = [];
   if (summaryItems.length) {
     sections.push({
-      title: normalizeKey(propertyText(properties, ["Area", "대분류"], "uiux")) === "dev" ? "기술 변화 요약" : "서비스 변화 요약",
+      title: areaKey === "dev" ? "기술 변화 요약" : "서비스 변화 요약",
+      className: "article-section",
       prose: false,
       itemsHtml: summaryItems,
       blocks: summaryItems.map((html) => ({ kind: "list", html })),
     });
   }
+
+  const proseBlocks = blocks.map(blockToProseBlock).filter(Boolean);
   if (proseBlocks.length) {
     sections.push({
       title: "인사이트",
+      className: "article-section is-deep-dive",
       prose: true,
       itemsHtml: proseBlocks.map((block) => `@@${block.kind}@@${block.html}`),
       blocks: proseBlocks,
     });
   }
-  return sections;
+  return { sections, blockMeta };
 }
 
 async function fetchFromNotion() {
   const notion = new Client({ auth: notionToken });
+  const database = await notion.databases.retrieve({ database_id: databaseId });
+  const databaseProperties = database.properties || {};
+  const dateProperty = hasProperty(databaseProperties, ["Date", "발행날짜", "Published Date", "날짜"]);
+  const sorts = dateProperty
+    ? [{ property: dateProperty, direction: "descending" }]
+    : [{ timestamp: "created_time", direction: "descending" }];
   const pages = [];
   let cursor;
   do {
@@ -180,44 +296,42 @@ async function fetchFromNotion() {
       database_id: databaseId,
       start_cursor: cursor,
       page_size: 100,
-      sorts: [{ property: "Date", direction: "descending" }],
-    }).catch(async () => notion.databases.query({
-      database_id: databaseId,
-      start_cursor: cursor,
-      page_size: 100,
-    }));
+      sorts,
+    });
     pages.push(...response.results);
     cursor = response.has_more ? response.next_cursor : undefined;
   } while (cursor);
 
   const issues = await Promise.all(pages.map(async (page, index) => {
     const properties = page.properties || {};
-    const areaKey = normalizeKey(propertyText(properties, ["Area", "대분류", "Type"], "uiux"));
-    const categoryKey = normalizeKey(propertyText(properties, ["Category", "카테고리", "Subcategory", "소분류"], areaKey === "dev" ? "javascript" : "ecommerce"));
+    const areaKey = normalizeKey(propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "uiux"));
+    const categoryKey = normalizeKey(propertyText(properties, ["Category", "카테고리", "Subcategory", "소분류", "소카테고리"], areaKey === "dev" ? "javascript" : "ecommerce"));
     const number = issueNumber(index, properties);
-    const date = propertyText(properties, ["Date", "발행날짜", "Published Date"], "").slice(0, 10);
-    const platform = propertyText(properties, ["Platform", "서비스", "플랫폼", "Brand"], "CTTD");
+    const date = propertyText(properties, ["Date", "발행날짜", "Published Date", "날짜"], page.created_time || "").slice(0, 10);
+    const platform = propertyText(properties, ["Platform", "서비스", "플랫폼", "Brand", "브랜드명"], "CTTD");
     const takeawayHtml = propertyHtml(properties, ["Takeaway", "Title", "제목", "한줄 인사이트"], platform);
-    const deckHtml = propertyHtml(properties, ["Deck", "Summary", "요약", "설명"], "");
+    const deckHtml = propertyHtml(properties, ["Deck", "Summary", "요약", "목록 요약", "설명"], "");
+    const { sections, blockMeta } = await pageData(notion, page, properties, areaKey);
+    const resolvedNumber = String(blockMeta["번호"] || number).padStart(2, "0");
 
     return {
       id: page.id,
-      number,
+      number: resolvedNumber,
       platform,
       areaKey,
       area: areaKey === "dev" ? "DEV" : "UIUX",
       categoryKey,
       category: CATEGORY_LABELS[categoryKey] || categoryKey,
       date,
-      route: `#/story/${number}`,
-      image: propertyImage(properties, ["Image", "이미지", "Cover", "커버"], page.cover?.external?.url || page.cover?.file?.url || ""),
-      imageCaption: propertyText(properties, ["Image Caption", "이미지 설명", "캡션"], ""),
+      route: `#/story/${resolvedNumber}`,
+      image: propertyImage(properties, ["Image", "이미지", "Cover", "커버"], blockMeta["이미지"] || page.cover?.external?.url || page.cover?.file?.url || ""),
+      imageCaption: propertyText(properties, ["Image Caption", "이미지 설명", "캡션"], blockMeta["이미지 설명"] || ""),
       tags: propertyTags(properties, ["Tags", "태그"]),
       takeawayHtml,
       deckHtml,
-      sourceUrl: propertyText(properties, ["Source URL", "출처 URL", "URL"], ""),
-      sourceTitle: propertyText(properties, ["Source Title", "출처", "출처명"], ""),
-      sections: await pageSections(notion, page, properties),
+      sourceUrl: propertyText(properties, ["Source URL", "출처 URL", "URL"], blockMeta["출처 URL"] || ""),
+      sourceTitle: propertyText(properties, ["Source Title", "출처", "출처명"], blockMeta["출처"] || ""),
+      sections,
     };
   }));
 
