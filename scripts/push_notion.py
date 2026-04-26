@@ -29,6 +29,7 @@ from build_site import (  # noqa: E402
     issue_target_description,
     issue_target_title,
     issue_takeaway,
+    issue_update_title,
     parse_report,
     split_section_block,
 )
@@ -136,6 +137,7 @@ def text_content(value: str) -> dict[str, Any]:
 def clean_markdown(value: str) -> str:
     value = re.sub(r"`([^`]+)`", r"\1", value)
     value = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", value)
+    value = re.sub(r"<[^>]+>", "", value)
     return re.sub(r"\s+", " ", value).strip()
 
 
@@ -201,7 +203,7 @@ def source_key(report: Report, issue: Issue) -> str:
 
 
 def issue_properties(report: Report, issue: Issue, schema: dict[str, dict[str, Any]]) -> dict[str, Any]:
-    title = clean_markdown(issue_target_description(issue) or f"{issue.platform} {issue.title}")
+    title = clean_markdown(issue_update_title(issue) or f"{issue.platform} {issue.title}")
     deck = clean_markdown(issue_target_title(issue) or issue_target_description(issue) or f"{issue.platform} {issue.title}")
     properties: dict[str, Any] = {}
     set_property(properties, schema, "title", title)
@@ -317,6 +319,7 @@ def property_filter(schema: dict[str, dict[str, Any]], logical_name: str, value:
 
 def find_existing_issue_page(database_id: str, schema: dict[str, dict[str, Any]], report: Report, issue: Issue) -> str:
     title_candidates = [
+        clean_markdown(issue_update_title(issue) or f"{issue.platform} {issue.title}"),
         clean_markdown(issue_target_description(issue) or f"{issue.platform} {issue.title}"),
         clean_markdown(issue_target_title(issue) or f"{issue.platform} {issue.title}"),
         clean_markdown(issue_takeaway(issue) or f"{issue.platform} {issue.title}"),
@@ -395,7 +398,7 @@ def main() -> None:
         print(f"{report_path}")
         print(f"{len(issues)} issues")
         for issue in issues:
-            print(f"- {source_key(report, issue)} | {issue_area_label(issue)} | {issue.platform} | {clean_markdown(issue_target_title(issue))}")
+            print(f"- {source_key(report, issue)} | {issue_area_label(issue)} | {issue.platform} | {clean_markdown(issue_update_title(issue))}")
         return
 
     database_id = os.getenv("NOTION_DATABASE_ID", "").strip()

@@ -412,6 +412,12 @@ async function fetchFromNotion() {
 
   const pageSignature = (page) => {
     const properties = page.properties || {};
+    const sourceUrl = propertyText(properties, ["Source URL", "출처 URL", "URL"], "");
+    if (sourceUrl) return `source|${normalizeKey(sourceUrl)}`;
+
+    const sourceKey = propertyText(properties, ["Source Key", "Slug", "Page Key", "고유키"], "");
+    if (sourceKey) return `key|${normalizeKey(sourceKey)}`;
+
     const title = propertyText(properties, ["Takeaway", "Title", "제목", "한줄 인사이트"], "");
     const platform = propertyText(properties, ["Platform", "서비스", "플랫폼", "Brand", "브랜드명"], "");
     const tags = propertyTags(properties, ["Tags", "태그"]);
@@ -419,14 +425,25 @@ async function fetchFromNotion() {
     return [platform, area, title].map((value) => normalizeKey(value)).join("|");
   };
 
-  const uniquePages = [];
-  const seenPageSignatures = new Set();
+  const pageScore = (page) => {
+    const properties = page.properties || {};
+    let score = 0;
+    if (propertyText(properties, ["Source Key", "Slug", "Page Key", "고유키"], "")) score += 10;
+    if (propertyText(properties, ["Source URL", "출처 URL", "URL"], "")) score += 5;
+    if (propertyText(properties, ["Deck", "Summary", "요약", "목록 요약", "설명"], "")) score += 2;
+    return score;
+  };
+
+  const uniquePageMap = new Map();
   for (const page of pages) {
     const signature = pageSignature(page);
-    if (signature && seenPageSignatures.has(signature)) continue;
-    if (signature) seenPageSignatures.add(signature);
-    uniquePages.push(page);
+    if (!signature) continue;
+    const existing = uniquePageMap.get(signature);
+    if (!existing || pageScore(page) > pageScore(existing)) {
+      uniquePageMap.set(signature, page);
+    }
   }
+  const uniquePages = [...uniquePageMap.values()];
 
   const issues = await Promise.all(uniquePages.map(async (page, index) => {
     const properties = page.properties || {};
@@ -474,12 +491,23 @@ async function fetchFromNotion() {
     return (Number.parseInt(a.number, 10) || 0) - (Number.parseInt(b.number, 10) || 0);
   });
 
-  const first = issues[0];
+  const uniqueIssues = [];
+  const seenIssueSignatures = new Set();
+  for (const issue of issues) {
+    const signature = issue.sourceUrl
+      ? `source|${normalizeKey(issue.sourceUrl)}`
+      : [issue.platform, issue.areaKey, issue.takeawayHtml].map((value) => normalizeKey(value)).join("|");
+    if (signature && seenIssueSignatures.has(signature)) continue;
+    if (signature) seenIssueSignatures.add(signature);
+    uniqueIssues.push(issue);
+  }
+
+  const first = uniqueIssues[0];
   return {
     slug: first?.date || new Date().toISOString().slice(0, 10),
     title: "CTTD Trend Magazine",
     description: first ? `${first.date} CTTD Service/Design/DEV Weekly Trend Magazine` : "CTTD Service/Design/DEV Weekly Trend Magazine",
-    issues,
+    issues: uniqueIssues,
   };
 }
 

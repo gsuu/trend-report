@@ -907,6 +907,18 @@ def issue_deck(issue: Issue) -> str:
     return issue.meta.get("출처", "")
 
 
+def issue_update_title(issue: Issue) -> str:
+    items = issue.sections.get("기술 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
+    for preferred_label in ("업데이트", "핵심 업데이트"):
+        for item in items:
+            label, separator, value = str(item).partition(":")
+            if separator and label.strip() == preferred_label and value.strip():
+                return value.strip()
+    if items:
+        return strip_brief_label(items[0])
+    return issue.title or issue.platform
+
+
 def issue_target_title(issue: Issue) -> str:
     quote = issue_detail_quote(issue)
     if quote:
@@ -919,11 +931,11 @@ def issue_target_description(issue: Issue) -> str:
 
 
 def issue_display_title(issue: Issue) -> str:
-    return issue_target_title(issue)
+    return issue_update_title(issue)
 
 
 def issue_display_description(issue: Issue) -> str:
-    return issue_target_description(issue)
+    return issue_target_title(issue) or issue_target_description(issue)
 
 
 def issue_newsletter_summary(issue: Issue, limit: int = 76) -> str:
