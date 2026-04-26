@@ -141,6 +141,28 @@
       ]
     },
     {
+      "name": "지그재그",
+      "category": "ecommerce",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "KakaoStyle newsroom",
+        "Zigzag notice",
+        "media"
+      ]
+    },
+    {
+      "name": "에이블리",
+      "category": "ecommerce",
+      "sources": [
+        "App Store",
+        "Google Play",
+        "ABLY newsroom",
+        "Ably notice",
+        "media"
+      ]
+    },
+    {
       "name": "신세계백화점",
       "category": "department_store",
       "sources": [

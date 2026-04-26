@@ -165,14 +165,14 @@ def extract_markdown_url(value: str) -> str:
 
 def candidate_urls(block: list[str]) -> list[str]:
     urls: list[str] = []
-    preferred_fields = ("출처 URL", "관련 뉴스", "보조 출처 URL", "서비스 URL", "이미지 출처")
+    preferred_fields = ("출처 URL", "이미지 출처")
 
     for field in preferred_fields:
         for _, line in metadata_lines(block):
             value = field_value(line, field)
             if not value:
                 continue
-            url = extract_markdown_url(value) if field != "출처 URL" else value
+            url = extract_markdown_url(value)
             if url.startswith("https://") and url not in urls:
                 urls.append(url)
 
@@ -209,8 +209,10 @@ def fill_block(block: list[str], image_url: str) -> list[str]:
             caption_index += 1
 
     if caption_index < 0:
-        caption = f"{platform_name(next_block[0])} 공식 이미지"
+        caption = f"{platform_name(next_block[0])} 공식 원문 이미지"
         next_block.insert((image_index if image_index >= 0 else source_index) + 2, f"- 이미지 설명: {caption}")
+    elif not field_value(next_block[caption_index], "이미지 설명"):
+        next_block[caption_index] = f"- 이미지 설명: {platform_name(next_block[0])} 공식 원문 이미지"
 
     return next_block
 
@@ -219,7 +221,7 @@ def fill_caption(block: list[str]) -> list[str]:
     next_block = list(block)
     for index, line in metadata_lines(next_block):
         if line.strip().startswith("- 이미지 설명:") and not field_value(line, "이미지 설명"):
-            next_block[index] = f"- 이미지 설명: {platform_name(next_block[0])} 공식 이미지"
+            next_block[index] = f"- 이미지 설명: {platform_name(next_block[0])} 공식 원문 이미지"
             break
     return next_block
 

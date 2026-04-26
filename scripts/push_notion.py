@@ -26,6 +26,8 @@ from build_site import (  # noqa: E402
     issue_category_key,
     issue_category_label,
     issue_deck,
+    issue_target_description,
+    issue_target_title,
     issue_takeaway,
     parse_report,
     split_section_block,
@@ -199,7 +201,8 @@ def source_key(report: Report, issue: Issue) -> str:
 
 
 def issue_properties(report: Report, issue: Issue, schema: dict[str, dict[str, Any]]) -> dict[str, Any]:
-    title = clean_markdown(issue_takeaway(issue) or f"{issue.platform} {issue.title}")
+    title = clean_markdown(issue_target_title(issue) or f"{issue.platform} {issue.title}")
+    deck = clean_markdown(issue_target_description(issue))
     properties: dict[str, Any] = {}
     set_property(properties, schema, "title", title)
     set_property(properties, schema, "number", issue.number)
@@ -208,8 +211,8 @@ def issue_properties(report: Report, issue: Issue, schema: dict[str, dict[str, A
     set_property(properties, schema, "category", issue_category_label(issue))
     set_property(properties, schema, "date", issue.meta.get("날짜", report.slug))
     set_property(properties, schema, "tags", issue.tags)
-    set_property(properties, schema, "takeaway", clean_markdown(issue_takeaway(issue)))
-    set_property(properties, schema, "deck", clean_markdown(issue_deck(issue)))
+    set_property(properties, schema, "takeaway", title)
+    set_property(properties, schema, "deck", deck)
     set_property(properties, schema, "source_url", issue.meta.get("출처 URL", ""))
     set_property(properties, schema, "source_title", issue.meta.get("출처", ""))
     set_property(properties, schema, "image", issue.image)
@@ -250,11 +253,15 @@ def issue_blocks(issue: Issue) -> list[dict[str, Any]]:
     meta_lines = [
         ("국가", issue.meta.get("국가", "")),
         ("카테고리", issue_category_key(issue)),
+        ("직무 태그", issue.meta.get("직무 태그", "")),
         ("출처", issue.meta.get("출처", "")),
         ("출처 URL", issue.meta.get("출처 URL", "")),
         ("이미지", issue.image),
         ("이미지 설명", issue.image_caption),
     ]
+    for key, value in issue.meta.items():
+        if key.startswith(("관련 뉴스", "관련 블로그", "관련 매거진", "보조 출처")):
+            meta_lines.append((key, value))
     blocks.append(heading_block("기본 정보", 2))
     for label, value in meta_lines:
         if value:
@@ -295,6 +302,46 @@ def find_existing_page(database_id: str, schema: dict[str, dict[str, Any]], key:
     return results[0]["id"] if results else ""
 
 
+def property_filter(schema: dict[str, dict[str, Any]], logical_name: str, value: str) -> dict[str, Any] | None:
+    name, prop = first_property(schema, logical_name)
+    if not name or not prop or not value:
+        return None
+
+    prop_type = prop["type"]
+    if prop_type in {"title", "rich_text"}:
+        return {"property": name, prop_type: {"equals": value}}
+    if prop_type in {"select", "status"}:
+        return {"property": name, prop_type: {"equals": value}}
+    return None
+
+
+def find_existing_issue_page(database_id: str, schema: dict[str, dict[str, Any]], report: Report, issue: Issue) -> str:
+    title_candidates = [
+        clean_markdown(issue_target_title(issue) or f"{issue.platform} {issue.title}"),
+        clean_markdown(issue_takeaway(issue) or f"{issue.platform} {issue.title}"),
+        clean_markdown(issue_deck(issue) or f"{issue.platform} {issue.title}"),
+    ]
+    for title in dict.fromkeys(title_candidates):
+        filters = [
+            property_filter(schema, "title", title),
+            property_filter(schema, "platform", issue.platform),
+            property_filter(schema, "area", issue_area_label(issue)),
+        ]
+        filters = [item for item in filters if item]
+        if not filters:
+            continue
+
+        response = notion_request(
+            "POST",
+            f"databases/{database_id}/query",
+            {"filter": {"and": filters} if len(filters) > 1 else filters[0], "page_size": 1},
+        )
+        results = response.get("results", [])
+        if results:
+            return results[0]["id"]
+    return ""
+
+
 def replace_children(page_id: str, blocks: list[dict[str, Any]]) -> None:
     cursor = None
     while True:
@@ -317,6 +364,8 @@ def upsert_issue(database_id: str, schema: dict[str, dict[str, Any]], report: Re
     blocks = issue_blocks(issue)
     key = source_key(report, issue)
     existing_page_id = find_existing_page(database_id, schema, key) if update else ""
+    if update and not existing_page_id:
+        existing_page_id = find_existing_issue_page(database_id, schema, report, issue)
 
     if existing_page_id:
         notion_request("PATCH", f"pages/{existing_page_id}", {"properties": properties})
@@ -346,7 +395,7 @@ def main() -> None:
         print(f"{report_path}")
         print(f"{len(issues)} issues")
         for issue in issues:
-            print(f"- {source_key(report, issue)} | {issue_area_label(issue)} | {issue.platform} | {clean_markdown(issue_takeaway(issue))}")
+            print(f"- {source_key(report, issue)} | {issue_area_label(issue)} | {issue.platform} | {clean_markdown(issue_target_title(issue))}")
         return
 
     database_id = os.getenv("NOTION_DATABASE_ID", "").strip()
