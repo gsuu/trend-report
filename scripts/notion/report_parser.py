@@ -13,7 +13,7 @@ from urllib.error import URLError
 from urllib.request import Request, urlopen
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 REPORTS_DIR = ROOT / "reports"
 SITE_DIR = ROOT / "site"
 ASSETS_DIR = SITE_DIR / "assets"

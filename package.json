@@ -4,12 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npm run fetch:notion && vite --host 0.0.0.0",
-    "fetch:notion": "node scripts/fetch_notion.mjs",
-    "fetch:tracking": "node scripts/fetch_tracking_news.mjs",
-    "collect:materials": "node scripts/collect_materials.mjs",
-    "collect:raw": "node scripts/tracking_to_collection.mjs",
-    "build": "npm run fetch:notion && vite build",
+    "dev": "vite --host 0.0.0.0",
+    "fetch:tracking": "node scripts/tracking/fetch_tracking_news.mjs",
+    "collect:materials": "node scripts/tracking/collect_materials.mjs",
+    "collect:raw": "node scripts/legacy/tracking_to_collection.mjs",
+    "tracking:prepare": "node scripts/tracking/collect_materials.mjs",
+    "tracking:brief": "node scripts/tracking/collect_materials.mjs --no-fetch",
+    "notion:upload": "python scripts/notion/push_notion.py",
+    "magazine:export-json": "node scripts/notion/export_magazine_json.mjs",
+    "build": "vite build",
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {

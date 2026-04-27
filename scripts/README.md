@@ -1,0 +1,43 @@
+# Scripts
+
+스크립트는 실행 목적별로만 나눠 관리합니다.
+
+## tracking
+
+주간 원자료 수집과 후보 분류까지만 담당합니다.
+
+- `fetch_tracking_news.mjs`: RSS/스크래핑 기반 원자료 수집. `runs/YYYY-MM-DD/articles.json`, `weekly-digest.md`를 만듭니다.
+- `collect_materials.mjs`: 수집 자료를 대분류, 카테고리, 직무 태그, 출처 유형으로 정리합니다. `tracking-data.json`, `editorial-brief.md`만 만듭니다. 제목 보정, 채택/보류/제외 판단, 매거진 본문 작성은 하지 않습니다.
+- `fill_missing_images.py`: 최종 원고 작성 뒤 빈 공식 이미지 URL을 보강할 때만 사용합니다.
+- `new_collection.py`: 카테고리별 관찰 포인트, DEV 필수 수집 원칙, 확장 출처 체크리스트입니다. 자동 실행 파일이 아니라 AI 편집 단계에서 읽는 기준 파일입니다.
+
+## notion
+
+Notion 업로드와 업로드 전 검증에만 사용합니다.
+
+- `push_notion.py`: AI가 작성한 최종 `magazine-report.md`를 Notion DB 형식으로 파싱하고 업로드합니다.
+- `report_parser.py`: Markdown 리포트를 Notion 업로드용 구조로 파싱하고 검증합니다.
+- `export_magazine_json.mjs`: Notion 데이터를 Vue 매거진 화면 포맷으로 내려받아 `public/data/magazine.json`을 만듭니다. 배포 시 JSON을 같이 올려 첫 로딩을 빠르게 만들 때 사용합니다.
+- `cleanup_notion_duplicates.py`: Notion DB 중복 페이지를 정리해야 할 때만 사용합니다.
+
+## newsletter
+
+메일 발송과 FTP 배포처럼 뉴스레터 운영 단계에서만 사용합니다.
+
+- `send_newsletter.py`: 테스트/최종 뉴스레터 메일을 발송합니다.
+- `deploy_magazine.py`: 매거진 산출물을 FTP로 업로드합니다.
+
+## legacy
+
+현재 기본 흐름에서 제외된 이전 수동 생성 스크립트입니다. 바로 삭제하지 않고 보관만 합니다.
+
+- `new_report.py`
+- `tracking_to_collection.mjs`
+- `fetch_notion.mjs`
+
+## 현재 기본 명령
+
+- 새로 수집하고 편집 브리프 생성: `npm run tracking:prepare`
+- 기존 `articles.json`으로 편집 브리프만 재생성: `npm run tracking:brief`
+- 최종 원고를 Notion에 업로드: `npm run notion:upload -- runs/YYYY-MM-DD/magazine-report.md`
+- Notion 데이터를 정적 JSON으로 내보내기: `npm run magazine:export-json`

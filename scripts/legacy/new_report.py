@@ -6,7 +6,7 @@ from datetime import date, datetime
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 TEMPLATE_PATH = ROOT / "templates" / "weekly-report.md"
 REPORTS_DIR = ROOT / "reports"
 

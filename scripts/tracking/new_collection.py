@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 TEMPLATE_PATH = ROOT / "templates" / "raw-collection.md"
 PLATFORMS_PATH = ROOT / "data" / "platforms.json"
 COLLECTIONS_DIR = ROOT / "collections"

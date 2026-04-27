@@ -3,10 +3,10 @@ import { writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { readFileSync } from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const root = path.resolve(__dirname, "..");
+const root = path.resolve(__dirname, "..", "..");
 const outputPath = path.join(root, "src", "data", "report.json");
 
 loadDotenvFiles();
@@ -40,7 +40,7 @@ const DESIGN_AREA_KEYS = new Set(["design", "web_design", "webdesign", "product_
 const DEV_AREA_KEYS = new Set(["dev", "develop", "development", "engineering", "fe", "frontend", "frontend_development", "backend", "web_development", "web_develop", "개발", "프론트", "프론트엔드"]);
 const DESIGN_AI_KEYS = new Set(["ai", "ai디자인", "ai이미지", "chatgpt", "claude", "gemini", "figma_ai", "adobe_firefly", "firefly", "photoshop", "canva", "imagen", "veo", "sora", "image_generation", "이미지생성", "프로토타이핑", "디자인ai"]);
 
-function loadDotenvFiles() {
+export function loadDotenvFiles() {
   for (const envName of [".env.local", ".env"]) {
     const envPath = path.join(root, envName);
     if (!existsSync(envPath)) continue;
@@ -397,9 +397,15 @@ async function pageData(notion, page, properties, areaKey) {
   return { sections, blockMeta };
 }
 
-async function fetchFromNotion() {
-  const notion = new Client({ auth: notionToken });
-  const database = await notion.databases.retrieve({ database_id: databaseId });
+export async function fetchMagazineReport(options = {}) {
+  const resolvedNotionToken = options.notionToken || notionToken;
+  const resolvedDatabaseId = options.databaseId || databaseId;
+  if (!resolvedNotionToken || !resolvedDatabaseId) {
+    throw new Error("NOTION_TOKEN/NOTION_API_KEY and NOTION_DATABASE_ID are required.");
+  }
+
+  const notion = new Client({ auth: resolvedNotionToken });
+  const database = await notion.databases.retrieve({ database_id: resolvedDatabaseId });
   const databaseProperties = database.properties || {};
   const dateProperty = hasProperty(databaseProperties, ["Date", "발행날짜", "Published Date", "날짜"]);
   const sorts = dateProperty
@@ -409,7 +415,7 @@ async function fetchFromNotion() {
   let cursor;
   do {
     const response = await notion.databases.query({
-      database_id: databaseId,
+      database_id: resolvedDatabaseId,
       start_cursor: cursor,
       page_size: 100,
       sorts,
@@ -519,11 +525,9 @@ async function fetchFromNotion() {
   };
 }
 
-if (!notionToken || !databaseId) {
-  throw new Error("NOTION_TOKEN/NOTION_API_KEY와 NOTION_DATABASE_ID가 필요합니다. 사이트 데이터는 Notion에서만 가져옵니다.");
+if (import.meta.url === pathToFileURL(process.argv[1] || "").href) {
+  const report = await fetchMagazineReport();
+  await writeFile(outputPath, `${JSON.stringify(report, null, 2)}\n`, "utf8");
+
+  console.log(`Wrote ${report.issues.length} issues from Notion to ${path.relative(root, outputPath)}`);
 }
-
-const report = await fetchFromNotion();
-await writeFile(outputPath, `${JSON.stringify(report, null, 2)}\n`, "utf8");
-
-console.log(`Wrote ${report.issues.length} issues from Notion to ${path.relative(root, outputPath)}`);

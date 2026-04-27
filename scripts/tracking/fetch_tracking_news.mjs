@@ -5,9 +5,9 @@ import Parser from "rss-parser";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const root = path.resolve(__dirname, "..");
+const root = path.resolve(__dirname, "..", "..");
 const sourcesPath = path.join(root, "news-tracking", "sources.json");
-const outputDir = path.join(root, "news-tracking", "articles");
+const runsDir = path.join(root, "runs");
 const parser = new Parser();
 const FEED_TIMEOUT_MS = 15000;
 const BOOTSTRAP_DAYS = 7;
@@ -18,8 +18,20 @@ function outputDate() {
   return (process.env.TRACKING_OUTPUT_DATE || new Date().toISOString().slice(0, 10)).trim();
 }
 
-function snapshotDateFromFileName(fileName) {
-  const match = fileName.match(/^(\d{4}-\d{2}-\d{2})\.json$/);
+function runDir(date = outputDate()) {
+  return path.join(runsDir, date);
+}
+
+function articlePath(date = outputDate()) {
+  return path.join(runDir(date), "articles.json");
+}
+
+function digestPath(date = outputDate()) {
+  return path.join(runDir(date), "weekly-digest.md");
+}
+
+function snapshotDateFromRunName(name) {
+  const match = name.match(/^(\d{4}-\d{2}-\d{2})$/);
   return match ? new Date(`${match[1]}T00:00:00Z`) : null;
 }
 
@@ -27,15 +39,22 @@ async function trackingSinceDate() {
   const configured = (process.env.TRACKING_SINCE_DATE || "").trim();
   if (configured) return new Date(`${configured}T00:00:00Z`);
 
-  const todayFile = `${outputDate()}.json`;
+  const today = outputDate();
   try {
-    const files = (await fs.readdir(outputDir))
-      .filter((name) => name.endsWith(".json") && name !== todayFile)
+    const runs = (await fs.readdir(runsDir, { withFileTypes: true }))
+      .filter((entry) => entry.isDirectory() && entry.name !== today)
+      .map((entry) => entry.name)
       .sort()
       .reverse();
-    for (const file of files) {
-      const date = snapshotDateFromFileName(file);
-      if (date) return date;
+    for (const run of runs) {
+      const date = snapshotDateFromRunName(run);
+      if (!date) continue;
+      try {
+        await fs.stat(articlePath(run));
+        return date;
+      } catch {
+        // no article snapshot in this run
+      }
     }
   } catch {
     // no previous snapshots yet
@@ -47,12 +66,19 @@ async function trackingSinceDate() {
 }
 
 async function previousTrackedLinks() {
-  const todayFile = `${outputDate()}.json`;
+  const today = outputDate();
   const links = new Set();
   try {
-    const files = (await fs.readdir(outputDir)).filter((name) => name.endsWith(".json") && name !== todayFile);
-    for (const file of files) {
-      const articles = JSON.parse(await fs.readFile(path.join(outputDir, file), "utf8"));
+    const runs = (await fs.readdir(runsDir, { withFileTypes: true }))
+      .filter((entry) => entry.isDirectory() && entry.name !== today)
+      .map((entry) => entry.name);
+    for (const run of runs) {
+      let articles;
+      try {
+        articles = JSON.parse(await fs.readFile(articlePath(run), "utf8"));
+      } catch {
+        continue;
+      }
       for (const article of articles) {
         if (article?.link) links.add(article.link);
       }
@@ -74,6 +100,101 @@ function trackedArticleFields(source) {
     sendTarget: source.sendTarget !== false,
   };
 }
+
+function rawDigestCategory(article) {
+  const source = String(article.source || "").toLowerCase();
+  const text = `${article.source || ""} ${article.category || ""} ${article.title || ""} ${article.content || ""}`.toLowerCase();
+  if (source.includes("figma blog - design systems") || source.includes("into design systems")) return "Design";
+  if (source.includes("javascript weekly") || source.includes("syntax.fm") || source.includes("shoptalk")) return "JavaScript";
+  if (source.includes("css weekly") || source.includes("frontend focus")) return "Performance";
+  if (source.includes("css-tricks") || source.includes("webkit") || source.includes("chrome developers") || source.includes("mdn") || source.includes("astro") || source.includes("web.dev")) return "HTML/CSS";
+  if (article.area === "service") return "Service";
+  if (article.area === "design") return "Design";
+  if (article.area === "dev" && article.category === "tool") return "AI Tools";
+  if (/accessibility|a11y|wcag|wave|avada|screen reader|keyboard|aria/.test(text)) return "Accessibility";
+  if (/performance|core web vitals|lcp|cls|inp|lazy loading|font fallback|layout shift/.test(text)) return "Performance";
+  if (/css|html|astro|markdown|mdx|web\.dev|css-tricks|css weekly|webkit|safari|chrome developers|mdn/.test(text)) return "HTML/CSS";
+  if (/javascript|frontend focus|syntax\.fm|shoptalk|node\.js|react|vercel|hyperframes/.test(text)) return "JavaScript";
+  if (/design system|figma|design|ux|ui|prototype|handoff|component|token/.test(text)) return "Design";
+  if (/service|ecommerce|commerce|shopping|spotify|올리브영|신세계|무신사|카카오스타일|publy/.test(text)) return "Service";
+  if (/ai|agent|codex|claude|openai|gemini|workflow|tool/.test(text)) return "AI Tools";
+  return "Others";
+}
+
+function normalizedKey(value = "") {
+  return stripTags(value)
+    .toLowerCase()
+    .replace(/&[#a-z0-9]+;/gi, "")
+    .replace(/[^a-z0-9가-힣]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function shouldKeepCollectedArticle(article) {
+  const title = normalizedKey(article.title || "");
+  const link = String(article.link || "").toLowerCase();
+  if (!title || title.length < 4) return false;
+  if (/^(tag|category|author|privacy|terms)\b/.test(title)) return false;
+  if (/운영 정책|개인정보처리방침|privacy policy|cookie policy|terms of service|our principles/.test(title)) return false;
+  if (/(\/tag\/|\/tags\/|\/category\/|\/author\/|\/authors\/|\/privacy|\/terms|login|signup)/.test(link)) return false;
+  return true;
+}
+
+function formatDate(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+  return new Intl.DateTimeFormat("ko-KR", {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+  }).format(date);
+}
+
+function digestExcerpt(value = "") {
+  return stripTags(value)
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 420);
+}
+
+function digestMarkdown(articles, date) {
+  const groups = new Map();
+  const order = ["Service", "Design", "HTML/CSS", "JavaScript", "Accessibility", "Performance", "AI Tools", "Others"];
+  for (const article of articles) {
+    const category = rawDigestCategory(article);
+    if (!groups.has(category)) groups.set(category, []);
+    groups.get(category).push(article);
+  }
+
+  const parts = [
+    "# 주간 Service/Design/DEV 뉴스 다이제스트",
+    `생성일: ${date}`,
+    "",
+    "이 다이제스트는 RSS/뉴스 소스에서 넓게 수집한 원자료입니다. 매거진 업로드 대상은 이 목록에서 별도 선별합니다.",
+    "",
+  ];
+
+  for (const category of order) {
+    const items = groups.get(category) || [];
+    if (!items.length) continue;
+    parts.push(`## ${category}`, "");
+    for (const article of items) {
+      parts.push(
+        `### ${article.title || "(제목 없음)"}`,
+        `출처: ${article.source || "Unknown"} | 날짜: ${formatDate(article.pubDate)}`,
+        "",
+        digestExcerpt(article.content || article.summary || article.title || ""),
+        "",
+        article.link ? `원문: ${article.link}` : "",
+        "",
+      );
+    }
+  }
+
+  parts.push(`총 ${articles.length}개의 기사를 수집했습니다.`, "");
+  return parts.filter((line, index, array) => line || array[index - 1] !== "").join("\n");
+}
+
 
 function firstString(...values) {
   for (const value of values) {
@@ -243,6 +364,20 @@ function pageDescription(html) {
   return articleMatch ? stripTags(articleMatch[1]).slice(0, 800) : "";
 }
 
+function firstInlineImage(html, baseUrl) {
+  const patterns = [
+    /<table\b[^>]*\bclass\s*=\s*["'][^"']*el-fullwidthimage[^"']*["'][\s\S]*?<img\b(?=[^>]*\bsrc\s*=\s*["']([^"']+)["'])[^>]*>/i,
+    /<img\b(?=[^>]*\bclass\s*=\s*["'][^"']*(?:fullwidth|hero|lead|masthead)[^"']*["'])(?=[^>]*\bsrc\s*=\s*["']([^"']+)["'])[^>]*>/i,
+    /<img\b(?=[^>]*\bsrc\s*=\s*["']([^"']+)["'])[^>]*>/i,
+  ];
+  for (const pattern of patterns) {
+    const match = html.match(pattern);
+    const image = absoluteUrl(match?.[1] || "", baseUrl);
+    if (isUsableImageUrl(image, baseUrl)) return image;
+  }
+  return "";
+}
+
 async function fetchArticleMeta(url) {
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), ARTICLE_META_TIMEOUT_MS);
@@ -258,7 +393,7 @@ async function fetchArticleMeta(url) {
     const title = firstString(metaContent(html, ["og:title", "twitter:title"]), pageTitle(html));
     const content = pageDescription(html);
     const rawImage = absoluteUrl(metaContent(html, ["og:image", "twitter:image", "image"]), url);
-    const image = isUsableImageUrl(rawImage, url) ? rawImage : "";
+    const image = isUsableImageUrl(rawImage, url) ? rawImage : firstInlineImage(html, url);
     return { title, content, image };
   } catch {
     return {};
@@ -338,6 +473,8 @@ async function scrapeGroup(sources, seenPreviousLinks) {
 }
 
 async function main() {
+  const date = outputDate();
+  const outputDir = runDir(date);
   await fs.mkdir(outputDir, { recursive: true });
 
   const sources = JSON.parse(await fs.readFile(sourcesPath, "utf8"));
@@ -357,20 +494,28 @@ async function main() {
   ];
 
   const seenLinks = new Set();
+  const seenTitleKeys = new Set();
   const uniqueArticles = articles.filter((article) => {
+    if (!shouldKeepCollectedArticle(article)) return false;
     if (!article.link || seenLinks.has(article.link)) return false;
     seenLinks.add(article.link);
+    const titleKey = `${article.source || ""}|||${normalizedKey(article.title || "")}`;
+    if (seenTitleKeys.has(titleKey)) return false;
+    seenTitleKeys.add(titleKey);
     return true;
   });
 
   uniqueArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 
-  const outputPath = path.join(outputDir, `${outputDate()}.json`);
+  const outputPath = articlePath(date);
   await fs.writeFile(outputPath, `${JSON.stringify(uniqueArticles, null, 2)}\n`, "utf8");
+  const digestOutputPath = digestPath(date);
+  await fs.writeFile(digestOutputPath, digestMarkdown(uniqueArticles, date), "utf8");
 
   console.log(`Fetched ${uniqueArticles.length} articles`);
   console.log(`Tracking since ${sinceDate.toISOString().slice(0, 10)}`);
   console.log(`Saved to ${outputPath}`);
+  console.log(`Saved digest to ${digestOutputPath}`);
   console.log(`LATEST_FILE=${outputPath}`);
 }
 

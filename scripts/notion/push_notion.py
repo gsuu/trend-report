@@ -16,13 +16,13 @@ if hasattr(sys.stdout, "reconfigure"):
 if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8")
 
-ROOT = Path(__file__).resolve().parents[1]
-REPORTS_DIR = ROOT / "reports"
+ROOT = Path(__file__).resolve().parents[2]
+RUNS_DIR = ROOT / "runs"
 NOTION_VERSION = "2022-06-28"
 MAX_RICH_TEXT_LENGTH = 1900
 
-sys.path.insert(0, str(ROOT / "scripts"))
-from build_site import (  # noqa: E402
+sys.path.insert(0, str(ROOT / "scripts" / "notion"))
+from report_parser import (  # noqa: E402
     Issue,
     Report,
     issue_area_key,
@@ -94,9 +94,9 @@ def load_dotenv() -> None:
 
 
 def latest_report_path() -> Path:
-    reports = sorted(REPORTS_DIR.glob("*.md"))
+    reports = sorted(RUNS_DIR.glob("*/magazine-report.md"))
     if not reports:
-        raise SystemExit("reports/*.md 파일을 찾지 못했습니다.")
+        raise SystemExit("runs/*/magazine-report.md 파일을 찾지 못했습니다.")
     return reports[-1]
 
 
@@ -276,7 +276,9 @@ def set_property(properties: dict[str, Any], schema: dict[str, dict[str, Any]], 
 
 
 def source_key(report: Report, issue: Issue) -> str:
-    return f"{report.slug}-{issue.number.zfill(2)}"
+    report_path = Path(getattr(report, "source_path", ""))
+    run_date = report_path.parent.name if report_path.parent.parent == RUNS_DIR else report.slug
+    return f"{run_date}-{report.slug}-{issue.number.zfill(2)}"
 
 
 def issue_properties(report: Report, issue: Issue, schema: dict[str, dict[str, Any]]) -> dict[str, Any]:

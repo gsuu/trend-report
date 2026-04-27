@@ -43,6 +43,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 code {
@@ -585,15 +586,11 @@ main {
 }
 
 .empty-state {
+  display: grid;
+  min-height: 46vh;
+  place-items: center;
   padding: 48px 0 80px;
-  border-top: 1px solid var(--line);
-}
-
-.empty-state h1 {
-  margin: 0 0 10px;
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 1.2;
+  text-align: center;
 }
 
 .empty-state p {
@@ -601,6 +598,40 @@ main {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.7;
+}
+
+.magazine-loading {
+  display: grid;
+  min-height: 46vh;
+  place-items: center;
+  padding: 48px 0 80px;
+}
+
+.magazine-loading svg {
+  width: 44px;
+  height: 44px;
+  color: #111111;
+  animation: magazine-loading-spin 900ms linear infinite;
+}
+
+.magazine-loading circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-dasharray: 72 42;
+  stroke-linecap: round;
+  stroke-width: 4;
+}
+
+@keyframes magazine-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .magazine-loading svg {
+    animation: none;
+  }
 }
 
 .guide-grid {
@@ -622,6 +653,8 @@ main {
   min-width: 0;
   width: 100%;
   margin: 0;
+  content-visibility: auto;
+  contain-intrinsic-size: 360px 620px;
 }
 
 .guide-card a {
@@ -635,7 +668,9 @@ main {
   position: relative;
   display: block;
   width: 100%;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
+  background: #f4f4f4;
 }
 
 .guide-thumb.is-ratio-capped {
@@ -644,7 +679,7 @@ main {
 
 .guide-thumb img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
   transition: transform 260ms ease;
 }
@@ -1290,6 +1325,7 @@ main {
 .article-image {
   width: 100%;
   margin: 0 0 46px;
+  background: #f4f4f4;
 }
 
 .article-image img {
@@ -1309,6 +1345,8 @@ main {
 .article-section {
   display: block;
   padding: 42px 0;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 520px;
 }
 
 .article-section h2 {

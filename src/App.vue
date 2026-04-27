@@ -1,9 +1,13 @@
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
-import report from "./data/report.json";
+import fallbackReport from "./data/report.example.json";
 
 const basePath = detectBasePath();
 const route = ref(currentRoute());
+const report = ref(fallbackReport);
+const magazineCacheKey = "cttd-magazine-report-v1";
+const magazineCacheTtl = 5 * 60 * 1000;
+const magazineLoading = ref(true);
 const showCurrentWeekOnly = ref(hasCurrentWeekFilter(route.value));
 const listRoute = ref(validListRoute(route.value) ? route.value : "/");
 const shareStatus = ref("");
@@ -79,6 +83,7 @@ function syncViewportWidth() {
 }
 
 onMounted(() => {
+  loadMagazineReport();
   syncDocumentState();
   window.addEventListener("popstate", syncRoute);
   window.addEventListener("resize", syncViewportWidth);
@@ -90,7 +95,81 @@ onBeforeUnmount(() => {
   window.removeEventListener("resize", syncViewportWidth);
 });
 
-const issues = computed(() => report.issues || []);
+async function loadMagazineReport() {
+  const cachedReport = readCachedMagazineReport();
+  if (cachedReport) {
+    report.value = cachedReport;
+    magazineLoading.value = false;
+  }
+
+  await loadStaticMagazineReport(cachedReport);
+  await refreshMagazineReport();
+  magazineLoading.value = false;
+}
+
+async function loadStaticMagazineReport(cachedReport) {
+  if (cachedReport) return;
+
+  try {
+    const response = await fetch(withBasePath("/data/magazine.json"), {
+      headers: { Accept: "application/json" },
+      cache: "force-cache",
+    });
+    if (!response.ok) return;
+
+    const data = await response.json();
+    const nextReport = data.report || data;
+    if (!Array.isArray(nextReport?.issues)) return;
+
+    report.value = nextReport;
+    magazineLoading.value = false;
+    writeCachedMagazineReport(nextReport);
+  } catch {
+    // Static JSON is optional. The API refresh below remains the source of truth.
+  }
+}
+
+async function refreshMagazineReport() {
+  try {
+    const response = await fetch("/api/magazine", {
+      headers: { Accept: "application/json" },
+    });
+    const data = await response.json();
+    if (!response.ok || !data.ok || !Array.isArray(data.report?.issues)) {
+      throw new Error(data.error || "매거진 데이터를 불러오지 못했습니다.");
+    }
+    report.value = data.report;
+    writeCachedMagazineReport(data.report);
+  } catch {
+    if (!issues.value.length) report.value = fallbackReport;
+  }
+}
+
+function readCachedMagazineReport() {
+  if (typeof window === "undefined") return null;
+  try {
+    const cached = JSON.parse(window.sessionStorage.getItem(magazineCacheKey) || "null");
+    if (!cached?.report || !Array.isArray(cached.report.issues)) return null;
+    if (Date.now() - Number(cached.cachedAt || 0) > magazineCacheTtl) return null;
+    return cached.report;
+  } catch {
+    return null;
+  }
+}
+
+function writeCachedMagazineReport(nextReport) {
+  if (typeof window === "undefined") return;
+  try {
+    window.sessionStorage.setItem(magazineCacheKey, JSON.stringify({
+      cachedAt: Date.now(),
+      report: nextReport,
+    }));
+  } catch {
+    // Storage can fail in private mode or under quota pressure.
+  }
+}
+
+const issues = computed(() => report.value.issues || []);
 const recentWeekRange = computed(() => recentDaysRange(7));
 const filteredIssues = computed(() => {
   if (!showCurrentWeekOnly.value || !recentWeekRange.value) return issues.value;
@@ -195,11 +274,10 @@ const masonryColumns = computed(() => {
 });
 
 const currentListRoute = computed(() => listRoute.value);
-const emptyStateTitle = computed(() => (showCurrentWeekOnly.value ? "최근 1주일 업데이트가 없습니다." : report.title));
 const emptyStateDescription = computed(() => (
   showCurrentWeekOnly.value
     ? "오늘 기준 최근 7일 안에 등록된 업데이트가 없습니다."
-    : report.description
+    : "잠시 후 다시 확인해주세요."
 ));
 
 const detailReturnRoute = computed(() => {
@@ -332,6 +410,30 @@ function imageAspectRatio(issue) {
   return ratios[seed % ratios.length];
 }
 
+function optimizedImageUrl(value = "", width = 900) {
+  if (!value) return "";
+  try {
+    const url = new URL(value);
+    const host = url.hostname;
+    if (host === "cdn.sanity.io") {
+      url.searchParams.set("w", String(width));
+      url.searchParams.set("q", "72");
+      url.searchParams.set("fit", "max");
+      url.searchParams.set("auto", "format");
+      return url.href;
+    }
+    if (host === "images.ctfassets.net") {
+      url.searchParams.set("w", String(width));
+      url.searchParams.set("q", "80");
+      url.searchParams.set("fm", "webp");
+      return url.href;
+    }
+    return value;
+  } catch {
+    return value;
+  }
+}
+
 function capTallThumbnail(event) {
   const image = event.currentTarget;
   const thumb = image.closest(".guide-thumb");
@@ -421,7 +523,7 @@ function isDateInRange(value, range) {
       <span aria-hidden="true">←</span>
     </a>
     <a class="brand" :href="withBasePath(withListFilter('/'))" aria-label="CTTD Trend Magazine home">
-      <img src="/assets/cttd-logo.svg" alt="CTTD">
+      <img src="/assets/cttd-logo.svg" alt="CTTD" width="92" height="24" decoding="async">
       <span>Magazine</span>
     </a>
     <nav class="header-category-nav" aria-label="매거진 카테고리">
@@ -510,7 +612,12 @@ function isDateInRange(value, range) {
 
         <div class="article-body">
           <figure v-if="activeIssue.image" class="article-image">
-            <img :src="activeIssue.image" :alt="activeIssue.imageCaption || activeIssue.platform">
+            <img
+              :src="optimizedImageUrl(activeIssue.image, 1400)"
+              :alt="activeIssue.imageCaption || activeIssue.platform"
+              decoding="async"
+              fetchpriority="high"
+            >
             <figcaption v-text="activeIssue.imageCaption"></figcaption>
           </figure>
 
@@ -588,7 +695,13 @@ function isDateInRange(value, range) {
             <article v-for="issue in column" :key="issue.id || issue.number" class="guide-card">
               <a :href="storyRoute(issue)">
                 <div v-if="issue.image" class="guide-thumb">
-                  <img :src="issue.image" :alt="issue.imageCaption || issue.platform" @load="capTallThumbnail">
+                  <img
+                    :src="optimizedImageUrl(issue.image, 720)"
+                    :alt="issue.imageCaption || issue.platform"
+                    loading="lazy"
+                    decoding="async"
+                    @load="capTallThumbnail"
+                  >
                 </div>
                 <p class="guide-brand" v-text="issue.platform"></p>
                 <h2 v-html="issue.takeawayHtml"></h2>
@@ -603,8 +716,13 @@ function isDateInRange(value, range) {
           </div>
         </section>
 
+        <section v-else-if="magazineLoading" class="magazine-loading" aria-live="polite" aria-label="매거진 데이터 불러오는 중">
+          <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
+            <circle cx="24" cy="24" r="18"></circle>
+          </svg>
+        </section>
+
         <section v-else class="empty-state">
-          <h1>{{ emptyStateTitle }}</h1>
           <p>{{ emptyStateDescription }}</p>
         </section>
     </section>

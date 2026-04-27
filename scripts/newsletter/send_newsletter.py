@@ -16,7 +16,7 @@ import urllib.request
 from email.message import EmailMessage
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 PREVIEW_DIR = ROOT / "newsletters"
 SITE_MARK_COLOR = "rgba(238, 255, 72, 0.34)"
 SITE_MARK_FALLBACK_COLOR = "#f9ffc1"
@@ -619,7 +619,7 @@ def load_report_issue_index() -> dict[str, dict[str, object]]:
 
 
 def fetch_current_notion_report() -> dict[str, object]:
-    command = ["npm.cmd" if os.name == "nt" else "npm", "run", "fetch:notion"]
+    command = ["node", "scripts/legacy/fetch_notion.mjs"]
     try:
         subprocess.run(command, cwd=ROOT, check=True)
     except FileNotFoundError as exc:

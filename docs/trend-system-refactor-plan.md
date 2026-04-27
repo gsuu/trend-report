@@ -6,7 +6,7 @@
 
 ## 현재 문제
 
-1. `scripts/collect_materials.mjs`가 너무 많은 책임을 갖고 있습니다.
+1. `scripts/tracking/collect_materials.mjs`가 너무 많은 책임을 갖고 있습니다.
    수집 후보 필터링, 점수 계산, 직무 태그, 제목 번역, 본문 생성, 파일 저장, 이미지 보강, Notion 업로드 실행이 한 파일에 섞여 있습니다.
 
 2. 가이드가 코드에서 재사용되지 않습니다.
@@ -43,7 +43,7 @@
 
 - `news-tracking/sources.json`
 - 새 파일 `news-tracking/editorial-rules.json`
-- `scripts/collect_materials.mjs`
+- `scripts/tracking/collect_materials.mjs`
 
 정규식 기준을 코드 안에 직접 두지 않고 설정 파일로 옮깁니다.
 
@@ -60,7 +60,7 @@
 
 대상 파일:
 
-- `scripts/collect_materials.mjs`
+- `scripts/tracking/collect_materials.mjs`
 - `templates/weekly-report.md`
 
 자동 생성은 “초안 골격”까지만 허용합니다.
@@ -75,7 +75,7 @@
 
 대상 파일:
 
-- `scripts/fetch_tracking_news.mjs`
+- `scripts/tracking/fetch_tracking_news.mjs`
 
 RSS 없는 스크래핑 결과는 상세 페이지의 `og:title`, `og:description`, `og:image`, `<article>` 본문 일부를 함께 저장합니다. 상세 설명이 없거나 날짜가 불명확한 페이지는 업로드 후보에서 제외합니다.
 
@@ -84,7 +84,7 @@ RSS 없는 스크래핑 결과는 상세 페이지의 `og:title`, `og:descriptio
 대상 파일:
 
 - 새 파일 `news-tracking/review/YYYY-MM-DD.md`
-- `scripts/collect_materials.mjs`
+- `scripts/tracking/collect_materials.mjs`
 
 최종 20개만 만들지 말고, 아래를 같이 출력합니다.
 
@@ -102,8 +102,8 @@ RSS 없는 스크래핑 결과는 상세 페이지의 `og:title`, `og:descriptio
 대상 파일:
 
 - `docs/notion-schema.md`
-- `scripts/push_notion.py`
-- `scripts/cleanup_notion_duplicates.py`
+- `scripts/notion/push_notion.py`
+- `scripts/notion/cleanup_notion_duplicates.py`
 
 Notion DB 필수 속성을 문서화합니다.
 
@@ -164,12 +164,12 @@ Notion DB 필수 속성을 문서화합니다.
 
 1. `news-tracking/editorial-rules.json`을 만들고 현재 코드의 기준을 옮깁니다.
 2. `collect_materials.mjs`를 수집 후보 선정 전용으로 줄입니다.
-3. 매거진 본문 생성은 `templates/weekly-report.md` 기반 초안으로만 만들고, 원문 설명 부족 항목은 업로드하지 않습니다.
+3. 매거진 본문 생성은 자동 스크립트가 하지 않고, AI가 `new_collection.py`와 docs 기준을 읽은 뒤 최종 `magazine-report.md`를 작성합니다.
 4. `fetch_tracking_news.mjs`의 상세 페이지 meta 추출을 기본 경로로 둡니다.
 5. `push_notion.py`는 스키마 검사를 먼저 하고, 필수 중복 방지 필드가 없으면 업로드를 멈추거나 dry-run만 허용합니다.
 6. `cleanup_notion_duplicates.py`는 Source Key가 있을 때는 Source Key 기준, 없을 때는 완전 동일 제목/브랜드/대카테고리/소카테고리/출처 URL 기준으로만 archive합니다.
-7. `npm run fetch:tracking`, `npm run collect:materials -- --no-fetch --no-upload`로 드라이런을 확인합니다.
-8. Windows에서 한글 깨짐이 없는지 `Get-Content -Encoding utf8`로 리포트와 selected JSON을 확인합니다.
+7. `npm run fetch:tracking`, `npm run tracking:brief`로 수집/분류 브리프를 확인합니다.
+8. Windows에서 한글 깨짐이 없는지 `Get-Content -Encoding utf8`로 `editorial-brief.md`와 `tracking-data.json`을 확인합니다.
 
 ## 완료 기준
 

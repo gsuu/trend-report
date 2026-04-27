@@ -4,13 +4,10 @@ import { fileURLToPath } from "node:url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const root = path.resolve(__dirname, "..");
+const root = path.resolve(__dirname, "..", "..");
 const templatePath = path.join(root, "templates", "raw-collection.md");
 const platformsPath = path.join(root, "data", "platforms.json");
-const selectedDir = path.join(root, "news-tracking", "selected");
-const candidatesDir = path.join(root, "news-tracking", "candidates");
-const articlesDir = path.join(root, "news-tracking", "articles");
-const collectionsDir = path.join(root, "collections");
+const runsDir = path.join(root, "runs");
 
 const categorySignalRules = {
   fashion: ["홈/카테고리/브랜드관 진입 구조", "룩북·스타일 추천·착장/코디 탐색", "찜·재입고·브랜드 팔로우·방문 보상"],
@@ -46,6 +43,14 @@ function outputDate() {
   return argValue("--date", process.env.TRACKING_OUTPUT_DATE || new Date().toISOString().slice(0, 10)).trim();
 }
 
+function runDir(date = outputDate()) {
+  return path.join(runsDir, date);
+}
+
+function runFile(date, fileName) {
+  return path.join(runDir(date), fileName);
+}
+
 function sourceName() {
   return argValue("--source", "selected").trim().toLowerCase();
 }
@@ -74,29 +79,43 @@ function isoDate(value = "") {
   return date.toISOString().slice(0, 10);
 }
 
-async function latestJsonFile(directory) {
-  const files = (await fs.readdir(directory).catch(() => []))
-    .filter((name) => name.endsWith(".json"))
+function fileNameForSource(source) {
+  if (source === "articles") return "articles.json";
+  return "tracking-data.json";
+}
+
+async function latestRunFile(fileName) {
+  const runs = (await fs.readdir(runsDir, { withFileTypes: true }).catch(() => []))
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
     .sort()
     .reverse();
-  return files.length ? path.join(directory, files[0]) : "";
+  for (const run of runs) {
+    const candidate = runFile(run, fileName);
+    try {
+      await fs.stat(candidate);
+      return candidate;
+    } catch {
+      // keep looking
+    }
+  }
+  return "";
 }
 
 async function inputPathFor(date) {
   const configured = argValue("--input", "").trim();
   if (configured) return path.isAbsolute(configured) ? configured : path.join(root, configured);
 
-  const source = sourceName();
-  const directory = source === "articles" ? articlesDir : source === "candidates" ? candidatesDir : selectedDir;
-  const datedPath = path.join(directory, `${date}.json`);
+  const fileName = fileNameForSource(sourceName());
+  const datedPath = runFile(date, fileName);
   try {
     await fs.stat(datedPath);
     return datedPath;
   } catch {
-    const latest = await latestJsonFile(directory);
+    const latest = await latestRunFile(fileName);
     if (latest) return latest;
   }
-  throw new Error(`자동 수집 JSON을 찾지 못했습니다: ${directory}`);
+  throw new Error(`자동 수집 JSON을 찾지 못했습니다: runs/*/${fileName}`);
 }
 
 function buildPlatformChecklist(data) {
@@ -369,7 +388,7 @@ function insertCandidateCards(content, cards) {
 async function main() {
   const date = outputDate();
   const inputPath = await inputPathFor(date);
-  const outputPath = path.join(collectionsDir, `${date}-raw-trend-collection.md`);
+  const outputPath = runFile(date, "raw-collection.md");
   const overwrite = hasArg("--overwrite");
   const limit = Number.parseInt(argValue("--limit", "20"), 10) || 20;
 
@@ -383,11 +402,16 @@ async function main() {
     if (String(error.message || "").includes("이미 raw collection")) throw error;
   }
 
-  const [template, platforms, articles] = await Promise.all([
+  const [template, platforms, inputData] = await Promise.all([
     fs.readFile(templatePath, "utf8"),
     fs.readFile(platformsPath, "utf8").then(JSON.parse),
     fs.readFile(inputPath, "utf8").then(JSON.parse),
   ]);
+  const articles = Array.isArray(inputData)
+    ? inputData
+    : sourceName() === "candidates"
+      ? inputData.candidates || []
+      : inputData.selected || [];
 
   const selectedArticles = articles
     .filter((article) => article && article.title && article.link)
@@ -404,7 +428,7 @@ async function main() {
     cards,
   );
 
-  await fs.mkdir(collectionsDir, { recursive: true });
+  await fs.mkdir(runDir(date), { recursive: true });
   await fs.writeFile(outputPath, content, "utf8");
   console.log(`INPUT_FILE=${inputPath}`);
   console.log(`COLLECTION_FILE=${outputPath}`);

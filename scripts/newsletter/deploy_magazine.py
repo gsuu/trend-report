@@ -7,7 +7,7 @@ import os
 from pathlib import Path, PurePosixPath
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_LOCAL_DIR = ROOT / "site"
 DEFAULT_REMOTE_DIR = "/cttd-email/magazine"
 
