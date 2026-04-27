@@ -124,6 +124,14 @@ DEVELOP_SUBCATEGORY_LABELS = {
     "ai": "AI",
     "tool": "TOOL",
     "data_api": "DATA/API",
+    "performance": "Performance",
+    "accessibility": "Accessibility",
+    "browser": "Browser",
+    "frontend": "Frontend",
+    "ai_dev": "AI/DEV",
+    "publishing": "Publishing",
+    "ai_design": "AI/Design",
+    "pwa": "PWA",
 }
 DEVELOP_SUBCATEGORY_KEYWORDS = {
     "html": {"html", "dom", "markup", "semantic_html", "semantics", "document", "web_components", "custom_elements", "custom_element", "template", "popover", "dialog", "details", "마크업", "시맨틱", "시맨틱_html", "웹컴포넌트"},
@@ -575,15 +583,19 @@ def issue_area_label(issue: Issue) -> str:
 
 def issue_category_key(issue: Issue) -> str:
     area_key = issue_area_key(issue)
+    raw_category = issue.category or issue.meta.get("카테고리", "")
+    normalized_raw_category = normalize_category_token(raw_category)
     if area_key == "design":
         tokens = issue_tokens(issue)
-        if issue.category == "ai" or tokens.intersection(DESIGN_AI_KEYWORDS):
+        if normalized_raw_category == "ai" or tokens.intersection(DESIGN_AI_KEYWORDS):
             return "ai"
-        return CATEGORY_KEYS.get(issue.category, issue.category)
+        return CATEGORY_KEYS.get(normalized_raw_category, normalized_raw_category) or "global"
 
     if area_key != "dev":
-        return CATEGORY_KEYS.get(issue.category, issue.category)
+        return CATEGORY_KEYS.get(normalized_raw_category, normalized_raw_category) or area_key
 
+    if normalized_raw_category:
+        return CATEGORY_KEYS.get(normalized_raw_category, normalized_raw_category)
     tokens = issue_tokens(issue)
     for category_key in DEVELOP_SUBCATEGORY_CLASSIFICATION_ORDER:
         if tokens.intersection(DEVELOP_SUBCATEGORY_KEYWORDS.get(category_key, set())):
@@ -595,10 +607,10 @@ def issue_category_label(issue: Issue) -> str:
     category_key = issue_category_key(issue)
     area_key = issue_area_key(issue)
     if area_key == "dev":
-        return DEVELOP_SUBCATEGORY_LABELS.get(category_key, DEVELOP_SUBCATEGORY_LABELS["javascript"])
+        return DEVELOP_SUBCATEGORY_LABELS.get(category_key, CATEGORY_LABELS.get(category_key, category_key))
     if area_key == "design":
         return DESIGN_SUBCATEGORY_LABELS.get(category_key, CATEGORY_LABELS.get(category_key, category_key))
-    return CATEGORY_LABELS.get(issue.category, issue.category)
+    return CATEGORY_LABELS.get(category_key, category_key)
 
 
 def split_issue_title(raw: str) -> tuple[str, str, str, list[str]]:
@@ -614,8 +626,9 @@ def split_issue_title(raw: str) -> tuple[str, str, str, list[str]]:
         platform = body.split()[0]
         rest = body
 
-    tags = normalize_tags(re.findall(r"#([^\s#]+)", rest))
-    title = re.sub(r"#[^\s#]+", "", rest).strip() or platform
+    raw_tags = re.findall(r"#([^\s#]+)", rest)
+    tags = normalize_tags([tag for tag in raw_tags if not tag.isdigit()])
+    title = re.sub(r"#(?!\d+\b)[^\s#]+", "", rest).strip() or platform
     return number, platform, title, tags
 
 

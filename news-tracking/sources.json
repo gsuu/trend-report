@@ -38,6 +38,38 @@
       "category": "ecommerce"
     },
     {
+      "name": "쿠팡 뉴스룸",
+      "rss": "https://news.coupang.com/feed/",
+      "audience": "uiux",
+      "area": "service",
+      "category": "ecommerce",
+      "priority": "priority_commerce"
+    },
+    {
+      "name": "컬리 뉴스룸",
+      "rss": "https://newsroom.kurlycorp.com/feed/",
+      "audience": "uiux",
+      "area": "service",
+      "category": "ecommerce",
+      "priority": "priority_commerce"
+    },
+    {
+      "name": "오늘의집 뉴스룸",
+      "rss": "https://ohstory.io/feed/",
+      "audience": "uiux",
+      "area": "service",
+      "category": "lifestyle_commerce",
+      "priority": "priority_commerce"
+    },
+    {
+      "name": "네이버 보도자료",
+      "rss": "https://www.navercorp.com/api/article/naver/rss",
+      "audience": "uiux",
+      "area": "service",
+      "category": "platform_commerce",
+      "priority": "priority_platform"
+    },
+    {
       "name": "토스 테크",
       "rss": "https://toss.tech/rss.xml",
       "audience": "uiux",
@@ -298,6 +330,84 @@
       "limit": 20
     },
     {
+      "name": "CJ올리브영 뉴스룸",
+      "url": "https://corp.oliveyoung.com/ko/news",
+      "audience": "uiux",
+      "area": "service",
+      "category": "beauty",
+      "priority": "priority_commerce",
+      "includeLinkPatterns": [
+        "corp\\.oliveyoung\\.com/ko/news/"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "/company/",
+        "/sustainability/",
+        "/legal"
+      ],
+      "limit": 20
+    },
+    {
+      "name": "카카오 보도자료",
+      "url": "https://www.kakaocorp.com/page",
+      "audience": "uiux",
+      "area": "service",
+      "category": "platform_commerce",
+      "priority": "priority_platform",
+      "includeLinkPatterns": [
+        "kakaocorp\\.com/page/detail/"
+      ],
+      "includeTitlePatterns": [
+        "카카오톡|카카오맵|카카오페이|카카오메이커스|톡딜|선물하기|쇼핑|커머스|예약|AI|카나나|비즈니스|소상공인|크리에이터|이모티콘"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "/responsible/",
+        "/ir/"
+      ],
+      "limit": 20
+    },
+    {
+      "name": "당근 보도자료",
+      "url": "https://about.daangn.com/company/pr/",
+      "audience": "uiux",
+      "area": "service",
+      "category": "local_service",
+      "priority": "priority_platform",
+      "includeLinkPatterns": [
+        "about\\.daangn\\.com/company/pr/archive/"
+      ],
+      "includeTitlePatterns": [
+        "당근|동네|로컬|알바|중고거래|지도|예약|프로필|광고|비즈니스|공공프로필|커뮤니티"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:"
+      ],
+      "limit": 20
+    },
+    {
+      "name": "야놀자 보도자료",
+      "url": "https://www.yanoljagroup.com/press_release",
+      "audience": "uiux",
+      "area": "service",
+      "category": "travel_platform",
+      "priority": "priority_platform",
+      "includeLinkPatterns": [
+        "yanoljagroup\\.com"
+      ],
+      "includeTitlePatterns": [
+        "NOL|야놀자|여행|숙박|예약|AI|추천|플랫폼|트래블|travel|consumer platform|personalized|discovery"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:"
+      ],
+      "limit": 20
+    },
+    {
       "name": "PUBLY",
       "url": "https://publy.co/",
       "audience": "uiux",
@@ -313,6 +423,94 @@
         "signup"
       ],
       "limit": 20
+    },
+    {
+      "name": "Careet",
+      "url": "https://www.careet.net/",
+      "audience": "uiux",
+      "area": "service",
+      "category": "trend_curation",
+      "sourceRole": "discovery",
+      "publishStatus": "reference_only",
+      "includeLinkPatterns": [
+        "careet\\.net"
+      ],
+      "includeTitlePatterns": [
+        "트렌드|MZ|Z세대|밈|브랜드|마케팅|소비|콘텐츠|커머스|SNS|인스타그램|틱톡"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "login",
+        "signup"
+      ],
+      "limit": 12
+    },
+    {
+      "name": "SIDE PROJECT",
+      "url": "https://sideproject.co.kr/newsletter",
+      "audience": "uiux",
+      "area": "design",
+      "category": "trend_curation",
+      "sourceRole": "discovery",
+      "publishStatus": "reference_only",
+      "includeLinkPatterns": [
+        "sideproject\\.co\\.kr"
+      ],
+      "includeTitlePatterns": [
+        "인터뷰|사이드 프로젝트|브랜드|디자인|창작|크리에이터|커리어|워크플로"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "login",
+        "signup"
+      ],
+      "limit": 12
+    },
+    {
+      "name": "The Edit - 까탈로그",
+      "url": "http://the-edit.co.kr/newsletter",
+      "audience": "uiux",
+      "area": "service",
+      "category": "trend_curation",
+      "sourceRole": "discovery",
+      "publishStatus": "reference_only",
+      "includeLinkPatterns": [
+        "the-edit\\.co\\.kr"
+      ],
+      "includeTitlePatterns": [
+        "까탈로그|신제품|브랜드|서비스|쇼핑|취향|라이프스타일|커머스|디바이스"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "login",
+        "signup"
+      ],
+      "limit": 12
+    },
+    {
+      "name": "돈 밝히는 여자 Cathy",
+      "url": "https://maily.so/cathyxcash",
+      "audience": "uiux",
+      "area": "service",
+      "category": "trend_curation",
+      "sourceRole": "discovery",
+      "publishStatus": "reference_only",
+      "includeLinkPatterns": [
+        "maily\\.so/cathyxcash"
+      ],
+      "includeTitlePatterns": [
+        "회사|브랜드|재무|비즈니스|커머스|플랫폼|돈|실적|성장"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "login",
+        "signup"
+      ],
+      "limit": 12
     }
   ]
 }

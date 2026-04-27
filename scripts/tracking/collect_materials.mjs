@@ -122,26 +122,6 @@ function usableImageUrl(value = "", pageUrl = "") {
   }
 }
 
-function machineExcludeReason(article) {
-  const text = `${article.source || ""} ${article.title || ""} ${article.content || ""}`.toLowerCase();
-  const title = `${article.title || ""}`.trim().toLowerCase();
-  const rules = [
-    [/^(소개|about|company|뉴스|news|공지|press|보도자료|운영 정책|개인정보처리방침|privacy policy|terms|terms of service|이용약관)$/, "사이트 안내/정책성 페이지"],
-    [/(개인정보처리방침|운영 정책|이용약관|privacy policy|terms of service)/i, "정책/약관 페이지"],
-    [/(super mario galaxy|nintendo and spotify bring nostalgia|spotify brings music and podcast recommendations to claude|claude-integration)/i, "사용자 관심 밖으로 지정된 Spotify 항목"],
-    [/(tag:\s*design systems|figma\.com\/blog\/design-systems\/?$)/i, "Figma 태그/목록 페이지"],
-    [/(showit has two documents|showit-has-two-documents)/i, "사용자 제외 지정 접근성 글"],
-    [/(session timeouts.*accessibility barrier|session-timeouts-accessibility-barrier-authentication-design)/i, "백엔드/API 성격이 강한 인증 UX 글"],
-    [/(autonomous ux auditing agent|state of small business websites|dev\.to\/.*accessibility)/i, "Dev.to 접근성 홍보/저신호 글"],
-    [/(what's new in webgpu|new-in-webgpu-147-148|structured clone for chrome extension messaging|structured-clone-messaging)/i, "이번 타겟과 거리가 먼 Chrome 개발 글"],
-    [/(flutter|dart|ios native|android native|swiftui|jetpack compose|플러터|다트)/i, "웹 UIUX 범위 밖 네이티브/Flutter 글"],
-  ];
-
-  for (const [pattern, reason] of rules) {
-    if (pattern.test(title) || pattern.test(text)) return reason;
-  }
-  return "";
-}
 
 function areaLabel(article) {
   const text = `${article.source || ""} ${article.title || ""} ${article.content || ""}`.toLowerCase();
@@ -216,7 +196,6 @@ function sourceReviewNote(article) {
 }
 
 function collectedArticle(article) {
-  const excludeReason = machineExcludeReason(article);
   const image = usableImageUrl(article.image || article.imageUrl || article.ogImage || "", article.link);
   return {
     title: cleanDisplayText(article.title),
@@ -231,8 +210,8 @@ function collectedArticle(article) {
     roleTags: roleTags(article),
     image,
     summary: shortText(article.content || article.title, 360),
-    machineStatus: excludeReason ? "excluded_by_rule" : "candidate",
-    machineReason: excludeReason || "수집 후보. 채택/보류/제외 판단은 AI 편집 단계에서 원문 확인 후 결정합니다.",
+    machineStatus: "candidate",
+    machineReason: "AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.",
     editorialDecision: "ai_required",
     sourceBasis: {
       discoverySource: article.source || "",
@@ -255,10 +234,8 @@ function uniqueArticles(articles) {
 }
 
 function sortArticles(a, b) {
-  const statusOrder = { candidate: 0, excluded_by_rule: 1 };
   const areaOrder = { Service: 0, Design: 1, DEV: 2 };
-  return (statusOrder[a.machineStatus] ?? 9) - (statusOrder[b.machineStatus] ?? 9)
-    || (areaOrder[a.area] ?? 9) - (areaOrder[b.area] ?? 9)
+  return (areaOrder[a.area] ?? 9) - (areaOrder[b.area] ?? 9)
     || String(b.pubDate || "").localeCompare(String(a.pubDate || ""))
     || String(a.source || "").localeCompare(String(b.source || ""));
 }
@@ -313,13 +290,15 @@ function editorialBriefMarkdown(data) {
     "- `docs/data-collection-strategy.md` 기준으로 후보 발견 출처와 최종 기준 원문을 분리합니다.",
     "- `docs/editorial-style-guide.md` 기준으로 타겟이 궁금해할 정보만 남깁니다.",
     "- 각 후보를 `채택 / 보류 / 제외`로 판단하고 사유를 남깁니다.",
+    "- 1차 편집 후보는 20~30개 사이로 `shortlist-20-30.md`에 정리합니다.",
+    "- 같은 브랜드 후보가 많을 때는 AI 편집 단계에서 독자 가치가 큰 항목 최대 2개만 채택합니다.",
     "- 채택 후보만 최종 `magazine-report.md`로 작성한 뒤 Notion 업로드를 진행합니다.",
     "",
     "## 수집 요약",
     "",
     `- 전체 수집: ${data.articles.length}`,
     `- AI 검토 후보: ${candidates.length}`,
-    `- 기계 규칙 제외: ${excluded.length}`,
+    `- 자동 제외: ${excluded.length}`,
     "",
   ];
 
@@ -331,7 +310,7 @@ function editorialBriefMarkdown(data) {
   }
 
   if (excluded.length) {
-    parts.push("## 기계 규칙으로 제외된 항목", "");
+    parts.push("## 자동 제외된 항목", "");
     excluded.forEach((article, index) => parts.push(articleBrief(article, index)));
   }
 

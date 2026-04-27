@@ -29,6 +29,15 @@ const CATEGORY_LABELS = {
   update: "Update",
   tool: "TOOL",
   data_api: "DATA/API",
+  service: "service",
+  performance: "Performance",
+  accessibility: "Accessibility",
+  browser: "Browser",
+  frontend: "Frontend",
+  ai_dev: "AI/DEV",
+  publishing: "Publishing",
+  ai_design: "AI/Design",
+  pwa: "PWA",
 };
 const AREA_LABELS = {
   service: "Service",
@@ -154,8 +163,8 @@ function hasProperty(properties, names) {
 function propertyText(properties, names, fallback = "") {
   const prop = getProperty(properties, names);
   if (!prop) return fallback;
-  if (prop.type === "title") return plainRichText(prop.title);
-  if (prop.type === "rich_text") return plainRichText(prop.rich_text);
+  if (prop.type === "title") return plainRichText(prop.title) || fallback;
+  if (prop.type === "rich_text") return plainRichText(prop.rich_text) || fallback;
   if (prop.type === "select") return prop.select?.name || fallback;
   if (prop.type === "status") return prop.status?.name || fallback;
   if (prop.type === "url") return prop.url || fallback;

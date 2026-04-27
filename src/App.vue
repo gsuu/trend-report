@@ -1,13 +1,14 @@
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import fallbackReport from "./data/report.example.json";
+import previousReport from "./data/report.json";
 
 const basePath = detectBasePath();
 const route = ref(currentRoute());
-const report = ref(fallbackReport);
+const report = ref(hasMagazineIssues(previousReport) ? previousReport : fallbackReport);
 const magazineCacheKey = "cttd-magazine-report-v1";
 const magazineCacheTtl = 5 * 60 * 1000;
-const magazineLoading = ref(true);
+const magazineLoading = ref(!hasMagazineIssues(report.value));
 const showCurrentWeekOnly = ref(hasCurrentWeekFilter(route.value));
 const listRoute = ref(validListRoute(route.value) ? route.value : "/");
 const shareStatus = ref("");
@@ -33,6 +34,10 @@ function stripBasePath(pathname) {
 
 function currentRoute() {
   return `${stripBasePath(window.location.pathname)}${window.location.search || ""}` || "/";
+}
+
+function hasMagazineIssues(value) {
+  return Array.isArray(value?.issues) && value.issues.length > 0;
 }
 
 function routePath(value) {
@@ -433,7 +438,6 @@ function optimizedImageUrl(value = "", width = 900) {
     return value;
   }
 }
-
 
 function capTallThumbnail(event) {
   const image = event.currentTarget;

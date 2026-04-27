@@ -282,7 +282,7 @@ def source_key(report: Report, issue: Issue) -> str:
 
 
 def issue_properties(report: Report, issue: Issue, schema: dict[str, dict[str, Any]]) -> dict[str, Any]:
-    title = clean_markdown(issue_update_title(issue) or f"{issue.platform} {issue.title}")
+    title = clean_markdown(issue.title or f"{issue.platform} {issue.number}")
     deck = clean_markdown(issue_target_title(issue) or issue_target_description(issue) or f"{issue.platform} {issue.title}")
     properties: dict[str, Any] = {}
     set_property(properties, schema, "title", title)
