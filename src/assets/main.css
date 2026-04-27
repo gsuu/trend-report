@@ -1538,7 +1538,7 @@ main {
 }
 
 .section-prose h3:not(:first-of-type) {
-  margin-top: 38px;
+  margin-top: 58px;
 }
 
 .section-prose .prose-list {
@@ -1897,7 +1897,7 @@ main {
   }
 
   .section-prose h3:not(:first-of-type) {
-    margin-top: 30px;
+    margin-top: 44px;
   }
 
   .section-prose .prose-list li {
