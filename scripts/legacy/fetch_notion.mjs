@@ -21,6 +21,9 @@ const CATEGORY_LABELS = {
   beauty: "beauty",
   book_content: "book",
   global_service_ux: "global",
+  global: "global",
+  platform: "platform",
+  fintech: "fintech",
   ai: "AI",
   html: "HTML",
   css: "CSS",
@@ -48,6 +51,47 @@ const SERVICE_AREA_KEYS = new Set(["service", "services", "service_planning", "p
 const DESIGN_AREA_KEYS = new Set(["design", "web_design", "webdesign", "product_design", "visual", "visual_design", "brand", "branding", "design_system", "ui_design", "디자인", "웹디자인", "브랜드", "비주얼", "디자인시스템"]);
 const DEV_AREA_KEYS = new Set(["dev", "develop", "development", "engineering", "fe", "frontend", "frontend_development", "backend", "web_development", "web_develop", "개발", "프론트", "프론트엔드"]);
 const DESIGN_AI_KEYS = new Set(["ai", "ai디자인", "ai이미지", "chatgpt", "claude", "gemini", "figma_ai", "adobe_firefly", "firefly", "photoshop", "canva", "imagen", "veo", "sora", "image_generation", "이미지생성", "프로토타이핑", "디자인ai"]);
+const GENERIC_SERVICE_CATEGORY_KEYS = new Set(["", "service", "services", "서비스", "web_service", "webservice"]);
+const SERVICE_SUBCATEGORY_ORDER = ["platform", "fintech", "ecommerce", "fashion", "beauty", "book_content", "department_store", "ai"];
+const SERVICE_SUBCATEGORY_KEYWORDS = {
+  platform: new Set([
+    "platform", "플랫폼", "마켓플레이스", "marketplace", "커뮤니티", "community", "로컬", "local",
+    "후기", "리뷰", "review", "콘텐츠", "content", "추천", "탐색", "검색", "온보딩", "계정",
+    "당근", "karrot", "spotify", "오픈서베이", "opensurvey", "서비스플랫폼",
+  ]),
+  fintech: new Set([
+    "fintech", "핀테크", "페이", "pay", "결제", "송금", "정산", "간편결제", "캐시", "포인트",
+    "금융", "은행", "카드", "보험", "대출", "가맹점", "pos", "사장님", "상점", "매장운영",
+    "당근페이", "토스", "토스페이", "토스플레이스", "toss", "panda", "데이터봇", "data_bot", "databot",
+  ]),
+  fashion: new Set([
+    "fashion", "패션", "의류", "룩", "스타일", "스타일링", "키즈", "아울렛", "부티크", "스니커즈",
+    "무신사", "w컨셉", "wconcept", "지그재그", "zigzag", "브랜드", "옷", "신발", "가방", "원피스",
+    "임부복", "수유복", "플러스사이즈", "플러스_사이즈",
+  ]),
+  ecommerce: new Set([
+    "ecommerce", "e_commerce", "커머스", "이커머스", "쇼핑", "구매", "결제", "주문", "배송", "장바구니",
+    "상품", "상품상세", "상품_상세", "거래", "중고거래", "중고", "리세일", "보상판매", "판매", "스토어",
+    "마켓", "홈쇼핑", "멤버십", "쿠폰", "할인", "적립", "환불", "교환", "재고", "큐레이션", "선물",
+    "g마켓", "gmarket", "네이버플러스", "롯데홈쇼핑", "당근페이", "rakuten", "楽天市場",
+  ]),
+  beauty: new Set([
+    "beauty", "뷰티", "화장품", "스킨케어", "메이크업", "피부", "성분", "제형", "향", "헬스",
+    "건강", "건강기능식품", "영양제", "올리브영", "다이소", "무신사뷰티", "무신사_뷰티", "화해",
+    "cosme", "코스메", "바로교환", "바로환불",
+  ]),
+  book_content: new Set([
+    "book", "book_content", "content", "콘텐츠", "도서", "책", "서점", "전자책", "웹소설", "웹툰",
+    "리디", "ridibooks", "밀리의서재", "뷰어", "이어보기", "추천홈",
+  ]),
+  department_store: new Set([
+    "department", "department_store", "백화점", "신세계", "롯데백화점", "현대백화점", "팝업", "오프라인",
+  ]),
+  ai: new Set([
+    "ai", "생성형ai", "챗봇", "대화형", "자연어", "에이전트", "agent", "agents", "agentic", "llm",
+    "추천", "개인화", "자동화", "데이터봇", "data_bot", "databot", "panda", "mcp", "chatgpt", "claude",
+  ]),
+};
 
 export function loadDotenvFiles() {
   for (const envName of [".env.local", ".env"]) {
@@ -124,7 +168,15 @@ function htmlRichText(items = []) {
 }
 
 function normalizeKey(value = "") {
-  return String(value).trim().toLowerCase().replaceAll(/\s+/g, "_").replaceAll("-", "_");
+  return String(value)
+    .trim()
+    .toLowerCase()
+    .replaceAll(/`([^`]+)`/g, "$1")
+    .replaceAll("#", "")
+    .replaceAll(/[\s./-]+/g, "_")
+    .replaceAll(/[^0-9a-z가-힣_]+/g, "_")
+    .replaceAll(/_+/g, "_")
+    .replaceAll(/^_+|_+$/g, "");
 }
 
 function normalizeAreaKey(value = "", tags = [], category = "") {
@@ -148,9 +200,70 @@ function areaLabel(areaKey) {
 }
 
 function normalizeCategoryKey(categoryKey, areaKey, tags = []) {
+  if (categoryKey === "global_service_ux") return "global";
+  if (categoryKey === "ai_dev") return "ai";
   if (areaKey !== "design") return categoryKey;
   const tokens = [categoryKey, ...tags.map((tag) => normalizeKey(tag))];
   return tokens.some((token) => DESIGN_AI_KEYS.has(token)) ? "ai" : categoryKey;
+}
+
+function classificationTokens(values = []) {
+  const tokens = new Set();
+  for (const value of values) {
+    for (const part of String(value || "").split(/[,/|>·\s]+/)) {
+      const token = normalizeKey(part);
+      if (!token) continue;
+      tokens.add(token);
+      for (const segment of token.split("_")) {
+        if (segment) tokens.add(segment);
+      }
+    }
+  }
+  return tokens;
+}
+
+function sectionTextValues(sections = []) {
+  const values = [];
+  for (const section of sections) {
+    values.push(section.title);
+    for (const block of section.blocks || []) values.push(block.html);
+    for (const item of section.itemsHtml || []) values.push(item);
+  }
+  return values;
+}
+
+function inferServiceCategoryKey(rawCategoryKey, fields = {}) {
+  const categoryKey = normalizeKey(rawCategoryKey);
+  if (!GENERIC_SERVICE_CATEGORY_KEYS.has(categoryKey)) return categoryKey || "service";
+
+  const values = [
+    fields.platform,
+    fields.takeawayHtml,
+    fields.deckHtml,
+    fields.sourceTitle,
+    ...(fields.tags || []),
+    ...sectionTextValues(fields.sections || []),
+  ];
+  const tokens = classificationTokens(values);
+  const blob = normalizeKey(values.join(" "));
+  const scores = new Map();
+  for (const [key, keywords] of Object.entries(SERVICE_SUBCATEGORY_KEYWORDS)) {
+    let score = 0;
+    for (const token of tokens) {
+      if (keywords.has(token)) score += 1;
+    }
+    for (const keyword of keywords) {
+      if (keyword && !tokens.has(keyword) && blob.includes(keyword)) score += 1;
+    }
+    if (score) scores.set(key, score);
+  }
+  if (!scores.size) return "service";
+
+  return [...scores.keys()].sort((a, b) => (
+    scores.get(b) - scores.get(a)
+    || (SERVICE_SUBCATEGORY_ORDER.indexOf(a) === -1 ? 99 : SERVICE_SUBCATEGORY_ORDER.indexOf(a))
+      - (SERVICE_SUBCATEGORY_ORDER.indexOf(b) === -1 ? 99 : SERVICE_SUBCATEGORY_ORDER.indexOf(b))
+  ))[0];
 }
 
 function getProperty(properties, names) {
@@ -478,17 +591,20 @@ export async function fetchMagazineReport(options = {}) {
     const tags = propertyTags(properties, ["Tags", "태그"]);
     const rawCategory = propertyText(properties, ["Category", "카테고리", "Subcategory", "소분류", "소카테고리"], "");
     const areaKey = normalizeAreaKey(propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "service"), tags, rawCategory);
-    const categoryKey = normalizeCategoryKey(
-      normalizeKey(rawCategory || (areaKey === "dev" ? "javascript" : "ecommerce")),
-      areaKey,
-      tags,
-    );
     const number = issueNumber(index, properties);
     const date = propertyText(properties, ["Date", "발행날짜", "Published Date", "날짜"], page.created_time || "").slice(0, 10);
     const platform = propertyText(properties, ["Platform", "서비스", "플랫폼", "Brand", "브랜드명"], "CTTD");
     const takeawayHtml = propertyHtml(properties, ["Takeaway", "Title", "제목", "한줄 인사이트"], platform);
     const deckHtml = propertyHtml(properties, ["Deck", "Summary", "요약", "목록 요약", "설명"], "");
     const { sections, blockMeta } = await pageData(notion, page, properties, areaKey);
+    const rawCategoryKey = normalizeCategoryKey(
+      normalizeKey(rawCategory || blockMeta["카테고리"] || (areaKey === "dev" ? "javascript" : "service")),
+      areaKey,
+      tags,
+    );
+    const categoryKey = areaKey === "service"
+      ? inferServiceCategoryKey(rawCategoryKey, { platform, takeawayHtml, deckHtml, sourceTitle: blockMeta["출처"] || "", tags, sections })
+      : rawCategoryKey;
     const resolvedNumber = String(blockMeta["번호"] || number).padStart(2, "0");
     const referenceLinks = referenceLinksFromMeta(blockMeta, properties);
 

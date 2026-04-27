@@ -134,6 +134,8 @@ function areaLabel(article) {
 function categoryLabel(article) {
   const category = normalize(article.category);
   const known = new Set([
+    "platform",
+    "fintech",
     "fashion",
     "ecommerce",
     "department_store",
@@ -171,7 +173,7 @@ function roleTags(article) {
   if (area === "Design") tags.add("웹디자인");
   if (area === "DEV") tags.add("웹DEV");
   if (area !== "DEV" && /(ux|ui|design|브랜드|화면|디자인)/i.test(text)) tags.add("웹디자인");
-  if (["ecommerce", "fashion", "beauty", "department_store", "book_content", "global_service_ux"].includes(category)) tags.add("웹서비스기획");
+  if (["platform", "fintech", "ecommerce", "fashion", "beauty", "department_store", "book_content", "global_service_ux"].includes(category)) tags.add("웹서비스기획");
 
   return [...tags];
 }

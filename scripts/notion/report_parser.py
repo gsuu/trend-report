@@ -32,12 +32,17 @@ CATEGORY_LABELS = {
     "book_content": "book",
     "global_service_ux": "global",
     "ai": "AI",
+    "service": "service",
+    "platform": "platform",
+    "fintech": "fintech",
     "jp_fashion": "fashion",
     "jp_ecommerce": "ecommerce",
 }
 CATEGORY_KEYS = {
     "jp_fashion": "fashion",
     "jp_ecommerce": "ecommerce",
+    "global_service_ux": "global",
+    "ai_dev": "ai",
 }
 
 MAIN_CATEGORY_ORDER = {"service": 0, "design": 1, "dev": 2}
@@ -171,6 +176,67 @@ DESIGN_AI_KEYWORDS = {
     "이미지생성",
     "프로토타이핑",
     "디자인ai",
+}
+GENERIC_SERVICE_CATEGORY_KEYS = {"", "service", "services", "서비스", "web_service", "webservice"}
+SERVICE_SUBCATEGORY_CLASSIFICATION_ORDER = (
+    "platform",
+    "fintech",
+    "ecommerce",
+    "fashion",
+    "beauty",
+    "book_content",
+    "department_store",
+    "ai",
+)
+SERVICE_SUBCATEGORY_LABELS = {
+    "platform": "platform",
+    "fintech": "fintech",
+    "ecommerce": "ecommerce",
+    "fashion": "fashion",
+    "beauty": "beauty",
+    "book_content": "book",
+    "department_store": "department",
+    "ai": "AI",
+    "service": "service",
+}
+SERVICE_SUBCATEGORY_KEYWORDS = {
+    "platform": {
+        "platform", "플랫폼", "마켓플레이스", "marketplace", "커뮤니티", "community", "로컬", "local",
+        "후기", "리뷰", "review", "콘텐츠", "content", "추천", "탐색", "검색", "온보딩", "계정",
+        "당근", "karrot", "spotify", "오픈서베이", "opensurvey", "서비스플랫폼",
+    },
+    "fintech": {
+        "fintech", "핀테크", "페이", "pay", "결제", "송금", "정산", "간편결제", "캐시", "포인트",
+        "금융", "은행", "카드", "보험", "대출", "가맹점", "pos", "사장님", "상점", "매장운영",
+        "당근페이", "토스", "토스페이", "토스플레이스", "toss", "panda", "데이터봇", "data_bot", "databot",
+    },
+    "fashion": {
+        "fashion", "패션", "의류", "룩", "스타일", "스타일링", "키즈", "아울렛", "부티크", "스니커즈",
+        "무신사", "w컨셉", "wconcept", "지그재그", "zigzag", "브랜드", "옷", "신발", "가방", "원피스",
+        "임부복", "수유복", "플러스사이즈", "플러스_사이즈",
+    },
+    "ecommerce": {
+        "ecommerce", "e_commerce", "커머스", "이커머스", "쇼핑", "구매", "결제", "주문", "배송", "장바구니",
+        "상품", "상품상세", "상품_상세", "거래", "중고거래", "중고", "리세일", "보상판매", "판매", "스토어",
+        "마켓", "홈쇼핑", "멤버십", "쿠폰", "할인", "적립", "환불", "교환", "재고", "큐레이션", "선물",
+        "g마켓", "gmarket", "네이버플러스", "롯데홈쇼핑", "당근페이", "rakuten", "楽天市場",
+    },
+    "beauty": {
+        "beauty", "뷰티", "화장품", "스킨케어", "메이크업", "피부", "성분", "제형", "향", "헬스",
+        "건강", "건강기능식품", "영양제", "올리브영", "다이소", "무신사뷰티", "무신사_뷰티", "화해",
+        "cosme", "코스메", "바로교환", "바로환불",
+    },
+    "book_content": {
+        "book", "book_content", "content", "콘텐츠", "도서", "책", "서점", "전자책", "웹소설", "웹툰",
+        "리디", "ridibooks", "밀리의서재", "뷰어", "이어보기", "추천홈",
+    },
+    "department_store": {
+        "department", "department_store", "백화점", "신세계", "롯데백화점", "현대백화점", "팝업", "오프라인",
+    },
+    "ai": {
+        "ai", "생성형ai", "챗봇", "대화형", "자연어", "에이전트", "agent", "agents", "agentic", "llm",
+        "추천", "개인화", "자동화", "데이터봇", "data_bot", "databot", "panda", "mcp", "chatgpt", "claude",
+    },
 }
 DEVELOP_DETECTION_EXCLUDED_KEYWORDS = {"ai", "llm"}
 DEVELOP_DETECTION_KEYS = DEVELOP_CATEGORY_KEYS.union(
@@ -534,6 +600,9 @@ def issue_tokens(issue: Issue) -> set[str]:
         issue_deck(issue),
     ]
     values.extend(issue.tags)
+    for section_title, section_items in issue.sections.items():
+        values.append(section_title)
+        values.extend(section_items)
 
     tokens: set[str] = set()
     for value in values:
@@ -544,6 +613,52 @@ def issue_tokens(issue: Issue) -> set[str]:
             tokens.add(token)
             tokens.update(segment for segment in token.split("_") if segment)
     return tokens
+
+
+def issue_classification_blob(issue: Issue) -> str:
+    values = [
+        issue.area,
+        issue.category,
+        issue.platform,
+        issue.title,
+        issue.meta.get("카테고리", ""),
+        issue.meta.get("출처", ""),
+        issue_deck(issue),
+    ]
+    values.extend(issue.tags)
+    for section_title, section_items in issue.sections.items():
+        values.append(section_title)
+        values.extend(section_items)
+    return normalize_category_token(" ".join(values))
+
+
+def infer_service_category_key(issue: Issue, raw_category: str) -> str:
+    normalized_raw_category = normalize_category_token(raw_category)
+    if normalized_raw_category not in GENERIC_SERVICE_CATEGORY_KEYS:
+        return CATEGORY_KEYS.get(normalized_raw_category, normalized_raw_category)
+
+    tokens = issue_tokens(issue)
+    blob = issue_classification_blob(issue)
+    scores: dict[str, int] = {}
+    for category_key, keywords in SERVICE_SUBCATEGORY_KEYWORDS.items():
+        matches = tokens.intersection(keywords)
+        score = len(matches)
+        score += sum(1 for keyword in keywords if keyword and keyword in blob and keyword not in matches)
+        if score:
+            scores[category_key] = score
+
+    if not scores:
+        return "service"
+
+    return sorted(
+        scores,
+        key=lambda category_key: (
+            -scores[category_key],
+            SERVICE_SUBCATEGORY_CLASSIFICATION_ORDER.index(category_key)
+            if category_key in SERVICE_SUBCATEGORY_CLASSIFICATION_ORDER
+            else 99,
+        ),
+    )[0]
 
 
 def is_develop_issue(issue: Issue) -> bool:
@@ -594,7 +709,7 @@ def issue_category_key(issue: Issue) -> str:
         return CATEGORY_KEYS.get(normalized_raw_category, normalized_raw_category) or "global"
 
     if area_key != "dev":
-        return CATEGORY_KEYS.get(normalized_raw_category, normalized_raw_category) or area_key
+        return infer_service_category_key(issue, raw_category) or area_key
 
     if normalized_raw_category:
         return CATEGORY_KEYS.get(normalized_raw_category, normalized_raw_category)
@@ -1366,9 +1481,19 @@ def render_index(report: Report) -> str:
           const subcategoryMap = new Map();
           const devOrder = {json.dumps({key: index for index, key in enumerate(DEVELOP_SUBCATEGORY_ORDER)})};
           const devLabels = {json.dumps({key: DEVELOP_SUBCATEGORY_LABELS[key] for key in DEVELOP_SUBCATEGORY_ORDER})};
+          const serviceOrder = {json.dumps({key: index for index, key in enumerate(SERVICE_SUBCATEGORY_CLASSIFICATION_ORDER + ("service",))})};
+          const serviceLabels = {json.dumps(SERVICE_SUBCATEGORY_LABELS)};
           const designOrder = {json.dumps({key: index for index, key in enumerate(DESIGN_SUBCATEGORY_ORDER)})};
           const designLabels = {json.dumps(DESIGN_SUBCATEGORY_LABELS)};
-          if (this.activeCategory.key === "dev") {{
+          if (this.activeCategory.key === "service") {{
+            Object.keys(serviceOrder).forEach((key) => {{
+              subcategoryMap.set(key, {{
+                key,
+                label: serviceLabels[key] || key,
+                count: 0,
+              }});
+            }});
+          }} else if (this.activeCategory.key === "dev") {{
             Object.keys(devOrder).forEach((key) => {{
               subcategoryMap.set(key, {{
                 key,
@@ -1397,6 +1522,9 @@ def render_index(report: Report) -> str:
             subcategoryMap.get(key).count += 1;
           }});
           const subcategories = Array.from(subcategoryMap.values());
+          if (this.activeCategory.key === "service") {{
+            return subcategories.sort((a, b) => (serviceOrder[a.key] ?? 99) - (serviceOrder[b.key] ?? 99));
+          }}
           if (this.activeCategory.key === "dev") {{
             return subcategories.sort((a, b) => (devOrder[a.key] ?? 99) - (devOrder[b.key] ?? 99));
           }}

@@ -228,8 +228,20 @@ const categoryIssues = computed(() => activeCategoryKey.value
 
 const subcategories = computed(() => {
   const counts = new Map();
+  const serviceOrder = { platform: 0, fintech: 1, ecommerce: 2, fashion: 3, beauty: 4, book_content: 5, department_store: 6, ai: 7, service: 8 };
+  const serviceLabels = { platform: "platform", fintech: "fintech", ecommerce: "ecommerce", fashion: "fashion", beauty: "beauty", book_content: "book", department_store: "department", ai: "AI", service: "service" };
   const designOrder = { ai: 0, global: 1 };
   const designLabels = { ai: "AI", global: "global" };
+  if (activeCategoryKey.value === "service") {
+    for (const [key, order] of Object.entries(serviceOrder)) {
+      counts.set(key, {
+        key,
+        order,
+        label: serviceLabels[key] || key,
+        count: 0,
+      });
+    }
+  }
   if (activeCategoryKey.value === "design") {
     for (const [key, order] of Object.entries(designOrder)) {
       counts.set(key, {
