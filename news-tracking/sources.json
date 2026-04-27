@@ -1,0 +1,318 @@
+{
+  "newsletters": [
+    {
+      "name": "Frontend Focus",
+      "rss": "https://frontendfoc.us/rss",
+      "audience": "dev",
+      "area": "dev",
+      "category": "javascript"
+    },
+    {
+      "name": "CSS Weekly",
+      "rss": "https://css-weekly.com/feed/",
+      "audience": "dev",
+      "area": "dev",
+      "category": "css"
+    },
+    {
+      "name": "JavaScript Weekly",
+      "rss": "https://javascriptweekly.com/rss",
+      "audience": "dev",
+      "area": "dev",
+      "category": "javascript"
+    },
+    {
+      "name": "Spotify Newsroom",
+      "rss": "https://newsroom.spotify.com/feed/",
+      "audience": "uiux",
+      "area": "service",
+      "category": "global_service_ux"
+    }
+  ],
+  "blogs": [
+    {
+      "name": "신세계그룹 뉴스룸",
+      "rss": "https://www.shinsegaegroupnewsroom.com/feed/",
+      "audience": "uiux",
+      "area": "service",
+      "category": "ecommerce"
+    },
+    {
+      "name": "토스 테크",
+      "rss": "https://toss.tech/rss.xml",
+      "audience": "uiux",
+      "area": "design",
+      "category": "global_service_ux"
+    },
+    {
+      "name": "오픈서베이 블로그",
+      "rss": "https://blog.opensurvey.co.kr/feed/",
+      "audience": "uiux",
+      "area": "service",
+      "category": "global_service_ux"
+    },
+    {
+      "name": "OpenAI",
+      "rss": "https://openai.com/news/rss.xml",
+      "audience": "uiux",
+      "area": "design",
+      "category": "ai"
+    },
+    {
+      "name": "OpenAI Blog",
+      "rss": "https://openai.com/blog/rss.xml",
+      "audience": "uiux",
+      "area": "design",
+      "category": "ai"
+    },
+    {
+      "name": "Google Gemini",
+      "rss": "https://blog.google/products/gemini/rss/",
+      "audience": "uiux",
+      "area": "design",
+      "category": "ai"
+    },
+    {
+      "name": "Google AI",
+      "rss": "https://blog.google/technology/ai/rss/",
+      "audience": "uiux",
+      "area": "design",
+      "category": "ai"
+    },
+    {
+      "name": "Figma Releases",
+      "rss": "https://figmareleases.blogspot.com/feeds/posts/default",
+      "audience": "uiux",
+      "area": "design",
+      "category": "ai"
+    },
+    {
+      "name": "Adobe Blog",
+      "rss": "https://blog.adobe.com/feed.xml",
+      "audience": "uiux",
+      "area": "design",
+      "category": "ai"
+    },
+    {
+      "name": "WebKit Blog",
+      "rss": "https://webkit.org/feed/",
+      "audience": "dev",
+      "area": "dev",
+      "category": "html"
+    },
+    {
+      "name": "Into Design Systems",
+      "url": "https://www.intodesignsystems.com/blog",
+      "audience": "uiux",
+      "area": "design",
+      "category": "design_system",
+      "includeLinkPatterns": [
+        "intodesignsystems\\.com/blog/"
+      ],
+      "includeTitlePatterns": [
+        "design system|design systems|ai|figma|token|designer|workflow|component|documentation|디자인|컴포넌트|문서화|워크플로"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "login",
+        "signup"
+      ],
+      "limit": 12
+    },
+    {
+      "name": "Figma Blog - Design Systems",
+      "url": "https://www.figma.com/blog/design-systems/",
+      "audience": "uiux",
+      "area": "design",
+      "category": "design_system",
+      "includeLinkPatterns": [
+        "figma\\.com/blog/"
+      ],
+      "includeTitlePatterns": [
+        "design system|design systems|ai|component|documentation|workflow|token|디자인|컴포넌트|문서화|워크플로"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "/tag/",
+        "/authors/",
+        "/blog/ai/?$",
+        "/blog/brainstorming/?$",
+        "/blog/dev-mode/?$",
+        "/blog/figma-make/?$",
+        "/blog/figma-mcp/?$"
+      ],
+      "limit": 12
+    },
+    {
+      "name": "Figma Blog - DEV",
+      "url": "https://www.figma.com/blog/dev-mode/",
+      "audience": "dev",
+      "area": "dev",
+      "category": "tool",
+      "includeLinkPatterns": [
+        "figma\\.com/blog/"
+      ],
+      "includeTitlePatterns": [
+        "mcp|model context protocol|dev mode|code connect|design to code|handoff|developer|component|workflow|figma make|개발|핸드오프|컴포넌트|워크플로"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "/tag/",
+        "/authors/"
+      ],
+      "limit": 12
+    },
+    {
+      "name": "Figma Blog - MCP",
+      "url": "https://www.figma.com/blog/figma-mcp/",
+      "audience": "dev",
+      "area": "dev",
+      "category": "tool",
+      "includeLinkPatterns": [
+        "figma\\.com/blog/"
+      ],
+      "includeTitlePatterns": [
+        "mcp|model context protocol|dev mode|code connect|design to code|handoff|developer|component|workflow|개발|핸드오프|컴포넌트|워크플로"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "/tag/",
+        "/authors/"
+      ],
+      "limit": 12
+    },
+    {
+      "name": "Smashing Magazine",
+      "rss": "https://www.smashingmagazine.com/feed/",
+      "audience": "dev",
+      "area": "dev",
+      "category": "web_accessibility"
+    },
+    {
+      "name": "CSS-Tricks",
+      "rss": "https://css-tricks.com/feed/",
+      "audience": "dev",
+      "area": "dev",
+      "category": "css"
+    },
+    {
+      "name": "Chrome Developers",
+      "rss": "https://developer.chrome.com/static/blog/feed.xml",
+      "audience": "dev",
+      "area": "dev",
+      "category": "html"
+    },
+    {
+      "name": "MDN Blog",
+      "rss": "https://developer.mozilla.org/en-US/blog/rss.xml",
+      "audience": "dev",
+      "area": "dev",
+      "category": "html"
+    },
+    {
+      "name": "Astro Blog",
+      "rss": "https://astro.build/rss.xml",
+      "audience": "dev",
+      "area": "dev",
+      "category": "html"
+    },
+    {
+      "name": "Web.dev",
+      "rss": "https://web.dev/feed.xml",
+      "audience": "dev",
+      "area": "dev",
+      "category": "html"
+    },
+    {
+      "name": "Dev.to - Accessibility",
+      "rss": "https://dev.to/feed/tag/a11y",
+      "audience": "dev",
+      "area": "dev",
+      "category": "web_accessibility"
+    }
+  ],
+  "podcasts": [
+    {
+      "name": "Syntax.fm",
+      "rss": "https://feed.syntax.fm/rss",
+      "audience": "dev",
+      "area": "dev",
+      "category": "javascript"
+    },
+    {
+      "name": "ShopTalk Show",
+      "rss": "https://shoptalkshow.com/feed/podcast/",
+      "audience": "dev",
+      "area": "dev",
+      "category": "javascript"
+    },
+    {
+      "name": "The Changelog",
+      "rss": "https://changelog.com/podcast/feed",
+      "audience": "dev",
+      "area": "dev",
+      "category": "tool"
+    }
+  ],
+  "scrapers": [
+    {
+      "name": "무신사 뉴스룸",
+      "url": "https://newsroom.musinsa.com/news",
+      "audience": "uiux",
+      "area": "service",
+      "category": "fashion",
+      "includeLinkPatterns": [
+        "newsroom\\.musinsa\\.com/newsroom-menu/"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "/category",
+        "/tag",
+        "2021-0603-2"
+      ],
+      "excludeTitlePatterns": [
+        "뉴스룸이 오픈했습니다|Newsroom"
+      ],
+      "limit": 20
+    },
+    {
+      "name": "카카오스타일 파트너라운지",
+      "url": "https://partner.kakaostyle.com/",
+      "audience": "uiux",
+      "area": "service",
+      "category": "ecommerce",
+      "includeLinkPatterns": [
+        "partner\\.kakaostyle\\.com"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "login",
+        "signup"
+      ],
+      "limit": 20
+    },
+    {
+      "name": "PUBLY",
+      "url": "https://publy.co/",
+      "audience": "uiux",
+      "area": "service",
+      "category": "global_service_ux",
+      "includeLinkPatterns": [
+        "publy\\.co/(content|article|posts?)/"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "login",
+        "signup"
+      ],
+      "limit": 20
+    }
+  ]
+}

@@ -2,12 +2,17 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
+import hmac
 import html
 import json
 import os
 import re
 import smtplib
 import ssl
+import subprocess
+import urllib.parse
+import urllib.request
 from email.message import EmailMessage
 from pathlib import Path
 
@@ -18,13 +23,14 @@ SITE_MARK_FALLBACK_COLOR = "#f9ffc1"
 SITE_MARK_BACKGROUND = f"background:{SITE_MARK_FALLBACK_COLOR};background:{SITE_MARK_COLOR}"
 SITE_MARK_BORDER_LEFT = f"border-left:4px solid {SITE_MARK_FALLBACK_COLOR};border-left:4px solid {SITE_MARK_COLOR}"
 TEST_RECIPIENT = "jisuk@cttd.co.kr"
-UIUX_FINAL_RECIPIENT = "cxd@cttd.co.kr"
-DEV_FINAL_SUBSCRIBERS_PATH = ROOT / "config" / "dev-final-subscribers.txt"
 PRODUCTION_SITE_URL = "https://cttd-magazine.vercel.app"
 EMAIL_LOGO_ASSET_NAME = "cttd-logo-email.png"
 EMAIL_LOGO_CONTENT_ID = "cttd-logo-email@cttd"
 NEWSLETTER_TEMPLATE_PATH = ROOT / "templates" / "newsletter.html"
 REPORT_DATA_PATH = ROOT / "src" / "data" / "report.json"
+SUBSCRIBER_EMAIL_PROPERTIES = ("Email", "이메일", "이름", "Name")
+SUBSCRIBER_STATUS_PROPERTIES = ("Status", "상태")
+SUBSCRIBER_AUDIENCE_PROPERTIES = ("Audience", "구독분야", "뉴스레터")
 NEWSLETTER_SECTION_PATTERN = re.compile(
     r"<!-- section:(?P<name>[a-z0-9_-]+) -->\s*(?P<body>.*?)\s*<!-- /section:(?P=name) -->",
     re.DOTALL,
@@ -319,8 +325,8 @@ def load_env_files() -> None:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Markdown 리포트를 뉴스레터 HTML로 만들고 메일로 발송합니다.")
-    parser.add_argument("report", help="발송할 Markdown 리포트 경로")
+    parser = argparse.ArgumentParser(description="현재 Notion DB 데이터를 뉴스레터 HTML로 만들고 메일로 발송합니다.")
+    parser.add_argument("report", nargs="?", help="호환용 인자입니다. 메일 내용은 항상 현재 Notion DB 기준으로 생성합니다.")
     parser.add_argument("--subject", help="메일 제목. 없으면 리포트 제목을 사용합니다.")
     parser.add_argument("--to", action="append", default=[], help="수신자 이메일. 쉼표 구분 또는 여러 번 입력 가능")
     parser.add_argument("--subscribers", help="수신자 목록 txt 파일")
@@ -372,9 +378,10 @@ def read_subscribers(path: str | None) -> list[str]:
 
 
 def final_recipients_for_audience(audience: str) -> list[str]:
-    if normalize_audience(audience) == "dev":
-        return read_subscribers(str(DEV_FINAL_SUBSCRIBERS_PATH))
-    return [UIUX_FINAL_RECIPIENT]
+    notion_subscribers = notion_newsletter_subscribers(audience)
+    if not notion_subscribers:
+        raise SystemExit("최종 발송 수신자는 Notion 구독자 DB에서만 가져옵니다. 활성 구독자가 없습니다.")
+    return notion_subscribers
 
 
 def split_recipients(values: list[str]) -> list[str]:
@@ -382,6 +389,131 @@ def split_recipients(values: list[str]) -> list[str]:
     for value in values:
         emails.extend(email.strip() for email in value.split(",") if email.strip())
     return emails
+
+
+def normalize_email(value: str) -> str:
+    return value.strip().lower()
+
+
+def unique_emails(values: list[str]) -> list[str]:
+    return sorted({normalize_email(value) for value in values if normalize_email(value)})
+
+
+def unsubscribe_secret() -> str:
+    return os.getenv("NEWSLETTER_UNSUBSCRIBE_SECRET", os.getenv("CRON_SECRET", ""))
+
+
+def unsubscribe_url(email: str, magazine_base_url: str | None) -> str:
+    secret = unsubscribe_secret()
+    normalized_email = normalize_email(email)
+    if not secret or not normalized_email:
+        return ""
+
+    signature = hmac.new(secret.encode("utf-8"), normalized_email.encode("utf-8"), hashlib.sha256).hexdigest()
+    base_url = (magazine_base_url or os.getenv("SITE_URL", PRODUCTION_SITE_URL)).rstrip("/")
+    query = urllib.parse.urlencode({"email": normalized_email, "sig": signature})
+    return f"{base_url}/api/unsubscribe?{query}"
+
+
+def notion_request(path: str, payload: dict[str, object] | None = None) -> dict[str, object]:
+    token = os.getenv("NOTION_TOKEN", os.getenv("NOTION_API_KEY", ""))
+    if not token:
+        return {}
+
+    data = json.dumps(payload).encode("utf-8") if payload is not None else None
+    request = urllib.request.Request(
+        f"https://api.notion.com/v1/{path}",
+        data=data,
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Notion-Version": "2022-06-28",
+            "Content-Type": "application/json",
+        },
+        method="POST" if payload is not None else "GET",
+    )
+    with urllib.request.urlopen(request, timeout=20) as response:
+        return json.loads(response.read().decode("utf-8"))
+
+
+def notion_property_text(properties: dict[str, object], names: tuple[str, ...]) -> str:
+    prop = next((properties[name] for name in names if name in properties), None)
+    if not isinstance(prop, dict):
+        return ""
+
+    prop_type = prop.get("type")
+    if prop_type == "title":
+        return "".join(item.get("plain_text", "") for item in prop.get("title", []) if isinstance(item, dict)).strip()
+    if prop_type == "rich_text":
+        return "".join(item.get("plain_text", "") for item in prop.get("rich_text", []) if isinstance(item, dict)).strip()
+    if prop_type == "email":
+        return str(prop.get("email") or "").strip()
+    if prop_type == "select":
+        selected = prop.get("select")
+        return str(selected.get("name", "") if isinstance(selected, dict) else "").strip()
+    return ""
+
+
+def notion_property_tags(properties: dict[str, object], names: tuple[str, ...]) -> list[str]:
+    prop = next((properties[name] for name in names if name in properties), None)
+    if isinstance(prop, dict) and prop.get("type") == "multi_select":
+        return [str(item.get("name", "")).strip() for item in prop.get("multi_select", []) if isinstance(item, dict) and item.get("name")]
+    text = notion_property_text(properties, names)
+    return [item.strip() for item in text.split(",") if item.strip()]
+
+
+def subscriber_database_id() -> str:
+    database_id = os.getenv("NEWSLETTER_SUBSCRIBERS_DATABASE_ID", "").strip()
+    if not database_id:
+        raise SystemExit("NEWSLETTER_SUBSCRIBERS_DATABASE_ID 환경변수가 필요합니다.")
+    return database_id
+
+
+def subscriber_audience_matches(audience: str, values: list[str]) -> bool:
+    if not values:
+        return True
+    normalized_values = {normalize_develop_token(value) for value in values}
+    expected = {"dev", "develop", "development", "frontend"} if normalize_audience(audience) == "dev" else {
+        "uiux",
+        "ui_ux",
+        "service",
+        "design",
+        "service_design",
+        "general",
+    }
+    return bool(normalized_values.intersection(expected))
+
+
+def notion_newsletter_subscribers(audience: str) -> list[str]:
+    if not os.getenv("NOTION_TOKEN", os.getenv("NOTION_API_KEY", "")):
+        return []
+
+    database_id = subscriber_database_id()
+    pages: list[dict[str, object]] = []
+    cursor = None
+    while True:
+        payload: dict[str, object] = {"page_size": 100}
+        if cursor:
+            payload["start_cursor"] = cursor
+        data = notion_request(f"databases/{database_id}/query", payload)
+        pages.extend(page for page in data.get("results", []) if isinstance(page, dict))
+        cursor = data.get("next_cursor") if data.get("has_more") else None
+        if not cursor:
+            break
+
+    emails: list[str] = []
+    for page in pages:
+        properties = page.get("properties", {})
+        if not isinstance(properties, dict):
+            continue
+        status = normalize_develop_token(notion_property_text(properties, SUBSCRIBER_STATUS_PROPERTIES) or "active")
+        if status in {"unsubscribed", "inactive", "해지"}:
+            continue
+        if not subscriber_audience_matches(audience, notion_property_tags(properties, SUBSCRIBER_AUDIENCE_PROPERTIES)):
+            continue
+        email = normalize_email(notion_property_text(properties, SUBSCRIBER_EMAIL_PROPERTIES))
+        if email:
+            emails.append(email)
+    return unique_emails(emails)
 
 
 def extract_title(markdown: str, fallback: str) -> str:
@@ -484,6 +616,95 @@ def load_report_issue_index() -> dict[str, dict[str, object]]:
         if source_url:
             issue_index[source_url] = issue
     return issue_index
+
+
+def fetch_current_notion_report() -> dict[str, object]:
+    command = ["npm.cmd" if os.name == "nt" else "npm", "run", "fetch:notion"]
+    try:
+        subprocess.run(command, cwd=ROOT, check=True)
+    except FileNotFoundError as exc:
+        raise SystemExit("Notion 데이터를 가져오려면 npm 실행 파일이 필요합니다.") from exc
+    except subprocess.CalledProcessError as exc:
+        raise SystemExit(f"Notion 데이터 동기화에 실패했습니다: {' '.join(command)}") from exc
+
+    if not REPORT_DATA_PATH.exists():
+        raise SystemExit("Notion 데이터 파일을 찾지 못했습니다: src/data/report.json")
+
+    try:
+        payload = json.loads(REPORT_DATA_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SystemExit("Notion 데이터 JSON을 읽지 못했습니다.") from exc
+
+    if not isinstance(payload, dict):
+        raise SystemExit("Notion 데이터 JSON 형식이 올바르지 않습니다.")
+    return payload
+
+
+def section_text_summary(sections: object, limit: int = 128) -> str:
+    if not isinstance(sections, list):
+        return ""
+    parts: list[str] = []
+    for section in sections:
+        if not isinstance(section, dict):
+            continue
+        title = str(section.get("title") or "")
+        if title not in {"매거진 인사이트", "인사이트"}:
+            continue
+        blocks = section.get("blocks")
+        if not isinstance(blocks, list):
+            continue
+        for block in blocks:
+            if not isinstance(block, dict):
+                continue
+            kind = str(block.get("kind") or "")
+            if kind not in {"paragraph", "quote"}:
+                continue
+            text = html_to_plain_text(str(block.get("html") or ""))
+            if text:
+                parts.append(text)
+            if len(parts) >= 2:
+                break
+        if parts:
+            break
+    return trim_newsletter_summary(parts, limit)
+
+
+def notion_report_items(report: dict[str, object], audience: str) -> list[dict[str, object]]:
+    audience = normalize_audience(audience)
+    raw_issues = report.get("issues", [])
+    if not isinstance(raw_issues, list):
+        return []
+
+    items: list[dict[str, object]] = []
+    for issue in raw_issues:
+        if not isinstance(issue, dict):
+            continue
+        tags = [str(tag) for tag in issue.get("tags", [])] if isinstance(issue.get("tags"), list) else []
+        categories = [
+            str(issue.get("areaKey") or issue.get("area") or ""),
+            str(issue.get("categoryKey") or issue.get("category") or ""),
+            str(issue.get("platform") or ""),
+            html_to_plain_text(str(issue.get("takeawayHtml") or "")),
+            html_to_plain_text(str(issue.get("deckHtml") or "")),
+        ]
+        if not should_include_issue_for_audience(categories, tags, audience):
+            continue
+
+        item = {
+            "number": str(issue.get("number") or len(items) + 1).zfill(2),
+            "platform": str(issue.get("platform") or "CTTD"),
+            "tags": tags,
+            "area": str(issue.get("area") or issue.get("areaKey") or ""),
+            "category": str(issue.get("categoryKey") or issue.get("category") or ""),
+            "headline": html_to_plain_text(str(issue.get("takeawayHtml") or "")),
+            "description": html_to_plain_text(str(issue.get("deckHtml") or "")),
+            "detailSummary": section_text_summary(issue.get("sections")),
+            "sourceUrl": str(issue.get("sourceUrl") or ""),
+        }
+        if audience == "dev":
+            item["audienceCategory"] = develop_subcategory_label(categories, tags)
+        items.append(item)
+    return items
 
 
 def apply_report_issue_content(items: list[dict[str, object]]) -> list[dict[str, object]]:
@@ -1259,7 +1480,10 @@ def render_newsletter_item(
     description = str(item.get("description") or "").strip()
     detail_summary = str(item.get("detailSummary") or "").strip()
     title = f"[{platform}] {headline}" if headline else f"[{platform}]"
-    href = html.escape(magazine_href(report_path, number, magazine_base_url), quote=True)
+    raw_href = str(item.get("externalUrl") or "")
+    if not raw_href:
+        raw_href = magazine_href(report_path, number, magazine_base_url)
+    href = html.escape(raw_href, quote=True)
     tags = "".join(
         f'<span style="display:inline-block;margin:0 5px 5px 0;padding:4px 7px;{SITE_MARK_BACKGROUND};color:#111111;font-size:11px;line-height:1.2;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">'
         f"#{html.escape(str(tag))}"
@@ -1352,6 +1576,7 @@ def render_newsletter(
     magazine_base_url: str | None = None,
     audience: str = "general",
     items: list[dict[str, object]] | None = None,
+    recipient_email: str = "",
 ) -> str:
     audience = normalize_audience(audience)
     templates = load_newsletter_template_sections()
@@ -1388,8 +1613,18 @@ def render_newsletter(
             "DISPLAY_TITLE": display_title,
             "DESCRIPTION": description,
             "BODY": body,
-            "FOOTER": "이 메일은 CTTD Newsletter 시스템에서 발송되었습니다.",
+            "FOOTER": newsletter_footer_html(recipient_email, magazine_base_url),
         },
+    )
+
+
+def newsletter_footer_html(recipient_email: str, magazine_base_url: str | None) -> str:
+    link = unsubscribe_url(recipient_email, magazine_base_url)
+    if not link:
+        return "이 메일은 CTTD Newsletter 시스템에서 발송되었습니다."
+    return (
+        "이 메일은 CTTD Newsletter 시스템에서 발송되었습니다. "
+        f'<a href="{html.escape(link, quote=True)}" style="color:#777777;text-decoration:underline;text-underline-offset:3px;">구독 해지</a>'
     )
 
 
@@ -1406,6 +1641,7 @@ def newsletter_plain_text(
     magazine_base_url: str | None,
     audience: str = "general",
     items: list[dict[str, object]] | None = None,
+    recipient_email: str = "",
 ) -> str:
     audience = normalize_audience(audience)
     lines = [title, ""]
@@ -1422,7 +1658,9 @@ def newsletter_plain_text(
         description = str(item.get("description") or "").strip()
         item_title = f"[{platform}] {headline}" if headline else f"[{platform}]"
         tags = " ".join(f"#{tag}" for tag in item["tags"])  # type: ignore[index]
-        href = magazine_href(report_path, str(item["number"]), magazine_base_url)
+        href = str(item.get("externalUrl") or "")
+        if not href:
+            href = magazine_href(report_path, str(item["number"]), magazine_base_url)
         lines.append(f"{display_number:02d}. {item_title}")
         if area:
             lines.append(area)
@@ -1445,6 +1683,10 @@ def newsletter_plain_text(
     else:
         for display_number, item in enumerate(items, start=1):
             append_item(item, display_number)
+
+    unsubscribe_link = unsubscribe_url(recipient_email, magazine_base_url)
+    if unsubscribe_link:
+        lines.append(f"구독 해지: {unsubscribe_link}")
 
     return "\n".join(lines)
 
@@ -1476,11 +1718,6 @@ def enforce_send_stage(args: argparse.Namespace, recipients: list[str], magazine
         return
 
     if args.stage == "preview":
-        if UIUX_FINAL_RECIPIENT in recipients:
-            raise SystemExit(
-                f"{UIUX_FINAL_RECIPIENT} UIUX 최종 발송은 --stage final --approved 조합에서만 가능합니다. "
-                "먼저 --stage test로 테스트 메일을 보내고 확인을 받으세요."
-            )
         return
 
     if magazine_base_url.rstrip("/") != PRODUCTION_SITE_URL:
@@ -1494,9 +1731,7 @@ def enforce_send_stage(args: argparse.Namespace, recipients: list[str], magazine
             raise SystemExit("최종 발송에는 테스트 메일 확인 후 --approved를 명시해야 합니다.")
         expected_recipients = final_recipients_for_audience(args.audience)
         if recipients != expected_recipients:
-            if normalize_audience(args.audience) == "dev":
-                raise SystemExit(f"Dev 최종 발송 수신자는 {DEV_FINAL_SUBSCRIBERS_PATH} 목록만 허용됩니다.")
-            raise SystemExit(f"UIUX 최종 발송 수신자는 {UIUX_FINAL_RECIPIENT}만 허용됩니다.")
+            raise SystemExit("최종 발송 수신자는 Notion 구독자 DB의 활성 구독자 목록과 일치해야 합니다.")
 
 
 def smtp_config() -> dict[str, str | int | bool]:
@@ -1555,10 +1790,11 @@ def main() -> None:
     load_env_files()
 
     args = parse_args()
-    report_path = Path(args.report)
-    markdown = report_path.read_text(encoding="utf-8")
-    validate_dev_article_headings(report_path, markdown)
-    title = args.subject or audience_title(extract_title(markdown, report_path.stem), args.audience)
+    notion_report = fetch_current_notion_report()
+    slug = str(notion_report.get("slug") or "notion-current")
+    report_path = Path(args.report) if args.report else Path(f"{slug}-notion.md")
+    markdown = f"# {notion_report.get('title') or 'CTTD Trend Magazine'}\n"
+    title = args.subject or audience_title(str(notion_report.get("title") or "CTTD Trend Magazine"), args.audience)
     subject = args.subject or audience_subject(args.audience)
     magazine_base_url = resolve_magazine_base_url(args.magazine_base_url, args.stage)
 
@@ -1568,7 +1804,7 @@ def main() -> None:
             "--magazine-base-url 또는 SITE_URL을 설정하세요."
         )
 
-    newsletter_items = parse_newsletter_items(markdown, args.audience)
+    newsletter_items = notion_report_items(notion_report, args.audience)
     if args.send and not newsletter_items:
         raise SystemExit(f"{audience_label(args.audience)} 대상에 포함되는 이슈가 없어 발송을 중단합니다.")
 
@@ -1595,8 +1831,26 @@ def main() -> None:
         raise SystemExit("수신자가 없습니다. --to 또는 --subscribers를 입력하세요.")
 
     sender = os.getenv("SMTP_FROM", "")
-    plain_text = newsletter_plain_text(title, markdown, report_path, magazine_base_url or None, args.audience, newsletter_items)
-    send_email(subject, sender, recipients, plain_text, newsletter_html)
+    for recipient in recipients:
+        recipient_html = render_newsletter(
+            title,
+            markdown,
+            report_path,
+            magazine_base_url or None,
+            args.audience,
+            newsletter_items,
+            recipient,
+        )
+        plain_text = newsletter_plain_text(
+            title,
+            markdown,
+            report_path,
+            magazine_base_url or None,
+            args.audience,
+            newsletter_items,
+            recipient,
+        )
+        send_email(subject, sender, [recipient], plain_text, recipient_html)
     print(f"발송 완료: {len(recipients)}명")
 
 

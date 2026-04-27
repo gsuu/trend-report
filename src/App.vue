@@ -8,6 +8,11 @@ const showCurrentWeekOnly = ref(hasCurrentWeekFilter(route.value));
 const listRoute = ref(validListRoute(route.value) ? route.value : "/");
 const shareStatus = ref("");
 const viewportWidth = ref(typeof window === "undefined" ? 1440 : window.innerWidth);
+const isSubscribeOpen = ref(false);
+const subscribeEmail = ref("");
+const subscribeAudiences = ref(["Service/Design"]);
+const subscribeStatus = ref("idle");
+const subscribeMessage = ref("");
 
 function detectBasePath() {
   const path = window.location.pathname.replace(/\/+$/, "") || "/";
@@ -80,6 +85,7 @@ onMounted(() => {
 });
 onBeforeUnmount(() => {
   document.body.classList.remove("is-story-open");
+  document.body.classList.remove("is-subscribe-open");
   window.removeEventListener("popstate", syncRoute);
   window.removeEventListener("resize", syncViewportWidth);
 });
@@ -241,6 +247,66 @@ function toggleCurrentWeekOnly(event) {
   showCurrentWeekOnly.value = enabled;
 }
 
+function openSubscribe() {
+  isSubscribeOpen.value = true;
+  subscribeStatus.value = "idle";
+  subscribeMessage.value = "";
+  document.body.classList.add("is-subscribe-open");
+}
+
+function closeSubscribe() {
+  isSubscribeOpen.value = false;
+  document.body.classList.remove("is-subscribe-open");
+}
+
+function toggleSubscribeAudience(value) {
+  if (subscribeAudiences.value.includes(value)) {
+    subscribeAudiences.value = subscribeAudiences.value.filter((item) => item !== value);
+    return;
+  }
+  subscribeAudiences.value = [...subscribeAudiences.value, value];
+}
+
+function subscribeApiUrl() {
+  const configuredBase = import.meta.env.VITE_NEWSLETTER_API_BASE_URL || "";
+  return `${configuredBase.replace(/\/$/, "")}/api/subscribe`;
+}
+
+async function readSubscribeResponse(response) {
+  const responseText = await response.text();
+  if (!responseText) return {};
+
+  try {
+    return JSON.parse(responseText);
+  } catch {
+    throw new Error("구독 API 응답을 확인하지 못했습니다. API 주소 설정을 확인해주세요.");
+  }
+}
+
+async function submitSubscribe() {
+  subscribeStatus.value = "submitting";
+  subscribeMessage.value = "";
+
+  try {
+    const response = await fetch(subscribeApiUrl(), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: subscribeEmail.value,
+        audiences: subscribeAudiences.value,
+      }),
+    });
+    const data = await readSubscribeResponse(response);
+    if (!response.ok || !data.ok) throw new Error(data.error || "구독 신청을 처리하지 못했습니다.");
+
+    subscribeStatus.value = "success";
+    subscribeMessage.value = "구독신청이 완료 되었습니다 감사합니다 :)";
+  } catch (error) {
+    subscribeStatus.value = "error";
+    subscribeMessage.value = error.message || "구독 신청을 처리하지 못했습니다.";
+  }
+}
+
 function plainText(htmlText) {
   const node = document.createElement("span");
   node.innerHTML = htmlText || "";
@@ -371,7 +437,52 @@ function isDateInRange(value, range) {
         {{ category.label }}
       </a>
     </nav>
+    <div class="header-actions">
+      <button class="subscribe-link" type="button" @click="openSubscribe">
+        <span>Subscribe</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 6h16v12H4z" />
+          <path d="m4 7 8 6 8-6" />
+        </svg>
+      </button>
+    </div>
   </header>
+
+  <Teleport to="body">
+    <div v-if="isSubscribeOpen" class="subscribe-modal" role="dialog" aria-modal="true" aria-labelledby="subscribe-title">
+      <button class="subscribe-backdrop" type="button" aria-label="구독 창 닫기" @click="closeSubscribe"></button>
+      <form class="subscribe-panel" :class="{ 'is-complete': subscribeStatus === 'success' }" @submit.prevent="submitSubscribe">
+        <div class="subscribe-panel-head">
+          <h2 v-if="subscribeStatus !== 'success'" id="subscribe-title">Subscribe</h2>
+          <button class="subscribe-close-button" type="button" aria-label="구독 창 닫기" @click="closeSubscribe">×</button>
+        </div>
+        <div v-if="subscribeStatus !== 'success'" class="subscribe-form-grid">
+          <div class="subscribe-options" role="group" aria-labelledby="subscribe-category-label">
+            <span id="subscribe-category-label" class="subscribe-category-label">구독 카테고리<span aria-hidden="true">*</span></span>
+            <label>
+              <input type="checkbox" :checked="subscribeAudiences.includes('Service/Design')" @change="toggleSubscribeAudience('Service/Design')">
+              <span>Service/Design</span>
+            </label>
+            <label>
+              <input type="checkbox" :checked="subscribeAudiences.includes('DEV')" @change="toggleSubscribeAudience('DEV')">
+              <span>DEV</span>
+            </label>
+          </div>
+          <label class="subscribe-field">
+            <input v-model.trim="subscribeEmail" type="email" required autocomplete="email" placeholder=" ">
+            <span>이메일<strong aria-hidden="true">*</strong></span>
+          </label>
+        </div>
+        <p v-if="subscribeMessage" class="subscribe-message" :class="'is-' + subscribeStatus" role="status">{{ subscribeMessage }}</p>
+        <button v-if="subscribeStatus === 'success'" class="subscribe-complete-button" type="button" @click="closeSubscribe">
+          닫기
+        </button>
+        <button v-if="subscribeStatus !== 'success'" class="subscribe-submit-button" type="submit" :disabled="subscribeStatus === 'submitting'">
+          {{ subscribeStatus === 'submitting' ? '신청 중' : '구독 신청 하기' }}
+        </button>
+      </form>
+    </div>
+  </Teleport>
 
   <main :class="{ 'article-main': activeIssue }">
     <article v-if="activeIssue" :key="'story-' + activeIssue.number" class="article-layout">

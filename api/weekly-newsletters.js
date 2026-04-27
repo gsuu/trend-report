@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import crypto from "node:crypto";
 import path from "node:path";
 import { Client } from "@notionhq/client";
 import nodemailer from "nodemailer";
@@ -29,8 +30,12 @@ const DESIGN_AREA_KEYS = new Set(["design", "web_design", "webdesign", "product_
 const DEV_AREA_KEYS = new Set(["dev", "develop", "development", "engineering", "fe", "frontend", "frontend_development", "backend", "web_development", "web_develop", "개발", "프론트", "프론트엔드"]);
 const DESIGN_AI_KEYS = new Set(["ai", "ai디자인", "ai이미지", "chatgpt", "claude", "gemini", "figma_ai", "adobe_firefly", "firefly", "photoshop", "canva", "imagen", "veo", "sora", "image_generation", "이미지생성", "프로토타이핑", "디자인ai"]);
 const DEFAULT_SITE_URL = "https://cttd-magazine.vercel.app";
+const ONE_OFF_CRON_SKIP_DATES_KST = new Set(["2026-04-27"]);
 const NEWSLETTER_TEMPLATE_PATH = path.join(process.cwd(), "templates", "newsletter.html");
 const NEWSLETTER_SECTION_PATTERN = /<!-- section:([a-z0-9_-]+) -->\s*([\s\S]*?)\s*<!-- \/section:\1 -->/g;
+const SUBSCRIBER_EMAIL_PROPERTIES = ["Email", "이메일", "이름", "Name"];
+const SUBSCRIBER_STATUS_PROPERTIES = ["Status", "상태"];
+const SUBSCRIBER_AUDIENCE_PROPERTIES = ["Audience", "구독분야", "뉴스레터"];
 let newsletterTemplateCache;
 
 loadEnvFiles();
@@ -157,6 +162,26 @@ function splitRecipients(value = "") {
     .filter(Boolean);
 }
 
+function normalizeEmail(value = "") {
+  return String(value).trim().toLowerCase();
+}
+
+function uniqueEmails(emails) {
+  return [...new Set(emails.map((email) => normalizeEmail(email)).filter(Boolean))];
+}
+
+function unsubscribeSecret() {
+  return process.env.NEWSLETTER_UNSUBSCRIBE_SECRET || process.env.CRON_SECRET || "";
+}
+
+function unsubscribeUrl(email) {
+  const secret = unsubscribeSecret();
+  if (!secret || !email) return "";
+  const normalizedEmail = normalizeEmail(email);
+  const signature = crypto.createHmac("sha256", secret).update(normalizedEmail).digest("hex");
+  return `${siteUrl()}/api/unsubscribe?email=${encodeURIComponent(normalizedEmail)}&sig=${signature}`;
+}
+
 function startOfKstWeek(now = new Date()) {
   const kst = new Date(now.getTime() + 9 * 60 * 60 * 1000);
   const day = kst.getUTCDay();
@@ -196,18 +221,60 @@ function dateInKstWeek(value, range) {
   return kstDate >= range.startKst && kstDate < range.endKst;
 }
 
-function readDevSubscribers() {
-  const configured = splitRecipients(process.env.DEV_NEWSLETTER_TO || process.env.DEV_WEEKLY_TO || "");
-  if (configured.length) return configured;
-
-  const subscribersPath = path.join(process.cwd(), "config", "dev-final-subscribers.txt");
-  if (!fs.existsSync(subscribersPath)) return [];
-  return splitRecipients(fs.readFileSync(subscribersPath, "utf8"));
+function subscriberDatabaseId() {
+  const databaseId = (process.env.NEWSLETTER_SUBSCRIBERS_DATABASE_ID || "").trim();
+  if (!databaseId) throw new Error("NEWSLETTER_SUBSCRIBERS_DATABASE_ID is required.");
+  return databaseId;
 }
 
-function resolveRecipients(audience) {
-  if (audience === "dev") return readDevSubscribers();
-  return splitRecipients(process.env.UIUX_NEWSLETTER_TO || process.env.UIUX_WEEKLY_TO || "cxd@cttd.co.kr");
+function subscriberEmail(page) {
+  return normalizeEmail(propertyText(page.properties || {}, SUBSCRIBER_EMAIL_PROPERTIES, ""));
+}
+
+function subscriberStatus(page) {
+  return normalizeKey(propertyText(page.properties || {}, SUBSCRIBER_STATUS_PROPERTIES, "active"));
+}
+
+function subscriberAudiences(page) {
+  return propertyTags(page.properties || {}, SUBSCRIBER_AUDIENCE_PROPERTIES).map((audience) => normalizeKey(audience));
+}
+
+function audienceMatchesSubscriber(newsletterAudience, subscriberAudienceValues) {
+  if (!subscriberAudienceValues.length) return true;
+  const expected = newsletterAudience === "dev"
+    ? ["dev", "develop", "development", "frontend"]
+    : ["uiux", "ui_ux", "service", "design", "service_design", "general"];
+  return subscriberAudienceValues.some((audience) => expected.includes(audience));
+}
+
+async function notionNewsletterSubscribers(audience) {
+  const notionToken = process.env.NOTION_TOKEN || process.env.NOTION_API_KEY;
+  if (!notionToken) return [];
+  const databaseId = subscriberDatabaseId();
+
+  const notion = new Client({ auth: notionToken });
+  const pages = [];
+  let cursor;
+
+  do {
+    const response = await notion.databases.query({
+      database_id: databaseId,
+      start_cursor: cursor,
+      page_size: 100,
+    });
+    pages.push(...response.results);
+    cursor = response.has_more ? response.next_cursor : undefined;
+  } while (cursor);
+
+  return uniqueEmails(pages
+    .filter((page) => !["unsubscribed", "inactive", "해지"].includes(subscriberStatus(page)))
+    .filter((page) => audienceMatchesSubscriber(audience, subscriberAudiences(page)))
+    .map(subscriberEmail));
+}
+
+async function resolveRecipients(audience) {
+  const notionSubscribers = await notionNewsletterSubscribers(audience);
+  return notionSubscribers;
 }
 
 function isAuthorized(request) {
@@ -217,6 +284,22 @@ function isAuthorized(request) {
   const auth = request.headers.authorization || "";
   const url = new URL(request.url, `https://${request.headers.host || "localhost"}`);
   return auth === `Bearer ${secret}` || url.searchParams.get("secret") === secret;
+}
+
+function kstDateString(date = new Date()) {
+  return new Date(date.getTime() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
+}
+
+function pausedCronDatesKst() {
+  const envDates = (process.env.NEWSLETTER_CRON_SKIP_DATES_KST || "")
+    .split(",")
+    .map((date) => date.trim())
+    .filter(Boolean);
+  return new Set([...ONE_OFF_CRON_SKIP_DATES_KST, ...envDates]);
+}
+
+function isNewsletterCronPausedToday() {
+  return pausedCronDatesKst().has(kstDateString());
 }
 
 async function fetchIssuesFromNotion() {
@@ -300,7 +383,7 @@ async function fetchIssuesFromNotion() {
   return { issues, weekRange };
 }
 
-function renderNewsletter(audience, issues, weekRange) {
+function renderNewsletter(audience, issues, weekRange, recipientEmail = "") {
   const label = audience === "dev" ? "DEV" : "Service/Design";
   const displayTitle = audience === "dev" ? "Weekly Dev Trend Report" : "Weekly Web Trend Report";
   const description = audience === "dev"
@@ -342,7 +425,7 @@ function renderNewsletter(audience, issues, weekRange) {
     DISPLAY_TITLE: htmlEscape(displayTitle),
     DESCRIPTION: htmlEscape(`${rangeText} 기준 ${description} 상세 내용은 각 매거진 링크에서 확인하세요.`),
     BODY: body,
-    FOOTER: "이 메일은 CTTD Newsletter 시스템에서 발송되었습니다.",
+    FOOTER: footerHtml(recipientEmail),
   });
 }
 
@@ -351,7 +434,16 @@ function audienceSubject(audience) {
   return `[CTTD] ${displayTitle}`;
 }
 
-function renderPlainText(audience, issues, weekRange) {
+function footerHtml(recipientEmail = "") {
+  const unsubscribeLink = unsubscribeUrl(recipientEmail);
+  const unsubscribeHtml = unsubscribeLink
+    ? ` <a href="${htmlEscape(unsubscribeLink)}" style="color:#777777;text-decoration:underline;text-underline-offset:3px;">구독 해지</a>`
+    : "";
+  return `이 메일은 CTTD Newsletter 시스템에서 발송되었습니다.${unsubscribeHtml}`;
+}
+
+function renderPlainText(audience, issues, weekRange, recipientEmail = "") {
+  const unsubscribeLink = unsubscribeUrl(recipientEmail);
   return [
     audienceSubject(audience).replace(/^\[CTTD\]\s*/, "CTTD "),
     weekRangeLabel(weekRange),
@@ -363,11 +455,12 @@ function renderPlainText(audience, issues, weekRange) {
       issue.magazineUrl,
       "",
     ]),
+    unsubscribeLink ? `구독 해지: ${unsubscribeLink}` : "",
   ].join("\n");
 }
 
 async function sendNewsletter(audience, issues, weekRange) {
-  const recipients = resolveRecipients(audience);
+  const recipients = await resolveRecipients(audience);
   if (!recipients.length) return { audience, sent: false, reason: "no recipients" };
   if (!issues.length) return { audience, sent: false, reason: "no issues" };
 
@@ -383,13 +476,15 @@ async function sendNewsletter(audience, issues, weekRange) {
     requireTLS: String(process.env.SMTP_TLS || "true").toLowerCase() !== "false" && !secure,
   });
 
-  await transporter.sendMail({
-    from: process.env.SMTP_FROM,
-    to: recipients,
-    subject: audienceSubject(audience),
-    text: renderPlainText(audience, issues, weekRange),
-    html: renderNewsletter(audience, issues, weekRange),
-  });
+  for (const recipient of recipients) {
+    await transporter.sendMail({
+      from: process.env.SMTP_FROM,
+      to: recipient,
+      subject: audienceSubject(audience),
+      text: renderPlainText(audience, issues, weekRange, recipient),
+      html: renderNewsletter(audience, issues, weekRange, recipient),
+    });
+  }
   return { audience, sent: true, recipients: recipients.length, issues: issues.length };
 }
 
@@ -486,6 +581,11 @@ async function archiveMarkdownToGithub(markdown, weekRange) {
 export default async function handler(request, response) {
   if (!isAuthorized(request)) {
     response.status(401).json({ ok: false, error: "Unauthorized" });
+    return;
+  }
+
+  if (isNewsletterCronPausedToday()) {
+    response.status(200).json({ ok: true, skipped: true, reason: "newsletter cron paused for today", dateKst: kstDateString() });
     return;
   }
 

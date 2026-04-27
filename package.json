@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "npm run fetch:notion && vite --host 0.0.0.0",
     "fetch:notion": "node scripts/fetch_notion.mjs",
+    "fetch:tracking": "node scripts/fetch_tracking_news.mjs",
+    "collect:materials": "node scripts/collect_materials.mjs",
+    "collect:raw": "node scripts/tracking_to_collection.mjs",
     "build": "npm run fetch:notion && vite build",
     "preview": "vite preview --host 0.0.0.0"
   },
@@ -13,6 +16,7 @@
     "@notionhq/client": "^4.0.2",
     "@vitejs/plugin-vue": "^6.0.1",
     "nodemailer": "^8.0.6",
+    "rss-parser": "^3.13.0",
     "vite": "^7.2.7",
     "vue": "^3.5.25"
   }

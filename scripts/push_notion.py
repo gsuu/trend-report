@@ -11,6 +11,10 @@ from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORTS_DIR = ROOT / "reports"
@@ -260,6 +264,12 @@ def set_property(properties: dict[str, Any], schema: dict[str, dict[str, Any]], 
     if not name or not prop:
         return
 
+    if prop["type"] == "select" and isinstance(value, str):
+        options = prop.get("select", {}).get("options", [])
+        allowed_names = {option.get("name", "") for option in options}
+        if value.strip() not in allowed_names:
+            return
+
     payload = notion_property(prop["type"], value)
     if payload is not None:
         properties[name] = payload
@@ -379,7 +389,13 @@ def property_filter(schema: dict[str, dict[str, Any]], logical_name: str, value:
     prop_type = prop["type"]
     if prop_type in {"title", "rich_text"}:
         return {"property": name, prop_type: {"equals": value}}
-    if prop_type in {"select", "status"}:
+    if prop_type == "select":
+        options = prop.get("select", {}).get("options", [])
+        allowed_names = {option.get("name", "") for option in options}
+        if value.strip() not in allowed_names:
+            return None
+        return {"property": name, prop_type: {"equals": value}}
+    if prop_type == "status":
         return {"property": name, prop_type: {"equals": value}}
     return None
 

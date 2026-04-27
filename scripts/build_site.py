@@ -18,7 +18,7 @@ REPORTS_DIR = ROOT / "reports"
 SITE_DIR = ROOT / "site"
 ASSETS_DIR = SITE_DIR / "assets"
 ARTICLES_DIR = SITE_DIR / "articles"
-SHOW_SUBSCRIBE_LINK = False
+SHOW_SUBSCRIBE_LINK = True
 PRODUCTION_SITE_URL = "https://cttd-magazine.vercel.app"
 SITE_DESCRIPTION = "CTTD Service/Design/DEV Weekly Trend Magazine"
 SITE_OG_IMAGE = "assets/cttd-logo-email.png"
@@ -182,7 +182,7 @@ DEV_SECTION_HEADING_REPLACEMENTS = {
 }
 SECTION_BLOCK_PATTERN = re.compile(r"^@@(?P<kind>quote|subhead|paragraph|list)@@(?P<text>.*)")
 SUMMARY_LABEL_PATTERN = re.compile(r"^(?P<label>[^:：]{2,18})[:：]\s*(?P<value>.+)$")
-CORE_SUMMARY_LABELS = {"업데이트", "서비스 맥락", "기술 맥락", "변경 전", "변경 후"}
+CORE_SUMMARY_LABELS = {"업데이트", "서비스 맥락", "디자인 맥락", "기술 맥락", "변경 전", "변경 후"}
 HIDDEN_FACT_KEYS = {"출처 URL", "서비스 URL", "상세페이지 초점"}
 SOURCE_TITLE_CACHE: dict[str, str] = {}
 
@@ -614,17 +614,44 @@ def split_issue_title(raw: str) -> tuple[str, str, str, list[str]]:
         platform = body.split()[0]
         rest = body
 
-    tags = re.findall(r"#([^\s#]+)", rest)
+    tags = normalize_tags(re.findall(r"#([^\s#]+)", rest))
     title = re.sub(r"#[^\s#]+", "", rest).strip() or platform
     return number, platform, title, tags
 
 
+def normalize_tag(value: str) -> str:
+    tag = value.strip().lstrip("#")
+    squashed = re.sub(r"\s+", "", tag).lower()
+    aliases = {
+        "uiux웹디자이너": "웹디자인",
+        "uiux디자이너": "웹디자인",
+        "웹서비스기획자": "웹서비스기획",
+        "웹기획자": "웹서비스기획",
+        "웹dev": "웹DEV",
+        "웹퍼블리셔": "웹DEV",
+        "webdev": "웹DEV",
+    }
+    return aliases.get(squashed, tag)
+
+
+def normalize_tags(values: list[str]) -> list[str]:
+    tags: list[str] = []
+    seen: set[str] = set()
+    for value in values:
+        tag = normalize_tag(value)
+        key = re.sub(r"\s+", "", tag).lower()
+        if tag and key not in seen:
+            tags.append(tag)
+            seen.add(key)
+    return tags
+
+
 def split_meta_tags(value: str) -> list[str]:
-    return [
-        tag.strip().lstrip("#")
+    return normalize_tags([
+        tag
         for tag in re.split(r"[,/|]", value)
         if tag.strip().lstrip("#")
-    ]
+    ])
 
 
 def parse_report(path: Path) -> Report:
@@ -793,15 +820,96 @@ def html_shell(
     meta_url = url or absolute_site_url()
     meta_image_alt = meta_text(image_alt or meta_title, meta_title, 120)
     subscribe_link = ""
+    subscribe_modal = ""
+    subscribe_script = ""
     if SHOW_SUBSCRIBE_LINK:
-        subscribe_href = "mailto:project@cttd.co.kr?subject=CTTD%20Trend%20Magazine%20Subscribe"
-        subscribe_link = f"""      <a class="subscribe-link" href="{subscribe_href}" aria-label="Subscribe">
+        subscribe_link = """      <button class="subscribe-link" type="button" data-subscribe-open>
         <span>Subscribe</span>
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 6h16v12H4z" />
           <path d="m4 7 8 6 8-6" />
         </svg>
-      </a>
+      </button>
+"""
+        subscribe_modal = """
+  <div class="subscribe-modal" data-subscribe-modal hidden role="dialog" aria-modal="true" aria-labelledby="subscribe-title">
+    <button class="subscribe-backdrop" type="button" data-subscribe-close aria-label="구독 창 닫기"></button>
+    <form class="subscribe-panel" data-subscribe-form>
+      <div class="subscribe-panel-head">
+        <h2 id="subscribe-title">Subscribe</h2>
+        <button class="subscribe-close-button" type="button" data-subscribe-close aria-label="구독 창 닫기">×</button>
+      </div>
+      <label class="subscribe-field">
+        <input name="email" type="email" required autocomplete="email" placeholder=" ">
+        <span>이메일<strong aria-hidden="true">*</strong></span>
+      </label>
+      <div class="subscribe-options" role="group" aria-labelledby="static-subscribe-category-label">
+        <span id="static-subscribe-category-label" class="subscribe-category-label">구독 카테고리<span aria-hidden="true">*</span></span>
+        <label>
+          <input name="audiences" type="checkbox" value="Service/Design" checked>
+          <span>Service/Design</span>
+        </label>
+        <label>
+          <input name="audiences" type="checkbox" value="DEV">
+          <span>DEV</span>
+        </label>
+      </div>
+      <p class="subscribe-message" data-subscribe-message hidden></p>
+      <button class="subscribe-submit-button" type="submit">구독 신청 하기</button>
+    </form>
+  </div>
+"""
+        subscribe_script = """
+  <script>
+    (() => {
+      const modal = document.querySelector("[data-subscribe-modal]");
+      const form = document.querySelector("[data-subscribe-form]");
+      const message = document.querySelector("[data-subscribe-message]");
+      const submitButton = document.querySelector(".subscribe-submit-button");
+      const apiBaseUrl = (window.NEWSLETTER_API_BASE_URL || "https://cttd-magazine.vercel.app").replace(/\\/$/, "");
+      const openModal = () => {
+        modal.hidden = false;
+        document.body.classList.add("is-subscribe-open");
+        message.hidden = true;
+        message.textContent = "";
+        form.email.focus();
+      };
+      const closeModal = () => {
+        modal.hidden = true;
+        document.body.classList.remove("is-subscribe-open");
+      };
+      document.querySelectorAll("[data-subscribe-open]").forEach((button) => button.addEventListener("click", openModal));
+      document.querySelectorAll("[data-subscribe-close]").forEach((button) => button.addEventListener("click", closeModal));
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const audiences = Array.from(form.querySelectorAll("input[name='audiences']:checked")).map((input) => input.value);
+        message.hidden = true;
+        message.className = "subscribe-message";
+        submitButton.disabled = true;
+        submitButton.textContent = "신청 중";
+        try {
+          const response = await fetch(`${apiBaseUrl}/api/subscribe`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email: form.email.value, audiences }),
+          });
+          const responseText = await response.text();
+          const data = responseText ? JSON.parse(responseText) : {};
+          if (!response.ok || !data.ok) throw new Error(data.error || "구독 신청을 처리하지 못했습니다.");
+          message.textContent = "구독 신청이 완료되었습니다.";
+          message.classList.add("is-success");
+          message.hidden = false;
+        } catch (error) {
+          message.textContent = error.message || "구독 신청을 처리하지 못했습니다.";
+          message.classList.add("is-error");
+          message.hidden = false;
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = "구독 신청 하기";
+        }
+      });
+    })();
+  </script>
 """
     header_actions = f"""    <div class="header-actions">
 {subscribe_link}\
@@ -845,6 +953,7 @@ def html_shell(
 {header_nav}\
 {header_actions}\
   </header>
+{subscribe_modal}\
   {body}
   <footer class="site-footer">
     <p>Copyright &copy; 2026 CTTD. All rights reserved.</p>
@@ -856,6 +965,7 @@ def html_shell(
       </svg>
     </a>
   </footer>
+{subscribe_script}\
 </body>
 </html>
 """
@@ -896,8 +1006,8 @@ def issue_takeaway(issue: Issue) -> str:
 
 
 def issue_deck(issue: Issue) -> str:
-    items = issue.sections.get("기술 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
-    for preferred_label in ("서비스 맥락", "기술 맥락", "변경 후", "확인 포인트", "디자인 포인트"):
+    items = issue.sections.get("기술 변화 요약", []) or issue.sections.get("디자인 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
+    for preferred_label in ("서비스 맥락", "디자인 맥락", "기술 맥락", "변경 후", "확인 포인트", "디자인 포인트"):
         for item in items:
             label, separator, value = str(item).partition(":")
             if separator and label.strip() == preferred_label and value.strip():
@@ -908,7 +1018,7 @@ def issue_deck(issue: Issue) -> str:
 
 
 def issue_update_title(issue: Issue) -> str:
-    items = issue.sections.get("기술 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
+    items = issue.sections.get("기술 변화 요약", []) or issue.sections.get("디자인 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
     for preferred_label in ("업데이트", "핵심 업데이트"):
         for item in items:
             label, separator, value = str(item).partition(":")
@@ -962,7 +1072,7 @@ def issue_newsletter_summary(issue: Issue, limit: int = 76) -> str:
 
 
 def strip_brief_label(text: str) -> str:
-    for label in ("업데이트", "핵심 업데이트", "기술 맥락", "서비스 맥락"):
+    for label in ("업데이트", "핵심 업데이트", "기술 맥락", "디자인 맥락", "서비스 맥락"):
         prefix = f"{label}:"
         if text.startswith(prefix):
             return text[len(prefix):].strip()

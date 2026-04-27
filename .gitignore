@@ -11,3 +11,9 @@ dist/
 src/data/report.json
 .playwright-mcp/
 .vite/
+tmp/
+news-tracking/articles/
+news-tracking/candidates/
+news-tracking/selected/
+news-tracking/review/
+reports/*-tracking-upload-report.md
