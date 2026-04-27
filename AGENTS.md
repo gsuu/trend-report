@@ -5,7 +5,7 @@
 When the user provides a PDF, asks to collect source material, and then asks to send the newsletter:
 
 1. Build the report and magazine site from the collected material.
-2. Upload the magazine site to `/cttd-email/magazine` on the configured FTP server.
+2. Push the site/data changes to the repository.
 3. Use `https://magazine.cttd.co.kr` as `MAGAZINE_BASE_URL`.
 4. Send the first test email only to `jisuk@cttd.co.kr`.
 5. Wait for the user's explicit confirmation that the test email is okay.

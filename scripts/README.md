@@ -22,10 +22,9 @@ Notion 업로드와 업로드 전 검증에만 사용합니다.
 
 ## newsletter
 
-메일 발송과 FTP 배포처럼 뉴스레터 운영 단계에서만 사용합니다.
+메일 발송처럼 뉴스레터 운영 단계에서만 사용합니다.
 
 - `send_newsletter.py`: 테스트/최종 뉴스레터 메일을 발송합니다.
-- `deploy_magazine.py`: 매거진 산출물을 FTP로 업로드합니다.
 
 ## legacy
 
