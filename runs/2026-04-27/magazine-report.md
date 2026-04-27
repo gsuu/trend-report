@@ -847,21 +847,21 @@ AI가 만든 CSS를 적용할 때는 중복 selector, 과한 specificity, 디자
 
 ###### 왜 지금 이 업데이트인가
 
-Safari는 커머스와 콘텐츠 서비스의 실제 모바일 사용 환경에서 여전히 중요합니다.
-Technology Preview 릴리즈는 새 기능을 따라가는 자료이기도 하지만, 다음 정식 배포에서 폼, 스크롤, 이미지, SVG, 접근성 컴포넌트가 다르게 동작할 가능성을 미리 보는 자료입니다.
-이번 릴리즈 노트는 모든 항목을 외우기보다 프로젝트에서 자주 쓰는 패턴과 연결해 QA 후보를 만드는 데 의미가 있습니다.
+Safari Technology Preview 242에는 `closedby`를 지원하는 `dialog`, CSS `attr()` Level 5, `appearance: base-select` 접근성 수정, `srcset` 이미지가 iframe 안에서 보이지 않던 문제 수정이 포함됐습니다.
+또 sticky 위치 요소의 flicker, scroll anchoring으로 페이지가 위아래로 튀는 문제, fullscreen video scrubbing 이슈처럼 실제 모바일 화면에서 체감될 수 있는 수정도 들어 있습니다.
+이번 릴리즈 노트는 Safari가 중요하다는 일반론보다, 다음 정식 Safari QA에서 폼, dialog, 이미지, sticky/scroll, 미디어 컴포넌트를 우선 확인해야 한다는 체크리스트로 읽어야 합니다.
 
 ###### 구현 관점
 
-릴리즈 노트는 모두 읽기보다 우리 서비스의 폼, 모달, 스크롤, 이미지, SVG, 접근성 컴포넌트와 연결되는 항목만 추려야 합니다.
-iOS/Safari 의존도가 높은 결제, 로그인, 상품상세 화면은 작은 브라우저 차이도 전환 흐름에 영향을 줄 수 있습니다.
-Safari TP에서 확인한 차이는 일회성 테스트로 끝내지 말고 정식 Safari QA 체크리스트로 옮겨야 합니다.
+결제, 로그인, 옵션 선택 화면에서 `<select multiple>`, customizable select, checkbox outline, `:in-range`/`:out-of-range` 상태가 의도대로 동작하는지 먼저 봐야 합니다.
+상품 상세와 캠페인 페이지에서는 iframe 안 `srcset` 이미지, sticky CTA, scroll anchoring, fullscreen video scrub, SVG 이미지·gradient·tspan 렌더링을 Safari TP에서 재현해볼 만합니다.
+신규 `closedby` dialog와 CSS `attr()`은 바로 도입하기보다 지원 범위, fallback, 기존 modal/dropdown 구현과 충돌 여부를 확인한 뒤 컴포넌트 QA 항목으로 옮기는 편이 안전합니다.
 
 ###### 실무에 어떻게 적용할 수 있을까
 
-- iOS/Safari 의존도가 높은 결제, 로그인, 상품상세 화면을 우선 테스트합니다.
-- select, dialog, sticky, scroll 관련 변경을 컴포넌트별로 확인합니다.
-- Safari TP에서 발견한 차이는 정식 Safari QA 체크리스트로 옮깁니다.
+- 결제·회원가입 폼에서 select, checkbox outline, range validation 상태를 Safari TP와 현재 Safari에서 비교합니다.
+- 상품상세의 sticky CTA, iframe 이미지, SVG 아이콘·일러스트, fullscreen video가 스크롤과 함께 깨지지 않는지 확인합니다.
+- `dialog[closedby]`와 CSS `attr()`은 실험 후보로만 두고, fallback과 브라우저 지원 상태를 컴포넌트 문서에 남깁니다.
 
 ###### 같이 보면 좋은 기술
 
