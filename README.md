@@ -385,8 +385,8 @@ NOTION_TOKEN=secret_xxx
 NOTION_DATABASE_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 NEWSLETTER_SUBSCRIBERS_DATABASE_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 NEWSLETTER_UNSUBSCRIBE_SECRET=random-string-at-least-32-chars
-SITE_URL=https://cttd-magazine.vercel.app
-VITE_NEWSLETTER_API_BASE_URL=https://cttd-magazine.vercel.app
+SITE_URL=https://magazine.cttd.co.kr
+VITE_NEWSLETTER_API_BASE_URL=https://magazine.cttd.co.kr
 ```
 
 구독자 DB는 `Email`, `Status`, `Audience`, `Unsubscribed At` 속성을 사용합니다. `Status`가 `Unsubscribed` 또는 `Inactive`인 행은 발송 대상에서 제외됩니다. `Audience`가 비어 있으면 전체 뉴스레터 대상으로 보고, 값이 있으면 `Service`, `Design`, `DEV`에 맞는 구독자에게만 발송합니다. 기존 `Service/Design` 값은 Service와 Design을 모두 구독한 것으로 처리합니다. 메일 하단의 구독 해지 링크는 `/api/unsubscribe`에서 확인 후 `Status=Unsubscribed`, `Unsubscribed At=현재 시각`으로 갱신합니다.
@@ -422,7 +422,7 @@ export SMTP_PASSWORD=app-password
 export SMTP_FROM=sender@example.com
 export SMTP_TLS=true
 export SMTP_SSL=false
-export SITE_URL=https://cttd-magazine.vercel.app
+export SITE_URL=https://magazine.cttd.co.kr
 
 python3 scripts/newsletter/send_newsletter.py \
   reports/2026-04-20-uiux-web-service-weekly-trend-report.md \
@@ -442,7 +442,7 @@ SMTP_PASSWORD=mail-app-password
 SMTP_FROM=sender@cttd.co.kr
 SMTP_TLS=false
 SMTP_SSL=true
-SITE_URL=https://cttd-magazine.vercel.app
+SITE_URL=https://magazine.cttd.co.kr
 ```
 
 수신자가 많으면 `config/subscribers.example.txt`를 복사해 `config/subscribers.txt`로 만들고 사용합니다.

@@ -24,7 +24,7 @@ SITE_MARK_FALLBACK_COLOR = "#f9ffc1"
 SITE_MARK_BACKGROUND = f"background:{SITE_MARK_FALLBACK_COLOR};background:{SITE_MARK_COLOR}"
 SITE_MARK_BORDER_LEFT = f"border-left:4px solid {SITE_MARK_FALLBACK_COLOR};border-left:4px solid {SITE_MARK_COLOR}"
 TEST_RECIPIENT = "jisuk@cttd.co.kr"
-PRODUCTION_SITE_URL = "https://cttd-magazine.vercel.app"
+PRODUCTION_SITE_URL = "https://magazine.cttd.co.kr"
 EMAIL_LOGO_ASSET_NAME = "cttd-logo-email.png"
 EMAIL_LOGO_CONTENT_ID = "cttd-logo-email@cttd"
 NEWSLETTER_TEMPLATE_PATH = ROOT / "templates" / "newsletter.html"
@@ -1206,7 +1206,7 @@ def magazine_asset_href(asset_name: str, magazine_base_url: str | None) -> str:
 
 
 def email_logo_path() -> Path:
-    return ROOT / "site" / "assets" / EMAIL_LOGO_ASSET_NAME
+    return ROOT / "public" / "assets" / EMAIL_LOGO_ASSET_NAME
 
 
 def use_inline_email_logo(newsletter_html: str) -> str:
