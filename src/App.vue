@@ -1,11 +1,10 @@
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import fallbackReport from "./data/report.example.json";
-import previousReport from "./data/report.json";
 
 const basePath = detectBasePath();
 const route = ref(currentRoute());
-const report = ref(hasMagazineIssues(previousReport) ? previousReport : fallbackReport);
+const report = ref(fallbackReport);
 const magazineCacheKey = "cttd-magazine-report-v1";
 const magazineCacheTtl = 5 * 60 * 1000;
 const magazineLoading = ref(!hasMagazineIssues(report.value));
