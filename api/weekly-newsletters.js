@@ -42,6 +42,7 @@ const NEWSLETTER_AUDIENCE_LABELS = {
   design: "Design",
   dev: "DEV",
 };
+const NEWSLETTER_SUBJECT_PREFIX = "[CTTD Magazine]";
 let newsletterTemplateCache;
 
 loadEnvFiles();
@@ -483,7 +484,7 @@ function renderNewsletter(audiences, issuesByAudience, weekRange, recipientEmail
   const selectedLabels = selectedAudiences.map((audience) => NEWSLETTER_AUDIENCE_LABELS[audience]).join(", ");
 
   return fillNewsletterTemplate(templates.shell, {
-    PAGE_TITLE: htmlEscape(`[CTTD] ${title}`),
+    PAGE_TITLE: htmlEscape(`${NEWSLETTER_SUBJECT_PREFIX} ${title}`),
     PREHEADER: "Service/Design/DEV 주간 트렌드 리포트",
     LOGO_SRC: htmlEscape(logoSrc),
     KICKER: "NEWSLETTER",
@@ -495,7 +496,7 @@ function renderNewsletter(audiences, issuesByAudience, weekRange, recipientEmail
 }
 
 function audienceSubject(weekRange) {
-  return `[CTTD] ${newsletterTitle(weekRange)}`;
+  return `${NEWSLETTER_SUBJECT_PREFIX} ${newsletterTitle(weekRange)}`;
 }
 
 function footerHtml(recipientEmail = "") {

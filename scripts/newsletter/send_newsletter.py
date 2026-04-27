@@ -39,6 +39,7 @@ SUBSCRIPTION_AUDIENCE_LABELS = {
     "dev": "DEV",
 }
 WEB_TREND_TITLE = "Weekly Web Trends"
+NEWSLETTER_SUBJECT_PREFIX = "[CTTD Magazine]"
 NEWSLETTER_SECTION_PATTERN = re.compile(
     r"<!-- section:(?P<name>[a-z0-9_-]+) -->\s*(?P<body>.*?)\s*<!-- /section:(?P=name) -->",
     re.DOTALL,
@@ -1251,7 +1252,7 @@ def audience_title(default_title: str, audience: str) -> str:
 
 
 def audience_subject(audience: str) -> str:
-    return f"[CTTD] {WEB_TREND_TITLE}"
+    return f"{NEWSLETTER_SUBJECT_PREFIX} {WEB_TREND_TITLE}"
 
 
 def is_develop_issue(category: str, tags: list[str]) -> bool:
@@ -2200,7 +2201,7 @@ def main() -> None:
                 recipient,
                 combined_title,
             )
-            send_email(f"[CTTD] {combined_title}", sender, [recipient], plain_text, recipient_html)
+            send_email(f"{NEWSLETTER_SUBJECT_PREFIX} {combined_title}", sender, [recipient], plain_text, recipient_html)
             sent_count += 1
         if not sent_count:
             raise SystemExit("선택한 카테고리에 포함되는 이슈가 있는 수신자가 없습니다.")
