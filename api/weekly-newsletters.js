@@ -502,7 +502,7 @@ function audienceSubject(weekRange) {
 function footerHtml(recipientEmail = "") {
   const unsubscribeLink = unsubscribeUrl(recipientEmail);
   const unsubscribeHtml = unsubscribeLink
-    ? `<br>수신을 원치 않는다면 <a href="${htmlEscape(unsubscribeLink)}" style="color:#555555;font-weight:700;text-decoration:underline;text-underline-offset:3px;">구독 해지하기</a>`
+    ? `<br>수신을 원하지 않는다면 👉🏻 <a href="${htmlEscape(unsubscribeLink)}" style="color:#555555;font-weight:700;text-decoration:underline;text-underline-offset:3px;">구독 해지하기</a>`
     : "";
   return `이 메일은 CTTD Newsletter 시스템에서 발송되었습니다.${unsubscribeHtml}`;
 }

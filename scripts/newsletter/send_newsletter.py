@@ -1931,7 +1931,7 @@ def newsletter_footer_html(recipient_email: str, magazine_base_url: str | None) 
         return "이 메일은 CTTD Newsletter 시스템에서 발송되었습니다."
     return (
         "이 메일은 CTTD Newsletter 시스템에서 발송되었습니다.<br>"
-        "수신을 원치 않는다면 "
+        "수신을 원하지 않는다면 👉🏻 "
         f'<a href="{html.escape(link, quote=True)}" style="color:#555555;font-weight:700;text-decoration:underline;text-underline-offset:3px;">구독 해지하기</a>'
     )
 
