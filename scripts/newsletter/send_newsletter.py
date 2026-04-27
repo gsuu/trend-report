@@ -1250,7 +1250,7 @@ def audience_label(audience: str) -> str:
         "service": "Service",
         "design": "Design",
         "general": "Service/Design",
-        "dev": "Dev",
+        "dev": "DEV",
         "all": "전체",
     }.get(audience, audience)
 
@@ -1262,7 +1262,7 @@ def audience_description(audience: str) -> str:
     if audience == "design":
         return "Design 이슈"
     if audience == "dev":
-        return "Dev 이슈"
+        return "DEV 이슈"
     if audience == "all":
         return "전체 대상 UIUX/Web Service 이슈"
     return "UIUX/Web Service 이슈"
@@ -1275,7 +1275,7 @@ def audience_kicker(audience: str) -> str:
     if audience == "design":
         return "Weekly Design Intelligence"
     if audience == "dev":
-        return "Weekly Dev Intelligence"
+        return "Weekly DEV Intelligence"
     return "Weekly Design Intelligence"
 
 
@@ -1725,7 +1725,6 @@ def render_newsletter_item(
     category = str(item.get("category") or item.get("area") or "").strip()
     headline = str(item.get("headline") or "").strip()
     description = str(item.get("description") or "").strip()
-    detail_summary = str(item.get("detailSummary") or "").strip()
     title = f"[{platform}] {headline}" if headline else f"[{platform}]"
     raw_href = str(item.get("externalUrl") or "")
     if not raw_href:
@@ -1744,16 +1743,13 @@ def render_newsletter_item(
             'font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">'
             f"{inline_markdown_to_html(description)}</div>"
         )
-    detail_summary_html = ""
-    if detail_summary:
-        detail_summary_html = (
-            '<div style="margin:10px 0 0;padding:10px 0 0;border-top:1px solid #eeeeee;'
-            'color:#333333;font-size:13px;line-height:1.58;'
-            'font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">'
-            f"{inline_markdown_to_html(detail_summary)} "
-            f'<a href="{href}" style="color:#111111;text-decoration:underline;text-underline-offset:3px;">더보기</a>'
-            '</div>'
-        )
+    detail_summary_html = (
+        '<div style="margin:10px 0 0;padding:10px 0 0;border-top:1px solid #eeeeee;'
+        'color:#333333;font-size:13px;line-height:1.58;'
+        'font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">'
+        f'<a href="{href}" style="color:#111111;text-decoration:underline;text-underline-offset:3px;">더보기</a>'
+        '</div>'
+    )
 
     category_html = ""
     if category:
@@ -1862,9 +1858,7 @@ def render_combined_newsletter(
             "LOGO_SRC": html.escape(magazine_asset_href(EMAIL_LOGO_ASSET_NAME, magazine_base_url), quote=True),
             "KICKER": "NEWSLETTER",
             "DISPLAY_TITLE": html.escape(display_title),
-            "DESCRIPTION": html.escape(
-                f"이번 주 매거진에 업데이트된 {selected_labels or '선택한 카테고리'} 이슈입니다. 상세 내용은 각 매거진 링크에서 확인하세요."
-            ),
+            "DESCRIPTION": html.escape(f"{display_title[:10]} 기준 {selected_labels or '선택한 카테고리'} 업데이트입니다. 상세 내용은 각 매거진 링크에서 확인하세요."),
             "BODY": body,
             "FOOTER": newsletter_footer_html(recipient_email, magazine_base_url),
         },
@@ -1902,9 +1896,7 @@ def render_newsletter(
     logo_src = html.escape(magazine_asset_href(EMAIL_LOGO_ASSET_NAME, magazine_base_url), quote=True)
     kicker = html.escape(audience_kicker(audience))
     display_title = html.escape(title)
-    description = html.escape(
-        f"이번 주 매거진에 업데이트된 {audience_description(audience)}입니다. 상세 내용은 각 매거진 링크에서 확인하세요."
-    )
+    description = html.escape(f"{title[:10]} 기준 {audience_label(audience)} 업데이트입니다. 상세 내용은 각 매거진 링크에서 확인하세요.")
     return fill_newsletter_template(
         templates["shell"],
         {
