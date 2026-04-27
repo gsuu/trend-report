@@ -11,6 +11,7 @@ const runsDir = path.join(root, "runs");
 const EDITORIAL_GUIDES = [
   "scripts/tracking/new_collection.py",
   "docs/data-collection-strategy.md",
+  "docs/target-fit-classifier-agent.md",
   "docs/editorial-style-guide.md",
 ];
 
@@ -197,8 +198,66 @@ function sourceReviewNote(article) {
   return "출처 신뢰도를 AI가 재확인해야 합니다.";
 }
 
+function targetFit(article) {
+  const area = areaLabel(article);
+  const category = categoryLabel(article);
+  const text = `${article.source || ""} ${article.title || ""} ${article.content || ""}`.toLowerCase();
+  const ecommerceSignal = /(이커머스|커머스|쇼핑|상품|상품상세|장바구니|결제|구매|주문|배송|리뷰|추천|검색|멤버십|쿠폰|포인트|재구매|crm|픽업|재고|commerce|ecommerce|marketplace|cart|checkout|product|review|recommendation|membership)/i.test(text);
+  const weakPromo = /(카드|제휴카드|삼성카드|멤버스데이|할인전|기획전|프로모션|쿠폰|e쿠폰|콘텐츠 제휴|파트너십|campaign|promotion|partnership|coupon)/i.test(text);
+  const aiIntegration = /(claude|chatgpt|gemini|외부 ai|연동|integration)/i.test(text);
+  const screenSignal = /(홈|검색|상품상세|장바구니|결제|마이페이지|리뷰|추천|멤버십|알림|재구매|관리자|운영도구|dashboard|checkout|cart|product page|review|recommendation|screen|ui|ux|flow|workflow|mcp|accessibility|css|html|javascript|browser|design system)/i.test(text);
+  const explicitScreenSignal = /(화면|스크린|플로우|진입|버튼|상태값|상품상세|장바구니|결제 화면|checkout|cart|product page|screen|flow|cta)/i.test(text);
+
+  if (area === "DEV" || area === "Design") {
+    return {
+      label: "design_dev_reference",
+      priority: screenSignal ? "P1" : "P2",
+      reason: "디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.",
+    };
+  }
+
+  if ((weakPromo || aiIntegration) && !explicitScreenSignal) {
+    return {
+      label: "weak_promo",
+      priority: "제외 검토",
+      reason: "제휴, 프로모션, 쿠폰, 콘텐츠/AI 연동 성격이 강합니다. 화면·플로우 근거가 없으면 shortlist에서 제외합니다.",
+    };
+  }
+
+  if (["ecommerce", "fashion", "beauty", "department_store"].includes(category) && ecommerceSignal && screenSignal) {
+    return {
+      label: "core_ecommerce",
+      priority: "P0",
+      reason: "상품 탐색, 구매, 결제, 멤버십, 리뷰, 추천 등 이커머스 여정에 직접 연결되는 후보입니다.",
+    };
+  }
+
+  if (area === "Service" && ecommerceSignal && screenSignal && !weakPromo) {
+    return {
+      label: "commerce_adjacent",
+      priority: "P1",
+      reason: "이커머스가 아니어도 신뢰, 결제, 추천, 운영 UX처럼 고객 여정에 대입 가능한 후보입니다.",
+    };
+  }
+
+  if (weakPromo || aiIntegration) {
+    return {
+      label: "weak_promo",
+      priority: "제외 검토",
+      reason: "제휴, 프로모션, 쿠폰, 콘텐츠/AI 연동 성격이 강합니다. 화면·플로우 근거가 없으면 shortlist에서 제외합니다.",
+    };
+  }
+
+  return {
+    label: "exclude",
+    priority: "P2/제외 검토",
+    reason: "CTTD 이커머스 고객 회의에서 바로 쓸 화면·모듈·정책 질문이 남는지 추가 확인이 필요합니다.",
+  };
+}
+
 function collectedArticle(article) {
   const image = usableImageUrl(article.image || article.imageUrl || article.ogImage || "", article.link);
+  const fit = targetFit(article);
   return {
     title: cleanDisplayText(article.title),
     link: article.link,
@@ -210,6 +269,9 @@ function collectedArticle(article) {
     area: areaLabel(article),
     category: categoryLabel(article),
     roleTags: roleTags(article),
+    targetFit: fit.label,
+    shortlistPriority: fit.priority,
+    targetFitReason: fit.reason,
     image,
     summary: shortText(article.content || article.title, 360),
     machineStatus: "candidate",
@@ -237,7 +299,11 @@ function uniqueArticles(articles) {
 
 function sortArticles(a, b) {
   const areaOrder = { Service: 0, Design: 1, DEV: 2 };
+  const fitOrder = { core_ecommerce: 0, commerce_adjacent: 1, design_dev_reference: 2, weak_promo: 8, exclude: 9 };
+  const serviceCategoryOrder = { ecommerce: 0, fashion: 1, beauty: 2, department_store: 3, platform: 4, fintech: 5, book_content: 6, global_service_ux: 7, ai: 8 };
   return (areaOrder[a.area] ?? 9) - (areaOrder[b.area] ?? 9)
+    || (fitOrder[a.targetFit] ?? 9) - (fitOrder[b.targetFit] ?? 9)
+    || (serviceCategoryOrder[a.category] ?? 9) - (serviceCategoryOrder[b.category] ?? 9)
     || String(b.pubDate || "").localeCompare(String(a.pubDate || ""))
     || String(a.source || "").localeCompare(String(b.source || ""));
 }
@@ -253,6 +319,9 @@ function articleBrief(article, index) {
     `- 날짜: ${article.pubDate}`,
     `- 대분류: ${article.area}`,
     `- 카테고리: ${article.category}`,
+    `- 타겟 적합성: ${article.targetFit}`,
+    `- shortlist 우선순위: ${article.shortlistPriority}`,
+    `- 적합성 메모: ${article.targetFitReason}`,
     `- 직무 태그: ${article.roleTags.join(", ") || "AI 확인 필요"}`,
     `- 출처 유형: ${article.sourceType}`,
     `- 후보 발견 출처: ${article.source || "확인 필요"}`,
@@ -290,9 +359,10 @@ function editorialBriefMarkdown(data) {
     "",
     "- `scripts/tracking/new_collection.py`의 카테고리별 관찰 포인트와 DEV 필수 수집 원칙을 읽습니다.",
     "- `docs/data-collection-strategy.md` 기준으로 후보 발견 출처와 최종 기준 원문을 분리합니다.",
+    "- `docs/target-fit-classifier-agent.md` 기준으로 후보를 `core_ecommerce / commerce_adjacent / design_dev_reference / weak_promo / exclude`로 먼저 분류합니다.",
     "- `docs/editorial-style-guide.md` 기준으로 타겟이 궁금해할 정보만 남깁니다.",
     "- 각 후보를 `채택 / 보류 / 제외`로 판단하고 사유를 남깁니다.",
-    "- 최종 원고 작성 기준 후보는 20~30개 사이로 `shortlist-20-30.md`에 정리합니다.",
+    "- 최종 원고 작성 기준 후보는 이커머스 core 후보를 최우선으로 20~30개 사이 `shortlist-20-30.md`에 정리합니다.",
     "- `shortlist-20-30.md`는 다시 4~7개로 줄이는 예비 목록이 아니라, 원문 검증 후 그대로 `magazine-report.md`로 작성할 기준 목록입니다.",
     "- 카드 제휴, 쿠폰/e쿠폰, 콘텐츠 제휴, 외부 AI 연동, 멤버십 프로모션은 원문에서 화면·플로우·정책 변화가 확인될 때만 채택합니다.",
     "- `혜택 조건을 쉽게`, `결제 후 다음 거래`, `추천을 안전하게 연결`처럼 어느 서비스에도 붙는 일반론만 남는 후보는 제외합니다.",
@@ -331,7 +401,7 @@ async function writeOutputs(articles, date) {
     date,
     purpose: "collection_classification_source_only",
     editorialGuides: EDITORIAL_GUIDES,
-    nextStep: "AI가 editorialGuides와 editorial-brief.md를 읽고 shortlist-20-30.md를 만든 뒤, shortlist 항목을 그대로 기준으로 magazine-report.md 작성을 수행합니다.",
+    nextStep: "AI가 editorialGuides와 editorial-brief.md를 읽고 타겟 적합성 분류를 먼저 수행한 뒤, 이커머스 core 후보를 최우선으로 shortlist-20-30.md를 만들고 magazine-report.md 작성을 수행합니다.",
     articles,
   };
 
