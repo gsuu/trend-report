@@ -1301,16 +1301,11 @@ def fill_newsletter_template(template: str, values: dict[str, str]) -> str:
 
 
 def audience_title(default_title: str, audience: str) -> str:
-    audience = normalize_audience(audience)
-    if audience in {"service", "design", "general", "dev"}:
-        return audience_display_title(audience)
-    if audience != "general":
-        return f"{default_title} - {audience_label(audience)}"
     return default_title
 
 
-def audience_subject(audience: str) -> str:
-    return f"{NEWSLETTER_SUBJECT_PREFIX} {WEB_TREND_TITLE}"
+def audience_subject(title: str) -> str:
+    return f"{NEWSLETTER_SUBJECT_PREFIX} {title}"
 
 
 def is_develop_issue(category: str, tags: list[str]) -> bool:
@@ -1862,7 +1857,7 @@ def render_combined_newsletter(
     return fill_newsletter_template(
         templates["shell"],
         {
-            "PAGE_TITLE": html.escape(display_title),
+            "PAGE_TITLE": html.escape(audience_subject(display_title)),
             "PREHEADER": "UIUX/Web Service 주간 트렌드 리포트",
             "LOGO_SRC": html.escape(magazine_asset_href(EMAIL_LOGO_ASSET_NAME, magazine_base_url), quote=True),
             "KICKER": "NEWSLETTER",
@@ -1906,14 +1901,14 @@ def render_newsletter(
 
     logo_src = html.escape(magazine_asset_href(EMAIL_LOGO_ASSET_NAME, magazine_base_url), quote=True)
     kicker = html.escape(audience_kicker(audience))
-    display_title = html.escape(audience_display_title(audience))
+    display_title = html.escape(title)
     description = html.escape(
         f"이번 주 매거진에 업데이트된 {audience_description(audience)}입니다. 상세 내용은 각 매거진 링크에서 확인하세요."
     )
     return fill_newsletter_template(
         templates["shell"],
         {
-            "PAGE_TITLE": html.escape(title),
+            "PAGE_TITLE": html.escape(audience_subject(title)),
             "PREHEADER": "UIUX/Web Service 주간 트렌드 리포트",
             "LOGO_SRC": logo_src,
             "KICKER": kicker,
@@ -2130,12 +2125,12 @@ def newsletter_title_for_audience(default_title: str, args: argparse.Namespace, 
     return audience_title(default_title, audience)
 
 
-def newsletter_subject_for_audience(args: argparse.Namespace, audience: str) -> str:
+def newsletter_subject_for_audience(title: str, args: argparse.Namespace, audience: str) -> str:
     if args.subject and args.audience != "subscriptions":
         return args.subject
     if args.subject:
         return f"{args.subject} - {audience_label(audience)}"
-    return audience_subject(audience)
+    return audience_subject(title)
 
 
 def smtp_config() -> dict[str, str | int | bool]:
@@ -2198,7 +2193,7 @@ def main() -> None:
     slug = str(magazine_report.get("newsletterDate") or magazine_report.get("slug") or "magazine-current")
     report_path = Path(args.report) if args.report else Path(f"{slug}-magazine.md")
     markdown = f"# {magazine_report.get('title') or 'CTTD Trend Magazine'}\n"
-    default_title = str(magazine_report.get("title") or "CTTD Trend Magazine")
+    default_title = web_trend_title(magazine_report)
     magazine_base_url = resolve_magazine_base_url(args.magazine_base_url, args.stage)
 
     if args.send and not magazine_base_url:
@@ -2269,7 +2264,7 @@ def main() -> None:
     for audience in concrete_audiences(args.audience):
         scoped_args = audience_args(args, audience)
         title = newsletter_title_for_audience(default_title, args, audience)
-        subject = newsletter_subject_for_audience(args, audience)
+        subject = newsletter_subject_for_audience(title, args, audience)
         newsletter_items = notion_report_items(magazine_report, audience)
         if args.send and not newsletter_items:
             raise SystemExit(f"{audience_label(audience)} 대상에 포함되는 이슈가 없어 발송을 중단합니다.")
