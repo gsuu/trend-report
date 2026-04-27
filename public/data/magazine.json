@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-27T15:10:16.314322+00:00",
+  "generatedAt": "2026-04-27T23:00:22.361519+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -578,7 +578,7 @@
         "area": "Design",
         "categoryKey": "ai",
         "category": "AI",
-        "date": "2026-04-27",
+        "date": "2025-08-06",
         "route": "/articles/2026-04-27-04",
         "href": "/articles/2026-04-27-04",
         "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-04",
@@ -594,7 +594,7 @@
         "facts": [
           {
             "label": "발행날짜",
-            "valueHtml": "2026-04-27"
+            "valueHtml": "2025-08-06"
           },
           {
             "label": "태그",
@@ -761,7 +761,7 @@
         "area": "Design",
         "categoryKey": "ai",
         "category": "AI",
-        "date": "2026-04-27",
+        "date": "2025-10-28",
         "route": "/articles/2026-04-27-05",
         "href": "/articles/2026-04-27-05",
         "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-05",
@@ -777,7 +777,7 @@
         "facts": [
           {
             "label": "발행날짜",
-            "valueHtml": "2026-04-27"
+            "valueHtml": "2025-10-28"
           },
           {
             "label": "태그",
@@ -944,7 +944,7 @@
         "area": "Design",
         "categoryKey": "design_system",
         "category": "design_system",
-        "date": "2026-04-27",
+        "date": "2023-03-02",
         "route": "/articles/2026-04-27-06",
         "href": "/articles/2026-04-27-06",
         "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-06",
@@ -960,7 +960,7 @@
         "facts": [
           {
             "label": "발행날짜",
-            "valueHtml": "2026-04-27"
+            "valueHtml": "2023-03-02"
           },
           {
             "label": "태그",
@@ -1127,7 +1127,7 @@
         "area": "Design",
         "categoryKey": "ai",
         "category": "AI",
-        "date": "2026-04-27",
+        "date": "2026-04-10",
         "route": "/articles/2026-04-27-07",
         "href": "/articles/2026-04-27-07",
         "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-07",
@@ -1143,7 +1143,7 @@
         "facts": [
           {
             "label": "발행날짜",
-            "valueHtml": "2026-04-27"
+            "valueHtml": "2026-04-10"
           },
           {
             "label": "태그",
@@ -1310,7 +1310,7 @@
         "area": "Design",
         "categoryKey": "ai",
         "category": "AI",
-        "date": "2026-04-27",
+        "date": "2026-02-22",
         "route": "/articles/2026-04-27-08",
         "href": "/articles/2026-04-27-08",
         "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-08",
@@ -1326,7 +1326,7 @@
         "facts": [
           {
             "label": "발행날짜",
-            "valueHtml": "2026-04-27"
+            "valueHtml": "2026-02-22"
           },
           {
             "label": "태그",
@@ -1859,7 +1859,7 @@
         "area": "DEV",
         "categoryKey": "ai",
         "category": "AI",
-        "date": "2026-04-27",
+        "date": "2025-06-04",
         "route": "/articles/2026-04-27-11",
         "href": "/articles/2026-04-27-11",
         "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-11",
@@ -1875,7 +1875,7 @@
         "facts": [
           {
             "label": "발행날짜",
-            "valueHtml": "2026-04-27"
+            "valueHtml": "2025-06-04"
           },
           {
             "label": "태그",
@@ -2037,7 +2037,7 @@
         "area": "DEV",
         "categoryKey": "design_system",
         "category": "design_system",
-        "date": "2026-04-27",
+        "date": "2024-05-22",
         "route": "/articles/2026-04-27-12",
         "href": "/articles/2026-04-27-12",
         "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-12",
@@ -2053,7 +2053,7 @@
         "facts": [
           {
             "label": "발행날짜",
-            "valueHtml": "2026-04-27"
+            "valueHtml": "2024-05-22"
           },
           {
             "label": "태그",
@@ -2215,7 +2215,7 @@
         "area": "DEV",
         "categoryKey": "ai",
         "category": "AI",
-        "date": "2026-04-27",
+        "date": "2026-04-15",
         "route": "/articles/2026-04-27-13",
         "href": "/articles/2026-04-27-13",
         "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-13",
@@ -2231,7 +2231,7 @@
         "facts": [
           {
             "label": "발행날짜",
-            "valueHtml": "2026-04-27"
+            "valueHtml": "2026-04-15"
           },
           {
             "label": "태그",

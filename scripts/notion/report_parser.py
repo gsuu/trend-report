@@ -7,6 +7,8 @@ import json
 import os
 import re
 from dataclasses import dataclass, field
+from datetime import datetime
+from email.utils import parsedate_to_datetime
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.error import URLError
@@ -675,6 +677,91 @@ def validate_service_article_fit(path: Path, report: "Report") -> None:
         )
 
 
+def normalize_source_url(url: str) -> str:
+    value = (url or "").strip()
+    if not value:
+        return ""
+    return value.split("#", 1)[0].rstrip("/")
+
+
+def parse_source_date(value: str) -> str:
+    text = re.sub(r"\s+", " ", (value or "").strip())
+    if not text:
+        return ""
+
+    iso_match = re.search(r"\d{4}-\d{2}-\d{2}", text)
+    if iso_match:
+        return iso_match.group(0)
+
+    for parser in (
+        parsedate_to_datetime,
+        lambda item: datetime.strptime(item, "%B %d, %Y"),
+        lambda item: datetime.strptime(item, "%b %d, %Y"),
+        lambda item: datetime.strptime(item, "%Y.%m.%d"),
+        lambda item: datetime.strptime(item, "%Y/%m/%d"),
+    ):
+        try:
+            parsed = parser(text)
+        except (TypeError, ValueError, IndexError, OverflowError):
+            continue
+        return parsed.date().isoformat()
+    return ""
+
+
+def source_date_audit_index(path: Path) -> dict[str, str]:
+    audit_path = path.parent / "source-date-audit.json"
+    if not audit_path.exists():
+        return {}
+
+    try:
+        payload = json.loads(audit_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SystemExit(f"{audit_path}: 원문 날짜 감사 파일을 읽지 못했습니다.") from exc
+
+    if not isinstance(payload, list):
+        raise SystemExit(f"{audit_path}: 원문 날짜 감사 파일은 배열이어야 합니다.")
+
+    index: dict[str, str] = {}
+    for item in payload:
+        if not isinstance(item, dict):
+            continue
+        source_date = parse_source_date(str(item.get("date") or ""))
+        if not source_date:
+            continue
+        for key in ("url", "finalUrl"):
+            source_url = normalize_source_url(str(item.get(key) or ""))
+            if source_url:
+                index[source_url] = source_date
+    return index
+
+
+def validate_issue_source_dates(path: Path, report: "Report") -> None:
+    audit_index = source_date_audit_index(path)
+    if not audit_index:
+        return
+
+    errors: list[str] = []
+    for issue in report.issues:
+        source_url = normalize_source_url(issue.meta.get("출처 URL", ""))
+        if not source_url:
+            continue
+        source_date = audit_index.get(source_url)
+        if not source_date:
+            continue
+        issue_date = parse_source_date(issue.meta.get("날짜", ""))
+        if issue_date != source_date:
+            issue_label = f"{issue.number.zfill(2)}. [{issue.platform}] {issue.title}"
+            errors.append(
+                f"- {issue_label}: 날짜 `{issue.meta.get('날짜', '')}` → 원문 기준 `{source_date}`"
+            )
+
+    if errors:
+        raise SystemExit(
+            f"{path}: 아티클 날짜가 원문 기준 날짜와 다릅니다.\n"
+            + "\n".join(errors)
+        )
+
+
 def slugify(value: str) -> str:
     slug = re.sub(r"[^0-9a-zA-Z가-힣]+", "-", value.lower()).strip("-")
     return slug or "article"
@@ -998,6 +1085,7 @@ def parse_report(path: Path) -> Report:
     slug = path.stem.replace("-uiux-web-service-weekly-trend-report", "")
     report = Report(path, slug, title, period, summary, issues, next_week)
     validate_service_article_fit(path, report)
+    validate_issue_source_dates(path, report)
     return report
 
 
@@ -1418,7 +1506,9 @@ def featured_issues(report: Report) -> list[Issue]:
     return selected
 
 
-def issue_display_date(report: Report) -> str:
+def issue_display_date(report: Report, issue: Issue | None = None) -> str:
+    if issue is not None:
+        return parse_source_date(issue.meta.get("날짜", "")) or issue.meta.get("날짜", "") or report.slug
     return report.slug
 
 
@@ -1430,7 +1520,7 @@ def render_issue_row(report: Report, issue: Issue, compact: bool = False) -> str
     <article class="{row_class}">
       <a class="issue-number" href="{issue_href(report, issue)}">{issue.number.zfill(2)}</a>
       <div class="issue-main">
-        <p>{clean_inline(category)} / {clean_inline(issue.platform)} / {clean_inline(issue_display_date(report))}</p>
+        <p>{clean_inline(category)} / {clean_inline(issue.platform)} / {clean_inline(issue_display_date(report, issue))}</p>
         <h3><a href="{issue_href(report, issue)}">{clean_inline(issue_display_title(issue))}</a></h3>
       </div>
       <div class="tag-row">{tags}</div>
@@ -1451,7 +1541,7 @@ def render_latest_card(report: Report, issue: Issue) -> str:
       <a class="latest-thumb" href="{issue_href(report, issue)}">{image}</a>
       <div class="latest-meta">
         <span>{clean_inline(category)} / {clean_inline(issue.platform)}</span>
-        <span>{clean_inline(issue_display_date(report))}</span>
+        <span>{clean_inline(issue_display_date(report, issue))}</span>
       </div>
       <h3><a href="{issue_href(report, issue)}">{clean_inline(issue_display_title(issue))}</a></h3>
       <div class="tag-row">{tags}</div>
@@ -1486,7 +1576,7 @@ def render_feed_item(report: Report, issue: Issue) -> str:
           <span>{clean_inline(category)} / {clean_inline(issue.platform)} ↗</span>
         </p>
         <h2><a href="{issue_href(report, issue)}">{clean_inline(issue_display_title(issue))}</a></h2>
-        <p class="story-date">{clean_inline(issue_display_date(report))}</p>
+        <p class="story-date">{clean_inline(issue_display_date(report, issue))}</p>
       </div>
     </article>
     """
@@ -2032,7 +2122,7 @@ def report_payload(report: Report) -> dict[str, object]:
         facts = [
             {
                 "label": "발행날짜" if key == "날짜" else key,
-                "valueHtml": clean_inline(issue_display_date(report) if key == "날짜" else value),
+                "valueHtml": clean_inline(issue_display_date(report, issue) if key == "날짜" else value),
             }
             for key, value in issue.meta.items()
             if not is_hidden_fact_key(key)
@@ -2045,7 +2135,7 @@ def report_payload(report: Report) -> dict[str, object]:
                 "area": issue_area_label(issue),
                 "categoryKey": issue_category_key(issue),
                 "category": issue_category_label(issue),
-                "date": issue_display_date(report),
+                "date": issue_display_date(report, issue),
                 "route": issue_route(issue),
                 "href": issue_href(report, issue),
                 "articleUrl": absolute_site_url(issue_href(report, issue)),
@@ -2089,7 +2179,7 @@ def render_compact_link(report: Report, issue: Issue) -> str:
 def render_article(report: Report, issue: Issue) -> str:
     tags = " ".join(f"<span>#{clean_inline(tag)}</span>" for tag in issue.tags)
     facts = "\n".join(
-        f"<li><span>{clean_inline('발행날짜' if key == '날짜' else key)}</span>{clean_inline(issue_display_date(report) if key == '날짜' else value)}</li>"
+        f"<li><span>{clean_inline('발행날짜' if key == '날짜' else key)}</span>{clean_inline(issue_display_date(report, issue) if key == '날짜' else value)}</li>"
         for key, value in issue.meta.items()
         if not is_hidden_fact_key(key)
     )
@@ -2140,7 +2230,7 @@ def render_article(report: Report, issue: Issue) -> str:
         <p class="article-deck">{clean_inline(issue_display_description(issue))}</p>
         <div class="article-meta-row">
           <div class="article-meta">
-            <time>{clean_inline(issue_display_date(report))}</time>
+            <time>{clean_inline(issue_display_date(report, issue))}</time>
             <span aria-hidden="true">|</span>
             <span class="category-label">{issue_category_label(issue)}</span>
           </div>

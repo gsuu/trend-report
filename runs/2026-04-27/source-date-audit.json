@@ -87,7 +87,7 @@
     "url": "https://openai.com/index/introducing-workspace-agents-in-chatgpt",
     "status": 403,
     "finalUrl": "https://openai.com/index/introducing-workspace-agents-in-chatgpt",
-    "date": ""
+    "date": "2026-04-22"
   },
   {
     "num": "11",
@@ -96,7 +96,25 @@
     "url": "https://openai.com/index/introducing-chatgpt-images-2-0/",
     "status": 403,
     "finalUrl": "https://openai.com/index/introducing-chatgpt-images-2-0/",
-    "date": ""
+    "date": "2026-04-21"
+  },
+  {
+    "num": "11A",
+    "platform": "Figma",
+    "title": "The future of design systems is automated",
+    "url": "https://www.figma.com/blog/the-future-of-design-systems-is-automated/",
+    "status": 200,
+    "finalUrl": "https://www.figma.com/blog/the-future-of-design-systems-is-automated/",
+    "date": "2023-03-02"
+  },
+  {
+    "num": "11B",
+    "platform": "Into Design Systems",
+    "title": "How Spotify is Making Their Design System AI-Ready",
+    "url": "https://www.intodesignsystems.com/blog/how-spotify-design-system-ai-ready",
+    "status": 200,
+    "finalUrl": "https://www.intodesignsystems.com/blog/how-spotify-design-system-ai-ready",
+    "date": "2026-02-22"
   },
   {
     "num": "12",
@@ -222,6 +240,15 @@
     "url": "https://developer.chrome.com/blog/manifest-localization?hl=en",
     "status": 200,
     "finalUrl": "https://developer.chrome.com/blog/manifest-localization?hl=en",
-    "date": ""
+    "date": "2026-04-24"
+  },
+  {
+    "num": "26",
+    "platform": "Figma",
+    "title": "The TL;DR on MCP: Why context matters and how to put it to work",
+    "url": "https://www.figma.com/blog/the-tldr-on-mcp/",
+    "status": 200,
+    "finalUrl": "https://www.figma.com/blog/the-tldr-on-mcp/",
+    "date": "2026-04-15"
   }
 ]
