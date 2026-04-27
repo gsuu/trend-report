@@ -4,6 +4,7 @@ import report from "./data/report.json";
 
 const basePath = detectBasePath();
 const route = ref(currentRoute());
+const showCurrentWeekOnly = ref(hasCurrentWeekFilter(route.value));
 const listRoute = ref(validListRoute(route.value) ? route.value : "/");
 const shareStatus = ref("");
 const viewportWidth = ref(typeof window === "undefined" ? 1440 : window.innerWidth);
@@ -25,6 +26,19 @@ function currentRoute() {
   return `${stripBasePath(window.location.pathname)}${window.location.search || ""}` || "/";
 }
 
+function routePath(value) {
+  return String(value || "").split("?")[0] || "/";
+}
+
+function routeSearchParams(value) {
+  const query = String(value || "").split("?")[1] || "";
+  return new URLSearchParams(query);
+}
+
+function hasCurrentWeekFilter(value) {
+  return routeSearchParams(value).get("week") === "1";
+}
+
 function homePath() {
   return basePath || "/";
 }
@@ -34,8 +48,16 @@ function withBasePath(path) {
   return `${basePath}${path}`;
 }
 
+function withListFilter(path, enabled = showCurrentWeekOnly.value) {
+  if (!enabled) return path;
+  const params = new URLSearchParams();
+  params.set("week", "1");
+  return `${path}?${params.toString()}`;
+}
+
 function syncRoute() {
   route.value = currentRoute();
+  showCurrentWeekOnly.value = hasCurrentWeekFilter(route.value);
   if (validListRoute(route.value)) {
     listRoute.value = route.value;
   }
@@ -63,6 +85,11 @@ onBeforeUnmount(() => {
 });
 
 const issues = computed(() => report.issues || []);
+const recentWeekRange = computed(() => recentDaysRange(7));
+const filteredIssues = computed(() => {
+  if (!showCurrentWeekOnly.value || !recentWeekRange.value) return issues.value;
+  return issues.value.filter((issue) => isDateInRange(issue.date, recentWeekRange.value));
+});
 const activeIssue = computed(() => {
   const match = route.value.match(/^\/articles\/([^/?]+)/);
   if (!match) return null;
@@ -93,7 +120,12 @@ const categories = computed(() => {
         count: 0,
       });
     }
-    categoryMap.get(key).count += 1;
+  }
+  for (const issue of filteredIssues.value) {
+    const key = issue.areaKey || issue.area || "uncategorized";
+    if (categoryMap.has(key)) {
+      categoryMap.get(key).count += 1;
+    }
   }
   const order = { service: 0, design: 1, dev: 2 };
   return [...categoryMap.values()].sort((a, b) => (order[a.key] ?? 99) - (order[b.key] ?? 99));
@@ -101,8 +133,8 @@ const categories = computed(() => {
 
 const activeCategory = computed(() => categories.value.find((category) => category.key === activeCategoryKey.value));
 const categoryIssues = computed(() => activeCategoryKey.value
-  ? issues.value.filter((issue) => issue.areaKey === activeCategoryKey.value)
-  : issues.value);
+  ? filteredIssues.value.filter((issue) => issue.areaKey === activeCategoryKey.value)
+  : filteredIssues.value);
 
 const subcategories = computed(() => {
   const counts = new Map();
@@ -131,7 +163,7 @@ const subcategories = computed(() => {
 });
 
 const visibleIssues = computed(() => {
-  if (!activeCategory.value) return issues.value;
+  if (!activeCategory.value) return filteredIssues.value;
   if (!activeSubcategory.value) return categoryIssues.value;
   return categoryIssues.value.filter((issue) => issue.categoryKey === activeSubcategory.value);
 });
@@ -157,20 +189,26 @@ const masonryColumns = computed(() => {
 });
 
 const currentListRoute = computed(() => listRoute.value);
+const emptyStateTitle = computed(() => (showCurrentWeekOnly.value ? "최근 1주일 업데이트가 없습니다." : report.title));
+const emptyStateDescription = computed(() => (
+  showCurrentWeekOnly.value
+    ? "오늘 기준 최근 7일 안에 등록된 업데이트가 없습니다."
+    : report.description
+));
 
 const detailReturnRoute = computed(() => {
   const routeParam = routeReturnParam();
   if (routeParam) return routeParam;
-  if (activeIssue.value?.areaKey) return `/category/${activeIssue.value.areaKey}`;
-  return "/";
+  if (activeIssue.value?.areaKey) return withListFilter(`/category/${activeIssue.value.areaKey}`);
+  return withListFilter("/");
 });
 
 function categoryPath(key) {
-  return withBasePath(`/category/${key}`);
+  return withBasePath(withListFilter(`/category/${key}`));
 }
 
 function subcategoryPath(categoryKey, subcategoryKey) {
-  return withBasePath(`/category/${categoryKey}/${subcategoryKey}`);
+  return withBasePath(withListFilter(`/category/${categoryKey}/${subcategoryKey}`));
 }
 
 function storyRoute(issue) {
@@ -179,7 +217,8 @@ function storyRoute(issue) {
 }
 
 function validListRoute(value) {
-  return value === "/" || value === "" || /^\/category\/(service|design|dev|uiux)(?:\/[^?&]+)?$/.test(value || "");
+  const path = routePath(value);
+  return path === "/" || path === "" || /^\/category\/(service|design|dev|uiux)(?:\/[^?&]+)?$/.test(path);
 }
 
 function routeReturnParam() {
@@ -191,6 +230,15 @@ function routeReturnParam() {
 
 function goToList() {
   window.location.href = withBasePath(detailReturnRoute.value);
+}
+
+function toggleCurrentWeekOnly(event) {
+  const enabled = Boolean(event.target.checked);
+  const nextRoute = withListFilter(routePath(currentListRoute.value), enabled);
+  window.history.pushState({}, "", withBasePath(nextRoute));
+  route.value = nextRoute;
+  listRoute.value = nextRoute;
+  showCurrentWeekOnly.value = enabled;
 }
 
 function plainText(htmlText) {
@@ -269,6 +317,36 @@ function summaryItemClass(item) {
   const text = String(item);
   return /^([^:：]{2,18})[:：]\s*(.+)$/.test(text) ? "" : "summary-note-row";
 }
+function kstTodayStart() {
+  const now = new Date();
+  const kstNow = new Date(now.getTime() + 9 * 60 * 60 * 1000);
+  return new Date(Date.UTC(
+    kstNow.getUTCFullYear(),
+    kstNow.getUTCMonth(),
+    kstNow.getUTCDate(),
+  ));
+}
+
+function recentDaysRange(days) {
+  const safeDays = Math.max(1, Number(days) || 1);
+  const end = kstTodayStart();
+  end.setUTCDate(end.getUTCDate() + 1);
+  const start = new Date(end);
+  start.setUTCDate(end.getUTCDate() - safeDays);
+  return { start, end };
+}
+
+function dateFromIsoDay(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value || ""))) return null;
+  const [year, month, day] = value.split("-").map(Number);
+  return new Date(Date.UTC(year, month - 1, day));
+}
+
+function isDateInRange(value, range) {
+  const date = dateFromIsoDay(value);
+  if (!date || !range) return false;
+  return date >= range.start && date < range.end;
+}
 </script>
 
 <template>
@@ -276,12 +354,12 @@ function summaryItemClass(item) {
     <a class="header-back-link" :href="withBasePath(detailReturnRoute)" aria-label="목록으로 돌아가기">
       <span aria-hidden="true">←</span>
     </a>
-    <a class="brand" :href="homePath()" aria-label="CTTD Trend Magazine home">
+    <a class="brand" :href="withBasePath(withListFilter('/'))" aria-label="CTTD Trend Magazine home">
       <img src="/assets/cttd-logo.svg" alt="CTTD">
       <span>Magazine</span>
     </a>
     <nav class="header-category-nav" aria-label="매거진 카테고리">
-      <a :href="homePath()" data-category-nav="" :class="{ 'is-active': !activeCategoryKey && !activeIssue }">전체</a>
+      <a :href="withBasePath(withListFilter('/'))" data-category-nav="" :class="{ 'is-active': !activeCategoryKey && !activeIssue }">전체</a>
       <a
         v-for="category in categories"
         :key="category.key"
@@ -382,6 +460,13 @@ function summaryItemClass(item) {
           </div>
         </section>
 
+        <section class="list-toolbar" aria-label="목록 필터">
+          <label class="week-filter-toggle">
+            <input type="checkbox" :checked="showCurrentWeekOnly" @change="toggleCurrentWeekOnly">
+            <span>최근 1주일 업데이트만 보기</span>
+          </label>
+        </section>
+
         <section
           v-if="visibleIssues.length"
           class="guide-grid"
@@ -408,8 +493,8 @@ function summaryItemClass(item) {
         </section>
 
         <section v-else class="empty-state">
-          <h1>{{ report.title }}</h1>
-          <p>{{ report.description }}</p>
+          <h1>{{ emptyStateTitle }}</h1>
+          <p>{{ emptyStateDescription }}</p>
         </section>
     </section>
   </main>

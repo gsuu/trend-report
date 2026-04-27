@@ -267,6 +267,68 @@ main {
   gap: 8px;
 }
 
+.list-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 24px;
+}
+
+.week-filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.week-filter-toggle input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid #111111;
+  border-radius: 4px;
+  background: var(--paper);
+  cursor: pointer;
+}
+
+.week-filter-toggle input:checked {
+  border-color: #111111;
+  border-radius: 4px;
+  background-color: #111111;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3.5 8.5 6.5 11.5 12.5 5.5'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+}
+
+.week-filter-toggle input:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+.empty-state {
+  padding: 48px 0 80px;
+  border-top: 1px solid var(--line);
+}
+
+.empty-state h1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.empty-state p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
 .guide-grid {
   display: grid;
   grid-template-columns: repeat(var(--masonry-columns, 4), minmax(0, 1fr));
@@ -1326,6 +1388,14 @@ main {
     gap: 12px;
     margin-bottom: 24px;
     padding-bottom: 0;
+  }
+
+  .list-toolbar {
+    margin-bottom: 20px;
+  }
+
+  .week-filter-toggle {
+    font-size: 13px;
   }
 
   .guide-grid {
