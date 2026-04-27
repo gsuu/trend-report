@@ -231,6 +231,14 @@ function weekRangeLabel(range) {
   return `${formatKstDateTime(range.startKst)} ~ ${formatKstDateTime(range.endKst)} 전`;
 }
 
+function weekRangeDateLabel(range) {
+  return range.endKst.toISOString().slice(0, 10);
+}
+
+function newsletterTitle(range) {
+  return `${weekRangeDateLabel(range)} Weekly Web Trends`;
+}
+
 function dateInKstWeek(value, range) {
   if (!value) return false;
   const date = /^\d{4}-\d{2}-\d{2}$/.test(value)
@@ -457,6 +465,7 @@ function renderNewsletter(audiences, issuesByAudience, weekRange, recipientEmail
   const selectedAudiences = audiences.filter((audience) => NEWSLETTER_AUDIENCES.includes(audience));
   const logoSrc = `${siteUrl()}/assets/cttd-logo-email.png`;
   const rangeText = weekRangeLabel(weekRange);
+  const title = newsletterTitle(weekRange);
   const templates = loadNewsletterTemplates();
   let displayNumber = 1;
   const bodyParts = [];
@@ -475,19 +484,19 @@ function renderNewsletter(audiences, issuesByAudience, weekRange, recipientEmail
   const selectedLabels = selectedAudiences.map((audience) => NEWSLETTER_AUDIENCE_LABELS[audience]).join(", ");
 
   return fillNewsletterTemplate(templates.shell, {
-    PAGE_TITLE: htmlEscape("[CTTD] Weekly Web Trends"),
+    PAGE_TITLE: htmlEscape(`[CTTD] ${title}`),
     PREHEADER: "Service/Design/DEV 주간 트렌드 리포트",
     LOGO_SRC: htmlEscape(logoSrc),
     KICKER: "NEWSLETTER",
-    DISPLAY_TITLE: "Weekly Web Trends",
+    DISPLAY_TITLE: htmlEscape(title),
     DESCRIPTION: htmlEscape(`${rangeText} 기준 ${selectedLabels || "선택한 카테고리"} 업데이트입니다. 상세 내용은 각 매거진 링크에서 확인하세요.`),
     BODY: body,
     FOOTER: footerHtml(recipientEmail),
   });
 }
 
-function audienceSubject() {
-  return "[CTTD] Weekly Web Trends";
+function audienceSubject(weekRange) {
+  return `[CTTD] ${newsletterTitle(weekRange)}`;
 }
 
 function footerHtml(recipientEmail = "") {
@@ -515,8 +524,7 @@ function renderPlainText(audiences, issuesByAudience, weekRange, recipientEmail 
     ]));
   }
   return [
-    "CTTD Weekly Web Trends",
-    weekRangeLabel(weekRange),
+    `CTTD ${newsletterTitle(weekRange)}`,
     "",
     ...issueLines,
     unsubscribeLink ? `구독 해지: ${unsubscribeLink}` : "",
@@ -550,7 +558,7 @@ async function sendNewsletters(issuesByAudience, weekRange) {
     await transporter.sendMail({
       from: process.env.SMTP_FROM,
       to: subscriber.email,
-      subject: audienceSubject(),
+      subject: audienceSubject(weekRange),
       text: renderPlainText(subscriber.audiences, issuesByAudience, weekRange, subscriber.email),
       html: renderNewsletter(subscriber.audiences, issuesByAudience, weekRange, subscriber.email),
     });

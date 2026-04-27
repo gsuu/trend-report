@@ -797,6 +797,18 @@ def filter_report_to_latest_issue_date(report: dict[str, object]) -> dict[str, o
     }
 
 
+def newsletter_collection_range_label(report: dict[str, object]) -> str:
+    date_text = str(report.get("newsletterDate") or latest_issue_date(report) or "")[:10]
+    if not re.match(r"^\d{4}-\d{2}-\d{2}$", date_text):
+        return ""
+    return date_text
+
+
+def web_trend_title(report: dict[str, object]) -> str:
+    range_label = newsletter_collection_range_label(report)
+    return f"{range_label} {WEB_TREND_TITLE}" if range_label else WEB_TREND_TITLE
+
+
 def section_text_summary(sections: object, limit: int = 128) -> str:
     if not isinstance(sections, list):
         return ""
@@ -1776,6 +1788,7 @@ def render_combined_newsletter(
     items_by_audience: dict[str, list[dict[str, object]]],
     audiences: tuple[str, ...],
     recipient_email: str = "",
+    display_title: str = WEB_TREND_TITLE,
 ) -> str:
     templates = load_newsletter_template_sections()
     body = render_combined_newsletter_body(report_path, items_by_audience, audiences, magazine_base_url)
@@ -1791,11 +1804,11 @@ def render_combined_newsletter(
     return fill_newsletter_template(
         templates["shell"],
         {
-            "PAGE_TITLE": html.escape(WEB_TREND_TITLE),
+            "PAGE_TITLE": html.escape(display_title),
             "PREHEADER": "UIUX/Web Service 주간 트렌드 리포트",
             "LOGO_SRC": html.escape(magazine_asset_href(EMAIL_LOGO_ASSET_NAME, magazine_base_url), quote=True),
             "KICKER": "NEWSLETTER",
-            "DISPLAY_TITLE": WEB_TREND_TITLE,
+            "DISPLAY_TITLE": html.escape(display_title),
             "DESCRIPTION": html.escape(
                 f"이번 주 매거진에 업데이트된 {selected_labels or '선택한 카테고리'} 이슈입니다. 상세 내용은 각 매거진 링크에서 확인하세요."
             ),
@@ -1935,8 +1948,9 @@ def combined_newsletter_plain_text(
     items_by_audience: dict[str, list[dict[str, object]]],
     audiences: tuple[str, ...],
     recipient_email: str = "",
+    display_title: str = WEB_TREND_TITLE,
 ) -> str:
-    lines = [WEB_TREND_TITLE, ""]
+    lines = [display_title, ""]
     display_number = 1
 
     def append_item(item: dict[str, object], number: int) -> None:
@@ -2139,6 +2153,7 @@ def main() -> None:
         ensure_unsubscribe_links_enabled()
 
     if args.audience == "subscriptions":
+        combined_title = web_trend_title(notion_report)
         items_by_audience = {
             audience: notion_report_items(notion_report, audience)
             for audience in SUBSCRIPTION_AUDIENCES
@@ -2150,6 +2165,7 @@ def main() -> None:
             magazine_base_url or None,
             items_by_audience,
             SUBSCRIPTION_AUDIENCES,
+            display_title=combined_title,
         )
         preview_path = save_preview(report_path, preview_html, "subscriptions")
 
@@ -2175,6 +2191,7 @@ def main() -> None:
                 items_by_audience,
                 audiences,
                 recipient,
+                combined_title,
             )
             plain_text = combined_newsletter_plain_text(
                 report_path,
@@ -2182,8 +2199,9 @@ def main() -> None:
                 items_by_audience,
                 audiences,
                 recipient,
+                combined_title,
             )
-            send_email(f"[CTTD] {WEB_TREND_TITLE}", sender, [recipient], plain_text, recipient_html)
+            send_email(f"[CTTD] {combined_title}", sender, [recipient], plain_text, recipient_html)
             sent_count += 1
         if not sent_count:
             raise SystemExit("선택한 카테고리에 포함되는 이슈가 있는 수신자가 없습니다.")
