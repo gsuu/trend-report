@@ -29,6 +29,7 @@ const DESIGN_AREA_KEYS = new Set(["design", "web_design", "webdesign", "product_
 const DEV_AREA_KEYS = new Set(["dev", "develop", "development", "engineering", "fe", "frontend", "frontend_development", "backend", "web_development", "web_develop", "개발", "프론트", "프론트엔드"]);
 const DESIGN_AI_KEYS = new Set(["ai", "ai디자인", "ai이미지", "chatgpt", "claude", "gemini", "figma_ai", "adobe_firefly", "firefly", "photoshop", "canva", "imagen", "veo", "sora", "image_generation", "이미지생성", "프로토타이핑", "디자인ai"]);
 const DEFAULT_SITE_URL = "https://cttd-magazine.vercel.app";
+const ONE_OFF_CRON_SKIP_DATES_KST = new Set(["2026-04-27"]);
 const NEWSLETTER_TEMPLATE_PATH = path.join(process.cwd(), "templates", "newsletter.html");
 const NEWSLETTER_SECTION_PATTERN = /<!-- section:([a-z0-9_-]+) -->\s*([\s\S]*?)\s*<!-- \/section:\1 -->/g;
 let newsletterTemplateCache;
@@ -217,6 +218,22 @@ function isAuthorized(request) {
   const auth = request.headers.authorization || "";
   const url = new URL(request.url, `https://${request.headers.host || "localhost"}`);
   return auth === `Bearer ${secret}` || url.searchParams.get("secret") === secret;
+}
+
+function kstDateString(date = new Date()) {
+  return new Date(date.getTime() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
+}
+
+function pausedCronDatesKst() {
+  const envDates = (process.env.NEWSLETTER_CRON_SKIP_DATES_KST || "")
+    .split(",")
+    .map((date) => date.trim())
+    .filter(Boolean);
+  return new Set([...ONE_OFF_CRON_SKIP_DATES_KST, ...envDates]);
+}
+
+function isNewsletterCronPausedToday() {
+  return pausedCronDatesKst().has(kstDateString());
 }
 
 async function fetchIssuesFromNotion() {
@@ -486,6 +503,11 @@ async function archiveMarkdownToGithub(markdown, weekRange) {
 export default async function handler(request, response) {
   if (!isAuthorized(request)) {
     response.status(401).json({ ok: false, error: "Unauthorized" });
+    return;
+  }
+
+  if (isNewsletterCronPausedToday()) {
+    response.status(200).json({ ok: true, skipped: true, reason: "newsletter cron paused for today", dateKst: kstDateString() });
     return;
   }
 
