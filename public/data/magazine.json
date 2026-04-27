@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-27T14:57:51.064788+00:00",
+  "generatedAt": "2026-04-27T15:07:19.470666+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -2922,193 +2922,15 @@
       },
       {
         "number": "17",
-        "platform": "WebKit",
-        "areaKey": "dev",
-        "area": "DEV",
-        "categoryKey": "update",
-        "category": "Update",
-        "date": "2026-04-23",
-        "route": "/articles/2026-04-27-17",
-        "href": "/articles/2026-04-27-17",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-17",
-        "image": "https://webkit.org/wp-content/themes/webkit/images/preview-card.jpg",
-        "imageCaption": "WebKit 공식 원문 대표 이미지",
-        "tags": [
-          "SafariTP",
-          "브라우저QA",
-          "WebKit"
-        ],
-        "takeawayHtml": "Safari TP 242, 다음 브라우저 QA의 예고편",
-        "deckHtml": "WebKit이 Safari Technology Preview 242 릴리즈 노트를 공개하며 정식 Safari 배포 전에 확인할 웹 플랫폼 변경을 정리했습니다. Safari TP는 정식 배포 전 웹 플랫폼 변경과 브라우저 호환성 이슈를 확인하는 신호입니다.",
-        "facts": [
-          {
-            "label": "발행날짜",
-            "valueHtml": "2026-04-23"
-          },
-          {
-            "label": "태그",
-            "valueHtml": "SafariTP / 브라우저QA / WebKit"
-          },
-          {
-            "label": "국가",
-            "valueHtml": "GLOBAL"
-          },
-          {
-            "label": "카테고리",
-            "valueHtml": "update"
-          },
-          {
-            "label": "직무 태그",
-            "valueHtml": "웹DEV"
-          },
-          {
-            "label": "출처",
-            "valueHtml": "WebKit Blog"
-          }
-        ],
-        "sourceUrl": "https://webkit.org/blog/17934/release-notes-for-safari-technology-preview-242/",
-        "sourceTitle": "WebKit Blog",
-        "referenceLinks": [],
-        "sections": [
-          {
-            "title": "기술 변화 요약",
-            "className": "article-section",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "업데이트: WebKit이 Safari Technology Preview 242 릴리즈 노트를 공개하며 정식 Safari 배포 전에 확인할 웹 플랫폼 변경을 정리했습니다. 원문은 CSS, HTML, Forms, JavaScript처럼 실제 화면 구현과 브라우저 호환성 QA에 닿는 항목을 미리 볼 수 있는 자료입니다."
-              },
-              {
-                "kind": "list",
-                "html": "기술 맥락: Safari TP는 정식 배포 전 웹 플랫폼 변경과 브라우저 호환성 이슈를 확인하는 신호입니다."
-              },
-              {
-                "kind": "list",
-                "html": "변경 전: Safari에서만 달라지는 폼, 스크롤, CSS, JavaScript 동작은 배포 후 발견되기 쉬웠습니다."
-              },
-              {
-                "kind": "list",
-                "html": "변경 후: TP 릴리즈를 통해 다음 QA 항목을 미리 잡을 수 있습니다."
-              },
-              {
-                "kind": "list",
-                "html": "확인할 영향: CTTD 프로젝트에 영향 있는 CSS, HTML, Forms, JavaScript 항목만 골라 테스트해야 합니다."
-              }
-            ],
-            "itemsHtml": [
-              "업데이트: WebKit이 Safari Technology Preview 242 릴리즈 노트를 공개하며 정식 Safari 배포 전에 확인할 웹 플랫폼 변경을 정리했습니다. 원문은 CSS, HTML, Forms, JavaScript처럼 실제 화면 구현과 브라우저 호환성 QA에 닿는 항목을 미리 볼 수 있는 자료입니다.",
-              "기술 맥락: Safari TP는 정식 배포 전 웹 플랫폼 변경과 브라우저 호환성 이슈를 확인하는 신호입니다.",
-              "변경 전: Safari에서만 달라지는 폼, 스크롤, CSS, JavaScript 동작은 배포 후 발견되기 쉬웠습니다.",
-              "변경 후: TP 릴리즈를 통해 다음 QA 항목을 미리 잡을 수 있습니다.",
-              "확인할 영향: CTTD 프로젝트에 영향 있는 CSS, HTML, Forms, JavaScript 항목만 골라 테스트해야 합니다."
-            ]
-          },
-          {
-            "title": "인사이트",
-            "className": "article-section is-deep-dive",
-            "prose": true,
-            "blocks": [
-              {
-                "kind": "subhead",
-                "html": "왜 지금 이 업데이트인가"
-              },
-              {
-                "kind": "paragraph",
-                "html": "Safari Technology Preview 242에는 <code>closedby</code>를 지원하는 <code>dialog</code>, CSS <code>attr()</code> Level 5, <code>appearance: base-select</code> 접근성 수정, <code>srcset</code> 이미지가 iframe 안에서 보이지 않던 문제 수정이 포함됐습니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "또 sticky 위치 요소의 flicker, scroll anchoring으로 페이지가 위아래로 튀는 문제, fullscreen video scrubbing 이슈처럼 실제 모바일 화면에서 체감될 수 있는 수정도 들어 있습니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "이번 릴리즈 노트는 Safari가 중요하다는 일반론보다, 다음 정식 Safari QA에서 폼, dialog, 이미지, sticky/scroll, 미디어 컴포넌트를 우선 확인해야 한다는 체크리스트로 읽어야 합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "구현 관점"
-              },
-              {
-                "kind": "paragraph",
-                "html": "결제, 로그인, 옵션 선택 화면에서 <code>&lt;select multiple&gt;</code>, customizable select, checkbox outline, <code>:in-range</code>/<code>:out-of-range</code> 상태가 의도대로 동작하는지 먼저 봐야 합니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "상품 상세와 캠페인 페이지에서는 iframe 안 <code>srcset</code> 이미지, sticky CTA, scroll anchoring, fullscreen video scrub, SVG 이미지·gradient·tspan 렌더링을 Safari TP에서 재현해볼 만합니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "신규 <code>closedby</code> dialog와 CSS <code>attr()</code>은 바로 도입하기보다 지원 범위, fallback, 기존 modal/dropdown 구현과 충돌 여부를 확인한 뒤 컴포넌트 QA 항목으로 옮기는 편이 안전합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "실무에 어떻게 적용할 수 있을까"
-              },
-              {
-                "kind": "list",
-                "html": "결제·회원가입 폼에서 select, checkbox outline, range validation 상태를 Safari TP와 현재 Safari에서 비교합니다."
-              },
-              {
-                "kind": "list",
-                "html": "상품상세의 sticky CTA, iframe 이미지, SVG 아이콘·일러스트, fullscreen video가 스크롤과 함께 깨지지 않는지 확인합니다."
-              },
-              {
-                "kind": "list",
-                "html": "<code>dialog[closedby]</code>와 CSS <code>attr()</code>은 실험 후보로만 두고, fallback과 브라우저 지원 상태를 컴포넌트 문서에 남깁니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "같이 보면 좋은 기술"
-              },
-              {
-                "kind": "list",
-                "html": "WebKit Release Notes: Safari 변경 사항의 1차 기준입니다."
-              },
-              {
-                "kind": "list",
-                "html": "BrowserStack: Safari 환경별 회귀 테스트에 활용할 수 있습니다."
-              },
-              {
-                "kind": "list",
-                "html": "CSS Support Matrix: 기능별 브라우저 지원 상태를 확인합니다."
-              }
-            ],
-            "itemsHtml": [
-              "@@subhead@@왜 지금 이 업데이트인가",
-              "@@paragraph@@Safari Technology Preview 242에는 <code>closedby</code>를 지원하는 <code>dialog</code>, CSS <code>attr()</code> Level 5, <code>appearance: base-select</code> 접근성 수정, <code>srcset</code> 이미지가 iframe 안에서 보이지 않던 문제 수정이 포함됐습니다.",
-              "@@paragraph@@또 sticky 위치 요소의 flicker, scroll anchoring으로 페이지가 위아래로 튀는 문제, fullscreen video scrubbing 이슈처럼 실제 모바일 화면에서 체감될 수 있는 수정도 들어 있습니다.",
-              "@@paragraph@@이번 릴리즈 노트는 Safari가 중요하다는 일반론보다, 다음 정식 Safari QA에서 폼, dialog, 이미지, sticky/scroll, 미디어 컴포넌트를 우선 확인해야 한다는 체크리스트로 읽어야 합니다.",
-              "@@subhead@@구현 관점",
-              "@@paragraph@@결제, 로그인, 옵션 선택 화면에서 <code>&lt;select multiple&gt;</code>, customizable select, checkbox outline, <code>:in-range</code>/<code>:out-of-range</code> 상태가 의도대로 동작하는지 먼저 봐야 합니다.",
-              "@@paragraph@@상품 상세와 캠페인 페이지에서는 iframe 안 <code>srcset</code> 이미지, sticky CTA, scroll anchoring, fullscreen video scrub, SVG 이미지·gradient·tspan 렌더링을 Safari TP에서 재현해볼 만합니다.",
-              "@@paragraph@@신규 <code>closedby</code> dialog와 CSS <code>attr()</code>은 바로 도입하기보다 지원 범위, fallback, 기존 modal/dropdown 구현과 충돌 여부를 확인한 뒤 컴포넌트 QA 항목으로 옮기는 편이 안전합니다.",
-              "@@subhead@@실무에 어떻게 적용할 수 있을까",
-              "@@list@@결제·회원가입 폼에서 select, checkbox outline, range validation 상태를 Safari TP와 현재 Safari에서 비교합니다.",
-              "@@list@@상품상세의 sticky CTA, iframe 이미지, SVG 아이콘·일러스트, fullscreen video가 스크롤과 함께 깨지지 않는지 확인합니다.",
-              "@@list@@<code>dialog[closedby]</code>와 CSS <code>attr()</code>은 실험 후보로만 두고, fallback과 브라우저 지원 상태를 컴포넌트 문서에 남깁니다.",
-              "@@subhead@@같이 보면 좋은 기술",
-              "@@list@@WebKit Release Notes: Safari 변경 사항의 1차 기준입니다.",
-              "@@list@@BrowserStack: Safari 환경별 회귀 테스트에 활용할 수 있습니다.",
-              "@@list@@CSS Support Matrix: 기능별 브라우저 지원 상태를 확인합니다."
-            ]
-          }
-        ],
-        "id": "2026-04-27-17",
-        "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-17"
-      },
-      {
-        "number": "18",
         "platform": "Chrome Developers",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "html",
         "category": "HTML",
         "date": "2026-04-24",
-        "route": "/articles/2026-04-27-18",
-        "href": "/articles/2026-04-27-18",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-18",
+        "route": "/articles/2026-04-27-17",
+        "href": "/articles/2026-04-27-17",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-17",
         "image": "https://developer.chrome.com/static/blog/manifest-localization/image/hero.png",
         "imageCaption": "Chrome Developers manifest localization 공식 원문 이미지",
         "tags": [
@@ -3272,21 +3094,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-18",
+        "id": "2026-04-27-17",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-18"
+        "articleSlug": "2026-04-27-17"
       },
       {
-        "number": "19",
+        "number": "18",
         "platform": "JavaScript Weekly",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "javascript",
         "category": "JAVASCRIPT",
         "date": "2026-04-21",
-        "route": "/articles/2026-04-27-19",
-        "href": "/articles/2026-04-27-19",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-19",
+        "route": "/articles/2026-04-27-18",
+        "href": "/articles/2026-04-27-18",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-18",
         "image": "https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/i3uvkia0thzscb525tjz.jpg",
         "imageCaption": "JavaScript Weekly Issue 782 원문 대표 이미지",
         "tags": [
@@ -3450,9 +3272,9 @@
             ]
           }
         ],
-        "id": "2026-04-27-19",
+        "id": "2026-04-27-18",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-19"
+        "articleSlug": "2026-04-27-18"
       },
       {
         "number": "01",
