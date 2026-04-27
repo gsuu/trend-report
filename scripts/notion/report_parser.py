@@ -773,7 +773,7 @@ def normalize_tags(values: list[str]) -> list[str]:
         if tag and key not in seen:
             tags.append(tag)
             seen.add(key)
-    return tags
+    return tags[:3]
 
 
 def split_meta_tags(value: str) -> list[str]:
@@ -884,9 +884,9 @@ def parse_report(path: Path) -> Report:
                     current_issue.image_caption = value
                 else:
                     current_issue.meta[key] = value
-                    if key in {"태그", "직무 태그", "직무태그"}:
+                    if key == "태그":
                         for tag in split_meta_tags(value):
-                            if tag not in current_issue.tags:
+                            if tag not in current_issue.tags and len(current_issue.tags) < 3:
                                 current_issue.tags.append(tag)
 
             continue
