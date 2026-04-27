@@ -425,10 +425,9 @@ async function fetchIssuesFromNotion() {
 
 function renderAudienceHeading(label) {
   return (
-    '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:24px 0 6px;">'
+    '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:26px 0 8px;background:#111111;">'
     + '<tr>'
-    + '<td width="15" style="width:15px;padding:0 8px 0 0;vertical-align:middle;"><span style="display:inline-block;width:7px;height:7px;background:#f9ffc1;background:rgba(238,255,72,0.34);"></span></td>'
-    + `<td style="padding:0;color:#111111;font-size:14px;line-height:1.35;font-weight:800;letter-spacing:0.02em;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${htmlEscape(label)}</td>`
+    + `<td style="padding:10px 14px;color:#ffffff;font-size:14px;line-height:1.35;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${htmlEscape(label)}</td>`
     + '</tr></table>'
   );
 }
