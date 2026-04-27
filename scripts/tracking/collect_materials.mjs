@@ -292,9 +292,10 @@ function editorialBriefMarkdown(data) {
     "- `docs/data-collection-strategy.md` 기준으로 후보 발견 출처와 최종 기준 원문을 분리합니다.",
     "- `docs/editorial-style-guide.md` 기준으로 타겟이 궁금해할 정보만 남깁니다.",
     "- 각 후보를 `채택 / 보류 / 제외`로 판단하고 사유를 남깁니다.",
-    "- 1차 편집 후보는 20~30개 사이로 `shortlist-20-30.md`에 정리합니다.",
+    "- 최종 원고 작성 기준 후보는 20~30개 사이로 `shortlist-20-30.md`에 정리합니다.",
+    "- `shortlist-20-30.md`는 다시 4~7개로 줄이는 예비 목록이 아니라, 원문 검증 후 그대로 `magazine-report.md`로 작성할 기준 목록입니다.",
     "- 같은 브랜드 후보가 많을 때는 AI 편집 단계에서 독자 가치가 큰 항목 최대 2개만 채택합니다.",
-    "- 채택 후보만 최종 `magazine-report.md`로 작성한 뒤 Notion 업로드를 진행합니다.",
+    "- shortlist 항목 중 원문 부족, 광고성, 화면·서비스·구현 변화 미확인 항목만 제외 메모로 옮기고, 통과 항목은 `magazine-report.md`로 작성한 뒤 Notion 업로드를 진행합니다.",
     "",
     "## 수집 요약",
     "",
@@ -328,7 +329,7 @@ async function writeOutputs(articles, date) {
     date,
     purpose: "collection_classification_source_only",
     editorialGuides: EDITORIAL_GUIDES,
-    nextStep: "AI가 editorialGuides와 editorial-brief.md를 읽고 채택/보류/제외 및 magazine-report.md 작성을 수행합니다.",
+    nextStep: "AI가 editorialGuides와 editorial-brief.md를 읽고 shortlist-20-30.md를 만든 뒤, shortlist 항목을 그대로 기준으로 magazine-report.md 작성을 수행합니다.",
     articles,
   };
 

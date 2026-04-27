@@ -5,13 +5,6 @@
 
 ## Service
 
-### &#52880;&#47551; Careet
-출처: Careet | 날짜: 2026. 4. 27.
-
-트렌드를 읽는 가장 빠른 방법
-
-원문: https://www.careet.net/MicroTrend
-
 ### Consumer Platform | Yanolja
 출처: 야놀자 보도자료 | 날짜: 2026. 4. 27.
 
@@ -25,6 +18,20 @@ Offering a full range of travel and experience services, including accommodation
 Our game-changing data solution harnesses big data from the entire value chain, including both B2C and B2B sources, utilizing AI/ML capabilities to offer clear insight and personalized experiences
 
 원문: https://www.yanoljagroup.com/ai-powered_data_solution
+
+### &#52880;&#47551; Careet
+출처: Careet | 날짜: 2026. 4. 27.
+
+트렌드를 읽는 가장 빠른 방법
+
+원문: https://www.careet.net/MicroTrend
+
+### 게시물 상세 | CJ올리브영
+출처: CJ올리브영 뉴스룸 | 날짜: 2026. 4. 27.
+
+게시물을 확인해보세요.
+
+원문: https://corp.oliveyoung.com/ko/news/130?pg=1&category=
 
 ### 당근, 기후에너지환경부·한국환경보전원과 함께 ‘지구를 위한 동네걷기’ 캠페인 진행 | 당근 보도자료
 출처: 당근 보도자료 | 날짜: 2026. 4. 27.
@@ -250,12 +257,12 @@ Our game-changing data solution harnesses big data from the entire value chain, 
 
 원문: https://newsroom.musinsa.com/newsroom-menu/2026-0420-01
 
-### 게시물 상세 | CJ올리브영
-출처: CJ올리브영 뉴스룸 | 날짜: 2026. 4. 27.
+### Introducing Fitness With Spotify: A New Way to Bring Movement Into Your Daily Routine &#8212; Spotify
+출처: Spotify Newsroom | 날짜: 2026. 4. 27.
 
-게시물을 확인해보세요.
+Time on Spotify should feel meaningful and intentional, not something that slips away in a blur of mindless scrolling. That’s why we’re always investing in experiences that leave you feeling more energized, in control, and empowered. We also look to our user base and the creators on our platform for inspiration. And that’s why we’re...
 
-원문: https://corp.oliveyoung.com/ko/news/130?pg=1&category=
+원문: https://newsroom.spotify.com/2026-04-27/spotify-fitness-workouts-peloton/
 
 ### Svenska artister genererade nära 2 miljarder kronor från Spotify under 2025 &#8212; Spotify
 출처: Spotify Newsroom | 날짜: 2026. 4. 27.
@@ -460,13 +467,6 @@ Earth Day is a chance to reflect on our connection to the natural world. To mark
 
 원문: https://newsroom.spotify.com/2026-04-22/earth-day-audiobooks/
 
-### Spotify and WNBA’s New York Liberty Bring Basketball and Music Together With New Partnership &#8212; Spotify
-출처: Spotify Newsroom | 날짜: 2026. 4. 22.
-
-Spotify and the New York Liberty are teaming up to give music and basketball fans the ultimate game day experience. Today, we’re excited to announce a multi-year partnership that will make Spotify the Official Music Partner of the New York Liberty, our first official team partnership in the United States. &#8220;We know what’s possible at...
-
-원문: https://newsroom.spotify.com/2026-04-22/wnba-new-york-liberty-basketball-music-partnership/
-
 ### [Kurly Only] 변치 않는 추억의 맛, 니뽕내뽕 크뽕 - 컬리 뉴스룸
 출처: 컬리 뉴스룸 | 날짜: 2026. 4. 21.
 
@@ -650,6 +650,377 @@ The new Figma Dev Mode MCP server changes how AI reads and understands Design Sy
 Stefano Magni from Preply introduced Visual Coverage, a pixel based metric that measures real Design System adoption from the user's perspective. Here is how it works and how you can use it.
 
 원문: https://www.intodesignsystems.com/blog/measure-design-systems-impact
+
+### 오픈AI, ‘챗GPT 이미지 2.0’ 공개… 상업적 활용도 높여
+출처: DesignDB - 디자인인사이트 | 날짜: 2026. 4. 27.
+
+추론 능력 대폭 강화… 한국어 렌더링도 개선 오픈AI가 1년 만에 차세대 이미지 생성 모델 ‘챗GPT 이미지 2.0’을 선보였다(자료=오픈AI) 챗GPT가 새로운 이미지 생성 모델을 공개했다. 이미지에 ...
+
+원문: https://www.designdb.com/?menuno=1278&bbsno=3081&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg4IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 네이버가 꺼낸 비장의 카드? UX 관점에서 본 별점 평가 기능
+출처: DesignDB - 디자인인사이트 | 날짜: 2026. 4. 27.
+
+네이버는 왜 버렸던 별점을 다시 꺼냈을까? (자료=챗GPT 제작) 지난달 네이버가 2021년 폐지했던 스마트 플레이스 5점 척도 별점 평가 시스템을 약 5년 만에 다시 부활시키겠다고 선언했습니다. 현...
+
+원문: https://www.designdb.com/?menuno=1278&bbsno=3080&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg4IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### ‘AI 브라우저’로 거듭난 크롬, 무엇이 달라졌을까
+출처: DesignDB - 디자인인사이트 | 날짜: 2026. 4. 27.
+
+웹 AI 요약부터 나노바나나까지… 브라우저 경험 재설계 디지털 경험 실무자에게 있어서 브라우저라는 공간은 업무에서 빼놓을 수 없다. 브라우저라는 공간에서 우리는 일을 하고, 새로운 것을 배울 뿐 아니라 브라...
+
+원문: https://www.designdb.com/?menuno=1278&bbsno=3079&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg4IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### [거의 모든 UX의 역사 ④] UX의 개척자 도널드 노먼
+출처: DesignDB - 디자인인사이트 | 날짜: 2026. 4. 27.
+
+사용자 중심 디자인과 UX 개념을 정립하다 오늘날 IT 업계는 물론 일반 대중들까지 깊숙이 자리잡은 단어가 있다. 바로 사용자 경험(UX)이다. 지금은 너무나도 당연하게 수많은 실무자가 애용하고 있는 단어지...
+
+원문: https://www.designdb.com/?menuno=1278&bbsno=3077&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg4IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 산업단지 정책 해커톤, 서비스디자인이 답을 찾다 - 산업단지정책해커톤 현장 리포트. 2026.4.17~18. 산업통상부, 산업단지공단, 한국디자인진흥원
+출처: DesignDB - 디자인인사이트 | 날짜: 2026. 4. 27.
+
+산업단지 정책 해커톤, 서비스디자인이 답을 찾다 서비스디자이너, 청년과 정책 담당자, 이해관계자가 함께 만든 현장 기반 정책 실험의 기록 산업단지 정책 해커톤 현장 리포트 일시 : 2026년 4월 17일 11...
+
+원문: https://www.designdb.com/?menuno=1278&bbsno=3078&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg4IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 브랜드는 점점 가벼워지고, 상상력은 점점 무거워진다
+출처: DesignDB - 디자인인사이트 | 날짜: 2026. 4. 27.
+
+예전에는 브랜드를 만든다고 하면 먼저 떠오르는 것들이 있었다. 자본금이 얼마나 필요한지, 사람은 몇 명이 있어야 하는지, 사무실은 어디에 둘지, 생산은 어디서 돌릴지, 촬영은 누가 할지, 상세페이지는 ...
+
+원문: https://www.designdb.com/?menuno=1278&bbsno=3076&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg4IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 디자인은 왜 다시 ‘손’으로 돌아가야 하는가 - ‘COMPANY WORLD AFFAIR’가 던지는 질문
+출처: DesignDB - 디자인인사이트 | 날짜: 2026. 4. 27.
+
+“디자인은 지금, 어디에 서 있는가.” 서울 남산 아래 자리한 피크닉(Piknic)에서 열린 ‘COMPANY WORLD AFFAIR’는 이 질문을 정면으로 던지는 전시다. 이 질문은 단순한 전시를 넘어, 오...
+
+원문: https://www.designdb.com/?menuno=1278&bbsno=3075&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg4IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### [거의 모든 UX의 역사 ③] AI시대, HCI의 아버지 리클라이더
+출처: DesignDB - 디자인인사이트 | 날짜: 2026. 4. 27.
+
+기술의 성취보다 중요한 사용자의 느낌과 반응 시리즈의 세 번째 시간에서 유훈식 교수는 시스템과 효율을 강조했던 ‘테일러리즘’을 다룬 첫 번째 여정과 ‘사용자 중심 디자인’의 선구자...
+
+원문: https://www.designdb.com/?menuno=1278&bbsno=3074&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg4IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### “눈비 맞아봐야 보이더라” ‘배달하는 디자이너’의 배민 라이더웨어 개발기
+출처: DesignDB - 디자인인사이트 | 날짜: 2026. 4. 27.
+
+김관우 우아한청년들 라이더디자인TF팀 팀장 인터뷰 그래픽 디자이너가 실물 제품을 만들어야 한다면? 약 2년 전 “라이더를 위한 제품을 개발하라”는 미션을 받았을 때 김관우 우아한청년들(배달의민족 물류 자...
+
+원문: https://www.designdb.com/?menuno=1278&bbsno=3073&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg4IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### ‘디자이너’는 아무나 할 수 있는 직업인가? - ‘디자이너’ 인증제가 필요한 이유
+출처: DesignDB - 디자인인사이트 | 날짜: 2026. 4. 27.
+
+명함에 적힌 ‘디자이너’라는 직함을 우리는 얼마나 신뢰할 수 있을까. 한국에서는 이 질문이 점점 무의미해지고 있다. 이유는 간단하다. 지금 이 나라에서 ‘디자이너’라는 이름은 아무 조건 없이 누구나 사용할...
+
+원문: https://www.designdb.com/?menuno=1278&bbsno=3072&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg4IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 베트남 등 아시아 5개국서
+출처: DesignDB - 기술 트렌드 | 날짜: 2026. 4. 27.
+
+정부가 인공지능(AI) 기반의 한국형 스마트도시 기술을 브루나이, 베트남 등 아시아 5개국 현지에서 직접 실증하며 K-스마트시티의 글로벌 시장 진출을 지원한다. 국토교통부는 13일
+
+원문: https://www.designdb.com/?menuno=1434&bbsno=1830&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkzIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### '국가 AI 프로젝트' 52개 과제 선정…GPU 3000장 우선 지원
+출처: DesignDB - 기술 트렌드 | 날짜: 2026. 4. 27.
+
+인공지능(AI) 혁신의 마중물로 올해 국가 AI 프로젝트 52개 과제를 선정해 정부 GPU 1만 장 중 3000장을 지원한다. 과학기술정보통신부는 2일 제6회 과학기술관계장관회의를 서면으로 개최해
+
+원문: https://www.designdb.com/?menuno=1434&bbsno=1829&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkzIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 한-인니, 재난안전 등 협력 확대…디지털정부 협력센터 재개
+출처: DesignDB - 기술 트렌드 | 날짜: 2026. 4. 27.
+
+행정안전부는 이재명 대통령과 인도네시아 프라보워 대통령 간의 정상회담을 계기로 인공지능정부 및 재난안전 분야에서 양국 간의 협력을 본격적으로 확대할 계획이라고 1일 밝혔다. 이에 행안부는 정부 내 인공지능 ...
+
+원문: https://www.designdb.com/?menuno=1434&bbsno=1828&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkzIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### AI 제품 246개 개발에 7540억 원 지원…산업·일상 AI 전환 속도
+출처: DesignDB - 기술 트렌드 | 날짜: 2026. 4. 27.
+
+정부가 산업과 일상 전반의 AI 전환(AX)에 속도를 내기 위해 11개 관계부처 합동으로
+
+원문: https://www.designdb.com/?menuno=1434&bbsno=1826&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkzIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 과기정통부,
+출처: DesignDB - 기술 트렌드 | 날짜: 2026. 4. 27.
+
+과학기술정보통신부는 13일 안전하고 신뢰할 수 있는 인공지능(AI) 사회 구현을 위한
+
+원문: https://www.designdb.com/?menuno=1434&bbsno=1825&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkzIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### AI 인재 육성에 진심인 카카오, 중학생 100명 부른 까닭
+출처: DesignDB - 기술 트렌드 | 날짜: 2026. 4. 27.
+
+문제 해결형 AI 인재 키우는 카카오 카카오가 지난달 AI 인재 육성 캠프를 열었어요. 대상이 조금 의외입니다. 대학생이나 취준생이 아니라 중학생이거든요. 그것도 비수도권에서 온 100명. 경기도 용인...
+
+원문: https://www.designdb.com/?menuno=1434&bbsno=1824&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkzIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 'AI네트워크 얼라이언스' 출범…"차세대 이동통신 시장 20% 점유"
+출처: DesignDB - 기술 트렌드 | 날짜: 2026. 4. 27.
+
+정부가
+
+원문: https://www.designdb.com/?menuno=1434&bbsno=1823&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkzIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### '휴머노이드에 연구 역량 총결집'…'K-문샷' 원팀체계 본격 가동
+출처: DesignDB - 기술 트렌드 | 날짜: 2026. 4. 27.
+
+과학기술정보통신부는 휴머노이드를 범국가 프로젝트
+
+원문: https://www.designdb.com/?menuno=1434&bbsno=1822&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkzIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### AI 기본법 시행, 자세히 알고 계셨나요?
+출처: DesignDB - 기술 트렌드 | 날짜: 2026. 4. 27.
+
+개정 및 신설 내용과 가이드라인, 실무자 반응까지 총정리 「인공지능 발전과 신뢰 기반 조성 등에 관한 기본법(이하 AI 기본법)」이 1월 22일 시행됐다. 2024년 12월 여·야 합의를 거쳐 국회를...
+
+원문: https://www.designdb.com/?menuno=1434&bbsno=1821&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkzIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 리뉴얼을 통해 경험 중심 공간으로 확장된 PSR: 40 Duke, Selfridges London
+출처: DesignDB - 해외 디자인리포트 | 날짜: 2026. 4. 27.
+
+전통적인 백화점에서 퍼스널 쇼핑은 기능적인 서비스였다. 고객은 예약된 시간에 방문하고 스타일리스트의 제안을 받아 상품을 구매하는 흐름 속에 놓였다. 이 과정에서 공간은 단지 서비스를 수행하기 위한 배경에 불과했...
+
+원문: https://www.designdb.com/?menuno=1283&bbsno=5186&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkxIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 글로벌 스트리트 브랜드 ‘휴먼 메이드(HUMAN MADE)’의 태국 현지화 전략
+출처: DesignDB - 해외 디자인리포트 | 날짜: 2026. 4. 27.
+
+최근 방콕은 동남아시아 패션과 디자인의 중심지로 급부상하고 있습니다. 특히 2026년 3월 28일, 쎈트럴 엠버시(Central Embassy)에 오픈한 ‘휴먼 메이드 방콕(HUMAN MADE BANGKOK)’...
+
+원문: https://www.designdb.com/?menuno=1283&bbsno=5184&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkxIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### YAMADART - 전통 료칸의 미학을 갤러리로
+출처: DesignDB - 해외 디자인리포트 | 날짜: 2026. 4. 27.
+
+images ⓒ YAMADART 이시카와현 가나자와에 새로운 현대미술 갤러리가 문을 열었다. 이번 프로젝트는 야마나카 온천의 노포 료칸
+
+원문: https://www.designdb.com/?menuno=1283&bbsno=5183&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkxIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 스웨덴 법률 AI 스타트업 Legora가 주드 로와 함께한 색다른 마케팅
+출처: DesignDB - 해외 디자인리포트 | 날짜: 2026. 4. 27.
+
+스톡홀름에 기반을 둔 법률 AI 스타트업 Legora가 글로벌 브랜드 캠페인의 얼굴로 배우 주드 로(Jude Law) 를 선정하며, 색다른 브랜딩을 시도하고 있다. Legora는 AI를 활용해 법률 문서 작성,...
+
+원문: https://www.designdb.com/?menuno=1283&bbsno=5182&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkxIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### nendo가 재구성한 Peach의 브랜드 전략
+출처: DesignDB - 해외 디자인리포트 | 날짜: 2026. 4. 27.
+
+All images ⓒ Peach Aviation 株式会社 일본의 저비용항공사 Peach Aviation이 창립 15주년을 맞아 브랜드 리뉴얼을 단행했다. 이번 프로젝트는 디자인 오피스 nendo(대표 사토...
+
+원문: https://www.designdb.com/?menuno=1283&bbsno=5180&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkxIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 만우절 장난으로 시작해서 제품 출시로, 이케아와 츄파춥스가 만든 미트볼 롤리팝
+출처: DesignDB - 해외 디자인리포트 | 날짜: 2026. 4. 27.
+
+스웨덴에서 시작해서 이제는 글로벌 라이프스타일 브랜드가 된 이케아(IKEA)가 또 한 번 일상의 경험을 재해석하는 실험을 선보였다. 세계 최대 이케아 리테일 운영사인 잉카 그룹(Ingka Group)이 글로...
+
+원문: https://www.designdb.com/?menuno=1283&bbsno=5181&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkxIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 서울에서 펼쳐진 COS 2026 SS 쇼: 90년대 미니멀리즘의 귀환
+출처: DesignDB - 해외 디자인리포트 | 날짜: 2026. 4. 27.
+
+패션쇼에 참석한 김소현, 미야오 엘라, 박규영 (출처: COS) 최근 몇 년 사이 K-뷰티, K-팝, 영화까지 이어지는 한국 문화는 빠른 속도로 전 세계로 확장되고 있다. 이러한 흐름 속에서 스웨덴 패션 브...
+
+원문: https://www.designdb.com/?menuno=1283&bbsno=5174&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkxIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### AI 보청기? 소음 속 실시간 음성 분리, 적응형 인공지능 포낙 인피니오 울트라 스피어
+출처: DesignDB - 해외 디자인리포트 | 날짜: 2026. 4. 27.
+
+청각 전문 기업 포낙(Phonak)이 음성 이해력, 사운드 품질, 그리고 성능의 한계를 넘어선 새로운 혁신 보청기를 선보였다. 새롭게 출시된
+
+원문: https://www.designdb.com/?menuno=1283&bbsno=5173&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkxIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 다양한 시각과 기술로 재탄생한 한국의 전통 소반
+출처: DesignDB - 디자인리포트 | 날짜: 2026. 4. 27.
+
+소반은 한국의 좌식 생활과 문화를 반영한 대표적인 전통 가구이다. ‘독상’이 원칙이었던 전통 상차림 문화에서 비롯된 소반은 한 사람마다 하나씩 정성껏 차려내는 ‘1인 1반’의 전통을 담고 있다. 이름처럼 크기가...
+
+원문: https://www.designdb.com/?menuno=1432&bbsno=1740&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkwIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 새롭게 부상하는 초가성비 소비 행태, 시장을 바꾸다
+출처: DesignDB - 디자인리포트 | 날짜: 2026. 4. 27.
+
+경기 침체가 장기화되는 가운데 고유가·고물가 현상까지 겹치면서, 사람들의 소비 습관은 이전과는 다른 형태로 변해가고 있다. 현재의 행복을 중시하며 소비를 정당화하던
+
+원문: https://www.designdb.com/?menuno=1432&bbsno=1738&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkwIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 러닝 버터를 아시나요?
+출처: DesignDB - 디자인리포트 | 날짜: 2026. 4. 27.
+
+최근 음식을 먹는것에서 더 나아가 음식을 만드는 것에서 즐거움을 느끼는 행동이 있다. 러닝 커뮤니키에서 지퍼락에 생크림을 넣고 뛰면서 버터를 만드는 일종의 ‘러닝 버터 챌린지’가 인기를 끌기 시작했다. 이는 단...
+
+원문: https://www.designdb.com/?menuno=1432&bbsno=1731&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkwIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 팬덤(Fandom), 소비를 넘어 문화를 만드는 힘
+출처: DesignDB - 디자인리포트 | 날짜: 2026. 4. 27.
+
+용산공예관이 용산문화재단으로 새단장을 마치고, 첫 번째 전시로 참여형 팝업 전시《문화의 공동 창조자, 문화를 만드는 팬덤》을 선보인다. 이번 전시는 3월 16일부터 4월 15일까지 한 달간 용산문화재단 1층 팝...
+
+원문: https://www.designdb.com/?menuno=1432&bbsno=1735&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkwIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 우리의 전통주, 막걸리의 변신
+출처: DesignDB - 디자인리포트 | 날짜: 2026. 4. 27.
+
+최근 한국 주류 시장에서 막걸리는 단순한 전통주를 넘어 프리미엄 라이프스타일 상품으로 재정의되고 있다. 과거 막걸리는 ‘어르신 술’이라는 이미지가 강했지만, 최근에는 고급화, 브랜딩, 맛의 다양화를 통해 현대적...
+
+원문: https://www.designdb.com/?menuno=1432&bbsno=1734&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkwIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 몸과 마음의 회복을 추구하는 웰니스 트렌드와 리커버리노믹스
+출처: DesignDB - 디자인리포트 | 날짜: 2026. 4. 27.
+
+최근 웰니스(Wellness)는 단순한 건강 관리의 개념을 넘어 삶 전반을 설계하는 핵심 가치로 확장되고 있다. 과거 웰니스가 운동이나 식단, 의료 중심의 신체 건강에 초점을 맞췄다면, 현재는 정신적 안정, 감...
+
+원문: https://www.designdb.com/?menuno=1432&bbsno=1733&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkwIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 길 위에서 만나는 집, 29CM HOME 무빙트럭
+출처: DesignDB - 디자인리포트 | 날짜: 2026. 4. 27.
+
+얼마 전 무심코 길을 걷다가 시선을 사로잡는 노란색 트럭을 발견했다. 서울 도심 한복판에 마치 거실을 그대로 옮겨놓은 듯한, 감도 높은 디자인 트럭이 도로 위를 이동하고 있었던 것이다. 일상적인 풍경 속에 갑작...
+
+원문: https://www.designdb.com/?menuno=1432&bbsno=1732&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkwIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 유행은 왜 사라지고, 어떤 것은 일상이 되는가
+출처: DesignDB - 디자인리포트 | 날짜: 2026. 4. 27.
+
+올해 초, ‘두쫀쿠’는 하나의 명장면을 연출했다. 서울 주요 상권의 디저트 매장 앞에는 오픈 시간 전부터 줄이 늘어섰고, SNS 피드에는 쿠키를 반으로 가르는 영상이 쏟아졌다. 두툼한 초콜릿 코팅 안에서 피스타...
+
+원문: https://www.designdb.com/?menuno=1432&bbsno=1728&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTkwIiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### Manila International Auto Show 2026 참관
+출처: DesignDB - 해외 디자인뉴스 | 날짜: 2026. 4. 27.
+
+전시회 개요 전시회명 Manila International Auto Show 2026 포스터
+
+원문: https://www.designdb.com/?menuno=1280&bbsno=8716&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg5IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 독일 식품 보관 용품 시장, 친환경 전환과 고기능성 제품의 부상
+출처: DesignDB - 해외 디자인뉴스 | 날짜: 2026. 4. 27.
+
+경제적 효율과 생활 편의를 중시하는 독일 식품 보관 용품 시장 독일 식품 보관 용품 시장은 최근 고물가와 경기 둔화의 영향으로 실용성과 경제성을 최우선시하는 소비 구조로 변화하고 있다. 특히 식료품 가격 상...
+
+원문: https://www.designdb.com/?menuno=1280&bbsno=8715&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg5IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 베트남 섬유·의류 전시회 (SaigonTex & Saigon Fabric 2026) 참관기
+출처: DesignDB - 해외 디자인뉴스 | 날짜: 2026. 4. 27.
+
+2026년 4월 8일부터 11일까지 베트남 호치민시 7군에 위치한 SECC에서 Saigon Tex & Saigon Fabric 2026이 개최됐다. Saigon Tex&nb
+
+원문: https://www.designdb.com/?menuno=1280&bbsno=8714&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg5IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 홈케어 일상화 시대, 인도네시아 뷰티디바이스 시장 트렌드
+출처: DesignDB - 해외 디자인뉴스 | 날짜: 2026. 4. 27.
+
+인도네시아 뷰티디바이스 시장 개요 인도네시아 뷰티디바이스 시장은 최근 소비자 인식 변화에 힘입어 확대되고 있다. 과거에는 병원이나 전문 클리닉 시술의 대체재로 여겨졌던 가정용 뷰티디바이스가 이제는 장기적인 ...
+
+원문: https://www.designdb.com/?menuno=1280&bbsno=8713&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg5IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 제47회 방콕국제모터쇼 참관기: 브랜드 경쟁과 소비시장 변화가 두드러진 현장
+출처: DesignDB - 해외 디자인뉴스 | 날짜: 2026. 4. 27.
+
+행사 개요 제47회 방콕국제모터쇼는 2026년 3월 25일부터 4월 5일까지 태국 논타부리 무앙통타니 IMPACT Challenger Hall 1~3 및 IMPACT Forum에서 개최됐다. 행사 운영 시간...
+
+원문: https://www.designdb.com/?menuno=1280&bbsno=8712&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg5IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 미국 LA 주택 시장의 게임 체인저, 부속 주거 유닛 ADU의 부상
+출처: DesignDB - 해외 디자인뉴스 | 날짜: 2026. 4. 27.
+
+로스앤젤레스에서는 최근 ADU(Accessory Dwelling Unit, 부속 주거 유닛)가 주택 시장의 중요한
+
+원문: https://www.designdb.com/?menuno=1280&bbsno=8710&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg5IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 미국 LA, ‘경험 소비’로 물드는 새로운 카페 문화
+출처: DesignDB - 해외 디자인뉴스 | 날짜: 2026. 4. 27.
+
+과거 커피 시장에서 대형 브랜드, 특히 글로벌 체인을 중심으로
+
+원문: https://www.designdb.com/?menuno=1280&bbsno=8709&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg5IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 베트남 디지털 헬스케어, AI·웨어러블 결합 속 ‘일상화’ 확산
+출처: DesignDB - 해외 디자인뉴스 | 날짜: 2026. 4. 27.
+
+베트남 디지털 헬스케어 시장은 기술 혁신과 정부의 정책적 지원, 그리고 의료 접근성 개선에 대한 수요 증가를 기반으로 가파른 성장세를 나타내고 있다. TechSci Research에 따르면 2024년 약 3억 ...
+
+원문: https://www.designdb.com/?menuno=1280&bbsno=8708&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg5IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### EU, 역내 제품 안전성 확보 위해 제품 모니터링 체계 전면 강화
+출처: DesignDB - 해외 디자인뉴스 | 날짜: 2026. 4. 27.
+
+유럽연합(EU)이 역내 시장에 유통되는 제품의 안전성을 확보하기 위해
+
+원문: https://www.designdb.com/?menuno=1280&bbsno=8707&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg5IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 80% 고속 성장! 중국이 주도하는 AR 안경 시장의 현재
+출처: DesignDB - 해외 디자인뉴스 | 날짜: 2026. 4. 27.
+
+IDC 통계에 따르면, 2025년 스마트 안경(AI, AR/VR 포함) 글로벌 출하량은 1452만 대로, 전년 대비 42.5% 성장한 것으로 추정되고, 2026년은 78% 증가한 2,300만 대에 달할 것으로 ...
+
+원문: https://www.designdb.com/?menuno=1280&bbsno=8706&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iOTg5IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 현대자동차가 전용 전기차 브랜드 ‘아이오닉’과 현지 전략형 모델을 앞세워 중국 시장에서의 전동화 전략을 본격적으로 가동한다.
+출처: DesignDB - 디자인뉴스 | 날짜: 2026. 4. 27.
+
+현대차는 24일(금) 중국국제전람중심 순의관(China International Exhibition Center, Shunyi Hall)에서 열린 ‘2026 베이징 국제 모터쇼(Auto China 2026)’에...
+
+원문: https://www.designdb.com/?menuno=792&bbsno=40577&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 디자이너 공개 오디션 열린다… 웹스미디어-티티서울, ‘DA’ 추진 맞손
+출처: DesignDB - 디자인뉴스 | 날짜: 2026. 4. 27.
+
+프로그램 홍보 등 협력… 지속가능 파트너십 구축 22일 류호현 웹스미디어 대표(오른쪽)와 편석훈 티티서울 대표가 MOU 체결 후 기념사진을 촬영하고 있다(사진=디지털 인사이트) IT 비즈니스 미디어 <디...
+
+원문: https://www.designdb.com/?menuno=792&bbsno=40575&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 현대차·기아, 통학길 교통안전 지키는 ‘비전 펄스’ 기술 캠페인으로 국제 광고제 수상
+출처: DesignDB - 디자인뉴스 | 날짜: 2026. 4. 27.
+
+기술을 토대로 인류의 더 나은 삶에 기여하고자 하는 현대자동차·기아의 노력이 세계인의 마음을 사로잡았다. 현대자동차·기아는 세계 최고 권위의 국제 광고제 ‘원쇼(The One Show)’와 ‘스파이크아시아(...
+
+원문: https://www.designdb.com/?menuno=792&bbsno=40576&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 중기부, 중소제조·스타트업에 GPU 264장 공급…AI 전환 지원
+출처: DesignDB - 디자인뉴스 | 날짜: 2026. 4. 27.
+
+정부가 중소제조기업과 창업기업에 GPU 264장을 공급해 AI 기반 기술개발과 사업화를 지원한다. 중소벤처기업부는
+
+원문: https://www.designdb.com/?menuno=792&bbsno=40574&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### “피그마 대체할까?” 앤트로픽, ‘클로드 디자인’ 출시
+출처: DesignDB - 디자인뉴스 | 날짜: 2026. 4. 27.
+
+프로토타입부터 협업까지… 기대와 우려 공존 (자료=앤트로픽) 기획부터 제작, 협업까지 디자인과 기획 실무에 즉각 영향을 미칠 수 있는 AI 서비스가 등장했다. 지난 17일(현지 시간) 앤트로픽(Anthr...
+
+원문: https://www.designdb.com/?menuno=792&bbsno=40573&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 제네시스, 독일 아우토빌트 독자 평가서 ‘최고의 자동차 브랜드’로 선정
+출처: DesignDB - 디자인뉴스 | 날짜: 2026. 4. 27.
+
+제네시스 브랜드(이하 제네시스)가 최근 독일의 유력 자동차 전문 매체인 ‘아우토빌트(Auto Bild)’의 독자 평가에서 ‘최고의 자동차 브랜드’로 선정됐다고 밝혔다. 제네시스, 독일 아우토빌트 독자 평가서...
+
+원문: https://www.designdb.com/?menuno=792&bbsno=40571&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 삼성전자, 미국 ‘에디슨 어워즈’에서 금상 수상
+출처: DesignDB - 디자인뉴스 | 날짜: 2026. 4. 27.
+
+삼성전자가 4월 16일(현지시간) 미국 플로리다주 포트마이어스에서 열린 ‘2026 에디슨 어워즈(Edison Awards)’에서 금상 2개, 은상 2개로 총 4개의 상을 수상했다. ‘2026 에디슨 어워즈(...
+
+원문: https://www.designdb.com/?menuno=792&bbsno=40570&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+
+### 한국디자인진흥원, 2026 GOOD DESIGN KOREA 전국 순회 설명회 개최
+출처: DesignDB - 디자인뉴스 | 날짜: 2026. 4. 27.
+
+한국디자인진흥원(원장 강윤주)이 ‘GOOD DESIGN KOREA 2026(우수디자인상품선정)’ 계획을 발표하고, 전국 기업의 참여를 독려하기 위해 서울, 광주, 부산 등 3개 거점 도시에서 지역별 순회...
+
+원문: https://www.designdb.com/?menuno=792&bbsno=40568&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
 
 ### Why We Adopted Post-Quantum Cryptography a Decade Before Quantum Computers Arrive
 출처: 토스 테크 | 날짜: 2026. 4. 27.
@@ -921,6 +1292,13 @@ Although Astro has built-in support for Markdown via .md files, I&#039;d argue t
 
 ## JavaScript
 
+### 999: Writing Maintainable CSS
+출처: Syntax.fm | 날짜: 2026. 4. 27.
+
+Scott and Wes break down what makes CSS truly manageable—from preventing style leaks and embracing fluid layouts to choosing the right methodology, whether that’s utility CSS, component-scoped styles, or CSS modules. They also dive into practical tips like leveraging CSS variables, layers, scoping, and tooling to keep your stylesheets clean and scalable. Show Notes 00:00 Welcome to Syntax! 01:31 Understanding CSS Man
+
+원문: https://syntax.fm/999
+
 ### 712: Lazy Loading the Web with Scott Jehl
 출처: ShopTalk Show | 날짜: 2026. 4. 27.
 
@@ -942,14 +1320,14 @@ Wes and Scott talk about making AI coding more reliable using deterministic tool
 
 원문: https://javascriptweekly.com/issues/782
 
-### 997: Rating and Roasting Your Projects
-출처: Syntax.fm | 날짜: 2026. 4. 20.
-
-Scott and Wes dig into a huge batch of community-submitted projects, from JSON tools and CSS editors to AI agents, view transitions, and everything in between. It’s a rapid-fire showcase of what developers have been building, including picks like Arrow JS, Sugar High, Drift, and a whole lot more. Show Notes 00:00 Welcome to Syntax! Wes’ Bluesky Post Wes’ X Post 01:20 JSON-Alexander. 02:43 FFF - Fastest File Search. 0
-
-원문: https://syntax.fm/997
-
 ## Accessibility
+
+### Five Reasons Divi Sites Fail Accessibility Audits — and the Fixes That Don't Require a Rebuild.
+출처: Dev.to - Accessibility | 날짜: 2026. 4. 27.
+
+If your accessibility report on a Divi site is recommending a full rebuild, it is almost certainly wrong. The five issues below show up on roughly every Divi-built site we audit, and four of them are 30-minute fixes inside the existing theme.
+
+원문: https://dev.to/agentkit/five-reasons-divi-sites-fail-accessibility-audits-and-the-fixes-that-dont-require-a-rebuild-50kn
 
 ### Accessibility Testing: Best Practices
 출처: Dev.to - Accessibility | 날짜: 2026. 4. 27.
@@ -1027,13 +1405,6 @@ I spent an entire afternoon trying to write a focus trap from scratch. The requi
 In Part 1 you learned the basics. Semantics for labels and hints. MergeSemantics to remove double...
 
 원문: https://dev.to/gdg/a-practical-guide-to-flutter-accessibility-part-2-hiding-noise-exposing-actions-2f7i
-
-### Accessibility issues that automated tools won't catch (from real audits)
-출처: Dev.to - Accessibility | 날짜: 2026. 4. 24.
-
-I run accessibility audits regularly. One pattern keeps showing up: The most critical issues are...
-
-원문: https://dev.to/a11ysolutions/accessibility-issues-that-automated-tools-wont-catch-from-real-audits-2o8l
 
 ### The UX Designer’s Nightmare: When “Production-Ready” Becomes A Design Deliverable
 출처: Smashing Magazine | 날짜: 2026. 4. 22.
@@ -1144,4 +1515,4 @@ Today on the show I’m talking with Amelia Wattenberger — designer, data-viz 
 
 원문: https://changelog.com/podcast/680
 
-총 161개의 기사를 수집했습니다.
+총 214개의 기사를 수집했습니다.
