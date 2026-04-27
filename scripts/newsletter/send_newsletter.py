@@ -29,6 +29,7 @@ EMAIL_LOGO_ASSET_NAME = "cttd-logo-email.png"
 EMAIL_LOGO_CONTENT_ID = "cttd-logo-email@cttd"
 NEWSLETTER_TEMPLATE_PATH = ROOT / "templates" / "newsletter.html"
 REPORT_DATA_PATH = ROOT / "src" / "data" / "report.json"
+MAGAZINE_DATA_PATH = ROOT / "public" / "data" / "magazine.json"
 SUBSCRIBER_EMAIL_PROPERTIES = ("Email", "이메일", "이름", "Name")
 SUBSCRIBER_STATUS_PROPERTIES = ("Status", "상태")
 SUBSCRIBER_AUDIENCE_PROPERTIES = ("Audience", "구독분야", "뉴스레터")
@@ -723,15 +724,22 @@ def html_to_plain_text(value: str) -> str:
 
 
 def load_report_issue_index() -> dict[str, dict[str, object]]:
-    if not REPORT_DATA_PATH.exists():
+    if MAGAZINE_DATA_PATH.exists():
+        try:
+            payload = json.loads(MAGAZINE_DATA_PATH.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            payload = {}
+        report = payload.get("report", payload) if isinstance(payload, dict) else {}
+        issues = report.get("issues", []) if isinstance(report, dict) else []
+    elif REPORT_DATA_PATH.exists():
+        try:
+            payload = json.loads(REPORT_DATA_PATH.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return {}
+        issues = payload.get("issues", []) if isinstance(payload, dict) else []
+    else:
         return {}
 
-    try:
-        payload = json.loads(REPORT_DATA_PATH.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError):
-        return {}
-
-    issues = payload.get("issues", [])
     if not isinstance(issues, list):
         return {}
 
@@ -743,6 +751,25 @@ def load_report_issue_index() -> dict[str, dict[str, object]]:
         if source_url:
             issue_index[source_url] = issue
     return issue_index
+
+
+def load_magazine_report() -> dict[str, object]:
+    if not MAGAZINE_DATA_PATH.exists():
+        raise SystemExit("매거진 JSON 파일을 찾지 못했습니다: public/data/magazine.json")
+
+    try:
+        payload = json.loads(MAGAZINE_DATA_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SystemExit("매거진 JSON을 읽지 못했습니다.") from exc
+
+    report = payload.get("report", payload) if isinstance(payload, dict) else {}
+    if not isinstance(report, dict):
+        raise SystemExit("매거진 JSON 형식이 올바르지 않습니다.")
+
+    issues = report.get("issues", [])
+    if not isinstance(issues, list):
+        raise SystemExit("매거진 JSON에 issues 배열이 없습니다.")
+    return report
 
 
 def fetch_current_notion_report() -> dict[str, object]:
@@ -779,12 +806,43 @@ def latest_issue_date(report: dict[str, object]) -> str:
     return dates[-1] if dates else ""
 
 
-def filter_report_to_latest_issue_date(report: dict[str, object]) -> dict[str, object]:
-    latest_date = latest_issue_date(report)
-    if not latest_date:
-        return report
+def latest_issue_slug(report: dict[str, object]) -> str:
+    issue_slug = str(report.get("slug") or "")
+    if issue_slug:
+        return issue_slug
+
     issues = report.get("issues", [])
     if not isinstance(issues, list):
+        return ""
+    issue_slugs = sorted({
+        str(issue.get("issueSlug") or "")
+        for issue in issues
+        if isinstance(issue, dict) and str(issue.get("issueSlug") or "")
+    })
+    return issue_slugs[-1] if issue_slugs else ""
+
+
+def filter_report_to_latest_issue(report: dict[str, object]) -> dict[str, object]:
+    issues = report.get("issues", [])
+    if not isinstance(issues, list):
+        return report
+
+    issue_slug = latest_issue_slug(report)
+    if issue_slug:
+        filtered_issues = [
+            issue
+            for issue in issues
+            if isinstance(issue, dict) and str(issue.get("issueSlug") or "") == issue_slug
+        ]
+        if filtered_issues:
+            return {
+                **report,
+                "issues": filtered_issues,
+                "newsletterDate": issue_slug,
+            }
+
+    latest_date = latest_issue_date(report)
+    if not latest_date:
         return report
     filtered_issues = [
         issue
@@ -2137,11 +2195,11 @@ def main() -> None:
     load_env_files()
 
     args = parse_args()
-    notion_report = filter_report_to_latest_issue_date(fetch_current_notion_report())
-    slug = str(notion_report.get("slug") or "notion-current")
-    report_path = Path(args.report) if args.report else Path(f"{slug}-notion.md")
-    markdown = f"# {notion_report.get('title') or 'CTTD Trend Magazine'}\n"
-    default_title = str(notion_report.get("title") or "CTTD Trend Magazine")
+    magazine_report = filter_report_to_latest_issue(load_magazine_report())
+    slug = str(magazine_report.get("newsletterDate") or magazine_report.get("slug") or "magazine-current")
+    report_path = Path(args.report) if args.report else Path(f"{slug}-magazine.md")
+    markdown = f"# {magazine_report.get('title') or 'CTTD Trend Magazine'}\n"
+    default_title = str(magazine_report.get("title") or "CTTD Trend Magazine")
     magazine_base_url = resolve_magazine_base_url(args.magazine_base_url, args.stage)
 
     if args.send and not magazine_base_url:
@@ -2153,9 +2211,9 @@ def main() -> None:
         ensure_unsubscribe_links_enabled()
 
     if args.audience == "subscriptions":
-        combined_title = web_trend_title(notion_report)
+        combined_title = web_trend_title(magazine_report)
         items_by_audience = {
-            audience: notion_report_items(notion_report, audience)
+            audience: notion_report_items(magazine_report, audience)
             for audience in SUBSCRIPTION_AUDIENCES
         }
         records = resolve_subscription_records(args)
@@ -2213,7 +2271,7 @@ def main() -> None:
         scoped_args = audience_args(args, audience)
         title = newsletter_title_for_audience(default_title, args, audience)
         subject = newsletter_subject_for_audience(args, audience)
-        newsletter_items = notion_report_items(notion_report, audience)
+        newsletter_items = notion_report_items(magazine_report, audience)
         if args.send and not newsletter_items:
             raise SystemExit(f"{audience_label(audience)} 대상에 포함되는 이슈가 없어 발송을 중단합니다.")
 
