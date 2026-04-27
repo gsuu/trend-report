@@ -23,7 +23,8 @@ class ImageMetaParser(HTMLParser):
     def __init__(self, base_url: str) -> None:
         super().__init__()
         self.base_url = base_url
-        self.images: list[str] = []
+        self.meta_images: list[str] = []
+        self.link_images: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attrs_dict = {key.lower(): value or "" for key, value in attrs}
@@ -31,19 +32,24 @@ class ImageMetaParser(HTMLParser):
             meta_key = (attrs_dict.get("property") or attrs_dict.get("name") or attrs_dict.get("itemprop") or "").lower()
             content = attrs_dict.get("content", "").strip()
             if meta_key in {"og:image", "og:image:url", "twitter:image", "twitter:image:src", "image"}:
-                self.add_image(content)
+                self.add_image(content, source="meta")
         elif tag == "link":
             rel = attrs_dict.get("rel", "").lower()
-            if "image_src" in rel or "apple-touch-icon" in rel:
-                self.add_image(attrs_dict.get("href", "").strip())
+            if "image_src" in rel:
+                self.add_image(attrs_dict.get("href", "").strip(), source="link")
 
-    def add_image(self, value: str) -> None:
+    @property
+    def images(self) -> list[str]:
+        return [*self.meta_images, *self.link_images]
+
+    def add_image(self, value: str, source: str) -> None:
         if not value or value.startswith("data:"):
             return
 
         image_url = urljoin(self.base_url, html.unescape(value))
+        bucket = self.meta_images if source == "meta" else self.link_images
         if image_url.startswith("https://") and image_url not in self.images:
-            self.images.append(image_url)
+            bucket.append(image_url)
 
 
 def parse_args() -> argparse.Namespace:
