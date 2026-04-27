@@ -11,7 +11,7 @@
     "tracking:prepare": "node scripts/tracking/collect_materials.mjs",
     "tracking:brief": "node scripts/tracking/collect_materials.mjs --no-fetch",
     "notion:upload": "python scripts/notion/push_notion.py",
-    "magazine:export-json": "node scripts/notion/export_magazine_json.mjs",
+    "magazine:export-json": "python scripts/notion/export_magazine_json.py",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0"
   },

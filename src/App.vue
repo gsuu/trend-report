@@ -5,8 +5,6 @@ import fallbackReport from "./data/report.example.json";
 const basePath = detectBasePath();
 const route = ref(currentRoute());
 const report = ref(fallbackReport);
-const magazineCacheKey = "cttd-magazine-report-v1";
-const magazineCacheTtl = 5 * 60 * 1000;
 const magazineLoading = ref(!hasMagazineIssues(report.value));
 const showCurrentWeekOnly = ref(hasCurrentWeekFilter(route.value));
 const listRoute = ref(validListRoute(route.value) ? route.value : "/");
@@ -100,24 +98,16 @@ onBeforeUnmount(() => {
 });
 
 async function loadMagazineReport() {
-  const cachedReport = readCachedMagazineReport();
-  if (cachedReport) {
-    report.value = cachedReport;
-    magazineLoading.value = false;
-  }
-
-  await loadStaticMagazineReport(cachedReport);
-  await refreshMagazineReport();
+  await loadStaticMagazineReport();
+  if (!issues.value.length) report.value = fallbackReport;
   magazineLoading.value = false;
 }
 
-async function loadStaticMagazineReport(cachedReport) {
-  if (cachedReport) return;
-
+async function loadStaticMagazineReport() {
   try {
     const response = await fetch(withBasePath("/data/magazine.json"), {
       headers: { Accept: "application/json" },
-      cache: "force-cache",
+      cache: "no-cache",
     });
     if (!response.ok) return;
 
@@ -127,49 +117,8 @@ async function loadStaticMagazineReport(cachedReport) {
 
     report.value = nextReport;
     magazineLoading.value = false;
-    writeCachedMagazineReport(nextReport);
   } catch {
-    // Static JSON is optional. The API refresh below remains the source of truth.
-  }
-}
-
-async function refreshMagazineReport() {
-  try {
-    const response = await fetch("/api/magazine", {
-      headers: { Accept: "application/json" },
-    });
-    const data = await response.json();
-    if (!response.ok || !data.ok || !Array.isArray(data.report?.issues)) {
-      throw new Error(data.error || "매거진 데이터를 불러오지 못했습니다.");
-    }
-    report.value = data.report;
-    writeCachedMagazineReport(data.report);
-  } catch {
-    if (!issues.value.length) report.value = fallbackReport;
-  }
-}
-
-function readCachedMagazineReport() {
-  if (typeof window === "undefined") return null;
-  try {
-    const cached = JSON.parse(window.sessionStorage.getItem(magazineCacheKey) || "null");
-    if (!cached?.report || !Array.isArray(cached.report.issues)) return null;
-    if (Date.now() - Number(cached.cachedAt || 0) > magazineCacheTtl) return null;
-    return cached.report;
-  } catch {
-    return null;
-  }
-}
-
-function writeCachedMagazineReport(nextReport) {
-  if (typeof window === "undefined") return;
-  try {
-    window.sessionStorage.setItem(magazineCacheKey, JSON.stringify({
-      cachedAt: Date.now(),
-      report: nextReport,
-    }));
-  } catch {
-    // Storage can fail in private mode or under quota pressure.
+    // Static JSON is the source of truth. The bundled fallback keeps the page usable.
   }
 }
 
@@ -180,9 +129,23 @@ const filteredIssues = computed(() => {
   return issues.value.filter((issue) => isDateInRange(issue.date, recentWeekRange.value));
 });
 const activeIssue = computed(() => {
-  const match = route.value.match(/^\/articles\/([^/?]+)/);
+  const path = routePath(route.value);
+  const exactMatch = issues.value.find((issue) => issue.route === path || issue.href === path);
+  if (exactMatch) return exactMatch;
+
+  const datedMatch = path.match(/^\/articles\/([^/]+)\/([^/]+)$/);
+  if (datedMatch) {
+    return issues.value.find((issue) => issue.issueSlug === datedMatch[1] && issue.number === datedMatch[2]) || null;
+  }
+
+  const match = path.match(/^\/articles\/([^/?]+)/);
   if (!match) return null;
-  return issues.value.find((issue) => issue.number === match[1]) || null;
+  const articleSlug = decodeURIComponent(match[1]);
+  const slugMatch = articleSlug.match(/^(\d{4}-\d{2}-\d{2})-(\d{2,})$/);
+  if (slugMatch) {
+    return issues.value.find((issue) => issue.issueSlug === slugMatch[1] && issue.number === slugMatch[2]) || null;
+  }
+  return issues.value.find((issue) => issue.number === articleSlug || issue.articleSlug === articleSlug || issue.id === articleSlug) || null;
 });
 
 const activeCategoryKey = computed(() => {
@@ -407,6 +370,24 @@ function plainText(htmlText) {
   return node.textContent || node.innerText || "";
 }
 
+function proseBlocks(blocks = []) {
+  return blocks.reduce((result, block) => {
+    if (block.kind !== "highlight") {
+      result.push({ ...block });
+      return result;
+    }
+
+    const previous = result[result.length - 1];
+    if (previous?.kind === "paragraph") {
+      previous.html = `${previous.html} ${block.html}`;
+      return result;
+    }
+
+    result.push({ kind: "paragraph", html: block.html });
+    return result;
+  }, []);
+}
+
 function estimateCardHeight(issue) {
   const titleLength = plainText(issue.takeawayHtml).length;
   const deckLength = plainText(issue.deckHtml).length;
@@ -488,11 +469,26 @@ async function shareIssue(issue) {
 function isSummaryFact(item) {
   const text = String(item);
   const match = text.match(/^([^:：]{2,18})[:：]\s*(.+)$/);
-  return !match || !["업데이트", "서비스 맥락", "기술 맥락", "변경 전", "변경 후"].includes(match[1]);
+  return !match || !["업데이트", "핵심 업데이트", "핵심 내용", "주요 항목", "서비스 맥락", "디자인 맥락", "기술 맥락", "변경 전", "변경 후"].includes(match[1]);
 }
 
-function summaryCoreItems(items = []) {
-  return items.filter((item) => !isSummaryFact(item));
+function summaryLabelValue(item) {
+  const match = String(item).match(/^([^:：]{2,18})[:：]\s*(.+)$/);
+  return match ? { label: match[1], value: match[2] } : null;
+}
+
+function normalizeSummaryText(text) {
+  return plainText(text).replace(/\s+/g, " ").trim();
+}
+
+function isDuplicateHeadlineSummary(item, issue) {
+  const parsed = summaryLabelValue(item);
+  if (!parsed || !["업데이트", "핵심 업데이트", "핵심 내용", "주요 항목"].includes(parsed.label)) return false;
+  return normalizeSummaryText(parsed.value) === normalizeSummaryText(issue?.takeawayHtml);
+}
+
+function summaryCoreItems(items = [], issue = null) {
+  return items.filter((item) => !isSummaryFact(item) && !isDuplicateHeadlineSummary(item, issue));
 }
 
 function summaryFactItems(items = []) {
@@ -616,7 +612,7 @@ function isDateInRange(value, range) {
   </Teleport>
 
   <main :class="{ 'article-main': activeIssue }">
-    <article v-if="activeIssue" :key="'story-' + activeIssue.number" class="article-layout">
+    <article v-if="activeIssue" :key="'story-' + (activeIssue.route || activeIssue.number)" class="article-layout">
         <header class="article-hero">
           <p class="article-brand" v-text="activeIssue.platform"></p>
           <h1 v-html="activeIssue.takeawayHtml"></h1>
@@ -654,8 +650,8 @@ function isDateInRange(value, range) {
           <section v-for="section in activeIssue.sections" :key="section.title" :class="section.className || ['article-section', { 'is-deep-dive': section.prose }]">
             <h2 v-text="section.title"></h2>
             <div v-if="section.prose" class="section-prose">
-              <template v-for="block in section.blocks" :key="block.kind + block.html">
-                <blockquote v-if="block.kind === 'quote'" v-html="block.html"></blockquote>
+              <template v-for="(block, index) in proseBlocks(section.blocks)" :key="block.kind + block.html + index">
+                <p v-if="block.kind === 'quote'" class="insight-lead" v-html="block.html"></p>
                 <h3 v-else-if="block.kind === 'subhead'" v-html="block.html"></h3>
                 <p v-else-if="block.kind === 'paragraph'" v-html="block.html"></p>
                 <ul v-else class="prose-list"><li v-html="block.html"></li></ul>
@@ -663,7 +659,7 @@ function isDateInRange(value, range) {
             </div>
             <template v-else>
               <ul class="summary-list">
-                <li v-for="item in summaryCoreItems(section.itemsHtml)" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
+                <li v-for="item in summaryCoreItems(section.itemsHtml, activeIssue)" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
               </ul>
               <div v-if="summaryFactItems(section.itemsHtml).length" class="summary-facts">
                 <ul class="summary-fact-list">
@@ -722,7 +718,7 @@ function isDateInRange(value, range) {
           :aria-label="activeCategory ? activeCategory.label + ' 아티클 목록' : '아티클 목록'"
         >
           <div v-for="(column, columnIndex) in masonryColumns" :key="'column-' + columnIndex" class="masonry-column">
-            <article v-for="issue in column" :key="issue.id || issue.number" class="guide-card">
+            <article v-for="issue in column" :key="issue.id || issue.route || issue.number" class="guide-card">
               <a :href="storyRoute(issue)">
                 <div v-if="issue.image" class="guide-thumb">
                   <img

@@ -256,7 +256,9 @@ DEV_SECTION_HEADING_REPLACEMENTS = {
 }
 SECTION_BLOCK_PATTERN = re.compile(r"^@@(?P<kind>quote|subhead|paragraph|list)@@(?P<text>.*)")
 SUMMARY_LABEL_PATTERN = re.compile(r"^(?P<label>[^:：]{2,18})[:：]\s*(?P<value>.+)$")
-CORE_SUMMARY_LABELS = {"업데이트", "서비스 맥락", "디자인 맥락", "기술 맥락", "변경 전", "변경 후"}
+HEADLINE_SUMMARY_LABELS = {"업데이트", "핵심 업데이트", "핵심 내용", "주요 항목"}
+CORE_SUMMARY_LABELS = HEADLINE_SUMMARY_LABELS | {"서비스 맥락", "디자인 맥락", "기술 맥락", "변경 전", "변경 후"}
+REFERENCE_LINK_PREFIXES = ("관련 뉴스", "관련 URL", "관련 링크", "관련 매거진", "보조 출처")
 HIDDEN_FACT_KEYS = {"출처 URL", "서비스 URL", "상세페이지 초점"}
 SOURCE_TITLE_CACHE: dict[str, str] = {}
 
@@ -392,7 +394,7 @@ def issue_source_title(issue: Issue) -> str:
 
 
 def is_hidden_fact_key(key: str) -> bool:
-    return key in HIDDEN_FACT_KEYS or key.startswith("관련 뉴스")
+    return key in HIDDEN_FACT_KEYS or key.startswith(REFERENCE_LINK_PREFIXES)
 
 
 def parse_reference_link(label: str, value: str) -> dict[str, str]:
@@ -415,8 +417,9 @@ def parse_reference_link(label: str, value: str) -> dict[str, str]:
 def issue_reference_links(issue: Issue) -> list[dict[str, str]]:
     links: list[dict[str, str]] = []
     for key, value in issue.meta.items():
-        if key.startswith("관련 뉴스"):
-            links.append(parse_reference_link("관련 뉴스", value))
+        if key.startswith(REFERENCE_LINK_PREFIXES):
+            label = re.sub(r"\s*\d+$", "", key).strip()
+            links.append(parse_reference_link(label, value))
     if issue.meta.get("서비스 URL"):
         links.append(parse_reference_link("서비스 URL", issue.meta["서비스 URL"]))
     return links
@@ -451,8 +454,19 @@ def is_summary_fact(text: str) -> bool:
     return not label or label not in CORE_SUMMARY_LABELS
 
 
-def split_summary_items(items: list[str]) -> tuple[list[str], list[str]]:
-    core_items = [item for item in items if not is_summary_fact(item)]
+def summary_value(text: str) -> str:
+    match = SUMMARY_LABEL_PATTERN.match(text.strip())
+    return match.group("value").strip() if match else strip_brief_label(text)
+
+
+def is_duplicate_headline_summary(text: str, issue: Issue | None = None) -> bool:
+    if not issue or summary_label(text) not in HEADLINE_SUMMARY_LABELS:
+        return False
+    return clean_markdown(summary_value(text)) == clean_markdown(issue_display_title(issue))
+
+
+def split_summary_items(items: list[str], issue: Issue | None = None) -> tuple[list[str], list[str]]:
+    core_items = [item for item in items if not is_summary_fact(item) and not is_duplicate_headline_summary(item, issue)]
     fact_items = [item for item in items if is_summary_fact(item)]
     return core_items, fact_items
 
@@ -461,10 +475,19 @@ def section_block(kind: str, text: str) -> str:
     return f"@@{kind}@@{text.strip()}"
 
 
+def normalize_detail_block(kind: str, text: str) -> tuple[str, str]:
+    clean_text = text.strip()
+    if kind == "quote":
+        highlight_match = re.match(r"^(?:\[?흥미로운 대목\]?|원문에서 흥미로운 대목)[:：]\s*(.+)$", clean_text)
+        if highlight_match:
+            return "highlight", highlight_match.group(1).strip()
+    return kind, clean_text
+
+
 def split_section_block(item: str) -> tuple[str, str]:
     match = SECTION_BLOCK_PATTERN.match(item)
     if match:
-        return match.group("kind"), match.group("text")
+        return normalize_detail_block(match.group("kind"), match.group("text"))
     return "list", item
 
 
@@ -1137,19 +1160,96 @@ def issue_takeaway(issue: Issue) -> str:
 
 def issue_deck(issue: Issue) -> str:
     items = issue.sections.get("기술 변화 요약", []) or issue.sections.get("디자인 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
-    for preferred_label in ("서비스 맥락", "디자인 맥락", "기술 맥락", "변경 후", "확인 포인트", "디자인 포인트"):
-        for item in items:
-            label, separator, value = str(item).partition(":")
-            if separator and label.strip() == preferred_label and value.strip():
-                return clean_inline(value.strip())
+    labeled_items = []
+    for item in items:
+        label, separator, value = str(item).partition(":")
+        if separator and value.strip():
+            labeled_items.append((label.strip(), value.strip()))
+
+    for label, value in labeled_items:
+        if label in {"업데이트", "핵심 업데이트", "핵심 내용", "주요 항목"}:
+            summary = deck_opening_sentence(value, issue.platform)
+            if summary:
+                return expand_deck_summary(summary, labeled_items)
+
+    for preferred_label in ("변경 후", "확인할 영향", "확인 포인트", "디자인 포인트", "서비스 맥락", "디자인 맥락", "기술 맥락"):
+        for label, value in labeled_items:
+            if label == preferred_label:
+                return expand_deck_summary(value, labeled_items)
+
+    for label, value in labeled_items:
+        if label in {"업데이트", "핵심 업데이트", "핵심 내용", "주요 항목"}:
+            return expand_deck_summary(value, labeled_items)
     if items:
         return strip_brief_label(items[0])
     return issue.meta.get("출처", "")
 
 
+def expand_deck_summary(summary: str, labeled_items: list[tuple[str, str]]) -> str:
+    deck_parts = [summary.strip()]
+    for preferred_label in ("서비스 맥락", "디자인 맥락", "기술 맥락", "변경 후", "확인할 영향", "확인 포인트", "디자인 포인트"):
+        for label, value in labeled_items:
+            if label != preferred_label:
+                continue
+            if clean_markdown(value) == clean_markdown(summary):
+                continue
+            deck_parts.append(value.strip())
+            return " ".join(deck_parts)
+    return summary
+
+
+def deck_opening_sentence(text: str, platform: str) -> str:
+    sentence = first_sentence(text)
+    if not sentence:
+        return ""
+    return ensure_brand_subject(sentence, platform)
+
+
+def first_sentence(text: str) -> str:
+    clean_text = text.strip()
+    sentences = re.split(r"(?<=[.!?。])\s+", clean_text, maxsplit=1)
+    return sentences[0].strip()
+
+
+def ensure_brand_subject(sentence: str, platform: str) -> str:
+    clean_platform = clean_markdown(platform)
+    clean_sentence = clean_markdown(sentence)
+    platform_variants = {
+        clean_platform,
+        clean_platform.split(".", 1)[0],
+        clean_platform.split(" ", 1)[0],
+    }
+    if any(variant and len(variant) >= 2 and variant in clean_sentence[:80] for variant in platform_variants):
+        return sentence
+    return f"{platform}에서 {sentence}"
+
+
+def topic_particle(text: str) -> str:
+    value = clean_markdown(text).strip()
+    if not value:
+        return "는"
+    last = value[-1]
+    code = ord(last)
+    if 0xAC00 <= code <= 0xD7A3:
+        return "은" if (code - 0xAC00) % 28 else "는"
+    return "는"
+
+
+def source_summary_sentence(text: str) -> str:
+    clean_text = text.strip()
+    original_index = clean_text.find("원문은")
+    if original_index >= 0:
+        return clean_text[original_index:].replace("원문은 ", "", 1).strip()
+
+    sentences = re.split(r"(?<=[.!?。]|[다요죠니다습니다])\s+", clean_text, maxsplit=1)
+    if len(sentences) > 1 and len(clean_markdown(sentences[1])) >= 18:
+        return sentences[1].strip()
+    return ""
+
+
 def issue_update_title(issue: Issue) -> str:
     items = issue.sections.get("기술 변화 요약", []) or issue.sections.get("디자인 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
-    for preferred_label in ("업데이트", "핵심 업데이트"):
+    for preferred_label in ("업데이트", "핵심 업데이트", "핵심 내용", "주요 항목"):
         for item in items:
             label, separator, value = str(item).partition(":")
             if separator and label.strip() == preferred_label and value.strip():
@@ -1171,11 +1271,21 @@ def issue_target_description(issue: Issue) -> str:
 
 
 def issue_display_title(issue: Issue) -> str:
+    if issue.title and clean_markdown(issue.title) != clean_markdown(issue.platform):
+        return issue.title
+    quote = issue_detail_quote(issue)
+    if quote:
+        return f"{issue.platform}: {quote}"
     return issue_update_title(issue)
 
 
 def issue_display_description(issue: Issue) -> str:
-    return issue_target_title(issue) or issue_target_description(issue)
+    title = clean_markdown(issue_display_title(issue))
+    for candidate in (issue_deck(issue), issue_target_title(issue), issue_target_description(issue), issue.title, issue.platform):
+        value = clean_markdown(candidate or "")
+        if value and value != title:
+            return value
+    return issue.platform
 
 
 def issue_newsletter_summary(issue: Issue, limit: int = 76) -> str:
@@ -1346,7 +1456,7 @@ def render_index(report: Report) -> str:
           <section v-for="section in activeIssue.sections" :key="section.title" :class="section.className">
             <h2 v-text="section.title"></h2>
             <div v-if="section.prose" class="section-prose">
-              <template v-for="block in section.blocks" :key="block.kind + block.html">
+              <template v-for="(block, index) in proseBlocks(section.blocks)" :key="block.kind + block.html + index">
                 <blockquote v-if="block.kind === 'quote'" v-html="block.html"></blockquote>
                 <h3 v-else-if="block.kind === 'subhead'" v-html="block.html"></h3>
                 <p v-else-if="block.kind === 'paragraph'" v-html="block.html"></p>
@@ -1355,7 +1465,7 @@ def render_index(report: Report) -> str:
             </div>
             <template v-else>
               <ul class="summary-list">
-                <li v-for="item in summaryCoreItems(section.itemsHtml)" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
+                <li v-for="item in summaryCoreItems(section.itemsHtml, activeIssue)" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
               </ul>
               <div v-if="summaryFactItems(section.itemsHtml).length" class="summary-facts">
                 <ul class="summary-fact-list">
@@ -1633,6 +1743,23 @@ def render_index(report: Report) -> str:
           node.innerHTML = htmlText || "";
           return node.textContent || node.innerText || "";
         }},
+        proseBlocks(blocks) {{
+          return (blocks || []).reduce((result, block) => {{
+            if (block.kind !== "highlight") {{
+              result.push({{ ...block }});
+              return result;
+            }}
+
+            const previous = result[result.length - 1];
+            if (previous && previous.kind === "paragraph") {{
+              previous.html = `${{previous.html}} ${{block.html}}`;
+              return result;
+            }}
+
+            result.push({{ kind: "paragraph", html: block.html }});
+            return result;
+          }}, []);
+        }},
         async shareIssue(issue) {{
           if (!issue) return;
           this.shareStatus = "";
@@ -1672,10 +1799,24 @@ def render_index(report: Report) -> str:
         isSummaryFact(item) {{
           const text = String(item);
           const match = text.match(/^([^:：]{{2,18}})[:：]\\s*(.+)$/);
-          return !match || !["업데이트", "서비스 맥락", "기술 맥락", "변경 전", "변경 후"].includes(match[1]);
+          return !match || !["업데이트", "핵심 업데이트", "핵심 내용", "주요 항목", "서비스 맥락", "디자인 맥락", "기술 맥락", "변경 전", "변경 후"].includes(match[1]);
         }},
-        summaryCoreItems(items) {{
-          return items.filter((item) => !this.isSummaryFact(item));
+        summaryLabelValue(item) {{
+          const match = String(item).match(/^([^:：]{{2,18}})[:：]\\s*(.+)$/);
+          return match ? {{ label: match[1], value: match[2] }} : null;
+        }},
+        normalizeSummaryText(text) {{
+          const node = document.createElement("span");
+          node.innerHTML = text || "";
+          return (node.textContent || node.innerText || "").replace(/\\s+/g, " ").trim();
+        }},
+        isDuplicateHeadlineSummary(item, issue) {{
+          const parsed = this.summaryLabelValue(item);
+          if (!parsed || !["업데이트", "핵심 업데이트", "핵심 내용", "주요 항목"].includes(parsed.label)) return false;
+          return this.normalizeSummaryText(parsed.value) === this.normalizeSummaryText(issue && issue.takeawayHtml);
+        }},
+        summaryCoreItems(items, issue) {{
+          return items.filter((item) => !this.isSummaryFact(item) && !this.isDuplicateHeadlineSummary(item, issue));
         }},
         summaryFactItems(items) {{
           return items.filter((item) => this.isSummaryFact(item));
@@ -1713,11 +1854,26 @@ def section_blocks(title: str, items: list[str]) -> list[dict[str, str]]:
     if not is_detail_section(title):
         return [{"kind": "list", "html": clean_inline(item)} for item in items]
 
-    return [
+    blocks = [
         {"kind": kind, "html": clean_inline(text)}
         for kind, text in (split_section_block(item) for item in items)
         if text.strip()
     ]
+    return merge_highlight_blocks(blocks)
+
+
+def merge_highlight_blocks(blocks: list[dict[str, str]]) -> list[dict[str, str]]:
+    merged: list[dict[str, str]] = []
+    for block in blocks:
+        if block["kind"] != "highlight":
+            merged.append(dict(block))
+            continue
+
+        if merged and merged[-1]["kind"] == "paragraph":
+            merged[-1]["html"] = f'{merged[-1]["html"]} {block["html"]}'
+        else:
+            merged.append({"kind": "paragraph", "html": block["html"]})
+    return merged
 
 
 def render_reference_links(issue: Issue | None) -> str:
@@ -1739,7 +1895,7 @@ def render_reference_links(issue: Issue | None) -> str:
 
 def render_section_content(title: str, items: list[str], issue: Issue | None = None) -> str:
     if not is_detail_section(title):
-        core_items, fact_items = split_summary_items(items)
+        core_items, fact_items = split_summary_items(items, issue)
         facts_html = (
             f"""
               <div class="summary-facts">
@@ -1779,8 +1935,10 @@ def render_section_content(title: str, items: list[str], issue: Issue | None = N
             continue
 
         close_list()
-        if kind == "quote":
-            html_parts.append(f"<blockquote>{content}</blockquote>")
+        if kind == "highlight":
+            html_parts.append(f"<p>{content}</p>")
+        elif kind == "quote":
+            html_parts.append(f'<p class="insight-lead">{content}</p>')
         elif kind == "subhead":
             html_parts.append(f"<h3>{content}</h3>")
         else:

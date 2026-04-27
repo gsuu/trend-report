@@ -390,7 +390,7 @@ async function main() {
   const inputPath = await inputPathFor(date);
   const outputPath = runFile(date, "raw-collection.md");
   const overwrite = hasArg("--overwrite");
-  const limit = Number.parseInt(argValue("--limit", "20"), 10) || 20;
+  const limit = Number.parseInt(argValue("--limit", "30"), 10) || 30;
 
   try {
     await fs.stat(outputPath);

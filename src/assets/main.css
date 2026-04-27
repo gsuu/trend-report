@@ -4,7 +4,6 @@
   --line: #d8d8d8;
   --paper: #ffffff;
   --soft: #f4f4f4;
-  --mark: rgba(238, 255, 72, 0.34);
   --max: 1392px;
 }
 
@@ -1186,15 +1185,6 @@ main {
   opacity: 0.55;
 }
 
-.section-prose p code,
-.section-prose blockquote code {
-  padding: 0 2px;
-  background: var(--mark);
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  font-weight: inherit;
-}
-
 .article-hero .story-date {
   margin-bottom: 0;
 }
@@ -1378,7 +1368,7 @@ main {
   position: relative;
   padding-left: 15px;
   font-size: 18px;
-  line-height: 1.85;
+  line-height: 1.6;
 }
 
 .article-section li::before {
@@ -1407,7 +1397,7 @@ main {
   padding: 12px 18px 12px 22px;
   border-bottom: 1px solid #ebebeb;
   font-size: 16px;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .article-section:not(.is-deep-dive) li:last-child {
@@ -1510,7 +1500,7 @@ main {
 
 .article-section.is-deep-dive li {
   font-size: 18px;
-  line-height: 1.85;
+  line-height: 1.6;
 }
 
 .section-prose {
@@ -1521,27 +1511,25 @@ main {
 .section-prose p {
   margin: 0;
   font-size: 18px;
-  line-height: 1.9;
+  line-height: 1.6;
 }
 
-.section-prose blockquote {
-  margin: 0 0 10px;
-  padding: 24px 0;
-  border-bottom: 1px solid var(--line);
+.section-prose .insight-lead {
+  margin: 0 0 8px;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.5;
 }
 
 .section-prose h3 {
-  margin: 10px 0 0;
+  margin: 42px 0 0;
   font-size: 22px;
   font-weight: 600;
   line-height: 1.35;
 }
 
 .section-prose h3:not(:first-of-type) {
-  margin-top: 58px;
+  margin-top: 42px;
 }
 
 .section-prose .prose-list {
@@ -1550,7 +1538,7 @@ main {
 
 .section-prose .prose-list li {
   font-size: 16px;
-  line-height: 1.75;
+  line-height: 1.6;
 }
 
 .article-footer {
@@ -1884,24 +1872,23 @@ main {
 
   .section-prose p {
     font-size: 16px;
-    line-height: 1.68;
+    line-height: 1.6;
   }
 
-  .section-prose blockquote {
+  .section-prose .insight-lead {
     margin-bottom: 6px;
-    padding: 18px 0;
     font-size: 20px;
     line-height: 1.4;
   }
 
   .section-prose h3 {
-    margin-top: 8px;
+    margin-top: 32px;
     font-size: 18px;
     line-height: 1.3;
   }
 
   .section-prose h3:not(:first-of-type) {
-    margin-top: 44px;
+    margin-top: 32px;
   }
 
   .section-prose .prose-list li {
