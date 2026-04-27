@@ -36,6 +36,12 @@ const NEWSLETTER_SECTION_PATTERN = /<!-- section:([a-z0-9_-]+) -->\s*([\s\S]*?)\
 const SUBSCRIBER_EMAIL_PROPERTIES = ["Email", "이메일", "이름", "Name"];
 const SUBSCRIBER_STATUS_PROPERTIES = ["Status", "상태"];
 const SUBSCRIBER_AUDIENCE_PROPERTIES = ["Audience", "구독분야", "뉴스레터"];
+const NEWSLETTER_AUDIENCES = ["service", "design", "dev"];
+const NEWSLETTER_AUDIENCE_LABELS = {
+  service: "Service",
+  design: "Design",
+  dev: "DEV",
+};
 let newsletterTemplateCache;
 
 loadEnvFiles();
@@ -61,7 +67,7 @@ function loadEnvFiles() {
 }
 
 function normalizeKey(value = "") {
-  return String(value).trim().toLowerCase().replaceAll(/\s+/g, "_").replaceAll("-", "_");
+  return String(value).trim().toLowerCase().replaceAll(/[\s./-]+/g, "_").replaceAll(/_+/g, "_").replace(/^_+|_+$/g, "");
 }
 
 function normalizeAreaKey(value = "", tags = []) {
@@ -239,15 +245,24 @@ function subscriberAudiences(page) {
   return propertyTags(page.properties || {}, SUBSCRIBER_AUDIENCE_PROPERTIES).map((audience) => normalizeKey(audience));
 }
 
-function audienceMatchesSubscriber(newsletterAudience, subscriberAudienceValues) {
-  if (!subscriberAudienceValues.length) return true;
-  const expected = newsletterAudience === "dev"
-    ? ["dev", "develop", "development", "frontend"]
-    : ["uiux", "ui_ux", "service", "design", "service_design", "general"];
-  return subscriberAudienceValues.some((audience) => expected.includes(audience));
+function expandSubscriberAudiences(values = []) {
+  if (!values.length) return NEWSLETTER_AUDIENCES;
+  const selected = new Set();
+  for (const value of values) {
+    if (["service", "service_planning", "planning", "pm", "product", "general", "uiux", "ui_ux", "service_design"].includes(value)) {
+      selected.add("service");
+    }
+    if (["design", "web_design", "webdesign", "general", "uiux", "ui_ux", "service_design"].includes(value)) {
+      selected.add("design");
+    }
+    if (["dev", "develop", "development", "frontend"].includes(value)) {
+      selected.add("dev");
+    }
+  }
+  return NEWSLETTER_AUDIENCES.filter((audience) => selected.has(audience));
 }
 
-async function notionNewsletterSubscribers(audience) {
+async function notionNewsletterSubscribers() {
   const notionToken = process.env.NOTION_TOKEN || process.env.NOTION_API_KEY;
   if (!notionToken) return [];
   const databaseId = subscriberDatabaseId();
@@ -266,15 +281,18 @@ async function notionNewsletterSubscribers(audience) {
     cursor = response.has_more ? response.next_cursor : undefined;
   } while (cursor);
 
-  return uniqueEmails(pages
+  const seenEmails = new Set();
+  return pages
     .filter((page) => !["unsubscribed", "inactive", "해지"].includes(subscriberStatus(page)))
-    .filter((page) => audienceMatchesSubscriber(audience, subscriberAudiences(page)))
-    .map(subscriberEmail));
-}
-
-async function resolveRecipients(audience) {
-  const notionSubscribers = await notionNewsletterSubscribers(audience);
-  return notionSubscribers;
+    .map((page) => ({
+      email: subscriberEmail(page),
+      audiences: expandSubscriberAudiences(subscriberAudiences(page)),
+    }))
+    .filter((subscriber) => {
+      if (!subscriber.email || seenEmails.has(subscriber.email) || !subscriber.audiences.length) return false;
+      seenEmails.add(subscriber.email);
+      return true;
+    });
 }
 
 function isAuthorized(request) {
@@ -383,17 +401,20 @@ async function fetchIssuesFromNotion() {
   return { issues, weekRange };
 }
 
-function renderNewsletter(audience, issues, weekRange, recipientEmail = "") {
-  const label = audience === "dev" ? "DEV" : "Service/Design";
-  const displayTitle = audience === "dev" ? "Weekly Dev Trend Report" : "Weekly Web Trend Report";
-  const description = audience === "dev"
-    ? "지난주 프론트엔드 구현, 접근성 QA, 브라우저/도구 변화입니다."
-    : "지난주 서비스 기획과 웹디자인 관점에서 볼 변화입니다.";
-  const logoSrc = `${siteUrl()}/assets/cttd-logo-email.png`;
-  const rangeText = weekRangeLabel(weekRange);
+function renderAudienceHeading(label) {
+  return (
+    '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:24px 0 6px;">'
+    + '<tr>'
+    + '<td width="15" style="width:15px;padding:0 8px 0 0;vertical-align:middle;"><span style="display:inline-block;width:7px;height:7px;background:#f9ffc1;background:rgba(238,255,72,0.34);"></span></td>'
+    + `<td style="padding:0;color:#111111;font-size:14px;line-height:1.35;font-weight:800;letter-spacing:0.02em;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${htmlEscape(label)}</td>`
+    + '</tr></table>'
+  );
+}
+
+function renderIssueCards(issues, startNumber = 1) {
   const templates = loadNewsletterTemplates();
 
-  const cards = issues.map((issue, index) => {
+  return issues.map((issue, index) => {
     const areaBlock = issue.area
       ? `<div style="margin:0 0 6px;color:#777777;font-size:11px;line-height:1.3;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${htmlEscape(issue.area)}</div>`
       : "";
@@ -403,7 +424,7 @@ function renderNewsletter(audience, issues, weekRange, recipientEmail = "") {
     const detailSummaryBlock = `<div style="margin:10px 0 0;padding:10px 0 0;border-top:1px solid #eeeeee;color:#333333;font-size:13px;line-height:1.58;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;"><a href="${htmlEscape(issue.magazineUrl)}" style="color:#111111;text-decoration:underline;text-underline-offset:3px;">더보기</a></div>`;
     const tags = issue.tags.map((tag) => `<span style="display:inline-block;margin:0 5px 5px 0;padding:4px 7px;background:#f9ffc1;background:rgba(238,255,72,0.34);color:#111111;font-size:11px;line-height:1.2;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">#${htmlEscape(tag)}</span>`).join("");
     return fillNewsletterTemplate(templates.card, {
-      DISPLAY_NUMBER: String(index + 1).padStart(2, "0"),
+      DISPLAY_NUMBER: String(startNumber + index).padStart(2, "0"),
       AREA_BLOCK: areaBlock,
       HREF: htmlEscape(issue.magazineUrl),
       TITLE: htmlEscape(`[${issue.platform}] ${issue.title || issue.platform}`),
@@ -412,26 +433,47 @@ function renderNewsletter(audience, issues, weekRange, recipientEmail = "") {
       TAGS: tags,
     });
   }).join("");
+}
 
-  const body = cards || fillNewsletterTemplate(templates.empty, {
-    EMPTY_MESSAGE: `이번 주 ${label} 대상 이슈가 없습니다.`,
+function selectedIssuesByAudience(audiences, issuesByAudience) {
+  return audiences.flatMap((audience) => issuesByAudience[audience] || []);
+}
+
+function renderNewsletter(audiences, issuesByAudience, weekRange, recipientEmail = "") {
+  const selectedAudiences = audiences.filter((audience) => NEWSLETTER_AUDIENCES.includes(audience));
+  const logoSrc = `${siteUrl()}/assets/cttd-logo-email.png`;
+  const rangeText = weekRangeLabel(weekRange);
+  const templates = loadNewsletterTemplates();
+  let displayNumber = 1;
+  const bodyParts = [];
+
+  for (const audience of selectedAudiences) {
+    const issues = issuesByAudience[audience] || [];
+    if (!issues.length) continue;
+    bodyParts.push(renderAudienceHeading(NEWSLETTER_AUDIENCE_LABELS[audience]));
+    bodyParts.push(renderIssueCards(issues, displayNumber));
+    displayNumber += issues.length;
+  }
+
+  const body = bodyParts.join("") || fillNewsletterTemplate(templates.empty, {
+    EMPTY_MESSAGE: "선택한 카테고리에 이번 주 대상 이슈가 없습니다.",
   });
+  const selectedLabels = selectedAudiences.map((audience) => NEWSLETTER_AUDIENCE_LABELS[audience]).join(", ");
 
   return fillNewsletterTemplate(templates.shell, {
-    PAGE_TITLE: htmlEscape(`[CTTD] ${displayTitle}`),
+    PAGE_TITLE: htmlEscape("[CTTD] Weekly Web Trend"),
     PREHEADER: "Service/Design/DEV 주간 트렌드 리포트",
     LOGO_SRC: htmlEscape(logoSrc),
-    KICKER: htmlEscape(audience === "dev" ? "Frontend Development Weekly" : "Service/Design Weekly"),
-    DISPLAY_TITLE: htmlEscape(displayTitle),
-    DESCRIPTION: htmlEscape(`${rangeText} 기준 ${description} 상세 내용은 각 매거진 링크에서 확인하세요.`),
+    KICKER: "Weekly Web Trend",
+    DISPLAY_TITLE: "Weekly Web Trend",
+    DESCRIPTION: htmlEscape(`${rangeText} 기준 ${selectedLabels || "선택한 카테고리"} 업데이트입니다. 상세 내용은 각 매거진 링크에서 확인하세요.`),
     BODY: body,
     FOOTER: footerHtml(recipientEmail),
   });
 }
 
-function audienceSubject(audience) {
-  const displayTitle = audience === "dev" ? "Weekly Dev Trend Report" : "Weekly Web Trend Report";
-  return `[CTTD] ${displayTitle}`;
+function audienceSubject() {
+  return "[CTTD] Weekly Web Trend";
 }
 
 function footerHtml(recipientEmail = "") {
@@ -442,27 +484,34 @@ function footerHtml(recipientEmail = "") {
   return `이 메일은 CTTD Newsletter 시스템에서 발송되었습니다.${unsubscribeHtml}`;
 }
 
-function renderPlainText(audience, issues, weekRange, recipientEmail = "") {
+function renderPlainText(audiences, issuesByAudience, weekRange, recipientEmail = "") {
   const unsubscribeLink = unsubscribeUrl(recipientEmail);
-  return [
-    audienceSubject(audience).replace(/^\[CTTD\]\s*/, "CTTD "),
-    weekRangeLabel(weekRange),
-    "",
-    ...issues.flatMap((issue) => [
+  const issueLines = [];
+  for (const audience of audiences) {
+    const issues = issuesByAudience[audience] || [];
+    if (!issues.length) continue;
+    issueLines.push(`## ${NEWSLETTER_AUDIENCE_LABELS[audience]}`);
+    issueLines.push("");
+    issueLines.push(...issues.flatMap((issue) => [
       `[${issue.platform}] ${issue.title || issue.platform}`,
       issue.area || "",
       issue.deck,
       issue.magazineUrl,
       "",
-    ]),
+    ]));
+  }
+  return [
+    "CTTD Weekly Web Trend",
+    weekRangeLabel(weekRange),
+    "",
+    ...issueLines,
     unsubscribeLink ? `구독 해지: ${unsubscribeLink}` : "",
   ].join("\n");
 }
 
-async function sendNewsletter(audience, issues, weekRange) {
-  const recipients = await resolveRecipients(audience);
-  if (!recipients.length) return { audience, sent: false, reason: "no recipients" };
-  if (!issues.length) return { audience, sent: false, reason: "no issues" };
+async function sendNewsletters(issuesByAudience, weekRange) {
+  const subscribers = await notionNewsletterSubscribers();
+  if (!subscribers.length) return { sent: false, reason: "no recipients" };
 
   const port = Number.parseInt(process.env.SMTP_PORT || "587", 10);
   const secure = String(process.env.SMTP_SSL || "").toLowerCase() === "true" || port === 465;
@@ -476,16 +525,24 @@ async function sendNewsletter(audience, issues, weekRange) {
     requireTLS: String(process.env.SMTP_TLS || "true").toLowerCase() !== "false" && !secure,
   });
 
-  for (const recipient of recipients) {
+  let sent = 0;
+  let skipped = 0;
+  for (const subscriber of subscribers) {
+    const selectedIssues = selectedIssuesByAudience(subscriber.audiences, issuesByAudience);
+    if (!selectedIssues.length) {
+      skipped += 1;
+      continue;
+    }
     await transporter.sendMail({
       from: process.env.SMTP_FROM,
-      to: recipient,
-      subject: audienceSubject(audience),
-      text: renderPlainText(audience, issues, weekRange, recipient),
-      html: renderNewsletter(audience, issues, weekRange, recipient),
+      to: subscriber.email,
+      subject: audienceSubject(),
+      text: renderPlainText(subscriber.audiences, issuesByAudience, weekRange, subscriber.email),
+      html: renderNewsletter(subscriber.audiences, issuesByAudience, weekRange, subscriber.email),
     });
+    sent += 1;
   }
-  return { audience, sent: true, recipients: recipients.length, issues: issues.length };
+  return { sent: sent > 0, recipients: sent, skipped, reason: sent ? undefined : "no matching issues" };
 }
 
 function issuesMarkdown(title, issues) {
@@ -509,18 +566,21 @@ function issuesMarkdown(title, issues) {
   ].filter((line) => line !== "").join("\n");
 }
 
-function renderArchiveMarkdown({ weekRange, serviceDesignIssues, devIssues, results }) {
+function renderArchiveMarkdown({ weekRange, serviceIssues, designIssues, devIssues, results }) {
   const rangeText = weekRangeLabel(weekRange);
   return [
     `# CTTD Weekly Newsletter Archive`,
     "",
     `- 기간: ${rangeText}`,
     `- 생성 시각: ${new Date().toISOString()}`,
-    `- Service/Design 이슈 수: ${serviceDesignIssues.length}`,
+    `- Service 이슈 수: ${serviceIssues.length}`,
+    `- Design 이슈 수: ${designIssues.length}`,
     `- DEV 이슈 수: ${devIssues.length}`,
-    `- 발송 결과: ${results.map((result) => `${result.audience}=${result.sent ? "sent" : `skipped(${result.reason})`}`).join(", ")}`,
+    `- 발송 결과: ${results.sent ? `sent(${results.recipients})` : `skipped(${results.reason})`}`,
     "",
-    issuesMarkdown("Service/Design", serviceDesignIssues),
+    issuesMarkdown("Service", serviceIssues),
+    "",
+    issuesMarkdown("Design", designIssues),
     "",
     issuesMarkdown("DEV", devIssues),
     "",
@@ -596,14 +656,13 @@ export default async function handler(request, response) {
 
   try {
     const { issues, weekRange } = await fetchIssuesFromNotion();
-    const serviceDesignIssues = issues.filter((issue) => issue.areaKey !== "dev");
+    const serviceIssues = issues.filter((issue) => issue.areaKey === "service");
+    const designIssues = issues.filter((issue) => issue.areaKey === "design");
     const devIssues = issues.filter((issue) => issue.areaKey === "dev");
-    const results = [
-      await sendNewsletter("uiux", serviceDesignIssues, weekRange),
-      await sendNewsletter("dev", devIssues, weekRange),
-    ];
+    const issuesByAudience = { service: serviceIssues, design: designIssues, dev: devIssues };
+    const results = await sendNewsletters(issuesByAudience, weekRange);
     const archive = await archiveMarkdownToGithub(
-      renderArchiveMarkdown({ weekRange, serviceDesignIssues, devIssues, results }),
+      renderArchiveMarkdown({ weekRange, serviceIssues, designIssues, devIssues, results }),
       weekRange,
     );
     response.status(200).json({ ok: true, issues: issues.length, weekRange: weekRangeLabel(weekRange), results, archive });

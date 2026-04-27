@@ -4,10 +4,34 @@ const EMAIL_PROPERTIES = ["Email", "이메일", "이름", "Name"];
 const STATUS_PROPERTIES = ["Status", "상태"];
 const AUDIENCE_PROPERTIES = ["Audience", "구독분야", "뉴스레터"];
 const UNSUBSCRIBED_AT_PROPERTIES = ["Unsubscribed At", "해지일"];
-const ALLOWED_AUDIENCES = new Set(["Service/Design", "DEV"]);
+const AUDIENCE_LABELS = new Map([
+  ["service_design", ["Service", "Design"]],
+  ["service", ["Service"]],
+  ["design", ["Design"]],
+  ["uiux", ["Service", "Design"]],
+  ["ui_ux", ["Service", "Design"]],
+  ["general", ["Service", "Design"]],
+  ["dev", ["DEV"]],
+  ["develop", ["DEV"]],
+  ["development", ["DEV"]],
+  ["frontend", ["DEV"]],
+]);
 
 function normalizeEmail(value = "") {
   return String(value).trim().toLowerCase();
+}
+
+function normalizeAudienceKey(value = "") {
+  return String(value)
+    .trim()
+    .toLowerCase()
+    .replaceAll(/[\s./-]+/g, "_")
+    .replaceAll(/_+/g, "_")
+    .replace(/^_+|_+$/g, "");
+}
+
+function normalizeAudiences(value = "") {
+  return AUDIENCE_LABELS.get(normalizeAudienceKey(value)) || [];
 }
 
 function isEmail(value = "") {
@@ -98,7 +122,7 @@ export default async function handler(request, response) {
     const payload = await readJsonBody(request);
     const email = normalizeEmail(payload.email);
     const audiences = Array.isArray(payload.audiences)
-      ? [...new Set(payload.audiences.filter((value) => ALLOWED_AUDIENCES.has(value)))]
+      ? [...new Set(payload.audiences.flatMap(normalizeAudiences))]
       : [];
 
     if (!isEmail(email)) {

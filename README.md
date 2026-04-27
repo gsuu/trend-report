@@ -389,7 +389,7 @@ SITE_URL=https://cttd-magazine.vercel.app
 VITE_NEWSLETTER_API_BASE_URL=https://cttd-magazine.vercel.app
 ```
 
-구독자 DB는 `Email`, `Status`, `Audience`, `Unsubscribed At` 속성을 사용합니다. `Status`가 `Unsubscribed` 또는 `Inactive`인 행은 발송 대상에서 제외됩니다. `Audience`가 비어 있으면 전체 뉴스레터 대상으로 보고, 값이 있으면 `Service/Design` 또는 `DEV`에 맞는 구독자에게만 발송합니다. 메일 하단의 구독 해지 링크는 `/api/unsubscribe`에서 확인 후 `Status=Unsubscribed`, `Unsubscribed At=현재 시각`으로 갱신합니다.
+구독자 DB는 `Email`, `Status`, `Audience`, `Unsubscribed At` 속성을 사용합니다. `Status`가 `Unsubscribed` 또는 `Inactive`인 행은 발송 대상에서 제외됩니다. `Audience`가 비어 있으면 전체 뉴스레터 대상으로 보고, 값이 있으면 `Service`, `Design`, `DEV`에 맞는 구독자에게만 발송합니다. 기존 `Service/Design` 값은 Service와 Design을 모두 구독한 것으로 처리합니다. 메일 하단의 구독 해지 링크는 `/api/unsubscribe`에서 확인 후 `Status=Unsubscribed`, `Unsubscribed At=현재 시각`으로 갱신합니다.
 매거진 사이트의 Subscribe UI는 `/api/subscribe`를 호출합니다. 사이트를 `/magazine` 같은 정적 경로에 올릴 때는 `VITE_NEWSLETTER_API_BASE_URL`을 Vercel API가 배포된 도메인으로 설정합니다.
 
 로컬 또는 수동 테스트는 아래처럼 호출합니다.
@@ -482,5 +482,15 @@ python3 scripts/newsletter/send_newsletter.py \
   --audience dev \
   --stage final \
   --approved \
+  --send
+```
+
+구독자 DB의 `Audience` 값에 따라 선택한 Service, Design, DEV 글을 한 메일에 담아 발송하려면 `--audience subscriptions`를 사용합니다. 메일 제목은 `[CTTD] Weekly Web Trend`로 고정되고, 여러 카테고리를 구독한 주소는 한 통 안에서 카테고리 섹션별 글을 받습니다.
+
+```bash
+python3 scripts/newsletter/send_newsletter.py \
+  reports/2026-04-20-uiux-web-service-weekly-trend-report.md \
+  --audience subscriptions \
+  --stage test \
   --send
 ```

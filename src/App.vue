@@ -15,7 +15,7 @@ const shareStatus = ref("");
 const viewportWidth = ref(typeof window === "undefined" ? 1440 : window.innerWidth);
 const isSubscribeOpen = ref(false);
 const subscribeEmail = ref("");
-const subscribeAudiences = ref(["Service/Design"]);
+const subscribeAudiences = ref(["Service"]);
 const subscribeStatus = ref("idle");
 const subscribeMessage = ref("");
 
@@ -578,8 +578,12 @@ function isDateInRange(value, range) {
           <div class="subscribe-options" role="group" aria-labelledby="subscribe-category-label">
             <span id="subscribe-category-label" class="subscribe-category-label">구독 카테고리<span aria-hidden="true">*</span></span>
             <label>
-              <input type="checkbox" :checked="subscribeAudiences.includes('Service/Design')" @change="toggleSubscribeAudience('Service/Design')">
-              <span>Service/Design</span>
+              <input type="checkbox" :checked="subscribeAudiences.includes('Service')" @change="toggleSubscribeAudience('Service')">
+              <span>Service</span>
+            </label>
+            <label>
+              <input type="checkbox" :checked="subscribeAudiences.includes('Design')" @change="toggleSubscribeAudience('Design')">
+              <span>Design</span>
             </label>
             <label>
               <input type="checkbox" :checked="subscribeAudiences.includes('DEV')" @change="toggleSubscribeAudience('DEV')">
