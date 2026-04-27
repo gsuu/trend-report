@@ -29,9 +29,30 @@ const DESIGN_AREA_KEYS = new Set(["design", "web_design", "webdesign", "product_
 const DEV_AREA_KEYS = new Set(["dev", "develop", "development", "engineering", "fe", "frontend", "frontend_development", "backend", "web_development", "web_develop", "개발", "프론트", "프론트엔드"]);
 const DESIGN_AI_KEYS = new Set(["ai", "ai디자인", "ai이미지", "chatgpt", "claude", "gemini", "figma_ai", "adobe_firefly", "firefly", "photoshop", "canva", "imagen", "veo", "sora", "image_generation", "이미지생성", "프로토타이핑", "디자인ai"]);
 const DEFAULT_SITE_URL = "https://cttd-magazine.vercel.app";
+const NEWSLETTER_TEMPLATE_PATH = path.join(process.cwd(), "templates", "newsletter.html");
+const NEWSLETTER_SECTION_PATTERN = /<!-- section:([a-z0-9_-]+) -->\s*([\s\S]*?)\s*<!-- \/section:\1 -->/g;
+let newsletterTemplateCache;
+
+loadEnvFiles();
 
 function siteUrl() {
   return (process.env.SITE_URL || process.env.MAGAZINE_BASE_URL || DEFAULT_SITE_URL).replace(/\/$/, "");
+}
+
+function loadEnvFiles() {
+  for (const envPath of [path.join(process.cwd(), ".env.local"), path.join(process.cwd(), ".env")]) {
+    if (!fs.existsSync(envPath)) continue;
+
+    for (const rawLine of fs.readFileSync(envPath, "utf8").split(/\r?\n/)) {
+      const line = rawLine.trim();
+      if (!line || line.startsWith("#") || !line.includes("=")) continue;
+
+      const [key, ...valueParts] = line.split("=");
+      const cleanKey = key.trim();
+      if (!cleanKey || process.env[cleanKey]) continue;
+      process.env[cleanKey] = valueParts.join("=").trim().replace(/^['"]|['"]$/g, "");
+    }
+  }
 }
 
 function normalizeKey(value = "") {
@@ -73,6 +94,28 @@ function htmlEscape(value = "") {
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
+}
+
+function loadNewsletterTemplates() {
+  if (newsletterTemplateCache) return newsletterTemplateCache;
+  const content = fs.readFileSync(NEWSLETTER_TEMPLATE_PATH, "utf8");
+  const sections = {};
+  for (const match of content.matchAll(NEWSLETTER_SECTION_PATTERN)) {
+    sections[match[1]] = match[2];
+  }
+  for (const key of ["shell", "card", "empty"]) {
+    if (!sections[key]) throw new Error(`뉴스레터 템플릿 섹션이 없습니다: ${key}`);
+  }
+  newsletterTemplateCache = sections;
+  return sections;
+}
+
+function fillNewsletterTemplate(template, values) {
+  let rendered = template;
+  for (const [key, value] of Object.entries(values)) {
+    rendered = rendered.replaceAll(`{{${key}}}`, value);
+  }
+  return rendered;
 }
 
 function getProperty(properties, names) {
@@ -259,68 +302,63 @@ async function fetchIssuesFromNotion() {
 
 function renderNewsletter(audience, issues, weekRange) {
   const label = audience === "dev" ? "DEV" : "Service/Design";
+  const displayTitle = audience === "dev" ? "Weekly Dev Trend Report" : "Weekly Web Trend Report";
   const description = audience === "dev"
     ? "지난주 프론트엔드 구현, 접근성 QA, 브라우저/도구 변화입니다."
     : "지난주 서비스 기획과 웹디자인 관점에서 볼 변화입니다.";
   const logoSrc = `${siteUrl()}/assets/cttd-logo-email.png`;
   const rangeText = weekRangeLabel(weekRange);
+  const templates = loadNewsletterTemplates();
 
-  const cards = issues.map((issue, index) => `
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0;border-bottom:1px solid #eeeeee;">
-      <tr>
-        <td width="42" style="width:42px;padding:16px 14px 16px 0;color:#777777;font-size:12px;line-height:1.2;font-weight:800;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;vertical-align:top;">${String(index + 1).padStart(2, "0")}</td>
-        <td style="padding:14px 0 16px;vertical-align:top;">
-          <a href="${htmlEscape(issue.magazineUrl)}" style="display:block;color:#111111;font-size:17px;line-height:1.42;font-weight:700;text-decoration:none;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">[${htmlEscape(issue.platform)}] ${htmlEscape(issue.title || issue.platform)}</a>
-          ${issue.deck ? `<div style="margin:6px 0 0;color:#555555;font-size:13px;line-height:1.55;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${htmlEscape(issue.deck)}</div>` : ""}
-          <div style="margin:10px 0 0;padding:10px 0 0;border-top:1px solid #eeeeee;color:#333333;font-size:13px;line-height:1.58;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">
-            <a href="${htmlEscape(issue.magazineUrl)}" style="color:#111111;text-decoration:underline;text-underline-offset:3px;">더보기</a>
-          </div>
-          <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:8px 0 0;"><tr><td>
-            ${issue.tags.map((tag) => `<span style="display:inline-block;margin:0 5px 5px 0;padding:4px 7px;background:#f9ffc1;background:rgba(238,255,72,0.34);color:#111111;font-size:11px;line-height:1.2;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">#${htmlEscape(tag)}</span>`).join("")}
-          </td></tr></table>
-        </td>
-      </tr>
-    </table>
-  `).join("");
+  const cards = issues.map((issue, index) => {
+    const areaBlock = issue.area
+      ? `<div style="margin:0 0 6px;color:#777777;font-size:11px;line-height:1.3;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${htmlEscape(issue.area)}</div>`
+      : "";
+    const descriptionBlock = issue.deck
+      ? `<div style="margin:6px 0 0;color:#555555;font-size:13px;line-height:1.55;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${htmlEscape(issue.deck)}</div>`
+      : "";
+    const detailSummaryBlock = `<div style="margin:10px 0 0;padding:10px 0 0;border-top:1px solid #eeeeee;color:#333333;font-size:13px;line-height:1.58;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;"><a href="${htmlEscape(issue.magazineUrl)}" style="color:#111111;text-decoration:underline;text-underline-offset:3px;">더보기</a></div>`;
+    const tags = issue.tags.map((tag) => `<span style="display:inline-block;margin:0 5px 5px 0;padding:4px 7px;background:#f9ffc1;background:rgba(238,255,72,0.34);color:#111111;font-size:11px;line-height:1.2;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">#${htmlEscape(tag)}</span>`).join("");
+    return fillNewsletterTemplate(templates.card, {
+      DISPLAY_NUMBER: String(index + 1).padStart(2, "0"),
+      AREA_BLOCK: areaBlock,
+      HREF: htmlEscape(issue.magazineUrl),
+      TITLE: htmlEscape(`[${issue.platform}] ${issue.title || issue.platform}`),
+      DESCRIPTION_BLOCK: descriptionBlock,
+      DETAIL_SUMMARY_BLOCK: detailSummaryBlock,
+      TAGS: tags,
+    });
+  }).join("");
 
-  return `<!doctype html>
-<html lang="ko">
-  <body style="margin:0;background:#ffffff;color:#111111;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="display:none;max-height:0;overflow:hidden;">
-      <tr><td>Service/Design/DEV 주간 트렌드 리포트</td></tr>
-    </table>
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#ffffff;">
-      <tr>
-        <td align="center" style="padding:44px 24px 52px;">
-          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:760px;margin:0 auto;">
-            <tr><td style="padding:0 0 14px;"><img src="${htmlEscape(logoSrc)}" width="124" alt="CTTD" style="display:block;width:124px;max-width:124px;height:auto;border:0;outline:none;text-decoration:none;"></td></tr>
-            <tr><td style="padding:0 0 18px;color:#111111;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${audience === "dev" ? "Frontend Development Weekly" : "Service/Design Weekly"}</td></tr>
-            <tr>
-              <td style="padding:36px 0 24px;border-top:4px solid #111111;">
-                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 24px;">
-                  <tr><td style="padding:0 0 8px;color:#111111;font-size:34px;line-height:1.1;font-weight:800;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${label} Weekly Trend Report</td></tr>
-                  <tr><td style="padding:0;color:#666666;font-size:13px;line-height:1.6;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${htmlEscape(rangeText)} 기준 ${description} 상세 내용은 각 매거진 링크에서 확인하세요.</td></tr>
-                </table>
-                ${cards || `<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0;border-top:1px solid #eeeeee;border-bottom:1px solid #eeeeee;"><tr><td style="padding:24px 0;color:#555555;font-size:14px;line-height:1.6;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">이번 주 ${label} 대상 이슈가 없습니다.</td></tr></table>`}
-              </td>
-            </tr>
-            <tr><td style="padding:18px 0 0;color:#777777;font-size:12px;line-height:1.6;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">이 메일은 CTTD Newsletter 팀에서 발송되었습니다.</td></tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </body>
-</html>`;
+  const body = cards || fillNewsletterTemplate(templates.empty, {
+    EMPTY_MESSAGE: `이번 주 ${label} 대상 이슈가 없습니다.`,
+  });
+
+  return fillNewsletterTemplate(templates.shell, {
+    PAGE_TITLE: htmlEscape(`[CTTD] ${displayTitle}`),
+    PREHEADER: "Service/Design/DEV 주간 트렌드 리포트",
+    LOGO_SRC: htmlEscape(logoSrc),
+    KICKER: htmlEscape(audience === "dev" ? "Frontend Development Weekly" : "Service/Design Weekly"),
+    DISPLAY_TITLE: htmlEscape(displayTitle),
+    DESCRIPTION: htmlEscape(`${rangeText} 기준 ${description} 상세 내용은 각 매거진 링크에서 확인하세요.`),
+    BODY: body,
+    FOOTER: "이 메일은 CTTD Newsletter 시스템에서 발송되었습니다.",
+  });
+}
+
+function audienceSubject(audience) {
+  const displayTitle = audience === "dev" ? "Weekly Dev Trend Report" : "Weekly Web Trend Report";
+  return `[CTTD] ${displayTitle}`;
 }
 
 function renderPlainText(audience, issues, weekRange) {
-  const label = audience === "dev" ? "DEV" : "Service/Design";
   return [
-    `CTTD ${label} Weekly Trend Report`,
+    audienceSubject(audience).replace(/^\[CTTD\]\s*/, "CTTD "),
     weekRangeLabel(weekRange),
     "",
     ...issues.flatMap((issue) => [
       `[${issue.platform}] ${issue.title || issue.platform}`,
+      issue.area || "",
       issue.deck,
       issue.magazineUrl,
       "",
@@ -345,11 +383,10 @@ async function sendNewsletter(audience, issues, weekRange) {
     requireTLS: String(process.env.SMTP_TLS || "true").toLowerCase() !== "false" && !secure,
   });
 
-  const label = audience === "dev" ? "DEV" : "Service/Design";
   await transporter.sendMail({
     from: process.env.SMTP_FROM,
     to: recipients,
-    subject: `[CTTD] ${label} Weekly Trend Report`,
+    subject: audienceSubject(audience),
     text: renderPlainText(audience, issues, weekRange),
     html: renderNewsletter(audience, issues, weekRange),
   });

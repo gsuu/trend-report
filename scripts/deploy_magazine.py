@@ -28,6 +28,11 @@ def load_env_file(path: Path) -> None:
             os.environ[key] = value
 
 
+def load_env_files() -> None:
+    for env_path in (ROOT / ".env.local", ROOT / ".env"):
+        load_env_file(env_path)
+
+
 def parse_bool(value: str | None) -> bool:
     return (value or "").strip().lower() in {"1", "true", "yes", "y", "on"}
 
@@ -132,7 +137,7 @@ def delete_stale_files(ftp: ftplib.FTP, remote_files: set[str], uploaded_files: 
 
 
 def main() -> None:
-    load_env_file(ROOT / ".env")
+    load_env_files()
     args = parse_args()
     require_config(args)
 

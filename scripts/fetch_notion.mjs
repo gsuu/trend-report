@@ -9,7 +9,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
 const outputPath = path.join(root, "src", "data", "report.json");
 
-loadDotenv();
+loadDotenvFiles();
 
 const notionToken = process.env.NOTION_TOKEN || process.env.NOTION_API_KEY;
 const databaseId = process.env.NOTION_DATABASE_ID;
@@ -40,17 +40,19 @@ const DESIGN_AREA_KEYS = new Set(["design", "web_design", "webdesign", "product_
 const DEV_AREA_KEYS = new Set(["dev", "develop", "development", "engineering", "fe", "frontend", "frontend_development", "backend", "web_development", "web_develop", "개발", "프론트", "프론트엔드"]);
 const DESIGN_AI_KEYS = new Set(["ai", "ai디자인", "ai이미지", "chatgpt", "claude", "gemini", "figma_ai", "adobe_firefly", "firefly", "photoshop", "canva", "imagen", "veo", "sora", "image_generation", "이미지생성", "프로토타이핑", "디자인ai"]);
 
-function loadDotenv() {
-  const envPath = path.join(root, ".env");
-  if (!existsSync(envPath)) return;
+function loadDotenvFiles() {
+  for (const envName of [".env.local", ".env"]) {
+    const envPath = path.join(root, envName);
+    if (!existsSync(envPath)) continue;
 
-  for (const rawLine of readFileSync(envPath, "utf8").split(/\r?\n/)) {
-    const line = rawLine.trim();
-    if (!line || line.startsWith("#") || !line.includes("=")) continue;
-    const [key, ...valueParts] = line.split("=");
-    const cleanKey = key.trim();
-    if (!cleanKey || process.env[cleanKey]) continue;
-    process.env[cleanKey] = valueParts.join("=").trim().replace(/^['"]|['"]$/g, "");
+    for (const rawLine of readFileSync(envPath, "utf8").split(/\r?\n/)) {
+      const line = rawLine.trim();
+      if (!line || line.startsWith("#") || !line.includes("=")) continue;
+      const [key, ...valueParts] = line.split("=");
+      const cleanKey = key.trim();
+      if (!cleanKey || process.env[cleanKey]) continue;
+      process.env[cleanKey] = valueParts.join("=").trim().replace(/^['"]|['"]$/g, "");
+    }
   }
 }
 

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import html
+import json
 import os
 import re
 import smtplib
@@ -22,6 +23,12 @@ DEV_FINAL_SUBSCRIBERS_PATH = ROOT / "config" / "dev-final-subscribers.txt"
 PRODUCTION_SITE_URL = "https://cttd-magazine.vercel.app"
 EMAIL_LOGO_ASSET_NAME = "cttd-logo-email.png"
 EMAIL_LOGO_CONTENT_ID = "cttd-logo-email@cttd"
+NEWSLETTER_TEMPLATE_PATH = ROOT / "templates" / "newsletter.html"
+REPORT_DATA_PATH = ROOT / "src" / "data" / "report.json"
+NEWSLETTER_SECTION_PATTERN = re.compile(
+    r"<!-- section:(?P<name>[a-z0-9_-]+) -->\s*(?P<body>.*?)\s*<!-- /section:(?P=name) -->",
+    re.DOTALL,
+)
 
 
 SECTION_LABELS = {
@@ -306,6 +313,11 @@ def load_env_file(path: Path) -> None:
             os.environ[key] = value
 
 
+def load_env_files() -> None:
+    for env_path in (ROOT / ".env.local", ROOT / ".env"):
+        load_env_file(env_path)
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Markdown 리포트를 뉴스레터 HTML로 만들고 메일로 발송합니다.")
     parser.add_argument("report", help="발송할 Markdown 리포트 경로")
@@ -436,6 +448,65 @@ def split_newsletter_label(text: str) -> tuple[str, str]:
 
     label, value = content.split(":", 1)
     return label.strip(), value.strip()
+
+
+def normalize_newsletter_label(label: str) -> str:
+    return re.sub(r"\s+", " ", label.strip().lower())
+
+
+def normalize_source_url(url: str) -> str:
+    return url.strip().rstrip("/")
+
+
+def html_to_plain_text(value: str) -> str:
+    text = re.sub(r"<[^>]+>", "", html.unescape(value or ""))
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def load_report_issue_index() -> dict[str, dict[str, object]]:
+    if not REPORT_DATA_PATH.exists():
+        return {}
+
+    try:
+        payload = json.loads(REPORT_DATA_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+    issues = payload.get("issues", [])
+    if not isinstance(issues, list):
+        return {}
+
+    issue_index: dict[str, dict[str, object]] = {}
+    for issue in issues:
+        if not isinstance(issue, dict):
+            continue
+        source_url = normalize_source_url(str(issue.get("sourceUrl") or ""))
+        if source_url:
+            issue_index[source_url] = issue
+    return issue_index
+
+
+def apply_report_issue_content(items: list[dict[str, object]]) -> list[dict[str, object]]:
+    issue_index = load_report_issue_index()
+    if not issue_index:
+        return items
+
+    for item in items:
+        source_url = normalize_source_url(str(item.get("sourceUrl") or ""))
+        if not source_url:
+            continue
+        report_issue = issue_index.get(source_url)
+        if not report_issue:
+            continue
+
+        headline = html_to_plain_text(str(report_issue.get("takeawayHtml") or ""))
+        description = html_to_plain_text(str(report_issue.get("deckHtml") or ""))
+        if headline:
+            item["headline"] = headline
+        if description:
+            item["description"] = description
+
+    return items
 
 
 def normalize_develop_token(value: str) -> str:
@@ -580,6 +651,7 @@ def parse_newsletter_items(markdown: str, audience: str = "general") -> list[dic
     audience = normalize_audience(audience)
     items: list[dict[str, object]] = []
     current: dict[str, object] | None = None
+    current_area = ""
     current_section = ""
     current_category = ""
 
@@ -617,6 +689,10 @@ def parse_newsletter_items(markdown: str, audience: str = "general") -> list[dic
     for raw_line in markdown.splitlines():
         line = raw_line.strip()
 
+        if line.startswith("## ") and not line.startswith("### "):
+            current_area = line[3:].strip()
+            continue
+
         if line.startswith("### ") and not line.startswith("#### "):
             current_category = line[4:].strip()
             continue
@@ -633,6 +709,7 @@ def parse_newsletter_items(markdown: str, audience: str = "general") -> list[dic
                 "number": number,
                 "platform": platform,
                 "tags": tags,
+                "area": current_area,
                 "sectionCategory": current_category,
                 "category": "",
                 "headline": clean_newsletter_headline(heading_title),
@@ -648,8 +725,11 @@ def parse_newsletter_items(markdown: str, audience: str = "general") -> list[dic
 
         if not current_section and line.startswith("- "):
             label, value = split_newsletter_label(line[2:])
-            if label.lower() in {"카테고리", "category"}:
+            normalized_label = normalize_newsletter_label(label)
+            if normalized_label in {"카테고리", "category"}:
                 current["category"] = value
+            elif normalized_label in {"출처 url", "source url"}:
+                current["sourceUrl"] = value
             continue
 
         if line.startswith("##### "):
@@ -683,7 +763,7 @@ def parse_newsletter_items(markdown: str, audience: str = "general") -> list[dic
 
     append_current()
 
-    return items
+    return apply_report_issue_content(items)
 
 
 def should_include_issue_for_audience(categories: str | list[str], tags: list[str], audience: str) -> bool:
@@ -723,15 +803,41 @@ def audience_kicker(audience: str) -> str:
     return "Weekly Design Intelligence"
 
 
-def audience_title(default_title: str, audience: str) -> str:
+def audience_display_title(audience: str) -> str:
     audience = normalize_audience(audience)
     if audience == "dev":
-        date_match = re.match(r"^(\[[^\]]+\])", default_title)
-        prefix = f"{date_match.group(1)} " if date_match else ""
-        return f"{prefix}Dev Weekly Trend Report"
+        return "Weekly Dev Trend Report"
+    return "Weekly Web Trend Report"
+
+
+def load_newsletter_template_sections() -> dict[str, str]:
+    content = NEWSLETTER_TEMPLATE_PATH.read_text(encoding="utf-8")
+    sections = {match.group("name"): match.group("body") for match in NEWSLETTER_SECTION_PATTERN.finditer(content)}
+    required = {"shell", "card", "empty"}
+    missing = required.difference(sections)
+    if missing:
+        raise SystemExit(f"뉴스레터 템플릿 섹션이 없습니다: {', '.join(sorted(missing))}")
+    return sections
+
+
+def fill_newsletter_template(template: str, values: dict[str, str]) -> str:
+    rendered = template
+    for key, value in values.items():
+        rendered = rendered.replace(f"{{{{{key}}}}}", value)
+    return rendered
+
+
+def audience_title(default_title: str, audience: str) -> str:
+    audience = normalize_audience(audience)
+    if audience in {"general", "dev"}:
+        return audience_display_title(audience)
     if audience != "general":
         return f"{default_title} - {audience_label(audience)}"
     return default_title
+
+
+def audience_subject(audience: str) -> str:
+    return f"[CTTD] {audience_display_title(audience)}"
 
 
 def is_develop_issue(category: str, tags: list[str]) -> bool:
@@ -1144,9 +1250,11 @@ def render_newsletter_item(
     item: dict[str, object],
     magazine_base_url: str | None,
     display_number: int,
+    card_template: str | None = None,
 ) -> str:
     number = str(item["number"])
     platform = str(item["platform"])
+    area = str(item.get("area") or "").strip()
     headline = str(item.get("headline") or "").strip()
     description = str(item.get("description") or "").strip()
     detail_summary = str(item.get("detailSummary") or "").strip()
@@ -1176,19 +1284,27 @@ def render_newsletter_item(
             '</div>'
         )
 
-    return (
-        '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" '
-        'style="margin:0;border-bottom:1px solid #eeeeee;">'
-        '<tr>'
-        f'<td width="42" style="width:42px;padding:16px 14px 16px 0;color:#777777;font-size:12px;line-height:1.2;font-weight:800;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;vertical-align:top;">{display_number:02d}</td>'
-        '<td style="padding:14px 0 16px;vertical-align:top;">'
-        f'<a href="{href}" style="display:block;color:#111111;font-size:17px;line-height:1.42;font-weight:700;text-decoration:none;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">{html.escape(title)}</a>'
-        f"{description_html}"
-        f"{detail_summary_html}"
-        f'<table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:8px 0 0;"><tr><td>{tags}</td></tr></table>'
-        '</td>'
-        '</tr>'
-        '</table>'
+    area_html = ""
+    if area:
+        area_html = (
+            '<div style="margin:0 0 6px;color:#777777;font-size:11px;line-height:1.3;font-weight:700;'
+            'letter-spacing:0.08em;text-transform:uppercase;'
+            'font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">'
+            f"{html.escape(area)}</div>"
+        )
+
+    template = card_template or load_newsletter_template_sections()["card"]
+    return fill_newsletter_template(
+        template,
+        {
+            "DISPLAY_NUMBER": f"{display_number:02d}",
+            "AREA_BLOCK": area_html,
+            "HREF": href,
+            "TITLE": html.escape(title),
+            "DESCRIPTION_BLOCK": description_html,
+            "DETAIL_SUMMARY_BLOCK": detail_summary_html,
+            "TAGS": tags,
+        },
     )
 
 
@@ -1218,11 +1334,12 @@ def render_develop_newsletter_body(
     items: list[dict[str, object]],
     magazine_base_url: str | None,
 ) -> str:
+    card_template = load_newsletter_template_sections()["card"]
     parts: list[str] = []
     display_number = 1
     for _, category_items in group_develop_newsletter_items(items):
         for item in category_items:
-            parts.append(render_newsletter_item(report_path, item, magazine_base_url, display_number))
+            parts.append(render_newsletter_item(report_path, item, magazine_base_url, display_number, card_template))
             display_number += 1
 
     return "\n".join(parts)
@@ -1237,313 +1354,43 @@ def render_newsletter(
     items: list[dict[str, object]] | None = None,
 ) -> str:
     audience = normalize_audience(audience)
+    templates = load_newsletter_template_sections()
     if items is None:
         items = parse_newsletter_items(markdown, audience)
     if audience == "dev":
         body = render_develop_newsletter_body(report_path, items, magazine_base_url)
     else:
         body = "\n".join(
-            render_newsletter_item(report_path, item, magazine_base_url, index)
+            render_newsletter_item(report_path, item, magazine_base_url, index, templates["card"])
             for index, item in enumerate(items, start=1)
         )
     if not body:
-        body = (
-            '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" '
-            'style="margin:0;border-top:1px solid #eeeeee;border-bottom:1px solid #eeeeee;">'
-            '<tr><td style="padding:24px 0;color:#555555;font-size:14px;line-height:1.6;'
-            'font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">'
-            f"{html.escape(audience_label(audience))} 대상에 포함되는 이슈가 없습니다."
-            '</td></tr></table>'
+        body = fill_newsletter_template(
+            templates["empty"],
+            {
+                "EMPTY_MESSAGE": f"{html.escape(audience_label(audience))} 대상에 포함되는 이슈가 없습니다.",
+            },
         )
+
     logo_src = html.escape(magazine_asset_href(EMAIL_LOGO_ASSET_NAME, magazine_base_url), quote=True)
     kicker = html.escape(audience_kicker(audience))
-    return f"""<!doctype html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{html.escape(title)}</title>
-  <style>
-    body {{
-      margin: 0;
-      background: #ffffff;
-      color: #111111;
-      font-family: Arial, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-    }}
-    main {{
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 44px 24px 52px;
-    }}
-    .issue-label {{
-      margin: 0 0 18px;
-      color: #111111;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }}
-    .newsletter-frame {{
-      border-top: 4px solid #111111;
-      padding: 36px 0 24px;
-    }}
-    h1 {{
-      margin: 0 0 28px;
-      color: #111111;
-      font-size: 36px;
-      line-height: 1.08;
-      font-weight: 800;
-      letter-spacing: 0;
-    }}
-    h2 {{
-      margin: 48px 0 18px;
-      padding: 13px 16px;
-      background: #111111;
-      font-size: 18px;
-      line-height: 1.35;
-      font-weight: 800;
-      letter-spacing: 0;
-      color: #ffffff;
-    }}
-    h3 {{
-      margin: 0 0 14px;
-      padding: 0;
-      color: #111111;
-      font-size: 18px;
-      line-height: 1.42;
-      font-weight: 700;
-      letter-spacing: 0;
-    }}
-    h4 {{
-      margin: 18px 0 8px;
-      color: #111111;
-      font-size: 12px;
-      line-height: 1.4;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-    }}
-    .section-kicker {{
-      display: inline-block;
-      margin-right: 8px;
-      padding: 3px 6px;
-      background: #111111;
-      color: #ffffff;
-      font-size: 10px;
-      line-height: 1;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      vertical-align: 1px;
-    }}
-    .section-title {{
-      color: #111111;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-    }}
-    p {{
-      margin: 0 0 10px;
-      color: #222222;
-      font-size: 14px;
-      line-height: 1.66;
-    }}
-    ul {{
-      margin: 0 0 14px;
-      padding: 0;
-      list-style: none;
-    }}
-    li {{
-      margin: 0;
-      color: #222222;
-      font-size: 14px;
-      line-height: 1.62;
-    }}
-    .meta-list {{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 14px;
-      padding: 0;
-      background: transparent;
-    }}
-    .meta-list li {{
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 8px;
-      background: #ffffff;
-      color: #111111;
-      font-size: 12px;
-      line-height: 1.2;
-    }}
-    .content-list li {{
-      position: relative;
-      padding: 3px 0 3px 18px;
-    }}
-    .content-list li:before {{
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 13px;
-      width: 5px;
-      height: 5px;
-      background: #111111;
-    }}
-    .fact-note {{
-      margin: -6px 0 14px;
-      padding: 0;
-    }}
-    .fact-note li {{
-      margin: 0 0 3px;
-      padding: 0;
-      color: #777777;
-      font-size: 12px;
-      line-height: 1.5;
-    }}
-    .fact-note .label {{
-      color: #777777;
-      font-weight: 400;
-    }}
-    .label {{
-      display: inline;
-      color: #555555;
-      font-weight: 400;
-    }}
-    .meta-list .label {{
-      display: inline-block;
-      min-width: 72px;
-    }}
-    .meta-label {{
-      color: #777777;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }}
-    .meta-value {{
-      color: #111111;
-      font-size: 12px;
-      font-weight: 700;
-    }}
-    .item-box {{
-      margin: 0 0 14px;
-      padding: 20px 22px 18px;
-      background: #f7f7f7;
-    }}
-    .item-image {{
-      max-width: 360px;
-      margin: 4px auto 16px;
-      padding: 0;
-    }}
-    .item-image img {{
-      display: block;
-      width: auto;
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto;
-    }}
-    .item-image figcaption {{
-      margin: 8px 0 0;
-      color: #777777;
-      font-size: 11px;
-      line-height: 1.5;
-      text-align: center;
-    }}
-    .summary-brief {{
-      margin: 12px 0 16px;
-      padding: 12px 14px;
-      background: #ffffff;
-      box-shadow: inset 4px 0 0 {SITE_MARK_FALLBACK_COLOR};
-      box-shadow: inset 4px 0 0 {SITE_MARK_COLOR};
-    }}
-    .summary-brief .content-list {{
-      margin-bottom: 5px;
-    }}
-    .summary-brief .content-list:last-child {{
-      margin-bottom: 0;
-    }}
-    .item-box h4:first-of-type {{
-      margin-top: 14px;
-    }}
-    a {{
-      color: #111111;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }}
-    .highlight {{
-      color: #111111;
-      font-family: Arial, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-      font-weight: inherit;
-      {SITE_MARK_BACKGROUND};
-      padding: 0 3px;
-    }}
-    hr {{
-      margin: 34px 0;
-      border: 0;
-      border-top: 1px solid #111111;
-    }}
-    .footer {{
-      margin: 18px 0 0;
-      color: #777777;
-      font-size: 12px;
-      line-height: 1.6;
-    }}
-    @media screen and (max-width: 520px) {{
-      main {{
-        padding: 28px 18px 40px;
-      }}
-      h1 {{
-        font-size: 28px;
-      }}
-    }}
-  </style>
-</head>
-<body>
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="display:none;max-height:0;overflow:hidden;">
-    <tr><td>UIUX/Web Service 주간 트렌드 리포트</td></tr>
-  </table>
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#ffffff;">
-    <tr>
-      <td align="center" style="padding:44px 24px 52px;">
-        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:760px;margin:0 auto;">
-          <tr>
-            <td style="padding:0 0 14px;">
-              <img src="{logo_src}" width="124" alt="CTTD" style="display:block;width:124px;max-width:124px;height:auto;border:0;outline:none;text-decoration:none;">
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:0 0 18px;color:#111111;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">
-              {kicker}
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:36px 0 24px;border-top:4px solid #111111;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 24px;">
-                <tr>
-                  <td style="padding:0 0 8px;color:#111111;font-size:34px;line-height:1.1;font-weight:800;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">
-                    {html.escape(title)}
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding:0;color:#666666;font-size:13px;line-height:1.6;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">
-                    이번 주 매거진에 업데이트된 {html.escape(audience_description(audience))}입니다. 상세 내용은 각 매거진 링크에서 확인하세요.
-                  </td>
-                </tr>
-              </table>
-              {body}
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:18px 0 0;color:#777777;font-size:12px;line-height:1.6;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">
-              이 메일은 CTTD Newsletter 팀에서 발송되었습니다.
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</body>
-</html>
-"""
+    display_title = html.escape(audience_display_title(audience))
+    description = html.escape(
+        f"이번 주 매거진에 업데이트된 {audience_description(audience)}입니다. 상세 내용은 각 매거진 링크에서 확인하세요."
+    )
+    return fill_newsletter_template(
+        templates["shell"],
+        {
+            "PAGE_TITLE": html.escape(title),
+            "PREHEADER": "UIUX/Web Service 주간 트렌드 리포트",
+            "LOGO_SRC": logo_src,
+            "KICKER": kicker,
+            "DISPLAY_TITLE": display_title,
+            "DESCRIPTION": description,
+            "BODY": body,
+            "FOOTER": "이 메일은 CTTD Newsletter 시스템에서 발송되었습니다.",
+        },
+    )
 
 
 def markdown_to_plain_text(markdown: str) -> str:
@@ -1570,12 +1417,15 @@ def newsletter_plain_text(
 
     def append_item(item: dict[str, object], display_number: int) -> None:
         platform = str(item["platform"])
+        area = str(item.get("area") or "").strip()
         headline = str(item.get("headline") or "").strip()
         description = str(item.get("description") or "").strip()
         item_title = f"[{platform}] {headline}" if headline else f"[{platform}]"
         tags = " ".join(f"#{tag}" for tag in item["tags"])  # type: ignore[index]
         href = magazine_href(report_path, str(item["number"]), magazine_base_url)
         lines.append(f"{display_number:02d}. {item_title}")
+        if area:
+            lines.append(area)
         if description:
             lines.append(description)
         detail_summary = str(item.get("detailSummary") or "").strip()
@@ -1702,14 +1552,14 @@ def send_email(subject: str, sender: str, recipients: list[str], plain_text: str
 
 
 def main() -> None:
-    load_env_file(ROOT / ".env")
+    load_env_files()
 
     args = parse_args()
     report_path = Path(args.report)
     markdown = report_path.read_text(encoding="utf-8")
     validate_dev_article_headings(report_path, markdown)
     title = args.subject or audience_title(extract_title(markdown, report_path.stem), args.audience)
-    subject = args.subject or title
+    subject = args.subject or audience_subject(args.audience)
     magazine_base_url = resolve_magazine_base_url(args.magazine_base_url, args.stage)
 
     if args.send and not magazine_base_url:

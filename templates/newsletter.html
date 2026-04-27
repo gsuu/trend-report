@@ -1,0 +1,76 @@
+<!-- section:shell -->
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{PAGE_TITLE}}</title>
+</head>
+<body style="margin:0;background:#ffffff;color:#111111;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="display:none;max-height:0;overflow:hidden;">
+    <tr><td>{{PREHEADER}}</td></tr>
+  </table>
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#ffffff;">
+    <tr>
+      <td align="center" style="padding:44px 24px 52px;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:760px;margin:0 auto;">
+          <tr>
+            <td style="padding:0 0 14px;">
+              <img src="{{LOGO_SRC}}" width="124" alt="CTTD" style="display:block;width:124px;max-width:124px;height:auto;border:0;outline:none;text-decoration:none;">
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 0 18px;color:#111111;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">
+              {{KICKER}}
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:36px 0 24px;border-top:4px solid #111111;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 24px;">
+                <tr>
+                  <td style="padding:0 0 8px;color:#111111;font-size:34px;line-height:1.1;font-weight:800;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">
+                    {{DISPLAY_TITLE}}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:0;color:#666666;font-size:13px;line-height:1.6;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">
+                    {{DESCRIPTION}}
+                  </td>
+                </tr>
+              </table>
+              {{BODY}}
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:18px 0 0;color:#777777;font-size:12px;line-height:1.6;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">
+              {{FOOTER}}
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+<!-- /section:shell -->
+
+<!-- section:card -->
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0;border-bottom:1px solid #eeeeee;">
+  <tr>
+    <td width="42" style="width:42px;padding:16px 14px 16px 0;color:#777777;font-size:12px;line-height:1.2;font-weight:800;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;vertical-align:top;">{{DISPLAY_NUMBER}}</td>
+    <td style="padding:14px 0 16px;vertical-align:top;">
+      {{AREA_BLOCK}}
+      <a href="{{HREF}}" style="display:block;color:#111111;font-size:17px;line-height:1.42;font-weight:700;text-decoration:none;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">{{TITLE}}</a>
+      {{DESCRIPTION_BLOCK}}
+      {{DETAIL_SUMMARY_BLOCK}}
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:8px 0 0;"><tr><td>{{TAGS}}</td></tr></table>
+    </td>
+  </tr>
+</table>
+<!-- /section:card -->
+
+<!-- section:empty -->
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0;border-top:1px solid #eeeeee;border-bottom:1px solid #eeeeee;">
+  <tr><td style="padding:24px 0;color:#555555;font-size:14px;line-height:1.6;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">{{EMPTY_MESSAGE}}</td></tr>
+</table>
+<!-- /section:empty -->
