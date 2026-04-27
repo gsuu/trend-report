@@ -126,6 +126,132 @@
       "category": "ai"
     },
     {
+      "name": "DesignDB - 디자인뉴스",
+      "url": "https://www.designdb.com/?menuno=792",
+      "audience": "uiux",
+      "area": "design",
+      "category": "trend_curation",
+      "sourceRole": "discovery",
+      "includeLinkPatterns": [
+        "designdb\\.com/\\?.*menuno=792.*act=view"
+      ],
+      "includeTitlePatterns": [
+        "디자인|브랜드|UX|UI|AI|피그마|서비스|제품|공간|전시|트렌드|수상|캠페인|design|brand|experience|trend"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "login",
+        "join_agree"
+      ],
+      "limit": 12
+    },
+    {
+      "name": "DesignDB - 해외 디자인뉴스",
+      "url": "https://www.designdb.com/?menuno=1280",
+      "audience": "uiux",
+      "area": "design",
+      "category": "trend_curation",
+      "sourceRole": "discovery",
+      "includeLinkPatterns": [
+        "designdb\\.com/\\?.*menuno=1280.*act=view"
+      ],
+      "includeTitlePatterns": [
+        "디자인|브랜드|UX|UI|AI|피그마|서비스|제품|공간|전시|트렌드|수상|캠페인|design|brand|experience|trend"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "login",
+        "join_agree"
+      ],
+      "limit": 12
+    },
+    {
+      "name": "DesignDB - 디자인리포트",
+      "url": "https://www.designdb.com/?menuno=1432",
+      "audience": "uiux",
+      "area": "design",
+      "category": "trend_curation",
+      "sourceRole": "discovery",
+      "includeLinkPatterns": [
+        "designdb\\.com/\\?.*menuno=1432.*act=view"
+      ],
+      "includeTitlePatterns": [
+        "디자인|브랜드|UX|UI|AI|서비스|제품|공간|트렌드|소비|라이프스타일|리포트|인사이트|기술|design|brand|experience|trend"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "login",
+        "join_agree"
+      ],
+      "limit": 12
+    },
+    {
+      "name": "DesignDB - 해외 디자인리포트",
+      "url": "https://www.designdb.com/?menuno=1283",
+      "audience": "uiux",
+      "area": "design",
+      "category": "trend_curation",
+      "sourceRole": "discovery",
+      "includeLinkPatterns": [
+        "designdb\\.com/\\?.*menuno=1283.*act=view"
+      ],
+      "includeTitlePatterns": [
+        "디자인|브랜드|UX|UI|AI|서비스|제품|공간|트렌드|소비|라이프스타일|리포트|인사이트|기술|design|brand|experience|trend"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "login",
+        "join_agree"
+      ],
+      "limit": 12
+    },
+    {
+      "name": "DesignDB - 기술 트렌드",
+      "url": "https://www.designdb.com/?menuno=1434",
+      "audience": "uiux",
+      "area": "design",
+      "category": "design_system",
+      "sourceRole": "discovery",
+      "includeLinkPatterns": [
+        "designdb\\.com/\\?.*menuno=1434.*act=view"
+      ],
+      "includeTitlePatterns": [
+        "디자인|브랜드|UX|UI|AI|서비스|제품|공간|트렌드|리포트|인사이트|기술|테크|design|brand|experience|trend|technology"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "login",
+        "join_agree"
+      ],
+      "limit": 12
+    },
+    {
+      "name": "DesignDB - 디자인인사이트",
+      "url": "https://www.designdb.com/?menuno=1278",
+      "audience": "uiux",
+      "area": "design",
+      "category": "trend_curation",
+      "sourceRole": "discovery",
+      "includeLinkPatterns": [
+        "designdb\\.com/\\?.*menuno=1278.*act=view"
+      ],
+      "includeTitlePatterns": [
+        "디자인|브랜드|UX|UI|AI|서비스|제품|공간|트렌드|소비|라이프스타일|리포트|인사이트|design|brand|experience|trend"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "login",
+        "join_agree"
+      ],
+      "limit": 12
+    },
+    {
       "name": "WebKit Blog",
       "rss": "https://webkit.org/feed/",
       "audience": "dev",
