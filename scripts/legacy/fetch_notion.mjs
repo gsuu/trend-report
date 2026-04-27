@@ -127,8 +127,9 @@ function normalizeKey(value = "") {
   return String(value).trim().toLowerCase().replaceAll(/\s+/g, "_").replaceAll("-", "_");
 }
 
-function normalizeAreaKey(value = "", tags = []) {
+function normalizeAreaKey(value = "", tags = [], category = "") {
   const key = normalizeKey(value || "service");
+  if (normalizeKey(category) === "ai_design") return "design";
   if (DEV_AREA_KEYS.has(key)) return "dev";
   if (DESIGN_AREA_KEYS.has(key)) return "design";
   if (SERVICE_AREA_KEYS.has(key)) return "service";
@@ -444,7 +445,11 @@ export async function fetchMagazineReport(options = {}) {
     const title = propertyText(properties, ["Takeaway", "Title", "제목", "한줄 인사이트"], "");
     const platform = propertyText(properties, ["Platform", "서비스", "플랫폼", "Brand", "브랜드명"], "");
     const tags = propertyTags(properties, ["Tags", "태그"]);
-    const area = normalizeAreaKey(propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "service"), tags);
+    const area = normalizeAreaKey(
+      propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "service"),
+      tags,
+      propertyText(properties, ["Category", "카테고리", "Subcategory", "소분류", "소카테고리"], ""),
+    );
     return [platform, area, title].map((value) => normalizeKey(value)).join("|");
   };
 
@@ -471,9 +476,10 @@ export async function fetchMagazineReport(options = {}) {
   const issues = await Promise.all(uniquePages.map(async (page, index) => {
     const properties = page.properties || {};
     const tags = propertyTags(properties, ["Tags", "태그"]);
-    const areaKey = normalizeAreaKey(propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "service"), tags);
+    const rawCategory = propertyText(properties, ["Category", "카테고리", "Subcategory", "소분류", "소카테고리"], "");
+    const areaKey = normalizeAreaKey(propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "service"), tags, rawCategory);
     const categoryKey = normalizeCategoryKey(
-      normalizeKey(propertyText(properties, ["Category", "카테고리", "Subcategory", "소분류", "소카테고리"], areaKey === "dev" ? "javascript" : "ecommerce")),
+      normalizeKey(rawCategory || (areaKey === "dev" ? "javascript" : "ecommerce")),
       areaKey,
       tags,
     );

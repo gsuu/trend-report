@@ -570,6 +570,8 @@ def is_design_issue(issue: Issue) -> bool:
 
 
 def issue_area_key(issue: Issue) -> str:
+    if normalize_category_token(issue.category or issue.meta.get("카테고리", "")) == "ai_design":
+        return "design"
     if is_develop_issue(issue):
         return "dev"
     if is_design_issue(issue):

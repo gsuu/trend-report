@@ -1694,17 +1694,16 @@
         "id": "34f17322-3fd7-8126-9379-e9d66fe7d94d",
         "number": "16",
         "platform": "Smashing Magazine",
-        "areaKey": "dev",
-        "area": "DEV",
-        "categoryKey": "ai_design",
-        "category": "AI/Design",
+        "areaKey": "design",
+        "area": "Design",
+        "categoryKey": "ai",
+        "category": "AI",
         "date": "2026-04-27",
         "route": "/articles/16",
         "image": "http://files.smashing.media/articles/ux-designer-nightmare-production-ready-becomes-design-deliverable/production-ready-becomes-design-deliverable-ux.jpg",
         "imageCaption": "Smashing Magazine 글 대표 이미지",
         "tags": [
-          "웹디자인",
-          "DEV"
+          "웹디자인"
         ],
         "takeawayHtml": "The UX Designer’s Nightmare: When “Production-Ready” Becomes A Design Deliverable",
         "deckHtml": "production-ready처럼 보이는 결과물은 완성품이 아니라, 더 엄격한 검수가 필요한 초안일 수 있습니다.",
@@ -5726,163 +5725,15 @@
         ]
       },
       {
-        "id": "34917322-3fd7-81e5-aa6c-cf20c89cbe26",
-        "number": "47",
-        "platform": "Node.js",
-        "areaKey": "dev",
-        "area": "DEV",
-        "categoryKey": "data_api",
-        "category": "DATA/API",
-        "date": "2026-04-21",
-        "route": "/articles/47",
-        "image": "https://nodejs.org/en/next-data/og/announcements/Node.js%20%E2%80%94%20Evolving%20the%20Node.js%20Release%20Schedule",
-        "imageCaption": "",
-        "tags": [
-          "ReleaseSchedule",
-          "LTS",
-          "FrontendToolchain"
-        ],
-        "takeawayHtml": "프론트엔드 팀의 Node 버전 정책은 개발 환경 문제가 아니라 제품 배포 안정성의 일부입니다.",
-        "deckHtml": "Node.js가 2026년 10월 이후 릴리즈 정책을 연 1회 major release와 모든 release의 LTS 전환 구조로 바꾼다고 발표했습니다.",
-        "sourceUrl": "https://nodejs.org/en/blog/announcements/evolving-the-nodejs-release-schedule",
-        "sourceTitle": "Node.js 공식 블로그",
-        "referenceLinks": [],
-        "sections": [
-          {
-            "title": "기술 변화 요약",
-            "className": "article-section",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "업데이트: Node.js가 2026년 10월 이후 릴리즈 정책을 연 1회 major release와 모든 release의 LTS 전환 구조로 바꾼다고 발표했습니다."
-              },
-              {
-                "kind": "list",
-                "html": "기술 맥락: 프론트엔드 빌드 도구, 패키지 매니저, 테스트 환경은 Node.js 버전에 직접 영향을 받기 때문에 릴리즈 정책 변화는 FE 운영 정책과 연결됩니다."
-              },
-              {
-                "kind": "list",
-                "html": "변경 전: odd/even release 구분으로 Current와 LTS 채택 판단이 필요했고, 많은 조직은 odd-numbered release를 건너뛰었습니다."
-              },
-              {
-                "kind": "list",
-                "html": "변경 후: 2027년 Node.js 27부터 alpha, current, LTS 흐름으로 정리되고 모든 major가 LTS로 이어지는 구조가 됩니다."
-              },
-              {
-                "kind": "list",
-                "html": "확인할 영향: 유지되는 원칙 LTS 기간, migration window, quality standard, security process / 현재 확인 Node.js v24는 2026-04-15 기준 LTS로 표시됩니다."
-              }
-            ],
-            "itemsHtml": [
-              "업데이트: Node.js가 2026년 10월 이후 릴리즈 정책을 연 1회 major release와 모든 release의 LTS 전환 구조로 바꾼다고 발표했습니다.",
-              "기술 맥락: 프론트엔드 빌드 도구, 패키지 매니저, 테스트 환경은 Node.js 버전에 직접 영향을 받기 때문에 릴리즈 정책 변화는 FE 운영 정책과 연결됩니다.",
-              "변경 전: odd/even release 구분으로 Current와 LTS 채택 판단이 필요했고, 많은 조직은 odd-numbered release를 건너뛰었습니다.",
-              "변경 후: 2027년 Node.js 27부터 alpha, current, LTS 흐름으로 정리되고 모든 major가 LTS로 이어지는 구조가 됩니다.",
-              "확인할 영향: 유지되는 원칙 LTS 기간, migration window, quality standard, security process / 현재 확인 Node.js v24는 2026-04-15 기준 LTS로 표시됩니다."
-            ]
-          },
-          {
-            "title": "인사이트",
-            "className": "article-section is-deep-dive",
-            "prose": true,
-            "blocks": [
-              {
-                "kind": "quote",
-                "html": "프론트엔드 팀의 Node 버전 정책은 개발 환경 문제가 아니라 제품 배포 안정성의 일부입니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "왜 지금 이 업데이트인가"
-              },
-              {
-                "kind": "paragraph",
-                "html": "Node.js 릴리즈 정책 변화는 당장 화면을 바꾸지는 않지만, 프론트엔드 개발 운영에는 큰 영향을 줍니다. Next.js, Vite, ESLint, TypeScript, Playwright 같은 도구가 모두 Node 런타임 위에서 움직이기 때문입니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "릴리즈 라인이 단순해지면 장기적으로 팀의 업그레이드 계획은 쉬워질 수 있습니다. 대신 alpha/current/LTS 흐름을 어떻게 검증할지, CI와 로컬 개발 환경을 언제 올릴지 기준을 세워야 합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "구현 관점"
-              },
-              {
-                "kind": "paragraph",
-                "html": "프론트엔드 팀은 engines.node, .nvmrc, CI 이미지, Docker base image, 배포 런타임을 같은 정책으로 묶어야 합니다. 도구별 최소 Node 버전이 올라가는 속도가 빨라지고 있어, 오래된 LTS에 묶인 프로젝트는 lint/build/test 업데이트에서 계속 마찰을 겪게 됩니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "실무에 어떻게 적용할 수 있을까"
-              },
-              {
-                "kind": "list",
-                "html": "로컬 화면 구현 환경의 Node 버전을 .nvmrc, package manager, CI preview build와 같은 기준으로 맞춥니다."
-              },
-              {
-                "kind": "list",
-                "html": "Sass, PostCSS, Tailwind, Vite, Next 빌드가 Node 버전 변경 후 같은 결과를 내는지 CSS 산출물 diff와 visual regression으로 확인합니다."
-              },
-              {
-                "kind": "list",
-                "html": "새 LTS 전환 시점에는 디자이너 확인용 preview URL과 production build를 같은 Node 이미지에서 만들도록 배포 문서를 고칩니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "같이 보면 좋은 기술"
-              },
-              {
-                "kind": "list",
-                "html": "Node.js release schedule: 연 1회 major와 10월 LTS 전환을 기준으로 업그레이드 일정을 세워야 합니다."
-              },
-              {
-                "kind": "list",
-                "html": "engines.node: 로컬 개발, 패키지 설치, 배포 런타임의 최소 Node 기준을 코드로 명시합니다."
-              },
-              {
-                "kind": "list",
-                "html": "Corepack: pnpm/yarn 버전 차이로 생기는 lockfile과 install 재현성 문제를 줄일 수 있습니다."
-              },
-              {
-                "kind": "list",
-                "html": "CI runner image: 로컬 Node 버전과 CI 이미지가 다르면 build/test 실패가 뒤늦게 발견됩니다."
-              },
-              {
-                "kind": "list",
-                "html": "Vite/Next.js 최소 Node 요구사항: 프론트엔드 도구가 요구하는 Node 기준이 프로젝트 런타임 정책보다 빨리 올라갈 수 있습니다."
-              }
-            ],
-            "itemsHtml": [
-              "@@quote@@프론트엔드 팀의 Node 버전 정책은 개발 환경 문제가 아니라 제품 배포 안정성의 일부입니다.",
-              "@@subhead@@왜 지금 이 업데이트인가",
-              "@@paragraph@@Node.js 릴리즈 정책 변화는 당장 화면을 바꾸지는 않지만, 프론트엔드 개발 운영에는 큰 영향을 줍니다. Next.js, Vite, ESLint, TypeScript, Playwright 같은 도구가 모두 Node 런타임 위에서 움직이기 때문입니다.",
-              "@@paragraph@@릴리즈 라인이 단순해지면 장기적으로 팀의 업그레이드 계획은 쉬워질 수 있습니다. 대신 alpha/current/LTS 흐름을 어떻게 검증할지, CI와 로컬 개발 환경을 언제 올릴지 기준을 세워야 합니다.",
-              "@@subhead@@구현 관점",
-              "@@paragraph@@프론트엔드 팀은 engines.node, .nvmrc, CI 이미지, Docker base image, 배포 런타임을 같은 정책으로 묶어야 합니다. 도구별 최소 Node 버전이 올라가는 속도가 빨라지고 있어, 오래된 LTS에 묶인 프로젝트는 lint/build/test 업데이트에서 계속 마찰을 겪게 됩니다.",
-              "@@subhead@@실무에 어떻게 적용할 수 있을까",
-              "@@list@@로컬 화면 구현 환경의 Node 버전을 .nvmrc, package manager, CI preview build와 같은 기준으로 맞춥니다.",
-              "@@list@@Sass, PostCSS, Tailwind, Vite, Next 빌드가 Node 버전 변경 후 같은 결과를 내는지 CSS 산출물 diff와 visual regression으로 확인합니다.",
-              "@@list@@새 LTS 전환 시점에는 디자이너 확인용 preview URL과 production build를 같은 Node 이미지에서 만들도록 배포 문서를 고칩니다.",
-              "@@subhead@@같이 보면 좋은 기술",
-              "@@list@@Node.js release schedule: 연 1회 major와 10월 LTS 전환을 기준으로 업그레이드 일정을 세워야 합니다.",
-              "@@list@@engines.node: 로컬 개발, 패키지 설치, 배포 런타임의 최소 Node 기준을 코드로 명시합니다.",
-              "@@list@@Corepack: pnpm/yarn 버전 차이로 생기는 lockfile과 install 재현성 문제를 줄일 수 있습니다.",
-              "@@list@@CI runner image: 로컬 Node 버전과 CI 이미지가 다르면 build/test 실패가 뒤늦게 발견됩니다.",
-              "@@list@@Vite/Next.js 최소 Node 요구사항: 프론트엔드 도구가 요구하는 Node 기준이 프로젝트 런타임 정책보다 빨리 올라갈 수 있습니다."
-            ]
-          }
-        ]
-      },
-      {
         "id": "34917322-3fd7-8180-8b52-e555ef17f7eb",
-        "number": "48",
+        "number": "47",
         "platform": "Vite",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "tool",
         "category": "TOOL",
         "date": "2026-04-21",
-        "route": "/articles/48",
+        "route": "/articles/47",
         "image": "https://vite.dev/og-image-announcing-vite8.webp",
         "imageCaption": "",
         "tags": [
@@ -6027,168 +5878,15 @@
         ]
       },
       {
-        "id": "34917322-3fd7-81da-b442-c70b6de5f226",
-        "number": "49",
-        "platform": "Astro",
-        "areaKey": "dev",
-        "area": "DEV",
-        "categoryKey": "data_api",
-        "category": "DATA/API",
-        "date": "2026-04-21",
-        "route": "/articles/49",
-        "image": "https://astro.build/_astro/og-astro-6.DDjHPVzL.webp",
-        "imageCaption": "",
-        "tags": [
-          "Astro6",
-          "Framework",
-          "Cloudflare"
-        ],
-        "takeawayHtml": "프레임워크의 개발 경험은 이제 빠른 HMR보다, 배포될 런타임을 로컬에서 얼마나 정확히 재현하는가로 평가됩니다.",
-        "deckHtml": "Astro 6가 built-in Fonts API, Content Security Policy API, Live Content Collections, 재설계된 astro dev를 포함해 공개됐습니다.",
-        "sourceUrl": "https://astro.build/blog/astro-6/",
-        "sourceTitle": "Astro 공식 블로그",
-        "referenceLinks": [],
-        "sections": [
-          {
-            "title": "기술 변화 요약",
-            "className": "article-section",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "업데이트: Astro 6가 built-in Fonts API, Content Security Policy API, Live Content Collections, 재설계된 astro dev를 포함해 공개됐습니다."
-              },
-              {
-                "kind": "list",
-                "html": "기술 맥락: Astro는 Vite Environment API를 활용해 개발 환경에서도 실제 production runtime을 더 가깝게 실행하는 방향으로 dev server와 build pipeline을 개편했습니다."
-              },
-              {
-                "kind": "list",
-                "html": "변경 전: Cloudflare Workers, Bun, Deno 같은 non-Node runtime을 목표로 할 때 로컬 개발은 Node 기반 시뮬레이션에 가까웠고, 배포 후에야 런타임 차이가 드러나는 경우가 있었습니다."
-              },
-              {
-                "kind": "list",
-                "html": "변경 후: Cloudflare adapter는 개발, prerendering, production 단계에서 workerd를 사용해 KV, D1, R2, Durable Objects 같은 platform binding을 로컬에서 다룰 수 있게 했습니다."
-              },
-              {
-                "kind": "list",
-                "html": "확인할 영향: 주요 변화 redesigned astro dev, Cloudflare runtime parity, Fonts API, CSP API, Live Content Collections, experimental Rust compiler / 확인 한계 Rust compiler, queued rendering, route caching은 experimental이므로 production 도입 전 별도 검증이 필요합니다."
-              }
-            ],
-            "itemsHtml": [
-              "업데이트: Astro 6가 built-in Fonts API, Content Security Policy API, Live Content Collections, 재설계된 astro dev를 포함해 공개됐습니다.",
-              "기술 맥락: Astro는 Vite Environment API를 활용해 개발 환경에서도 실제 production runtime을 더 가깝게 실행하는 방향으로 dev server와 build pipeline을 개편했습니다.",
-              "변경 전: Cloudflare Workers, Bun, Deno 같은 non-Node runtime을 목표로 할 때 로컬 개발은 Node 기반 시뮬레이션에 가까웠고, 배포 후에야 런타임 차이가 드러나는 경우가 있었습니다.",
-              "변경 후: Cloudflare adapter는 개발, prerendering, production 단계에서 workerd를 사용해 KV, D1, R2, Durable Objects 같은 platform binding을 로컬에서 다룰 수 있게 했습니다.",
-              "확인할 영향: 주요 변화 redesigned astro dev, Cloudflare runtime parity, Fonts API, CSP API, Live Content Collections, experimental Rust compiler / 확인 한계 Rust compiler, queued rendering, route caching은 experimental이므로 production 도입 전 별도 검증이 필요합니다."
-            ]
-          },
-          {
-            "title": "인사이트",
-            "className": "article-section is-deep-dive",
-            "prose": true,
-            "blocks": [
-              {
-                "kind": "quote",
-                "html": "프레임워크의 개발 경험은 이제 빠른 HMR보다, 배포될 런타임을 로컬에서 얼마나 정확히 재현하는가로 평가됩니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "왜 지금 이 업데이트인가"
-              },
-              {
-                "kind": "paragraph",
-                "html": "Astro 6의 핵심은 기능 목록보다 production parity입니다. 정적 사이트 중심 프레임워크였던 Astro가 Cloudflare Workers, Bun, Deno 같은 런타임을 직접 개발 경험 안으로 끌어들이고 있습니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "이는 프론트엔드 앱이 CDN에 정적 파일을 올리는 단계를 넘어, edge runtime, content layer, 보안 정책, 폰트 최적화를 하나의 배포 단위로 다루게 됐기 때문입니다. 로컬에서 production runtime을 확인하지 못하면 가장 비싼 버그는 배포 후에 발견됩니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "구현 관점"
-              },
-              {
-                "kind": "paragraph",
-                "html": "Astro를 쓰는 팀은 Astro 6 업그레이드에서 adapter와 runtime binding을 먼저 확인해야 합니다. Cloudflare의 KV, D1, R2, Durable Objects를 실제로 쓰는 프로젝트라면 개발 환경의 mock layer를 줄일 기회가 생깁니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "또한 Fonts API와 CSP API는 UI 품질과 보안 정책을 프레임워크 설정으로 끌어올립니다. 디자인 시스템 폰트 로딩, fallback, preload, self-hosting 정책을 개별 페이지 구현이 아니라 프로젝트 규칙으로 정리할 수 있습니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "실무에 어떻게 적용할 수 있을까"
-              },
-              {
-                "kind": "list",
-                "html": "정적 페이지, 콘텐츠 컬렉션, Cloudflare adapter 페이지를 나눠 화면 산출물이 dev/prod에서 같은지 먼저 확인합니다."
-              },
-              {
-                "kind": "list",
-                "html": "Fonts API는 브랜드 폰트 preload, fallback font, CLS 영향을 디자인 시스템 기준으로 정리하는 데 씁니다."
-              },
-              {
-                "kind": "list",
-                "html": "CSP API 적용 후 inline style/script, 외부 이미지, 폼/위젯 삽입이 막히지 않는지 QA 항목에 추가합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "같이 보면 좋은 기술"
-              },
-              {
-                "kind": "list",
-                "html": "Vite Environment API: Astro dev server가 실제 production runtime을 로컬에서 재현하는 기반입니다."
-              },
-              {
-                "kind": "list",
-                "html": "Cloudflare workerd: Workers 배포 프로젝트는 Node 시뮬레이션이 아니라 실제 런타임 차이를 로컬에서 확인해야 합니다."
-              },
-              {
-                "kind": "list",
-                "html": "KV/D1/R2/Durable Objects: Cloudflare binding을 쓰는 앱은 데이터 접근과 상태 저장이 dev/prod에서 같은지 검증해야 합니다."
-              },
-              {
-                "kind": "list",
-                "html": "Fonts API: 폰트 로딩, preload, self-hosting 정책을 페이지 구현이 아니라 프레임워크 설정으로 관리할 수 있습니다."
-              },
-              {
-                "kind": "list",
-                "html": "CSP API: 보안 헤더를 앱 구조와 함께 선언해 배포 후 CSP 오류를 줄이는 데 연결됩니다."
-              }
-            ],
-            "itemsHtml": [
-              "@@quote@@프레임워크의 개발 경험은 이제 빠른 HMR보다, 배포될 런타임을 로컬에서 얼마나 정확히 재현하는가로 평가됩니다.",
-              "@@subhead@@왜 지금 이 업데이트인가",
-              "@@paragraph@@Astro 6의 핵심은 기능 목록보다 production parity입니다. 정적 사이트 중심 프레임워크였던 Astro가 Cloudflare Workers, Bun, Deno 같은 런타임을 직접 개발 경험 안으로 끌어들이고 있습니다.",
-              "@@paragraph@@이는 프론트엔드 앱이 CDN에 정적 파일을 올리는 단계를 넘어, edge runtime, content layer, 보안 정책, 폰트 최적화를 하나의 배포 단위로 다루게 됐기 때문입니다. 로컬에서 production runtime을 확인하지 못하면 가장 비싼 버그는 배포 후에 발견됩니다.",
-              "@@subhead@@구현 관점",
-              "@@paragraph@@Astro를 쓰는 팀은 Astro 6 업그레이드에서 adapter와 runtime binding을 먼저 확인해야 합니다. Cloudflare의 KV, D1, R2, Durable Objects를 실제로 쓰는 프로젝트라면 개발 환경의 mock layer를 줄일 기회가 생깁니다.",
-              "@@paragraph@@또한 Fonts API와 CSP API는 UI 품질과 보안 정책을 프레임워크 설정으로 끌어올립니다. 디자인 시스템 폰트 로딩, fallback, preload, self-hosting 정책을 개별 페이지 구현이 아니라 프로젝트 규칙으로 정리할 수 있습니다.",
-              "@@subhead@@실무에 어떻게 적용할 수 있을까",
-              "@@list@@정적 페이지, 콘텐츠 컬렉션, Cloudflare adapter 페이지를 나눠 화면 산출물이 dev/prod에서 같은지 먼저 확인합니다.",
-              "@@list@@Fonts API는 브랜드 폰트 preload, fallback font, CLS 영향을 디자인 시스템 기준으로 정리하는 데 씁니다.",
-              "@@list@@CSP API 적용 후 inline style/script, 외부 이미지, 폼/위젯 삽입이 막히지 않는지 QA 항목에 추가합니다.",
-              "@@subhead@@같이 보면 좋은 기술",
-              "@@list@@Vite Environment API: Astro dev server가 실제 production runtime을 로컬에서 재현하는 기반입니다.",
-              "@@list@@Cloudflare workerd: Workers 배포 프로젝트는 Node 시뮬레이션이 아니라 실제 런타임 차이를 로컬에서 확인해야 합니다.",
-              "@@list@@KV/D1/R2/Durable Objects: Cloudflare binding을 쓰는 앱은 데이터 접근과 상태 저장이 dev/prod에서 같은지 검증해야 합니다.",
-              "@@list@@Fonts API: 폰트 로딩, preload, self-hosting 정책을 페이지 구현이 아니라 프레임워크 설정으로 관리할 수 있습니다.",
-              "@@list@@CSP API: 보안 헤더를 앱 구조와 함께 선언해 배포 후 CSP 오류를 줄이는 데 연결됩니다."
-            ]
-          }
-        ]
-      },
-      {
         "id": "34917322-3fd7-81c3-b2fb-f4aaff5386e1",
-        "number": "50",
+        "number": "48",
         "platform": "Playwright",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "ai",
         "category": "AI",
         "date": "2026-04-21",
-        "route": "/articles/50",
+        "route": "/articles/48",
         "image": "https://repository-images.githubusercontent.com/221981891/8c5c6942-c91f-4df1-825f-4cf474056bd7",
         "imageCaption": "",
         "tags": [
@@ -6334,14 +6032,14 @@
       },
       {
         "id": "34917322-3fd7-81d5-8991-e9bae523ac20",
-        "number": "51",
+        "number": "49",
         "platform": "webpack",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "tool",
         "category": "TOOL",
         "date": "2026-04-21",
-        "route": "/articles/51",
+        "route": "/articles/49",
         "image": "https://webpack.js.org/icon-pwa-512x512.934507c816afbcdb.png",
         "imageCaption": "",
         "tags": [
