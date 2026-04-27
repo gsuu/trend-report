@@ -188,6 +188,10 @@ function unsubscribeUrl(email) {
   return `${siteUrl()}/api/unsubscribe?email=${encodeURIComponent(normalizedEmail)}&sig=${signature}`;
 }
 
+function ensureUnsubscribeLinksEnabled() {
+  if (!unsubscribeSecret()) throw new Error("NEWSLETTER_UNSUBSCRIBE_SECRET or CRON_SECRET is required.");
+}
+
 function startOfKstWeek(now = new Date()) {
   const kst = new Date(now.getTime() + 9 * 60 * 60 * 1000);
   const day = kst.getUTCDay();
@@ -415,8 +419,8 @@ function renderIssueCards(issues, startNumber = 1) {
   const templates = loadNewsletterTemplates();
 
   return issues.map((issue, index) => {
-    const areaBlock = issue.area
-      ? `<div style="margin:0 0 6px;color:#777777;font-size:11px;line-height:1.3;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${htmlEscape(issue.area)}</div>`
+    const categoryBlock = issue.category
+      ? `<div style="margin:0 0 6px;color:#777777;font-size:11px;line-height:1.3;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${htmlEscape(issue.category)}</div>`
       : "";
     const descriptionBlock = issue.deck
       ? `<div style="margin:6px 0 0;color:#555555;font-size:13px;line-height:1.55;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${htmlEscape(issue.deck)}</div>`
@@ -425,7 +429,7 @@ function renderIssueCards(issues, startNumber = 1) {
     const tags = issue.tags.map((tag) => `<span style="display:inline-block;margin:0 5px 5px 0;padding:4px 7px;background:#f9ffc1;background:rgba(238,255,72,0.34);color:#111111;font-size:11px;line-height:1.2;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">#${htmlEscape(tag)}</span>`).join("");
     return fillNewsletterTemplate(templates.card, {
       DISPLAY_NUMBER: String(startNumber + index).padStart(2, "0"),
-      AREA_BLOCK: areaBlock,
+      AREA_BLOCK: categoryBlock,
       HREF: htmlEscape(issue.magazineUrl),
       TITLE: htmlEscape(`[${issue.platform}] ${issue.title || issue.platform}`),
       DESCRIPTION_BLOCK: descriptionBlock,
@@ -655,6 +659,7 @@ export default async function handler(request, response) {
   }
 
   try {
+    ensureUnsubscribeLinksEnabled();
     const { issues, weekRange } = await fetchIssuesFromNotion();
     const serviceIssues = issues.filter((issue) => issue.areaKey === "service");
     const designIssues = issues.filter((issue) => issue.areaKey === "design");

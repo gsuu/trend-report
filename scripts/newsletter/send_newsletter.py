@@ -462,6 +462,11 @@ def unsubscribe_url(email: str, magazine_base_url: str | None) -> str:
     return f"{base_url}/api/unsubscribe?{query}"
 
 
+def ensure_unsubscribe_links_enabled() -> None:
+    if not unsubscribe_secret():
+        raise SystemExit("뉴스레터 발송에는 NEWSLETTER_UNSUBSCRIBE_SECRET 또는 CRON_SECRET 환경변수가 필요합니다.")
+
+
 def notion_request(path: str, payload: dict[str, object] | None = None) -> dict[str, object]:
     token = os.getenv("NOTION_TOKEN", os.getenv("NOTION_API_KEY", ""))
     if not token:
@@ -1636,7 +1641,7 @@ def render_newsletter_item(
 ) -> str:
     number = str(item["number"])
     platform = str(item["platform"])
-    area = str(item.get("area") or "").strip()
+    category = str(item.get("category") or item.get("area") or "").strip()
     headline = str(item.get("headline") or "").strip()
     description = str(item.get("description") or "").strip()
     detail_summary = str(item.get("detailSummary") or "").strip()
@@ -1669,13 +1674,13 @@ def render_newsletter_item(
             '</div>'
         )
 
-    area_html = ""
-    if area:
-        area_html = (
+    category_html = ""
+    if category:
+        category_html = (
             '<div style="margin:0 0 6px;color:#777777;font-size:11px;line-height:1.3;font-weight:700;'
             'letter-spacing:0.08em;text-transform:uppercase;'
             'font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">'
-            f"{html.escape(area)}</div>"
+            f"{html.escape(category)}</div>"
         )
 
     template = card_template or load_newsletter_template_sections()["card"]
@@ -1683,7 +1688,7 @@ def render_newsletter_item(
         template,
         {
             "DISPLAY_NUMBER": f"{display_number:02d}",
-            "AREA_BLOCK": area_html,
+            "AREA_BLOCK": category_html,
             "HREF": href,
             "TITLE": html.escape(title),
             "DESCRIPTION_BLOCK": description_html,
@@ -2115,6 +2120,8 @@ def main() -> None:
             "뉴스레터 발송에는 매거진 사이트 공개 URL이 필요합니다. "
             "--magazine-base-url 또는 SITE_URL을 설정하세요."
         )
+    if args.send:
+        ensure_unsubscribe_links_enabled()
 
     if args.audience == "subscriptions":
         items_by_audience = {
