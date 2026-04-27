@@ -1704,7 +1704,7 @@ def render_newsletter_item(
     category_html = ""
     if category:
         category_html = (
-            '<div style="margin:0 0 6px;color:#777777;font-size:11px;line-height:1.3;font-weight:700;'
+            '<div style="margin:0 0 6px;color:#777777;font-size:11px;line-height:1.3;font-weight:400;'
             'letter-spacing:0.08em;text-transform:uppercase;'
             'font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">'
             f"{html.escape(category)}</div>"

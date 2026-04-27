@@ -438,7 +438,7 @@ function renderIssueCards(issues, startNumber = 1) {
 
   return issues.map((issue, index) => {
     const categoryBlock = issue.category
-      ? `<div style="margin:0 0 6px;color:#777777;font-size:11px;line-height:1.3;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${htmlEscape(issue.category)}</div>`
+      ? `<div style="margin:0 0 6px;color:#777777;font-size:11px;line-height:1.3;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${htmlEscape(issue.category)}</div>`
       : "";
     const descriptionBlock = issue.deck
       ? `<div style="margin:6px 0 0;color:#555555;font-size:13px;line-height:1.55;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">${htmlEscape(issue.deck)}</div>`
