@@ -435,6 +435,13 @@ function optimizedImageUrl(value = "", width = 900) {
 }
 
 
+function capTallThumbnail(event) {
+  const image = event.currentTarget;
+  const thumb = image.closest(".guide-thumb");
+  if (!thumb || !image.naturalWidth || !image.naturalHeight) return;
+  thumb.classList.toggle("is-ratio-capped", image.naturalWidth / image.naturalHeight < 0.75);
+}
+
 async function shareIssue(issue) {
   const url = issue.articleUrl || `${window.location.origin}${storyRoute(issue)}`;
   const title = `${issue.platform} | Magazine`;
@@ -693,6 +700,7 @@ function isDateInRange(value, range) {
                     :alt="issue.imageCaption || issue.platform"
                     loading="lazy"
                     decoding="async"
+                    @load="capTallThumbnail"
                   >
                 </div>
                 <p class="guide-brand" v-text="issue.platform"></p>
