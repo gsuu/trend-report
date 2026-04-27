@@ -461,11 +461,11 @@ function renderNewsletter(audiences, issuesByAudience, weekRange, recipientEmail
   const selectedLabels = selectedAudiences.map((audience) => NEWSLETTER_AUDIENCE_LABELS[audience]).join(", ");
 
   return fillNewsletterTemplate(templates.shell, {
-    PAGE_TITLE: htmlEscape("[CTTD] Weekly Web Trend"),
+    PAGE_TITLE: htmlEscape("[CTTD] Weekly Web Trends"),
     PREHEADER: "Service/Design/DEV 주간 트렌드 리포트",
     LOGO_SRC: htmlEscape(logoSrc),
-    KICKER: "Weekly Web Trend",
-    DISPLAY_TITLE: "Weekly Web Trend",
+    KICKER: "NEWSLETTER",
+    DISPLAY_TITLE: "Weekly Web Trends",
     DESCRIPTION: htmlEscape(`${rangeText} 기준 ${selectedLabels || "선택한 카테고리"} 업데이트입니다. 상세 내용은 각 매거진 링크에서 확인하세요.`),
     BODY: body,
     FOOTER: footerHtml(recipientEmail),
@@ -473,13 +473,13 @@ function renderNewsletter(audiences, issuesByAudience, weekRange, recipientEmail
 }
 
 function audienceSubject() {
-  return "[CTTD] Weekly Web Trend";
+  return "[CTTD] Weekly Web Trends";
 }
 
 function footerHtml(recipientEmail = "") {
   const unsubscribeLink = unsubscribeUrl(recipientEmail);
   const unsubscribeHtml = unsubscribeLink
-    ? ` <a href="${htmlEscape(unsubscribeLink)}" style="color:#777777;text-decoration:underline;text-underline-offset:3px;">구독 해지</a>`
+    ? `<br>수신을 원하지 않으시면 <a href="${htmlEscape(unsubscribeLink)}" style="color:#555555;font-weight:700;text-decoration:underline;text-underline-offset:3px;">구독 해지</a>를 눌러주세요.`
     : "";
   return `이 메일은 CTTD Newsletter 시스템에서 발송되었습니다.${unsubscribeHtml}`;
 }
@@ -501,7 +501,7 @@ function renderPlainText(audiences, issuesByAudience, weekRange, recipientEmail 
     ]));
   }
   return [
-    "CTTD Weekly Web Trend",
+    "CTTD Weekly Web Trends",
     weekRangeLabel(weekRange),
     "",
     ...issueLines,

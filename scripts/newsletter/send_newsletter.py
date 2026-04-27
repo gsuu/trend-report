@@ -38,7 +38,7 @@ SUBSCRIPTION_AUDIENCE_LABELS = {
     "design": "Design",
     "dev": "DEV",
 }
-WEB_TREND_TITLE = "Weekly Web Trend"
+WEB_TREND_TITLE = "Weekly Web Trends"
 NEWSLETTER_SECTION_PATTERN = re.compile(
     r"<!-- section:(?P<name>[a-z0-9_-]+) -->\s*(?P<body>.*?)\s*<!-- /section:(?P=name) -->",
     re.DOTALL,
@@ -746,6 +746,37 @@ def fetch_current_notion_report() -> dict[str, object]:
     return payload
 
 
+def latest_issue_date(report: dict[str, object]) -> str:
+    issues = report.get("issues", [])
+    if not isinstance(issues, list):
+        return ""
+    dates = sorted({
+        str(issue.get("date") or "")[:10]
+        for issue in issues
+        if isinstance(issue, dict) and str(issue.get("date") or "")[:10]
+    })
+    return dates[-1] if dates else ""
+
+
+def filter_report_to_latest_issue_date(report: dict[str, object]) -> dict[str, object]:
+    latest_date = latest_issue_date(report)
+    if not latest_date:
+        return report
+    issues = report.get("issues", [])
+    if not isinstance(issues, list):
+        return report
+    filtered_issues = [
+        issue
+        for issue in issues
+        if isinstance(issue, dict) and str(issue.get("date") or "")[:10] == latest_date
+    ]
+    return {
+        **report,
+        "issues": filtered_issues,
+        "newsletterDate": latest_date,
+    }
+
+
 def section_text_summary(sections: object, limit: int = 128) -> str:
     if not isinstance(sections, list):
         return ""
@@ -1100,6 +1131,14 @@ def should_include_issue_for_audience(categories: str | list[str], tags: list[st
     audience = normalize_audience(audience)
     if isinstance(categories, str):
         categories = [categories]
+    primary_area = normalize_develop_token(categories[0]) if categories else ""
+    if primary_area in DEVELOP_CATEGORY_KEYS:
+        return audience == "dev" or audience == "all"
+    if primary_area in DESIGN_CATEGORY_KEYS:
+        return audience in {"design", "general", "all"}
+    if primary_area in SERVICE_CATEGORY_KEYS:
+        return audience in {"service", "general", "all"}
+
     is_develop = any(is_develop_issue(category, tags) for category in categories)
     tokens = develop_tokens(categories, tags)
     is_design = bool(tokens.intersection(DESIGN_CATEGORY_KEYS))
@@ -1735,7 +1774,7 @@ def render_combined_newsletter(
             "PAGE_TITLE": html.escape(WEB_TREND_TITLE),
             "PREHEADER": "UIUX/Web Service 주간 트렌드 리포트",
             "LOGO_SRC": html.escape(magazine_asset_href(EMAIL_LOGO_ASSET_NAME, magazine_base_url), quote=True),
-            "KICKER": WEB_TREND_TITLE,
+            "KICKER": "NEWSLETTER",
             "DISPLAY_TITLE": WEB_TREND_TITLE,
             "DESCRIPTION": html.escape(
                 f"이번 주 매거진에 업데이트된 {selected_labels or '선택한 카테고리'} 이슈입니다. 상세 내용은 각 매거진 링크에서 확인하세요."
@@ -1800,8 +1839,10 @@ def newsletter_footer_html(recipient_email: str, magazine_base_url: str | None) 
     if not link:
         return "이 메일은 CTTD Newsletter 시스템에서 발송되었습니다."
     return (
-        "이 메일은 CTTD Newsletter 시스템에서 발송되었습니다. "
-        f'<a href="{html.escape(link, quote=True)}" style="color:#777777;text-decoration:underline;text-underline-offset:3px;">구독 해지</a>'
+        "이 메일은 CTTD Newsletter 시스템에서 발송되었습니다.<br>"
+        "수신을 원하지 않으시면 "
+        f'<a href="{html.escape(link, quote=True)}" style="color:#555555;font-weight:700;text-decoration:underline;text-underline-offset:3px;">구독 해지</a>'
+        "를 눌러주세요."
     )
 
 
@@ -2062,7 +2103,7 @@ def main() -> None:
     load_env_files()
 
     args = parse_args()
-    notion_report = fetch_current_notion_report()
+    notion_report = filter_report_to_latest_issue_date(fetch_current_notion_report())
     slug = str(notion_report.get("slug") or "notion-current")
     report_path = Path(args.report) if args.report else Path(f"{slug}-notion.md")
     markdown = f"# {notion_report.get('title') or 'CTTD Trend Magazine'}\n"
