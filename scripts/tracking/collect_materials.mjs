@@ -207,12 +207,22 @@ function targetFit(article) {
   const aiIntegration = /(claude|chatgpt|gemini|외부 ai|연동|integration)/i.test(text);
   const screenSignal = /(홈|검색|상품상세|장바구니|결제|마이페이지|리뷰|추천|멤버십|알림|재구매|관리자|운영도구|dashboard|checkout|cart|product page|review|recommendation|screen|ui|ux|flow|workflow|mcp|accessibility|css|html|javascript|browser|design system)/i.test(text);
   const explicitScreenSignal = /(화면|스크린|플로우|진입|버튼|상태값|상품상세|장바구니|결제 화면|checkout|cart|product page|screen|flow|cta)/i.test(text);
+  const serviceExpertSignal = /(탐색|검색|추천|비교|구매|결제|장바구니|리뷰|후기|재방문|crm|멤버십|포인트|쿠폰|알림|온보딩|신뢰|전환|운영자|관리자|대시보드|정책|혜택|상태값|정보구조|flow|journey|retention|conversion|checkout|review|recommendation)/i.test(text);
+  const serviceApplicationSignal = /(적용|고려|점검|설계|화면|플로우|정책|조건|예외|검수|cta|상태값|근거|피드백|운영|재방문|전환|비교 기준|추천 근거)/i.test(text);
 
   if (area === "DEV" || area === "Design") {
     return {
       label: "design_dev_reference",
       priority: screenSignal ? "P1" : "P2",
       reason: "디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.",
+    };
+  }
+
+  if (area === "Service" && (!serviceExpertSignal || !serviceApplicationSignal)) {
+    return {
+      label: "exclude",
+      priority: "자동 제외",
+      reason: "웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.",
     };
   }
 
@@ -258,6 +268,7 @@ function targetFit(article) {
 function collectedArticle(article) {
   const image = usableImageUrl(article.image || article.imageUrl || article.ogImage || "", article.link);
   const fit = targetFit(article);
+  const machineStatus = fit.label === "exclude" ? "auto_excluded" : "candidate";
   return {
     title: cleanDisplayText(article.title),
     link: article.link,
@@ -274,8 +285,10 @@ function collectedArticle(article) {
     targetFitReason: fit.reason,
     image,
     summary: shortText(article.content || article.title, 360),
-    machineStatus: "candidate",
-    machineReason: "AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.",
+    machineStatus,
+    machineReason: machineStatus === "auto_excluded"
+      ? fit.reason
+      : "AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.",
     editorialDecision: "ai_required",
     sourceBasis: {
       discoverySource: article.source || "",
@@ -365,6 +378,7 @@ function editorialBriefMarkdown(data) {
     "- 최종 원고 작성 기준 후보는 이커머스 core 후보를 최우선으로 20~30개 사이 `shortlist-20-30.md`에 정리합니다.",
     "- `shortlist-20-30.md`는 다시 4~7개로 줄이는 예비 목록이 아니라, 원문 검증 후 그대로 `magazine-report.md`로 작성할 기준 목록입니다.",
     "- 카드 제휴, 쿠폰/e쿠폰, 콘텐츠 제휴, 외부 AI 연동, 멤버십 프로모션은 원문에서 화면·플로우·정책 변화가 확인될 때만 채택합니다.",
+    "- Service 후보는 `왜 웹서비스 전문가가 주목해야 하는지`와 `우리 서비스에 적용할 때 고려할 화면·정책·플로우 조건`이 둘 다 보일 때만 채택합니다.",
     "- `혜택 조건을 쉽게`, `결제 후 다음 거래`, `추천을 안전하게 연결`처럼 어느 서비스에도 붙는 일반론만 남는 후보는 제외합니다.",
     "- 같은 브랜드 후보가 많을 때는 AI 편집 단계에서 독자 가치가 큰 항목 최대 2개만 채택합니다.",
     "- shortlist 항목 중 원문 부족, 광고성, 화면·서비스·구현 변화 미확인 항목만 제외 메모로 옮기고, 통과 항목은 `magazine-report.md`로 작성한 뒤 Notion 업로드를 진행합니다.",

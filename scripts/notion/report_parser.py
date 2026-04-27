@@ -600,6 +600,81 @@ def validate_dev_article_headings(path: Path, lines: list[str]) -> None:
         )
 
 
+def block_text(value: str) -> str:
+    return split_section_block(value)[1]
+
+
+def section_plain_text(items: list[str]) -> str:
+    return re.sub(r"\s+", " ", " ".join(block_text(item) for item in items)).strip()
+
+
+def section_has_subhead(items: list[str], heading: str) -> bool:
+    return any(split_section_block(item) == ("subhead", heading) for item in items)
+
+
+def text_after_subhead(items: list[str], heading: str) -> str:
+    parts: list[str] = []
+    active = False
+    for item in items:
+        kind, text = split_section_block(item)
+        if kind == "subhead":
+            if active:
+                break
+            active = text == heading
+            continue
+        if active:
+            parts.append(text)
+    return re.sub(r"\s+", " ", " ".join(parts)).strip()
+
+
+def validate_service_article_fit(path: Path, report: "Report") -> None:
+    service_keywords = re.compile(
+        r"서비스|화면|플로우|정책|조건|예외|검수|CTA|상태값|정보구조|검색|추천|비교|구매|"
+        r"결제|장바구니|리뷰|후기|재방문|CRM|알림|온보딩|신뢰|전환|운영|관리자|대시보드",
+        re.IGNORECASE,
+    )
+    why_keywords = re.compile(r"왜|지금|배경|흐름|신호|문제|부담|바뀌|늘어|줄이|때문|뜻")
+    design_keywords = re.compile(r"적용|고려|설계|점검|확인|분리|구분|질문|공개|승인|보여|연결|줄이|강화|남겨|나눠")
+    errors: list[str] = []
+
+    for issue in report.issues:
+        if issue.area != "Service":
+            continue
+        insight_items = issue.sections.get("매거진 인사이트", [])
+        issue_label = f"{issue.number.zfill(2)}. [{issue.platform}] {issue.title}"
+        if not insight_items:
+            errors.append(f"- {issue_label}: `매거진 인사이트`가 없습니다.")
+            continue
+
+        for heading in ("왜 지금 이 업데이트인가", "설계 관점", "점검 질문"):
+            if not section_has_subhead(insight_items, heading):
+                errors.append(f"- {issue_label}: `{heading}` 섹션이 필요합니다.")
+
+        why_text = text_after_subhead(insight_items, "왜 지금 이 업데이트인가")
+        design_text = text_after_subhead(insight_items, "설계 관점")
+        questions_text = text_after_subhead(insight_items, "점검 질문")
+        all_text = section_plain_text(insight_items)
+
+        if why_text and (not service_keywords.search(why_text) or not why_keywords.search(why_text)):
+            errors.append(
+                f"- {issue_label}: `왜 지금 이 업데이트인가`에 웹서비스 전문가가 주목해야 할 이유가 더 분명해야 합니다."
+            )
+        if design_text and (not service_keywords.search(design_text) or not design_keywords.search(design_text)):
+            errors.append(
+                f"- {issue_label}: `설계 관점`에 우리 서비스 적용 시 고려할 화면·정책·플로우 조건이 필요합니다."
+            )
+        if questions_text and len(re.findall(r"(?:^|\s)-\s+", questions_text)) == 0 and "?" not in questions_text and "가?" not in questions_text:
+            errors.append(f"- {issue_label}: `점검 질문`은 서비스에 바로 대입할 질문으로 작성해야 합니다.")
+        if not service_keywords.search(all_text):
+            errors.append(f"- {issue_label}: 본문 전체에서 웹서비스 화면·정책·플로우 적용 단서가 부족합니다.")
+
+    if errors:
+        raise SystemExit(
+            f"{path}: Service 아티클이 웹서비스 적용 기준을 충족하지 못했습니다.\n"
+            + "\n".join(errors)
+        )
+
+
 def slugify(value: str) -> str:
     slug = re.sub(r"[^0-9a-zA-Z가-힣]+", "-", value.lower()).strip("-")
     return slug or "article"
@@ -921,7 +996,9 @@ def parse_report(path: Path) -> Report:
                 current_issue.sections.setdefault(current_section, []).append(line)
 
     slug = path.stem.replace("-uiux-web-service-weekly-trend-report", "")
-    return Report(path, slug, title, period, summary, issues, next_week)
+    report = Report(path, slug, title, period, summary, issues, next_week)
+    validate_service_article_fit(path, report)
+    return report
 
 
 def render_header_category_nav(report: Report, active: str = "") -> str:

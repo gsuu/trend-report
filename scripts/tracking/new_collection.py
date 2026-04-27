@@ -320,7 +320,12 @@ def build_platform_checklist(data: dict[str, Any]) -> str:
 
 def build_category_signal_checklist(data: dict[str, Any]) -> str:
     priority = data.get("contentPriority", data.get("collectionPriority", []))
-    lines: list[str] = []
+    lines: list[str] = [
+        "  - Service 공통 제외 기준",
+        "    - [ ] 웹서비스 전문가가 왜 이 글을 주목해야 하는지 한 문장으로 말할 수 있는가?",
+        "    - [ ] 우리 서비스에 적용할 때 고려할 화면·정책·플로우 조건이 원문에서 확인되는가?",
+        "    - [ ] 위 두 질문에 답하지 못하면 shortlist에 올리지 않고 제외 메모로 보냈는가?",
+    ]
     for category in priority:
         signals = CATEGORY_SIGNAL_RULES.get(category, [])
         if not signals:
