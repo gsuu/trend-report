@@ -613,16 +613,15 @@ main {
 
 .guide-thumb {
   position: relative;
-  display: grid;
-  aspect-ratio: 1 / 0.88;
-  place-items: center;
+  display: block;
+  width: 100%;
   overflow: hidden;
 }
 
 .guide-thumb img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
   transition: transform 260ms ease;
 }
 
@@ -1724,10 +1723,6 @@ main {
     grid-template-columns: 1fr;
     row-gap: 46px;
     padding-bottom: 36px;
-  }
-
-  .guide-thumb {
-    aspect-ratio: 1 / 0.82;
   }
 
   .guide-card h2 {
