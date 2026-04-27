@@ -240,7 +240,13 @@ async function getAllChildBlocks(notion, blockId) {
       start_cursor: cursor,
       page_size: 100,
     });
-    blocks.push(...response.results);
+    for (const block of response.results) {
+      blocks.push(block);
+      if (!block.has_children) continue;
+      if (block.type === "child_page" || block.type === "child_database") continue;
+      const nestedBlocks = await getAllChildBlocks(notion, block.id);
+      blocks.push(...nestedBlocks);
+    }
     cursor = response.has_more ? response.next_cursor : undefined;
   } while (cursor);
   return blocks;

@@ -54,6 +54,16 @@ PROPERTY_ALIASES = {
     "status": ("Status", "상태"),
 }
 
+PROPERTY_HINTS = {
+    "platform": ("브랜드명", "서비스", "플랫폼"),
+    "area": ("대카테고리", "대분류"),
+    "category": ("소카테고리", "소분류", "카테고리"),
+    "deck": ("목록 요약", "요약", "설명"),
+    "source_title": ("출처", "출처명"),
+    "image_caption": ("이미지 설명", "캡션"),
+    "source_key": ("고유키",),
+}
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Markdown 리포트 이슈를 Notion 데이터베이스에 추가/업데이트합니다.")
@@ -127,6 +137,11 @@ def first_property(schema: dict[str, dict[str, Any]], logical_name: str) -> tupl
         for name, prop in schema.items():
             if prop.get("type") == "title":
                 return name, prop
+
+    for hinted_name in PROPERTY_HINTS.get(logical_name, ()):
+        prop = schema.get(hinted_name)
+        if prop:
+            return hinted_name, prop
     return None, None
 
 
@@ -188,6 +203,58 @@ def notion_property(prop_type: str, value: Any) -> dict[str, Any] | None:
     return None
 
 
+def property_plain_text(prop: dict[str, Any] | None, fallback: str = "") -> str:
+    if not prop:
+        return fallback
+
+    prop_type = prop.get("type")
+    if prop_type == "title":
+        return "".join(item.get("plain_text", "") for item in prop.get("title", [])).strip() or fallback
+    if prop_type == "rich_text":
+        return "".join(item.get("plain_text", "") for item in prop.get("rich_text", [])).strip() or fallback
+    if prop_type == "select":
+        return (prop.get("select") or {}).get("name", "") or fallback
+    if prop_type == "status":
+        return (prop.get("status") or {}).get("name", "") or fallback
+    if prop_type == "url":
+        return prop.get("url") or fallback
+    if prop_type == "email":
+        return prop.get("email") or fallback
+    if prop_type == "phone_number":
+        return prop.get("phone_number") or fallback
+    if prop_type == "number":
+        number = prop.get("number")
+        return "" if number is None else str(number)
+    if prop_type == "date":
+        return ((prop.get("date") or {}).get("start")) or fallback
+    if prop_type == "checkbox":
+        return "true" if prop.get("checkbox") else "false"
+    if prop_type == "multi_select":
+        names = [item.get("name", "") for item in prop.get("multi_select", []) if item.get("name")]
+        return ", ".join(names) or fallback
+    return fallback
+
+
+def page_property_text(
+    page_properties: dict[str, Any],
+    schema: dict[str, dict[str, Any]],
+    logical_name: str,
+    fallback: str = "",
+) -> str:
+    name, _ = first_property(schema, logical_name)
+    if name and name in page_properties:
+        return property_plain_text(page_properties.get(name), fallback)
+    return fallback
+
+
+def normalize_match_text(value: str) -> str:
+    normalized = clean_markdown(value).lower()
+    normalized = re.sub(r"\b\d{4}[-/.]\d{1,2}[-/.]\d{1,2}\b", " ", normalized)
+    normalized = re.sub(r"\b\d{4}년\s*\d{1,2}월(?:\s*\d{1,2}일)?\b", " ", normalized)
+    normalized = re.sub(r"[^0-9a-z가-힣]+", "", normalized)
+    return normalized.strip()
+
+
 def set_property(properties: dict[str, Any], schema: dict[str, dict[str, Any]], logical_name: str, value: Any) -> None:
     name, prop = first_property(schema, logical_name)
     if not name or not prop:
@@ -210,7 +277,7 @@ def issue_properties(report: Report, issue: Issue, schema: dict[str, dict[str, A
     set_property(properties, schema, "number", issue.number)
     set_property(properties, schema, "platform", issue.platform)
     set_property(properties, schema, "area", issue_area_label(issue))
-    set_property(properties, schema, "category", issue_category_label(issue))
+    set_property(properties, schema, "category", issue_category_key(issue))
     set_property(properties, schema, "date", issue.meta.get("날짜", report.slug))
     set_property(properties, schema, "tags", issue.tags)
     set_property(properties, schema, "takeaway", title)
@@ -318,30 +385,47 @@ def property_filter(schema: dict[str, dict[str, Any]], logical_name: str, value:
 
 
 def find_existing_issue_page(database_id: str, schema: dict[str, dict[str, Any]], report: Report, issue: Issue) -> str:
-    title_candidates = [
-        clean_markdown(issue_update_title(issue) or f"{issue.platform} {issue.title}"),
-        clean_markdown(issue_target_description(issue) or f"{issue.platform} {issue.title}"),
-        clean_markdown(issue_target_title(issue) or f"{issue.platform} {issue.title}"),
-        clean_markdown(issue_takeaway(issue) or f"{issue.platform} {issue.title}"),
-    ]
-    for title in dict.fromkeys(title_candidates):
-        filters = [
-            property_filter(schema, "title", title),
-            property_filter(schema, "platform", issue.platform),
-            property_filter(schema, "area", issue_area_label(issue)),
+    candidate_texts = {
+        normalize_match_text(value)
+        for value in [
+            issue_update_title(issue) or f"{issue.platform} {issue.title}",
+            issue_target_description(issue) or f"{issue.platform} {issue.title}",
+            issue_target_title(issue) or f"{issue.platform} {issue.title}",
+            issue_takeaway(issue) or f"{issue.platform} {issue.title}",
         ]
-        filters = [item for item in filters if item]
-        if not filters:
-            continue
+        if normalize_match_text(value)
+    }
 
-        response = notion_request(
-            "POST",
-            f"databases/{database_id}/query",
-            {"filter": {"and": filters} if len(filters) > 1 else filters[0], "page_size": 1},
-        )
-        results = response.get("results", [])
-        if results:
-            return results[0]["id"]
+    filters = [
+        property_filter(schema, "platform", issue.platform),
+        property_filter(schema, "area", issue_area_label(issue)),
+        property_filter(schema, "category", issue_category_key(issue)),
+    ]
+    filters = [item for item in filters if item]
+    if not filters:
+        return ""
+
+    response = notion_request(
+        "POST",
+        f"databases/{database_id}/query",
+        {"filter": {"and": filters} if len(filters) > 1 else filters[0], "page_size": 20},
+    )
+
+    matches: list[tuple[int, str, str]] = []
+    for page in response.get("results", []):
+        properties = page.get("properties", {})
+        title = normalize_match_text(page_property_text(properties, schema, "title", ""))
+        deck = normalize_match_text(page_property_text(properties, schema, "deck", ""))
+        title_match = bool(title and title in candidate_texts)
+        deck_match = bool(deck and deck in candidate_texts)
+        if not title_match and not deck_match:
+            continue
+        score = 2 if title_match else 1
+        matches.append((score, page.get("created_time", ""), page["id"]))
+
+    if matches:
+        matches.sort(key=lambda item: (-item[0], item[1], item[2]))
+        return matches[0][2]
     return ""
 
 
