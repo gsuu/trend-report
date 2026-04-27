@@ -232,12 +232,8 @@ function weekRangeLabel(range) {
   return `${formatKstDateTime(range.startKst)} ~ ${formatKstDateTime(range.endKst)} 전`;
 }
 
-function weekRangeDateLabel(range) {
-  return range.endKst.toISOString().slice(0, 10);
-}
-
-function newsletterTitle(range) {
-  return `${weekRangeDateLabel(range)} Weekly Web Trends`;
+function newsletterTitle(sendDateLabel = kstDateString()) {
+  return `${sendDateLabel} Weekly Web Trends`;
 }
 
 function dateInKstWeek(value, range) {
@@ -461,11 +457,10 @@ function selectedIssuesByAudience(audiences, issuesByAudience) {
   return audiences.flatMap((audience) => issuesByAudience[audience] || []);
 }
 
-function renderNewsletter(audiences, issuesByAudience, weekRange, recipientEmail = "") {
+function renderNewsletter(audiences, issuesByAudience, weekRange, recipientEmail = "", sendDateLabel = kstDateString()) {
   const selectedAudiences = audiences.filter((audience) => NEWSLETTER_AUDIENCES.includes(audience));
   const logoSrc = `${siteUrl()}/assets/cttd-logo-email.png`;
-  const rangeText = weekRangeLabel(weekRange);
-  const title = newsletterTitle(weekRange);
+  const title = newsletterTitle(sendDateLabel);
   const templates = loadNewsletterTemplates();
   let displayNumber = 1;
   const bodyParts = [];
@@ -489,14 +484,14 @@ function renderNewsletter(audiences, issuesByAudience, weekRange, recipientEmail
     LOGO_SRC: htmlEscape(logoSrc),
     KICKER: "NEWSLETTER",
     DISPLAY_TITLE: htmlEscape(title),
-    DESCRIPTION: htmlEscape(`${rangeText} 기준 ${selectedLabels || "선택한 카테고리"} 업데이트입니다. 상세 내용은 각 매거진 링크에서 확인하세요.`),
+    DESCRIPTION: htmlEscape(`${sendDateLabel} 기준 ${selectedLabels || "선택한 카테고리"} 업데이트입니다. 상세 내용은 각 매거진 링크에서 확인하세요.`),
     BODY: body,
     FOOTER: footerHtml(recipientEmail),
   });
 }
 
-function audienceSubject(weekRange) {
-  return `${NEWSLETTER_SUBJECT_PREFIX} ${newsletterTitle(weekRange)}`;
+function audienceSubject(sendDateLabel = kstDateString()) {
+  return `${NEWSLETTER_SUBJECT_PREFIX} ${newsletterTitle(sendDateLabel)}`;
 }
 
 function footerHtml(recipientEmail = "") {
@@ -507,7 +502,7 @@ function footerHtml(recipientEmail = "") {
   return `이 메일은 CTTD Newsletter 시스템에서 발송되었습니다.${unsubscribeHtml}`;
 }
 
-function renderPlainText(audiences, issuesByAudience, weekRange, recipientEmail = "") {
+function renderPlainText(audiences, issuesByAudience, weekRange, recipientEmail = "", sendDateLabel = kstDateString()) {
   const unsubscribeLink = unsubscribeUrl(recipientEmail);
   const issueLines = [];
   for (const audience of audiences) {
@@ -524,7 +519,7 @@ function renderPlainText(audiences, issuesByAudience, weekRange, recipientEmail 
     ]));
   }
   return [
-    `CTTD ${newsletterTitle(weekRange)}`,
+    `CTTD ${newsletterTitle(sendDateLabel)}`,
     "",
     ...issueLines,
     unsubscribeLink ? `구독 해지: ${unsubscribeLink}` : "",
@@ -533,6 +528,7 @@ function renderPlainText(audiences, issuesByAudience, weekRange, recipientEmail 
 
 async function sendNewsletters(issuesByAudience, weekRange) {
   const subscribers = await notionNewsletterSubscribers();
+  const sendDateLabel = kstDateString();
   if (!subscribers.length) return { sent: false, reason: "no recipients" };
 
   const port = Number.parseInt(process.env.SMTP_PORT || "587", 10);
@@ -558,9 +554,9 @@ async function sendNewsletters(issuesByAudience, weekRange) {
     await transporter.sendMail({
       from: process.env.SMTP_FROM,
       to: subscriber.email,
-      subject: audienceSubject(weekRange),
-      text: renderPlainText(subscriber.audiences, issuesByAudience, weekRange, subscriber.email),
-      html: renderNewsletter(subscriber.audiences, issuesByAudience, weekRange, subscriber.email),
+      subject: audienceSubject(sendDateLabel),
+      text: renderPlainText(subscriber.audiences, issuesByAudience, weekRange, subscriber.email, sendDateLabel),
+      html: renderNewsletter(subscriber.audiences, issuesByAudience, weekRange, subscriber.email, sendDateLabel),
     });
     sent += 1;
   }

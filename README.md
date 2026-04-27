@@ -498,7 +498,7 @@ python3 scripts/newsletter/send_newsletter.py \
   --send
 ```
 
-구독자 DB의 `Audience` 값에 따라 선택한 Service, Design, DEV 글을 한 메일에 담아 발송하려면 `--audience subscriptions`를 사용합니다. 메일 제목은 `[CTTD] Weekly Web Trends`로 고정되고, 여러 카테고리를 구독한 주소는 한 통 안에서 카테고리 섹션별 글을 받습니다.
+구독자 DB의 `Audience` 값에 따라 선택한 Service, Design, DEV 글을 한 메일에 담아 발송하려면 `--audience subscriptions`를 사용합니다. 메일 제목은 `[CTTD Magazine] YYYY-MM-DD Weekly Web Trends` 형식이며, 날짜는 발송일(KST)을 사용합니다. 여러 카테고리를 구독한 주소는 한 통 안에서 카테고리 섹션별 글을 받습니다.
 
 ```bash
 python3 scripts/newsletter/send_newsletter.py \

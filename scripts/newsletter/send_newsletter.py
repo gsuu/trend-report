@@ -14,8 +14,10 @@ import subprocess
 import urllib.parse
 import urllib.request
 from copy import copy
+from datetime import datetime
 from email.message import EmailMessage
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[2]
 PREVIEW_DIR = ROOT / "newsletters"
@@ -856,16 +858,13 @@ def filter_report_to_latest_issue(report: dict[str, object]) -> dict[str, object
     }
 
 
-def newsletter_collection_range_label(report: dict[str, object]) -> str:
-    date_text = str(report.get("newsletterDate") or latest_issue_date(report) or "")[:10]
-    if not re.match(r"^\d{4}-\d{2}-\d{2}$", date_text):
-        return ""
-    return date_text
+def newsletter_send_date_label() -> str:
+    return datetime.now(ZoneInfo("Asia/Seoul")).strftime("%Y-%m-%d")
 
 
-def web_trend_title(report: dict[str, object]) -> str:
-    range_label = newsletter_collection_range_label(report)
-    return f"{range_label} {WEB_TREND_TITLE}" if range_label else WEB_TREND_TITLE
+def web_trend_title(send_date_label: str | None = None) -> str:
+    date_label = send_date_label or newsletter_send_date_label()
+    return f"{date_label} {WEB_TREND_TITLE}"
 
 
 def section_text_summary(sections: object, limit: int = 128) -> str:
@@ -2185,7 +2184,8 @@ def main() -> None:
     slug = str(magazine_report.get("newsletterDate") or magazine_report.get("slug") or "magazine-current")
     report_path = Path(args.report) if args.report else Path(f"{slug}-magazine.md")
     markdown = f"# {magazine_report.get('title') or 'CTTD Trend Magazine'}\n"
-    default_title = web_trend_title(magazine_report)
+    send_date_label = newsletter_send_date_label()
+    default_title = web_trend_title(send_date_label)
     magazine_base_url = resolve_magazine_base_url(args.magazine_base_url, args.stage)
 
     if args.send and not magazine_base_url:
@@ -2197,7 +2197,7 @@ def main() -> None:
         ensure_unsubscribe_links_enabled()
 
     if args.audience == "subscriptions":
-        combined_title = web_trend_title(magazine_report)
+        combined_title = web_trend_title(send_date_label)
         items_by_audience = {
             audience: notion_report_items(magazine_report, audience)
             for audience in SUBSCRIPTION_AUDIENCES
