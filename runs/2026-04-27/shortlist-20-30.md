@@ -1,6 +1,6 @@
 # 2026-04-27 최종 원고 작성 기준 후보 20~30
 
-전체 수집 214개 중 CTTD 매거진 상세 글로 작성할 기준 후보를 25개로 추렸습니다. 이 파일은 다시 4~7개로 줄이는 예비 목록이 아니라, 원문 검증 후 그대로 `magazine-report.md`에 작성할 기준 목록입니다.
+전체 수집 214개 중 CTTD 매거진 상세 글로 작성할 기준 후보를 20개로 추렸습니다. 이 파일은 다시 4~7개로 줄이는 예비 목록이 아니라, 원문 검증 후 그대로 `magazine-report.md`에 작성할 기준 목록입니다.
 
 ## 선정 기준
 
@@ -22,39 +22,7 @@
 - 채택 사유: 사용자가 직접 글을 쓰는 부담을 줄이고 AI가 질문을 던져 후기를 완성하는 온라인 서비스 기능 변화입니다. 로컬 커머스, 리뷰 UX, 신뢰 입력, AI 보조 작성 흐름을 함께 볼 수 있습니다.
 - 확인 필요: 실제 후기 작성 화면, AI 질문 방식, 수정/검수 단계, 허위 리뷰 방지 장치를 확인합니다.
 
-#### 02. [당근페이] 최신 제품 구매와 중고거래 연결
-
-- 점수: 9/10
-- 출처 URL: https://about.daangn.com/company/pr/archive/%EB%8B%B9%EA%B7%BC%ED%8E%98%EC%9D%B4-%EC%B5%9C%EC%8B%A0-%EC%A0%9C%ED%92%88-%EA%B5%AC%EB%A7%A4%EC%99%80-%EC%A4%91%EA%B3%A0%EA%B1%B0%EB%9E%98-%EC%97%B0%EA%B2%B0%ED%95%9C%EB%8B%A4-%EC%9D%B4%EC%9A%A9%EC%9E%90-%EA%B1%B0%EB%9E%98-%EA%B2%BD%ED%97%98-%ED%95%9C-%EB%8B%A8%EA%B3%84-%ED%99%95%EC%9E%A5/
-- 직무 태그: 웹서비스기획
-- 채택 사유: 새 제품 구매와 기존 물건 처분을 하나의 거래 여정으로 연결하는 흐름입니다. 이커머스의 보상판매, 중고 회수, 결제 후 재판매 진입 설계와 연결됩니다.
-- 확인 필요: 결제, 중고 등록, 보상/혜택, 안전거래가 어떤 화면 순서로 이어지는지 확인합니다.
-
-#### 03. [당근] e쿠폰 거래 바로구매로 안전·편의성 강화
-
-- 점수: 8/10
-- 출처 URL: https://about.daangn.com/company/pr/archive/%EB%8B%B9%EA%B7%BC-e%EC%BF%A0%ED%8F%B0-%EA%B1%B0%EB%9E%98-%EB%B0%94%EB%A1%9C%EA%B5%AC%EB%A7%A4%EB%A1%9C-%EC%95%88%EC%A0%84%ED%8E%B8%EC%9D%98%EC%84%B1-%EA%B0%95%ED%99%94/
-- 직무 태그: 웹서비스기획
-- 채택 사유: 개인 간 거래에서 쿠폰 코드 확인, 결제, 사용 가능 여부처럼 불안이 큰 구간을 플랫폼 거래 흐름으로 흡수하는 사례입니다.
-- 확인 필요: 실제 보호 장치, 판매/구매 상태값, 거래 완료 판단 기준이 화면에서 어떻게 표현되는지 확인합니다.
-
-#### 04. [Spotify] Fitness With Spotify
-
-- 점수: 8/10
-- 출처 URL: https://newsroom.spotify.com/2026-04-27/spotify-fitness-workouts-peloton/
-- 직무 태그: 웹서비스기획, 웹디자인
-- 채택 사유: 오디오 서비스를 운동 루틴과 연결해 청취 맥락을 확장하는 공식 업데이트입니다. 콘텐츠 추천이 카테고리 탐색을 넘어 상황 기반 루틴으로 재구성되는 흐름을 볼 수 있습니다.
-- 확인 필요: Peloton 연계 범위, 진입 화면, 추천 기준, 사용 가능 지역을 원문 기준으로 확인합니다.
-
-#### 05. [Spotify] Claude에서 음악·팟캐스트 추천 연결
-
-- 점수: 8/10
-- 출처 URL: https://newsroom.spotify.com/2026-04-23/claude-integration/
-- 직무 태그: 웹서비스기획
-- 채택 사유: 사용자가 서비스 내부 검색창이 아니라 대화형 AI 안에서 취향과 상황을 말하고 Spotify 추천으로 이어지는 구조입니다. 외부 AI 인터페이스가 탐색 진입점이 되는 사례로 볼 수 있습니다.
-- 확인 필요: Claude 안에서 어떤 계정 연결과 권한, 추천 결과 링크, 재생 전환 흐름이 있는지 확인합니다.
-
-#### 06. [오픈서베이] 2030이 올리브영과 다이소로 향하는 이유
+#### 02. [오픈서베이] 2030이 올리브영과 다이소로 향하는 이유
 
 - 점수: 8/10
 - 출처 URL: https://blog.opensurvey.co.kr/article/health-supplement-2026-2/
@@ -62,7 +30,7 @@
 - 채택 사유: 건강기능식품 구매가 맞춤, 가성비, 채널 선택으로 나뉘는 흐름을 보여줍니다. 뷰티/헬스 커머스의 검색 필터, 추천 근거, 가격 비교, 입문자 콘텐츠 설계에 참고할 수 있습니다.
 - 확인 필요: 리서치/시장 맥락 자료이므로 공식 서비스 업데이트가 아니라 배경 자료로만 둡니다.
 
-#### 07. [토스 테크] 토스플레이스 데이터봇 판다(PANDA)
+#### 03. [토스 테크] 토스플레이스 데이터봇 판다(PANDA)
 
 - 점수: 8/10
 - 출처 URL: https://toss.tech/article/da-assistant-panda
@@ -70,17 +38,9 @@
 - 채택 사유: 내부 데이터 접근을 대화형 서비스 흐름으로 바꾼 사례입니다. 운영자가 어떤 질문을 던지고, 어떤 답을 받고, 의사결정까지 어떻게 이어지는지 서비스 운영 UX 관점에서 볼 수 있습니다.
 - 확인 필요: 일반 데이터 플랫폼 소개가 아니라 실제 팀 사용 흐름, 권한, 검증 방식이 원문에서 충분히 확인되는지 봅니다.
 
-#### 08. [무신사] 삼성카드와 멤버스데이 연계 카드 공개
-
-- 점수: 7/10
-- 출처 URL: https://newsroom.musinsa.com/newsroom-menu/2026-0427-03
-- 직무 태그: 웹서비스기획
-- 채택 사유: 카드 제휴 자체보다 멤버스데이와 온·오프라인 혜택을 묶어 가입 설득과 재방문 동선을 만드는 구조가 관찰 포인트입니다.
-- 확인 필요: 카드 혜택이 상품상세, 장바구니, 결제, 오프라인 방문 화면에 어떻게 노출되는지 확인되지 않으면 제외합니다.
-
 ### Design
 
-#### 09. [Figma] Design Systems And AI: Why MCP Servers Are The Unlock
+#### 04. [Figma] Design Systems And AI: Why MCP Servers Are The Unlock
 
 - 점수: 9/10
 - 출처 URL: https://www.figma.com/blog/design-systems-ai-mcp/
@@ -88,7 +48,7 @@
 - 채택 사유: AI가 디자인 시스템을 어떻게 읽고 적용해야 하는지에 대한 핵심 후보입니다. 컴포넌트 규칙, 토큰, 문서, 핸드오프가 AI 워크플로우와 직접 연결됩니다.
 - 확인 필요: Figma 공식 원문 기준으로 MCP가 실제로 어떤 입력과 산출을 바꾸는지 확인합니다.
 
-#### 10. [Figma] Schema 2025: Design Systems For A New Era
+#### 05. [Figma] Schema 2025: Design Systems For A New Era
 
 - 점수: 8/10
 - 출처 URL: https://www.figma.com/blog/schema-2025-design-systems-recap/
@@ -96,7 +56,7 @@
 - 채택 사유: AI 시대의 디자인 시스템 발표를 묶어 볼 수 있는 공식 요약입니다. 디자인 시스템 운영, 자동화, 의미 기반 토큰 흐름을 한 번에 정리할 수 있습니다.
 - 확인 필요: 단독 글로 쓸지, Figma MCP/Design Systems AI 글의 관련 출처로 둘지 결정합니다.
 
-#### 11. [Figma] The Future of Design Systems is Automated
+#### 06. [Figma] The Future of Design Systems is Automated
 
 - 점수: 8/10
 - 출처 URL: https://www.figma.com/blog/the-future-of-design-systems-is-automated/
@@ -104,7 +64,7 @@
 - 채택 사유: 디자인 시스템 자동화가 토큰, 문서, 코드 연결, QA 흐름으로 어떻게 확장되는지 볼 수 있습니다. AI보다 운영 자동화 관점으로 분리해 검토할 가치가 있습니다.
 - 확인 필요: 같은 Figma 디자인 시스템 묶음과 중복되면 최종 글에서는 보조 출처로만 둡니다.
 
-#### 12. [Into Design Systems] Your Design System Is Not Ready for AI Agents
+#### 07. [Into Design Systems] Your Design System Is Not Ready for AI Agents
 
 - 점수: 8/10
 - 출처 URL: https://www.intodesignsystems.com/blog/design-system-not-ready-for-ai-agents
@@ -112,7 +72,7 @@
 - 채택 사유: AI 에이전트가 디자인 시스템을 잘못 해석하는 실패 모드를 다룹니다. 실제 팀이 AI 사용 전에 문서, 명명, 컴포넌트 상태를 어떻게 정리해야 하는지 얘기하기 좋습니다.
 - 확인 필요: 외부 매거진 글이므로 공식 여부와 발표 맥락이 있는지 확인하고, 광고성이 강하면 제외합니다.
 
-#### 13. [Into Design Systems] How Spotify is Making Their Design System AI-Ready
+#### 08. [Into Design Systems] How Spotify is Making Their Design System AI-Ready
 
 - 점수: 7/10
 - 출처 URL: https://www.intodesignsystems.com/blog/how-spotify-design-system-ai-ready
@@ -120,7 +80,7 @@
 - 채택 사유: 대형 서비스가 디자인 시스템을 AI 친화적으로 정리하는 흐름을 설명할 수 있는 보조 후보입니다. Spotify 서비스 후보와 별도로 조직/시스템 운영 관점에서 볼 수 있습니다.
 - 확인 필요: Spotify 공식 원문이나 발표 자료로 역추적되지 않으면 메인 글이 아니라 관련 글로만 사용합니다.
 
-#### 14. [OpenAI] Introducing ChatGPT Images 2.0
+#### 09. [OpenAI] Introducing ChatGPT Images 2.0
 
 - 점수: 8/10
 - 출처 URL: https://openai.com/index/introducing-chatgpt-images-2-0
@@ -128,7 +88,7 @@
 - 채택 사유: 이미지 생성이 텍스트 렌더링과 시각 추론 중심으로 개선되면 배너, 상세 페이지, 콘텐츠 시안 제작 흐름과 연결됩니다.
 - 확인 필요: 성능 과장은 피하고 브랜드 권리, 수정 가능성, 실무 검수 관점으로 봅니다.
 
-#### 15. [OpenAI] Introducing workspace agents in ChatGPT
+#### 10. [OpenAI] Introducing workspace agents in ChatGPT
 
 - 점수: 8/10
 - 출처 URL: https://openai.com/index/introducing-workspace-agents-in-chatgpt
@@ -136,7 +96,7 @@
 - 채택 사유: 에이전트가 팀 워크스페이스 안에서 작업을 수행하는 흐름은 작업 도구 UX와 권한 구조에 직접 영향을 줍니다.
 - 확인 필요: 사용 범위, 권한, 보안, 작업 결과 검수 방식을 원문에서 확인합니다.
 
-#### 16. [Google Gemini] April Gemini Drop
+#### 11. [Google Gemini] April Gemini Drop
 
 - 점수: 7/10
 - 출처 URL: https://blog.google/innovation-and-ai/products/gemini-app/gemini-drop-april-2026/
@@ -146,7 +106,7 @@
 
 ### DEV
 
-#### 17. [Figma] Introducing our Dev Mode MCP server
+#### 12. [Figma] Introducing our Dev Mode MCP server
 
 - 점수: 10/10
 - 출처 URL: https://www.figma.com/blog/introducing-figma-mcp-server/
@@ -154,7 +114,7 @@
 - 채택 사유: 디자인 정보를 LLM이 읽어 코드 생성에 반영하는 핵심 업데이트입니다. 디자인-코드 핸드오프와 컴포넌트 QA에 직접 연결됩니다.
 - 확인 필요: 베타 범위, 사용 조건, 실제 코드 생성 영향과 한계를 확인합니다.
 
-#### 18. [Figma] Unlocking the Power of Code Connect
+#### 13. [Figma] Unlocking the Power of Code Connect
 
 - 점수: 8/10
 - 출처 URL: https://www.figma.com/blog/unlocking-the-power-of-code-connect/
@@ -162,7 +122,7 @@
 - 채택 사유: 디자인 시스템 컴포넌트와 코드 구현을 연결하는 운영 흐름입니다. 디자인 토큰, 컴포넌트 매핑, 개발자 문서화 관점에서 볼 수 있습니다.
 - 확인 필요: 사례 중심 글인지 제품 업데이트인지 구분합니다.
 
-#### 19. [Figma] The TL;DR on MCP
+#### 14. [Figma] The TL;DR on MCP
 
 - 점수: 8/10
 - 출처 URL: https://www.figma.com/blog/the-tldr-on-mcp/
@@ -170,7 +130,7 @@
 - 채택 사유: MCP를 디자인-코드 연결의 기술 기반으로 설명하는 보조 후보입니다. Figma Dev Mode MCP 글의 배경 자료로 쓰기 좋습니다.
 - 확인 필요: 최종 글에서는 독립 아티클보다 Figma MCP 글의 관련 출처로 병합할 가능성이 큽니다.
 
-#### 20. [ShopTalk Show] Lazy Loading the Web with Scott Jehl
+#### 15. [ShopTalk Show] Lazy Loading the Web with Scott Jehl
 
 - 점수: 8/10
 - 출처 URL: https://shoptalkshow.com/712/
@@ -178,7 +138,7 @@
 - 채택 사유: lazy loading은 이미지, iframe, 성능, 접근성에 반복적으로 영향을 주는 주제입니다. LCP/CLS/INP를 해치지 않는 조건으로 정리하기 좋습니다.
 - 확인 필요: 팟캐스트 원문 링크와 브라우저 문서로 보강해야 합니다.
 
-#### 21. [Syntax.fm] Writing Maintainable CSS
+#### 16. [Syntax.fm] Writing Maintainable CSS
 
 - 점수: 7/10
 - 출처 URL: https://syntax.fm/999
@@ -186,7 +146,7 @@
 - 채택 사유: 유지보수 가능한 CSS는 디자인 시스템, 컴포넌트 상태, 리팩터링 기준과 직접 연결됩니다. 최신 기능보다 팀 운영 기준으로 풀기 좋습니다.
 - 확인 필요: 팟캐스트 자체만으로는 메인 근거가 약하므로 구체 도구/패턴을 확인합니다.
 
-#### 22. [Dev.to - Accessibility] Scaling agentic A11y with browser-side scans
+#### 17. [Dev.to - Accessibility] Scaling agentic A11y with browser-side scans
 
 - 점수: 8/10
 - 출처 URL: https://dev.to/cameron-accesslint/scaling-agentic-a11y-with-browser-side-scans-1e3h
@@ -194,7 +154,7 @@
 - 채택 사유: AI 에이전트 접근성 점검을 실제 렌더링 DOM과 브라우저 이슈 중심으로 바꾸는 주제입니다. 문제 위치를 좁히는 QA 흐름이 중요합니다.
 - 확인 필요: 특정 도구 홍보성이 강하면 제외하고, 접근성 QA 프로세스 관점만 남깁니다.
 
-#### 23. [WebKit] Safari Technology Preview 242 릴리즈 노트
+#### 18. [WebKit] Safari Technology Preview 242 릴리즈 노트
 
 - 점수: 8/10
 - 출처 URL: https://webkit.org/blog/17934/release-notes-for-safari-technology-preview-242/
@@ -202,7 +162,7 @@
 - 채택 사유: Safari TP는 실제 배포 전 브라우저 호환성, CSS/HTML/JS 동작 변화를 확인할 수 있는 QA 신호입니다.
 - 확인 필요: CTTD 프로젝트에 영향 있는 CSS, HTML, Forms, JavaScript 항목만 골라 정리합니다.
 
-#### 24. [Chrome Developers] Localization support for web app manifests
+#### 19. [Chrome Developers] Localization support for web app manifests
 
 - 점수: 7/10
 - 출처 URL: https://developer.chrome.com/blog/manifest-localization?hl=en
@@ -210,7 +170,7 @@
 - 채택 사유: 웹앱 매니페스트의 다국어 지원은 PWA 이름, 설명, 설치 경험처럼 사용자가 직접 보는 진입 정보에 영향을 줍니다. 글로벌 커머스나 다국어 서비스의 설치형 웹 경험 QA 항목으로 볼 수 있습니다.
 - 확인 필요: Chrome 중심 기능이므로 표준화 상태와 타 브라우저 지원 여부를 확인합니다.
 
-#### 25. [JavaScript Weekly] JavaScript Weekly Issue 782
+#### 20. [JavaScript Weekly] JavaScript Weekly Issue 782
 
 - 점수: 8/10
 - 출처 URL: https://javascriptweekly.com/issues/782
@@ -220,6 +180,11 @@
 
 ## 보류/제외 메모
 
+- 당근페이 최신 제품 구매와 중고거래 연결: 결제 후 리세일 연결이라는 해석은 가능하지만, 이번 원문만으로는 타겟이 바로 참고할 화면 구조나 검증 가능한 서비스 변화가 부족해 제외했습니다.
+- 당근 e쿠폰 바로구매: 안전거래 강화 보도자료 성격이 강하고, CTTD 타겟이 궁금해할 화면·플로우 디테일이 부족해 제외했습니다.
+- Spotify Fitness With Spotify: 글로벌 콘텐츠 제휴 이슈로는 흥미롭지만, 국내 웹서비스·커머스·디자인 실무에 바로 연결할 구체 UX 근거가 약해 제외했습니다.
+- Spotify Claude 추천 연결: 외부 AI 연동 사례지만 계정 연결과 추천 전환 흐름의 화면 근거가 부족하고, 타겟 실무 적용 질문이 약해 제외했습니다.
+- 무신사 삼성카드와 멤버스데이 연계 카드: 제휴카드와 혜택 프로모션 중심이라, 화면 구조나 탐색·구매 여정 변화가 확인되지 않아 제외했습니다.
 - 카카오스타일 파트너라운지는 이번 재수집에서 `fetch failed`가 발생해 후보 검토에서 빠졌습니다.
 - 무신사 캠페인, 앰배서더, 매장 오픈, 스포츠 제휴는 온라인 서비스 UX 변화가 확인되지 않아 제외 우선으로 봅니다.
 - 쿠팡플레이 콘텐츠 홍보, 컬리 신상품, 쿠팡 세일/가정의 달 기획전은 콘텐츠·프로모션 성격이 강해 제외합니다.
