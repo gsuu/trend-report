@@ -68,7 +68,28 @@ async function readJsonBody(request) {
   return JSON.parse(Buffer.concat(chunks).toString("utf8"));
 }
 
-async function fetchSubscriberPage(notion, databaseId, email) {
+function emailPropertyFilter(name, property, email) {
+  if (property.type === "email") return { property: name, email: { equals: normalizeEmail(email) } };
+  if (property.type === "title") return { property: name, title: { equals: normalizeEmail(email) } };
+  if (property.type === "rich_text") return { property: name, rich_text: { equals: normalizeEmail(email) } };
+  return null;
+}
+
+async function fetchSubscriberPage(notion, databaseId, databaseProperties, email) {
+  const filters = EMAIL_PROPERTIES
+    .filter((name) => databaseProperties[name])
+    .map((name) => emailPropertyFilter(name, databaseProperties[name], email))
+    .filter(Boolean);
+
+  if (filters.length) {
+    const response = await notion.databases.query({
+      database_id: databaseId,
+      page_size: 1,
+      filter: filters.length === 1 ? filters[0] : { or: filters },
+    });
+    return response.results.find((page) => pageEmail(page) === normalizeEmail(email));
+  }
+
   const pages = [];
   let cursor;
 
@@ -145,7 +166,7 @@ export default async function handler(request, response) {
     const notion = new Client({ auth: notionToken });
     const database = await notion.databases.retrieve({ database_id: databaseId });
     const properties = subscriberProperties(database.properties || {}, email, audiences);
-    const existingPage = await fetchSubscriberPage(notion, databaseId, email);
+    const existingPage = await fetchSubscriberPage(notion, databaseId, database.properties || {}, email);
 
     if (existingPage) {
       await notion.pages.update({ page_id: existingPage.id, properties });

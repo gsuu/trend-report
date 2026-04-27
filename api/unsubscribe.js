@@ -18,19 +18,31 @@ function normalizeEmail(value = "") {
 }
 
 function unsubscribeSecret() {
-  return process.env.NEWSLETTER_UNSUBSCRIBE_SECRET || process.env.CRON_SECRET || "";
+  return unsubscribeSecrets()[0] || "";
 }
 
-function signEmail(email) {
-  const secret = unsubscribeSecret();
+function unsubscribeSecrets() {
+  const primary = process.env.NEWSLETTER_UNSUBSCRIBE_SECRET || "";
+  const fallbacks = (process.env.NEWSLETTER_UNSUBSCRIBE_SECRETS || "")
+    .split(",")
+    .map((secret) => secret.trim())
+    .filter(Boolean);
+  const legacy = process.env.CRON_SECRET || "";
+  return [...new Set([primary, ...fallbacks, legacy].filter(Boolean))];
+}
+
+function signEmail(email, secret = unsubscribeSecret()) {
   if (!secret) return "";
   return crypto.createHmac("sha256", secret).update(normalizeEmail(email)).digest("hex");
 }
 
 function isValidSignature(email, signature) {
-  const expected = signEmail(email);
-  if (!expected || !signature || expected.length !== signature.length) return false;
-  return crypto.timingSafeEqual(Buffer.from(expected), Buffer.from(signature));
+  if (!signature) return false;
+  return unsubscribeSecrets().some((secret) => {
+    const expected = signEmail(email, secret);
+    if (!expected || expected.length !== signature.length) return false;
+    return crypto.timingSafeEqual(Buffer.from(expected), Buffer.from(signature));
+  });
 }
 
 function propertyText(properties, names) {
@@ -57,7 +69,28 @@ function subscriberDatabaseId() {
   return databaseId;
 }
 
-async function fetchSubscriberPage(notion, databaseId, email) {
+function emailPropertyFilter(name, property, email) {
+  if (property.type === "email") return { property: name, email: { equals: normalizeEmail(email) } };
+  if (property.type === "title") return { property: name, title: { equals: normalizeEmail(email) } };
+  if (property.type === "rich_text") return { property: name, rich_text: { equals: normalizeEmail(email) } };
+  return null;
+}
+
+async function fetchSubscriberPage(notion, databaseId, databaseProperties, email) {
+  const filters = EMAIL_PROPERTIES
+    .filter((name) => databaseProperties[name])
+    .map((name) => emailPropertyFilter(name, databaseProperties[name], email))
+    .filter(Boolean);
+
+  if (filters.length) {
+    const response = await notion.databases.query({
+      database_id: databaseId,
+      page_size: 1,
+      filter: filters.length === 1 ? filters[0] : { or: filters },
+    });
+    return response.results.find((page) => pageEmail(page) === normalizeEmail(email));
+  }
+
   const pages = [];
   let cursor;
 
@@ -154,7 +187,7 @@ export default async function handler(request, response) {
     const databaseId = subscriberDatabaseId();
     const notion = new Client({ auth: notionToken });
     const database = await notion.databases.retrieve({ database_id: databaseId });
-    const page = await fetchSubscriberPage(notion, databaseId, email);
+    const page = await fetchSubscriberPage(notion, databaseId, database.properties || {}, email);
 
     if (page) {
       const properties = {};

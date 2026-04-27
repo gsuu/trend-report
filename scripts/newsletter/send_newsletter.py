@@ -447,7 +447,22 @@ def unique_emails(values: list[str]) -> list[str]:
 
 
 def unsubscribe_secret() -> str:
-    return os.getenv("NEWSLETTER_UNSUBSCRIBE_SECRET", os.getenv("CRON_SECRET", ""))
+    secrets = unsubscribe_secrets()
+    return secrets[0] if secrets else ""
+
+
+def unsubscribe_secrets() -> list[str]:
+    raw_fallbacks = os.getenv("NEWSLETTER_UNSUBSCRIBE_SECRETS", "")
+    candidates = [
+        os.getenv("NEWSLETTER_UNSUBSCRIBE_SECRET", ""),
+        *(secret.strip() for secret in raw_fallbacks.split(",")),
+        os.getenv("CRON_SECRET", ""),
+    ]
+    secrets: list[str] = []
+    for secret in candidates:
+        if secret and secret not in secrets:
+            secrets.append(secret)
+    return secrets
 
 
 def unsubscribe_url(email: str, magazine_base_url: str | None) -> str:

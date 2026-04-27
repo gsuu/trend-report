@@ -177,7 +177,17 @@ function uniqueEmails(emails) {
 }
 
 function unsubscribeSecret() {
-  return process.env.NEWSLETTER_UNSUBSCRIBE_SECRET || process.env.CRON_SECRET || "";
+  return unsubscribeSecrets()[0] || "";
+}
+
+function unsubscribeSecrets() {
+  const primary = process.env.NEWSLETTER_UNSUBSCRIBE_SECRET || "";
+  const fallbacks = (process.env.NEWSLETTER_UNSUBSCRIBE_SECRETS || "")
+    .split(",")
+    .map((secret) => secret.trim())
+    .filter(Boolean);
+  const legacy = process.env.CRON_SECRET || "";
+  return [...new Set([primary, ...fallbacks, legacy].filter(Boolean))];
 }
 
 function unsubscribeUrl(email) {
