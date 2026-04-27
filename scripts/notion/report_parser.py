@@ -1255,7 +1255,7 @@ def render_latest_card(report: Report, issue: Issue) -> str:
     tags = " ".join(f"<span>#{clean_inline(tag)}</span>" for tag in issue.tags[:2])
     category = issue_category_label(issue)
     image = (
-        f'<img src="{html.escape(issue.image, quote=True)}" alt="{html.escape(issue.image_caption or issue.platform, quote=True)}" loading="lazy">'
+        f'<img src="{html.escape(issue.image, quote=True)}" alt="{html.escape(issue.image_caption or issue.platform, quote=True)}" loading="lazy" onerror="this.closest(\'.latest-thumb\')?.remove()">'
         if issue.image
         else ""
     )
@@ -1284,7 +1284,7 @@ def render_trending_item(index: int, text: str) -> str:
 def render_feed_item(report: Report, issue: Issue) -> str:
     category = issue_category_label(issue)
     image = (
-        f'<img src="{html.escape(issue.image, quote=True)}" alt="{html.escape(issue.image_caption or issue.platform, quote=True)}" loading="lazy">'
+        f'<img src="{html.escape(issue.image, quote=True)}" alt="{html.escape(issue.image_caption or issue.platform, quote=True)}" loading="lazy" onerror="this.closest(\'.feed-thumb\')?.remove()">'
         if issue.image
         else ""
     )
@@ -1340,7 +1340,7 @@ def render_index(report: Report) -> str:
         </header>
         <div class="article-body">
           <figure v-if="activeIssue.image" class="article-image">
-            <img :src="activeIssue.image" :alt="activeIssue.imageCaption || activeIssue.platform">
+            <img :src="activeIssue.image" :alt="activeIssue.imageCaption || activeIssue.platform" @error="hideBrokenImage">
             <figcaption v-text="activeIssue.imageCaption"></figcaption>
           </figure>
           <section v-for="section in activeIssue.sections" :key="section.title" :class="section.className">
@@ -1403,7 +1403,7 @@ def render_index(report: Report) -> str:
           <article v-for="issue in visibleIssues" :key="issue.number" class="guide-card">
             <a :href="storyRoute(issue)">
               <div v-if="issue.image" class="guide-thumb">
-                <img :src="issue.image" :alt="issue.imageCaption || issue.platform">
+                <img :src="issue.image" :alt="issue.imageCaption || issue.platform" @error="hideBrokenImage">
               </div>
               <p class="guide-brand" v-text="issue.platform"></p>
               <h2 v-html="issue.takeawayHtml"></h2>
@@ -1618,6 +1618,15 @@ def render_index(report: Report) -> str:
         }},
         goToList() {{
           window.location.href = this.withBasePath(this.detailReturnRoute);
+        }},
+        hideBrokenImage(event) {{
+          const image = event.currentTarget;
+          const frame = image.closest(".article-image, .guide-thumb");
+          if (frame) {{
+            frame.remove();
+            return;
+          }}
+          image.remove();
         }},
         plainText(htmlText) {{
           const node = document.createElement("span");
@@ -1867,7 +1876,7 @@ def render_article(report: Report, issue: Issue) -> str:
     image = (
         f"""
         <figure class="article-image">
-          <img src="{html.escape(issue.image, quote=True)}" alt="{html.escape(issue.image_caption or issue.platform, quote=True)}">
+          <img src="{html.escape(issue.image, quote=True)}" alt="{html.escape(issue.image_caption or issue.platform, quote=True)}" onerror="this.closest('.article-image')?.remove()">
           <figcaption>{clean_inline(issue.image_caption)}</figcaption>
         </figure>
         """

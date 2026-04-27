@@ -458,6 +458,16 @@ function capTallThumbnail(event) {
   thumb.classList.toggle("is-ratio-capped", image.naturalWidth / image.naturalHeight < 0.75);
 }
 
+function hideBrokenImage(event) {
+  const image = event.currentTarget;
+  const frame = image.closest(".article-image, .guide-thumb");
+  if (frame) {
+    frame.remove();
+    return;
+  }
+  image.remove();
+}
+
 async function shareIssue(issue) {
   const url = issue.articleUrl || `${window.location.origin}${storyRoute(issue)}`;
   const title = `${issue.platform} | Magazine`;
@@ -637,6 +647,7 @@ function isDateInRange(value, range) {
               :alt="activeIssue.imageCaption || activeIssue.platform"
               decoding="async"
               fetchpriority="high"
+              @error="hideBrokenImage"
             >
             <figcaption v-text="activeIssue.imageCaption"></figcaption>
           </figure>
@@ -721,6 +732,7 @@ function isDateInRange(value, range) {
                     loading="lazy"
                     decoding="async"
                     @load="capTallThumbnail"
+                    @error="hideBrokenImage"
                   >
                 </div>
                 <p class="guide-brand" v-text="issue.platform"></p>
