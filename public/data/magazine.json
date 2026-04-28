@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T03:14:33.093735+00:00",
+  "generatedAt": "2026-04-28T03:16:06.906906+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -2275,168 +2275,6 @@
         "route": "/articles/2026-04-27-15",
         "href": "/articles/2026-04-27-15",
         "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-15",
-        "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fys0vt4kz3tll1kkdmx79.png",
-        "imageCaption": "DEV Community 원문 최상단 이미지",
-        "tags": [
-          "접근성QA",
-          "WCAG",
-          "실무검수"
-        ],
-        "takeawayHtml": "Showit Has Two Documents. That&#x27;s Why Your Accessibility Fixes Aren&#x27;t Sticking.",
-        "deckHtml": "Showit 접근성 수정은 데스크톱과 모바일 캔버스에 각각 적용해야 합니다. 분리 문서 구조를 모르면 같은 문제가 계속 남습니다.",
-        "facts": [
-          {
-            "label": "발행날짜",
-            "valueHtml": "2026-04-25"
-          },
-          {
-            "label": "태그",
-            "valueHtml": "접근성QA / WCAG / 실무검수"
-          },
-          {
-            "label": "국가",
-            "valueHtml": "GLOBAL"
-          },
-          {
-            "label": "카테고리",
-            "valueHtml": "web_accessibility"
-          },
-          {
-            "label": "직무 태그",
-            "valueHtml": "웹DEV"
-          },
-          {
-            "label": "출처",
-            "valueHtml": "Dev.to - Accessibility"
-          }
-        ],
-        "sourceUrl": "https://dev.to/agentkit/showit-has-two-documents-thats-why-your-accessibility-fixes-arent-sticking-4i25",
-        "sourceTitle": "Dev.to - Accessibility",
-        "referenceLinks": [],
-        "sections": [
-          {
-            "title": "용어 설명",
-            "className": "article-section is-term-explanation",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "Showit: 디자이너와 소규모 비즈니스가 웹사이트를 시각적으로 제작할 수 있게 해주는 웹사이트 빌더입니다."
-              }
-            ],
-            "itemsHtml": [
-              "Showit: 디자이너와 소규모 비즈니스가 웹사이트를 시각적으로 제작할 수 있게 해주는 웹사이트 빌더입니다."
-            ]
-          },
-          {
-            "title": "기술 변화 요약",
-            "className": "article-section is-bullet-summary",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "Showit은 데스크톱과 모바일을 하나의 반응형 문서가 아니라 같은 URL을 공유하는 두 개의 독립 문서로 만들기 때문에, 접근성 수정도 양쪽 캔버스에 각각 적용해야 한다."
-              },
-              {
-                "kind": "list",
-                "html": "이미지 alt, hero 색상 대비, heading 구조를 데스크톱에서 고쳐도 모바일 캔버스가 그대로면 Lighthouse나 실제 사용자 감사에서 같은 문제가 반복된다."
-              },
-              {
-                "kind": "list",
-                "html": "퍼블리싱 QA에서는 viewport만 바꿔 확인하는 수준을 넘어, 플랫폼이 실제로 DOM을 하나로 렌더링하는지 또는 분리 문서를 내보내는지 먼저 확인해야 한다."
-              }
-            ],
-            "itemsHtml": [
-              "Showit은 데스크톱과 모바일을 하나의 반응형 문서가 아니라 같은 URL을 공유하는 두 개의 독립 문서로 만들기 때문에, 접근성 수정도 양쪽 캔버스에 각각 적용해야 한다.",
-              "이미지 alt, hero 색상 대비, heading 구조를 데스크톱에서 고쳐도 모바일 캔버스가 그대로면 Lighthouse나 실제 사용자 감사에서 같은 문제가 반복된다.",
-              "퍼블리싱 QA에서는 viewport만 바꿔 확인하는 수준을 넘어, 플랫폼이 실제로 DOM을 하나로 렌더링하는지 또는 분리 문서를 내보내는지 먼저 확인해야 한다."
-            ]
-          },
-          {
-            "title": "인사이트",
-            "className": "article-section is-deep-dive",
-            "prose": true,
-            "blocks": [
-              {
-                "kind": "subhead",
-                "html": "왜 지금 이 업데이트인가"
-              },
-              {
-                "kind": "paragraph",
-                "html": "반응형 웹이라고 생각하고 한쪽만 고치면 실제 사용자 절반은 여전히 문제를 겪을 수 있습니다. Showit처럼 같은 URL에서 다른 문서를 내보내는 플랫폼은 QA 관점이 달라야 합니다. 접근성 점수가 그대로인 이유가 수정 실패가 아니라 적용 대상 누락일 수 있습니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "구현 관점"
-              },
-              {
-                "kind": "paragraph",
-                "html": "alt text, heading, contrast, focus order를 desktop/mobile 각각 검사해야 합니다. Lighthouse 점수만 보지 말고 실제 모바일 DOM이 별도인지 확인해야 합니다. CMS나 빌더 기반 사이트를 맡을 때는 플랫폼 렌더링 모델을 먼저 파악하는 것이 구현보다 중요합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "실무에 어떻게 적용할 수 있을까"
-              },
-              {
-                "kind": "list",
-                "html": "빌더형 사이트는 수정 전 desktop/mobile DOM이 같은지부터 확인합니다."
-              },
-              {
-                "kind": "list",
-                "html": "접근성 수정 체크리스트를 캔버스별로 나눠 누락을 막습니다."
-              },
-              {
-                "kind": "list",
-                "html": "모바일에서 스크린리더와 키보드/스위치 제어 흐름을 별도로 점검합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "같이 보면 좋은 기술"
-              },
-              {
-                "kind": "list",
-                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
-              },
-              {
-                "kind": "list",
-                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
-              },
-              {
-                "kind": "list",
-                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
-              }
-            ],
-            "itemsHtml": [
-              "@@subhead@@왜 지금 이 업데이트인가",
-              "@@paragraph@@반응형 웹이라고 생각하고 한쪽만 고치면 실제 사용자 절반은 여전히 문제를 겪을 수 있습니다. Showit처럼 같은 URL에서 다른 문서를 내보내는 플랫폼은 QA 관점이 달라야 합니다. 접근성 점수가 그대로인 이유가 수정 실패가 아니라 적용 대상 누락일 수 있습니다.",
-              "@@subhead@@구현 관점",
-              "@@paragraph@@alt text, heading, contrast, focus order를 desktop/mobile 각각 검사해야 합니다. Lighthouse 점수만 보지 말고 실제 모바일 DOM이 별도인지 확인해야 합니다. CMS나 빌더 기반 사이트를 맡을 때는 플랫폼 렌더링 모델을 먼저 파악하는 것이 구현보다 중요합니다.",
-              "@@subhead@@실무에 어떻게 적용할 수 있을까",
-              "@@list@@빌더형 사이트는 수정 전 desktop/mobile DOM이 같은지부터 확인합니다.",
-              "@@list@@접근성 수정 체크리스트를 캔버스별로 나눠 누락을 막습니다.",
-              "@@list@@모바일에서 스크린리더와 키보드/스위치 제어 흐름을 별도로 점검합니다.",
-              "@@subhead@@같이 보면 좋은 기술",
-              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
-              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
-              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
-            ]
-          }
-        ],
-        "id": "2026-04-27-15",
-        "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-15"
-      },
-      {
-        "number": "16",
-        "platform": "DEV Community",
-        "areaKey": "dev",
-        "area": "DEV",
-        "categoryKey": "web_accessibility",
-        "category": "웹접근성",
-        "date": "2026-04-25",
-        "route": "/articles/2026-04-27-16",
-        "href": "/articles/2026-04-27-16",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-16",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4i14tdzpqwk8wkpkmwe3.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -2570,21 +2408,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-16",
+        "id": "2026-04-27-15",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-16"
+        "articleSlug": "2026-04-27-15"
       },
       {
-        "number": "17",
+        "number": "16",
         "platform": "DEV Community",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
         "date": "2026-04-25",
-        "route": "/articles/2026-04-27-17",
-        "href": "/articles/2026-04-27-17",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-17",
+        "route": "/articles/2026-04-27-16",
+        "href": "/articles/2026-04-27-16",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-16",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ft6uoyhtoiew41ulmro9f.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -2718,21 +2556,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-17",
+        "id": "2026-04-27-16",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-17"
+        "articleSlug": "2026-04-27-16"
       },
       {
-        "number": "18",
+        "number": "17",
         "platform": "DEV Community",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
         "date": "2026-04-24",
-        "route": "/articles/2026-04-27-18",
-        "href": "/articles/2026-04-27-18",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-18",
+        "route": "/articles/2026-04-27-17",
+        "href": "/articles/2026-04-27-17",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-17",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fe432cucgr5y7hyfpwgef.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -2866,21 +2704,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-18",
+        "id": "2026-04-27-17",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-18"
+        "articleSlug": "2026-04-27-17"
       },
       {
-        "number": "19",
+        "number": "18",
         "platform": "DEV Community",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
         "date": "2026-04-24",
-        "route": "/articles/2026-04-27-19",
-        "href": "/articles/2026-04-27-19",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-19",
+        "route": "/articles/2026-04-27-18",
+        "href": "/articles/2026-04-27-18",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-18",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fn1fwpuocb4mvqsgkm6ca.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -3014,21 +2852,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-19",
+        "id": "2026-04-27-18",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-19"
+        "articleSlug": "2026-04-27-18"
       },
       {
-        "number": "20",
+        "number": "19",
         "platform": "DEV Community",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
         "date": "2026-04-24",
-        "route": "/articles/2026-04-27-20",
-        "href": "/articles/2026-04-27-20",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-20",
+        "route": "/articles/2026-04-27-19",
+        "href": "/articles/2026-04-27-19",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-19",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fizmvg7j6pek0e0jovaxk.webp",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -3162,21 +3000,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-20",
+        "id": "2026-04-27-19",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-20"
+        "articleSlug": "2026-04-27-19"
       },
       {
-        "number": "21",
+        "number": "20",
         "platform": "DEV Community",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
         "date": "2026-04-24",
-        "route": "/articles/2026-04-27-21",
-        "href": "/articles/2026-04-27-21",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-21",
+        "route": "/articles/2026-04-27-20",
+        "href": "/articles/2026-04-27-20",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-20",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4ktnbxbdggiy549m15qg.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -3310,21 +3148,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-21",
+        "id": "2026-04-27-20",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-21"
+        "articleSlug": "2026-04-27-20"
       },
       {
-        "number": "22",
+        "number": "21",
         "platform": "DEV Community",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
         "date": "2026-04-23",
-        "route": "/articles/2026-04-27-22",
-        "href": "/articles/2026-04-27-22",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-22",
+        "route": "/articles/2026-04-27-21",
+        "href": "/articles/2026-04-27-21",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-21",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F80y5iuyy7m3axbjmy4c0.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -3458,21 +3296,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-22",
+        "id": "2026-04-27-21",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-22"
+        "articleSlug": "2026-04-27-21"
       },
       {
-        "number": "23",
+        "number": "22",
         "platform": "Smashing Magazine",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
         "date": "2026-04-20",
-        "route": "/articles/2026-04-27-23",
-        "href": "/articles/2026-04-27-23",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-23",
+        "route": "/articles/2026-04-27-22",
+        "href": "/articles/2026-04-27-22",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-22",
         "image": "https://files.smashing.media/articles/session-timeouts-accessibility-barrier-authentication-design/session-timeouts-accessibility-barrier-authentication-design.jpg",
         "imageCaption": "Smashing Magazine 원문 최상단 이미지",
         "tags": [
@@ -3606,21 +3444,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-23",
+        "id": "2026-04-27-22",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-23"
+        "articleSlug": "2026-04-27-22"
       },
       {
-        "number": "24",
+        "number": "23",
         "platform": "CSS Weekly",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "performance",
         "category": "Performance",
         "date": "2026-04-23",
-        "route": "/articles/2026-04-27-24",
-        "href": "/articles/2026-04-27-24",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-24",
+        "route": "/articles/2026-04-27-23",
+        "href": "/articles/2026-04-27-23",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-23",
         "image": "https://css-weekly.com/issues/issue-639/images/cssweekly-issue639-interactive-cover-component-og.jpg",
         "imageCaption": "CSS Weekly 원문 최상단 이미지",
         "tags": [
@@ -3754,21 +3592,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-24",
+        "id": "2026-04-27-23",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-24"
+        "articleSlug": "2026-04-27-23"
       },
       {
-        "number": "25",
+        "number": "24",
         "platform": "The Changelog",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "tool",
         "category": "TOOL",
         "date": "2026-04-24",
-        "route": "/articles/2026-04-27-25",
-        "href": "/articles/2026-04-27-25",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-25",
+        "route": "/articles/2026-04-27-24",
+        "href": "/articles/2026-04-27-24",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-24",
         "image": "https://snap.fly.dev/podcast/680/img",
         "imageCaption": "The Changelog 원문 최상단 이미지",
         "tags": [
@@ -3902,21 +3740,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-25",
+        "id": "2026-04-27-24",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-25"
+        "articleSlug": "2026-04-27-24"
       },
       {
-        "number": "26",
+        "number": "25",
         "platform": "DEV Community",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "tool",
         "category": "TOOL",
         "date": "2026-04-24",
-        "route": "/articles/2026-04-27-26",
-        "href": "/articles/2026-04-27-26",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-26",
+        "route": "/articles/2026-04-27-25",
+        "href": "/articles/2026-04-27-25",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-25",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fwww.axiondeepdigital.com%2Fimages%2Fmarketing%2Fstate-of-small-business-websites-2026-study-og.jpg",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -4050,21 +3888,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-26",
+        "id": "2026-04-27-25",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-26"
+        "articleSlug": "2026-04-27-25"
       },
       {
-        "number": "27",
+        "number": "26",
         "platform": "Smashing Magazine",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "tool",
         "category": "TOOL",
         "date": "2026-04-22",
-        "route": "/articles/2026-04-27-27",
-        "href": "/articles/2026-04-27-27",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-27",
+        "route": "/articles/2026-04-27-26",
+        "href": "/articles/2026-04-27-26",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-26",
         "image": "https://files.smashing.media/articles/ux-designer-nightmare-production-ready-becomes-design-deliverable/production-ready-becomes-design-deliverable-ux.jpg",
         "imageCaption": "Smashing Magazine 원문 최상단 이미지",
         "tags": [
@@ -4198,21 +4036,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-27",
+        "id": "2026-04-27-26",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-27"
+        "articleSlug": "2026-04-27-26"
       },
       {
-        "number": "28",
+        "number": "27",
         "platform": "Syntax.fm",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "tool",
         "category": "TOOL",
         "date": "2026-04-20",
-        "route": "/articles/2026-04-27-28",
-        "href": "/articles/2026-04-27-28",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-28",
+        "route": "/articles/2026-04-27-27",
+        "href": "/articles/2026-04-27-27",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-27",
         "image": "https://syntax.fm/og/997.jpg",
         "imageCaption": "Syntax.fm 원문 최상단 이미지",
         "tags": [
@@ -4346,9 +4184,9 @@
             ]
           }
         ],
-        "id": "2026-04-27-28",
+        "id": "2026-04-27-27",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-28"
+        "articleSlug": "2026-04-27-27"
       },
       {
         "number": "01",
