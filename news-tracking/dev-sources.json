@@ -1,0 +1,99 @@
+{
+  "newsletters": [
+    {
+      "name": "Frontend Focus",
+      "url": "https://frontendfoc.us/",
+      "rss": "https://frontendfoc.us/rss",
+      "frequency": "weekly",
+      "topics": ["HTML", "CSS", "Web Platform"]
+    },
+    {
+      "name": "CSS Weekly",
+      "url": "https://css-weekly.com/",
+      "rss": "https://css-weekly.com/feed/",
+      "frequency": "weekly",
+      "topics": ["CSS", "Design Systems"]
+    },
+    {
+      "name": "JavaScript Weekly",
+      "url": "https://javascriptweekly.com/",
+      "rss": "https://javascriptweekly.com/rss",
+      "frequency": "weekly",
+      "topics": ["JavaScript", "Frontend Frameworks"]
+    },
+    {
+      "name": "Web Tools Weekly",
+      "url": "https://webtoolsweekly.com/",
+      "frequency": "weekly",
+      "topics": ["Developer Tools", "Libraries"]
+    }
+  ],
+  "blogs": [
+    {
+      "name": "Smashing Magazine",
+      "url": "https://www.smashingmagazine.com/",
+      "rss": "https://www.smashingmagazine.com/feed/",
+      "topics": ["Web Design", "Frontend", "UX"]
+    },
+    {
+      "name": "CSS-Tricks",
+      "url": "https://css-tricks.com/",
+      "rss": "https://css-tricks.com/feed/",
+      "topics": ["CSS", "Frontend Techniques"]
+    },
+    {
+      "name": "Web.dev",
+      "url": "https://web.dev/",
+      "rss": "https://web.dev/feed.xml",
+      "topics": ["Web Performance", "Best Practices", "Accessibility"]
+    },
+    {
+      "name": "Dev.to - Accessibility",
+      "url": "https://dev.to/t/a11y",
+      "rss": "https://dev.to/feed/tag/a11y",
+      "topics": ["Accessibility"]
+    }
+  ],
+  "podcasts": [
+    {
+      "name": "Syntax.fm",
+      "url": "https://syntax.fm/",
+      "rss": "https://feed.syntax.fm/rss",
+      "topics": ["Web Development", "JavaScript", "Tooling"]
+    },
+    {
+      "name": "ShopTalk Show",
+      "url": "https://shoptalkshow.com/",
+      "rss": "https://shoptalkshow.com/feed/podcast/",
+      "topics": ["Frontend", "Web Design", "Development"]
+    },
+    {
+      "name": "The Changelog",
+      "url": "https://changelog.com/podcast",
+      "rss": "https://changelog.com/podcast/feed",
+      "topics": ["Open Source", "Developer Tools"]
+    }
+  ],
+  "ai_tools": [
+    {
+      "name": "GitHub Copilot Blog",
+      "url": "https://github.blog/category/copilot/",
+      "topics": ["AI Coding Assistant"]
+    },
+    {
+      "name": "OpenAI Blog",
+      "url": "https://openai.com/blog/",
+      "topics": ["AI Updates", "GPT Models"]
+    },
+    {
+      "name": "Anthropic News",
+      "url": "https://www.anthropic.com/news",
+      "topics": ["Claude AI", "AI Research"]
+    },
+    {
+      "name": "v0.dev Updates",
+      "url": "https://v0.dev/",
+      "topics": ["AI UI Generation"]
+    }
+  ]
+}

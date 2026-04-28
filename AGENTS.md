@@ -15,13 +15,13 @@ Do not send directly to `cxd@cttd.co.kr` before the test email has been confirme
 
 ## DEV Digest Source Standard
 
-When collecting and uploading DEV newsletter or magazine items, use the same selection standard as
-`cttd/ai-tf`'s `news-tracking/weekly-digest/issue-YYYY-MM-DD.md` digest.
+When collecting and uploading DEV newsletter or magazine items, reproduce the same collection logic as
+`cttd/ai-tf`'s DEV digest generator. Do not treat `news-tracking/weekly-digest/issue-YYYY-MM-DD.md` as the source of truth; use it only as a verification sample.
 
-- Treat the `ai-tf` weekly DEV digest as the primary reference for DEV source scope and article quality.
-- Include all DEV items that meet that digest standard, rather than over-pruning to only a few highlights.
-- Use the DEV article titles from the `ai-tf` digest as the title standard. Do not rewrite them into overly editorial or interpretive titles unless the user explicitly asks.
-- Use the DEV article descriptions/decks from the `ai-tf` digest summary as the description standard. Do not append generic technical-context filler to the list/card description.
+- Use `news-tracking/dev-sources.json` and `npm run fetch:dev` for DEV collection. This mirrors the `ai-tf` RSS source groups, 7-day window, web-publisher summary prompt, and category set.
+- Include all DEV items returned by that collection/summarization flow, rather than over-pruning to only a few highlights.
+- Use the collected original article title as the title standard. Do not rewrite it into an overly editorial or interpretive title unless the user explicitly asks.
+- Use the DEV summary generated from the original article content as the description standard. Do not append generic technical-context filler to the list/card description.
 - Write the DEV `기술 변화 요약` section as a list that summarizes the important original-source content. Do not force a fixed bullet count; include the meaningful points needed to represent the source.
 - Use the original source page's top or representative image (`og:image`/`twitter:image`, falling back to the first content image) as the DEV thumbnail.
 - Preserve the practical web publisher/front-end angle: HTML/CSS, JavaScript, accessibility, performance, and AI/developer tooling.
