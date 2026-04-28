@@ -7,6 +7,7 @@
 주간 원자료 수집과 후보 분류까지만 담당합니다.
 
 - `fetch_tracking_news.mjs`: RSS/스크래핑 기반 원자료 수집. `runs/YYYY-MM-DD/articles.json`, `weekly-digest.md`를 만듭니다.
+- `fetch_design_news.mjs`: `news-tracking/design-sources.json` 기준으로 UIUX 디자이너가 혹할 만한 디자인 레퍼런스와 비개발 실무 기술 후보를 수집해 `runs/YYYY-MM-DD/design-articles.json`을 만듭니다. 채택과 글쓰기는 AI 편집 단계에서 `docs/design-digest-agent-prompt.md`를 읽고 수행합니다.
 - `fetch_dev_news.mjs`: `ai-tf` DEV 생성 로직과 같은 RSS 소스/최근 7일 기준으로 DEV 후보만 수집해 `runs/YYYY-MM-DD/dev-articles.json`을 만듭니다. 요약과 발행 판단은 자동 API가 아니라 AI 편집 단계에서 `docs/dev-digest-agent-prompt.md`를 읽고 수행합니다.
 - `collect_materials.mjs`: 수집 자료를 대분류, 카테고리, 직무 태그, 출처 유형으로 정리합니다. `tracking-data.json`, `editorial-brief.md`만 만듭니다. 제목 보정, 채택/보류/제외 판단, 매거진 본문 작성은 하지 않습니다.
 - `fill_missing_images.py`: 최종 원고 작성 뒤 빈 공식 이미지 URL을 보강할 때만 사용합니다.
@@ -38,6 +39,7 @@ Notion 업로드와 업로드 전 검증에만 사용합니다.
 ## 현재 기본 명령
 
 - 새로 수집하고 편집 브리프 생성: `npm run tracking:prepare`
+- DESIGN 후보만 새 기준으로 수집: `npm run fetch:design`
 - DEV 후보만 새 기준으로 수집: `npm run fetch:dev`
 - 기존 `articles.json`으로 편집 브리프만 재생성: `npm run tracking:brief`
 - 최종 원고를 Notion에 업로드: `npm run notion:upload -- runs/YYYY-MM-DD/magazine-report.md`

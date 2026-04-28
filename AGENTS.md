@@ -32,6 +32,23 @@ When collecting and uploading DEV newsletter or magazine items, reproduce the sa
 - Preserve the practical web publisher/front-end angle: HTML/CSS, JavaScript, accessibility, performance, and AI/developer tooling.
 - Do not use Notion for DEV publishing unless the user explicitly asks. After updating `runs/YYYY-MM-DD/magazine-report.md`, refresh magazine JSON/site data only.
 
+## Design Digest Source Standard
+
+When collecting DESIGN newsletter or magazine items, use `news-tracking/design-sources.json` and `npm run fetch:design` for candidate collection.
+
+- After collection, the working AI must apply `docs/design-digest-agent-prompt.md` to select, summarize, categorize, and write DESIGN items. Do not call an LLM API from the collection script.
+- Choose items because they are useful to UIUX designers, not because they are broadly newsworthy.
+- Prioritize Korean UIUX cases and domestic promotion/event design examples when they show concrete screens, campaign structures, commerce modules, brand expressions, or offline-to-online experience flows. Use global references as supplements, not the default center of gravity.
+- Prioritize references and non-development techniques that can be applied to real design work: UI patterns, visual systems, design systems, components, tokens, documentation, prototyping, handoff, content expression, brand experience, research methods, and design AI workflows.
+- Exclude developer implementation topics such as CSS, JavaScript, browser APIs, build tooling, and accessibility implementation details. Route those to DEV instead.
+- Do not publish a design item only because it is visually attractive, branded, or AI-related. The original source must show a concrete screen, system, workflow, method, or production technique.
+- Use discovery sources such as design magazines only as leads. For main publication, trace the item to an official product blog, release note, newsroom, case page, design system documentation, or another reliable primary source where possible.
+- Use the collected original article title as the title standard. Do not rewrite it into an overly editorial or interpretive title unless the user explicitly asks.
+- Keep DESIGN `요약`, `디자인 포인트`, and `매거진 인사이트` layers distinct. Do not repeat the same sentence across these layers.
+- Use Markdown backticks/code tags only for code-related expressions such as filenames, tools, APIs, CSS/HTML/ARIA properties, or config values. Do not wrap feature names, product names, Korean UI copy, quotes, or emphasis text in code style.
+- Use the original source page's top or representative image (`og:image`/`twitter:image`, falling back to a relevant first content image) as the DESIGN thumbnail only when it supports the design reference.
+- Do not use Notion for DESIGN publishing unless the user explicitly asks. After updating `runs/YYYY-MM-DD/magazine-report.md`, refresh magazine JSON/site data only.
+
 ## Korean Naturalization Skill
 
 When translating, adapting, or polishing English source material into Korean for newsletter or magazine writing, use the installed `humanize-korean` skill as the Korean naturalization standard.

@@ -27,11 +27,18 @@ DEV 후보만 수집할 때:
 npm run fetch:dev
 ```
 
+DESIGN 후보만 수집할 때:
+
+```powershell
+npm run fetch:design
+```
+
 ## 핵심 문서
 
 - 수집/채택 기준: [데이터 수집 전략](docs/data-collection-strategy.md)
 - 글쓰기/문체 기준: [매거진 상세 글쓰기 가이드](docs/editorial-style-guide.md)
 - 에이전트 작업 순서: [매거진 에이전트 운영 흐름](docs/magazine-agent-workflow.md)
+- DESIGN 전용 작성 기준: [Design Digest Agent Prompt](docs/design-digest-agent-prompt.md)
 - DEV 전용 작성 기준: [DEV Digest Agent Prompt](docs/dev-digest-agent-prompt.md)
 - 타겟 적합성 분류: [타겟 적합성 분류 에이전트](docs/target-fit-classifier-agent.md)
 - 스크립트 역할: [Scripts](scripts/README.md)
@@ -40,12 +47,13 @@ npm run fetch:dev
 ## 주간 작업 흐름
 
 1. `npm run tracking:prepare`로 일반 후보를 수집하고 `runs/YYYY-MM-DD/editorial-brief.md`를 만듭니다.
-2. `npm run fetch:dev`로 DEV 후보를 수집하고 `runs/YYYY-MM-DD/dev-articles.json`을 만듭니다.
-3. `docs/data-collection-strategy.md` 기준으로 후보를 채택/보류/제외합니다.
-4. `docs/dev-digest-agent-prompt.md` 기준으로 DEV 항목을 선별하고 원문을 확인합니다.
-5. 최종 원고를 `runs/YYYY-MM-DD/magazine-report.md`로 작성합니다.
-6. 필요하면 `npm run magazine:export-json`으로 `public/data/magazine.json`을 갱신합니다.
-7. 뉴스레터 발송은 `AGENTS.md`의 Newsletter Approval Flow를 따릅니다.
+2. `npm run fetch:design`로 DESIGN 후보를 수집하고 `runs/YYYY-MM-DD/design-articles.json`을 만듭니다.
+3. `npm run fetch:dev`로 DEV 후보를 수집하고 `runs/YYYY-MM-DD/dev-articles.json`을 만듭니다.
+4. `docs/data-collection-strategy.md` 기준으로 후보를 채택/보류/제외합니다.
+5. `docs/design-digest-agent-prompt.md`와 `docs/dev-digest-agent-prompt.md` 기준으로 DESIGN/DEV 항목을 선별하고 원문을 확인합니다.
+6. 최종 원고를 `runs/YYYY-MM-DD/magazine-report.md`로 작성합니다.
+7. 필요하면 `npm run magazine:export-json`으로 `public/data/magazine.json`을 갱신합니다.
+8. 뉴스레터 발송은 `AGENTS.md`의 Newsletter Approval Flow를 따릅니다.
 
 ## 주요 명령
 
@@ -53,6 +61,7 @@ npm run fetch:dev
 | --- | --- |
 | 개발 서버 | `npm run dev` |
 | 일반 트렌드 수집 | `npm run fetch:tracking` |
+| DESIGN 후보 수집 | `npm run fetch:design` |
 | DEV 후보 수집 | `npm run fetch:dev` |
 | 수집 자료 준비 | `npm run collect:materials` |
 | 새 수집과 브리프 생성 | `npm run tracking:prepare` |

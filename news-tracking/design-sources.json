@@ -1,0 +1,395 @@
+{
+  "feeds": [
+    {
+      "name": "DIGITAL iNSIGHT",
+      "url": "https://ditoday.com/ui-ux/",
+      "rss": "https://ditoday.com/feed/",
+      "category": "kr_uiux_media",
+      "sourceRole": "reference",
+      "locale": "KR",
+      "topics": ["UIUX", "Korean Design", "Case Study"],
+      "includeTitlePatterns": [
+        "UI|UX|디자인|브랜드|서비스|앱|웹|리뉴얼|개편|사례|경험|트렌드|캠페인|프로모션|콘텐츠"
+      ],
+      "excludeTitlePatterns": [
+        "채용|교육생|부트캠프|수강|웨비나|세미나"
+      ]
+    },
+    {
+      "name": "Figma Releases",
+      "url": "https://figmareleases.blogspot.com/",
+      "rss": "https://figmareleases.blogspot.com/feeds/posts/default",
+      "category": "design_tool",
+      "sourceRole": "official",
+      "locale": "global",
+      "topics": ["Figma", "Design Tool", "Workflow"],
+      "includeTitlePatterns": [
+        "design|component|variable|token|library|prototype|sites|make|slides|workflow|AI"
+      ]
+    },
+    {
+      "name": "Adobe Blog",
+      "url": "https://blog.adobe.com/",
+      "rss": "https://blog.adobe.com/feed.xml",
+      "category": "creative_tool",
+      "sourceRole": "official",
+      "locale": "global",
+      "topics": ["Adobe", "Firefly", "Creative Workflow"],
+      "includeTitlePatterns": [
+        "design|creative|firefly|photoshop|illustrator|express|brand|image|video|workflow|AI|typography|motion"
+      ]
+    },
+    {
+      "name": "Smashing Magazine - UX Design",
+      "url": "https://www.smashingmagazine.com/category/ux-design/",
+      "rss": "https://www.smashingmagazine.com/feed/",
+      "category": "ux_practice",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": ["UX", "Design Practice", "Case Study"],
+      "includeTitlePatterns": [
+        "ux|ui|design|research|usability|interface|pattern|content|design system|layout|typography|brand"
+      ],
+      "excludeTitlePatterns": [
+        "css|javascript|frontend|performance|browser|react|vue|node"
+      ]
+    },
+    {
+      "name": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/articles/",
+      "rss": "https://www.nngroup.com/feed/rss/",
+      "category": "ux_research",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": ["UX Research", "Usability", "Interaction Design"],
+      "includeTitlePatterns": [
+        "ux|user|research|usability|interface|journey|persona|content|design|visual|navigation"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "DIGITAL iNSIGHT - UIUX",
+      "url": "https://ditoday.com/ui-ux/",
+      "category": "kr_uiux_media",
+      "sourceRole": "reference",
+      "locale": "KR",
+      "includeLinkPatterns": ["ditoday\\.com/"],
+      "includeTitlePatterns": [
+        "UI|UX|디자인|브랜드|서비스|앱|웹|리뉴얼|개편|사례|경험|트렌드|캠페인|프로모션|콘텐츠"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/tag/", "/author/", "/page/"],
+      "excludeTitlePatterns": ["채용|교육생|부트캠프|수강|웨비나|세미나"],
+      "limit": 18
+    },
+    {
+      "name": "Samsung Design - UXUI",
+      "url": "https://design.samsung.com/kr/explore/?tag=UXUI",
+      "category": "kr_uiux_case",
+      "sourceRole": "official",
+      "locale": "KR",
+      "includeLinkPatterns": ["design\\.samsung\\.com/kr/contents/"],
+      "includeTitlePatterns": [
+        "One UI|UX|UI|Interaction|인터랙션|디자인|경험|모션|가이드|스토리"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/download/"],
+      "limit": 12
+    },
+    {
+      "name": "DesignDB - Design News",
+      "url": "https://www.designdb.com/?menuno=792",
+      "category": "kr_design_media",
+      "sourceRole": "reference",
+      "locale": "KR",
+      "includeLinkPatterns": ["designdb\\.com/\\?.*menuno=792.*act=view"],
+      "includeTitlePatterns": [
+        "design|brand|UX|UI|AI|service|product|space|exhibition|experience|interface|content|trend|디자인|브랜드|경험|콘텐츠|전시|공간|서비스|캠페인"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "login", "join_agree"],
+      "limit": 18
+    },
+    {
+      "name": "Design Compass",
+      "url": "https://designcompass.org/",
+      "category": "kr_design_media",
+      "sourceRole": "reference",
+      "locale": "KR",
+      "includeLinkPatterns": ["designcompass\\.org/"],
+      "includeTitlePatterns": [
+        "디자인|브랜드|UI|UX|프로덕트|리서치|트렌드|인터랙션|타이포|컬러|레퍼런스"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/courses/", "/en/courses/"],
+      "excludeTitlePatterns": ["브랜드 DB"],
+      "limit": 12
+    },
+    {
+      "name": "Design X Blog",
+      "url": "https://design-x.kr/blog",
+      "category": "kr_uiux_practice",
+      "sourceRole": "reference",
+      "locale": "KR",
+      "includeLinkPatterns": ["design-x\\.kr/"],
+      "includeTitlePatterns": [
+        "UX|UI|디자인|리서치|사용성|프로토타입|서비스|앱|웹|경험|사례|트렌드"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/contact"],
+      "limit": 12
+    },
+    {
+      "name": "Musinsa Newsroom - Campaigns",
+      "url": "https://newsroom.musinsa.com/",
+      "category": "kr_promotion_design",
+      "sourceRole": "reference",
+      "locale": "KR",
+      "includeLinkPatterns": ["newsroom\\.musinsa\\.com/newsroom-menu/"],
+      "includeTitlePatterns": [
+        "무신사|29CM|기획전|캠페인|팝업|쇼케이스|룩북|컬렉션|브랜드|이벤트|프로모션|라이브|오프라인"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/tag/"],
+      "limit": 18
+    },
+    {
+      "name": "29CM - Special Order",
+      "url": "https://shop.29cm.co.kr/special-order",
+      "category": "kr_commerce_design",
+      "sourceRole": "inspiration",
+      "locale": "KR",
+      "includeLinkPatterns": ["29cm\\.co\\.kr"],
+      "includeTitlePatterns": [
+        "기획전|스페셜|오더|브랜드|컬렉션|룩북|취향|시즌|프로모션|이벤트|쇼케이스"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/login", "/member"],
+      "limit": 18
+    },
+    {
+      "name": "Olive Young - Events",
+      "url": "https://www.oliveyoung.co.kr/store/main/getEventList.do",
+      "category": "kr_promotion_design",
+      "sourceRole": "inspiration",
+      "locale": "KR",
+      "includeLinkPatterns": ["oliveyoung\\.co\\.kr"],
+      "includeTitlePatterns": [
+        "이벤트|기획전|세일|쿠폰|혜택|브랜드|캠페인|프로모션|라이브|올영"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "login"],
+      "excludeTitlePatterns": ["^올리브영 온라인몰$", "^기획전$", "^세일$", "^멤버십/쿠폰$", "^이벤트$"],
+      "limit": 18
+    },
+    {
+      "name": "W Concept - Events",
+      "url": "https://www.wconcept.co.kr/Event",
+      "category": "kr_promotion_design",
+      "sourceRole": "inspiration",
+      "locale": "KR",
+      "includeLinkPatterns": ["wconcept\\.co\\.kr"],
+      "includeTitlePatterns": [
+        "이벤트|기획전|세일|쿠폰|혜택|브랜드|캠페인|프로모션|룩북|컬렉션"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "login"],
+      "limit": 18
+    },
+    {
+      "name": "SSG - Events",
+      "url": "https://www.ssg.com/event/eventMain.ssg",
+      "category": "kr_promotion_design",
+      "sourceRole": "inspiration",
+      "locale": "KR",
+      "includeLinkPatterns": ["ssg\\.com|event\\.ssg\\.com"],
+      "includeTitlePatterns": [
+        "이벤트|기획전|쓱데이|세일|쿠폰|혜택|브랜드|캠페인|프로모션|라이브"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "login"],
+      "excludeTitlePatterns": [
+        "^이벤트/쿠폰, 믿고 사는 즐거움 SSG\\.COM$",
+        "^브랜드관, 믿고 사는 즐거움 SSG\\.COM$",
+        "^이벤트/쿠폰 > 모든이벤트",
+        "^이벤트/쿠폰 > 이벤트 안내 페이지$"
+      ],
+      "limit": 18
+    },
+    {
+      "name": "Awwwards - Websites",
+      "url": "https://www.awwwards.com/websites/",
+      "category": "web_reference",
+      "sourceRole": "inspiration",
+      "locale": "global",
+      "includeLinkPatterns": ["awwwards\\.com/sites/"],
+      "includeTitlePatterns": [
+        "website|site|portfolio|agency|commerce|shop|brand|studio|landing|web|design|experience"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/academy/", "/collections/", "/jury/", "/users/"],
+      "limit": 24
+    },
+    {
+      "name": "Siteinspire",
+      "url": "https://www.siteinspire.com/",
+      "category": "web_reference",
+      "sourceRole": "inspiration",
+      "locale": "global",
+      "includeLinkPatterns": ["siteinspire\\.com/websites/"],
+      "includeTitlePatterns": [
+        "portfolio|studio|brand|commerce|shop|editorial|product|agency|landing|website|web"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/styles/", "/types/", "/subjects/", "/platforms/"],
+      "limit": 24
+    },
+    {
+      "name": "Land-book",
+      "url": "https://land-book.com/",
+      "category": "landing_reference",
+      "sourceRole": "inspiration",
+      "locale": "global",
+      "includeLinkPatterns": ["land-book\\.com/(?:websites|site|gallery|showcase)/"],
+      "includeTitlePatterns": [
+        "landing|website|saas|commerce|portfolio|agency|product|startup|brand|app"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/pricing", "/login", "/sign"],
+      "limit": 24
+    },
+    {
+      "name": "Godly",
+      "url": "https://godly.website/",
+      "category": "web_reference",
+      "sourceRole": "inspiration",
+      "locale": "global",
+      "includeLinkPatterns": ["godly\\.website/(?:website|websites|site)/"],
+      "includeTitlePatterns": [
+        "website|landing|portfolio|product|brand|studio|saas|commerce|app|design"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/pricing", "/submit"],
+      "limit": 24
+    },
+    {
+      "name": "Httpster",
+      "url": "https://httpster.net/",
+      "category": "web_reference",
+      "sourceRole": "inspiration",
+      "locale": "global",
+      "includeLinkPatterns": ["httpster\\.net/"],
+      "includeTitlePatterns": [
+        "website|portfolio|studio|agency|brand|shop|commerce|editorial|product|design"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/about", "/submit"],
+      "limit": 24
+    },
+    {
+      "name": "The Brand Identity",
+      "url": "https://the-brandidentity.com/",
+      "category": "brand_expression",
+      "sourceRole": "inspiration",
+      "locale": "global",
+      "includeLinkPatterns": ["the-brandidentity\\.com/(?:project|interview|article|feed)/"],
+      "includeTitlePatterns": [
+        "identity|brand|branding|typography|campaign|visual|studio|digital|website|editorial"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/shop", "/jobs"],
+      "limit": 18
+    },
+    {
+      "name": "It's Nice That",
+      "url": "https://www.itsnicethat.com/",
+      "category": "visual_trend",
+      "sourceRole": "inspiration",
+      "locale": "global",
+      "includeLinkPatterns": ["itsnicethat\\.com/(?:articles|features|news)/"],
+      "includeTitlePatterns": [
+        "design|graphic|typography|brand|illustration|motion|digital|campaign|visual|creative"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/jobs", "/shop"],
+      "limit": 18
+    },
+    {
+      "name": "Muzli",
+      "url": "https://muz.li/",
+      "category": "visual_trend",
+      "sourceRole": "inspiration",
+      "locale": "global",
+      "includeLinkPatterns": ["muz\\.li/"],
+      "includeTitlePatterns": [
+        "design|inspiration|trend|website|ui|ux|graphic|brand|typography|visual"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "^https://muz\\.li/?$", "/extension", "/newsletter", "/jobs", "search\\.muz\\.li"],
+      "excludeTitlePatterns": ["^Muzli$", "Design Jobs", "Search by Muzli"],
+      "limit": 18
+    },
+    {
+      "name": "Figma Blog - Design Systems",
+      "url": "https://www.figma.com/blog/design-systems/",
+      "category": "design_system",
+      "sourceRole": "official",
+      "locale": "global",
+      "includeLinkPatterns": ["figma\\.com/blog/"],
+      "includeTitlePatterns": [
+        "design system|design systems|component|token|variable|library|documentation|workflow|handoff|prototype|AI"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/tag/", "/authors/"],
+      "limit": 12
+    },
+    {
+      "name": "Into Design Systems",
+      "url": "https://www.intodesignsystems.com/blog",
+      "category": "design_system",
+      "sourceRole": "reference",
+      "locale": "global",
+      "includeLinkPatterns": ["intodesignsystems\\.com/blog/"],
+      "includeTitlePatterns": [
+        "design system|component|token|variable|documentation|governance|workflow|designer"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "login", "signup"],
+      "limit": 12
+    },
+    {
+      "name": "Framer Updates",
+      "url": "https://www.framer.com/updates/",
+      "category": "prototyping",
+      "sourceRole": "official",
+      "locale": "global",
+      "includeLinkPatterns": ["framer\\.com/updates/"],
+      "includeTitlePatterns": [
+        "design|layout|component|cms|animation|prototype|workflow|canvas|AI|handoff|interaction|motion"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "login", "signup"],
+      "limit": 12
+    },
+    {
+      "name": "Webflow Blog",
+      "url": "https://webflow.com/blog",
+      "category": "visual_web_design",
+      "sourceRole": "reference",
+      "locale": "global",
+      "includeLinkPatterns": ["webflow\\.com/blog/"],
+      "includeTitlePatterns": [
+        "design|layout|visual|brand|cms|animation|interaction|figma|AI|workflow|typography|website"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/tag/", "/authors/"],
+      "limit": 12
+    },
+    {
+      "name": "Webflow Showcase",
+      "url": "https://webflow.com/made-in-webflow",
+      "category": "web_reference",
+      "sourceRole": "inspiration",
+      "locale": "global",
+      "includeLinkPatterns": ["webflow\\.com/made-in-webflow/"],
+      "includeTitlePatterns": [
+        "website|portfolio|landing|agency|brand|commerce|shop|product|startup|studio"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/marketplace", "/templates", "/popular"],
+      "limit": 24
+    },
+    {
+      "name": "Canva Newsroom",
+      "url": "https://www.canva.com/newsroom/news/",
+      "category": "design_ai",
+      "sourceRole": "official",
+      "locale": "global",
+      "includeLinkPatterns": ["canva\\.com/newsroom/news/"],
+      "includeTitlePatterns": [
+        "design|brand|AI|visual|template|creator|workflow|presentation|image|video|typography"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "\\?category=", "/news/?category"],
+      "excludeTitlePatterns": ["Newsroom & Press Center"],
+      "limit": 12
+    }
+  ]
+}
