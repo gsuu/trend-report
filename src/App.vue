@@ -6,7 +6,8 @@ const basePath = detectBasePath();
 const route = ref(currentRoute());
 const report = ref(fallbackReport);
 const magazineLoading = ref(!hasMagazineIssues(report.value));
-const showCurrentWeekOnly = ref(hasCurrentWeekFilter(route.value));
+const showCurrentWeekOnly = ref(initialCurrentWeekFilter());
+const listViewMode = ref(initialListViewMode());
 const listRoute = ref(validListRoute(route.value) ? route.value : "/");
 const shareStatus = ref("");
 const viewportWidth = ref(typeof window === "undefined" ? 1440 : window.innerWidth);
@@ -50,6 +51,18 @@ function hasCurrentWeekFilter(value) {
   return routeSearchParams(value).get("week") === "1";
 }
 
+function initialCurrentWeekFilter() {
+  return hasCurrentWeekFilter(routeReturnParam() || route.value);
+}
+
+function routeListViewMode(value) {
+  return routeSearchParams(value).get("view") === "list" ? "list" : "gallery";
+}
+
+function initialListViewMode() {
+  return routeListViewMode(routeReturnParam() || route.value);
+}
+
 function homePath() {
   return basePath || "/";
 }
@@ -60,17 +73,23 @@ function withBasePath(path) {
 }
 
 function withListFilter(path, enabled = showCurrentWeekOnly.value) {
-  if (!enabled) return path;
   const params = new URLSearchParams();
-  params.set("week", "1");
-  return `${path}?${params.toString()}`;
+  if (enabled) params.set("week", "1");
+  if (listViewMode.value === "list") params.set("view", "list");
+  const query = params.toString();
+  return query ? `${path}?${query}` : path;
 }
 
 function syncRoute() {
   route.value = currentRoute();
-  showCurrentWeekOnly.value = hasCurrentWeekFilter(route.value);
+  const returnRoute = routeReturnParam();
+  showCurrentWeekOnly.value = hasCurrentWeekFilter(returnRoute || route.value);
   if (validListRoute(route.value)) {
     listRoute.value = route.value;
+    listViewMode.value = routeListViewMode(route.value);
+  } else if (returnRoute) {
+    listRoute.value = returnRoute;
+    listViewMode.value = routeListViewMode(returnRoute);
   }
   syncDocumentState();
   window.scrollTo({ top: 0, left: 0, behavior: "instant" });
@@ -304,6 +323,15 @@ function toggleCurrentWeekOnly(event) {
   showCurrentWeekOnly.value = enabled;
 }
 
+function setListViewMode(mode) {
+  const nextMode = mode === "list" ? "list" : "gallery";
+  listViewMode.value = nextMode;
+  const nextRoute = withListFilter(routePath(currentListRoute.value));
+  window.history.replaceState({}, "", withBasePath(nextRoute));
+  route.value = nextRoute;
+  listRoute.value = nextRoute;
+}
+
 function openSubscribe() {
   isSubscribeOpen.value = true;
   subscribeStatus.value = "idle";
@@ -449,14 +477,16 @@ function optimizedImageUrl(value = "", width = 900) {
 
 function capTallThumbnail(event) {
   const image = event.currentTarget;
-  const thumb = image.closest(".guide-thumb");
+  const thumb = image.closest(".guide-thumb, .guide-list-thumb");
   if (!thumb || !image.naturalWidth || !image.naturalHeight) return;
   thumb.classList.toggle("is-ratio-capped", image.naturalWidth / image.naturalHeight < 0.75);
 }
 
 function hideBrokenImage(event) {
   const image = event.currentTarget;
-  const frame = image.closest(".article-image, .guide-thumb");
+  const frame = image.closest(".article-image, .guide-thumb, .guide-list-thumb");
+  const listLink = image.closest(".guide-list-card a");
+  if (listLink) listLink.classList.remove("has-thumb");
   if (frame) {
     frame.remove();
     return;
@@ -739,6 +769,38 @@ function isDateInRange(value, range) {
         </section>
 
         <section class="list-toolbar" aria-label="목록 필터">
+          <div class="view-mode-toggle" role="group" aria-label="목록 보기 방식">
+            <button
+              type="button"
+              class="view-mode-button"
+              :class="{ 'is-active': listViewMode === 'gallery' }"
+              :aria-pressed="listViewMode === 'gallery'"
+              aria-label="갤러리 모드"
+              @click="setListViewMode('gallery')"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="4" width="6" height="6"></rect>
+                <rect x="14" y="4" width="6" height="6"></rect>
+                <rect x="4" y="14" width="6" height="6"></rect>
+                <rect x="14" y="14" width="6" height="6"></rect>
+              </svg>
+            </button>
+            <button
+              type="button"
+              class="view-mode-button"
+              :class="{ 'is-active': listViewMode === 'list' }"
+              :aria-pressed="listViewMode === 'list'"
+              aria-label="리스트 모드"
+              @click="setListViewMode('list')"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="5" width="5" height="5"></rect>
+                <path d="M13 7.5h7"></path>
+                <rect x="4" y="14" width="5" height="5"></rect>
+                <path d="M13 16.5h7"></path>
+              </svg>
+            </button>
+          </div>
           <label class="week-filter-toggle">
             <input type="checkbox" :checked="showCurrentWeekOnly" @change="toggleCurrentWeekOnly">
             <span>최근 1주일 업데이트만 보기</span>
@@ -746,7 +808,7 @@ function isDateInRange(value, range) {
         </section>
 
         <section
-          v-if="visibleIssues.length"
+          v-if="visibleIssues.length && listViewMode === 'gallery'"
           class="guide-grid"
           :style="{ '--masonry-columns': masonryColumns.length }"
           :aria-label="activeCategory ? activeCategory.label + ' 아티클 목록' : '아티클 목록'"
@@ -775,6 +837,37 @@ function isDateInRange(value, range) {
               </a>
             </article>
           </div>
+        </section>
+
+        <section
+          v-else-if="visibleIssues.length"
+          class="guide-list"
+          :aria-label="activeCategory ? activeCategory.label + ' 리스트 목록' : '리스트 목록'"
+        >
+          <article v-for="issue in visibleIssues" :key="issue.id || issue.route || issue.number" class="guide-list-card">
+            <a :href="storyRoute(issue)" :class="{ 'has-thumb': issue.image }">
+              <div v-if="issue.image" class="guide-list-thumb">
+                <img
+                  :src="optimizedImageUrl(issue.image, 320)"
+                  :alt="issue.imageCaption || issue.platform"
+                  loading="lazy"
+                  decoding="async"
+                  @load="capTallThumbnail"
+                  @error="hideBrokenImage"
+                >
+              </div>
+              <div class="guide-list-body">
+                <p class="guide-brand" v-text="issue.platform"></p>
+                <h2 v-html="issue.takeawayHtml"></h2>
+                <strong v-html="issue.deckHtml"></strong>
+                <div class="guide-card-foot">
+                  <time v-text="issue.date"></time>
+                  <span aria-hidden="true">|</span>
+                  <span class="category-label" v-text="issue.category"></span>
+                </div>
+              </div>
+            </a>
+          </article>
         </section>
 
         <section v-else-if="magazineLoading" class="magazine-loading" aria-live="polite" aria-label="매거진 데이터 불러오는 중">

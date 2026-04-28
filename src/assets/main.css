@@ -557,8 +557,52 @@ main {
 
 .list-toolbar {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   margin: 0 0 24px;
+}
+
+.view-mode-toggle {
+  display: inline-flex;
+  overflow: hidden;
+  border: 1px solid var(--ink);
+}
+
+.view-mode-button {
+  display: inline-grid;
+  width: 36px;
+  height: 34px;
+  place-items: center;
+  border: 0;
+  border-right: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.view-mode-button:last-child {
+  border-right: 0;
+}
+
+.view-mode-button.is-active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.view-mode-button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.view-mode-button svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .week-filter-toggle {
@@ -763,6 +807,101 @@ main {
 
 .guide-card a:hover .guide-thumb img,
 .guide-card a:focus-visible .guide-thumb img {
+  transform: scale(1.04);
+}
+
+.guide-list {
+  display: grid;
+  padding-bottom: 58px;
+  border-top: 2px solid var(--ink);
+}
+
+.guide-list-card {
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.guide-list-card a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  gap: 24px;
+  align-items: start;
+  padding: 22px 0;
+}
+
+.guide-list-card a.has-thumb {
+  grid-template-columns: 168px minmax(0, 1fr);
+}
+
+.guide-list-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.guide-list-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 260ms ease;
+}
+
+.guide-list-thumb.is-ratio-capped img {
+  object-fit: cover;
+}
+
+.guide-list-body {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  gap: 10px;
+}
+
+.guide-list-card .guide-brand {
+  margin: 0;
+}
+
+.guide-list-card h2 {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.guide-list-card h2 code {
+  background: transparent;
+  padding: 0;
+}
+
+.guide-list-card strong {
+  display: -webkit-box;
+  width: 100%;
+  max-width: none;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: #555555;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+.guide-list-card strong code {
+  background: transparent;
+  padding: 0;
+}
+
+.guide-list-card a:hover .guide-list-thumb img,
+.guide-list-card a:focus-visible .guide-list-thumb img {
   transform: scale(1.04);
 }
 
@@ -1873,6 +2012,9 @@ main {
   }
 
   .list-toolbar {
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
     margin-bottom: 20px;
   }
 
@@ -1901,6 +2043,29 @@ main {
   .guide-card-foot {
     align-items: flex-start;
     font-size: 14px;
+  }
+
+  .guide-list {
+    padding-bottom: 36px;
+  }
+
+  .guide-list-card a {
+    gap: 14px;
+    padding: 18px 0;
+  }
+
+  .guide-list-card a.has-thumb {
+    grid-template-columns: 104px minmax(0, 1fr);
+  }
+
+  .guide-list-card h2 {
+    font-size: 19px;
+    line-height: 1.2;
+  }
+
+  .guide-list-card strong {
+    -webkit-line-clamp: 2;
+    font-size: 13px;
   }
 
   .issue-index {
