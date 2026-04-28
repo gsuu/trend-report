@@ -13,6 +13,26 @@ When the user provides a PDF, asks to collect source material, and then asks to 
 
 Do not send directly to `cxd@cttd.co.kr` before the test email has been confirmed.
 
+## Magazine Tag Standard
+
+Apply this tag rule to every Service, Design, and DEV magazine item.
+
+- Choose tags from words that appear often in the original source or define the article's core context.
+- Prefer concrete source terms: product names, feature names, method/framework names, campaign names, expression or production techniques, tools/APIs/properties, output types, and issue terms.
+- Do not invent decorative or editorial tags only to make the item sound appealing.
+- Do not duplicate the job/audience tag.
+- Do not force a fixed count; use only useful tags, usually 2-4.
+
+## Magazine Summary Standard
+
+Apply this summary-layer rule to every Service, Design, and DEV magazine item.
+
+- Add a `요약` metadata line for the article-header deck. It should be a plain 1-2 sentence summary of the article, not the source name, not the title repeated, not a promotional reason-to-read, and not a copy of the body summary.
+- Write the body summary only after opening the original source URL. Summarize important source facts, not RSS excerpts or existing digest sentences.
+- Keep the metadata `요약`, body summary, and insight layer distinct. Do not repeat the same sentence across these layers.
+- Do not force a fixed bullet count for body summaries; include the meaningful points needed to represent the source.
+- If the original source is a blog or opinion article rather than a product release note, summarize who is arguing what, which evidence or examples they use, and what CTTD can practically reference from it.
+
 ## DEV Digest Source Standard
 
 When collecting and uploading DEV newsletter or magazine items, reproduce the same collection logic as
@@ -22,10 +42,7 @@ When collecting and uploading DEV newsletter or magazine items, reproduce the sa
 - After collection, the working AI must apply `docs/dev-digest-agent-prompt.md` to select, summarize, categorize, and write DEV items. Do not call an LLM API from the collection script.
 - Include all DEV items that pass the prompt criteria, rather than over-pruning to only a few highlights.
 - Use the collected original article title as the title standard. Do not rewrite it into an overly editorial or interpretive title unless the user explicitly asks.
-- Add a DEV `요약` metadata line for the article-header deck. It should be a 1-2 sentence reader-facing summary, not a copy of the technical-summary bullets.
-- Keep the DEV metadata `요약`, body `요약`, and `매거진 인사이트` layers distinct. Do not repeat the same sentence across these layers.
-- Write the DEV body `요약` section only after opening the original source URL. Summarize important source facts, not the existing digest sentence. Do not force a fixed bullet count; include the meaningful points needed to represent the source.
-- If the original source is a blog or opinion article rather than a product release note, summarize who is arguing what, which evidence or examples they use, and what CTTD can practically reference from it. Do not force it into a product-change framing.
+- Follow the Magazine Summary Standard for the DEV metadata `요약`, body `요약`, and `매거진 인사이트` layers. Do not force blog or opinion articles into a product-change framing.
 - Each DEV technical-summary bullet must contain at least one concrete source detail such as a feature name, tool, API/property, browser/accessibility/performance condition, metric, limitation, or validation method.
 - Use Markdown backticks/code tags only for code-related expressions such as commands, filenames, package names, APIs, CSS/HTML/ARIA properties, or config values. Do not wrap feature names, product names, Korean UI copy, quotes, or emphasis text in code style.
 - Use the original source page's top or representative image (`og:image`/`twitter:image`, falling back to the first content image) as the DEV thumbnail.
@@ -44,9 +61,7 @@ When collecting DESIGN newsletter or magazine items, use `news-tracking/design-s
 - Do not publish a design item only because it is visually attractive, branded, or AI-related. The original source must show a concrete screen, system, workflow, method, or production technique.
 - Use discovery sources such as design magazines only as leads. For main publication, trace the item to an official product blog, release note, newsroom, case page, design system documentation, or another reliable primary source where possible.
 - Use the collected original article title as the title standard. Do not rewrite it into an overly editorial or interpretive title unless the user explicitly asks.
-- Add a DESIGN `요약` metadata line for the article-header deck. It should be a plain 1-2 sentence summary of the article, not the source name, not a promotional reason-to-read, and not a copy of the body summary.
-- Write the DESIGN body `요약` section as a plain summary of the original source content. Do not force a fixed bullet count; use as many bullets as needed to represent the source.
-- Keep the DESIGN metadata `요약`, body `요약`, `디자인 포인트`, and `매거진 인사이트` layers distinct. Do not repeat the same sentence across these layers.
+- Follow the Magazine Summary Standard for the DESIGN metadata `요약`, body `요약`, `디자인 포인트`, and `매거진 인사이트` layers.
 - Use Markdown backticks/code tags only for code-related expressions such as filenames, tools, APIs, CSS/HTML/ARIA properties, or config values. Do not wrap feature names, product names, Korean UI copy, quotes, or emphasis text in code style.
 - Use the original source page's top or representative image (`og:image`/`twitter:image`, falling back to a relevant first content image) as the DESIGN thumbnail only when it supports the design reference.
 - Do not use Notion for DESIGN publishing unless the user explicitly asks. After updating `runs/YYYY-MM-DD/magazine-report.md`, refresh magazine JSON/site data only.
