@@ -1316,7 +1316,7 @@ def issue_takeaway(issue: Issue) -> str:
     if detail_quote:
         return detail_quote
 
-    for section_name in ("인사이트", "기술 변화 요약", "서비스 변화 요약", "핵심 업데이트", "변경 전/후"):
+    for section_name in ("인사이트", "업데이트 핵심", "기술 변화 요약", "서비스 변화 요약", "핵심 업데이트", "변경 전/후"):
         items = issue.sections.get(section_name, [])
         if items:
             return strip_brief_label(items[0])
@@ -1324,7 +1324,7 @@ def issue_takeaway(issue: Issue) -> str:
 
 
 def issue_deck(issue: Issue) -> str:
-    items = issue.sections.get("기술 변화 요약", []) or issue.sections.get("디자인 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
+    items = issue.sections.get("업데이트 핵심", []) or issue.sections.get("기술 변화 요약", []) or issue.sections.get("디자인 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
     labeled_items = []
     for item in items:
         label, separator, value = str(item).partition(":")
@@ -1413,7 +1413,7 @@ def source_summary_sentence(text: str) -> str:
 
 
 def issue_update_title(issue: Issue) -> str:
-    items = issue.sections.get("기술 변화 요약", []) or issue.sections.get("디자인 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
+    items = issue.sections.get("업데이트 핵심", []) or issue.sections.get("기술 변화 요약", []) or issue.sections.get("디자인 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
     for preferred_label in ("업데이트", "핵심 업데이트", "핵심 내용", "주요 항목"):
         for item in items:
             label, separator, value = str(item).partition(":")
