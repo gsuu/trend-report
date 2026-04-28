@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T01:05:30.721844+00:00",
+  "generatedAt": "2026-04-28T01:25:30.668337+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -934,358 +934,32 @@
       },
       {
         "number": "06",
-        "platform": "Figma",
-        "areaKey": "dev",
-        "area": "DEV",
-        "categoryKey": "ai",
-        "category": "AI",
-        "date": "2026-04-15",
-        "route": "/articles/2026-04-27-06",
-        "href": "/articles/2026-04-27-06",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-06",
-        "image": "https://cdn.sanity.io/images/599r6htc/regionalized/35f6fde4ce9f85257cecfcb6af666932842ab4af-3264x1836.png?w=1200&q=70&fit=max&auto=format",
-        "imageCaption": "Figma 공식 원문 이미지",
-        "tags": [
-          "MCP",
-          "컨텍스트연결",
-          "권한설계"
-        ],
-        "takeawayHtml": "MCP는 에이전트에게 업무 맥락을 연결하는 방식이다",
-        "deckHtml": "Figma가 MCP의 의미와 활용 방식을 설명하며, AI 도구가 외부 시스템의 맥락을 받아 작업하는 구조를 정리했습니다.",
-        "facts": [
-          {
-            "label": "발행날짜",
-            "valueHtml": "2026-04-15"
-          },
-          {
-            "label": "태그",
-            "valueHtml": "MCP / 컨텍스트연결 / 권한설계"
-          },
-          {
-            "label": "국가",
-            "valueHtml": "GLOBAL"
-          },
-          {
-            "label": "카테고리",
-            "valueHtml": "ai"
-          },
-          {
-            "label": "직무 태그",
-            "valueHtml": "웹DEV"
-          },
-          {
-            "label": "출처",
-            "valueHtml": "Figma Blog"
-          }
-        ],
-        "sourceUrl": "https://www.figma.com/blog/the-tldr-on-mcp/",
-        "sourceTitle": "Figma Blog",
-        "referenceLinks": [],
-        "sections": [
-          {
-            "title": "업데이트 핵심",
-            "className": "article-section",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "Figma가 MCP의 의미와 활용 방식을 설명하며, AI 도구가 외부 시스템의 맥락을 받아 작업하는 구조를 정리했습니다."
-              },
-              {
-                "kind": "list",
-                "html": "MCP의 핵심은 디자인 파일, 코드 저장소, 문서 같은 업무 맥락을 에이전트에게 안전하게 연결하는 것입니다."
-              },
-              {
-                "kind": "list",
-                "html": "이전에는 에이전트에게 긴 프롬프트를 쓰거나 파일을 직접 업로드해 맥락을 전달하는 방식이 많았습니다."
-              },
-              {
-                "kind": "list",
-                "html": "MCP 방식에서는 도구가 필요한 맥락을 구조적으로 제공하고, 에이전트가 그 맥락 안에서 작업합니다."
-              },
-              {
-                "kind": "list",
-                "html": "그래서 개발자가 봐야 할 지점은 “무엇을 자동화할 수 있나”보다 “어떤 데이터에 접근시키고, 어떤 작업을 허용할 것인가”입니다."
-              },
-              {
-                "kind": "list",
-                "html": "디자인 시스템과 코드 저장소를 연결할 때는 민감한 파일, 실험 컴포넌트, 공개 가능한 문서의 접근 범위를 먼저 나눠야 합니다."
-              }
-            ],
-            "itemsHtml": [
-              "Figma가 MCP의 의미와 활용 방식을 설명하며, AI 도구가 외부 시스템의 맥락을 받아 작업하는 구조를 정리했습니다.",
-              "MCP의 핵심은 디자인 파일, 코드 저장소, 문서 같은 업무 맥락을 에이전트에게 안전하게 연결하는 것입니다.",
-              "이전에는 에이전트에게 긴 프롬프트를 쓰거나 파일을 직접 업로드해 맥락을 전달하는 방식이 많았습니다.",
-              "MCP 방식에서는 도구가 필요한 맥락을 구조적으로 제공하고, 에이전트가 그 맥락 안에서 작업합니다.",
-              "그래서 개발자가 봐야 할 지점은 “무엇을 자동화할 수 있나”보다 “어떤 데이터에 접근시키고, 어떤 작업을 허용할 것인가”입니다.",
-              "디자인 시스템과 코드 저장소를 연결할 때는 민감한 파일, 실험 컴포넌트, 공개 가능한 문서의 접근 범위를 먼저 나눠야 합니다."
-            ]
-          },
-          {
-            "title": "인사이트",
-            "className": "article-section is-deep-dive",
-            "prose": true,
-            "blocks": [
-              {
-                "kind": "subhead",
-                "html": "왜 지금 이 업데이트인가"
-              },
-              {
-                "kind": "paragraph",
-                "html": "에이전트가 실제 업무에 들어오려면 모델 성능보다 맥락 연결이 먼저 안정적이어야 합니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "Figma의 MCP 설명은 디자인 파일, 코드 저장소, 문서가 에이전트의 작업 환경으로 들어오는 방식을 짚습니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "이 업데이트를 지금 봐야 하는 이유는 앞으로 AI 기능의 품질이 프롬프트 문장보다 어떤 맥락을 읽고 어떤 권한으로 행동하는지에 달려 있기 때문입니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "적용 전에 볼 것"
-              },
-              {
-                "kind": "list",
-                "html": "민감한 파일과 공개 가능한 디자인 맥락을 분리할 수 있는지 확인합니다."
-              },
-              {
-                "kind": "list",
-                "html": "에이전트가 참조한 자료와 실행한 작업을 로그로 남길 수 있는지 봅니다."
-              },
-              {
-                "kind": "list",
-                "html": "생성 결과가 어떤 디자인 파일, 문서, 코드 맥락을 근거로 했는지 리뷰할 수 있어야 합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "같이 보면 좋은 기술"
-              },
-              {
-                "kind": "list",
-                "html": "OAuth: 외부 도구 접근 권한을 관리하는 기준입니다."
-              },
-              {
-                "kind": "list",
-                "html": "Audit Log: 에이전트 작업 기록을 확인하는 운영 장치입니다."
-              },
-              {
-                "kind": "list",
-                "html": "Figma MCP Server: 디자인 맥락을 실제 워크플로우에 연결하는 구현 사례입니다."
-              }
-            ],
-            "itemsHtml": [
-              "@@subhead@@왜 지금 이 업데이트인가",
-              "@@paragraph@@에이전트가 실제 업무에 들어오려면 모델 성능보다 맥락 연결이 먼저 안정적이어야 합니다.",
-              "@@paragraph@@Figma의 MCP 설명은 디자인 파일, 코드 저장소, 문서가 에이전트의 작업 환경으로 들어오는 방식을 짚습니다.",
-              "@@paragraph@@이 업데이트를 지금 봐야 하는 이유는 앞으로 AI 기능의 품질이 프롬프트 문장보다 어떤 맥락을 읽고 어떤 권한으로 행동하는지에 달려 있기 때문입니다.",
-              "@@subhead@@적용 전에 볼 것",
-              "@@list@@민감한 파일과 공개 가능한 디자인 맥락을 분리할 수 있는지 확인합니다.",
-              "@@list@@에이전트가 참조한 자료와 실행한 작업을 로그로 남길 수 있는지 봅니다.",
-              "@@list@@생성 결과가 어떤 디자인 파일, 문서, 코드 맥락을 근거로 했는지 리뷰할 수 있어야 합니다.",
-              "@@subhead@@같이 보면 좋은 기술",
-              "@@list@@OAuth: 외부 도구 접근 권한을 관리하는 기준입니다.",
-              "@@list@@Audit Log: 에이전트 작업 기록을 확인하는 운영 장치입니다.",
-              "@@list@@Figma MCP Server: 디자인 맥락을 실제 워크플로우에 연결하는 구현 사례입니다."
-            ]
-          }
-        ],
-        "id": "2026-04-27-06",
-        "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-06"
-      },
-      {
-        "number": "07",
-        "platform": "ShopTalk Show",
-        "areaKey": "dev",
-        "area": "DEV",
-        "categoryKey": "performance",
-        "category": "Performance",
-        "date": "2026-04-27",
-        "route": "/articles/2026-04-27-07",
-        "href": "/articles/2026-04-27-07",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-07",
-        "image": "https://i0.wp.com/shoptalkshow.com/wp-content/uploads/2013/03/logo-itunes-1400.png?fit=1200%2C1200&ssl=1",
-        "imageCaption": "ShopTalk Show 공식 원문 이미지",
-        "tags": [
-          "LazyLoading",
-          "CoreWebVitals",
-          "로딩우선순위"
-        ],
-        "takeawayHtml": "Lazy loading은 성능 기술이 아니라 우선순위 설계다",
-        "deckHtml": "ShopTalk Show 712회는 Scott Jehl과 함께 이미지 지연 로딩, iframe 지연 로딩, 비디오 preload, GIF 대체, 자동재생 지연, video poster 속성을 다뤘습니다.",
-        "facts": [
-          {
-            "label": "발행날짜",
-            "valueHtml": "2026-04-27"
-          },
-          {
-            "label": "태그",
-            "valueHtml": "LazyLoading / CoreWebVitals / 로딩우선순위"
-          },
-          {
-            "label": "국가",
-            "valueHtml": "GLOBAL"
-          },
-          {
-            "label": "카테고리",
-            "valueHtml": "performance"
-          },
-          {
-            "label": "직무 태그",
-            "valueHtml": "웹DEV"
-          },
-          {
-            "label": "출처",
-            "valueHtml": "ShopTalk Show"
-          }
-        ],
-        "sourceUrl": "https://shoptalkshow.com/712/",
-        "sourceTitle": "ShopTalk Show",
-        "referenceLinks": [],
-        "sections": [
-          {
-            "title": "업데이트 핵심",
-            "className": "article-section",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "ShopTalk Show 712회는 Scott Jehl과 함께 이미지 지연 로딩, iframe 지연 로딩, 비디오 preload, GIF 대체, 자동재생 지연, video poster 속성을 다뤘습니다."
-              },
-              {
-                "kind": "list",
-                "html": "핵심은 모든 이미지와 iframe에 같은 lazy loading 규칙을 붙이는 것이 아닙니다."
-              },
-              {
-                "kind": "list",
-                "html": "LCP 후보, 히어로 이미지, 상품 대표 이미지처럼 첫 화면 성능에 직접 닿는 리소스는 늦게 불러오면 안 됩니다."
-              },
-              {
-                "kind": "list",
-                "html": "반대로 유튜브·지도·광고 iframe, 스크롤 아래 리뷰 이미지, 보조 영상은 영역 크기 예약과 placeholder를 두고 늦게 불러오는 편이 낫습니다."
-              },
-              {
-                "kind": "list",
-                "html": "비디오는 preload 값, poster 이미지, autoplay 지연 정책까지 같이 봐야 합니다. GIF를 영상으로 바꿔도 접근성 대체 텍스트와 모바일 재생 정책을 확인해야 합니다."
-              },
-              {
-                "kind": "list",
-                "html": "이 글은 lazy loading을 성능 옵션이 아니라 화면 안 리소스의 우선순위 설계로 보게 만듭니다."
-              }
-            ],
-            "itemsHtml": [
-              "ShopTalk Show 712회는 Scott Jehl과 함께 이미지 지연 로딩, iframe 지연 로딩, 비디오 preload, GIF 대체, 자동재생 지연, video poster 속성을 다뤘습니다.",
-              "핵심은 모든 이미지와 iframe에 같은 lazy loading 규칙을 붙이는 것이 아닙니다.",
-              "LCP 후보, 히어로 이미지, 상품 대표 이미지처럼 첫 화면 성능에 직접 닿는 리소스는 늦게 불러오면 안 됩니다.",
-              "반대로 유튜브·지도·광고 iframe, 스크롤 아래 리뷰 이미지, 보조 영상은 영역 크기 예약과 placeholder를 두고 늦게 불러오는 편이 낫습니다.",
-              "비디오는 preload 값, poster 이미지, autoplay 지연 정책까지 같이 봐야 합니다. GIF를 영상으로 바꿔도 접근성 대체 텍스트와 모바일 재생 정책을 확인해야 합니다.",
-              "이 글은 lazy loading을 성능 옵션이 아니라 화면 안 리소스의 우선순위 설계로 보게 만듭니다."
-            ]
-          },
-          {
-            "title": "인사이트",
-            "className": "article-section is-deep-dive",
-            "prose": true,
-            "blocks": [
-              {
-                "kind": "subhead",
-                "html": "왜 지금 이 업데이트인가"
-              },
-              {
-                "kind": "paragraph",
-                "html": "이번 회차는 이미지 지연 로딩만이 아니라 iframe 지연 로딩, 비디오 preload, GIF 대체, 자동재생 지연, video poster 속성까지 함께 다뤘습니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "Scott Jehl이 성능·접근성 관점에서 지연 로딩의 표준화와 브라우저 지원을 설명한 만큼, 실제 프로젝트에서는 이미지와 비디오, 임베드 로딩을 한 묶음으로 봐야 합니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "커머스와 매거진 페이지에서는 히어로 이미지, 유튜브 임베드, 상품 상세 영상, 리뷰 이미지가 섞이기 때문에 어떤 리소스를 늦게 불러올지보다 어떤 리소스를 절대 늦추면 안 되는지가 핵심입니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "적용 전에 볼 것"
-              },
-              {
-                "kind": "list",
-                "html": "히어로 이미지, 첫 상품 이미지, 카테고리 대표 이미지는 지연 로딩 제외 후보로 따로 표시합니다."
-              },
-              {
-                "kind": "list",
-                "html": "유튜브·지도·광고 iframe에는 지연 로딩과 함께 고정 aspect-ratio, skeleton, 사용자 클릭 전 로딩 전략을 붙입니다."
-              },
-              {
-                "kind": "list",
-                "html": "상품 상세 영상은 preload, poster, autoplay 지연, fullscreen 전환을 모바일 Safari와 Chrome에서 같이 확인합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "같이 보면 좋은 기술"
-              },
-              {
-                "kind": "list",
-                "html": "Core Web Vitals: LCP, CLS, INP로 사용자 체감 성능을 확인합니다."
-              },
-              {
-                "kind": "list",
-                "html": "fetchpriority: 중요한 리소스의 우선순위를 브라우저에 전달합니다."
-              },
-              {
-                "kind": "list",
-                "html": "Intersection Observer: 화면 진입 기준으로 로딩을 제어할 수 있습니다."
-              }
-            ],
-            "itemsHtml": [
-              "@@subhead@@왜 지금 이 업데이트인가",
-              "@@paragraph@@이번 회차는 이미지 지연 로딩만이 아니라 iframe 지연 로딩, 비디오 preload, GIF 대체, 자동재생 지연, video poster 속성까지 함께 다뤘습니다.",
-              "@@paragraph@@Scott Jehl이 성능·접근성 관점에서 지연 로딩의 표준화와 브라우저 지원을 설명한 만큼, 실제 프로젝트에서는 이미지와 비디오, 임베드 로딩을 한 묶음으로 봐야 합니다.",
-              "@@paragraph@@커머스와 매거진 페이지에서는 히어로 이미지, 유튜브 임베드, 상품 상세 영상, 리뷰 이미지가 섞이기 때문에 어떤 리소스를 늦게 불러올지보다 어떤 리소스를 절대 늦추면 안 되는지가 핵심입니다.",
-              "@@subhead@@적용 전에 볼 것",
-              "@@list@@히어로 이미지, 첫 상품 이미지, 카테고리 대표 이미지는 지연 로딩 제외 후보로 따로 표시합니다.",
-              "@@list@@유튜브·지도·광고 iframe에는 지연 로딩과 함께 고정 aspect-ratio, skeleton, 사용자 클릭 전 로딩 전략을 붙입니다.",
-              "@@list@@상품 상세 영상은 preload, poster, autoplay 지연, fullscreen 전환을 모바일 Safari와 Chrome에서 같이 확인합니다.",
-              "@@subhead@@같이 보면 좋은 기술",
-              "@@list@@Core Web Vitals: LCP, CLS, INP로 사용자 체감 성능을 확인합니다.",
-              "@@list@@fetchpriority: 중요한 리소스의 우선순위를 브라우저에 전달합니다.",
-              "@@list@@Intersection Observer: 화면 진입 기준으로 로딩을 제어할 수 있습니다."
-            ]
-          }
-        ],
-        "id": "2026-04-27-07",
-        "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-07"
-      },
-      {
-        "number": "08",
-        "platform": "Syntax.fm",
+        "platform": "CSS-Tricks",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "css",
         "category": "CSS",
-        "date": "2026-04-27",
-        "route": "/articles/2026-04-27-08",
-        "href": "/articles/2026-04-27-08",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-08",
-        "image": "https://syntax.fm/og/999.jpg",
-        "imageCaption": "Syntax.fm 공식 원문 이미지",
+        "date": "2026-04-23",
+        "route": "/articles/2026-04-27-06",
+        "href": "/articles/2026-04-27-06",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-06",
+        "image": "",
+        "imageCaption": "",
         "tags": [
-          "CSS유지보수",
-          "CascadeLayers",
-          "스타일규칙"
+          "CSS애니메이션",
+          "ScrollAnimation",
+          "퍼블리싱"
         ],
-        "takeawayHtml": "Syntax가 짚은 오래 버티는 CSS의 조건",
-        "deckHtml": "Syntax #999는 오래 유지되는 CSS의 기준을 스타일 누수 방지, 재사용성, 전역 해법과 지역 해법의 경계, 도구화로 나눠 다뤘습니다.",
+        "takeawayHtml": "CSS 스크롤 애니메이션을 실무 레퍼런스로 봐야 한다",
+        "deckHtml": "CSS-Tricks에서 Apple Vision Pro 웹사이트의 복잡한 애니메이션을 CSS만으로 재현하는 기사입니다. 이 항목은 HTML/CSS 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
             "label": "발행날짜",
-            "valueHtml": "2026-04-27"
+            "valueHtml": "2026-04-23"
           },
           {
             "label": "태그",
-            "valueHtml": "CSS유지보수 / CascadeLayers / 스타일규칙"
+            "valueHtml": "CSS애니메이션 / ScrollAnimation / 퍼블리싱"
           },
           {
             "label": "국가",
@@ -1301,50 +975,45 @@
           },
           {
             "label": "출처",
-            "valueHtml": "Syntax.fm"
+            "valueHtml": "CSS-Tricks"
           }
         ],
-        "sourceUrl": "https://syntax.fm/999",
-        "sourceTitle": "Syntax.fm",
+        "sourceUrl": "https://css-tricks.com/recreating-apples-vision-pro-animation-in-css/",
+        "sourceTitle": "CSS-Tricks",
         "referenceLinks": [],
         "sections": [
           {
-            "title": "업데이트 핵심",
+            "title": "기술 변화 요약",
             "className": "article-section",
             "prose": false,
             "blocks": [
               {
                 "kind": "list",
-                "html": "Syntax #999는 오래 유지되는 CSS의 기준을 스타일 누수 방지, 재사용성, 전역 해법과 지역 해법의 경계, 도구화로 나눠 다뤘습니다."
+                "html": "업데이트: Apple Vision Pro 웹사이트의 복잡한 애니메이션을 CSS만으로 재현하는 기사입니다. 최신 CSS 스크롤 애니메이션 기능을 활용하여 고급 시각 효과를 구현하는 방법을 다루며, 웹 퍼블리셔가 JavaScript 없이도 성능 최적화된 애니메이션을 만들 수 있음을 보여줍니다."
               },
               {
                 "kind": "list",
-                "html": "쇼노트에는 유동 타이포그래피, CSS 변수, 유틸리티/아토믹 CSS, 컴포넌트 범위 CSS, CSS Modules, 전역 CSS, CSS Layers가 등장합니다."
+                "html": "기술 맥락: 이 항목은 HTML/CSS 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
               },
               {
                 "kind": "list",
-                "html": "핵심은 새 CSS 문법이 아니라, 팀이 전역 규칙·컴포넌트 규칙·도구 강제 규칙을 어디에 둘지 정하는 것입니다."
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
               },
               {
                 "kind": "list",
-                "html": "빠른 화면 구현 과정에서는 예외 스타일, selector 중복, 높은 specificity, 토큰 우회, 반응형 예외가 쉽게 누적됩니다."
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
               },
               {
                 "kind": "list",
-                "html": "오래 버티는 CSS를 만들려면 reset, typography, token, layout utility, component style의 책임을 먼저 나눠야 합니다."
-              },
-              {
-                "kind": "list",
-                "html": "AI가 만든 CSS나 빠른 프로토타입 코드는 “보이는가”보다 “누수 없이 오래 유지되는가” 기준으로 다시 봐야 합니다."
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
               }
             ],
             "itemsHtml": [
-              "Syntax #999는 오래 유지되는 CSS의 기준을 스타일 누수 방지, 재사용성, 전역 해법과 지역 해법의 경계, 도구화로 나눠 다뤘습니다.",
-              "쇼노트에는 유동 타이포그래피, CSS 변수, 유틸리티/아토믹 CSS, 컴포넌트 범위 CSS, CSS Modules, 전역 CSS, CSS Layers가 등장합니다.",
-              "핵심은 새 CSS 문법이 아니라, 팀이 전역 규칙·컴포넌트 규칙·도구 강제 규칙을 어디에 둘지 정하는 것입니다.",
-              "빠른 화면 구현 과정에서는 예외 스타일, selector 중복, 높은 specificity, 토큰 우회, 반응형 예외가 쉽게 누적됩니다.",
-              "오래 버티는 CSS를 만들려면 reset, typography, token, layout utility, component style의 책임을 먼저 나눠야 합니다.",
-              "AI가 만든 CSS나 빠른 프로토타입 코드는 “보이는가”보다 “누수 없이 오래 유지되는가” 기준으로 다시 봐야 합니다."
+              "업데이트: Apple Vision Pro 웹사이트의 복잡한 애니메이션을 CSS만으로 재현하는 기사입니다. 최신 CSS 스크롤 애니메이션 기능을 활용하여 고급 시각 효과를 구현하는 방법을 다루며, 웹 퍼블리셔가 JavaScript 없이도 성능 최적화된 애니메이션을 만들 수 있음을 보여줍니다.",
+              "기술 맥락: 이 항목은 HTML/CSS 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
             ]
           },
           {
@@ -1358,31 +1027,39 @@
               },
               {
                 "kind": "paragraph",
-                "html": "Syntax #999는 CSS가 “관리 가능하다”는 기준을 스타일 누수 방지, 유지보수성, 재사용성, 전역 해법과 지역 해법의 경계로 나눠 다뤘습니다."
+                "html": "Apple Vision Pro 웹사이트의 복잡한 애니메이션을 CSS만으로 재현하는 기사입니다. 최신 CSS 스크롤 애니메이션 기능을 활용하여 고급 시각 효과를 구현하는 방법을 다루며, 웹 퍼블리셔가 JavaScript 없이도 성능 최적화된 애니메이션을 만들 수 있음을 보여줍니다."
               },
               {
                 "kind": "paragraph",
-                "html": "쇼노트에는 유동 타이포그래피, CSS 변수, 유틸리티/아토믹 CSS, 컴포넌트 범위 CSS, CSS Modules, 전역 CSS, CSS Layers, 스코핑, 도구화가 순서대로 등장합니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "이 글은 새 CSS 문법 소개보다 프로젝트 안에서 전역 규칙, 컴포넌트 규칙, 도구 강제 규칙을 어디에 둘지 정하는 운영 체크리스트로 읽어야 합니다."
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
               },
               {
                 "kind": "subhead",
-                "html": "적용 전에 볼 것"
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
               },
               {
                 "kind": "list",
-                "html": "reset, typography, token, layout utility, component style을 파일·레이어 기준으로 분리합니다."
+                "html": "구현 전 브라우저 지원 범위와 fallback 동작을 먼저 정합니다."
               },
               {
                 "kind": "list",
-                "html": "CSS 변수, Cascade Layers, 스코핑, CSS Modules 중 팀이 실제로 강제할 방법을 하나 이상 정합니다."
+                "html": "레이아웃 시프트, 폰트 로딩, 스크롤 애니메이션처럼 체감 품질에 닿는 항목을 QA에 넣습니다."
               },
               {
                 "kind": "list",
-                "html": "PR 리뷰에서 스타일 누수, selector 중복, specificity 상승, 토큰 우회, 반응형 예외를 체크 항목으로 둡니다."
+                "html": "콘텐츠형 페이지는 Markdown/MDX와 컴포넌트 경계를 나눠 마크업 반복을 줄입니다."
               },
               {
                 "kind": "subhead",
@@ -1390,30 +1067,368 @@
               },
               {
                 "kind": "list",
-                "html": "Cascade Layers: CSS 우선순위를 레이어 단위로 관리합니다."
+                "html": "HTML/CSS: 이번 항목이 직접 닿는 구현·검증 영역입니다."
               },
               {
                 "kind": "list",
-                "html": "Design Tokens: 반복 값을 시스템 기준으로 통일합니다."
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
               },
               {
                 "kind": "list",
-                "html": "Stylelint: 팀의 스타일 규칙을 자동으로 검사합니다."
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
               }
             ],
             "itemsHtml": [
               "@@subhead@@왜 지금 이 업데이트인가",
-              "@@paragraph@@Syntax #999는 CSS가 “관리 가능하다”는 기준을 스타일 누수 방지, 유지보수성, 재사용성, 전역 해법과 지역 해법의 경계로 나눠 다뤘습니다.",
-              "@@paragraph@@쇼노트에는 유동 타이포그래피, CSS 변수, 유틸리티/아토믹 CSS, 컴포넌트 범위 CSS, CSS Modules, 전역 CSS, CSS Layers, 스코핑, 도구화가 순서대로 등장합니다.",
-              "@@paragraph@@이 글은 새 CSS 문법 소개보다 프로젝트 안에서 전역 규칙, 컴포넌트 규칙, 도구 강제 규칙을 어디에 둘지 정하는 운영 체크리스트로 읽어야 합니다.",
-              "@@subhead@@적용 전에 볼 것",
-              "@@list@@reset, typography, token, layout utility, component style을 파일·레이어 기준으로 분리합니다.",
-              "@@list@@CSS 변수, Cascade Layers, 스코핑, CSS Modules 중 팀이 실제로 강제할 방법을 하나 이상 정합니다.",
-              "@@list@@PR 리뷰에서 스타일 누수, selector 중복, specificity 상승, 토큰 우회, 반응형 예외를 체크 항목으로 둡니다.",
+              "@@paragraph@@Apple Vision Pro 웹사이트의 복잡한 애니메이션을 CSS만으로 재현하는 기사입니다. 최신 CSS 스크롤 애니메이션 기능을 활용하여 고급 시각 효과를 구현하는 방법을 다루며, 웹 퍼블리셔가 JavaScript 없이도 성능 최적화된 애니메이션을 만들 수 있음을 보여줍니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@구현 전 브라우저 지원 범위와 fallback 동작을 먼저 정합니다.",
+              "@@list@@레이아웃 시프트, 폰트 로딩, 스크롤 애니메이션처럼 체감 품질에 닿는 항목을 QA에 넣습니다.",
+              "@@list@@콘텐츠형 페이지는 Markdown/MDX와 컴포넌트 경계를 나눠 마크업 반복을 줄입니다.",
               "@@subhead@@같이 보면 좋은 기술",
-              "@@list@@Cascade Layers: CSS 우선순위를 레이어 단위로 관리합니다.",
-              "@@list@@Design Tokens: 반복 값을 시스템 기준으로 통일합니다.",
-              "@@list@@Stylelint: 팀의 스타일 규칙을 자동으로 검사합니다."
+              "@@list@@HTML/CSS: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-06",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-06"
+      },
+      {
+        "number": "07",
+        "platform": "CSS-Tricks",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "css",
+        "category": "CSS",
+        "date": "2026-04-22",
+        "route": "/articles/2026-04-27-07",
+        "href": "/articles/2026-04-27-07",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-07",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "Astro",
+          "Markdown",
+          "퍼블리싱"
+        ],
+        "takeawayHtml": "Astro Markdown 컴포넌트는 마크업 반복을 줄이는 선택지다",
+        "deckHtml": "CSS-Tricks에서 Astro 프레임워크에서 Markdown 컴포넌트를 활용하여 작성해야 할 마크업 코드를 줄이고, 타이포그래피 기호를 자동으로 변환하는 방법을 소개합니다. 이 항목은 HTML/CSS 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-22"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "Astro / Markdown / 퍼블리싱"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "css"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "CSS-Tricks"
+          }
+        ],
+        "sourceUrl": "https://css-tricks.com/astro-markdown-component/",
+        "sourceTitle": "CSS-Tricks",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: Astro 프레임워크에서 Markdown 컴포넌트를 활용하여 작성해야 할 마크업 코드를 줄이고, 타이포그래피 기호를 자동으로 변환하는 방법을 소개합니다. 이를 통해 개발 효율성을 높이고 의미 있는 HTML 구조를 유지하면서 마크다운의 간결함을 활용할 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 HTML/CSS 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: Astro 프레임워크에서 Markdown 컴포넌트를 활용하여 작성해야 할 마크업 코드를 줄이고, 타이포그래피 기호를 자동으로 변환하는 방법을 소개합니다. 이를 통해 개발 효율성을 높이고 의미 있는 HTML 구조를 유지하면서 마크다운의 간결함을 활용할 수 있습니다.",
+              "기술 맥락: 이 항목은 HTML/CSS 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "Astro 프레임워크에서 Markdown 컴포넌트를 활용하여 작성해야 할 마크업 코드를 줄이고, 타이포그래피 기호를 자동으로 변환하는 방법을 소개합니다. 이를 통해 개발 효율성을 높이고 의미 있는 HTML 구조를 유지하면서 마크다운의 간결함을 활용할 수 있습니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "구현 전 브라우저 지원 범위와 fallback 동작을 먼저 정합니다."
+              },
+              {
+                "kind": "list",
+                "html": "레이아웃 시프트, 폰트 로딩, 스크롤 애니메이션처럼 체감 품질에 닿는 항목을 QA에 넣습니다."
+              },
+              {
+                "kind": "list",
+                "html": "콘텐츠형 페이지는 Markdown/MDX와 컴포넌트 경계를 나눠 마크업 반복을 줄입니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "HTML/CSS: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@Astro 프레임워크에서 Markdown 컴포넌트를 활용하여 작성해야 할 마크업 코드를 줄이고, 타이포그래피 기호를 자동으로 변환하는 방법을 소개합니다. 이를 통해 개발 효율성을 높이고 의미 있는 HTML 구조를 유지하면서 마크다운의 간결함을 활용할 수 있습니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@구현 전 브라우저 지원 범위와 fallback 동작을 먼저 정합니다.",
+              "@@list@@레이아웃 시프트, 폰트 로딩, 스크롤 애니메이션처럼 체감 품질에 닿는 항목을 QA에 넣습니다.",
+              "@@list@@콘텐츠형 페이지는 Markdown/MDX와 컴포넌트 경계를 나눠 마크업 반복을 줄입니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@HTML/CSS: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-07",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-07"
+      },
+      {
+        "number": "08",
+        "platform": "Frontend Focus",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "css",
+        "category": "CSS",
+        "date": "2026-04-22",
+        "route": "/articles/2026-04-27-08",
+        "href": "/articles/2026-04-27-08",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-08",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "FontFallback",
+          "CLS",
+          "타이포그래피"
+        ],
+        "takeawayHtml": "폰트 폴백은 생각보다 레이아웃을 쉽게 흔든다",
+        "deckHtml": "Frontend Focus에서 font-family 폰트 스택의 폴백 메커니즘이 개발자의 예상과 다르게 작동하는 방식을 설명하는 글입니다. 이 항목은 HTML/CSS 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-22"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "FontFallback / CLS / 타이포그래피"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "css"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Frontend Focus"
+          }
+        ],
+        "sourceUrl": "https://frontendfoc.us/issues/738",
+        "sourceTitle": "Frontend Focus",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: font-family 폰트 스택의 폴백 메커니즘이 개발자의 예상과 다르게 작동하는 방식을 설명하는 글입니다. 폰트 로딩 시 상속이 실제로 어떻게 작동하는지, 예상치 못한 텍스트 깜박임이나 레이아웃 시프트가 발생하는 이유, 그리고 이를 해결하는 방법을 다룹니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 HTML/CSS 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: font-family 폰트 스택의 폴백 메커니즘이 개발자의 예상과 다르게 작동하는 방식을 설명하는 글입니다. 폰트 로딩 시 상속이 실제로 어떻게 작동하는지, 예상치 못한 텍스트 깜박임이나 레이아웃 시프트가 발생하는 이유, 그리고 이를 해결하는 방법을 다룹니다.",
+              "기술 맥락: 이 항목은 HTML/CSS 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "font-family 폰트 스택의 폴백 메커니즘이 개발자의 예상과 다르게 작동하는 방식을 설명하는 글입니다. 폰트 로딩 시 상속이 실제로 어떻게 작동하는지, 예상치 못한 텍스트 깜박임이나 레이아웃 시프트가 발생하는 이유, 그리고 이를 해결하는 방법을 다룹니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "구현 전 브라우저 지원 범위와 fallback 동작을 먼저 정합니다."
+              },
+              {
+                "kind": "list",
+                "html": "레이아웃 시프트, 폰트 로딩, 스크롤 애니메이션처럼 체감 품질에 닿는 항목을 QA에 넣습니다."
+              },
+              {
+                "kind": "list",
+                "html": "콘텐츠형 페이지는 Markdown/MDX와 컴포넌트 경계를 나눠 마크업 반복을 줄입니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "HTML/CSS: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@font-family 폰트 스택의 폴백 메커니즘이 개발자의 예상과 다르게 작동하는 방식을 설명하는 글입니다. 폰트 로딩 시 상속이 실제로 어떻게 작동하는지, 예상치 못한 텍스트 깜박임이나 레이아웃 시프트가 발생하는 이유, 그리고 이를 해결하는 방법을 다룹니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@구현 전 브라우저 지원 범위와 fallback 동작을 먼저 정합니다.",
+              "@@list@@레이아웃 시프트, 폰트 로딩, 스크롤 애니메이션처럼 체감 품질에 닿는 항목을 QA에 넣습니다.",
+              "@@list@@콘텐츠형 페이지는 Markdown/MDX와 컴포넌트 경계를 나눠 마크업 반복을 줄입니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@HTML/CSS: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
             ]
           }
         ],
@@ -1423,32 +1438,32 @@
       },
       {
         "number": "09",
-        "platform": "Dev.to - Accessibility",
+        "platform": "CSS-Tricks",
         "areaKey": "dev",
         "area": "DEV",
-        "categoryKey": "web_accessibility",
-        "category": "웹접근성",
-        "date": "2026-04-26",
+        "categoryKey": "css",
+        "category": "CSS",
+        "date": "2026-04-20",
         "route": "/articles/2026-04-27-09",
         "href": "/articles/2026-04-27-09",
         "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-09",
-        "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Feej7ahebbskthy0wu0o3.png",
-        "imageCaption": "Dev.to - Accessibility 공식 원문 이미지",
+        "image": "",
+        "imageCaption": "",
         "tags": [
-          "접근성QA",
-          "브라우저스캔",
-          "AI수정"
+          "Astro",
+          "Markdown",
+          "퍼블리싱"
         ],
-        "takeawayHtml": "AccessLint식 접근성 에이전트는 DOM에서 출발한다",
-        "deckHtml": "DEV Community 글은 AI 에이전트에게 저장소 전체를 추정하게 하지 않고, 브라우저에서 실제 렌더링된 DOM의 접근성 위반 항목을 먼저 스캔하는 방식을 소개합니다.",
+        "takeawayHtml": "Astro와 MDX는 콘텐츠형 페이지의 구현 단가를 낮춘다",
+        "deckHtml": "CSS-Tricks에서 Astro는 기본적으로 .md 파일을 통한 마크다운을 지원하지만, MDX를 활용하면 마크다운 경험을 더욱 향상시킬 수 있다는 주장을 제시합니다. 이 항목은 HTML/CSS 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
             "label": "발행날짜",
-            "valueHtml": "2026-04-26"
+            "valueHtml": "2026-04-20"
           },
           {
             "label": "태그",
-            "valueHtml": "접근성QA / 브라우저스캔 / AI수정"
+            "valueHtml": "Astro / Markdown / 퍼블리싱"
           },
           {
             "label": "국가",
@@ -1456,7 +1471,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "web_accessibility"
+            "valueHtml": "css"
           },
           {
             "label": "직무 태그",
@@ -1464,50 +1479,45 @@
           },
           {
             "label": "출처",
-            "valueHtml": "DEV Community"
+            "valueHtml": "CSS-Tricks"
           }
         ],
-        "sourceUrl": "https://dev.to/cameron-accesslint/scaling-agentic-a11y-with-browser-side-scans-1e3h",
-        "sourceTitle": "DEV Community",
+        "sourceUrl": "https://css-tricks.com/markdown-astro/",
+        "sourceTitle": "CSS-Tricks",
         "referenceLinks": [],
         "sections": [
           {
-            "title": "업데이트 핵심",
+            "title": "기술 변화 요약",
             "className": "article-section",
             "prose": false,
             "blocks": [
               {
                 "kind": "list",
-                "html": "DEV Community 글은 AI 에이전트에게 저장소 전체를 추정하게 하지 않고, 브라우저에서 실제 렌더링된 DOM의 접근성 위반 항목을 먼저 스캔하는 방식을 소개합니다."
+                "html": "업데이트: Astro는 기본적으로 .md 파일을 통한 마크다운을 지원하지만, MDX를 활용하면 마크다운 경험을 더욱 향상시킬 수 있다는 주장을 제시합니다. 정적 사이트 생성기인 Astro와 마크다운/MDX 조합을 통해 웹 퍼블리싱 워크플로우를 개선할 수 있음을 강조합니다."
               },
               {
                 "kind": "list",
-                "html": "접근성 문제는 소스 코드만 봐서는 실제 화면, 조건부 렌더링, 컴포넌트 조합, 동적 상태를 놓칠 수 있습니다."
+                "html": "기술 맥락: 이 항목은 HTML/CSS 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
               },
               {
                 "kind": "list",
-                "html": "기존 방식은 에이전트가 저장소 전체를 읽고 접근성 문제를 추정해 수정 범위가 커지고, 실제 위반 위치와 다른 코드를 고칠 위험이 있었습니다."
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
               },
               {
                 "kind": "list",
-                "html": "바뀐 방식은 실제 DOM, 위반 항목, 관련 소스 위치를 먼저 좁힌 뒤 해당 컴포넌트만 수정하는 것입니다."
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
               },
               {
                 "kind": "list",
-                "html": "자동 수정의 핵심은 더 많은 코드를 AI에게 주는 것이 아니라, 재현 가능한 스캔 결과와 좁은 수정 범위를 주는 데 있습니다."
-              },
-              {
-                "kind": "list",
-                "html": "AI가 접근성 속성을 추가해도 실제 사용자 흐름이 좋아졌다고 단정하면 안 됩니다. aria-label 중복, 잘못된 role, 포커스 순서 역전은 자동 수정 후에도 남을 수 있습니다."
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
               }
             ],
             "itemsHtml": [
-              "DEV Community 글은 AI 에이전트에게 저장소 전체를 추정하게 하지 않고, 브라우저에서 실제 렌더링된 DOM의 접근성 위반 항목을 먼저 스캔하는 방식을 소개합니다.",
-              "접근성 문제는 소스 코드만 봐서는 실제 화면, 조건부 렌더링, 컴포넌트 조합, 동적 상태를 놓칠 수 있습니다.",
-              "기존 방식은 에이전트가 저장소 전체를 읽고 접근성 문제를 추정해 수정 범위가 커지고, 실제 위반 위치와 다른 코드를 고칠 위험이 있었습니다.",
-              "바뀐 방식은 실제 DOM, 위반 항목, 관련 소스 위치를 먼저 좁힌 뒤 해당 컴포넌트만 수정하는 것입니다.",
-              "자동 수정의 핵심은 더 많은 코드를 AI에게 주는 것이 아니라, 재현 가능한 스캔 결과와 좁은 수정 범위를 주는 데 있습니다.",
-              "AI가 접근성 속성을 추가해도 실제 사용자 흐름이 좋아졌다고 단정하면 안 됩니다. aria-label 중복, 잘못된 role, 포커스 순서 역전은 자동 수정 후에도 남을 수 있습니다."
+              "업데이트: Astro는 기본적으로 .md 파일을 통한 마크다운을 지원하지만, MDX를 활용하면 마크다운 경험을 더욱 향상시킬 수 있다는 주장을 제시합니다. 정적 사이트 생성기인 Astro와 마크다운/MDX 조합을 통해 웹 퍼블리싱 워크플로우를 개선할 수 있음을 강조합니다.",
+              "기술 맥락: 이 항목은 HTML/CSS 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
             ]
           },
           {
@@ -1521,31 +1531,39 @@
               },
               {
                 "kind": "paragraph",
-                "html": "접근성 QA는 점점 자동화되고 있지만, 잘못된 자동화는 문제를 고친 것처럼 보이게 만들 수 있습니다."
+                "html": "Astro는 기본적으로 .md 파일을 통한 마크다운을 지원하지만, MDX를 활용하면 마크다운 경험을 더욱 향상시킬 수 있다는 주장을 제시합니다. 정적 사이트 생성기인 Astro와 마크다운/MDX 조합을 통해 웹 퍼블리싱 워크플로우를 개선할 수 있음을 강조합니다."
               },
               {
                 "kind": "paragraph",
-                "html": "브라우저 스캔 기반 접근은 실제 화면에서 발생한 DOM 위반을 출발점으로 삼기 때문에 에이전트가 봐야 할 코드 범위를 줄여줍니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "이 흐름은 AI 수정의 신뢰도를 높이려면 모델에게 더 많은 코드를 주는 것보다 재현 가능한 스캔 결과를 먼저 줘야 한다는 점을 보여줍니다."
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
               },
               {
                 "kind": "subhead",
-                "html": "적용 전에 볼 것"
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
               },
               {
                 "kind": "list",
-                "html": "PR마다 실제 브라우저 렌더링 기반 접근성 스캔을 실행합니다."
+                "html": "구현 전 브라우저 지원 범위와 fallback 동작을 먼저 정합니다."
               },
               {
                 "kind": "list",
-                "html": "위반 항목과 DOM 위치, 소스 위치를 함께 기록합니다."
+                "html": "레이아웃 시프트, 폰트 로딩, 스크롤 애니메이션처럼 체감 품질에 닿는 항목을 QA에 넣습니다."
               },
               {
                 "kind": "list",
-                "html": "AI 수정 후 키보드 탐색과 스크린리더 흐름은 사람이 확인합니다."
+                "html": "콘텐츠형 페이지는 Markdown/MDX와 컴포넌트 경계를 나눠 마크업 반복을 줄입니다."
               },
               {
                 "kind": "subhead",
@@ -1553,30 +1571,32 @@
               },
               {
                 "kind": "list",
-                "html": "axe-core: 브라우저 기반 접근성 검사에 널리 쓰입니다."
+                "html": "HTML/CSS: 이번 항목이 직접 닿는 구현·검증 영역입니다."
               },
               {
                 "kind": "list",
-                "html": "Playwright: 실제 화면과 사용자 흐름을 자동으로 재현합니다."
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
               },
               {
                 "kind": "list",
-                "html": "WCAG: 자동 검사 결과를 사람이 판단할 기준입니다."
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
               }
             ],
             "itemsHtml": [
               "@@subhead@@왜 지금 이 업데이트인가",
-              "@@paragraph@@접근성 QA는 점점 자동화되고 있지만, 잘못된 자동화는 문제를 고친 것처럼 보이게 만들 수 있습니다.",
-              "@@paragraph@@브라우저 스캔 기반 접근은 실제 화면에서 발생한 DOM 위반을 출발점으로 삼기 때문에 에이전트가 봐야 할 코드 범위를 줄여줍니다.",
-              "@@paragraph@@이 흐름은 AI 수정의 신뢰도를 높이려면 모델에게 더 많은 코드를 주는 것보다 재현 가능한 스캔 결과를 먼저 줘야 한다는 점을 보여줍니다.",
-              "@@subhead@@적용 전에 볼 것",
-              "@@list@@PR마다 실제 브라우저 렌더링 기반 접근성 스캔을 실행합니다.",
-              "@@list@@위반 항목과 DOM 위치, 소스 위치를 함께 기록합니다.",
-              "@@list@@AI 수정 후 키보드 탐색과 스크린리더 흐름은 사람이 확인합니다.",
+              "@@paragraph@@Astro는 기본적으로 .md 파일을 통한 마크다운을 지원하지만, MDX를 활용하면 마크다운 경험을 더욱 향상시킬 수 있다는 주장을 제시합니다. 정적 사이트 생성기인 Astro와 마크다운/MDX 조합을 통해 웹 퍼블리싱 워크플로우를 개선할 수 있음을 강조합니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@구현 전 브라우저 지원 범위와 fallback 동작을 먼저 정합니다.",
+              "@@list@@레이아웃 시프트, 폰트 로딩, 스크롤 애니메이션처럼 체감 품질에 닿는 항목을 QA에 넣습니다.",
+              "@@list@@콘텐츠형 페이지는 Markdown/MDX와 컴포넌트 경계를 나눠 마크업 반복을 줄입니다.",
               "@@subhead@@같이 보면 좋은 기술",
-              "@@list@@axe-core: 브라우저 기반 접근성 검사에 널리 쓰입니다.",
-              "@@list@@Playwright: 실제 화면과 사용자 흐름을 자동으로 재현합니다.",
-              "@@list@@WCAG: 자동 검사 결과를 사람이 판단할 기준입니다."
+              "@@list@@HTML/CSS: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
             ]
           }
         ],
@@ -1586,32 +1606,32 @@
       },
       {
         "number": "10",
-        "platform": "Chrome Developers",
+        "platform": "Syntax.fm",
         "areaKey": "dev",
         "area": "DEV",
-        "categoryKey": "html",
-        "category": "HTML",
-        "date": "2026-04-24",
+        "categoryKey": "javascript",
+        "category": "JAVASCRIPT",
+        "date": "2026-04-22",
         "route": "/articles/2026-04-27-10",
         "href": "/articles/2026-04-27-10",
         "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-10",
-        "image": "https://developer.chrome.com/static/blog/manifest-localization/image/hero.png",
-        "imageCaption": "Chrome Developers manifest localization 공식 원문 이미지",
+        "image": "",
+        "imageCaption": "",
         "tags": [
-          "WebAppManifest",
-          "다국어지원",
-          "PWA"
+          "AI코딩",
+          "Lint",
+          "품질관리"
         ],
-        "takeawayHtml": "PWA 설치 정보도 언어별로 달라져야 한다",
-        "deckHtml": "Chrome Developers가 Web App Manifest의 언어별 표시 정보 지원을 소개했습니다.",
+        "takeawayHtml": "AI 코딩은 린트와 테스트로 추측을 줄여야 한다",
+        "deckHtml": "Syntax.fm에서 웹 퍼블리셔가 AI 코딩 도구를 신뢰할 수 있게 만들기 위해 ESLint, StyleLint, knip 등의 결정론적 도구를 활용하는 방법을 논의합니다. 이 항목은 JavaScript 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
             "label": "발행날짜",
-            "valueHtml": "2026-04-24"
+            "valueHtml": "2026-04-22"
           },
           {
             "label": "태그",
-            "valueHtml": "WebAppManifest / 다국어지원 / PWA"
+            "valueHtml": "AI코딩 / Lint / 품질관리"
           },
           {
             "label": "국가",
@@ -1619,7 +1639,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "html"
+            "valueHtml": "javascript"
           },
           {
             "label": "직무 태그",
@@ -1627,55 +1647,45 @@
           },
           {
             "label": "출처",
-            "valueHtml": "Chrome Developers"
+            "valueHtml": "Syntax.fm"
           }
         ],
-        "sourceUrl": "https://developer.chrome.com/blog/manifest-localization?hl=en",
-        "sourceTitle": "Chrome Developers",
+        "sourceUrl": "https://syntax.fm/998",
+        "sourceTitle": "Syntax.fm",
         "referenceLinks": [],
         "sections": [
           {
-            "title": "업데이트 핵심",
+            "title": "기술 변화 요약",
             "className": "article-section",
             "prose": false,
             "blocks": [
               {
                 "kind": "list",
-                "html": "Chrome Developers가 Web App Manifest의 언어별 표시 정보 지원을 소개했습니다."
+                "html": "업데이트: 웹 퍼블리셔가 AI 코딩 도구를 신뢰할 수 있게 만들기 위해 ESLint, StyleLint, knip 등의 결정론적 도구를 활용하는 방법을 논의합니다. 코드 품질 분석, 린팅 전략, 헤드리스 브라우저, 자동화 워크플로우를 통해 AI가 추측하지 않고 유지보수 가능한 예측 가능한 코드를 생성하도록 강제하는 패턴들을 제시합니다."
               },
               {
                 "kind": "list",
-                "html": "Chrome과 Edge 148부터 앱 이름, 짧은 이름, 설명, 아이콘, 바로가기 문구를 언어·지역별로 정의할 수 있습니다."
+                "html": "기술 맥락: 이 항목은 JavaScript 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
               },
               {
                 "kind": "list",
-                "html": "기존에는 다국어 서비스라도 설치 프롬프트, 홈 화면 이름, 바로가기 메뉴가 하나의 manifest 값에 묶이는 경우가 많았습니다."
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
               },
               {
                 "kind": "list",
-                "html": "이제 기본 manifest 값은 fallback으로 두고, <code>name_localized</code>, <code>short_name_localized</code>, <code>description_localized</code>처럼 언어별 값을 추가할 수 있습니다."
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
               },
               {
                 "kind": "list",
-                "html": "언어별로 바꿀 수 있는 필드는 <code>name</code>, <code>short_name</code>, <code>description</code>, <code>icons</code>, 그리고 <code>shortcuts</code> 안의 이름·설명·아이콘입니다."
-              },
-              {
-                "kind": "list",
-                "html": "글로벌 커머스, 멤버십, 예약 서비스처럼 설치 후 재방문을 유도하는 PWA는 설치 화면과 홈 화면 이름, 바로가기 메뉴를 QA 항목에 넣어야 합니다."
-              },
-              {
-                "kind": "list",
-                "html": "미지원 브라우저에서는 기본 manifest 값으로 대체됩니다. 그래서 번역 문구뿐 아니라 fallback 문구가 브랜드 정책에 맞는지도 확인해야 합니다."
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
               }
             ],
             "itemsHtml": [
-              "Chrome Developers가 Web App Manifest의 언어별 표시 정보 지원을 소개했습니다.",
-              "Chrome과 Edge 148부터 앱 이름, 짧은 이름, 설명, 아이콘, 바로가기 문구를 언어·지역별로 정의할 수 있습니다.",
-              "기존에는 다국어 서비스라도 설치 프롬프트, 홈 화면 이름, 바로가기 메뉴가 하나의 manifest 값에 묶이는 경우가 많았습니다.",
-              "이제 기본 manifest 값은 fallback으로 두고, <code>name_localized</code>, <code>short_name_localized</code>, <code>description_localized</code>처럼 언어별 값을 추가할 수 있습니다.",
-              "언어별로 바꿀 수 있는 필드는 <code>name</code>, <code>short_name</code>, <code>description</code>, <code>icons</code>, 그리고 <code>shortcuts</code> 안의 이름·설명·아이콘입니다.",
-              "글로벌 커머스, 멤버십, 예약 서비스처럼 설치 후 재방문을 유도하는 PWA는 설치 화면과 홈 화면 이름, 바로가기 메뉴를 QA 항목에 넣어야 합니다.",
-              "미지원 브라우저에서는 기본 manifest 값으로 대체됩니다. 그래서 번역 문구뿐 아니라 fallback 문구가 브랜드 정책에 맞는지도 확인해야 합니다."
+              "업데이트: 웹 퍼블리셔가 AI 코딩 도구를 신뢰할 수 있게 만들기 위해 ESLint, StyleLint, knip 등의 결정론적 도구를 활용하는 방법을 논의합니다. 코드 품질 분석, 린팅 전략, 헤드리스 브라우저, 자동화 워크플로우를 통해 AI가 추측하지 않고 유지보수 가능한 예측 가능한 코드를 생성하도록 강제하는 패턴들을 제시합니다.",
+              "기술 맥락: 이 항목은 JavaScript 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
             ]
           },
           {
@@ -1689,31 +1699,39 @@
               },
               {
                 "kind": "paragraph",
-                "html": "Chrome과 Edge 148부터 Web App Manifest의 언어별 표시 정보가 지원되며, <code>name</code>, <code>short_name</code>, <code>description</code>, <code>icons</code>, <code>shortcuts</code>의 이름·설명·아이콘을 언어별로 정의할 수 있습니다."
+                "html": "웹 퍼블리셔가 AI 코딩 도구를 신뢰할 수 있게 만들기 위해 ESLint, StyleLint, knip 등의 결정론적 도구를 활용하는 방법을 논의합니다. 코드 품질 분석, 린팅 전략, 헤드리스 브라우저, 자동화 워크플로우를 통해 AI가 추측하지 않고 유지보수 가능한 예측 가능한 코드를 생성하도록 강제하는 패턴들을 제시합니다."
               },
               {
                 "kind": "paragraph",
-                "html": "기존에는 manifest가 하나의 언어만 담아 브라우저 언어가 달라도 설치 화면과 홈 화면 이름이 같은 값으로 노출됐고, 다국어 서비스는 별도 우회 구현에 의존해야 했습니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "이번 업데이트는 PWA 설치 경험에서 앱 이름, 짧은 이름, 설명, 바로가기 라벨까지 실제 지역 언어에 맞춰 관리할 수 있게 된 변화로 봐야 합니다."
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
               },
               {
                 "kind": "subhead",
-                "html": "적용 전에 볼 것"
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
               },
               {
                 "kind": "list",
-                "html": "<code>manifest.json</code>에 기본 <code>name</code>과 <code>name_localized</code>, <code>short_name_localized</code>, <code>description_localized</code>를 추가하고 BCP47 태그를 검수합니다."
+                "html": "AI가 만든 코드도 ESLint, Stylelint, 테스트, 미사용 코드 검사로 검증합니다."
               },
               {
                 "kind": "list",
-                "html": "Chrome·Edge 148 이상에서 설치 프롬프트, 홈 화면 이름, 바로가기 메뉴, 아이콘이 언어별로 바뀌는지 확인합니다."
+                "html": "영상·미디어 UI는 모바일 재생, 자막, poster, 접근성 라벨을 함께 확인합니다."
               },
               {
                 "kind": "list",
-                "html": "Safari와 Firefox 등 미지원 환경에서는 기본 manifest 값이 브랜드 정책에 맞게 대체되는지 확인합니다."
+                "html": "새 도구는 작은 화면이나 내부 콘텐츠 제작 흐름에 먼저 적용해 유지보수성을 봅니다."
               },
               {
                 "kind": "subhead",
@@ -1721,30 +1739,32 @@
               },
               {
                 "kind": "list",
-                "html": "Web App Manifest: 설치형 웹 경험의 기본 메타데이터입니다."
+                "html": "JavaScript: 이번 항목이 직접 닿는 구현·검증 영역입니다."
               },
               {
                 "kind": "list",
-                "html": "i18n Routing: 언어별 URL과 표시 정보를 연결합니다."
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
               },
               {
                 "kind": "list",
-                "html": "Lighthouse PWA Audit: 설치 가능성과 manifest 품질을 점검합니다."
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
               }
             ],
             "itemsHtml": [
               "@@subhead@@왜 지금 이 업데이트인가",
-              "@@paragraph@@Chrome과 Edge 148부터 Web App Manifest의 언어별 표시 정보가 지원되며, <code>name</code>, <code>short_name</code>, <code>description</code>, <code>icons</code>, <code>shortcuts</code>의 이름·설명·아이콘을 언어별로 정의할 수 있습니다.",
-              "@@paragraph@@기존에는 manifest가 하나의 언어만 담아 브라우저 언어가 달라도 설치 화면과 홈 화면 이름이 같은 값으로 노출됐고, 다국어 서비스는 별도 우회 구현에 의존해야 했습니다.",
-              "@@paragraph@@이번 업데이트는 PWA 설치 경험에서 앱 이름, 짧은 이름, 설명, 바로가기 라벨까지 실제 지역 언어에 맞춰 관리할 수 있게 된 변화로 봐야 합니다.",
-              "@@subhead@@적용 전에 볼 것",
-              "@@list@@<code>manifest.json</code>에 기본 <code>name</code>과 <code>name_localized</code>, <code>short_name_localized</code>, <code>description_localized</code>를 추가하고 BCP47 태그를 검수합니다.",
-              "@@list@@Chrome·Edge 148 이상에서 설치 프롬프트, 홈 화면 이름, 바로가기 메뉴, 아이콘이 언어별로 바뀌는지 확인합니다.",
-              "@@list@@Safari와 Firefox 등 미지원 환경에서는 기본 manifest 값이 브랜드 정책에 맞게 대체되는지 확인합니다.",
+              "@@paragraph@@웹 퍼블리셔가 AI 코딩 도구를 신뢰할 수 있게 만들기 위해 ESLint, StyleLint, knip 등의 결정론적 도구를 활용하는 방법을 논의합니다. 코드 품질 분석, 린팅 전략, 헤드리스 브라우저, 자동화 워크플로우를 통해 AI가 추측하지 않고 유지보수 가능한 예측 가능한 코드를 생성하도록 강제하는 패턴들을 제시합니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@AI가 만든 코드도 ESLint, Stylelint, 테스트, 미사용 코드 검사로 검증합니다.",
+              "@@list@@영상·미디어 UI는 모바일 재생, 자막, poster, 접근성 라벨을 함께 확인합니다.",
+              "@@list@@새 도구는 작은 화면이나 내부 콘텐츠 제작 흐름에 먼저 적용해 유지보수성을 봅니다.",
               "@@subhead@@같이 보면 좋은 기술",
-              "@@list@@Web App Manifest: 설치형 웹 경험의 기본 메타데이터입니다.",
-              "@@list@@i18n Routing: 언어별 URL과 표시 정보를 연결합니다.",
-              "@@list@@Lighthouse PWA Audit: 설치 가능성과 manifest 품질을 점검합니다."
+              "@@list@@JavaScript: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
             ]
           }
         ],
@@ -1763,15 +1783,15 @@
         "route": "/articles/2026-04-27-11",
         "href": "/articles/2026-04-27-11",
         "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-11",
-        "image": "https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/i3uvkia0thzscb525tjz.jpg",
-        "imageCaption": "JavaScript Weekly Issue 782 원문 대표 이미지",
+        "image": "",
+        "imageCaption": "",
         "tags": [
-          "JavaScriptWeekly",
-          "UI테스트",
-          "런타임업데이트"
+          "HTMLVideo",
+          "콘텐츠제작",
+          "JavaScript"
         ],
-        "takeawayHtml": "이번 주 JS 점검: 런타임, 보안, 미디어 UI",
-        "deckHtml": "JavaScript Weekly Issue 782에서 실무적으로 볼 부분은 HyperFrames, Bun 1.3.13, Node.js 24.15.0, Vercel 보안 사고, OWASP NPM 체크리스트, Shaka Player 5.1입니다.",
+        "takeawayHtml": "HTML과 JavaScript로 영상 제작 워크플로우를 코드화한다",
+        "deckHtml": "HyperFrames는 HTML과 JavaScript를 활용하여 동영상을 제작할 수 있는 오픈소스 프레임워크입니다. 이 항목은 JavaScript 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -1779,7 +1799,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "JavaScriptWeekly / UI테스트 / 런타임업데이트"
+            "valueHtml": "HTMLVideo / 콘텐츠제작 / JavaScript"
           },
           {
             "label": "국가",
@@ -1803,47 +1823,37 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "업데이트 핵심",
+            "title": "기술 변화 요약",
             "className": "article-section",
             "prose": false,
             "blocks": [
               {
                 "kind": "list",
-                "html": "JavaScript Weekly Issue 782에서 실무적으로 볼 부분은 HyperFrames, Bun 1.3.13, Node.js 24.15.0, Vercel 보안 사고, OWASP NPM 체크리스트, Shaka Player 5.1입니다."
+                "html": "업데이트: HyperFrames는 HTML과 JavaScript를 활용하여 동영상을 제작할 수 있는 오픈소스 프레임워크입니다. Remotion의 간단한 대안으로, 비디오 효과와 요소를 위한 내장 컴포넌트를 제공하며 기존 비디오와 오디오 클립도 합성할 수 있어 웹 개발자가 친숙한 마크업과 스크립트 언어로 동영상 콘텐츠를 효율적으로 구현할 수 있습니다."
               },
               {
                 "kind": "list",
-                "html": "HyperFrames는 HTML과 JavaScript로 영상을 만드는 도구입니다. AI 에이전트가 코드를 생성하는 흐름과 만나면 제품 소개 영상이나 기능 데모를 코드 프로젝트로 남길 수 있습니다."
+                "html": "기술 맥락: 이 항목은 JavaScript 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
               },
               {
                 "kind": "list",
-                "html": "Bun 1.3.13은 <code>bun test --isolate</code>, <code>--parallel</code>, <code>--shard</code>, <code>--changed</code>처럼 테스트 실행을 나누고 빠르게 돌리는 옵션을 강화했습니다."
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
               },
               {
                 "kind": "list",
-                "html": "Node.js 24.15.0은 <code>require(esm)</code> stable과 module compile cache가 핵심입니다. 빌드 도구가 ESM/CJS 경계를 넘는 방식과 테스트 시간에 영향을 줄 수 있습니다."
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
               },
               {
                 "kind": "list",
-                "html": "Vercel 보안 사고와 OWASP NPM 체크리스트는 OAuth 권한, 환경 변수 접근, lifecycle script, typosquatting, trusted publishing, dependency confusion을 다시 보게 만듭니다."
-              },
-              {
-                "kind": "list",
-                "html": "Shaka Player 5.1, Animata, tiks, officeParser는 각각 미디어 재생, 모션 컴포넌트, Web Audio UI 사운드, Office 파일 파싱처럼 실제 화면 기능과 운영 영역에 닿습니다."
-              },
-              {
-                "kind": "list",
-                "html": "이번 호는 하나의 큰 업데이트보다 런타임, 테스트, 미디어 UI, 배포 권한, 패키지 보안을 한 번에 점검하게 만드는 목록으로 보는 게 맞습니다."
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
               }
             ],
             "itemsHtml": [
-              "JavaScript Weekly Issue 782에서 실무적으로 볼 부분은 HyperFrames, Bun 1.3.13, Node.js 24.15.0, Vercel 보안 사고, OWASP NPM 체크리스트, Shaka Player 5.1입니다.",
-              "HyperFrames는 HTML과 JavaScript로 영상을 만드는 도구입니다. AI 에이전트가 코드를 생성하는 흐름과 만나면 제품 소개 영상이나 기능 데모를 코드 프로젝트로 남길 수 있습니다.",
-              "Bun 1.3.13은 <code>bun test --isolate</code>, <code>--parallel</code>, <code>--shard</code>, <code>--changed</code>처럼 테스트 실행을 나누고 빠르게 돌리는 옵션을 강화했습니다.",
-              "Node.js 24.15.0은 <code>require(esm)</code> stable과 module compile cache가 핵심입니다. 빌드 도구가 ESM/CJS 경계를 넘는 방식과 테스트 시간에 영향을 줄 수 있습니다.",
-              "Vercel 보안 사고와 OWASP NPM 체크리스트는 OAuth 권한, 환경 변수 접근, lifecycle script, typosquatting, trusted publishing, dependency confusion을 다시 보게 만듭니다.",
-              "Shaka Player 5.1, Animata, tiks, officeParser는 각각 미디어 재생, 모션 컴포넌트, Web Audio UI 사운드, Office 파일 파싱처럼 실제 화면 기능과 운영 영역에 닿습니다.",
-              "이번 호는 하나의 큰 업데이트보다 런타임, 테스트, 미디어 UI, 배포 권한, 패키지 보안을 한 번에 점검하게 만드는 목록으로 보는 게 맞습니다."
+              "업데이트: HyperFrames는 HTML과 JavaScript를 활용하여 동영상을 제작할 수 있는 오픈소스 프레임워크입니다. Remotion의 간단한 대안으로, 비디오 효과와 요소를 위한 내장 컴포넌트를 제공하며 기존 비디오와 오디오 클립도 합성할 수 있어 웹 개발자가 친숙한 마크업과 스크립트 언어로 동영상 콘텐츠를 효율적으로 구현할 수 있습니다.",
+              "기술 맥락: 이 항목은 JavaScript 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
             ]
           },
           {
@@ -1857,31 +1867,39 @@
               },
               {
                 "kind": "paragraph",
-                "html": "이번 호에서 실무적으로 볼 항목은 HyperFrames의 HTML/JS 기반 영상 렌더링, Bun 1.3.13의 <code>bun test --isolate</code>, <code>--parallel</code>, <code>--shard</code>, <code>--changed</code>, Node.js 24.15.0의 <code>require(esm)</code> stable과 module compile cache입니다."
+                "html": "HyperFrames는 HTML과 JavaScript를 활용하여 동영상을 제작할 수 있는 오픈소스 프레임워크입니다. Remotion의 간단한 대안으로, 비디오 효과와 요소를 위한 내장 컴포넌트를 제공하며 기존 비디오와 오디오 클립도 합성할 수 있어 웹 개발자가 친숙한 마크업과 스크립트 언어로 동영상 콘텐츠를 효율적으로 구현할 수 있습니다."
               },
               {
                 "kind": "paragraph",
-                "html": "Vercel 보안 사고는 OAuth 권한으로 연결된 외부 도구가 환경 변수 접근까지 이어질 수 있음을 보여주며, OWASP NPM 체크리스트도 lifecycle script, typosquatting, trusted publishing, dependency confusion을 다시 점검하게 만듭니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "Animata, tiks, Shaka Player 5.1, officeParser는 각각 모션 컴포넌트, Web Audio UI 사운드, DASH/HLS 미디어 재생, Office 파일 파싱처럼 실제 화면 기능과 운영 영역에 닿는 도구입니다."
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
               },
               {
                 "kind": "subhead",
-                "html": "적용 전에 볼 것"
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
               },
               {
                 "kind": "list",
-                "html": "CI에서 Node.js 24.15.0 기준으로 ESM require, compile cache, <code>--max-heap-size</code>가 빌드·테스트 시간에 미치는 영향을 측정합니다."
+                "html": "AI가 만든 코드도 ESLint, Stylelint, 테스트, 미사용 코드 검사로 검증합니다."
               },
               {
                 "kind": "list",
-                "html": "Bun 1.3.13은 <code>--isolate</code>, <code>--parallel</code>, <code>--shard</code>, <code>--changed</code> 옵션을 작은 테스트 묶음에 먼저 적용해 리포트와 캐시 동작을 확인합니다."
+                "html": "영상·미디어 UI는 모바일 재생, 자막, poster, 접근성 라벨을 함께 확인합니다."
               },
               {
                 "kind": "list",
-                "html": "OAuth로 연결된 배포·AI·분석 도구의 권한과 환경 변수 접근 범위를 점검하고, 미디어 라이브러리는 모바일 재생·자막·접근성 QA에 넣습니다."
+                "html": "새 도구는 작은 화면이나 내부 콘텐츠 제작 흐름에 먼저 적용해 유지보수성을 봅니다."
               },
               {
                 "kind": "subhead",
@@ -1889,36 +1907,3062 @@
               },
               {
                 "kind": "list",
-                "html": "HyperFrames: HTML과 JavaScript 기반 영상 렌더링 도구입니다."
+                "html": "JavaScript: 이번 항목이 직접 닿는 구현·검증 영역입니다."
               },
               {
                 "kind": "list",
-                "html": "Bun Test: JavaScript 런타임 안의 테스트 실행·격리 옵션을 확인할 수 있습니다."
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
               },
               {
                 "kind": "list",
-                "html": "Shaka Player: DASH/HLS 기반 미디어 재생 UI를 검토할 때 참고할 수 있습니다."
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
               }
             ],
             "itemsHtml": [
               "@@subhead@@왜 지금 이 업데이트인가",
-              "@@paragraph@@이번 호에서 실무적으로 볼 항목은 HyperFrames의 HTML/JS 기반 영상 렌더링, Bun 1.3.13의 <code>bun test --isolate</code>, <code>--parallel</code>, <code>--shard</code>, <code>--changed</code>, Node.js 24.15.0의 <code>require(esm)</code> stable과 module compile cache입니다.",
-              "@@paragraph@@Vercel 보안 사고는 OAuth 권한으로 연결된 외부 도구가 환경 변수 접근까지 이어질 수 있음을 보여주며, OWASP NPM 체크리스트도 lifecycle script, typosquatting, trusted publishing, dependency confusion을 다시 점검하게 만듭니다.",
-              "@@paragraph@@Animata, tiks, Shaka Player 5.1, officeParser는 각각 모션 컴포넌트, Web Audio UI 사운드, DASH/HLS 미디어 재생, Office 파일 파싱처럼 실제 화면 기능과 운영 영역에 닿는 도구입니다.",
-              "@@subhead@@적용 전에 볼 것",
-              "@@list@@CI에서 Node.js 24.15.0 기준으로 ESM require, compile cache, <code>--max-heap-size</code>가 빌드·테스트 시간에 미치는 영향을 측정합니다.",
-              "@@list@@Bun 1.3.13은 <code>--isolate</code>, <code>--parallel</code>, <code>--shard</code>, <code>--changed</code> 옵션을 작은 테스트 묶음에 먼저 적용해 리포트와 캐시 동작을 확인합니다.",
-              "@@list@@OAuth로 연결된 배포·AI·분석 도구의 권한과 환경 변수 접근 범위를 점검하고, 미디어 라이브러리는 모바일 재생·자막·접근성 QA에 넣습니다.",
+              "@@paragraph@@HyperFrames는 HTML과 JavaScript를 활용하여 동영상을 제작할 수 있는 오픈소스 프레임워크입니다. Remotion의 간단한 대안으로, 비디오 효과와 요소를 위한 내장 컴포넌트를 제공하며 기존 비디오와 오디오 클립도 합성할 수 있어 웹 개발자가 친숙한 마크업과 스크립트 언어로 동영상 콘텐츠를 효율적으로 구현할 수 있습니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@AI가 만든 코드도 ESLint, Stylelint, 테스트, 미사용 코드 검사로 검증합니다.",
+              "@@list@@영상·미디어 UI는 모바일 재생, 자막, poster, 접근성 라벨을 함께 확인합니다.",
+              "@@list@@새 도구는 작은 화면이나 내부 콘텐츠 제작 흐름에 먼저 적용해 유지보수성을 봅니다.",
               "@@subhead@@같이 보면 좋은 기술",
-              "@@list@@HyperFrames: HTML과 JavaScript 기반 영상 렌더링 도구입니다.",
-              "@@list@@Bun Test: JavaScript 런타임 안의 테스트 실행·격리 옵션을 확인할 수 있습니다.",
-              "@@list@@Shaka Player: DASH/HLS 기반 미디어 재생 UI를 검토할 때 참고할 수 있습니다."
+              "@@list@@JavaScript: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
             ]
           }
         ],
         "id": "2026-04-27-11",
         "issueSlug": "2026-04-27",
         "articleSlug": "2026-04-27-11"
+      },
+      {
+        "number": "12",
+        "platform": "DEV Community",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "web_accessibility",
+        "category": "웹접근성",
+        "date": "2026-04-26",
+        "route": "/articles/2026-04-27-12",
+        "href": "/articles/2026-04-27-12",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-12",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "접근성QA",
+          "WCAG",
+          "실무검수"
+        ],
+        "takeawayHtml": "접근성 에이전트는 실제 DOM 스캔에서 출발해야 한다",
+        "deckHtml": "DEV Community에서 브라우저 기반 접근성 감사를 통해 LLM 비용을 최적화하는 방식을 제시합니다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-26"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "접근성QA / WCAG / 실무검수"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "web_accessibility"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Dev.to - Accessibility"
+          }
+        ],
+        "sourceUrl": "https://dev.to/cameron-accesslint/scaling-agentic-a11y-with-browser-side-scans-1e3h",
+        "sourceTitle": "Dev.to - Accessibility",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: 브라우저 기반 접근성 감사를 통해 LLM 비용을 최적화하는 방식을 제시합니다. 전체 코드베이스를 스캔하는 대신 실제 렌더링된 DOM에서 접근성 위반을 감지하고, 그 결과에 포함된 파일만 열어 수정하도록 AI 에이전트를 유도하여 비용을 문제 규모에 따라 스케일링합니다. @accesslint/mcp와 브라우저 MCP를 조합하면 자동화된 접근성 리뷰를 효율적으로 운영할 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: 브라우저 기반 접근성 감사를 통해 LLM 비용을 최적화하는 방식을 제시합니다. 전체 코드베이스를 스캔하는 대신 실제 렌더링된 DOM에서 접근성 위반을 감지하고, 그 결과에 포함된 파일만 열어 수정하도록 AI 에이전트를 유도하여 비용을 문제 규모에 따라 스케일링합니다. @accesslint/mcp와 브라우저 MCP를 조합하면 자동화된 접근성 리뷰를 효율적으로 운영할 수 있습니다.",
+              "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "브라우저 기반 접근성 감사를 통해 LLM 비용을 최적화하는 방식을 제시합니다. 전체 코드베이스를 스캔하는 대신 실제 렌더링된 DOM에서 접근성 위반을 감지하고, 그 결과에 포함된 파일만 열어 수정하도록 AI 에이전트를 유도하여 비용을 문제 규모에 따라 스케일링합니다. @accesslint/mcp와 브라우저 MCP를 조합하면 자동화된 접근성 리뷰를 효율적으로 운영할 수 있습니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다."
+              },
+              {
+                "kind": "list",
+                "html": "컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@브라우저 기반 접근성 감사를 통해 LLM 비용을 최적화하는 방식을 제시합니다. 전체 코드베이스를 스캔하는 대신 실제 렌더링된 DOM에서 접근성 위반을 감지하고, 그 결과에 포함된 파일만 열어 수정하도록 AI 에이전트를 유도하여 비용을 문제 규모에 따라 스케일링합니다. @accesslint/mcp와 브라우저 MCP를 조합하면 자동화된 접근성 리뷰를 효율적으로 운영할 수 있습니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다.",
+              "@@list@@자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다.",
+              "@@list@@컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-12",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-12"
+      },
+      {
+        "number": "13",
+        "platform": "DEV Community",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "web_accessibility",
+        "category": "웹접근성",
+        "date": "2026-04-26",
+        "route": "/articles/2026-04-27-13",
+        "href": "/articles/2026-04-27-13",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-13",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "접근성QA",
+          "WCAG",
+          "실무검수"
+        ],
+        "takeawayHtml": "접근성 자동 검사만으로는 Shopify 문제의 절반을 놓칠 수 있다",
+        "deckHtml": "DEV Community에서 Shopify 스토어의 접근성 검사에서 WAVE와 Avada 도구만으로는 WCAG 2.1 AA 요구사항의 약 50%를 놓칠 수 있습니다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-26"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "접근성QA / WCAG / 실무검수"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "web_accessibility"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Dev.to - Accessibility"
+          }
+        ],
+        "sourceUrl": "https://dev.to/agentkit/what-wave-and-avada-miss-on-your-shopify-store-here-are-5-wcag-failures-you-have-to-catch-by-hand-3hia",
+        "sourceTitle": "Dev.to - Accessibility",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: Shopify 스토어의 접근성 검사에서 WAVE와 Avada 도구만으로는 WCAG 2.1 AA 요구사항의 약 50%를 놓칠 수 있습니다. 자동화 스캐너는 정적 분석만 가능하므로, 스크린 리더로 실제 사용자 경험을 테스트하는 수동 검토가 필수적입니다. 웹 퍼블리셔는 자동 도구 결과에 의존하지 말고 직접 키보드 네비게이션과 스크린 리더 테스트를 통해 놓친 접근성 문제를 찾아야 합니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: Shopify 스토어의 접근성 검사에서 WAVE와 Avada 도구만으로는 WCAG 2.1 AA 요구사항의 약 50%를 놓칠 수 있습니다. 자동화 스캐너는 정적 분석만 가능하므로, 스크린 리더로 실제 사용자 경험을 테스트하는 수동 검토가 필수적입니다. 웹 퍼블리셔는 자동 도구 결과에 의존하지 말고 직접 키보드 네비게이션과 스크린 리더 테스트를 통해 놓친 접근성 문제를 찾아야 합니다.",
+              "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "Shopify 스토어의 접근성 검사에서 WAVE와 Avada 도구만으로는 WCAG 2.1 AA 요구사항의 약 50%를 놓칠 수 있습니다. 자동화 스캐너는 정적 분석만 가능하므로, 스크린 리더로 실제 사용자 경험을 테스트하는 수동 검토가 필수적입니다. 웹 퍼블리셔는 자동 도구 결과에 의존하지 말고 직접 키보드 네비게이션과 스크린 리더 테스트를 통해 놓친 접근성 문제를 찾아야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다."
+              },
+              {
+                "kind": "list",
+                "html": "컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@Shopify 스토어의 접근성 검사에서 WAVE와 Avada 도구만으로는 WCAG 2.1 AA 요구사항의 약 50%를 놓칠 수 있습니다. 자동화 스캐너는 정적 분석만 가능하므로, 스크린 리더로 실제 사용자 경험을 테스트하는 수동 검토가 필수적입니다. 웹 퍼블리셔는 자동 도구 결과에 의존하지 말고 직접 키보드 네비게이션과 스크린 리더 테스트를 통해 놓친 접근성 문제를 찾아야 합니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다.",
+              "@@list@@자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다.",
+              "@@list@@컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-13",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-13"
+      },
+      {
+        "number": "14",
+        "platform": "DEV Community",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "web_accessibility",
+        "category": "웹접근성",
+        "date": "2026-04-25",
+        "route": "/articles/2026-04-27-14",
+        "href": "/articles/2026-04-27-14",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-14",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "접근성QA",
+          "WCAG",
+          "실무검수"
+        ],
+        "takeawayHtml": "브랜드 컬러도 텍스트 역할과 장식 역할을 분리해야 한다",
+        "deckHtml": "DEV Community에서 Klein Blue(IKB #002FA7)는 순수한 형태로 어두운 배경에서 텍스트 가독성이 떨어져 접근성 기준(APCA Lc -12)을 만족하지 못합니다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-25"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "접근성QA / WCAG / 실무검수"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "web_accessibility"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Dev.to - Accessibility"
+          }
+        ],
+        "sourceUrl": "https://dev.to/palo_alto_ai/why-pure-klein-blue-disappears-as-text-and-the-two-slot-fix-225p",
+        "sourceTitle": "Dev.to - Accessibility",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: Klein Blue(IKB #002FA7)는 순수한 형태로 어두운 배경에서 텍스트 가독성이 떨어져 접근성 기준(APCA Lc -12)을 만족하지 못합니다. 해결책은 두 개의 ANSI 슬롯으로 역할을 분리하는 것입니다: 순수 IKB는 장식 요소(ansi:blue)에, 밝은 Klein-family blue(A8BEF0)는 본문 텍스트(ansi:blueBright)에 사용하여 APCA Lc 90 기준을 충족시킵니다. APCA 시스템이 WCAG보다 시각적 가독성을 정확히 평가하기 때문에 이 접근 방식이 유효합니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: Klein Blue(IKB #002FA7)는 순수한 형태로 어두운 배경에서 텍스트 가독성이 떨어져 접근성 기준(APCA Lc -12)을 만족하지 못합니다. 해결책은 두 개의 ANSI 슬롯으로 역할을 분리하는 것입니다: 순수 IKB는 장식 요소(ansi:blue)에, 밝은 Klein-family blue(A8BEF0)는 본문 텍스트(ansi:blueBright)에 사용하여 APCA Lc 90 기준을 충족시킵니다. APCA 시스템이 WCAG보다 시각적 가독성을 정확히 평가하기 때문에 이 접근 방식이 유효합니다.",
+              "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "Klein Blue(IKB #002FA7)는 순수한 형태로 어두운 배경에서 텍스트 가독성이 떨어져 접근성 기준(APCA Lc -12)을 만족하지 못합니다. 해결책은 두 개의 ANSI 슬롯으로 역할을 분리하는 것입니다: 순수 IKB는 장식 요소(ansi:blue)에, 밝은 Klein-family blue(A8BEF0)는 본문 텍스트(ansi:blueBright)에 사용하여 APCA Lc 90 기준을 충족시킵니다. APCA 시스템이 WCAG보다 시각적 가독성을 정확히 평가하기 때문에 이 접근 방식이 유효합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다."
+              },
+              {
+                "kind": "list",
+                "html": "컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@Klein Blue(IKB #002FA7)는 순수한 형태로 어두운 배경에서 텍스트 가독성이 떨어져 접근성 기준(APCA Lc -12)을 만족하지 못합니다. 해결책은 두 개의 ANSI 슬롯으로 역할을 분리하는 것입니다: 순수 IKB는 장식 요소(ansi:blue)에, 밝은 Klein-family blue(A8BEF0)는 본문 텍스트(ansi:blueBright)에 사용하여 APCA Lc 90 기준을 충족시킵니다. APCA 시스템이 WCAG보다 시각적 가독성을 정확히 평가하기 때문에 이 접근 방식이 유효합니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다.",
+              "@@list@@자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다.",
+              "@@list@@컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-14",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-14"
+      },
+      {
+        "number": "15",
+        "platform": "DEV Community",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "web_accessibility",
+        "category": "웹접근성",
+        "date": "2026-04-25",
+        "route": "/articles/2026-04-27-15",
+        "href": "/articles/2026-04-27-15",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-15",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "접근성QA",
+          "WCAG",
+          "실무검수"
+        ],
+        "takeawayHtml": "분리된 모바일 문서는 접근성 수정도 두 번 필요하다",
+        "deckHtml": "DEV Community에서 Showit은 데스크톱과 모바일 레이아웃을 별도의 독립 문서로 구성하기 때문에, 접근성 수정이 한쪽 캔버스에만 적용되면 다른 쪽은 그대로 남아 감사 점수가 개선되지 않는 문제가 발생한다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-25"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "접근성QA / WCAG / 실무검수"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "web_accessibility"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Dev.to - Accessibility"
+          }
+        ],
+        "sourceUrl": "https://dev.to/agentkit/showit-has-two-documents-thats-why-your-accessibility-fixes-arent-sticking-4i25",
+        "sourceTitle": "Dev.to - Accessibility",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: Showit은 데스크톱과 모바일 레이아웃을 별도의 독립 문서로 구성하기 때문에, 접근성 수정이 한쪽 캔버스에만 적용되면 다른 쪽은 그대로 남아 감사 점수가 개선되지 않는 문제가 발생한다. 스크린 리더는 실제 사용자가 보는 문서를 읽기 때문에, 양쪽 캔버스 모두에 alt 텍스트, 색상 대비 등의 접근성 개선을 적용해야 한다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: Showit은 데스크톱과 모바일 레이아웃을 별도의 독립 문서로 구성하기 때문에, 접근성 수정이 한쪽 캔버스에만 적용되면 다른 쪽은 그대로 남아 감사 점수가 개선되지 않는 문제가 발생한다. 스크린 리더는 실제 사용자가 보는 문서를 읽기 때문에, 양쪽 캔버스 모두에 alt 텍스트, 색상 대비 등의 접근성 개선을 적용해야 한다.",
+              "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "Showit은 데스크톱과 모바일 레이아웃을 별도의 독립 문서로 구성하기 때문에, 접근성 수정이 한쪽 캔버스에만 적용되면 다른 쪽은 그대로 남아 감사 점수가 개선되지 않는 문제가 발생한다. 스크린 리더는 실제 사용자가 보는 문서를 읽기 때문에, 양쪽 캔버스 모두에 alt 텍스트, 색상 대비 등의 접근성 개선을 적용해야 한다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다."
+              },
+              {
+                "kind": "list",
+                "html": "컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@Showit은 데스크톱과 모바일 레이아웃을 별도의 독립 문서로 구성하기 때문에, 접근성 수정이 한쪽 캔버스에만 적용되면 다른 쪽은 그대로 남아 감사 점수가 개선되지 않는 문제가 발생한다. 스크린 리더는 실제 사용자가 보는 문서를 읽기 때문에, 양쪽 캔버스 모두에 alt 텍스트, 색상 대비 등의 접근성 개선을 적용해야 한다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다.",
+              "@@list@@자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다.",
+              "@@list@@컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-15",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-15"
+      },
+      {
+        "number": "16",
+        "platform": "DEV Community",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "web_accessibility",
+        "category": "웹접근성",
+        "date": "2026-04-25",
+        "route": "/articles/2026-04-27-16",
+        "href": "/articles/2026-04-27-16",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-16",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "접근성QA",
+          "WCAG",
+          "실무검수"
+        ],
+        "takeawayHtml": "UX·접근성 감사 자동화는 빠른 1차 진단으로 써야 한다",
+        "deckHtml": "DEV Community에서 UX 및 접근성 감사를 자동화하는 &#x27;Parallax&#x27; 도구 소개. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-25"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "접근성QA / WCAG / 실무검수"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "web_accessibility"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Dev.to - Accessibility"
+          }
+        ],
+        "sourceUrl": "https://dev.to/amf_floyd_9e49aef1a680dae/i-built-a-tool-that-runs-a-full-ux-accessibility-audit-on-any-url-in-under-5-minutes-2eic",
+        "sourceTitle": "Dev.to - Accessibility",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: UX 및 접근성 감사를 자동화하는 &#x27;Parallax&#x27; 도구 소개. 기존에 수시간이 소요되던 휴리스틱 평가, WCAG 검사 등을 5분 이내에 완료할 수 있으며, 무료 티어에서 월 1회 감사와 점수 및 카테고리별 분석을 제공합니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: UX 및 접근성 감사를 자동화하는 &#x27;Parallax&#x27; 도구 소개. 기존에 수시간이 소요되던 휴리스틱 평가, WCAG 검사 등을 5분 이내에 완료할 수 있으며, 무료 티어에서 월 1회 감사와 점수 및 카테고리별 분석을 제공합니다.",
+              "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "UX 및 접근성 감사를 자동화하는 &#x27;Parallax&#x27; 도구 소개. 기존에 수시간이 소요되던 휴리스틱 평가, WCAG 검사 등을 5분 이내에 완료할 수 있으며, 무료 티어에서 월 1회 감사와 점수 및 카테고리별 분석을 제공합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다."
+              },
+              {
+                "kind": "list",
+                "html": "컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@UX 및 접근성 감사를 자동화하는 &#x27;Parallax&#x27; 도구 소개. 기존에 수시간이 소요되던 휴리스틱 평가, WCAG 검사 등을 5분 이내에 완료할 수 있으며, 무료 티어에서 월 1회 감사와 점수 및 카테고리별 분석을 제공합니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다.",
+              "@@list@@자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다.",
+              "@@list@@컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-16",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-16"
+      },
+      {
+        "number": "17",
+        "platform": "DEV Community",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "web_accessibility",
+        "category": "웹접근성",
+        "date": "2026-04-25",
+        "route": "/articles/2026-04-27-17",
+        "href": "/articles/2026-04-27-17",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-17",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "프론트엔드",
+          "퍼블리싱",
+          "품질관리"
+        ],
+        "takeawayHtml": "자율 UX 감사는 사용자 플로우 기준으로 설계해야 한다",
+        "deckHtml": "DEV Community에서 AI 기반 UX 감사 도구 &#x27;Parallax&#x27;는 Nielsen의 10가지 유용성 휴리스틱과 WCAG 2.1 AA 접근성 기준을 자동으로 평가합니다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-25"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "프론트엔드 / 퍼블리싱 / 품질관리"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "web_accessibility"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Dev.to - Accessibility"
+          }
+        ],
+        "sourceUrl": "https://dev.to/amf_floyd_9e49aef1a680dae/how-we-built-an-autonomous-ux-auditing-agent-46b9",
+        "sourceTitle": "Dev.to - Accessibility",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: AI 기반 UX 감사 도구 &#x27;Parallax&#x27;는 Nielsen의 10가지 유용성 휴리스틱과 WCAG 2.1 AA 접근성 기준을 자동으로 평가합니다. 주요 사용자 플로우(회원가입→결제, 검색→상품상세→결제 등)를 중심으로 페이지 구조, 폼 라벨, 키보드 네비게이션, 포커스 인디케이터, 색상 대비 등을 점수화하여 수 분 내에 UX 문제점을 파악할 수 있습니다. 이는 기존의 분기별 수동 감사 프로세스를 자동화하고, 접근성 준수와 성능 개선을 효율적으로 추진할 수 있게 합니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: AI 기반 UX 감사 도구 &#x27;Parallax&#x27;는 Nielsen의 10가지 유용성 휴리스틱과 WCAG 2.1 AA 접근성 기준을 자동으로 평가합니다. 주요 사용자 플로우(회원가입→결제, 검색→상품상세→결제 등)를 중심으로 페이지 구조, 폼 라벨, 키보드 네비게이션, 포커스 인디케이터, 색상 대비 등을 점수화하여 수 분 내에 UX 문제점을 파악할 수 있습니다. 이는 기존의 분기별 수동 감사 프로세스를 자동화하고, 접근성 준수와 성능 개선을 효율적으로 추진할 수 있게 합니다.",
+              "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "AI 기반 UX 감사 도구 &#x27;Parallax&#x27;는 Nielsen의 10가지 유용성 휴리스틱과 WCAG 2.1 AA 접근성 기준을 자동으로 평가합니다. 주요 사용자 플로우(회원가입→결제, 검색→상품상세→결제 등)를 중심으로 페이지 구조, 폼 라벨, 키보드 네비게이션, 포커스 인디케이터, 색상 대비 등을 점수화하여 수 분 내에 UX 문제점을 파악할 수 있습니다. 이는 기존의 분기별 수동 감사 프로세스를 자동화하고, 접근성 준수와 성능 개선을 효율적으로 추진할 수 있게 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다."
+              },
+              {
+                "kind": "list",
+                "html": "컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@AI 기반 UX 감사 도구 &#x27;Parallax&#x27;는 Nielsen의 10가지 유용성 휴리스틱과 WCAG 2.1 AA 접근성 기준을 자동으로 평가합니다. 주요 사용자 플로우(회원가입→결제, 검색→상품상세→결제 등)를 중심으로 페이지 구조, 폼 라벨, 키보드 네비게이션, 포커스 인디케이터, 색상 대비 등을 점수화하여 수 분 내에 UX 문제점을 파악할 수 있습니다. 이는 기존의 분기별 수동 감사 프로세스를 자동화하고, 접근성 준수와 성능 개선을 효율적으로 추진할 수 있게 합니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다.",
+              "@@list@@자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다.",
+              "@@list@@컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-17",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-17"
+      },
+      {
+        "number": "18",
+        "platform": "DEV Community",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "web_accessibility",
+        "category": "웹접근성",
+        "date": "2026-04-24",
+        "route": "/articles/2026-04-27-18",
+        "href": "/articles/2026-04-27-18",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-18",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "접근성QA",
+          "WCAG",
+          "실무검수"
+        ],
+        "takeawayHtml": "접근성 검사는 PR 단계에서 실패하게 만들어야 한다",
+        "deckHtml": "DEV Community에서 웹 개발자가 매 PR마다 자동으로 WCAG 2.1 접근성을 검사할 수 있는 GitHub Action 도구를 소개합니다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-24"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "접근성QA / WCAG / 실무검수"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "web_accessibility"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Dev.to - Accessibility"
+          }
+        ],
+        "sourceUrl": "https://dev.to/jpatel3/audit-wcag-21-accessibility-on-every-pull-request-free-github-action-111b",
+        "sourceTitle": "Dev.to - Accessibility",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: 웹 개발자가 매 PR마다 자동으로 WCAG 2.1 접근성을 검사할 수 있는 GitHub Action 도구를 소개합니다. axe-core 기반의 무료 액션으로 심각한 접근성 위반을 감지하면 빌드를 실패시켜 배포 전 접근성 문제를 사전에 방지할 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: 웹 개발자가 매 PR마다 자동으로 WCAG 2.1 접근성을 검사할 수 있는 GitHub Action 도구를 소개합니다. axe-core 기반의 무료 액션으로 심각한 접근성 위반을 감지하면 빌드를 실패시켜 배포 전 접근성 문제를 사전에 방지할 수 있습니다.",
+              "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "웹 개발자가 매 PR마다 자동으로 WCAG 2.1 접근성을 검사할 수 있는 GitHub Action 도구를 소개합니다. axe-core 기반의 무료 액션으로 심각한 접근성 위반을 감지하면 빌드를 실패시켜 배포 전 접근성 문제를 사전에 방지할 수 있습니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다."
+              },
+              {
+                "kind": "list",
+                "html": "컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@웹 개발자가 매 PR마다 자동으로 WCAG 2.1 접근성을 검사할 수 있는 GitHub Action 도구를 소개합니다. axe-core 기반의 무료 액션으로 심각한 접근성 위반을 감지하면 빌드를 실패시켜 배포 전 접근성 문제를 사전에 방지할 수 있습니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다.",
+              "@@list@@자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다.",
+              "@@list@@컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-18",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-18"
+      },
+      {
+        "number": "19",
+        "platform": "DEV Community",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "web_accessibility",
+        "category": "웹접근성",
+        "date": "2026-04-24",
+        "route": "/articles/2026-04-27-19",
+        "href": "/articles/2026-04-27-19",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-19",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "접근성QA",
+          "WCAG",
+          "실무검수"
+        ],
+        "takeawayHtml": "접근성 primitive는 직접 만들기보다 검증된 라이브러리를 쓰는 편이 낫다",
+        "deckHtml": "DEV Community에서 웹 퍼블리셔가 포커스 트랩, ARIA 속성, 스크린 리더 호환성 등 접근성 기능을 처음부터 구현하려다 예상치 못한 복잡성(포털 렌더링, contenteditable 요소, 브라우저/보조기술 호환성 등)을 마주함. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-24"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "접근성QA / WCAG / 실무검수"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "web_accessibility"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Dev.to - Accessibility"
+          }
+        ],
+        "sourceUrl": "https://dev.to/7onic/design-to-code-4-why-i-chose-radix-over-custom-primitives-50eo",
+        "sourceTitle": "Dev.to - Accessibility",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: 웹 퍼블리셔가 포커스 트랩, ARIA 속성, 스크린 리더 호환성 등 접근성 기능을 처음부터 구현하려다 예상치 못한 복잡성(포털 렌더링, contenteditable 요소, 브라우저/보조기술 호환성 등)을 마주함. 결국 Radix UI 같은 검증된 컴포넌트 라이브러리를 선택하는 것이 효율적임을 깨달은 경험담. 개인 개발자가 모든 엣지 케이스를 처리하기보다 다년간의 테스트와 실제 버그 리포트를 거친 전문 라이브러리에 의존하는 것의 중요성을 강조."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: 웹 퍼블리셔가 포커스 트랩, ARIA 속성, 스크린 리더 호환성 등 접근성 기능을 처음부터 구현하려다 예상치 못한 복잡성(포털 렌더링, contenteditable 요소, 브라우저/보조기술 호환성 등)을 마주함. 결국 Radix UI 같은 검증된 컴포넌트 라이브러리를 선택하는 것이 효율적임을 깨달은 경험담. 개인 개발자가 모든 엣지 케이스를 처리하기보다 다년간의 테스트와 실제 버그 리포트를 거친 전문 라이브러리에 의존하는 것의 중요성을 강조.",
+              "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "웹 퍼블리셔가 포커스 트랩, ARIA 속성, 스크린 리더 호환성 등 접근성 기능을 처음부터 구현하려다 예상치 못한 복잡성(포털 렌더링, contenteditable 요소, 브라우저/보조기술 호환성 등)을 마주함. 결국 Radix UI 같은 검증된 컴포넌트 라이브러리를 선택하는 것이 효율적임을 깨달은 경험담. 개인 개발자가 모든 엣지 케이스를 처리하기보다 다년간의 테스트와 실제 버그 리포트를 거친 전문 라이브러리에 의존하는 것의 중요성을 강조."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다."
+              },
+              {
+                "kind": "list",
+                "html": "컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@웹 퍼블리셔가 포커스 트랩, ARIA 속성, 스크린 리더 호환성 등 접근성 기능을 처음부터 구현하려다 예상치 못한 복잡성(포털 렌더링, contenteditable 요소, 브라우저/보조기술 호환성 등)을 마주함. 결국 Radix UI 같은 검증된 컴포넌트 라이브러리를 선택하는 것이 효율적임을 깨달은 경험담. 개인 개발자가 모든 엣지 케이스를 처리하기보다 다년간의 테스트와 실제 버그 리포트를 거친 전문 라이브러리에 의존하는 것의 중요성을 강조.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다.",
+              "@@list@@자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다.",
+              "@@list@@컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-19",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-19"
+      },
+      {
+        "number": "20",
+        "platform": "DEV Community",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "web_accessibility",
+        "category": "웹접근성",
+        "date": "2026-04-24",
+        "route": "/articles/2026-04-27-20",
+        "href": "/articles/2026-04-27-20",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-20",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "접근성QA",
+          "WCAG",
+          "실무검수"
+        ],
+        "takeawayHtml": "스크린리더 노이즈를 줄이고 액션을 명확히 노출해야 한다",
+        "deckHtml": "DEV Community에서 Flutter 앱의 접근성을 향상시키기 위해 스크린 리더가 불필요한 요소는 숨기고 사용자 상호작용이 가능한 커스텀 제스처는 명명된 액션으로 노출해야 합니다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-24"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "접근성QA / WCAG / 실무검수"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "web_accessibility"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Dev.to - Accessibility"
+          }
+        ],
+        "sourceUrl": "https://dev.to/gdg/a-practical-guide-to-flutter-accessibility-part-2-hiding-noise-exposing-actions-2f7i",
+        "sourceTitle": "Dev.to - Accessibility",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: Flutter 앱의 접근성을 향상시키기 위해 스크린 리더가 불필요한 요소는 숨기고 사용자 상호작용이 가능한 커스텀 제스처는 명명된 액션으로 노출해야 합니다. 장식용 요소나 중복된 레이블은 제거하여 음성 안내의 노이즈를 줄이고, 시각 사용자와 동일한 기능을 스크린 리더 사용자도 수행할 수 있도록 구현해야 합니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: Flutter 앱의 접근성을 향상시키기 위해 스크린 리더가 불필요한 요소는 숨기고 사용자 상호작용이 가능한 커스텀 제스처는 명명된 액션으로 노출해야 합니다. 장식용 요소나 중복된 레이블은 제거하여 음성 안내의 노이즈를 줄이고, 시각 사용자와 동일한 기능을 스크린 리더 사용자도 수행할 수 있도록 구현해야 합니다.",
+              "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "Flutter 앱의 접근성을 향상시키기 위해 스크린 리더가 불필요한 요소는 숨기고 사용자 상호작용이 가능한 커스텀 제스처는 명명된 액션으로 노출해야 합니다. 장식용 요소나 중복된 레이블은 제거하여 음성 안내의 노이즈를 줄이고, 시각 사용자와 동일한 기능을 스크린 리더 사용자도 수행할 수 있도록 구현해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다."
+              },
+              {
+                "kind": "list",
+                "html": "컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@Flutter 앱의 접근성을 향상시키기 위해 스크린 리더가 불필요한 요소는 숨기고 사용자 상호작용이 가능한 커스텀 제스처는 명명된 액션으로 노출해야 합니다. 장식용 요소나 중복된 레이블은 제거하여 음성 안내의 노이즈를 줄이고, 시각 사용자와 동일한 기능을 스크린 리더 사용자도 수행할 수 있도록 구현해야 합니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다.",
+              "@@list@@자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다.",
+              "@@list@@컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-20",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-20"
+      },
+      {
+        "number": "21",
+        "platform": "DEV Community",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "web_accessibility",
+        "category": "웹접근성",
+        "date": "2026-04-24",
+        "route": "/articles/2026-04-27-21",
+        "href": "/articles/2026-04-27-21",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-21",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "접근성QA",
+          "WCAG",
+          "실무검수"
+        ],
+        "takeawayHtml": "자동 접근성 도구가 못 잡는 상호작용 문제를 수동 QA에 넣어야 한다",
+        "deckHtml": "DEV Community에서 자동화된 접근성 검사 도구는 구조적 오류를 잘 잡지만, 실제 사용자 경험의 심각한 문제들을 놓친다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-24"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "접근성QA / WCAG / 실무검수"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "web_accessibility"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Dev.to - Accessibility"
+          }
+        ],
+        "sourceUrl": "https://dev.to/a11ysolutions/accessibility-issues-that-automated-tools-wont-catch-from-real-audits-2o8l",
+        "sourceTitle": "Dev.to - Accessibility",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: 자동화된 접근성 검사 도구는 구조적 오류를 잘 잡지만, 실제 사용자 경험의 심각한 문제들을 놓친다. 키보드 포커스 트랩, 예측 불가능한 포커스 이동, aria-live 누락으로 인한 스크린리더 미공지, 유효성 검사 오류 알림 미제공 등 상호작용(interaction) 관련 문제들이 자동화 도구에 나타나지 않는다. 실제 접근성은 검사 점수가 아닌 사용자가 실제로 서비스를 완료할 수 있는지 여부이므로, 키보드 네비게이션, 스크린리더 테스트 등 수동 테스트가 필수적이다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: 자동화된 접근성 검사 도구는 구조적 오류를 잘 잡지만, 실제 사용자 경험의 심각한 문제들을 놓친다. 키보드 포커스 트랩, 예측 불가능한 포커스 이동, aria-live 누락으로 인한 스크린리더 미공지, 유효성 검사 오류 알림 미제공 등 상호작용(interaction) 관련 문제들이 자동화 도구에 나타나지 않는다. 실제 접근성은 검사 점수가 아닌 사용자가 실제로 서비스를 완료할 수 있는지 여부이므로, 키보드 네비게이션, 스크린리더 테스트 등 수동 테스트가 필수적이다.",
+              "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "자동화된 접근성 검사 도구는 구조적 오류를 잘 잡지만, 실제 사용자 경험의 심각한 문제들을 놓친다. 키보드 포커스 트랩, 예측 불가능한 포커스 이동, aria-live 누락으로 인한 스크린리더 미공지, 유효성 검사 오류 알림 미제공 등 상호작용(interaction) 관련 문제들이 자동화 도구에 나타나지 않는다. 실제 접근성은 검사 점수가 아닌 사용자가 실제로 서비스를 완료할 수 있는지 여부이므로, 키보드 네비게이션, 스크린리더 테스트 등 수동 테스트가 필수적이다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다."
+              },
+              {
+                "kind": "list",
+                "html": "컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@자동화된 접근성 검사 도구는 구조적 오류를 잘 잡지만, 실제 사용자 경험의 심각한 문제들을 놓친다. 키보드 포커스 트랩, 예측 불가능한 포커스 이동, aria-live 누락으로 인한 스크린리더 미공지, 유효성 검사 오류 알림 미제공 등 상호작용(interaction) 관련 문제들이 자동화 도구에 나타나지 않는다. 실제 접근성은 검사 점수가 아닌 사용자가 실제로 서비스를 완료할 수 있는지 여부이므로, 키보드 네비게이션, 스크린리더 테스트 등 수동 테스트가 필수적이다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다.",
+              "@@list@@자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다.",
+              "@@list@@컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-21",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-21"
+      },
+      {
+        "number": "22",
+        "platform": "DEV Community",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "web_accessibility",
+        "category": "웹접근성",
+        "date": "2026-04-23",
+        "route": "/articles/2026-04-27-22",
+        "href": "/articles/2026-04-27-22",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-22",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "접근성QA",
+          "WCAG",
+          "실무검수"
+        ],
+        "takeawayHtml": "EAA 대응은 적용 범위 판단과 빠른 감사부터 시작해야 한다",
+        "deckHtml": "DEV Community에서 2025년 6월부터 시행된 유럽접근성법(EAA)에 대해 비즈니스 오너가 15분 안에 자신의 웹사이트 규정 준수 여부를 확인할 수 있는 실용적인 가이드를 제시합니다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-23"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "접근성QA / WCAG / 실무검수"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "web_accessibility"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Dev.to - Accessibility"
+          }
+        ],
+        "sourceUrl": "https://dev.to/agentkit/the-eaa-is-live-heres-a-15-minute-compliance-check-any-business-owner-can-run-4ld0",
+        "sourceTitle": "Dev.to - Accessibility",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: 2025년 6월부터 시행된 유럽접근성법(EAA)에 대해 비즈니스 오너가 15분 안에 자신의 웹사이트 규정 준수 여부를 확인할 수 있는 실용적인 가이드를 제시합니다. EU 고객이 있는지, 마이크로기업 여부 등 적용 범위를 판단한 후 Chrome의 내장 도구인 Lighthouse를 활용하여 웹 접근성을 감사할 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: 2025년 6월부터 시행된 유럽접근성법(EAA)에 대해 비즈니스 오너가 15분 안에 자신의 웹사이트 규정 준수 여부를 확인할 수 있는 실용적인 가이드를 제시합니다. EU 고객이 있는지, 마이크로기업 여부 등 적용 범위를 판단한 후 Chrome의 내장 도구인 Lighthouse를 활용하여 웹 접근성을 감사할 수 있습니다.",
+              "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "2025년 6월부터 시행된 유럽접근성법(EAA)에 대해 비즈니스 오너가 15분 안에 자신의 웹사이트 규정 준수 여부를 확인할 수 있는 실용적인 가이드를 제시합니다. EU 고객이 있는지, 마이크로기업 여부 등 적용 범위를 판단한 후 Chrome의 내장 도구인 Lighthouse를 활용하여 웹 접근성을 감사할 수 있습니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다."
+              },
+              {
+                "kind": "list",
+                "html": "컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@2025년 6월부터 시행된 유럽접근성법(EAA)에 대해 비즈니스 오너가 15분 안에 자신의 웹사이트 규정 준수 여부를 확인할 수 있는 실용적인 가이드를 제시합니다. EU 고객이 있는지, 마이크로기업 여부 등 적용 범위를 판단한 후 Chrome의 내장 도구인 Lighthouse를 활용하여 웹 접근성을 감사할 수 있습니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다.",
+              "@@list@@자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다.",
+              "@@list@@컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-22",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-22"
+      },
+      {
+        "number": "23",
+        "platform": "Smashing Magazine",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "web_accessibility",
+        "category": "웹접근성",
+        "date": "2026-04-20",
+        "route": "/articles/2026-04-27-23",
+        "href": "/articles/2026-04-27-23",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-23",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "접근성QA",
+          "WCAG",
+          "실무검수"
+        ],
+        "takeawayHtml": "세션 타임아웃은 인증 UX의 접근성 장벽이다",
+        "deckHtml": "Smashing Magazine에서 세션 타임아웃이 접근성 측면에서 중요한 장벽이 될 수 있다는 점을 다룬 기사입니다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-20"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "접근성QA / WCAG / 실무검수"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "web_accessibility"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Smashing Magazine"
+          }
+        ],
+        "sourceUrl": "https://smashingmagazine.com/2026/04/session-timeouts-accessibility-barrier-authentication-design/",
+        "sourceTitle": "Smashing Magazine",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: 세션 타임아웃이 접근성 측면에서 중요한 장벽이 될 수 있다는 점을 다룬 기사입니다. 특히 장애인 사용자들이 온라인 작업을 완료하기 어려워지는 문제를 제시하며, 사려 깊은 세션 관리 구현을 통해 접근성을 개선하고 사용자 경험을 향상시키는 방법을 제안합니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: 세션 타임아웃이 접근성 측면에서 중요한 장벽이 될 수 있다는 점을 다룬 기사입니다. 특히 장애인 사용자들이 온라인 작업을 완료하기 어려워지는 문제를 제시하며, 사려 깊은 세션 관리 구현을 통해 접근성을 개선하고 사용자 경험을 향상시키는 방법을 제안합니다.",
+              "기술 맥락: 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "세션 타임아웃이 접근성 측면에서 중요한 장벽이 될 수 있다는 점을 다룬 기사입니다. 특히 장애인 사용자들이 온라인 작업을 완료하기 어려워지는 문제를 제시하며, 사려 깊은 세션 관리 구현을 통해 접근성을 개선하고 사용자 경험을 향상시키는 방법을 제안합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다."
+              },
+              {
+                "kind": "list",
+                "html": "컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@세션 타임아웃이 접근성 측면에서 중요한 장벽이 될 수 있다는 점을 다룬 기사입니다. 특히 장애인 사용자들이 온라인 작업을 완료하기 어려워지는 문제를 제시하며, 사려 깊은 세션 관리 구현을 통해 접근성을 개선하고 사용자 경험을 향상시키는 방법을 제안합니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@키보드 탐색, 포커스 순서, 스크린리더 안내를 자동 점수와 별도로 확인합니다.",
+              "@@list@@자동화 도구 결과에는 실제 DOM 위치와 사용자 플로우를 함께 기록합니다.",
+              "@@list@@컴포넌트 수정 후 모바일/데스크톱 양쪽 화면에서 접근성 회귀를 다시 봅니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-23",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-23"
+      },
+      {
+        "number": "24",
+        "platform": "CSS Weekly",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "performance",
+        "category": "Performance",
+        "date": "2026-04-23",
+        "route": "/articles/2026-04-27-24",
+        "href": "/articles/2026-04-27-24",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-24",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "프론트엔드",
+          "퍼블리싱",
+          "품질관리"
+        ],
+        "takeawayHtml": "Lazy loading은 성능을 해치지 않는 우선순위 설계가 필요하다",
+        "deckHtml": "웹 성능을 저하시키지 않으면서 lazy loading을 효과적으로 활용하는 방법과 인터랙티브 커버 컴포넌트 구현 방법을 다룬 CSS 관련 뉴스레터입니다. 이 항목은 Performance 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-23"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "프론트엔드 / 퍼블리싱 / 품질관리"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "performance"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "CSS Weekly"
+          }
+        ],
+        "sourceUrl": "https://feedpress.me/link/24028/17324734/issue-639",
+        "sourceTitle": "CSS Weekly",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: 웹 성능을 저하시키지 않으면서 lazy loading을 효과적으로 활용하는 방법과 인터랙티브 커버 컴포넌트 구현 방법을 다룬 CSS 관련 뉴스레터입니다. 웹 퍼블리셔가 성능 최적화와 UI 컴포넌트 구현 시 참고할 수 있는 실용적인 콘텐츠를 제공합니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 Performance 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: 웹 성능을 저하시키지 않으면서 lazy loading을 효과적으로 활용하는 방법과 인터랙티브 커버 컴포넌트 구현 방법을 다룬 CSS 관련 뉴스레터입니다. 웹 퍼블리셔가 성능 최적화와 UI 컴포넌트 구현 시 참고할 수 있는 실용적인 콘텐츠를 제공합니다.",
+              "기술 맥락: 이 항목은 Performance 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "웹 성능을 저하시키지 않으면서 lazy loading을 효과적으로 활용하는 방법과 인터랙티브 커버 컴포넌트 구현 방법을 다룬 CSS 관련 뉴스레터입니다. 웹 퍼블리셔가 성능 최적화와 UI 컴포넌트 구현 시 참고할 수 있는 실용적인 콘텐츠를 제공합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "LCP 후보 이미지는 lazy loading 대상에서 제외하고 명시적으로 우선순위를 줍니다."
+              },
+              {
+                "kind": "list",
+                "html": "iframe과 영상은 aspect-ratio, poster, placeholder로 CLS를 줄입니다."
+              },
+              {
+                "kind": "list",
+                "html": "Core Web Vitals와 실제 모바일 네트워크 조건에서 성능 회귀를 확인합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "Performance: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@웹 성능을 저하시키지 않으면서 lazy loading을 효과적으로 활용하는 방법과 인터랙티브 커버 컴포넌트 구현 방법을 다룬 CSS 관련 뉴스레터입니다. 웹 퍼블리셔가 성능 최적화와 UI 컴포넌트 구현 시 참고할 수 있는 실용적인 콘텐츠를 제공합니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@LCP 후보 이미지는 lazy loading 대상에서 제외하고 명시적으로 우선순위를 줍니다.",
+              "@@list@@iframe과 영상은 aspect-ratio, poster, placeholder로 CLS를 줄입니다.",
+              "@@list@@Core Web Vitals와 실제 모바일 네트워크 조건에서 성능 회귀를 확인합니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@Performance: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-24",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-24"
+      },
+      {
+        "number": "25",
+        "platform": "The Changelog",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "tool",
+        "category": "TOOL",
+        "date": "2026-04-24",
+        "route": "/articles/2026-04-27-25",
+        "href": "/articles/2026-04-27-25",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-25",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "AI에이전트",
+          "개발도구",
+          "UX품질"
+        ],
+        "takeawayHtml": "에이전트 시대의 개발자 도구는 마지막 30%를 도와야 한다",
+        "deckHtml": "The Changelog에서 이 인터뷰는 AI 에이전트 시대의 개발자 도구 재설계에 관한 내용입니다. 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-24"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "AI에이전트 / 개발도구 / UX품질"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "tool"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "The Changelog"
+          }
+        ],
+        "sourceUrl": "https://changelog.com/podcast/680",
+        "sourceTitle": "The Changelog",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: 이 인터뷰는 AI 에이전트 시대의 개발자 도구 재설계에 관한 내용입니다. Amelia Wattenberger는 소프트웨어 프로젝트의 마지막 30%가 가장 어려워질 것이라 주장하며, 에이전트 중심 세계에서 UI/UX 설계의 패러다임 변화, 워크스페이스 기반 인터페이스 설계, 프로토타이핑은 쉬워지지만 완성도가 어려워지는 트레이드오프를 논의합니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: 이 인터뷰는 AI 에이전트 시대의 개발자 도구 재설계에 관한 내용입니다. Amelia Wattenberger는 소프트웨어 프로젝트의 마지막 30%가 가장 어려워질 것이라 주장하며, 에이전트 중심 세계에서 UI/UX 설계의 패러다임 변화, 워크스페이스 기반 인터페이스 설계, 프로토타이핑은 쉬워지지만 완성도가 어려워지는 트레이드오프를 논의합니다.",
+              "기술 맥락: 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 인터뷰는 AI 에이전트 시대의 개발자 도구 재설계에 관한 내용입니다. Amelia Wattenberger는 소프트웨어 프로젝트의 마지막 30%가 가장 어려워질 것이라 주장하며, 에이전트 중심 세계에서 UI/UX 설계의 패러다임 변화, 워크스페이스 기반 인터페이스 설계, 프로토타이핑은 쉬워지지만 완성도가 어려워지는 트레이드오프를 논의합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "도구 자체보다 화면 구현, 리뷰, QA 흐름에 연결되는지 먼저 봅니다."
+              },
+              {
+                "kind": "list",
+                "html": "AI 에이전트나 자동화 결과는 근거와 변경 내역을 사람이 확인할 수 있어야 합니다."
+              },
+              {
+                "kind": "list",
+                "html": "프로덕션 레디 기준에 시맨틱 HTML, 접근성, 성능 검증을 포함합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "Tool: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@이 인터뷰는 AI 에이전트 시대의 개발자 도구 재설계에 관한 내용입니다. Amelia Wattenberger는 소프트웨어 프로젝트의 마지막 30%가 가장 어려워질 것이라 주장하며, 에이전트 중심 세계에서 UI/UX 설계의 패러다임 변화, 워크스페이스 기반 인터페이스 설계, 프로토타이핑은 쉬워지지만 완성도가 어려워지는 트레이드오프를 논의합니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@도구 자체보다 화면 구현, 리뷰, QA 흐름에 연결되는지 먼저 봅니다.",
+              "@@list@@AI 에이전트나 자동화 결과는 근거와 변경 내역을 사람이 확인할 수 있어야 합니다.",
+              "@@list@@프로덕션 레디 기준에 시맨틱 HTML, 접근성, 성능 검증을 포함합니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@Tool: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-25",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-25"
+      },
+      {
+        "number": "26",
+        "platform": "DEV Community",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "tool",
+        "category": "TOOL",
+        "date": "2026-04-24",
+        "route": "/articles/2026-04-27-26",
+        "href": "/articles/2026-04-27-26",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-26",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "CoreWebVitals",
+          "성능QA",
+          "로딩전략"
+        ],
+        "takeawayHtml": "소규모 웹사이트의 성능·접근성 부채를 먼저 수치로 봐야 한다",
+        "deckHtml": "DEV Community에서 2026년 소규모 B2B 웹사이트 292개 감사 결과, 96.9%가 모바일 Core Web Vitals 중 최소 하나 이상 실패했으며, 모든 사이트(100%)가 접근성 링크 레이블 규칙을 위반했습니다. 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-24"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "CoreWebVitals / 성능QA / 로딩전략"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "tool"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Dev.to - Accessibility"
+          }
+        ],
+        "sourceUrl": "https://dev.to/joshua_gutierrez/state-of-small-business-websites-2026-study-969-fail-core-web-vitals-106i",
+        "sourceTitle": "Dev.to - Accessibility",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: 2026년 소규모 B2B 웹사이트 292개 감사 결과, 96.9%가 모바일 Core Web Vitals 중 최소 하나 이상 실패했으며, 모든 사이트(100%)가 접근성 링크 레이블 규칙을 위반했습니다. 특히 LCP 86.4%, FCP 72.4%가 부실 성능을 기록했으며, 성능 최적화와 접근성 개선의 시급함을 보여줍니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: 2026년 소규모 B2B 웹사이트 292개 감사 결과, 96.9%가 모바일 Core Web Vitals 중 최소 하나 이상 실패했으며, 모든 사이트(100%)가 접근성 링크 레이블 규칙을 위반했습니다. 특히 LCP 86.4%, FCP 72.4%가 부실 성능을 기록했으며, 성능 최적화와 접근성 개선의 시급함을 보여줍니다.",
+              "기술 맥락: 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "2026년 소규모 B2B 웹사이트 292개 감사 결과, 96.9%가 모바일 Core Web Vitals 중 최소 하나 이상 실패했으며, 모든 사이트(100%)가 접근성 링크 레이블 규칙을 위반했습니다. 특히 LCP 86.4%, FCP 72.4%가 부실 성능을 기록했으며, 성능 최적화와 접근성 개선의 시급함을 보여줍니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "도구 자체보다 화면 구현, 리뷰, QA 흐름에 연결되는지 먼저 봅니다."
+              },
+              {
+                "kind": "list",
+                "html": "AI 에이전트나 자동화 결과는 근거와 변경 내역을 사람이 확인할 수 있어야 합니다."
+              },
+              {
+                "kind": "list",
+                "html": "프로덕션 레디 기준에 시맨틱 HTML, 접근성, 성능 검증을 포함합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "Tool: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@2026년 소규모 B2B 웹사이트 292개 감사 결과, 96.9%가 모바일 Core Web Vitals 중 최소 하나 이상 실패했으며, 모든 사이트(100%)가 접근성 링크 레이블 규칙을 위반했습니다. 특히 LCP 86.4%, FCP 72.4%가 부실 성능을 기록했으며, 성능 최적화와 접근성 개선의 시급함을 보여줍니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@도구 자체보다 화면 구현, 리뷰, QA 흐름에 연결되는지 먼저 봅니다.",
+              "@@list@@AI 에이전트나 자동화 결과는 근거와 변경 내역을 사람이 확인할 수 있어야 합니다.",
+              "@@list@@프로덕션 레디 기준에 시맨틱 HTML, 접근성, 성능 검증을 포함합니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@Tool: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-26",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-26"
+      },
+      {
+        "number": "27",
+        "platform": "Smashing Magazine",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "tool",
+        "category": "TOOL",
+        "date": "2026-04-22",
+        "route": "/articles/2026-04-27-27",
+        "href": "/articles/2026-04-27-27",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-27",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "AI에이전트",
+          "개발도구",
+          "UX품질"
+        ],
+        "takeawayHtml": "프로덕션 레디 디자인은 시맨틱과 접근성까지 포함해야 한다",
+        "deckHtml": "Smashing Magazine에서 AI 도입으로 인해 UX 디자인 역할이 재정의되면서 디자인과 엔지니어링의 경계가 모호해지고 있습니다. 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-22"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "AI에이전트 / 개발도구 / UX품질"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "tool"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Smashing Magazine"
+          }
+        ],
+        "sourceUrl": "https://smashingmagazine.com/2026/04/production-ready-becomes-design-deliverable-ux/",
+        "sourceTitle": "Smashing Magazine",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: AI 도입으로 인해 UX 디자인 역할이 재정의되면서 디자인과 엔지니어링의 경계가 모호해지고 있습니다. 웹 퍼블리셔 관점에서는 &quot;프로덕션 레디&quot; 상태의 결과물이 디자인 결과물이 되면서, 접근성과 시맨틱 마크업 같은 품질 기준이 간과될 수 있다는 우려가 제기됩니다. 따라서 디자이너들은 사용자 경험의 수호자로서 기술적 완성도와 사용성을 모두 확보해야 합니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: AI 도입으로 인해 UX 디자인 역할이 재정의되면서 디자인과 엔지니어링의 경계가 모호해지고 있습니다. 웹 퍼블리셔 관점에서는 &quot;프로덕션 레디&quot; 상태의 결과물이 디자인 결과물이 되면서, 접근성과 시맨틱 마크업 같은 품질 기준이 간과될 수 있다는 우려가 제기됩니다. 따라서 디자이너들은 사용자 경험의 수호자로서 기술적 완성도와 사용성을 모두 확보해야 합니다.",
+              "기술 맥락: 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "AI 도입으로 인해 UX 디자인 역할이 재정의되면서 디자인과 엔지니어링의 경계가 모호해지고 있습니다. 웹 퍼블리셔 관점에서는 &quot;프로덕션 레디&quot; 상태의 결과물이 디자인 결과물이 되면서, 접근성과 시맨틱 마크업 같은 품질 기준이 간과될 수 있다는 우려가 제기됩니다. 따라서 디자이너들은 사용자 경험의 수호자로서 기술적 완성도와 사용성을 모두 확보해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "도구 자체보다 화면 구현, 리뷰, QA 흐름에 연결되는지 먼저 봅니다."
+              },
+              {
+                "kind": "list",
+                "html": "AI 에이전트나 자동화 결과는 근거와 변경 내역을 사람이 확인할 수 있어야 합니다."
+              },
+              {
+                "kind": "list",
+                "html": "프로덕션 레디 기준에 시맨틱 HTML, 접근성, 성능 검증을 포함합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "Tool: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@AI 도입으로 인해 UX 디자인 역할이 재정의되면서 디자인과 엔지니어링의 경계가 모호해지고 있습니다. 웹 퍼블리셔 관점에서는 &quot;프로덕션 레디&quot; 상태의 결과물이 디자인 결과물이 되면서, 접근성과 시맨틱 마크업 같은 품질 기준이 간과될 수 있다는 우려가 제기됩니다. 따라서 디자이너들은 사용자 경험의 수호자로서 기술적 완성도와 사용성을 모두 확보해야 합니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@도구 자체보다 화면 구현, 리뷰, QA 흐름에 연결되는지 먼저 봅니다.",
+              "@@list@@AI 에이전트나 자동화 결과는 근거와 변경 내역을 사람이 확인할 수 있어야 합니다.",
+              "@@list@@프로덕션 레디 기준에 시맨틱 HTML, 접근성, 성능 검증을 포함합니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@Tool: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-27",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-27"
+      },
+      {
+        "number": "28",
+        "platform": "Syntax.fm",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "tool",
+        "category": "TOOL",
+        "date": "2026-04-20",
+        "route": "/articles/2026-04-27-28",
+        "href": "/articles/2026-04-27-28",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-28",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "프론트엔드",
+          "퍼블리싱",
+          "품질관리"
+        ],
+        "takeawayHtml": "작은 프론트엔드 도구에서 구현 힌트를 빠르게 얻는다",
+        "deckHtml": "Syntax.fm에서 웹 개발자들이 만든 다양한 프로젝트들을 빠르게 소개하는 에피소드입니다. 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-20"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "프론트엔드 / 퍼블리싱 / 품질관리"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "tool"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Syntax.fm"
+          }
+        ],
+        "sourceUrl": "https://syntax.fm/997",
+        "sourceTitle": "Syntax.fm",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: 웹 개발자들이 만든 다양한 프로젝트들을 빠르게 소개하는 에피소드입니다. JSON 도구, CSS 에디터, View Transitions Toolkit, Arrow JS, Sugar High 등 UI 구현과 개발 생산성 향상에 도움이 되는 도구들을 다룹니다. 특히 CSS Studio, Arrow JS 같은 프론트엔드 도구와 성능 최적화 관련 프로젝트들이 포함되어 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: 웹 개발자들이 만든 다양한 프로젝트들을 빠르게 소개하는 에피소드입니다. JSON 도구, CSS 에디터, View Transitions Toolkit, Arrow JS, Sugar High 등 UI 구현과 개발 생산성 향상에 도움이 되는 도구들을 다룹니다. 특히 CSS Studio, Arrow JS 같은 프론트엔드 도구와 성능 최적화 관련 프로젝트들이 포함되어 있습니다.",
+              "기술 맥락: 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "웹 개발자들이 만든 다양한 프로젝트들을 빠르게 소개하는 에피소드입니다. JSON 도구, CSS 에디터, View Transitions Toolkit, Arrow JS, Sugar High 등 UI 구현과 개발 생산성 향상에 도움이 되는 도구들을 다룹니다. 특히 CSS Studio, Arrow JS 같은 프론트엔드 도구와 성능 최적화 관련 프로젝트들이 포함되어 있습니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "도구 자체보다 화면 구현, 리뷰, QA 흐름에 연결되는지 먼저 봅니다."
+              },
+              {
+                "kind": "list",
+                "html": "AI 에이전트나 자동화 결과는 근거와 변경 내역을 사람이 확인할 수 있어야 합니다."
+              },
+              {
+                "kind": "list",
+                "html": "프로덕션 레디 기준에 시맨틱 HTML, 접근성, 성능 검증을 포함합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "Tool: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@웹 개발자들이 만든 다양한 프로젝트들을 빠르게 소개하는 에피소드입니다. JSON 도구, CSS 에디터, View Transitions Toolkit, Arrow JS, Sugar High 등 UI 구현과 개발 생산성 향상에 도움이 되는 도구들을 다룹니다. 특히 CSS Studio, Arrow JS 같은 프론트엔드 도구와 성능 최적화 관련 프로젝트들이 포함되어 있습니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@도구 자체보다 화면 구현, 리뷰, QA 흐름에 연결되는지 먼저 봅니다.",
+              "@@list@@AI 에이전트나 자동화 결과는 근거와 변경 내역을 사람이 확인할 수 있어야 합니다.",
+              "@@list@@프로덕션 레디 기준에 시맨틱 HTML, 접근성, 성능 검증을 포함합니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@Tool: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-28",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-28"
+      },
+      {
+        "number": "29",
+        "platform": "ShopTalk Show",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "tool",
+        "category": "TOOL",
+        "date": "2026-04-20",
+        "route": "/articles/2026-04-27-29",
+        "href": "/articles/2026-04-27-29",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-29",
+        "image": "",
+        "imageCaption": "",
+        "tags": [
+          "프론트엔드",
+          "퍼블리싱",
+          "품질관리"
+        ],
+        "takeawayHtml": "개발 워크플로우 도구는 생산성 영향만 선별해 보면 된다",
+        "deckHtml": "ShopTalk Show에서 본 에피소드는 Oh My Zsh 유지보수자 Robby Russell과의 인터뷰로, 개발자 도구 및 워크플로우 최적화에 관한 내용입니다. 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-20"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "프론트엔드 / 퍼블리싱 / 품질관리"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "tool"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "ShopTalk Show"
+          }
+        ],
+        "sourceUrl": "https://shoptalkshow.com/711/",
+        "sourceTitle": "ShopTalk Show",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "기술 변화 요약",
+            "className": "article-section",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "업데이트: 본 에피소드는 Oh My Zsh 유지보수자 Robby Russell과의 인터뷰로, 개발자 도구 및 워크플로우 최적화에 관한 내용입니다. 웹 퍼블리셔 관점에서 직접 관련된 HTML, CSS, JavaScript 구현 내용이나 접근성, 성능, 시맨틱 마크업 등의 프론트엔드 기술 논의는 포함되지 않습니다. 주로 백엔드 개발환경(Zsh, Rails), 프로젝트 의존성 관리, CMS(Sanity) 등 개발 인프라 관련 주제를 다룹니다."
+              },
+              {
+                "kind": "list",
+                "html": "기술 맥락: 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다."
+              },
+              {
+                "kind": "list",
+                "html": "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+              }
+            ],
+            "itemsHtml": [
+              "업데이트: 본 에피소드는 Oh My Zsh 유지보수자 Robby Russell과의 인터뷰로, 개발자 도구 및 워크플로우 최적화에 관한 내용입니다. 웹 퍼블리셔 관점에서 직접 관련된 HTML, CSS, JavaScript 구현 내용이나 접근성, 성능, 시맨틱 마크업 등의 프론트엔드 기술 논의는 포함되지 않습니다. 주로 백엔드 개발환경(Zsh, Rails), 프로젝트 의존성 관리, CMS(Sanity) 등 개발 인프라 관련 주제를 다룹니다.",
+              "기술 맥락: 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
+              "변경 전: 개별 구현자 판단이나 사후 QA에 의존하면 브라우저, 접근성, 성능 차이를 놓치기 쉽습니다.",
+              "변경 후: 구현 기준과 검증 기준을 문서·도구·리뷰 흐름에 넣어 반복 가능한 품질 관리로 바꿀 수 있습니다.",
+              "확인할 영향: 실제 프로젝트에 적용하기 전 브라우저 지원, 접근성 영향, 성능 회귀, 팀 코드 규칙과의 충돌 여부를 함께 확인해야 합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "본 에피소드는 Oh My Zsh 유지보수자 Robby Russell과의 인터뷰로, 개발자 도구 및 워크플로우 최적화에 관한 내용입니다. 웹 퍼블리셔 관점에서 직접 관련된 HTML, CSS, JavaScript 구현 내용이나 접근성, 성능, 시맨틱 마크업 등의 프론트엔드 기술 논의는 포함되지 않습니다. 주로 백엔드 개발환경(Zsh, Rails), 프로젝트 의존성 관리, CMS(Sanity) 등 개발 인프라 관련 주제를 다룹니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "도구 자체보다 화면 구현, 리뷰, QA 흐름에 연결되는지 먼저 봅니다."
+              },
+              {
+                "kind": "list",
+                "html": "AI 에이전트나 자동화 결과는 근거와 변경 내역을 사람이 확인할 수 있어야 합니다."
+              },
+              {
+                "kind": "list",
+                "html": "프로덕션 레디 기준에 시맨틱 HTML, 접근성, 성능 검증을 포함합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "Tool: 이번 항목이 직접 닿는 구현·검증 영역입니다."
+              },
+              {
+                "kind": "list",
+                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@본 에피소드는 Oh My Zsh 유지보수자 Robby Russell과의 인터뷰로, 개발자 도구 및 워크플로우 최적화에 관한 내용입니다. 웹 퍼블리셔 관점에서 직접 관련된 HTML, CSS, JavaScript 구현 내용이나 접근성, 성능, 시맨틱 마크업 등의 프론트엔드 기술 논의는 포함되지 않습니다. 주로 백엔드 개발환경(Zsh, Rails), 프로젝트 의존성 관리, CMS(Sanity) 등 개발 인프라 관련 주제를 다룹니다.",
+              "@@paragraph@@이 소식은 단순 읽을거리보다 퍼블리싱과 프론트엔드 운영 기준을 다시 점검하게 만드는 자료입니다. 제 의견은 분명합니다. DEV 뉴스는 새 도구 이름을 모으는 것보다, 다음 PR에서 무엇을 검증할지 바꾸는 데 가치가 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@해당 내용을 바로 도입하기보다 현재 프로젝트의 화면 구조, 빌드 환경, 접근성 QA, 브라우저 지원 범위와 맞는지 먼저 확인해야 합니다.",
+              "@@paragraph@@특히 AI 도구나 자동 감사 도구가 등장하는 항목은 결과를 그대로 믿지 말고, 재현 가능한 로그와 사람이 확인할 수 있는 기준을 함께 남겨야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@도구 자체보다 화면 구현, 리뷰, QA 흐름에 연결되는지 먼저 봅니다.",
+              "@@list@@AI 에이전트나 자동화 결과는 근거와 변경 내역을 사람이 확인할 수 있어야 합니다.",
+              "@@list@@프로덕션 레디 기준에 시맨틱 HTML, 접근성, 성능 검증을 포함합니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@Tool: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
+              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
+              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-27-29",
+        "issueSlug": "2026-04-27",
+        "articleSlug": "2026-04-27-29"
       },
       {
         "number": "01",

@@ -22,6 +22,7 @@ NOTION_VERSION = "2022-06-28"
 MAX_RICH_TEXT_LENGTH = 1900
 
 sys.path.insert(0, str(ROOT / "scripts" / "notion"))
+import report_parser  # noqa: E402
 from report_parser import (  # noqa: E402
     Issue,
     Report,
@@ -158,6 +159,9 @@ def clean_markdown(value: str) -> str:
     value = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", value)
     value = re.sub(r"<[^>]+>", "", value)
     return re.sub(r"\s+", " ", value).strip()
+
+
+report_parser.clean_markdown = clean_markdown
 
 
 def date_value(value: str) -> str:
