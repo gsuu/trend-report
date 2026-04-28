@@ -21,7 +21,7 @@ SITE_DIR = ROOT / "site"
 ASSETS_DIR = SITE_DIR / "assets"
 ARTICLES_DIR = SITE_DIR / "articles"
 SHOW_SUBSCRIBE_LINK = True
-PRODUCTION_SITE_URL = "https://cttd-magazine.vercel.app"
+PRODUCTION_SITE_URL = "https://magazine.cttd.co.kr"
 SITE_DESCRIPTION = "CTTD Service/Design/DEV Weekly Trend Magazine"
 SITE_OG_IMAGE = "assets/cttd-logo-email.png"
 
@@ -260,6 +260,7 @@ SECTION_BLOCK_PATTERN = re.compile(r"^@@(?P<kind>quote|subhead|paragraph|list)@@
 SUMMARY_LABEL_PATTERN = re.compile(r"^(?P<label>[^:：]{2,18})[:：]\s*(?P<value>.+)$")
 HEADLINE_SUMMARY_LABELS = {"업데이트", "핵심 업데이트", "핵심 내용", "주요 항목"}
 CORE_SUMMARY_LABELS = HEADLINE_SUMMARY_LABELS | {"서비스 맥락", "디자인 맥락", "기술 맥락", "변경 전", "변경 후"}
+SUMMARY_SECTION_TITLES = {"기술 변화 요약", "요약"}
 REFERENCE_LINK_PREFIXES = ("관련 뉴스", "관련 URL", "관련 링크", "관련 매거진", "보조 출처")
 HIDDEN_FACT_KEYS = {"출처 URL", "서비스 URL", "상세페이지 초점", "요약"}
 SOURCE_TITLE_CACHE: dict[str, str] = {}
@@ -1335,7 +1336,7 @@ def issue_takeaway(issue: Issue) -> str:
     if detail_quote:
         return detail_quote
 
-    for section_name in ("인사이트", "업데이트 핵심", "기술 변화 요약", "서비스 변화 요약", "핵심 업데이트", "변경 전/후"):
+    for section_name in ("인사이트", "업데이트 핵심", "요약", "기술 변화 요약", "서비스 변화 요약", "핵심 업데이트", "변경 전/후"):
         items = issue.sections.get(section_name, [])
         if items:
             return strip_brief_label(items[0])
@@ -1346,7 +1347,7 @@ def issue_deck(issue: Issue) -> str:
     if issue_area_key(issue) == "dev" and issue.meta.get("요약", "").strip():
         return issue.meta["요약"].strip()
 
-    items = issue.sections.get("업데이트 핵심", []) or issue.sections.get("기술 변화 요약", []) or issue.sections.get("디자인 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
+    items = issue.sections.get("업데이트 핵심", []) or issue.sections.get("요약", []) or issue.sections.get("기술 변화 요약", []) or issue.sections.get("디자인 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
     if issue_area_key(issue) == "dev" and items:
         return " ".join(strip_brief_label(str(item)).strip() for item in items if str(item).strip()).strip()
 
@@ -1440,7 +1441,7 @@ def source_summary_sentence(text: str) -> str:
 
 
 def issue_update_title(issue: Issue) -> str:
-    items = issue.sections.get("업데이트 핵심", []) or issue.sections.get("기술 변화 요약", []) or issue.sections.get("디자인 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
+    items = issue.sections.get("업데이트 핵심", []) or issue.sections.get("요약", []) or issue.sections.get("기술 변화 요약", []) or issue.sections.get("디자인 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
     for preferred_label in ("업데이트", "핵심 업데이트", "핵심 내용", "주요 항목"):
         for item in items:
             label, separator, value = str(item).partition(":")
@@ -2017,7 +2018,7 @@ def render_index(report: Report) -> str:
           return /^([^:：]{{2,18}})[:：]\\s*(.+)$/.test(text) ? "" : "summary-note-row";
         }},
         isBulletSummary(section) {{
-          return (section && section.title === "기술 변화 요약") || String((section && section.className) || "").includes("is-bullet-summary");
+          return (section && (section.title === "기술 변화 요약" || section.title === "요약")) || String((section && section.className) || "").includes("is-bullet-summary");
         }},
         isTermExplanation(section) {{
           return (section && section.title === "용어 설명") || String((section && section.className) || "").includes("is-term-explanation");
@@ -2077,7 +2078,7 @@ def section_class_name(title: str) -> str:
         return "article-section is-deep-dive"
     if title == "용어 설명":
         return "article-section is-term-explanation"
-    if title == "기술 변화 요약":
+    if title in SUMMARY_SECTION_TITLES:
         return "article-section is-bullet-summary"
     return "article-section"
 
@@ -2134,7 +2135,7 @@ def render_section_content(title: str, items: list[str], issue: Issue | None = N
               </ul>
             """
 
-        if title == "기술 변화 요약":
+        if title in SUMMARY_SECTION_TITLES:
             return f"""
               <ul class="bullet-summary-list">
                 {''.join(f'<li>{clean_inline(item)}</li>' for item in items)}

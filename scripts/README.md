@@ -18,7 +18,7 @@ Notion 업로드와 업로드 전 검증에만 사용합니다.
 
 - `push_notion.py`: AI가 작성한 최종 `magazine-report.md`를 Notion DB 형식으로 파싱하고 업로드합니다.
 - `report_parser.py`: Markdown 리포트를 Notion 업로드용 구조로 파싱하고 검증합니다.
-- `export_magazine_json.mjs`: Notion 데이터를 Vue 매거진 화면 포맷으로 내려받아 `public/data/magazine.json`을 만듭니다. 배포 시 JSON을 같이 올려 첫 로딩을 빠르게 만들 때 사용합니다.
+- `export_magazine_json.py`: Markdown 리포트를 Vue 매거진 화면 포맷으로 누적 변환해 `public/data/magazine.json`을 만듭니다. 배포 시 JSON을 같이 올려 첫 로딩을 빠르게 만들 때 사용합니다.
 - `cleanup_notion_duplicates.py`: Notion DB 중복 페이지를 정리해야 할 때만 사용합니다.
 
 ## newsletter

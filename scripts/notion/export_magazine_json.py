@@ -78,7 +78,7 @@ def report_payload_from_path(report_path: Path) -> dict[str, object]:
         issue_payload["date"] = issue_date
         issue_payload["route"] = f"/articles/{article_slug}"
         issue_payload["href"] = issue_payload["route"]
-        issue_payload["articleUrl"] = f"https://cttd-magazine.vercel.app{issue_payload['route']}"
+        issue_payload["articleUrl"] = report_parser.absolute_site_url(issue_payload["route"])
         for fact in issue_payload.get("facts", []):
             if fact.get("label") in {"날짜", "발행날짜"}:
                 fact["valueHtml"] = issue_date

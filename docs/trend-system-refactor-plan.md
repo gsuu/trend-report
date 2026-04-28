@@ -1,5 +1,7 @@
 # 트렌드 수집 시스템 정리 계획
 
+> 이 문서는 과거 리팩토링 계획 기록입니다. 현행 운영 기준으로 사용하지 않습니다. 현재 기준은 [데이터 수집 전략](data-collection-strategy.md), [매거진 상세 글쓰기 가이드](editorial-style-guide.md), [매거진 에이전트 운영 흐름](magazine-agent-workflow.md), [DEV Digest Agent Prompt](dev-digest-agent-prompt.md)를 따릅니다.
+
 ## 목표
 
 가이드의 판단 기준과 코드의 실제 동작을 맞춥니다. 수집은 넓게 하되, 매거진에 올라가는 글은 원문에서 확인된 사실과 이미지가 있는 항목만 통과시키는 구조로 정리합니다.

@@ -523,7 +523,7 @@ function summaryItemClass(item) {
   return /^([^:：]{2,18})[:：]\s*(.+)$/.test(text) ? "" : "summary-note-row";
 }
 function isBulletSummary(section) {
-  return section?.title === "기술 변화 요약" || String(section?.className || "").includes("is-bullet-summary");
+  return section?.title === "기술 변화 요약" || section?.title === "요약" || String(section?.className || "").includes("is-bullet-summary");
 }
 
 function isTermExplanation(section) {

@@ -52,6 +52,7 @@ NEWSLETTER_SECTION_PATTERN = re.compile(
 SECTION_LABELS = {
     "서비스 변화 요약": "BRIEF",
     "기술 변화 요약": "TECH BRIEF",
+    "요약": "SUMMARY",
     "핵심 업데이트": "UPDATE",
     "핵심 수치": "METRIC",
     "핵심 캠페인": "CAMPAIGN",
@@ -72,7 +73,7 @@ SECTION_LABELS = {
 }
 
 NEWSLETTER_SKIP_SECTIONS = {"매거진 상세", "사이트 매거진 상세", "웹사이트 상세", "매거진 인사이트"}
-NEWSLETTER_HEADLINE_SECTIONS = {"서비스 변화 요약", "기술 변화 요약", "핵심 업데이트"}
+NEWSLETTER_HEADLINE_SECTIONS = {"서비스 변화 요약", "기술 변화 요약", "요약", "핵심 업데이트"}
 NEWSLETTER_DESCRIPTION_LABELS = {"서비스 맥락", "기술 맥락", "변경 후"}
 NEWSLETTER_DETAIL_SUMMARY_SECTIONS = {"매거진 인사이트", "인사이트"}
 DEV_SECTION_HEADING_REPLACEMENTS = {
@@ -1445,7 +1446,7 @@ def markdown_to_html(markdown: str) -> str:
     pending_image_url = ""
     pending_image_caption = ""
     summary_brief_open = False
-    summary_brief_sections = {"서비스 변화 요약", "기술 변화 요약", "핵심 업데이트", "핵심 캠페인", "변경 전/후"}
+    summary_brief_sections = {"서비스 변화 요약", "기술 변화 요약", "요약", "핵심 업데이트", "핵심 캠페인", "변경 전/후"}
     fact_note_sections = {"수치·팩트", "팩트", "핵심 수치"}
     skip_section = False
 

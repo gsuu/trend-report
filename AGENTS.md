@@ -23,8 +23,9 @@ When collecting and uploading DEV newsletter or magazine items, reproduce the sa
 - Include all DEV items that pass the prompt criteria, rather than over-pruning to only a few highlights.
 - Use the collected original article title as the title standard. Do not rewrite it into an overly editorial or interpretive title unless the user explicitly asks.
 - Add a DEV `요약` metadata line for the article-header deck. It should be a 1-2 sentence reader-facing summary, not a copy of the technical-summary bullets.
-- Keep the DEV `요약`, `기술 변화 요약`, and `매거진 인사이트` layers distinct. Do not repeat the same sentence across these layers.
-- Write the DEV `기술 변화 요약` section only after opening the original source URL. Summarize important source facts, not the existing digest sentence. Do not force a fixed bullet count; include the meaningful points needed to represent the source.
+- Keep the DEV metadata `요약`, body `요약`, and `매거진 인사이트` layers distinct. Do not repeat the same sentence across these layers.
+- Write the DEV body `요약` section only after opening the original source URL. Summarize important source facts, not the existing digest sentence. Do not force a fixed bullet count; include the meaningful points needed to represent the source.
+- If the original source is a blog or opinion article rather than a product release note, summarize who is arguing what, which evidence or examples they use, and what CTTD can practically reference from it. Do not force it into a product-change framing.
 - Each DEV technical-summary bullet must contain at least one concrete source detail such as a feature name, tool, API/property, browser/accessibility/performance condition, metric, limitation, or validation method.
 - Use Markdown backticks/code tags only for code-related expressions such as commands, filenames, package names, APIs, CSS/HTML/ARIA properties, or config values. Do not wrap feature names, product names, Korean UI copy, quotes, or emphasis text in code style.
 - Use the original source page's top or representative image (`og:image`/`twitter:image`, falling back to the first content image) as the DEV thumbnail.
