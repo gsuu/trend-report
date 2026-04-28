@@ -18,8 +18,9 @@ Do not send directly to `cxd@cttd.co.kr` before the test email has been confirme
 When collecting and uploading DEV newsletter or magazine items, reproduce the same collection logic as
 `cttd/ai-tf`'s DEV digest generator. Do not treat `news-tracking/weekly-digest/issue-YYYY-MM-DD.md` as the source of truth; use it only as a verification sample.
 
-- Use `news-tracking/dev-sources.json` and `npm run fetch:dev` for DEV collection. This mirrors the `ai-tf` RSS source groups, 7-day window, web-publisher summary prompt, and category set.
-- Include all DEV items returned by that collection/summarization flow, rather than over-pruning to only a few highlights.
+- Use `news-tracking/dev-sources.json` and `npm run fetch:dev` for DEV candidate collection. This mirrors the `ai-tf` RSS source groups and 7-day window.
+- After collection, the working AI must apply `docs/dev-digest-agent-prompt.md` to select, summarize, categorize, and write DEV items. Do not call an LLM API from the collection script.
+- Include all DEV items that pass the prompt criteria, rather than over-pruning to only a few highlights.
 - Use the collected original article title as the title standard. Do not rewrite it into an overly editorial or interpretive title unless the user explicitly asks.
 - Use the DEV summary generated from the original article content as the description standard. Do not append generic technical-context filler to the list/card description.
 - Write the DEV `기술 변화 요약` section as a list that summarizes the important original-source content. Do not force a fixed bullet count; include the meaningful points needed to represent the source.
