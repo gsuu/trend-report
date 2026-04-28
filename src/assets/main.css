@@ -52,8 +52,7 @@ code {
 }
 
 .article-deck code,
-.summary-value code,
-.section-prose code {
+.article-body code {
   display: inline-block;
   max-width: 100%;
   padding: 0 5px;
@@ -67,9 +66,7 @@ code {
   vertical-align: 0.04em;
 }
 
-h1 code,
-h2 code,
-h3 code,
+.article-hero h1 code,
 .feed-item h2 code,
 .issue-main h3 code {
   background: transparent;
