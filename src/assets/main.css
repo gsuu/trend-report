@@ -1321,6 +1321,34 @@ main {
   cursor: pointer;
 }
 
+.article-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  color: var(--ink);
+  font-size: inherit;
+  font-weight: 500;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.article-source-link svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-width: 2;
+}
+
+.article-source-link:hover,
+.article-source-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .article-share-button svg {
   width: 28px;
   height: 28px;
