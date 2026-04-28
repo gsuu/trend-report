@@ -1677,6 +1677,20 @@ main {
     padding-bottom: 10px;
   }
 
+  .site-footer {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 8px;
+  }
+
+  .site-footer p {
+    white-space: nowrap;
+  }
+
+  .footer-site-link {
+    justify-self: start;
+  }
+
   .header-category-nav {
     grid-column: 1 / -1;
     grid-row: 2;
