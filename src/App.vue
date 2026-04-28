@@ -506,6 +506,10 @@ function summaryItemClass(item) {
   const text = String(item);
   return /^([^:：]{2,18})[:：]\s*(.+)$/.test(text) ? "" : "summary-note-row";
 }
+function isBulletSummary(section) {
+  return section?.title === "기술 변화 요약" || String(section?.className || "").includes("is-bullet-summary");
+}
+
 function kstTodayStart() {
   const now = new Date();
   const kstNow = new Date(now.getTime() + 9 * 60 * 60 * 1000);
@@ -658,14 +662,19 @@ function isDateInRange(value, range) {
               </template>
             </div>
             <template v-else>
-              <ul class="summary-list">
-                <li v-for="item in summaryCoreItems(section.itemsHtml, activeIssue)" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
+              <ul v-if="isBulletSummary(section)" class="bullet-summary-list">
+                <li v-for="item in section.itemsHtml" :key="item" v-html="item"></li>
               </ul>
-              <div v-if="summaryFactItems(section.itemsHtml).length" class="summary-facts">
-                <ul class="summary-fact-list">
-                  <li v-for="item in summaryFactItems(section.itemsHtml)" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
+              <template v-else>
+                <ul class="summary-list">
+                  <li v-for="item in summaryCoreItems(section.itemsHtml, activeIssue)" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
                 </ul>
-              </div>
+                <div v-if="summaryFactItems(section.itemsHtml).length" class="summary-facts">
+                  <ul class="summary-fact-list">
+                    <li v-for="item in summaryFactItems(section.itemsHtml)" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
+                  </ul>
+                </div>
+              </template>
             </template>
           </section>
 

@@ -1478,6 +1478,32 @@ main {
   grid-template-columns: 22px minmax(0, 1fr);
 }
 
+.article-section.is-bullet-summary .bullet-summary-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0 0 0 22px;
+  list-style: disc;
+  border: 0;
+  background: transparent;
+}
+
+.article-section.is-bullet-summary .bullet-summary-list li {
+  display: list-item;
+  grid-template-columns: none;
+  gap: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 17px;
+  line-height: 1.7;
+  list-style: disc;
+}
+
+.article-section.is-bullet-summary .bullet-summary-list li::before {
+  content: none;
+}
+
 .summary-key {
   color: #777777;
   font-size: 12px;

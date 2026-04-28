@@ -1658,14 +1658,19 @@ def render_index(report: Report) -> str:
               </template>
             </div>
             <template v-else>
-              <ul class="summary-list">
-                <li v-for="item in summaryCoreItems(section.itemsHtml, activeIssue)" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
+              <ul v-if="isBulletSummary(section)" class="bullet-summary-list">
+                <li v-for="item in section.itemsHtml" :key="item" v-html="item"></li>
               </ul>
-              <div v-if="summaryFactItems(section.itemsHtml).length" class="summary-facts">
-                <ul class="summary-fact-list">
-                  <li v-for="item in summaryFactItems(section.itemsHtml)" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
+              <template v-else>
+                <ul class="summary-list">
+                  <li v-for="item in summaryCoreItems(section.itemsHtml, activeIssue)" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
                 </ul>
-              </div>
+                <div v-if="summaryFactItems(section.itemsHtml).length" class="summary-facts">
+                  <ul class="summary-fact-list">
+                    <li v-for="item in summaryFactItems(section.itemsHtml)" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
+                  </ul>
+                </div>
+              </template>
             </template>
           </section>
           <footer class="article-footer">
@@ -1990,6 +1995,9 @@ def render_index(report: Report) -> str:
           const text = String(item);
           return /^([^:：]{{2,18}})[:：]\\s*(.+)$/.test(text) ? "" : "summary-note-row";
         }},
+        isBulletSummary(section) {{
+          return (section && section.title === "기술 변화 요약") || String((section && section.className) || "").includes("is-bullet-summary");
+        }},
         isSummaryFact(item) {{
           const text = String(item);
           const match = text.match(/^([^:：]{{2,18}})[:：]\\s*(.+)$/);
@@ -2041,7 +2049,11 @@ def section_display_title(title: str) -> str:
 
 
 def section_class_name(title: str) -> str:
-    return "article-section is-deep-dive" if title in DETAIL_SECTION_TITLES else "article-section"
+    if title in DETAIL_SECTION_TITLES:
+        return "article-section is-deep-dive"
+    if title == "기술 변화 요약":
+        return "article-section is-bullet-summary"
+    return "article-section"
 
 
 def section_blocks(title: str, items: list[str]) -> list[dict[str, str]]:
@@ -2089,6 +2101,13 @@ def render_reference_links(issue: Issue | None) -> str:
 
 def render_section_content(title: str, items: list[str], issue: Issue | None = None) -> str:
     if not is_detail_section(title):
+        if title == "기술 변화 요약":
+            return f"""
+              <ul class="bullet-summary-list">
+                {''.join(f'<li>{clean_inline(item)}</li>' for item in items)}
+              </ul>
+            """
+
         core_items, fact_items = split_summary_items(items, issue)
         facts_html = (
             f"""
