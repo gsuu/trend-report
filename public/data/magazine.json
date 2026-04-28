@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T03:16:06.906906+00:00",
+  "generatedAt": "2026-04-28T03:24:24.731432+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -1099,7 +1099,7 @@
           "퍼블리싱"
         ],
         "takeawayHtml": "Enhancing Astro With a Markdown Component",
-        "deckHtml": "Astro 안에서 짧은 콘텐츠 블록을 Markdown 컴포넌트로 다루는 방식입니다. 반복 마크업을 줄이는 동시에 Prettier와 타이포그래피 처리까지 운영 기준으로 봐야 합니다.",
+        "deckHtml": "Astro에서 Markdown을 컴포넌트처럼 다루는 두 글을 묶었습니다. MDX와 별도 Markdown 컴포넌트 중 어디까지 UI로 끌어올릴지 정하는 것이 핵심입니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -1128,7 +1128,13 @@
         ],
         "sourceUrl": "https://css-tricks.com/astro-markdown-component/",
         "sourceTitle": "CSS-Tricks",
-        "referenceLinks": [],
+        "referenceLinks": [
+          {
+            "label": "보조 출처",
+            "title": "Markdown + Astro = ❤️ | CSS-Tricks",
+            "url": "https://css-tricks.com/markdown-astro/"
+          }
+        ],
         "sections": [
           {
             "title": "기술 변화 요약",
@@ -1378,163 +1384,15 @@
       },
       {
         "number": "09",
-        "platform": "CSS-Tricks",
-        "areaKey": "dev",
-        "area": "DEV",
-        "categoryKey": "css",
-        "category": "CSS",
-        "date": "2026-04-20",
-        "route": "/articles/2026-04-27-09",
-        "href": "/articles/2026-04-27-09",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-09",
-        "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/02/mdx-astro.webp",
-        "imageCaption": "CSS-Tricks 원문 최상단 이미지",
-        "tags": [
-          "Astro",
-          "Markdown",
-          "퍼블리싱"
-        ],
-        "takeawayHtml": "Markdown + Astro = ❤️",
-        "deckHtml": "Astro의 MDX는 콘텐츠 안에서 컴포넌트를 직접 호출하게 해줍니다. 정적 문서와 UI 컴포넌트의 경계를 어디에 둘지 정하는 것이 핵심입니다.",
-        "facts": [
-          {
-            "label": "발행날짜",
-            "valueHtml": "2026-04-20"
-          },
-          {
-            "label": "태그",
-            "valueHtml": "Astro / Markdown / 퍼블리싱"
-          },
-          {
-            "label": "국가",
-            "valueHtml": "GLOBAL"
-          },
-          {
-            "label": "카테고리",
-            "valueHtml": "css"
-          },
-          {
-            "label": "직무 태그",
-            "valueHtml": "웹DEV"
-          },
-          {
-            "label": "출처",
-            "valueHtml": "CSS-Tricks"
-          }
-        ],
-        "sourceUrl": "https://css-tricks.com/markdown-astro/",
-        "sourceTitle": "CSS-Tricks",
-        "referenceLinks": [],
-        "sections": [
-          {
-            "title": "기술 변화 요약",
-            "className": "article-section is-bullet-summary",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "Astro 기본 .md 파일만으로 부족한 콘텐츠 블록에는 MDX를 적용해 Markdown 안에서 Astro·Svelte 등 설치된 프레임워크 컴포넌트와 JSX형 구문을 함께 사용할 수 있다."
-              },
-              {
-                "kind": "list",
-                "html": "원문은 카드 UI처럼 HTML 구조가 필요한 콘텐츠를 MDX로 줄여 쓰는 사례를 보여주며, 콘텐츠 중심 페이지에서도 컴포넌트 재사용과 Markdown 작성 경험을 동시에 가져갈 수 있음을 설명한다."
-              },
-              {
-                "kind": "list",
-                "html": "다만 MDX는 단순 문서 작성보다 표현력이 커지는 대신 빌드 파이프라인과 컴포넌트 의존성이 함께 들어오므로, 정적 콘텐츠와 인터랙티브 콘텐츠의 경계를 정하는 것이 중요하다."
-              }
-            ],
-            "itemsHtml": [
-              "Astro 기본 .md 파일만으로 부족한 콘텐츠 블록에는 MDX를 적용해 Markdown 안에서 Astro·Svelte 등 설치된 프레임워크 컴포넌트와 JSX형 구문을 함께 사용할 수 있다.",
-              "원문은 카드 UI처럼 HTML 구조가 필요한 콘텐츠를 MDX로 줄여 쓰는 사례를 보여주며, 콘텐츠 중심 페이지에서도 컴포넌트 재사용과 Markdown 작성 경험을 동시에 가져갈 수 있음을 설명한다.",
-              "다만 MDX는 단순 문서 작성보다 표현력이 커지는 대신 빌드 파이프라인과 컴포넌트 의존성이 함께 들어오므로, 정적 콘텐츠와 인터랙티브 콘텐츠의 경계를 정하는 것이 중요하다."
-            ]
-          },
-          {
-            "title": "인사이트",
-            "className": "article-section is-deep-dive",
-            "prose": true,
-            "blocks": [
-              {
-                "kind": "subhead",
-                "html": "왜 지금 이 업데이트인가"
-              },
-              {
-                "kind": "paragraph",
-                "html": "Markdown만으로는 카드, 탭, 예시 컴포넌트처럼 구조가 있는 콘텐츠를 표현하기 어렵고, HTML만 쓰면 작성 효율이 떨어집니다. MDX는 콘텐츠 팀과 개발 팀 사이의 접점을 넓히지만, 그만큼 콘텐츠가 코드 의존성을 갖게 됩니다. 그래서 MDX 도입은 문법 선택이 아니라 콘텐츠 운영 방식의 선택입니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "구현 관점"
-              },
-              {
-                "kind": "paragraph",
-                "html": "MDX 안에서 Astro, Svelte 등 여러 프레임워크 컴포넌트를 호출할 수 있으므로 빌드 의존성과 hydration 범위를 함께 관리해야 합니다. 단순 typography 개선이면 Markdown 컴포넌트가 더 가볍고, 인터랙티브 블록이 필요하면 MDX가 맞습니다. 컴포넌트 import 규칙과 사용 가능한 props를 제한하지 않으면 콘텐츠 파일이 작은 앱처럼 복잡해집니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "실무에 어떻게 적용할 수 있을까"
-              },
-              {
-                "kind": "list",
-                "html": "문서 페이지를 단순 Markdown, Markdown 컴포넌트, MDX 세 등급으로 나누어 적용 기준을 만듭니다."
-              },
-              {
-                "kind": "list",
-                "html": "MDX에서 허용할 컴포넌트 목록과 props를 제한해 콘텐츠 작성자의 실수를 줄입니다."
-              },
-              {
-                "kind": "list",
-                "html": "빌드 결과에서 불필요한 클라이언트 JS가 늘지 않는지 페이지 단위로 확인합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "같이 보면 좋은 기술"
-              },
-              {
-                "kind": "list",
-                "html": "HTML/CSS: 이번 항목이 직접 닿는 구현·검증 영역입니다."
-              },
-              {
-                "kind": "list",
-                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
-              },
-              {
-                "kind": "list",
-                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
-              }
-            ],
-            "itemsHtml": [
-              "@@subhead@@왜 지금 이 업데이트인가",
-              "@@paragraph@@Markdown만으로는 카드, 탭, 예시 컴포넌트처럼 구조가 있는 콘텐츠를 표현하기 어렵고, HTML만 쓰면 작성 효율이 떨어집니다. MDX는 콘텐츠 팀과 개발 팀 사이의 접점을 넓히지만, 그만큼 콘텐츠가 코드 의존성을 갖게 됩니다. 그래서 MDX 도입은 문법 선택이 아니라 콘텐츠 운영 방식의 선택입니다.",
-              "@@subhead@@구현 관점",
-              "@@paragraph@@MDX 안에서 Astro, Svelte 등 여러 프레임워크 컴포넌트를 호출할 수 있으므로 빌드 의존성과 hydration 범위를 함께 관리해야 합니다. 단순 typography 개선이면 Markdown 컴포넌트가 더 가볍고, 인터랙티브 블록이 필요하면 MDX가 맞습니다. 컴포넌트 import 규칙과 사용 가능한 props를 제한하지 않으면 콘텐츠 파일이 작은 앱처럼 복잡해집니다.",
-              "@@subhead@@실무에 어떻게 적용할 수 있을까",
-              "@@list@@문서 페이지를 단순 Markdown, Markdown 컴포넌트, MDX 세 등급으로 나누어 적용 기준을 만듭니다.",
-              "@@list@@MDX에서 허용할 컴포넌트 목록과 props를 제한해 콘텐츠 작성자의 실수를 줄입니다.",
-              "@@list@@빌드 결과에서 불필요한 클라이언트 JS가 늘지 않는지 페이지 단위로 확인합니다.",
-              "@@subhead@@같이 보면 좋은 기술",
-              "@@list@@HTML/CSS: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
-              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
-              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
-            ]
-          }
-        ],
-        "id": "2026-04-27-09",
-        "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-09"
-      },
-      {
-        "number": "10",
         "platform": "Syntax.fm",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "javascript",
         "category": "JAVASCRIPT",
         "date": "2026-04-22",
-        "route": "/articles/2026-04-27-10",
-        "href": "/articles/2026-04-27-10",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-10",
+        "route": "/articles/2026-04-27-09",
+        "href": "/articles/2026-04-27-09",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-09",
         "image": "https://syntax.fm/og/998.jpg",
         "imageCaption": "Syntax.fm 원문 최상단 이미지",
         "tags": [
@@ -1668,21 +1526,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-10",
+        "id": "2026-04-27-09",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-10"
+        "articleSlug": "2026-04-27-09"
       },
       {
-        "number": "11",
+        "number": "10",
         "platform": "JavaScript Weekly",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "javascript",
         "category": "JAVASCRIPT",
         "date": "2026-04-21",
-        "route": "/articles/2026-04-27-11",
-        "href": "/articles/2026-04-27-11",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-11",
+        "route": "/articles/2026-04-27-10",
+        "href": "/articles/2026-04-27-10",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-10",
         "image": "https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png",
         "imageCaption": "JavaScript Weekly 원문 최상단 이미지",
         "tags": [
@@ -1816,21 +1674,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-11",
+        "id": "2026-04-27-10",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-11"
+        "articleSlug": "2026-04-27-10"
       },
       {
-        "number": "12",
+        "number": "11",
         "platform": "DEV Community",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
         "date": "2026-04-26",
-        "route": "/articles/2026-04-27-12",
-        "href": "/articles/2026-04-27-12",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-12",
+        "route": "/articles/2026-04-27-11",
+        "href": "/articles/2026-04-27-11",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-11",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Feej7ahebbskthy0wu0o3.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -1839,7 +1697,7 @@
           "실무검수"
         ],
         "takeawayHtml": "Scaling agentic A11y with browser-side scans",
-        "deckHtml": "접근성 감사에서 LLM은 전체 코드 탐색보다 실제 DOM 위반을 고치는 데 써야 합니다. 비용을 줄이는 핵심은 브라우저 스캔과 사람 판단의 분리입니다.",
+        "deckHtml": "이번 주 접근성 자동 감사 글들을 하나로 묶었습니다. 브라우저 스캔, PR 검사, UX 감사 에이전트 모두 자동화는 초안이고 최종 판단은 실제 화면 검증에 남아 있습니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -1868,13 +1726,43 @@
         ],
         "sourceUrl": "https://dev.to/cameron-accesslint/scaling-agentic-a11y-with-browser-side-scans-1e3h",
         "sourceTitle": "Dev.to - Accessibility",
-        "referenceLinks": [],
+        "referenceLinks": [
+          {
+            "label": "보조 출처",
+            "title": "Audit WCAG 2.1 accessibility on every pull request (free GitHub Action)",
+            "url": "https://dev.to/jpatel3/audit-wcag-21-accessibility-on-every-pull-request-free-github-action-111b"
+          },
+          {
+            "label": "보조 출처",
+            "title": "Accessibility issues that automated tools won't catch (from real audits)",
+            "url": "https://dev.to/a11ysolutions/accessibility-issues-that-automated-tools-wont-catch-from-real-audits-2o8l"
+          },
+          {
+            "label": "보조 출처",
+            "title": "I built a tool that runs a full UX + accessibility audit on any URL in under 5 minutes",
+            "url": "https://dev.to/amf_floyd_9e49aef1a680dae/i-built-a-tool-that-runs-a-full-ux-accessibility-audit-on-any-url-in-under-5-minutes-2eic"
+          },
+          {
+            "label": "보조 출처",
+            "title": "How We Built an Autonomous UX Auditing Agent",
+            "url": "https://dev.to/amf_floyd_9e49aef1a680dae/how-we-built-an-autonomous-ux-auditing-agent-46b9"
+          },
+          {
+            "label": "보조 출처",
+            "title": "https://dev.to/agentkit/what-wave-and-avada-miss-on-your-shopify-store-here-are-5-wcag-failures-you-have-to-catch-by-hand-1mpa",
+            "url": "https://dev.to/agentkit/what-wave-and-avada-miss-on-your-shopify-store-here-are-5-wcag-failures-you-have-to-catch-by-hand-1mpa"
+          }
+        ],
         "sections": [
           {
             "title": "기술 변화 요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
+              {
+                "kind": "list",
+                "html": "같은 수집일에 접근성 자동 감사, PR 기반 WCAG 검사, UX audit agent, Shopify 자동 검사 누락, 자동 도구가 놓치는 수동 검수 이슈가 함께 나와 하나의 접근성 QA 흐름으로 묶었다."
+              },
               {
                 "kind": "list",
                 "html": "원문은 접근성 검토에서 LLM이 전체 컴포넌트 파일을 읽는 방식은 비용이 커지므로, 먼저 브라우저에서 렌더링된 DOM을 deterministic audit engine으로 스캔해야 한다고 주장한다."
@@ -1889,6 +1777,7 @@
               }
             ],
             "itemsHtml": [
+              "같은 수집일에 접근성 자동 감사, PR 기반 WCAG 검사, UX audit agent, Shopify 자동 검사 누락, 자동 도구가 놓치는 수동 검수 이슈가 함께 나와 하나의 접근성 QA 흐름으로 묶었다.",
               "원문은 접근성 검토에서 LLM이 전체 컴포넌트 파일을 읽는 방식은 비용이 커지므로, 먼저 브라우저에서 렌더링된 DOM을 deterministic audit engine으로 스캔해야 한다고 주장한다.",
               "실험 사례에서는 live DOM 감사가 29개 violation type을 찾았고, 에이전트는 그 결과가 가리키는 2개 소스 파일만 열어 수정했다.",
               "핵심 역할 분리는 명확하다. 규칙 기반 위반 탐지는 JavaScript 감사 엔진이 맡고, LLM 토큰은 alt text 선택, label 판단, 실제 소스 수정처럼 사람이 판단해야 하는 작업에 써야 한다."
@@ -1964,169 +1853,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-12",
+        "id": "2026-04-27-11",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-12"
+        "articleSlug": "2026-04-27-11"
       },
       {
-        "number": "13",
-        "platform": "DEV Community",
-        "areaKey": "dev",
-        "area": "DEV",
-        "categoryKey": "web_accessibility",
-        "category": "웹접근성",
-        "date": "2026-04-26",
-        "route": "/articles/2026-04-27-13",
-        "href": "/articles/2026-04-27-13",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-13",
-        "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpt4ifgjwrvi9ghqy8rkr.png",
-        "imageCaption": "DEV Community 원문 최상단 이미지",
-        "tags": [
-          "접근성QA",
-          "WCAG",
-          "실무검수"
-        ],
-        "takeawayHtml": "What WAVE and Avada Miss on Your Shopify Store. Here Are 5 WCAG Failures You Have to Catch by Hand.",
-        "deckHtml": "Shopify 접근성은 WAVE나 Avada 점수만으로 끝나지 않습니다. 자동 도구가 놓치는 결제·스크린리더·키보드 흐름을 직접 확인해야 합니다.",
-        "facts": [
-          {
-            "label": "발행날짜",
-            "valueHtml": "2026-04-26"
-          },
-          {
-            "label": "태그",
-            "valueHtml": "접근성QA / WCAG / 실무검수"
-          },
-          {
-            "label": "국가",
-            "valueHtml": "GLOBAL"
-          },
-          {
-            "label": "카테고리",
-            "valueHtml": "web_accessibility"
-          },
-          {
-            "label": "직무 태그",
-            "valueHtml": "웹DEV"
-          },
-          {
-            "label": "출처",
-            "valueHtml": "Dev.to - Accessibility"
-          }
-        ],
-        "sourceUrl": "https://dev.to/agentkit/what-wave-and-avada-miss-on-your-shopify-store-here-are-5-wcag-failures-you-have-to-catch-by-hand-3hia",
-        "sourceTitle": "Dev.to - Accessibility",
-        "referenceLinks": [],
-        "sections": [
-          {
-            "title": "기술 변화 요약",
-            "className": "article-section is-bullet-summary",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "Shopify 접근성 감사에서 WAVE와 Avada Accessibility는 대시보드 점수를 개선하는 데 도움을 주지만, WCAG 2.1 AA 요구사항 중 자동 스캐너가 감지하지 못하는 영역이 여전히 크다고 지적한다."
-              },
-              {
-                "kind": "list",
-                "html": "원문은 실제 감사에서 반복적으로 발견되는 수동 검토 항목을 다루며, 스크린 리더 경험, 키보드 흐름, checkout completion 같은 사용 과정의 실패를 자동 점수만으로 확인할 수 없다고 설명한다."
-              },
-              {
-                "kind": "list",
-                "html": "웹 퍼블리셔에게는 앱 설치형 접근성 위젯보다 테마 템플릿, 상품 상세, 장바구니, 결제 화면을 직접 탐색하며 수동 테스트 체크리스트를 운영하는 것이 더 중요하다."
-              }
-            ],
-            "itemsHtml": [
-              "Shopify 접근성 감사에서 WAVE와 Avada Accessibility는 대시보드 점수를 개선하는 데 도움을 주지만, WCAG 2.1 AA 요구사항 중 자동 스캐너가 감지하지 못하는 영역이 여전히 크다고 지적한다.",
-              "원문은 실제 감사에서 반복적으로 발견되는 수동 검토 항목을 다루며, 스크린 리더 경험, 키보드 흐름, checkout completion 같은 사용 과정의 실패를 자동 점수만으로 확인할 수 없다고 설명한다.",
-              "웹 퍼블리셔에게는 앱 설치형 접근성 위젯보다 테마 템플릿, 상품 상세, 장바구니, 결제 화면을 직접 탐색하며 수동 테스트 체크리스트를 운영하는 것이 더 중요하다."
-            ]
-          },
-          {
-            "title": "인사이트",
-            "className": "article-section is-deep-dive",
-            "prose": true,
-            "blocks": [
-              {
-                "kind": "subhead",
-                "html": "왜 지금 이 업데이트인가"
-              },
-              {
-                "kind": "paragraph",
-                "html": "커머스 접근성 실패는 단순 법적 리스크가 아니라 구매 완료 실패로 바로 이어집니다. 자동 도구는 구조적 오류를 잘 찾지만 실제 장바구니와 결제 흐름에서 사용자가 막히는지는 확인하지 못합니다. Shopify처럼 앱과 테마가 섞이는 환경에서는 수동 감사가 특히 중요합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "구현 관점"
-              },
-              {
-                "kind": "paragraph",
-                "html": "상품 상세, 옵션 선택, 장바구니, 결제 진입을 키보드와 스크린리더로 따라가야 합니다. 접근성 앱이 삽입한 위젯이 실제 테마 markup 문제를 해결했다고 착각하지 않아야 합니다. WCAG 항목별로 자동 검사 가능 항목과 수동 확인 항목을 분리하는 것이 필요합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "실무에 어떻게 적용할 수 있을까"
-              },
-              {
-                "kind": "list",
-                "html": "WAVE/Avada 결과를 시작점으로만 쓰고 checkout 시나리오를 별도로 수동 테스트합니다."
-              },
-              {
-                "kind": "list",
-                "html": "상품 옵션, 수량 변경, 쿠폰, 결제 CTA의 이름과 포커스 순서를 확인합니다."
-              },
-              {
-                "kind": "list",
-                "html": "테마 수정과 앱 설정 변경을 분리해 어떤 조치가 실제 DOM을 바꿨는지 기록합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "같이 보면 좋은 기술"
-              },
-              {
-                "kind": "list",
-                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
-              },
-              {
-                "kind": "list",
-                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
-              },
-              {
-                "kind": "list",
-                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
-              }
-            ],
-            "itemsHtml": [
-              "@@subhead@@왜 지금 이 업데이트인가",
-              "@@paragraph@@커머스 접근성 실패는 단순 법적 리스크가 아니라 구매 완료 실패로 바로 이어집니다. 자동 도구는 구조적 오류를 잘 찾지만 실제 장바구니와 결제 흐름에서 사용자가 막히는지는 확인하지 못합니다. Shopify처럼 앱과 테마가 섞이는 환경에서는 수동 감사가 특히 중요합니다.",
-              "@@subhead@@구현 관점",
-              "@@paragraph@@상품 상세, 옵션 선택, 장바구니, 결제 진입을 키보드와 스크린리더로 따라가야 합니다. 접근성 앱이 삽입한 위젯이 실제 테마 markup 문제를 해결했다고 착각하지 않아야 합니다. WCAG 항목별로 자동 검사 가능 항목과 수동 확인 항목을 분리하는 것이 필요합니다.",
-              "@@subhead@@실무에 어떻게 적용할 수 있을까",
-              "@@list@@WAVE/Avada 결과를 시작점으로만 쓰고 checkout 시나리오를 별도로 수동 테스트합니다.",
-              "@@list@@상품 옵션, 수량 변경, 쿠폰, 결제 CTA의 이름과 포커스 순서를 확인합니다.",
-              "@@list@@테마 수정과 앱 설정 변경을 분리해 어떤 조치가 실제 DOM을 바꿨는지 기록합니다.",
-              "@@subhead@@같이 보면 좋은 기술",
-              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
-              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
-              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
-            ]
-          }
-        ],
-        "id": "2026-04-27-13",
-        "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-13"
-      },
-      {
-        "number": "14",
+        "number": "12",
         "platform": "DEV Community",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
         "date": "2026-04-25",
-        "route": "/articles/2026-04-27-14",
-        "href": "/articles/2026-04-27-14",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-14",
+        "route": "/articles/2026-04-27-12",
+        "href": "/articles/2026-04-27-12",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-12",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F83aece4c3qgc0ef4tw1e.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -2260,465 +2001,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-14",
+        "id": "2026-04-27-12",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-14"
+        "articleSlug": "2026-04-27-12"
       },
       {
-        "number": "15",
-        "platform": "DEV Community",
-        "areaKey": "dev",
-        "area": "DEV",
-        "categoryKey": "web_accessibility",
-        "category": "웹접근성",
-        "date": "2026-04-25",
-        "route": "/articles/2026-04-27-15",
-        "href": "/articles/2026-04-27-15",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-15",
-        "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4i14tdzpqwk8wkpkmwe3.png",
-        "imageCaption": "DEV Community 원문 최상단 이미지",
-        "tags": [
-          "접근성QA",
-          "WCAG",
-          "실무검수"
-        ],
-        "takeawayHtml": "I built a tool that runs a full UX + accessibility audit on any URL in under 5 minutes",
-        "deckHtml": "Parallax는 UX 휴리스틱과 WCAG 검사를 URL 기반 감사로 묶은 도구입니다. 자동 감사 초안으로는 유용하지만 최종 판단은 사람이 해야 합니다.",
-        "facts": [
-          {
-            "label": "발행날짜",
-            "valueHtml": "2026-04-25"
-          },
-          {
-            "label": "태그",
-            "valueHtml": "접근성QA / WCAG / 실무검수"
-          },
-          {
-            "label": "국가",
-            "valueHtml": "GLOBAL"
-          },
-          {
-            "label": "카테고리",
-            "valueHtml": "web_accessibility"
-          },
-          {
-            "label": "직무 태그",
-            "valueHtml": "웹DEV"
-          },
-          {
-            "label": "출처",
-            "valueHtml": "Dev.to - Accessibility"
-          }
-        ],
-        "sourceUrl": "https://dev.to/amf_floyd_9e49aef1a680dae/i-built-a-tool-that-runs-a-full-ux-accessibility-audit-on-any-url-in-under-5-minutes-2eic",
-        "sourceTitle": "Dev.to - Accessibility",
-        "referenceLinks": [],
-        "sections": [
-          {
-            "title": "기술 변화 요약",
-            "className": "article-section is-bullet-summary",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "Parallax는 URL 하나를 입력하면 최대 25페이지를 crawl하고, Nielsen의 10가지 usability heuristic과 WCAG 2.1 AA 기준을 함께 점수화하는 UX·접근성 감사 도구로 소개된다."
-              },
-              {
-                "kind": "list",
-                "html": "보고서는 각 finding에 severity, 문제 설명, 수정 방법을 포함하며, 무료 티어에서는 월 1회 감사와 summary score/category breakdown을 제공한다."
-              },
-              {
-                "kind": "list",
-                "html": "원문은 도구 소개 성격이 강하지만, 반복 수동 감사의 초안 생성에는 쓸 수 있고 최종 판단은 실제 화면·키보드·스크린리더 검증으로 보완해야 한다."
-              }
-            ],
-            "itemsHtml": [
-              "Parallax는 URL 하나를 입력하면 최대 25페이지를 crawl하고, Nielsen의 10가지 usability heuristic과 WCAG 2.1 AA 기준을 함께 점수화하는 UX·접근성 감사 도구로 소개된다.",
-              "보고서는 각 finding에 severity, 문제 설명, 수정 방법을 포함하며, 무료 티어에서는 월 1회 감사와 summary score/category breakdown을 제공한다.",
-              "원문은 도구 소개 성격이 강하지만, 반복 수동 감사의 초안 생성에는 쓸 수 있고 최종 판단은 실제 화면·키보드·스크린리더 검증으로 보완해야 한다."
-            ]
-          },
-          {
-            "title": "인사이트",
-            "className": "article-section is-deep-dive",
-            "prose": true,
-            "blocks": [
-              {
-                "kind": "subhead",
-                "html": "왜 지금 이 업데이트인가"
-              },
-              {
-                "kind": "paragraph",
-                "html": "UX와 접근성 감사는 반복 비용이 큰 작업입니다. 도구가 25페이지를 crawl하고 finding 초안을 만들어준다면 초기 진단 속도는 빨라집니다. 다만 도구 소개 글인 만큼 실제 품질은 결과 샘플과 수정 재현성으로 확인해야 합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "구현 관점"
-              },
-              {
-                "kind": "paragraph",
-                "html": "Nielsen heuristic과 WCAG 항목이 어떤 기준으로 점수화되는지 확인해야 합니다. severity와 fix suggestion이 실제 코드 수정으로 이어지는지, 단순 일반 조언인지 구분해야 합니다. 무료 티어의 월 1회 제한은 운영 감시보다 단건 진단에 가깝습니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "실무에 어떻게 적용할 수 있을까"
-              },
-              {
-                "kind": "list",
-                "html": "신규 사이트 1차 진단이나 제안서 전 점검용으로 먼저 테스트합니다."
-              },
-              {
-                "kind": "list",
-                "html": "도구 finding을 그대로 복사하지 말고 실제 화면 재현 단계와 함께 정리합니다."
-              },
-              {
-                "kind": "list",
-                "html": "반복 QA에는 axe, Lighthouse, 수동 시나리오를 함께 둡니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "같이 보면 좋은 기술"
-              },
-              {
-                "kind": "list",
-                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
-              },
-              {
-                "kind": "list",
-                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
-              },
-              {
-                "kind": "list",
-                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
-              }
-            ],
-            "itemsHtml": [
-              "@@subhead@@왜 지금 이 업데이트인가",
-              "@@paragraph@@UX와 접근성 감사는 반복 비용이 큰 작업입니다. 도구가 25페이지를 crawl하고 finding 초안을 만들어준다면 초기 진단 속도는 빨라집니다. 다만 도구 소개 글인 만큼 실제 품질은 결과 샘플과 수정 재현성으로 확인해야 합니다.",
-              "@@subhead@@구현 관점",
-              "@@paragraph@@Nielsen heuristic과 WCAG 항목이 어떤 기준으로 점수화되는지 확인해야 합니다. severity와 fix suggestion이 실제 코드 수정으로 이어지는지, 단순 일반 조언인지 구분해야 합니다. 무료 티어의 월 1회 제한은 운영 감시보다 단건 진단에 가깝습니다.",
-              "@@subhead@@실무에 어떻게 적용할 수 있을까",
-              "@@list@@신규 사이트 1차 진단이나 제안서 전 점검용으로 먼저 테스트합니다.",
-              "@@list@@도구 finding을 그대로 복사하지 말고 실제 화면 재현 단계와 함께 정리합니다.",
-              "@@list@@반복 QA에는 axe, Lighthouse, 수동 시나리오를 함께 둡니다.",
-              "@@subhead@@같이 보면 좋은 기술",
-              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
-              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
-              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
-            ]
-          }
-        ],
-        "id": "2026-04-27-15",
-        "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-15"
-      },
-      {
-        "number": "16",
-        "platform": "DEV Community",
-        "areaKey": "dev",
-        "area": "DEV",
-        "categoryKey": "web_accessibility",
-        "category": "웹접근성",
-        "date": "2026-04-25",
-        "route": "/articles/2026-04-27-16",
-        "href": "/articles/2026-04-27-16",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-16",
-        "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ft6uoyhtoiew41ulmro9f.png",
-        "imageCaption": "DEV Community 원문 최상단 이미지",
-        "tags": [
-          "프론트엔드",
-          "퍼블리싱",
-          "품질관리"
-        ],
-        "takeawayHtml": "How We Built an Autonomous UX Auditing Agent",
-        "deckHtml": "Autonomous UX 감사는 전체 페이지 수집보다 핵심 사용자 플로우를 먼저 모델링해야 효과가 있습니다. flow별 점수가 실무 의사결정에 더 가깝습니다.",
-        "facts": [
-          {
-            "label": "발행날짜",
-            "valueHtml": "2026-04-25"
-          },
-          {
-            "label": "태그",
-            "valueHtml": "프론트엔드 / 퍼블리싱 / 품질관리"
-          },
-          {
-            "label": "국가",
-            "valueHtml": "GLOBAL"
-          },
-          {
-            "label": "카테고리",
-            "valueHtml": "web_accessibility"
-          },
-          {
-            "label": "직무 태그",
-            "valueHtml": "웹DEV"
-          },
-          {
-            "label": "출처",
-            "valueHtml": "Dev.to - Accessibility"
-          }
-        ],
-        "sourceUrl": "https://dev.to/amf_floyd_9e49aef1a680dae/how-we-built-an-autonomous-ux-auditing-agent-46b9",
-        "sourceTitle": "Dev.to - Accessibility",
-        "referenceLinks": [],
-        "sections": [
-          {
-            "title": "기술 변화 요약",
-            "className": "article-section is-bullet-summary",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "Parallax 구현 글은 전체 사이트를 무작정 crawl하지 않고 회원가입→결제, 검색→상품상세→결제, 로그인→대시보드→액션 같은 critical flow를 먼저 잡아 flow별로 점수화한다고 설명한다."
-              },
-              {
-                "kind": "list",
-                "html": "평가 프레임은 Nielsen의 10가지 usability heuristic과 WCAG 접근성 스캔을 결합하며, visibility of status, error prevention, recognition vs. recall 같은 항목을 자동 점검 대상으로 모델링한다."
-              },
-              {
-                "kind": "list",
-                "html": "기존 분기별 수동 UX 감사가 발견 시점과 수정 시점 사이에 긴 지연을 만들기 때문에, 에이전트 기반 감사는 반복 점검 주기를 줄이는 운영 도구로 제안된다."
-              }
-            ],
-            "itemsHtml": [
-              "Parallax 구현 글은 전체 사이트를 무작정 crawl하지 않고 회원가입→결제, 검색→상품상세→결제, 로그인→대시보드→액션 같은 critical flow를 먼저 잡아 flow별로 점수화한다고 설명한다.",
-              "평가 프레임은 Nielsen의 10가지 usability heuristic과 WCAG 접근성 스캔을 결합하며, visibility of status, error prevention, recognition vs. recall 같은 항목을 자동 점검 대상으로 모델링한다.",
-              "기존 분기별 수동 UX 감사가 발견 시점과 수정 시점 사이에 긴 지연을 만들기 때문에, 에이전트 기반 감사는 반복 점검 주기를 줄이는 운영 도구로 제안된다."
-            ]
-          },
-          {
-            "title": "인사이트",
-            "className": "article-section is-deep-dive",
-            "prose": true,
-            "blocks": [
-              {
-                "kind": "subhead",
-                "html": "왜 지금 이 업데이트인가"
-              },
-              {
-                "kind": "paragraph",
-                "html": "UX 문제는 페이지 단위보다 여정 단위에서 드러나는 경우가 많습니다. 회원가입, 검색, 결제, 대시보드 액션처럼 사용자가 목표를 완료하는 흐름을 점수화하면 우선순위가 더 명확해집니다. 자동 감사도 결국 어떤 flow를 볼지 정의하는 설계가 먼저입니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "구현 관점"
-              },
-              {
-                "kind": "paragraph",
-                "html": "critical flow를 식별하는 규칙이 부정확하면 중요한 화면을 놓칠 수 있습니다. Nielsen heuristic을 자동 점수로 바꾸는 과정에서는 주관적 판단을 어떻게 처리하는지 확인해야 합니다. WCAG 스캔과 UX 휴리스틱은 성격이 다르므로 리포트에서도 분리해 읽는 것이 좋습니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "실무에 어떻게 적용할 수 있을까"
-              },
-              {
-                "kind": "list",
-                "html": "서비스별 핵심 flow 3~5개를 먼저 정의하고 감사 범위를 그 흐름에 맞춥니다."
-              },
-              {
-                "kind": "list",
-                "html": "flow별 점수와 페이지별 위반을 함께 기록해 수정 우선순위를 정합니다."
-              },
-              {
-                "kind": "list",
-                "html": "자동 리포트는 발견 도구로 쓰고 최종 UX 판단은 실제 사용자 시나리오로 재검증합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "같이 보면 좋은 기술"
-              },
-              {
-                "kind": "list",
-                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
-              },
-              {
-                "kind": "list",
-                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
-              },
-              {
-                "kind": "list",
-                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
-              }
-            ],
-            "itemsHtml": [
-              "@@subhead@@왜 지금 이 업데이트인가",
-              "@@paragraph@@UX 문제는 페이지 단위보다 여정 단위에서 드러나는 경우가 많습니다. 회원가입, 검색, 결제, 대시보드 액션처럼 사용자가 목표를 완료하는 흐름을 점수화하면 우선순위가 더 명확해집니다. 자동 감사도 결국 어떤 flow를 볼지 정의하는 설계가 먼저입니다.",
-              "@@subhead@@구현 관점",
-              "@@paragraph@@critical flow를 식별하는 규칙이 부정확하면 중요한 화면을 놓칠 수 있습니다. Nielsen heuristic을 자동 점수로 바꾸는 과정에서는 주관적 판단을 어떻게 처리하는지 확인해야 합니다. WCAG 스캔과 UX 휴리스틱은 성격이 다르므로 리포트에서도 분리해 읽는 것이 좋습니다.",
-              "@@subhead@@실무에 어떻게 적용할 수 있을까",
-              "@@list@@서비스별 핵심 flow 3~5개를 먼저 정의하고 감사 범위를 그 흐름에 맞춥니다.",
-              "@@list@@flow별 점수와 페이지별 위반을 함께 기록해 수정 우선순위를 정합니다.",
-              "@@list@@자동 리포트는 발견 도구로 쓰고 최종 UX 판단은 실제 사용자 시나리오로 재검증합니다.",
-              "@@subhead@@같이 보면 좋은 기술",
-              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
-              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
-              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
-            ]
-          }
-        ],
-        "id": "2026-04-27-16",
-        "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-16"
-      },
-      {
-        "number": "17",
+        "number": "13",
         "platform": "DEV Community",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
         "date": "2026-04-24",
-        "route": "/articles/2026-04-27-17",
-        "href": "/articles/2026-04-27-17",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-17",
-        "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fe432cucgr5y7hyfpwgef.png",
-        "imageCaption": "DEV Community 원문 최상단 이미지",
-        "tags": [
-          "접근성QA",
-          "WCAG",
-          "실무검수"
-        ],
-        "takeawayHtml": "Audit WCAG 2.1 accessibility on every pull request (free GitHub Action)",
-        "deckHtml": "a11yscout는 PR마다 axe-core 검사를 실행해 serious 이상 접근성 위반을 배포 전에 막는 GitHub Action입니다.",
-        "facts": [
-          {
-            "label": "발행날짜",
-            "valueHtml": "2026-04-24"
-          },
-          {
-            "label": "태그",
-            "valueHtml": "접근성QA / WCAG / 실무검수"
-          },
-          {
-            "label": "국가",
-            "valueHtml": "GLOBAL"
-          },
-          {
-            "label": "카테고리",
-            "valueHtml": "web_accessibility"
-          },
-          {
-            "label": "직무 태그",
-            "valueHtml": "웹DEV"
-          },
-          {
-            "label": "출처",
-            "valueHtml": "Dev.to - Accessibility"
-          }
-        ],
-        "sourceUrl": "https://dev.to/jpatel3/audit-wcag-21-accessibility-on-every-pull-request-free-github-action-111b",
-        "sourceTitle": "Dev.to - Accessibility",
-        "referenceLinks": [],
-        "sections": [
-          {
-            "title": "기술 변화 요약",
-            "className": "article-section is-bullet-summary",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "<code>jpatel3/a11yscout@v1</code> GitHub Action은 PR마다 axe-core 기반 WCAG 2.1 검사를 실행하고, serious 이상 위반이 있으면 job을 실패시키는 흐름을 제공한다."
-              },
-              {
-                "kind": "list",
-                "html": "설정은 preview URL, level: AA, fail-on: serious 같은 입력으로 구성되며, 결과는 PR comment에 button-name, image-alt, link-name처럼 rule과 WCAG 기준을 함께 남긴다."
-              },
-              {
-                "kind": "list",
-                "html": "선택 Vite plugin을 쓰면 axe selector 대신 <code>src/components/...</code> 수준의 source mapping을 붙일 수 있어, 위반 지점이 실제 수정 파일로 연결된다."
-              }
-            ],
-            "itemsHtml": [
-              "<code>jpatel3/a11yscout@v1</code> GitHub Action은 PR마다 axe-core 기반 WCAG 2.1 검사를 실행하고, serious 이상 위반이 있으면 job을 실패시키는 흐름을 제공한다.",
-              "설정은 preview URL, level: AA, fail-on: serious 같은 입력으로 구성되며, 결과는 PR comment에 button-name, image-alt, link-name처럼 rule과 WCAG 기준을 함께 남긴다.",
-              "선택 Vite plugin을 쓰면 axe selector 대신 <code>src/components/...</code> 수준의 source mapping을 붙일 수 있어, 위반 지점이 실제 수정 파일로 연결된다."
-            ]
-          },
-          {
-            "title": "인사이트",
-            "className": "article-section is-deep-dive",
-            "prose": true,
-            "blocks": [
-              {
-                "kind": "subhead",
-                "html": "왜 지금 이 업데이트인가"
-              },
-              {
-                "kind": "paragraph",
-                "html": "접근성은 릴리즈 직전 수동 점검으로만 두면 계속 밀립니다. PR 단계에서 자동으로 실패하게 만들면 최소 기준을 코드 리뷰 흐름 안에 넣을 수 있습니다. 특히 버튼 이름, 이미지 alt, 링크 이름 같은 기본 오류는 사람이 발견하기 전에 자동으로 막는 편이 낫습니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "구현 관점"
-              },
-              {
-                "kind": "paragraph",
-                "html": "preview URL이 안정적으로 떠야 하고, 인증이 필요한 페이지는 테스트 계정이나 스텁이 필요합니다. source mapping plugin을 쓰면 selector만 나오는 문제를 줄일 수 있습니다. fail-on: serious 기준은 팀의 접근성 성숙도에 맞춰 조정해야 합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "실무에 어떻게 적용할 수 있을까"
-              },
-              {
-                "kind": "list",
-                "html": "PR preview URL이 생기는 프로젝트부터 a11y Action을 붙입니다."
-              },
-              {
-                "kind": "list",
-                "html": "critical/serious 위반은 merge blocker로 두고 minor 항목은 backlog로 분리합니다."
-              },
-              {
-                "kind": "list",
-                "html": "source mapping이 가능한 빌드 환경에서는 실제 컴포넌트 파일 경로까지 연결합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "같이 보면 좋은 기술"
-              },
-              {
-                "kind": "list",
-                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
-              },
-              {
-                "kind": "list",
-                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
-              },
-              {
-                "kind": "list",
-                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
-              }
-            ],
-            "itemsHtml": [
-              "@@subhead@@왜 지금 이 업데이트인가",
-              "@@paragraph@@접근성은 릴리즈 직전 수동 점검으로만 두면 계속 밀립니다. PR 단계에서 자동으로 실패하게 만들면 최소 기준을 코드 리뷰 흐름 안에 넣을 수 있습니다. 특히 버튼 이름, 이미지 alt, 링크 이름 같은 기본 오류는 사람이 발견하기 전에 자동으로 막는 편이 낫습니다.",
-              "@@subhead@@구현 관점",
-              "@@paragraph@@preview URL이 안정적으로 떠야 하고, 인증이 필요한 페이지는 테스트 계정이나 스텁이 필요합니다. source mapping plugin을 쓰면 selector만 나오는 문제를 줄일 수 있습니다. fail-on: serious 기준은 팀의 접근성 성숙도에 맞춰 조정해야 합니다.",
-              "@@subhead@@실무에 어떻게 적용할 수 있을까",
-              "@@list@@PR preview URL이 생기는 프로젝트부터 a11y Action을 붙입니다.",
-              "@@list@@critical/serious 위반은 merge blocker로 두고 minor 항목은 backlog로 분리합니다.",
-              "@@list@@source mapping이 가능한 빌드 환경에서는 실제 컴포넌트 파일 경로까지 연결합니다.",
-              "@@subhead@@같이 보면 좋은 기술",
-              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
-              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
-              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
-            ]
-          }
-        ],
-        "id": "2026-04-27-17",
-        "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-17"
-      },
-      {
-        "number": "18",
-        "platform": "DEV Community",
-        "areaKey": "dev",
-        "area": "DEV",
-        "categoryKey": "web_accessibility",
-        "category": "웹접근성",
-        "date": "2026-04-24",
-        "route": "/articles/2026-04-27-18",
-        "href": "/articles/2026-04-27-18",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-18",
+        "route": "/articles/2026-04-27-13",
+        "href": "/articles/2026-04-27-13",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-13",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fn1fwpuocb4mvqsgkm6ca.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -2852,21 +2149,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-18",
+        "id": "2026-04-27-13",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-18"
+        "articleSlug": "2026-04-27-13"
       },
       {
-        "number": "19",
+        "number": "14",
         "platform": "DEV Community",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
         "date": "2026-04-24",
-        "route": "/articles/2026-04-27-19",
-        "href": "/articles/2026-04-27-19",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-19",
+        "route": "/articles/2026-04-27-14",
+        "href": "/articles/2026-04-27-14",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-14",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fizmvg7j6pek0e0jovaxk.webp",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -3000,169 +2297,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-19",
+        "id": "2026-04-27-14",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-19"
+        "articleSlug": "2026-04-27-14"
       },
       {
-        "number": "20",
-        "platform": "DEV Community",
-        "areaKey": "dev",
-        "area": "DEV",
-        "categoryKey": "web_accessibility",
-        "category": "웹접근성",
-        "date": "2026-04-24",
-        "route": "/articles/2026-04-27-20",
-        "href": "/articles/2026-04-27-20",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-20",
-        "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4ktnbxbdggiy549m15qg.png",
-        "imageCaption": "DEV Community 원문 최상단 이미지",
-        "tags": [
-          "접근성QA",
-          "WCAG",
-          "실무검수"
-        ],
-        "takeawayHtml": "Accessibility issues that automated tools won&#x27;t catch (from real audits)",
-        "deckHtml": "자동 접근성 도구가 놓치는 가장 큰 영역은 상호작용입니다. keyboard, focus, aria-live, form completion은 직접 써봐야 드러납니다.",
-        "facts": [
-          {
-            "label": "발행날짜",
-            "valueHtml": "2026-04-24"
-          },
-          {
-            "label": "태그",
-            "valueHtml": "접근성QA / WCAG / 실무검수"
-          },
-          {
-            "label": "국가",
-            "valueHtml": "GLOBAL"
-          },
-          {
-            "label": "카테고리",
-            "valueHtml": "web_accessibility"
-          },
-          {
-            "label": "직무 태그",
-            "valueHtml": "웹DEV"
-          },
-          {
-            "label": "출처",
-            "valueHtml": "Dev.to - Accessibility"
-          }
-        ],
-        "sourceUrl": "https://dev.to/a11ysolutions/accessibility-issues-that-automated-tools-wont-catch-from-real-audits-2o8l",
-        "sourceTitle": "Dev.to - Accessibility",
-        "referenceLinks": [],
-        "sections": [
-          {
-            "title": "기술 변화 요약",
-            "className": "article-section is-bullet-summary",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "원문은 axe, Lighthouse, WAVE가 구조적·시맨틱 오류는 빠르게 잡지만 실제 사용자 행동을 시뮬레이션하지 못해 interaction failure를 놓친다고 지적한다."
-              },
-              {
-                "kind": "list",
-                "html": "반복적으로 발견되는 누락 항목은 modal keyboard trap, route change 뒤 예측 불가능한 focus jump, <code>aria-live</code> 없는 form validation error, scanner는 통과하지만 실제 완료가 막히는 form flow다."
-              },
-              {
-                "kind": "list",
-                "html": "접근성 QA는 자동 점수로 끝내지 말고 keyboard only 탐색, screen reader 흐름, 오류 발생 후 복구 가능성까지 수동 시나리오로 검증해야 한다."
-              }
-            ],
-            "itemsHtml": [
-              "원문은 axe, Lighthouse, WAVE가 구조적·시맨틱 오류는 빠르게 잡지만 실제 사용자 행동을 시뮬레이션하지 못해 interaction failure를 놓친다고 지적한다.",
-              "반복적으로 발견되는 누락 항목은 modal keyboard trap, route change 뒤 예측 불가능한 focus jump, <code>aria-live</code> 없는 form validation error, scanner는 통과하지만 실제 완료가 막히는 form flow다.",
-              "접근성 QA는 자동 점수로 끝내지 말고 keyboard only 탐색, screen reader 흐름, 오류 발생 후 복구 가능성까지 수동 시나리오로 검증해야 한다."
-            ]
-          },
-          {
-            "title": "인사이트",
-            "className": "article-section is-deep-dive",
-            "prose": true,
-            "blocks": [
-              {
-                "kind": "subhead",
-                "html": "왜 지금 이 업데이트인가"
-              },
-              {
-                "kind": "paragraph",
-                "html": "접근성 점수가 높아도 사용자가 결제를 못 하거나 폼을 끝내지 못하면 실패입니다. 자동 도구는 정적인 DOM 규칙을 잘 보지만 사용자의 행동 흐름은 시뮬레이션하지 않습니다. 그래서 수동 테스트는 선택이 아니라 자동 검사의 빈칸을 채우는 필수 단계입니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "구현 관점"
-              },
-              {
-                "kind": "paragraph",
-                "html": "modal에서 빠져나갈 수 있는지, route change 뒤 focus가 어디로 가는지, validation error가 스크린리더에 알려지는지 확인해야 합니다. <code>aria-live</code> 누락이나 예측 불가능한 focus jump는 axe 결과에 없을 수 있습니다. QA 시나리오는 성공 경로뿐 아니라 오류와 복구 경로를 포함해야 합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "실무에 어떻게 적용할 수 있을까"
-              },
-              {
-                "kind": "list",
-                "html": "핵심 flow마다 keyboard only, screen reader, 오류 발생 후 복구 테스트를 추가합니다."
-              },
-              {
-                "kind": "list",
-                "html": "자동 검사 통과 여부와 별개로 focus 이동 로그를 수동으로 확인합니다."
-              },
-              {
-                "kind": "list",
-                "html": "폼 오류 메시지는 시각 표시와 보조기술 알림을 함께 검증합니다."
-              },
-              {
-                "kind": "subhead",
-                "html": "같이 보면 좋은 기술"
-              },
-              {
-                "kind": "list",
-                "html": "웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다."
-              },
-              {
-                "kind": "list",
-                "html": "브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다."
-              },
-              {
-                "kind": "list",
-                "html": "접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
-              }
-            ],
-            "itemsHtml": [
-              "@@subhead@@왜 지금 이 업데이트인가",
-              "@@paragraph@@접근성 점수가 높아도 사용자가 결제를 못 하거나 폼을 끝내지 못하면 실패입니다. 자동 도구는 정적인 DOM 규칙을 잘 보지만 사용자의 행동 흐름은 시뮬레이션하지 않습니다. 그래서 수동 테스트는 선택이 아니라 자동 검사의 빈칸을 채우는 필수 단계입니다.",
-              "@@subhead@@구현 관점",
-              "@@paragraph@@modal에서 빠져나갈 수 있는지, route change 뒤 focus가 어디로 가는지, validation error가 스크린리더에 알려지는지 확인해야 합니다. <code>aria-live</code> 누락이나 예측 불가능한 focus jump는 axe 결과에 없을 수 있습니다. QA 시나리오는 성공 경로뿐 아니라 오류와 복구 경로를 포함해야 합니다.",
-              "@@subhead@@실무에 어떻게 적용할 수 있을까",
-              "@@list@@핵심 flow마다 keyboard only, screen reader, 오류 발생 후 복구 테스트를 추가합니다.",
-              "@@list@@자동 검사 통과 여부와 별개로 focus 이동 로그를 수동으로 확인합니다.",
-              "@@list@@폼 오류 메시지는 시각 표시와 보조기술 알림을 함께 검증합니다.",
-              "@@subhead@@같이 보면 좋은 기술",
-              "@@list@@웹접근성: 이번 항목이 직접 닿는 구현·검증 영역입니다.",
-              "@@list@@브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.",
-              "@@list@@접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다."
-            ]
-          }
-        ],
-        "id": "2026-04-27-20",
-        "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-20"
-      },
-      {
-        "number": "21",
+        "number": "15",
         "platform": "DEV Community",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
         "date": "2026-04-23",
-        "route": "/articles/2026-04-27-21",
-        "href": "/articles/2026-04-27-21",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-21",
+        "route": "/articles/2026-04-27-15",
+        "href": "/articles/2026-04-27-15",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-15",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F80y5iuyy7m3axbjmy4c0.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -3296,21 +2445,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-21",
+        "id": "2026-04-27-15",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-21"
+        "articleSlug": "2026-04-27-15"
       },
       {
-        "number": "22",
+        "number": "16",
         "platform": "Smashing Magazine",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
         "date": "2026-04-20",
-        "route": "/articles/2026-04-27-22",
-        "href": "/articles/2026-04-27-22",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-22",
+        "route": "/articles/2026-04-27-16",
+        "href": "/articles/2026-04-27-16",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-16",
         "image": "https://files.smashing.media/articles/session-timeouts-accessibility-barrier-authentication-design/session-timeouts-accessibility-barrier-authentication-design.jpg",
         "imageCaption": "Smashing Magazine 원문 최상단 이미지",
         "tags": [
@@ -3444,21 +2593,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-22",
+        "id": "2026-04-27-16",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-22"
+        "articleSlug": "2026-04-27-16"
       },
       {
-        "number": "23",
+        "number": "17",
         "platform": "CSS Weekly",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "performance",
         "category": "Performance",
         "date": "2026-04-23",
-        "route": "/articles/2026-04-27-23",
-        "href": "/articles/2026-04-27-23",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-23",
+        "route": "/articles/2026-04-27-17",
+        "href": "/articles/2026-04-27-17",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-17",
         "image": "https://css-weekly.com/issues/issue-639/images/cssweekly-issue639-interactive-cover-component-og.jpg",
         "imageCaption": "CSS Weekly 원문 최상단 이미지",
         "tags": [
@@ -3592,21 +2741,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-23",
+        "id": "2026-04-27-17",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-23"
+        "articleSlug": "2026-04-27-17"
       },
       {
-        "number": "24",
+        "number": "18",
         "platform": "The Changelog",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "tool",
         "category": "TOOL",
         "date": "2026-04-24",
-        "route": "/articles/2026-04-27-24",
-        "href": "/articles/2026-04-27-24",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-24",
+        "route": "/articles/2026-04-27-18",
+        "href": "/articles/2026-04-27-18",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-18",
         "image": "https://snap.fly.dev/podcast/680/img",
         "imageCaption": "The Changelog 원문 최상단 이미지",
         "tags": [
@@ -3740,21 +2889,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-24",
+        "id": "2026-04-27-18",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-24"
+        "articleSlug": "2026-04-27-18"
       },
       {
-        "number": "25",
+        "number": "19",
         "platform": "DEV Community",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "tool",
         "category": "TOOL",
         "date": "2026-04-24",
-        "route": "/articles/2026-04-27-25",
-        "href": "/articles/2026-04-27-25",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-25",
+        "route": "/articles/2026-04-27-19",
+        "href": "/articles/2026-04-27-19",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-19",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fwww.axiondeepdigital.com%2Fimages%2Fmarketing%2Fstate-of-small-business-websites-2026-study-og.jpg",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -3888,21 +3037,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-25",
+        "id": "2026-04-27-19",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-25"
+        "articleSlug": "2026-04-27-19"
       },
       {
-        "number": "26",
+        "number": "20",
         "platform": "Smashing Magazine",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "tool",
         "category": "TOOL",
         "date": "2026-04-22",
-        "route": "/articles/2026-04-27-26",
-        "href": "/articles/2026-04-27-26",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-26",
+        "route": "/articles/2026-04-27-20",
+        "href": "/articles/2026-04-27-20",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-20",
         "image": "https://files.smashing.media/articles/ux-designer-nightmare-production-ready-becomes-design-deliverable/production-ready-becomes-design-deliverable-ux.jpg",
         "imageCaption": "Smashing Magazine 원문 최상단 이미지",
         "tags": [
@@ -4036,21 +3185,21 @@
             ]
           }
         ],
-        "id": "2026-04-27-26",
+        "id": "2026-04-27-20",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-26"
+        "articleSlug": "2026-04-27-20"
       },
       {
-        "number": "27",
+        "number": "21",
         "platform": "Syntax.fm",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "tool",
         "category": "TOOL",
         "date": "2026-04-20",
-        "route": "/articles/2026-04-27-27",
-        "href": "/articles/2026-04-27-27",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-27",
+        "route": "/articles/2026-04-27-21",
+        "href": "/articles/2026-04-27-21",
+        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-21",
         "image": "https://syntax.fm/og/997.jpg",
         "imageCaption": "Syntax.fm 원문 최상단 이미지",
         "tags": [
@@ -4184,9 +3333,9 @@
             ]
           }
         ],
-        "id": "2026-04-27-27",
+        "id": "2026-04-27-21",
         "issueSlug": "2026-04-27",
-        "articleSlug": "2026-04-27-27"
+        "articleSlug": "2026-04-27-21"
       },
       {
         "number": "01",
