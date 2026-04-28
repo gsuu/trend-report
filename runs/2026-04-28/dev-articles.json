@@ -166,47 +166,5 @@
     "pubDate": "Wed, 22 Apr 2026 00:00:00 +0000",
     "source": "Frontend Focus",
     "content": "🚀 Frontend Focus #​738 — April 22, 2026 | Read on the web Building a UI Without Breakpoints — Amit makes the case for moving away from global viewport breakpoints, instead shifting to using modern CSS such as clamp(), container queries, and auto-fit to create fluid interfaces no matter the screen. Amit Sheen Catch Bugs Before Your Frontend PRs Merge — Frontend bugs rarely stay in the diff. Greptile reviews each PR with full repo context, flags real issues, and suggests fixes that match your team. Works with GitHu…"
-  },
-  {
-    "title": "Create videos with HTML and JavaScript via HyperFrames",
-    "link": "https://javascriptweekly.com/issues/782",
-    "pubDate": "Tue, 21 Apr 2026 00:00:00 +0000",
-    "source": "JavaScript Weekly",
-    "content": "#​782 — April 21, 2026 Read on the Web JavaScript Weekly HyperFrames: Write HTML and JavaScript to Create Videos — An open-source framework for creating and rendering videos with HTML and JavaScript. Essentially a simpler non-React alternative to Remotion. It includes a variety of built-in blocks/components for common video effects and elements, and can also composite existing video and audio clips. GitHub repo. HeyGen Still Writing Tests Manually? Meticulous AI Is Here — Notion, Dropbox, Wiz and LaunchDarkly now…"
-  },
-  {
-    "title": "Markdown + Astro = ❤️",
-    "link": "https://css-tricks.com/markdown-astro/",
-    "pubDate": "Mon, 20 Apr 2026 13:55:16 +0000",
-    "source": "CSS-Tricks",
-    "content": "Although Astro has built-in support for Markdown via .md files, I'd argue that your Markdown experience can be enhanced with MDX. Markdown + Astro = ❤️ originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
-  },
-  {
-    "title": "Session Timeouts: The Overlooked Accessibility Barrier In Authentication Design",
-    "link": "https://smashingmagazine.com/2026/04/session-timeouts-accessibility-barrier-authentication-design/",
-    "pubDate": "Mon, 20 Apr 2026 13:00:00 GMT",
-    "source": "Smashing Magazine",
-    "content": "Poorly handled session timeouts are more than a technical inconvenience. They can become serious accessibility barriers that interrupt essential online tasks, especially for people with disabilities. Here is how to implement thoughtful session management that improves usability, reduces frustration, and helps create a more accessible and respectful web."
-  },
-  {
-    "title": "997: Rating and Roasting Your Projects",
-    "link": "https://syntax.fm/997",
-    "pubDate": "Mon, 20 Apr 2026 11:00:00 -0000",
-    "source": "Syntax.fm",
-    "content": "Scott and Wes dig into a huge batch of community-submitted projects, from JSON tools and CSS editors to AI agents, view transitions, and everything in between. It’s a rapid-fire showcase of what developers have been building, including picks like Arrow JS, Sugar High, Drift, and a whole lot more. Show Notes 00:00 Welcome to Syntax! Wes’ Bluesky Post Wes’ X Post 01:20 JSON-Alexander. 02:43 FFF - Fastest File Search. 04:44 View Transitions Toolkit. 08:06 Agentation and Svelte Agentation. 11:21 CSS Studio. 13:12 Peon…"
-  },
-  {
-    "title": "711: Where did Oh My Zsh Come From? And Using Rails in 2026",
-    "link": "https://shoptalkshow.com/711/",
-    "pubDate": "Mon, 20 Apr 2026 07:57:25 +0000",
-    "source": "ShopTalk Show",
-    "content": "Show Description We've got Robby Russell, maintainer of Oh My Zsh, on the show to talk about why Chris has it installed, what makes a good Zsh plugin, Oh My Zsh plugins Robby recommends, what it's like working in Rails in 2026, dealing with project dependancies, and how Rails apps make use of frameworks? Listen on Website Watch on YouTube Guests Robby Russell Guest's Main URL • Guest's Social CEO and Partner at Planet Argon Links Oh My Zsh - a delightful & open source framework for Zsh Robby Russell - CEO, Partner…"
-  },
-  {
-    "title": "Introducing YouTube Channel Visualizer",
-    "link": "https://feedpress.me/link/24028/17322890/introducing-youtube-channel-visualizer",
-    "pubDate": "Mon, 20 Apr 2026 00:00:00 GMT",
-    "source": "CSS Weekly",
-    "content": "An overview of the YouTube Channel Visualizer tool."
   }
 ]

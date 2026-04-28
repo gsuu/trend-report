@@ -5,6 +5,7 @@ import fallbackReport from "./data/report.example.json";
 const basePath = detectBasePath();
 const route = ref(currentRoute());
 const report = ref(fallbackReport);
+const weeklyReports = ref([]);
 const magazineLoading = ref(!hasMagazineIssues(report.value));
 const showCurrentWeekOnly = ref(initialCurrentWeekFilter());
 const listViewMode = ref(initialListViewMode());
@@ -36,6 +37,10 @@ function currentRoute() {
 
 function hasMagazineIssues(value) {
   return Array.isArray(value?.issues) && value.issues.length > 0;
+}
+
+function hasWeeklyReports(value) {
+  return Array.isArray(value) && value.length > 0;
 }
 
 function routePath(value) {
@@ -105,6 +110,7 @@ function syncViewportWidth() {
 
 onMounted(() => {
   loadMagazineReport();
+  loadWeeklyReports();
   syncDocumentState();
   window.addEventListener("popstate", syncRoute);
   window.addEventListener("resize", syncViewportWidth);
@@ -120,6 +126,22 @@ async function loadMagazineReport() {
   await loadStaticMagazineReport();
   if (!issues.value.length) report.value = fallbackReport;
   magazineLoading.value = false;
+}
+
+async function loadWeeklyReports() {
+  try {
+    const response = await fetch(withBasePath("/data/reports.json"), {
+      headers: { Accept: "application/json" },
+      cache: "no-cache",
+    });
+    if (!response.ok) return;
+
+    const data = await response.json();
+    if (!hasWeeklyReports(data?.reports)) return;
+    weeklyReports.value = data.reports;
+  } catch {
+    weeklyReports.value = [];
+  }
 }
 
 async function loadStaticMagazineReport() {
@@ -142,13 +164,17 @@ async function loadStaticMagazineReport() {
 }
 
 const issues = computed(() => report.value.issues || []);
+const weeklyReportItems = computed(() => weeklyReports.value || []);
+const routePathname = computed(() => routePath(route.value));
+const isReportsRoute = computed(() => routePathname.value === "/reports" || routePathname.value.startsWith("/reports/"));
 const recentWeekRange = computed(() => recentDaysRange(7));
 const filteredIssues = computed(() => {
   if (!showCurrentWeekOnly.value || !recentWeekRange.value) return issues.value;
   return issues.value.filter((issue) => isDateInRange(issuePublicationDate(issue), recentWeekRange.value));
 });
 const activeIssue = computed(() => {
-  const path = routePath(route.value);
+  const path = routePathname.value;
+  if (path === "/reports" || path.startsWith("/reports/")) return null;
   const exactMatch = issues.value.find((issue) => issue.route === path || issue.href === path);
   if (exactMatch) return exactMatch;
 
@@ -167,6 +193,14 @@ const activeIssue = computed(() => {
   return issues.value.find((issue) => issue.number === articleSlug || issue.articleSlug === articleSlug || issue.id === articleSlug) || null;
 });
 
+const activeWeeklyReport = computed(() => {
+  const match = routePathname.value.match(/^\/reports\/([^/?]+)/);
+  if (!match) return null;
+  return weeklyReportItems.value.find((item) => item.slug === decodeURIComponent(match[1])) || null;
+});
+
+const isReportsIndex = computed(() => routePathname.value === "/reports");
+
 const activeCategoryKey = computed(() => {
   const sourceRoute = activeIssue.value ? detailReturnRoute.value : route.value;
   const match = sourceRoute.match(/^\/category\/([^/?]+)/);
@@ -181,8 +215,12 @@ const activeSubcategory = computed(() => {
 });
 
 const categories = computed(() => {
-  const categoryMap = new Map();
-  for (const issue of issues.value) {
+  const categoryMap = new Map([
+    ["service", { key: "service", label: "Service", count: 0 }],
+    ["design", { key: "design", label: "Design", count: 0 }],
+    ["dev", { key: "dev", label: "DEV", count: 0 }],
+  ]);
+  for (const issue of filteredIssues.value) {
     const key = issue.areaKey || issue.area || "uncategorized";
     if (!categoryMap.has(key)) {
       categoryMap.set(key, {
@@ -191,12 +229,7 @@ const categories = computed(() => {
         count: 0,
       });
     }
-  }
-  for (const issue of filteredIssues.value) {
-    const key = issue.areaKey || issue.area || "uncategorized";
-    if (categoryMap.has(key)) {
-      categoryMap.get(key).count += 1;
-    }
+    categoryMap.get(key).count += 1;
   }
   const order = { service: 0, design: 1, dev: 2 };
   return [...categoryMap.values()].sort((a, b) => (order[a.key] ?? 99) - (order[b.key] ?? 99));
@@ -294,13 +327,21 @@ function subcategoryPath(categoryKey, subcategoryKey) {
 }
 
 function storyRoute(issue) {
+  return storyRouteFrom(issue, currentListRoute.value);
+}
+
+function storyRouteFrom(issue, fromRoute) {
   const articlePath = issue.route || `/articles/${issue.number}`;
-  return `${withBasePath(articlePath)}?from=${encodeURIComponent(currentListRoute.value)}`;
+  return `${withBasePath(articlePath)}?from=${encodeURIComponent(fromRoute)}`;
+}
+
+function reportPath(slug) {
+  return withBasePath(`/reports/${slug}`);
 }
 
 function validListRoute(value) {
   const path = routePath(value);
-  return path === "/" || path === "" || /^\/category\/(service|design|dev|uiux)(?:\/[^?&]+)?$/.test(path);
+  return path === "/" || path === "" || path === "/reports" || /^\/reports\/[^?&]+$/.test(path) || /^\/category\/(service|design|dev|uiux)(?:\/[^?&]+)?$/.test(path);
 }
 
 function routeReturnParam() {
@@ -313,6 +354,15 @@ function routeReturnParam() {
 function goToList() {
   window.location.href = withBasePath(detailReturnRoute.value);
 }
+
+function goToReportList() {
+  window.location.href = withBasePath("/reports");
+}
+
+const headerBackHref = computed(() => {
+  if (activeWeeklyReport.value) return withBasePath("/reports");
+  return withBasePath(detailReturnRoute.value);
+});
 
 function toggleCurrentWeekOnly(event) {
   const enabled = Boolean(event.target.checked);
@@ -598,7 +648,7 @@ function issuePublicationDate(issue) {
 
 <template>
   <header class="site-header">
-    <a class="header-back-link" :href="withBasePath(detailReturnRoute)" aria-label="목록으로 돌아가기">
+    <a class="header-back-link" :href="headerBackHref" aria-label="목록으로 돌아가기">
       <span aria-hidden="true">←</span>
     </a>
     <a class="brand" :href="withBasePath(withListFilter('/'))" aria-label="CTTD Trend Magazine home">
@@ -606,7 +656,7 @@ function issuePublicationDate(issue) {
       <span>Magazine</span>
     </a>
     <nav class="header-category-nav" aria-label="매거진 카테고리">
-      <a :href="withBasePath(withListFilter('/'))" data-category-nav="" :class="{ 'is-active': !activeCategoryKey && !activeIssue }">전체</a>
+      <a :href="withBasePath(withListFilter('/'))" data-category-nav="" :class="{ 'is-active': !activeCategoryKey && !activeIssue && !isReportsRoute && !activeWeeklyReport }">전체</a>
       <a
         v-for="category in categories"
         :key="category.key"
@@ -616,6 +666,14 @@ function issuePublicationDate(issue) {
         :aria-current="activeCategoryKey === category.key ? 'page' : undefined"
       >
         {{ category.label }}
+      </a>
+      <a
+        :href="withBasePath('/reports')"
+        data-category-nav="reports"
+        :class="{ 'is-active': isReportsRoute }"
+        :aria-current="isReportsRoute ? 'page' : undefined"
+      >
+        Reports
       </a>
     </nav>
     <div class="header-actions">
@@ -669,7 +727,7 @@ function issuePublicationDate(issue) {
     </div>
   </Teleport>
 
-  <main :class="{ 'article-main': activeIssue }">
+  <main :class="{ 'article-main': activeIssue || activeWeeklyReport }">
     <article v-if="activeIssue" :key="'story-' + (activeIssue.route || activeIssue.number)" class="article-layout">
         <header class="article-hero">
           <p class="article-brand" v-text="activeIssue.platform"></p>
@@ -765,6 +823,117 @@ function issuePublicationDate(issue) {
           </div>
         </div>
     </article>
+
+    <article v-else-if="activeWeeklyReport" :key="'report-' + activeWeeklyReport.slug" class="report-layout">
+      <header class="report-hero">
+        <p class="report-eyebrow">Weekly Report</p>
+        <h1>{{ activeWeeklyReport.title }}</h1>
+        <p class="report-deck">{{ activeWeeklyReport.deck }}</p>
+        <div class="report-meta-row">
+          <time>{{ activeWeeklyReport.date }}</time>
+          <span aria-hidden="true">|</span>
+          <span>{{ activeWeeklyReport.summary }}</span>
+        </div>
+        <div class="report-chip-row">
+          <span v-for="item in activeWeeklyReport.highlights" :key="item">{{ item }}</span>
+        </div>
+      </header>
+
+      <div class="report-body">
+        <section class="report-section">
+          <div class="report-section-head">
+            <p>이번 주 모니터링 범위</p>
+            <h2>무엇을 보고 판단했는지 먼저 남깁니다</h2>
+          </div>
+          <div class="report-scope-grid">
+            <article class="report-scope-card">
+              <h3>중점 관심사 축</h3>
+              <ul>
+                <li v-for="axis in activeWeeklyReport.monitoredScope.focusAxes" :key="axis">{{ axis }}</li>
+              </ul>
+            </article>
+            <article class="report-scope-card">
+              <h3>확인 플랫폼</h3>
+              <ul>
+                <li v-for="platform in activeWeeklyReport.monitoredScope.platforms" :key="platform">{{ platform }}</li>
+              </ul>
+            </article>
+            <article class="report-scope-card report-scope-card-wide">
+              <h3>이번 주 포인트</h3>
+              <p>{{ activeWeeklyReport.monitoredScope.weeklyPoint }}</p>
+            </article>
+          </div>
+        </section>
+
+        <section
+          v-for="section in activeWeeklyReport.sections"
+          :key="section.key"
+          class="report-section"
+        >
+          <div class="report-section-head">
+            <p>{{ section.label }}</p>
+            <h2>{{ section.heading }}</h2>
+            <strong>{{ section.summary }}</strong>
+          </div>
+
+          <div class="report-item-list">
+            <article v-for="item in section.items" :key="section.key + item.number" class="report-item-card">
+              <div class="report-item-meta">
+                <span>{{ item.number }}</span>
+                <em>{{ item.category }}</em>
+              </div>
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.summary }}</p>
+              <strong>{{ item.reason }}</strong>
+              <div class="report-item-actions">
+                <a v-if="item.route" :href="storyRouteFrom(item, `/reports/${activeWeeklyReport.slug}`)">기사 보기</a>
+                <a v-if="item.sourceUrl" :href="item.sourceUrl" target="_blank" rel="noreferrer">원문 보기</a>
+              </div>
+            </article>
+          </div>
+
+          <div v-if="section.excluded?.length" class="report-excluded-block">
+            <h3>수집했지만 제외한 것</h3>
+            <ul>
+              <li v-for="item in section.excluded" :key="section.key + item.title">
+                <strong>{{ item.title }}</strong>
+                <span>{{ item.reason }}</span>
+                <em>{{ item.revisitCondition }}</em>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="article-list-actions">
+          <a class="article-list-link" :href="withBasePath('/reports')" @click.prevent="goToReportList">리포트 목록 보기</a>
+        </div>
+      </div>
+    </article>
+
+    <section v-else-if="isReportsIndex" key="reports" class="reports-home">
+      <section class="reports-hero-band">
+        <p>Weekly Reports</p>
+        <h1>한 주를 어떻게 봤고 왜 남겼는지 기록합니다</h1>
+        <strong>개별 베스트 아티클은 기존 카테고리에서 보고, 주간 판단과 제외 로그는 여기서 확인합니다.</strong>
+      </section>
+
+      <section class="reports-list" aria-label="주간 리포트 목록">
+        <article v-for="item in weeklyReportItems" :key="item.slug" class="report-list-card">
+          <a :href="reportPath(item.slug)">
+            <div class="report-list-meta">
+              <time>{{ item.date }}</time>
+              <span aria-hidden="true">|</span>
+              <span>{{ item.sections.length }} sections</span>
+            </div>
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.deck }}</p>
+            <div class="report-chip-row">
+              <span v-for="highlight in item.highlights" :key="item.slug + highlight">{{ highlight }}</span>
+            </div>
+          </a>
+        </article>
+      </section>
+    </section>
 
     <section v-else key="home" id="magazine" class="magazine-home">
         <section v-if="activeCategory" class="subcategory-panel" aria-label="소 카테고리">
