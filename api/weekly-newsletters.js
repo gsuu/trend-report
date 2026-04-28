@@ -545,22 +545,37 @@ async function sendNewsletters(issuesByAudience, weekRange) {
 
   let sent = 0;
   let skipped = 0;
+  const failedRecipients = [];
   for (const subscriber of subscribers) {
     const selectedIssues = selectedIssuesByAudience(subscriber.audiences, issuesByAudience);
     if (!selectedIssues.length) {
       skipped += 1;
       continue;
     }
-    await transporter.sendMail({
-      from: process.env.SMTP_FROM,
-      to: subscriber.email,
-      subject: audienceSubject(sendDateLabel),
-      text: renderPlainText(subscriber.audiences, issuesByAudience, weekRange, subscriber.email, sendDateLabel),
-      html: renderNewsletter(subscriber.audiences, issuesByAudience, weekRange, subscriber.email, sendDateLabel),
-    });
-    sent += 1;
+    try {
+      await transporter.sendMail({
+        from: process.env.SMTP_FROM,
+        to: subscriber.email,
+        subject: audienceSubject(sendDateLabel),
+        text: renderPlainText(subscriber.audiences, issuesByAudience, weekRange, subscriber.email, sendDateLabel),
+        html: renderNewsletter(subscriber.audiences, issuesByAudience, weekRange, subscriber.email, sendDateLabel),
+      });
+      sent += 1;
+    } catch (error) {
+      failedRecipients.push({
+        email: subscriber.email,
+        code: error?.responseCode || error?.code || "",
+        message: error?.response || error?.message || "send failed",
+      });
+    }
   }
-  return { sent: sent > 0, recipients: sent, skipped, reason: sent ? undefined : "no matching issues" };
+  return {
+    sent: sent > 0,
+    recipients: sent,
+    skipped,
+    failedRecipients,
+    reason: sent ? undefined : (failedRecipients.length ? "no successful sends" : "no matching issues"),
+  };
 }
 
 function issuesMarkdown(title, issues) {

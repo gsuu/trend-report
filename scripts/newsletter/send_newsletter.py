@@ -2176,6 +2176,14 @@ def send_email(subject: str, sender: str, recipients: list[str], plain_text: str
         smtp.send_message(message)
 
 
+def recipient_refusal_message(error: smtplib.SMTPRecipientsRefused) -> str:
+    details = []
+    for email, (code, message) in error.recipients.items():
+        text = message.decode("utf-8", errors="replace") if isinstance(message, bytes) else str(message)
+        details.append(f"{email} ({code}: {text})")
+    return ", ".join(details)
+
+
 def main() -> None:
     load_env_files()
 
@@ -2224,6 +2232,7 @@ def main() -> None:
 
         sender = os.getenv("SMTP_FROM", "")
         sent_count = 0
+        failed_recipients: list[str] = []
         for record in records:
             recipient = str(record.get("email") or "")
             audiences = tuple(str(audience) for audience in record.get("audiences", SUBSCRIPTION_AUDIENCES))  # type: ignore[arg-type]
@@ -2245,11 +2254,19 @@ def main() -> None:
                 recipient,
                 combined_title,
             )
-            send_email(f"{NEWSLETTER_SUBJECT_PREFIX} {combined_title}", sender, [recipient], plain_text, recipient_html)
-            sent_count += 1
+            try:
+                send_email(f"{NEWSLETTER_SUBJECT_PREFIX} {combined_title}", sender, [recipient], plain_text, recipient_html)
+                sent_count += 1
+            except smtplib.SMTPRecipientsRefused as exc:
+                failed_recipients.append(recipient_refusal_message(exc) or recipient)
+                print(f"수신자 거절로 건너뜀: {failed_recipients[-1]}")
+        if not sent_count and failed_recipients:
+            raise SystemExit(f"모든 수신자가 거절되어 발송하지 못했습니다. 건너뛴 수신자: {', '.join(failed_recipients)}")
         if not sent_count:
             raise SystemExit("선택한 카테고리에 포함되는 이슈가 있는 수신자가 없습니다.")
         print(f"통합 발송 완료: {sent_count}명")
+        if failed_recipients:
+            print(f"건너뛴 수신자: {', '.join(failed_recipients)}")
         return
 
     work_items: list[dict[str, object]] = []
@@ -2291,9 +2308,11 @@ def main() -> None:
 
     sender = os.getenv("SMTP_FROM", "")
     sent_count = 0
+    failed_recipients: list[str] = []
     for item in work_items:
         audience = str(item["audience"])
         recipients = item["recipients"]
+        audience_sent_count = 0
         if not recipients:
             raise SystemExit(f"{audience_label(audience)} 수신자가 없습니다. --to 또는 --subscribers를 입력하세요.")
         for recipient in recipients:
@@ -2315,10 +2334,17 @@ def main() -> None:
                 item["items"],  # type: ignore[arg-type]
                 recipient,
             )
-            send_email(str(item["subject"]), sender, [recipient], plain_text, recipient_html)
-            sent_count += 1
-        print(f"{audience_label(audience)} 발송 완료: {len(recipients)}명")
+            try:
+                send_email(str(item["subject"]), sender, [recipient], plain_text, recipient_html)
+                sent_count += 1
+                audience_sent_count += 1
+            except smtplib.SMTPRecipientsRefused as exc:
+                failed_recipients.append(recipient_refusal_message(exc) or recipient)
+                print(f"수신자 거절로 건너뜀: {failed_recipients[-1]}")
+        print(f"{audience_label(audience)} 발송 완료: {audience_sent_count}명")
     print(f"전체 발송 완료: {sent_count}건")
+    if failed_recipients:
+        print(f"건너뛴 수신자: {', '.join(failed_recipients)}")
 
 
 if __name__ == "__main__":
