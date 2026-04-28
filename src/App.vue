@@ -815,7 +815,7 @@ function issuePublicationDate(issue) {
           </div>
           <label class="week-filter-toggle">
             <input type="checkbox" :checked="showCurrentWeekOnly" @change="toggleCurrentWeekOnly">
-            <span>최근 1주일 업데이트만 보기</span>
+            <span>최근 <span class="week-filter-period">1주일 </span>업데이트만 보기</span>
           </label>
         </section>
 
