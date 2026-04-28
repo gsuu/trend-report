@@ -13,6 +13,8 @@
     "collect:raw": "node scripts/legacy/tracking_to_collection.mjs",
     "tracking:prepare": "node scripts/tracking/collect_materials.mjs",
     "tracking:brief": "node scripts/tracking/collect_materials.mjs --no-fetch",
+    "tracking:workflow": "node scripts/tracking/automation_runner.mjs",
+    "tracking:quality": "node scripts/tracking/workflow_quality_gate.mjs",
     "notion:upload": "python scripts/notion/push_notion.py",
     "magazine:export-json": "python scripts/notion/export_magazine_json.py",
     "build": "vite build",
