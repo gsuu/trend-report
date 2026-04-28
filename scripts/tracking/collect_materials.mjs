@@ -11,8 +11,25 @@ const runsDir = path.join(root, "runs");
 const EDITORIAL_GUIDES = [
   "scripts/tracking/new_collection.py",
   "docs/data-collection-strategy.md",
+  "docs/service-digest-agent-prompt.md",
+  "docs/design-digest-agent-prompt.md",
+  "docs/dev-digest-agent-prompt.md",
   "docs/target-fit-classifier-agent.md",
   "docs/editorial-style-guide.md",
+  "docs/magazine-writing-standard.md",
+];
+
+const CATEGORY_ARTICLE_FILES = [
+  "service-articles.json",
+  "design-articles.json",
+  "dev-articles.json",
+  "articles.json",
+];
+
+const CATEGORY_REPORT_FILES = [
+  "service-fetch-report.json",
+  "design-fetch-report.json",
+  "dev-fetch-report.json",
 ];
 
 function argValue(name, fallback = "") {
@@ -70,6 +87,24 @@ function normalize(value = "") {
   return String(value).trim().toLowerCase();
 }
 
+function decodeHtml(value = "") {
+  return String(value)
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&#x27;/g, "'")
+    .replace(/&lsquo;/g, "'")
+    .replace(/&rsquo;/g, "'")
+    .replace(/&ldquo;/g, '"')
+    .replace(/&rdquo;/g, '"')
+    .replace(/&middot;/g, "·")
+    .replace(/&hellip;/g, "…")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function isoDate(value) {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return outputDate();
@@ -77,13 +112,13 @@ function isoDate(value) {
 }
 
 function shortText(value = "", limit = 320) {
-  const text = String(value || "").replace(/\s+/g, " ").trim();
+  const text = decodeHtml(value || "");
   if (text.length <= limit) return text;
   return `${text.slice(0, limit - 1).trimEnd()}…`;
 }
 
 function cleanTitle(value = "") {
-  return String(value || "")
+  return decodeHtml(value || "")
     .replace(/[\u{1F000}-\u{1FAFF}]/gu, "")
     .replace(/\uFE0F/g, "")
     .replace(/[❤♥]/g, "")
@@ -95,6 +130,8 @@ function cleanTitle(value = "") {
 function cleanDisplayText(value = "") {
   return cleanTitle(value)
     .replace(/^보도자료\s*/i, "")
+    .replace(/^\d{4}\.\s*\d{1,2}\.\s*\d{1,2}\s*/g, "")
+    .replace(/^\d{4}-\d{1,2}-\d{1,2}\s*/g, "")
     .replace(/\s*Read the full article\.\.\..*$/i, "")
     .replace(/\s*The post\s+.+$/i, "")
     .replace(/\s*\d{4}\.\d{2}\.\d{2}\s*$/g, "")
@@ -142,6 +179,22 @@ function categoryLabel(article) {
     "department_store",
     "beauty",
     "book_content",
+    "lifestyle_commerce",
+    "platform_commerce",
+    "local_service",
+    "travel_platform",
+    "research",
+    "trend_curation",
+    "kr_uiux_media",
+    "kr_uiux_case",
+    "kr_design_media",
+    "kr_uiux_practice",
+    "kr_promotion_design",
+    "kr_commerce_design",
+    "web_reference",
+    "ux_practice",
+    "ux_research",
+    "design_reference",
     "global_service_ux",
     "ai",
     "design_system",
@@ -180,9 +233,11 @@ function roleTags(article) {
 }
 
 function sourceType(article) {
+  const role = normalize(article.sourceRole);
+  if (role === "official") return "official";
   const source = `${article.source || ""}`.toLowerCase();
   const domain = linkDomain(article.link).toLowerCase();
-  if (/(webkit|developer\.chrome|web\.dev|mdn|figma|openai|anthropic|adobe|spotify|google|github|nodejs|w3|whatwg)/i.test(`${source} ${domain}`)) return "official";
+  if (/(webkit|developer\.chrome|web\.dev|mdn|figma|openai|anthropic|adobe|spotify|google|github|nodejs|w3|whatwg|canva|musinsa|coupang|kurly|oliveyoung|kakaocorp|navercorp|daangn|yanoljagroup)/i.test(`${source} ${domain}`)) return "official";
   if (/(weekly|frontend focus|css weekly|javascript weekly|newsletter)/i.test(source)) return "newsletter";
   if (/(smashing|css-tricks|dev\.to|yozm|digital insight|opensurvey|blog)/i.test(`${source} ${domain}`)) return "magazine_or_blog";
   if (/(youtube|youtu\.be)/i.test(domain)) return "youtube";
@@ -202,6 +257,10 @@ function targetFit(article) {
   const area = areaLabel(article);
   const category = categoryLabel(article);
   const text = `${article.source || ""} ${article.title || ""} ${article.content || ""}`.toLowerCase();
+  const evidenceTags = new Set(article.evidenceTags || []);
+  const riskTags = new Set(article.riskTags || []);
+  const hasEvidence = (...tags) => tags.some((tag) => evidenceTags.has(tag));
+  const hasRisk = (...tags) => tags.some((tag) => riskTags.has(tag));
   const ecommerceSignal = /(이커머스|커머스|쇼핑|상품|상품상세|장바구니|결제|구매|주문|배송|리뷰|추천|검색|멤버십|쿠폰|포인트|재구매|crm|픽업|재고|commerce|ecommerce|marketplace|cart|checkout|product|review|recommendation|membership)/i.test(text);
   const weakPromo = /(카드|제휴카드|삼성카드|멤버스데이|할인전|기획전|프로모션|쿠폰|e쿠폰|콘텐츠 제휴|파트너십|campaign|promotion|partnership|coupon)/i.test(text);
   const aiIntegration = /(claude|chatgpt|gemini|외부 ai|연동|integration)/i.test(text);
@@ -209,6 +268,27 @@ function targetFit(article) {
   const explicitScreenSignal = /(화면|스크린|플로우|진입|버튼|상태값|상품상세|장바구니|결제 화면|checkout|cart|product page|screen|flow|cta)/i.test(text);
   const serviceExpertSignal = /(탐색|검색|추천|비교|구매|결제|장바구니|리뷰|후기|재방문|crm|멤버십|포인트|쿠폰|알림|온보딩|신뢰|전환|운영자|관리자|대시보드|정책|혜택|상태값|정보구조|flow|journey|retention|conversion|checkout|review|recommendation)/i.test(text);
   const serviceApplicationSignal = /(적용|고려|점검|설계|화면|플로우|정책|조건|예외|검수|cta|상태값|근거|피드백|운영|재방문|전환|비교 기준|추천 근거)/i.test(text);
+  const serviceEvidenceSignal = hasEvidence(
+    "commerce_core",
+    "search_discovery",
+    "membership_retention",
+    "review_trust",
+    "payment_checkout",
+    "o2o_flow",
+    "seller_operation",
+    "service_ai",
+    "research_signal",
+  );
+  const commerceEvidenceSignal = hasEvidence(
+    "commerce_core",
+    "search_discovery",
+    "membership_retention",
+    "review_trust",
+    "payment_checkout",
+    "o2o_flow",
+  );
+  const riskWithoutFlow = hasRisk("partnership_only", "offline_only", "business_only", "hiring_or_esg")
+    || (hasRisk("weak_promo") && !commerceEvidenceSignal);
 
   if (area === "DEV" || area === "Design") {
     return {
@@ -218,7 +298,15 @@ function targetFit(article) {
     };
   }
 
-  if (area === "Service" && (!serviceExpertSignal || !serviceApplicationSignal)) {
+  if (area === "Service" && riskWithoutFlow && !explicitScreenSignal) {
+    return {
+      label: "weak_promo",
+      priority: "제외 검토",
+      reason: "수집 단계에서 제휴, 오프라인, 실적, 채용/ESG 등 위험 단서가 감지됐습니다. 화면·플로우 근거가 없으면 shortlist에서 제외합니다.",
+    };
+  }
+
+  if (area === "Service" && !serviceEvidenceSignal && (!serviceExpertSignal || !serviceApplicationSignal)) {
     return {
       label: "exclude",
       priority: "자동 제외",
@@ -226,7 +314,7 @@ function targetFit(article) {
     };
   }
 
-  if ((weakPromo || aiIntegration) && !explicitScreenSignal) {
+  if ((weakPromo || aiIntegration || hasRisk("weak_promo")) && !explicitScreenSignal && !commerceEvidenceSignal) {
     return {
       label: "weak_promo",
       priority: "제외 검토",
@@ -234,7 +322,7 @@ function targetFit(article) {
     };
   }
 
-  if (["ecommerce", "fashion", "beauty", "department_store"].includes(category) && ecommerceSignal && screenSignal) {
+  if (["ecommerce", "fashion", "beauty", "department_store", "lifestyle_commerce"].includes(category) && (ecommerceSignal || commerceEvidenceSignal) && (screenSignal || commerceEvidenceSignal) && (!hasRisk("weak_promo") || explicitScreenSignal)) {
     return {
       label: "core_ecommerce",
       priority: "P0",
@@ -242,7 +330,7 @@ function targetFit(article) {
     };
   }
 
-  if (area === "Service" && ecommerceSignal && screenSignal && !weakPromo) {
+  if (area === "Service" && (ecommerceSignal || serviceEvidenceSignal) && (screenSignal || serviceEvidenceSignal) && !riskWithoutFlow && (!hasRisk("weak_promo") || explicitScreenSignal)) {
     return {
       label: "commerce_adjacent",
       priority: "P1",
@@ -284,6 +372,11 @@ function collectedArticle(article) {
     shortlistPriority: fit.priority,
     targetFitReason: fit.reason,
     image,
+    evidenceTags: article.evidenceTags || [],
+    riskTags: article.riskTags || [],
+    valueTags: article.valueTags || [],
+    sourceRole: article.sourceRole || "",
+    publishStatus: article.publishStatus || "",
     summary: shortText(article.content || article.title, 360),
     machineStatus,
     machineReason: machineStatus === "auto_excluded"
@@ -297,6 +390,44 @@ function collectedArticle(article) {
       finalSourceUrl: sourceType(article) === "official" ? article.link : "",
       relatedSources: [],
     },
+  };
+}
+
+async function readRunArticles(date) {
+  const currentRunArticles = [];
+  const loadedFiles = [];
+  const reportFiles = [];
+
+  for (const fileName of CATEGORY_ARTICLE_FILES) {
+    const filePath = runFile(date, fileName);
+    try {
+      const articles = JSON.parse(await fs.readFile(filePath, "utf8"));
+      currentRunArticles.push(...articles);
+      loadedFiles.push(filePath);
+    } catch {
+      // Category files are optional because some runs may collect only one category.
+    }
+  }
+
+  for (const fileName of CATEGORY_REPORT_FILES) {
+    const filePath = runFile(date, fileName);
+    try {
+      await fs.stat(filePath);
+      reportFiles.push(filePath);
+    } catch {
+      // Fetch reports are optional.
+    }
+  }
+
+  if (currentRunArticles.length) {
+    return { articles: currentRunArticles, loadedFiles, reportFiles };
+  }
+
+  const fallbackPath = await latestRunFile("articles.json");
+  return {
+    articles: JSON.parse(await fs.readFile(fallbackPath, "utf8")),
+    loadedFiles: [fallbackPath],
+    reportFiles,
   };
 }
 
@@ -325,7 +456,14 @@ function markdownLink(label, filePath) {
   return `[${label}](${filePath.replaceAll("\\", "/")})`;
 }
 
+function repoRelativePath(filePath) {
+  return path.relative(root, filePath).replaceAll("\\", "/");
+}
+
 function articleBrief(article, index) {
+  const evidenceTags = article.evidenceTags?.length ? article.evidenceTags.join(", ") : "없음";
+  const riskTags = article.riskTags?.length ? article.riskTags.join(", ") : "없음";
+  const valueTags = article.valueTags?.length ? article.valueTags.join(", ") : "없음";
   return [
     `### ${String(index + 1).padStart(2, "0")}. [${article.source || "출처 미상"}] ${article.title || "제목 없음"}`,
     "",
@@ -337,17 +475,35 @@ function articleBrief(article, index) {
     `- 적합성 메모: ${article.targetFitReason}`,
     `- 직무 태그: ${article.roleTags.join(", ") || "AI 확인 필요"}`,
     `- 출처 유형: ${article.sourceType}`,
+    `- 출처 역할: ${article.sourceRole || "미지정"}`,
     `- 후보 발견 출처: ${article.source || "확인 필요"}`,
     `- 후보 발견 URL: ${article.link}`,
     `- 최종 기준 원문 필요: ${article.sourceBasis.finalSourceRequired ? "yes" : "no"}`,
     `- 기계 상태: ${article.machineStatus}`,
     `- 기계 메모: ${article.machineReason}`,
+    `- 수집 단서 태그: ${evidenceTags}`,
+    `- 위험 단서 태그: ${riskTags}`,
+    `- 디자인 가치 태그: ${valueTags}`,
     `- 출처 확인 메모: ${article.sourceReviewNote}`,
     article.image ? `- 이미지 후보: ${article.image}` : "- 이미지 후보: 없음",
     "",
     article.summary || "요약 없음",
     "",
   ].join("\n");
+}
+
+function countBy(items, key) {
+  return items.reduce((counts, item) => {
+    const value = item[key] || "unknown";
+    counts[value] = (counts[value] || 0) + 1;
+    return counts;
+  }, {});
+}
+
+function countLines(counts) {
+  return Object.entries(counts)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([key, count]) => `- ${key}: ${count}`);
 }
 
 function editorialBriefMarkdown(data) {
@@ -389,6 +545,22 @@ function editorialBriefMarkdown(data) {
     `- AI 검토 후보: ${candidates.length}`,
     `- 자동 제외: ${excluded.length}`,
     "",
+    "### 원자료 파일",
+    "",
+    ...data.sourceFiles.map((filePath) => `- ${filePath}`),
+    "",
+    "### 수집 리포트 파일",
+    "",
+    ...(data.reportFiles.length ? data.reportFiles.map((filePath) => `- ${filePath}`) : ["- 없음"]),
+    "",
+    "### 대분류별 수집 수",
+    "",
+    ...countLines(data.countsByArea),
+    "",
+    "### 타겟 판정별 수",
+    "",
+    ...countLines(data.countsByTargetFit),
+    "",
   ];
 
   for (const area of ["Service", "Design", "DEV"]) {
@@ -406,7 +578,7 @@ function editorialBriefMarkdown(data) {
   return parts.join("\n");
 }
 
-async function writeOutputs(articles, date) {
+async function writeOutputs(articles, date, sourceFiles = [], reportFiles = []) {
   await fs.mkdir(runDir(date), { recursive: true });
 
   const trackingDataPath = runFile(date, "tracking-data.json");
@@ -414,6 +586,10 @@ async function writeOutputs(articles, date) {
   const data = {
     date,
     purpose: "collection_classification_source_only",
+    sourceFiles,
+    reportFiles,
+    countsByArea: countBy(articles, "area"),
+    countsByTargetFit: countBy(articles, "targetFit"),
     editorialGuides: EDITORIAL_GUIDES,
     nextStep: "AI가 editorialGuides와 editorial-brief.md를 읽고 타겟 적합성 분류를 먼저 수행한 뒤, 이커머스 core 후보를 최우선으로 shortlist-20-30.md를 만들고 magazine-report.md 작성을 수행합니다.",
     articles,
@@ -428,18 +604,21 @@ async function main() {
   const date = outputDate();
 
   if (!hasArg("--no-fetch")) {
-    await run(process.execPath, [path.join("scripts", "tracking", "fetch_tracking_news.mjs")]);
+    await run(process.execPath, [path.join("scripts", "tracking", "fetch_service_news.mjs")]);
+    await run(process.execPath, [path.join("scripts", "tracking", "fetch_design_news.mjs")]);
+    await run(process.execPath, [path.join("scripts", "tracking", "fetch_dev_news.mjs")]);
   }
 
-  const trackingPath = runFile(date, "articles.json");
-  const articlesPath = await fs.stat(trackingPath).then(() => trackingPath).catch(() => latestRunFile("articles.json"));
-  const rawArticles = JSON.parse(await fs.readFile(articlesPath, "utf8"));
+  const { articles: rawArticles, loadedFiles, reportFiles } = await readRunArticles(date);
   const articles = uniqueArticles(rawArticles)
     .map(collectedArticle)
     .sort(sortArticles);
-  const { trackingDataPath, editorialBriefPath } = await writeOutputs(articles, date);
+  const sourceFiles = loadedFiles.map(repoRelativePath);
+  const sourceReportFiles = reportFiles.map(repoRelativePath);
+  const { trackingDataPath, editorialBriefPath } = await writeOutputs(articles, date, sourceFiles, sourceReportFiles);
 
   console.log(`Collected ${articles.length} classified articles`);
+  for (const filePath of loadedFiles) console.log(`SOURCE_FILE=${filePath}`);
   console.log(`TRACKING_DATA_FILE=${trackingDataPath}`);
   console.log(`EDITORIAL_BRIEF_FILE=${editorialBriefPath}`);
   console.log("Notion upload is intentionally not part of collect_materials.mjs.");

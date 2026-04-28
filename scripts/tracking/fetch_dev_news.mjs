@@ -2,6 +2,15 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import Parser from "rss-parser";
+import {
+  FEED_TIMEOUT_MS,
+  articleContent,
+  fetchText,
+  outputDate,
+  runDir as resolveRunDir,
+  sinceDate,
+  uniqueArticles,
+} from "./tracking_utils.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -9,54 +18,15 @@ const root = path.resolve(__dirname, "..", "..");
 const sourcesPath = path.join(root, "news-tracking", "dev-sources.json");
 const runsDir = path.join(root, "runs");
 const parser = new Parser();
-const FEED_TIMEOUT_MS = 15000;
-
-function outputDate() {
-  return (process.env.TRACKING_OUTPUT_DATE || new Date().toISOString().slice(0, 10)).trim();
-}
-
-function sinceDate() {
-  const configured = (process.env.TRACKING_SINCE_DATE || "").trim();
-  if (configured) return new Date(`${configured}T00:00:00Z`);
-  const date = new Date();
-  date.setDate(date.getDate() - 7);
-  return date;
-}
 
 function runDir(date = outputDate()) {
-  return path.join(runsDir, date);
-}
-
-function stripTags(value = "") {
-  return String(value)
-    .replace(/<script[\s\S]*?<\/script>/gi, "")
-    .replace(/<style[\s\S]*?<\/style>/gi, "")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function articleContent(item) {
-  return stripTags(item.contentSnippet || item["content:encoded"] || item.content || "");
+  return resolveRunDir(runsDir, date);
 }
 
 async function fetchRssFeed(url, source, since) {
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), FEED_TIMEOUT_MS);
   try {
-    const response = await fetch(url, {
-      signal: controller.signal,
-      headers: {
-        "User-Agent": "CTTD Trend Report DEV RSS Tracker",
-      },
-    });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const feed = await parser.parseString(await response.text());
+    const xml = await fetchText(url, FEED_TIMEOUT_MS, "CTTD Trend Report DEV RSS Tracker");
+    const feed = await parser.parseString(xml);
     return feed.items
       .filter((item) => {
         if (!item.pubDate) return false;
@@ -73,8 +43,6 @@ async function fetchRssFeed(url, source, since) {
   } catch (error) {
     console.error(`Error fetching ${source}: ${error.message}`);
     return [];
-  } finally {
-    clearTimeout(timeoutId);
   }
 }
 
@@ -95,14 +63,7 @@ async function collectArticles(sources) {
     }
   }
 
-  const seenLinks = new Set();
-  return articles
-    .filter((article) => article.title && article.link)
-    .filter((article) => {
-      if (seenLinks.has(article.link)) return false;
-      seenLinks.add(article.link);
-      return true;
-    })
+  return uniqueArticles(articles)
     .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 }
 

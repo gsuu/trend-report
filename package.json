@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
+    "fetch:service": "node scripts/tracking/fetch_service_news.mjs",
     "fetch:design": "node scripts/tracking/fetch_design_news.mjs",
     "fetch:dev": "node scripts/tracking/fetch_dev_news.mjs",
     "fetch:tracking": "node scripts/tracking/fetch_tracking_news.mjs",

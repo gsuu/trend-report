@@ -2,11 +2,11 @@
 
 매거진 발행은 한 번에 쓰지 않고 `수집 → 원문 검증 → 타겟 적합성 분류 → shortlist 작성 → 글쓰기 → 리뷰/수정 → QA` 역할을 순서대로 통과시킵니다. 각 역할은 이전 단계의 산출물을 믿되, 자기 단계에서 반드시 확인해야 하는 기준을 따로 가집니다.
 
-이 문서는 작업 순서와 산출물 흐름만 정의합니다. 수집/채택 기준은 [데이터 수집 전략](data-collection-strategy.md), 타겟 판정 기준은 [타겟 적합성 분류 에이전트](target-fit-classifier-agent.md), 글쓰기 문체는 [매거진 상세 글쓰기 가이드](editorial-style-guide.md), DEV 출력 형식은 [DEV Digest Agent Prompt](dev-digest-agent-prompt.md)를 우선합니다.
+이 문서는 작업 순서와 산출물 흐름만 정의합니다. 수집/채택 기준은 [데이터 수집 전략](data-collection-strategy.md), 타겟 판정 기준은 [타겟 적합성 분류 에이전트](target-fit-classifier-agent.md), 글쓰기 문체는 [매거진 상세 글쓰기 가이드](editorial-style-guide.md), 최종 출력 형식은 [매거진 원고 출력 기준](magazine-writing-standard.md), 카테고리별 선별 기준은 [Service Digest Agent Prompt](service-digest-agent-prompt.md), [Design Digest Agent Prompt](design-digest-agent-prompt.md), [DEV Digest Agent Prompt](dev-digest-agent-prompt.md)를 우선합니다.
 
 ## 1. 수집 에이전트
 
-목표는 후보를 넓게 모으고, 타겟 적합성 분류 에이전트가 판단할 수 있는 증거를 남기는 것입니다. 수집 에이전트는 `editorial-brief.md`와 원자료를 만들고, `shortlist-20-30.md`는 원문 검증과 타겟 적합성 분류를 통과한 뒤 작성합니다.
+목표는 후보를 넓게 모으고, 타겟 적합성 분류 에이전트가 판단할 수 있는 증거를 남기는 것입니다. 수집 에이전트는 `npm run tracking:prepare`로 `service-articles.json`, `design-articles.json`, `dev-articles.json`, 카테고리별 fetch report, `tracking-data.json`, `editorial-brief.md`를 만들고, `shortlist-20-30.md`는 원문 검증과 타겟 적합성 분류를 통과한 뒤 작성합니다.
 
 필수 산출물:
 
@@ -15,6 +15,7 @@
 - 원문에서 확인한 기능, 정책, 수치, 날짜, 제한 사항
 - 이미지 후보와 이미지 출처
 - 채택/보류/제외 초기 판단
+- 자동 단서 태그: SERVICE의 `evidenceTags`/`riskTags`, DESIGN의 `valueTags`
 
 수집 에이전트는 후보를 평가하지 말고 증거를 모읍니다. 공식 출처를 못 찾은 후보는 `원문 미확인`으로 표시하고 글쓰기 단계로 넘기지 않습니다.
 카드 제휴, 쿠폰/e쿠폰, 콘텐츠 제휴, 외부 AI 연동, 멤버십 프로모션은 브랜드가 중요해 보여도 화면·플로우 증거가 없으면 `제외`로 둡니다. `UX 관점으로 해석 가능`은 채택 사유가 아닙니다.
@@ -61,8 +62,11 @@
 - shortlist 항목을 임의로 다시 4~7개로 줄이지 않습니다. 원문 부족, 광고성, 화면·서비스·구현 변화 미확인처럼 발행 기준을 통과하지 못한 항목만 제외 사유와 함께 `수집했지만 제외한 것`으로 이동합니다.
 - 제목은 원문 맥락, 출처 유형, 독자 업무 맥락을 함께 보고 정합니다. 모든 글을 인사이트형 제목으로 바꾸지 말고, 가이드·리서치·릴리즈·명세처럼 자료 성격이 중요한 글은 출처와 자료의 정체가 제목에서 드러나게 씁니다.
 - 각 아티클의 `태그`는 가장 중요한 핵심 단어 3개만 작성합니다. `직무 태그`는 별도 메타데이터로 유지하고, Notion/매거진 노출 태그에는 직무 분류를 넣지 않습니다.
-- Service/Design 글의 문체와 구성은 [매거진 상세 글쓰기 가이드](editorial-style-guide.md)를 따릅니다.
-- DEV 글의 출력 형식과 세부 작성 기준은 [DEV Digest Agent Prompt](dev-digest-agent-prompt.md)를 따릅니다.
+- Service/Design/DEV 글의 문체는 [매거진 상세 글쓰기 가이드](editorial-style-guide.md)를 따릅니다.
+- Service/Design/DEV 글의 출력 형식은 [매거진 원고 출력 기준](magazine-writing-standard.md)을 따릅니다.
+- Service 글의 선별 기준은 [Service Digest Agent Prompt](service-digest-agent-prompt.md)를 따릅니다.
+- Design 글의 선별 기준은 [Design Digest Agent Prompt](design-digest-agent-prompt.md)를 따릅니다.
+- DEV 글의 후보 선별과 원문 검증 기준은 [DEV Digest Agent Prompt](dev-digest-agent-prompt.md)를 따릅니다.
 
 글쓰기 에이전트는 원문에 없는 효과, 국내 사례, 수치를 보태지 않습니다. 원문이 홍보성·일반론에 그치면 글을 억지로 만들지 않고 제외 후보로 돌립니다.
 본문을 쓰기 위해 `혜택 조건`, `다음 거래 전환`, `안전한 추천 연결` 같은 범용 문장을 붙여야 한다면 이미 제외 대상입니다. 메인 글은 고객 회의에서 바로 물어볼 구체 화면, 모듈, 정책, QA 질문이 남는 항목만 씁니다.

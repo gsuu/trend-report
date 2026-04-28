@@ -33,6 +33,17 @@ Apply this summary-layer rule to every Service, Design, and DEV magazine item.
 - Do not force a fixed bullet count for body summaries; include the meaningful points needed to represent the source.
 - If the original source is a blog or opinion article rather than a product release note, summarize who is arguing what, which evidence or examples they use, and what CTTD can practically reference from it.
 
+## SERVICE Digest Source Standard
+
+When collecting and uploading SERVICE newsletter or magazine items, use `news-tracking/service-sources.json` and `npm run fetch:service` for candidate collection.
+
+- After collection, the working AI must apply `docs/service-digest-agent-prompt.md` to select, verify, summarize, categorize, and write SERVICE items. Do not call an LLM API from the collection script.
+- Prioritize ecommerce and platform service changes that affect product discovery, comparison, detail pages, cart, checkout, membership, reviews, recommendations, repurchase, pickup, CRM, seller operations, or service admin workflows.
+- Exclude partnerships, card benefits, e-coupon deals, one-off promotions, offline-only events, business results, hiring, ESG, and brand campaigns unless the original source shows a concrete screen, flow, policy, condition, permission, recommendation basis, approval step, or return trigger.
+- Use discovery sources only as leads. For main publication, trace the item to an official notice, newsroom, product update, app store release note, research source, or another reliable primary source where possible.
+- Follow the Magazine Summary Standard for the SERVICE metadata `요약`, body `서비스 변화 요약`, and `매거진 인사이트` layers.
+- Do not use Notion for SERVICE publishing unless the user explicitly asks. After updating `runs/YYYY-MM-DD/magazine-report.md`, refresh magazine JSON/site data only.
+
 ## DEV Digest Source Standard
 
 When collecting and uploading DEV newsletter or magazine items, reproduce the same collection logic as
