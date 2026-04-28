@@ -1206,50 +1206,10 @@ CSS Studio, View Transitions Toolkit, Arrow JS, Sugar High 등은 각기 다른 
 - 브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.
 - 접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다.
 
-#### 29. [ShopTalk Show] 711: Where did Oh My Zsh Come From? And Using Rails in 2026
-
-- 날짜: 2026-04-20
-- 태그: 프론트엔드 / 퍼블리싱 / 품질관리
-- 국가: GLOBAL
-- 카테고리: tool
-- 직무 태그: 웹DEV
-- 출처: ShopTalk Show
-- 출처 URL: https://shoptalkshow.com/711/
-- 이미지: https://i0.wp.com/shoptalkshow.com/wp-content/uploads/2013/03/logo-itunes-1400.png?fit=1200%2C1200&ssl=1
-- 이미지 설명: ShopTalk Show 원문 최상단 이미지
-- 요약: Oh My Zsh와 Rails 2026 이야기는 직접 프론트엔드 이슈보다는 개발 환경 운영에 가깝습니다. 팀 공통 셸 환경과 의존성 관리 관점으로 읽어야 합니다.
-
-##### 기술 변화 요약
-
-- ShopTalk 711화는 Oh My Zsh 유지보수자 Robby Russell과 Zsh plugin 설계, 추천 plugin, Rails 2026 환경, 프로젝트 의존성 관리를 다룬다.
-- 웹 퍼블리셔 직접 이슈라기보다 개발 환경 생산성에 가까우며, shell plugin은 설치 편의보다 startup time, completion 품질, 팀 공통 설정 재현성이 중요하다.
-- Rails 앱이 React, Vue, Nuxt 같은 major framework와 함께 쓰이는 방식도 언급되어, 전통적 Rails 프로젝트에서도 프론트엔드 빌드와 의존성 경계가 여전히 실무 쟁점임을 보여준다.
-
-##### 매거진 인사이트
-
-###### 왜 지금 이 업데이트인가
-
-개발 생산성 도구는 개인 취향처럼 보이지만 팀 온보딩과 재현성에 영향을 줍니다. 셸 plugin, Rails 앱의 프론트엔드 프레임워크 사용, 의존성 관리는 작업 환경의 마찰을 줄이거나 늘립니다. 다만 이 항목은 화면 구현 변화가 약하므로 DEV 메인 가치가 상대적으로 낮습니다.
-
-###### 구현 관점
-
-Oh My Zsh plugin은 편의 기능뿐 아니라 startup time과 completion 안정성을 확인해야 합니다. Rails 프로젝트에서 React, Vue, Nuxt 같은 프레임워크를 섞을 때는 asset pipeline, routing, 배포 경계를 명확히 해야 합니다. 개인 셸 설정을 팀 표준으로 강제하면 오히려 재현성이 떨어질 수 있습니다.
-
-###### 실무에 어떻게 적용할 수 있을까
-
-- 팀 공통 dotfile이나 devcontainer에는 필수 plugin만 두고 개인 취향 설정은 분리합니다.
-- Rails 기반 프로젝트는 프론트엔드 빌드 책임과 서버 렌더링 경계를 문서화합니다.
-- 생산성 도구는 설치 편의보다 새 구성원의 재현 가능성을 기준으로 평가합니다.
-
-###### 같이 보면 좋은 기술
-
-- Tool: 이번 항목이 직접 닿는 구현·검증 영역입니다.
-- 브라우저 QA: Chrome, Safari, Firefox 기준 차이를 확인합니다.
-- 접근성/성능 체크: 자동 검사와 수동 검수를 함께 둡니다.
-
 ## 수집했지만 제외한 것
 
 
+- ShopTalk Show 711: Oh My Zsh와 Rails 2026 이야기는 셸 환경·Rails·의존성 관리 중심이라 새 DEV 제외 기준의 Backend/개발 환경 중심 글에 해당해 제외했습니다.
 - 당근페이 최신 제품 구매와 중고거래 연결: 결제 후 리세일 연결이라는 해석은 가능하지만, 이번 원문만으로는 타겟이 바로 참고할 화면 구조나 검증 가능한 서비스 변화가 부족해 제외했습니다.
 - 당근 e쿠폰 바로구매: 안전거래 강화 보도자료 성격이 강하고, CTTD 타겟이 궁금해할 화면·플로우 디테일이 부족해 제외했습니다.
 - Spotify Fitness With Spotify: 글로벌 콘텐츠 제휴 이슈로는 흥미롭지만, 국내 웹서비스·커머스·디자인 실무에 바로 연결할 구체 UX 근거가 약해 제외했습니다.
