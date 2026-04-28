@@ -1325,6 +1325,9 @@ def issue_takeaway(issue: Issue) -> str:
 
 def issue_deck(issue: Issue) -> str:
     items = issue.sections.get("업데이트 핵심", []) or issue.sections.get("기술 변화 요약", []) or issue.sections.get("디자인 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
+    if issue_area_key(issue) == "dev" and items:
+        return " ".join(strip_brief_label(str(item)).strip() for item in items if str(item).strip()).strip()
+
     labeled_items = []
     for item in items:
         label, separator, value = str(item).partition(":")
