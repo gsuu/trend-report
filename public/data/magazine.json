@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T03:24:24.731432+00:00",
+  "generatedAt": "2026-04-28T03:50:44.012880+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -15,7 +15,7 @@
         "date": "2026-04-08",
         "route": "/articles/2026-04-27-01",
         "href": "/articles/2026-04-27-01",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-01",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-01",
         "image": "https://prismic-image-proxy.krrt.io/karrot/adTF9JGXnQHGZTnP_%5B%E1%84%8B%E1%85%B5%E1%84%86%E1%85%B5%E1%84%8C%E1%85%B51%5D%E1%84%83%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B3%E1%86%AB%2CAI%E1%84%80%E1%85%B5%E1%84%87%E1%85%A1%E1%86%AB%E1%84%83%E1%85%A2%E1%84%92%E1%85%AA%E1%84%92%E1%85%A7%E1%86%BC%E1%84%92%E1%85%AE%E1%84%80%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A5%E1%86%BC%E1%84%80%E1%85%B5%E1%84%82%E1%85%B3%E1%86%BC%E2%80%98%E1%84%86%E1%85%A1%E1%86%AF%E1%84%85%E1%85%A9%E1%84%8A%E1%85%B3%E1%84%80%E1%85%B5%E2%80%99%E1%84%8E%E1%85%AE%E1%86%AF%E1%84%89%E1%85%B5.png?auto=compress%2Cformat&fit=max&q=100&w=1200&h=630&fm=png",
         "imageCaption": "당근 AI 기반 대화형 후기 작성 기능 공식 이미지",
         "tags": [
@@ -204,7 +204,7 @@
         "date": "2026-04-23",
         "route": "/articles/2026-04-27-02",
         "href": "/articles/2026-04-27-02",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-02",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-02",
         "image": "https://static.toss.im/illusts/panda-thumb.png",
         "imageCaption": "토스 테크 공식 원문 이미지",
         "tags": [
@@ -393,7 +393,7 @@
         "date": "2026-04-22",
         "route": "/articles/2026-04-27-03",
         "href": "/articles/2026-04-27-03",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-03",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-03",
         "image": "https://images.ctfassets.net/kftzwdyauwt9/5VOBXAok5WCGbcXubvIGSn/c6ec67af102f0537ff2a526fca45ff47/OAI_Blog_SEO_16x9.png?w=1600&h=900&fit=fill",
         "imageCaption": "OpenAI workspace agents 공식 원문 이미지",
         "tags": [
@@ -576,7 +576,7 @@
         "date": "2026-04-10",
         "route": "/articles/2026-04-27-04",
         "href": "/articles/2026-04-27-04",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-04",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-04",
         "image": "https://www.intodesignsystems.com/og-image.png",
         "imageCaption": "Into Design Systems 공식 원문 이미지",
         "tags": [
@@ -759,7 +759,7 @@
         "date": "2026-04-21",
         "route": "/articles/2026-04-27-05",
         "href": "/articles/2026-04-27-05",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-05",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-05",
         "image": "https://images.ctfassets.net/kftzwdyauwt9/7fPF7LU0YzPr5PrlNT6lo3/823a11178d4aac15d4f4260b9fcc490d/Blog_art_card.png?w=1600&h=900&fit=fill",
         "imageCaption": "OpenAI ChatGPT Images 2.0 공식 원문 이미지",
         "tags": [
@@ -942,7 +942,7 @@
         "date": "2026-04-23",
         "route": "/articles/2026-04-27-06",
         "href": "/articles/2026-04-27-06",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-06",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-06",
         "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/03/apple-vision-pro.webp",
         "imageCaption": "CSS-Tricks 원문 최상단 이미지",
         "tags": [
@@ -983,7 +983,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -1090,7 +1090,7 @@
         "date": "2026-04-22",
         "route": "/articles/2026-04-27-07",
         "href": "/articles/2026-04-27-07",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-07",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-07",
         "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/02/markdown-astro.webp",
         "imageCaption": "CSS-Tricks 원문 최상단 이미지",
         "tags": [
@@ -1137,7 +1137,7 @@
         ],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -1244,7 +1244,7 @@
         "date": "2026-04-22",
         "route": "/articles/2026-04-27-08",
         "href": "/articles/2026-04-27-08",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-08",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-08",
         "image": "https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_402/co_white,e_outline:25/zskrkpi3ghncauchvd9z.png",
         "imageCaption": "Frontend Focus 원문 최상단 이미지",
         "tags": [
@@ -1285,7 +1285,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -1392,7 +1392,7 @@
         "date": "2026-04-22",
         "route": "/articles/2026-04-27-09",
         "href": "/articles/2026-04-27-09",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-09",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-09",
         "image": "https://syntax.fm/og/998.jpg",
         "imageCaption": "Syntax.fm 원문 최상단 이미지",
         "tags": [
@@ -1433,7 +1433,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -1540,7 +1540,7 @@
         "date": "2026-04-21",
         "route": "/articles/2026-04-27-10",
         "href": "/articles/2026-04-27-10",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-10",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-10",
         "image": "https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png",
         "imageCaption": "JavaScript Weekly 원문 최상단 이미지",
         "tags": [
@@ -1581,7 +1581,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -1688,7 +1688,7 @@
         "date": "2026-04-26",
         "route": "/articles/2026-04-27-11",
         "href": "/articles/2026-04-27-11",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-11",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-11",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Feej7ahebbskthy0wu0o3.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -1755,7 +1755,7 @@
         ],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -1867,7 +1867,7 @@
         "date": "2026-04-25",
         "route": "/articles/2026-04-27-12",
         "href": "/articles/2026-04-27-12",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-12",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-12",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F83aece4c3qgc0ef4tw1e.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -1908,7 +1908,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -2015,7 +2015,7 @@
         "date": "2026-04-24",
         "route": "/articles/2026-04-27-13",
         "href": "/articles/2026-04-27-13",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-13",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-13",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fn1fwpuocb4mvqsgkm6ca.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -2056,7 +2056,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -2163,7 +2163,7 @@
         "date": "2026-04-24",
         "route": "/articles/2026-04-27-14",
         "href": "/articles/2026-04-27-14",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-14",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-14",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fizmvg7j6pek0e0jovaxk.webp",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -2204,7 +2204,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -2311,7 +2311,7 @@
         "date": "2026-04-23",
         "route": "/articles/2026-04-27-15",
         "href": "/articles/2026-04-27-15",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-15",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-15",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F80y5iuyy7m3axbjmy4c0.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -2352,7 +2352,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -2459,7 +2459,7 @@
         "date": "2026-04-20",
         "route": "/articles/2026-04-27-16",
         "href": "/articles/2026-04-27-16",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-16",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-16",
         "image": "https://files.smashing.media/articles/session-timeouts-accessibility-barrier-authentication-design/session-timeouts-accessibility-barrier-authentication-design.jpg",
         "imageCaption": "Smashing Magazine 원문 최상단 이미지",
         "tags": [
@@ -2500,7 +2500,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -2607,7 +2607,7 @@
         "date": "2026-04-23",
         "route": "/articles/2026-04-27-17",
         "href": "/articles/2026-04-27-17",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-17",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-17",
         "image": "https://css-weekly.com/issues/issue-639/images/cssweekly-issue639-interactive-cover-component-og.jpg",
         "imageCaption": "CSS Weekly 원문 최상단 이미지",
         "tags": [
@@ -2648,7 +2648,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -2755,7 +2755,7 @@
         "date": "2026-04-24",
         "route": "/articles/2026-04-27-18",
         "href": "/articles/2026-04-27-18",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-18",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-18",
         "image": "https://snap.fly.dev/podcast/680/img",
         "imageCaption": "The Changelog 원문 최상단 이미지",
         "tags": [
@@ -2796,7 +2796,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -2903,7 +2903,7 @@
         "date": "2026-04-24",
         "route": "/articles/2026-04-27-19",
         "href": "/articles/2026-04-27-19",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-19",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-19",
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fwww.axiondeepdigital.com%2Fimages%2Fmarketing%2Fstate-of-small-business-websites-2026-study-og.jpg",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
@@ -2944,7 +2944,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -3051,7 +3051,7 @@
         "date": "2026-04-22",
         "route": "/articles/2026-04-27-20",
         "href": "/articles/2026-04-27-20",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-20",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-20",
         "image": "https://files.smashing.media/articles/ux-designer-nightmare-production-ready-becomes-design-deliverable/production-ready-becomes-design-deliverable-ux.jpg",
         "imageCaption": "Smashing Magazine 원문 최상단 이미지",
         "tags": [
@@ -3092,7 +3092,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -3199,7 +3199,7 @@
         "date": "2026-04-20",
         "route": "/articles/2026-04-27-21",
         "href": "/articles/2026-04-27-21",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-27-21",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-27-21",
         "image": "https://syntax.fm/og/997.jpg",
         "imageCaption": "Syntax.fm 원문 최상단 이미지",
         "tags": [
@@ -3240,7 +3240,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -3347,7 +3347,7 @@
         "date": "2026-04",
         "route": "/articles/2026-04-20-01",
         "href": "/articles/2026-04-20-01",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-01",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-01",
         "image": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9e/0a/6f/9e0a6f69-1944-80b1-59ca-cc6367ff23bb/414x896_00__U1105_U1169_U1100_U1169.png/300x650bb-60.jpg",
         "imageCaption": "무신사 App Store 공식 앱 화면",
         "tags": [
@@ -3497,7 +3497,7 @@
         "date": "2026-04-13",
         "route": "/articles/2026-04-20-02",
         "href": "/articles/2026-04-20-02",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-02",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-02",
         "image": "https://img.ssfshop.com/promotion/event/2026/03/18/EV202603180155626/EV202603180155626_RPRST_IMG_1PCE_PC_MOBILE_KOR_20260403153121.png",
         "imageCaption": "SSF SHOP 오늘의 발견 이벤트 공식 이미지",
         "tags": [
@@ -3652,7 +3652,7 @@
         "date": "2026-04-15",
         "route": "/articles/2026-04-20-03",
         "href": "/articles/2026-04-20-03",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-03",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-03",
         "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a2/b7/bc/a2b7bc32-c87f-b09b-6df1-0787bf4a58fc/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
         "imageCaption": "네이버플러스 스토어 공식 이미지",
         "tags": [
@@ -3823,7 +3823,7 @@
         "date": "2026-02-26 베타 공개 / 2026-04 보강",
         "route": "/articles/2026-04-20-04",
         "href": "/articles/2026-04-20-04",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-04",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-04",
         "image": "https://scs-phinf.pstatic.net/MjAyNjAzMDNfMTcx/MDAxNzcyNDc5MDAwMTEy.k3MQQT0ZOOBhPJjMGwMy4zdQ8nIlVOhn4jR0laz7ekEg.SC58mboW9cTC4jtzJbKDLzt1YOIIjws3bK1w0mPhROYg.PNG/%EB%84%A4%EC%9D%B4%EB%B2%84_AI_%EC%87%BC%ED%95%91_%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8_%EC%98%88%EC%8B%9C.png?type=w800",
         "imageCaption": "네이버플러스 스토어 공식 이미지",
         "tags": [
@@ -3994,7 +3994,7 @@
         "date": "2026-04-16",
         "route": "/articles/2026-04-20-05",
         "href": "/articles/2026-04-20-05",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-05",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-05",
         "image": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/47/97/dd/4797dd96-b7bb-585a-e3b2-90307ca961de/iOS_1_1242X2688.jpg/300x650bb.jpg",
         "imageCaption": "롯데홈쇼핑 App Store 공식 앱 화면",
         "tags": [
@@ -4139,7 +4139,7 @@
         "date": "2026-04-16",
         "route": "/articles/2026-04-20-06",
         "href": "/articles/2026-04-20-06",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-06",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-06",
         "image": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/61/2d/e4/612de45c-62df-b320-5e41-9989527a853b/IOS__U00281284x2778_U0029_01.jpg/300x650bb.jpg",
         "imageCaption": "쿠팡이츠 App Store 공식 앱 화면",
         "tags": [
@@ -4278,7 +4278,7 @@
         "date": "2026-04-17",
         "route": "/articles/2026-04-20-07",
         "href": "/articles/2026-04-20-07",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-07",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-07",
         "image": "https://shinsegae-prd-data.s3.ap-northeast-2.amazonaws.com/wp-content/uploads/2026/04/NR_Inside_Details_Cover-3.png",
         "imageCaption": "G마켓 꼭 멤버십 관련 신세계그룹 뉴스룸 공식 이미지",
         "tags": [
@@ -4464,7 +4464,7 @@
         "date": "2026-04-13",
         "route": "/articles/2026-04-20-08",
         "href": "/articles/2026-04-20-08",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-08",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-08",
         "image": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e9/3b/fc/e93bfc6a-3639-7618-bfa5-d7ff6f44307a/1__U1102_U1162_U1109_U1161_U110b_U116d_U11bc_U1110_U1166_U11b7__U110b_U1162_U11b8_U1111_U1173_U1105_U1175_U1107_U1172_iOS_1290x2796.png/300x650bb.jpg",
         "imageCaption": "화해 App Store 공식 앱 화면",
         "tags": [
@@ -4614,7 +4614,7 @@
         "date": "2025-05-21 공식 공개 / 2026-04 보강",
         "route": "/articles/2026-04-20-09",
         "href": "/articles/2026-04-20-09",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-09",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-09",
         "image": "https://www.istyle.co.jp/news/uploads/3419f2c3d9db241f0ae8d145dfabe7d8c42784ff.png",
         "imageCaption": "@cosme 공식 이미지",
         "tags": [
@@ -4780,7 +4780,7 @@
         "date": "2025-07-11 보도 / 2026-04 보강",
         "route": "/articles/2026-04-20-10",
         "href": "/articles/2026-04-20-10",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-10",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-10",
         "image": "https://wimg.sedaily.com/news/legacy/2025/07/12/2GVBK810L6_1_m.png",
         "imageCaption": "올리브영 공식 이미지",
         "tags": [
@@ -4940,7 +4940,7 @@
         "date": "2026-04-13",
         "route": "/articles/2026-04-20-11",
         "href": "/articles/2026-04-20-11",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-11",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-11",
         "image": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2a/97/78/2a977821-406f-272f-fffa-6e3e1e7d9455/Appstore_U00281242_2688_U0029_01.png/300x650bb.jpg",
         "imageCaption": "리디 App Store 공식 앱 화면",
         "tags": [
@@ -5085,7 +5085,7 @@
         "date": "2026-04-16",
         "route": "/articles/2026-04-20-12",
         "href": "/articles/2026-04-20-12",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-12",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-12",
         "image": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c6/50/f9/c650f984-3b2f-6acf-48ff-2f4a31eee8f6/Appstore_preview_69_01.png/300x650bb.jpg",
         "imageCaption": "YES24 eBook App Store 공식 앱 화면",
         "tags": [
@@ -5224,7 +5224,7 @@
         "date": "2026-04-07",
         "route": "/articles/2026-04-20-13",
         "href": "/articles/2026-04-20-13",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-13",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-13",
         "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ef/ae/df/efaedfdc-c6cd-5696-667f-520dfcd0f976/AppIcon-0-0-1x_U007epad-0-6-0-85-220.png/512x512bb.jpg",
         "imageCaption": "Yahoo!ショッピング App Store 공식 앱 화면",
         "tags": [
@@ -5374,7 +5374,7 @@
         "date": "2026-04",
         "route": "/articles/2026-04-20-14",
         "href": "/articles/2026-04-20-14",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-14",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-14",
         "image": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/06/e7/f8/06e7f86a-d784-be3b-0ab8-f8bfe63a0ff6/iOS_5.5inch_01.png/392x696bb.png",
         "imageCaption": "楽天市場 App Store 공식 앱 화면",
         "tags": [
@@ -5519,7 +5519,7 @@
         "date": "2026-04",
         "route": "/articles/2026-04-20-15",
         "href": "/articles/2026-04-20-15",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-15",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-15",
         "image": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/da/ef/fc/daeffc2a-2255-908b-b64f-3ac4f3c7304c/2e768600-b607-4dc8-929f-22b84efa0bba_ios5inch_01.jpg/392x696bb.jpg",
         "imageCaption": "ZOZOTOWN App Store 공식 앱 화면",
         "tags": [
@@ -5664,7 +5664,7 @@
         "date": "2026-03-25",
         "route": "/articles/2026-04-20-16",
         "href": "/articles/2026-04-20-16",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-16",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-16",
         "image": "https://h8dxkfmaphn8o0p3.public.blob.vercel-storage.com/static/blog/nextjs-across-platforms/twitter-card.png",
         "imageCaption": "Next.js 공식 이미지",
         "tags": [
@@ -5703,7 +5703,7 @@
         ],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -5840,7 +5840,7 @@
         "date": "2026-03-18",
         "route": "/articles/2026-04-20-17",
         "href": "/articles/2026-04-20-17",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-17",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-17",
         "image": "https://h8dxkfmaphn8o0p3.public.blob.vercel-storage.com/static/blog/next-16-2-ai/twitter-card.png",
         "imageCaption": "Next.js 공식 이미지",
         "tags": [
@@ -5879,7 +5879,7 @@
         ],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -6016,7 +6016,7 @@
         "date": "2026-03",
         "route": "/articles/2026-04-20-18",
         "href": "/articles/2026-04-20-18",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-18",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-18",
         "image": "https://devblogs.microsoft.com/typescript/wp-content/uploads/sites/11/2026/03/ts-6.0-2.png",
         "imageCaption": "TypeScript 공식 이미지",
         "tags": [
@@ -6049,7 +6049,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -6191,7 +6191,7 @@
         "date": "2026-04-17",
         "route": "/articles/2026-04-20-19",
         "href": "/articles/2026-04-20-19",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-19",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-19",
         "image": "https://eslint.org/apple-touch-icon.png",
         "imageCaption": "ESLint 공식 이미지",
         "tags": [
@@ -6230,7 +6230,7 @@
         ],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -6367,7 +6367,7 @@
         "date": "2026-03-24",
         "route": "/articles/2026-04-20-20",
         "href": "/articles/2026-04-20-20",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-20",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-20",
         "image": "https://webkit.org/apple-touch-icon.png",
         "imageCaption": "WebKit/Safari 공식 이미지",
         "tags": [
@@ -6400,7 +6400,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -6542,7 +6542,7 @@
         "date": "2026-03-10",
         "route": "/articles/2026-04-20-21",
         "href": "/articles/2026-04-20-21",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-21",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-21",
         "image": "https://nodejs.org/en/next-data/og/announcements/Node.js%20%E2%80%94%20Evolving%20the%20Node.js%20Release%20Schedule",
         "imageCaption": "Node.js 공식 이미지",
         "tags": [
@@ -6581,7 +6581,7 @@
         ],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -6718,7 +6718,7 @@
         "date": "2026-03-12",
         "route": "/articles/2026-04-20-22",
         "href": "/articles/2026-04-20-22",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-22",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-22",
         "image": "https://vite.dev/og-image-announcing-vite8.webp",
         "imageCaption": "Vite 공식 이미지",
         "tags": [
@@ -6751,7 +6751,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -6893,7 +6893,7 @@
         "date": "2026-03-10",
         "route": "/articles/2026-04-20-23",
         "href": "/articles/2026-04-20-23",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-23",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-23",
         "image": "https://astro.build/_astro/og-astro-6.DDjHPVzL.webp",
         "imageCaption": "Astro 공식 이미지",
         "tags": [
@@ -6926,7 +6926,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -7068,7 +7068,7 @@
         "date": "2026-04-01",
         "route": "/articles/2026-04-20-24",
         "href": "/articles/2026-04-20-24",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-24",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-24",
         "image": "https://repository-images.githubusercontent.com/221981891/8c5c6942-c91f-4df1-825f-4cf474056bd7",
         "imageCaption": "Playwright 공식 이미지",
         "tags": [
@@ -7107,7 +7107,7 @@
         ],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
@@ -7249,7 +7249,7 @@
         "date": "2026-04-08",
         "route": "/articles/2026-04-20-25",
         "href": "/articles/2026-04-20-25",
-        "articleUrl": "https://cttd-magazine.vercel.app/articles/2026-04-20-25",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-20-25",
         "image": "https://webpack.js.org/icon-pwa-512x512.934507c816afbcdb.png",
         "imageCaption": "webpack 공식 이미지",
         "tags": [
@@ -7282,7 +7282,7 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "기술 변화 요약",
+            "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [

@@ -2070,6 +2070,8 @@ def section_display_title(title: str) -> str:
         return "인사이트"
     if title in DETAIL_SECTION_TITLES:
         return "인사이트"
+    if title in SUMMARY_SECTION_TITLES:
+        return "요약"
     return title
 
 
