@@ -326,9 +326,28 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def should_render_code_tag(value: str) -> bool:
+    text = value.strip()
+    if not text:
+        return False
+    if re.search(r"[가-힣]", text):
+        return False
+    return bool(
+        re.search(r"[<>{}()[\];=/\\]|^#(?:[0-9a-fA-F]{3,8})$|^@[\w.-]+/|--[\w-]+|\w+\.\w+|[\w-]+:[\w-]+", text)
+        or re.search(r"\b(?:aria-[\w-]+|font-[\w-]+|color-mix|light-dark|npm|node|git|axe-core|WCAG|API|DOM|CSS|HTML|JS|MDX|JSON|LCP|CLS|INP|FCP)\b", text)
+    )
+
+
+def render_inline_code(match: re.Match[str]) -> str:
+    value = match.group(1)
+    if should_render_code_tag(value):
+        return f"<code>{value}</code>"
+    return value
+
+
 def clean_inline(text: str) -> str:
     escaped = html.escape(text.strip())
-    escaped = re.sub(r"`([^`]+)`", r"<code>\1</code>", escaped)
+    escaped = re.sub(r"`([^`]+)`", render_inline_code, escaped)
     return re.sub(
         r"\[([^\]]+)\]\(([^)]+)\)",
         lambda match: f'<a href="{html.escape(match.group(2), quote=True)}">{match.group(1)}</a>',
