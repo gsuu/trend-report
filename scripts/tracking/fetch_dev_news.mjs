@@ -23,11 +23,19 @@ function runDir(date = outputDate()) {
   return resolveRunDir(runsDir, date);
 }
 
+function devArticlesPath(date = outputDate()) {
+  return path.join(runDir(date), "dev-articles.json");
+}
+
+function devFetchReportPath(date = outputDate()) {
+  return path.join(runDir(date), "dev-fetch-report.json");
+}
+
 async function fetchRssFeed(url, source, since) {
   try {
     const xml = await fetchText(url, FEED_TIMEOUT_MS, "CTTD Trend Report DEV RSS Tracker");
     const feed = await parser.parseString(xml);
-    return feed.items
+    const articles = feed.items
       .filter((item) => {
         if (!item.pubDate) return false;
         const pubDate = new Date(item.pubDate);
@@ -40,9 +48,10 @@ async function fetchRssFeed(url, source, since) {
         source,
         content: articleContent(item),
       }));
+    return { articles, error: "" };
   } catch (error) {
     console.error(`Error fetching ${source}: ${error.message}`);
-    return [];
+    return { articles: [], error: error.message };
   }
 }
 
@@ -54,17 +63,31 @@ async function collectArticles(sources) {
     ["podcasts", sources.podcasts || []],
   ];
   const articles = [];
+  const sourceResults = [];
 
   for (const [groupName, sourceList] of groups) {
     console.log(`Fetching ${groupName}...`);
     for (const source of sourceList) {
       if (!source.rss) continue;
-      articles.push(...await fetchRssFeed(source.rss, source.name, since));
+      const result = await fetchRssFeed(source.rss, source.name, since);
+      articles.push(...result.articles);
+      sourceResults.push({
+        name: source.name,
+        group: groupName,
+        type: "feed",
+        url: source.rss,
+        status: result.error ? "error" : "ok",
+        count: result.articles.length,
+        error: result.error,
+      });
     }
   }
 
-  return uniqueArticles(articles)
-    .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+  return {
+    articles: uniqueArticles(articles)
+      .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)),
+    sourceResults,
+  };
 }
 
 async function main() {
@@ -73,13 +96,21 @@ async function main() {
   await fs.mkdir(outputDir, { recursive: true });
 
   const sources = JSON.parse(await fs.readFile(sourcesPath, "utf8"));
-  const articles = await collectArticles(sources);
+  const { articles, sourceResults } = await collectArticles(sources);
 
-  const articlesPath = path.join(outputDir, "dev-articles.json");
+  const articlesPath = devArticlesPath(date);
   await fs.writeFile(articlesPath, `${JSON.stringify(articles, null, 2)}\n`, "utf8");
+  const reportPath = devFetchReportPath(date);
+  await fs.writeFile(reportPath, `${JSON.stringify({
+    date,
+    sourceFile: "news-tracking/dev-sources.json",
+    totalArticles: articles.length,
+    sourceResults,
+  }, null, 2)}\n`, "utf8");
 
   console.log(`Fetched ${articles.length} DEV articles`);
   console.log(`Saved to ${articlesPath}`);
+  console.log(`Saved fetch report to ${reportPath}`);
   console.log("Next: use docs/dev-digest-agent-prompt.md with this JSON to select, summarize, and write DEV items.");
 }
 

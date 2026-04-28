@@ -35,6 +35,10 @@ function designArticlesPath(date = outputDate()) {
   return path.join(runDir(date), "design-articles.json");
 }
 
+function designFetchReportPath(date = outputDate()) {
+  return path.join(runDir(date), "design-fetch-report.json");
+}
+
 function articleFields(source) {
   return {
     source: source.name,
@@ -74,7 +78,7 @@ async function fetchRssFeed(source, since) {
   try {
     const xml = await fetchText(source.rss, FEED_TIMEOUT_MS, "CTTD Trend Report Design RSS Tracker");
     const feed = await parser.parseString(xml);
-    return feed.items
+    const articles = feed.items
       .filter((item) => {
         if (!item.pubDate && !item.isoDate) return false;
         const pubDate = new Date(item.pubDate || item.isoDate);
@@ -94,9 +98,10 @@ async function fetchRssFeed(source, since) {
         valueTags: [],
         ...articleFields(source),
       }));
+    return { articles, error: "" };
   } catch (error) {
     console.error(`Error fetching ${source.name}: ${error.message}`);
-    return [];
+    return { articles: [], error: error.message };
   }
 }
 
@@ -136,10 +141,10 @@ async function scrapePage(source, seenPreviousLinks) {
         ...articleFields(source),
       });
     }
-    return articles;
+    return { articles, error: "" };
   } catch (error) {
     console.error(`Error scraping ${source.name}: ${error.message}`);
-    return [];
+    return { articles: [], error: error.message };
   }
 }
 
@@ -160,15 +165,36 @@ async function main() {
   const since = sinceDate();
   const seenPreviousLinks = await previousLinks(runsDir, designArticlesPath, date);
   const articles = [];
+  const sourceResults = [];
 
   console.log("Fetching design feeds...");
   for (const source of sources.feeds || []) {
-    if (source.rss) articles.push(...await fetchRssFeed(source, since));
+    if (!source.rss) continue;
+    const result = await fetchRssFeed(source, since);
+    articles.push(...result.articles);
+    sourceResults.push({
+      name: source.name,
+      type: "feed",
+      url: source.rss,
+      status: result.error ? "error" : "ok",
+      count: result.articles.length,
+      error: result.error,
+    });
   }
 
   console.log("Scraping design pages...");
   for (const source of sources.pages || []) {
-    if (source.url) articles.push(...await scrapePage(source, seenPreviousLinks));
+    if (!source.url) continue;
+    const result = await scrapePage(source, seenPreviousLinks);
+    articles.push(...result.articles);
+    sourceResults.push({
+      name: source.name,
+      type: "page",
+      url: source.url,
+      status: result.error ? "error" : "ok",
+      count: result.articles.length,
+      error: result.error,
+    });
   }
 
   const output = uniqueArticles(articles)
@@ -177,9 +203,17 @@ async function main() {
 
   const outputPath = designArticlesPath(date);
   await fs.writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
+  const reportPath = designFetchReportPath(date);
+  await fs.writeFile(reportPath, `${JSON.stringify({
+    date,
+    sourceFile: "news-tracking/design-sources.json",
+    totalArticles: output.length,
+    sourceResults,
+  }, null, 2)}\n`, "utf8");
 
   console.log(`Fetched ${output.length} design articles`);
   console.log(`Saved to ${outputPath}`);
+  console.log(`Saved fetch report to ${reportPath}`);
   console.log("Next: use docs/design-digest-agent-prompt.md to select UIUX design references.");
 }
 
