@@ -2217,6 +2217,7 @@ def report_payload(report: Report) -> dict[str, object]:
                 "area": issue_area_label(issue),
                 "categoryKey": issue_category_key(issue),
                 "category": issue_category_label(issue),
+                "publicationDate": report.slug,
                 "date": issue_display_date(report, issue),
                 "route": issue_route(issue),
                 "href": issue_href(report, issue),

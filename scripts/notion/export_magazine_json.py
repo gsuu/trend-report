@@ -75,6 +75,7 @@ def report_payload_from_path(report_path: Path) -> dict[str, object]:
         issue_payload["issueSlug"] = report.slug
         issue_payload["articleSlug"] = article_slug
         issue_payload["number"] = issue_number
+        issue_payload["publicationDate"] = report.slug
         issue_payload["date"] = issue_date
         issue_payload["route"] = f"/articles/{article_slug}"
         issue_payload["href"] = issue_payload["route"]

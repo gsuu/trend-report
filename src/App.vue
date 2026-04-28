@@ -145,7 +145,7 @@ const issues = computed(() => report.value.issues || []);
 const recentWeekRange = computed(() => recentDaysRange(7));
 const filteredIssues = computed(() => {
   if (!showCurrentWeekOnly.value || !recentWeekRange.value) return issues.value;
-  return issues.value.filter((issue) => isDateInRange(issue.date, recentWeekRange.value));
+  return issues.value.filter((issue) => isDateInRange(issuePublicationDate(issue), recentWeekRange.value));
 });
 const activeIssue = computed(() => {
   const path = routePath(route.value);
@@ -590,6 +590,10 @@ function isDateInRange(value, range) {
   if (!date || !range) return false;
   return date >= range.start && date < range.end;
 }
+
+function issuePublicationDate(issue) {
+  return issue?.publicationDate || issue?.issueSlug || issue?.date || "";
+}
 </script>
 
 <template>
@@ -830,7 +834,7 @@ function isDateInRange(value, range) {
                 <h2 v-html="issue.takeawayHtml"></h2>
                 <strong v-html="issue.deckHtml"></strong>
                 <div class="guide-card-foot">
-                  <time v-text="issue.date"></time>
+                  <time v-text="issuePublicationDate(issue)"></time>
                   <span aria-hidden="true">|</span>
                   <span class="category-label" v-text="issue.category"></span>
                 </div>
@@ -861,7 +865,7 @@ function isDateInRange(value, range) {
                 <h2 v-html="issue.takeawayHtml"></h2>
                 <strong v-html="issue.deckHtml"></strong>
                 <div class="guide-card-foot">
-                  <time v-text="issue.date"></time>
+                  <time v-text="issuePublicationDate(issue)"></time>
                   <span aria-hidden="true">|</span>
                   <span class="category-label" v-text="issue.category"></span>
                 </div>
