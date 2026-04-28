@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T03:50:48.857384+00:00",
+  "generatedAt": "2026-04-28T06:45:04.641769+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -12,6 +12,9 @@
         "area": "Service",
         "categoryKey": "platform",
         "category": "platform",
+        "sourceType": "news",
+        "sourceTypeLabel": "기사/뉴스",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-08",
         "route": "/articles/2026-04-27-01",
         "href": "/articles/2026-04-27-01",
@@ -24,7 +27,7 @@
           "로컬신뢰"
         ],
         "takeawayHtml": "후기는 이제 말로 쓰고, AI가 묻는다",
-        "deckHtml": "당근이 동네 가게 후기 작성 화면에 AI 기반 말로 쓰기 기능을 출시했습니다. 로컬 서비스에서 후기는 검색, 방문 결정, 재방문에 영향을 주지만 작성 과정은 여전히 사용자 부담이 큽니다.",
+        "deckHtml": "당근이 동네 가게 후기 작성 화면에 AI 기반 말로 쓰기 기능을 출시했습니다. 이용자가 방문 경험을 음성으로 답하면 AI가 분위기, 서비스 특징, 이용 메뉴 등을 추가로 묻고 한 편의 텍스트 후기로 정리합니다. 로컬 서비스에서 후기는 검색, 방문 결정, 재방문에 영향을 주지만 작성 과정은 여전히 사용자 부담이 큽니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -201,6 +204,9 @@
         "area": "Service",
         "categoryKey": "fintech",
         "category": "fintech",
+        "sourceType": "reference",
+        "sourceTypeLabel": "레퍼런스/쇼케이스",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-23",
         "route": "/articles/2026-04-27-02",
         "href": "/articles/2026-04-27-02",
@@ -213,7 +219,7 @@
           "자연어탐색"
         ],
         "takeawayHtml": "토스플레이스 판다, 데이터봇보다 먼저 기준을 정리했다",
-        "deckHtml": "토스플레이스가 데이터 분석 어시스턴트 판다(PANDA)를 소개했습니다. 운영자는 지표를 찾기 위해 대시보드, 쿼리, 담당자 요청을 오가야 했습니다.",
+        "deckHtml": "토스플레이스가 데이터 분석 어시스턴트 판다(PANDA)를 소개했습니다. 팀원이 권한 범위 안에서 필요한 수치를 자연어로 묻고, 데이터봇이 반복적인 추출과 분석 준비를 돕는 내부 운영 도구입니다. 운영자는 지표를 찾기 위해 대시보드, 쿼리, 담당자 요청을 오가야 했습니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -390,6 +396,9 @@
         "area": "Service",
         "categoryKey": "ai",
         "category": "AI",
+        "sourceType": "reference",
+        "sourceTypeLabel": "레퍼런스/쇼케이스",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-22",
         "route": "/articles/2026-04-27-03",
         "href": "/articles/2026-04-27-03",
@@ -402,7 +411,7 @@
           "작업검수"
         ],
         "takeawayHtml": "ChatGPT 워크스페이스 에이전트는 권한 UX다",
-        "deckHtml": "OpenAI가 ChatGPT 안에서 워크스페이스 단위 작업을 수행하는 에이전트 기능을 소개했습니다. 업무 도구 UX는 개인 채팅을 넘어 팀 권한, 자료 접근, 작업 결과 검수로 확장되고 있습니다.",
+        "deckHtml": "OpenAI가 ChatGPT 안에서 워크스페이스 단위 작업을 수행하는 에이전트 기능을 소개했습니다. 개인 채팅형 AI를 넘어 팀 자료, 접근 권한, 작업 결과, 검수 흐름이 함께 묶이는 업무 공간 UX로 확장되는 흐름입니다. 업무 도구 UX는 개인 채팅을 넘어 팀 권한, 자료 접근, 작업 결과 검수로 확장되고 있습니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -573,6 +582,9 @@
         "area": "Design",
         "categoryKey": "ai",
         "category": "AI",
+        "sourceType": "reference",
+        "sourceTypeLabel": "레퍼런스/쇼케이스",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-10",
         "route": "/articles/2026-04-27-04",
         "href": "/articles/2026-04-27-04",
@@ -585,7 +597,7 @@
           "컴포넌트규칙"
         ],
         "takeawayHtml": "AI 에이전트가 디자인 시스템을 오해하는 순간",
-        "deckHtml": "Into Design Systems는 AI 에이전트가 디자인 시스템을 제대로 쓰지 못하는 이유를 컴포넌트 이름, 문서 위치, 토큰 의미, 사용 금지 조건의 불명확함에서 찾습니다. 에이전트는 컴포넌트 이름, 문서 위치, 토큰 의미가 불명확하면 팀의 실제 기준을 놓칩니다.",
+        "deckHtml": "에이전트는 컴포넌트 이름, 문서 위치, 토큰 의미가 불명확하면 팀의 실제 기준을 놓칩니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -756,6 +768,9 @@
         "area": "Design",
         "categoryKey": "ai",
         "category": "AI",
+        "sourceType": "reference",
+        "sourceTypeLabel": "레퍼런스/쇼케이스",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-21",
         "route": "/articles/2026-04-27-05",
         "href": "/articles/2026-04-27-05",
@@ -768,7 +783,7 @@
           "승인흐름"
         ],
         "takeawayHtml": "ChatGPT Images 2.0, 이제 승인 가능한가",
-        "deckHtml": "OpenAI가 ChatGPT Images 2.0을 공개하며 이미지 안 텍스트 표현, 시각적 추론, 지시 반영 능력이 개선됐다고 밝혔습니다. 이미지 생성은 배너, 상세페이지, 콘텐츠 시안 제작에서 텍스트 표현과 지시 이행 품질이 중요합니다.",
+        "deckHtml": "OpenAI가 ChatGPT Images 2.0을 공개하며 이미지 안 텍스트 표현, 시각적 추론, 지시 반영 능력이 개선됐다고 밝혔습니다. 배너, 카드, 시안처럼 문구와 구성이 중요한 디자인 산출물에서도 생성 이미지를 실무 후보로 검토할 여지가 커졌습니다. 이미지 생성은 배너, 상세페이지, 콘텐츠 시안 제작에서 텍스...",
         "facts": [
           {
             "label": "발행날짜",
@@ -939,6 +954,9 @@
         "area": "DEV",
         "categoryKey": "css",
         "category": "CSS",
+        "sourceType": "guide",
+        "sourceTypeLabel": "방법론/가이드",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-23",
         "route": "/articles/2026-04-27-06",
         "href": "/articles/2026-04-27-06",
@@ -946,9 +964,9 @@
         "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/03/apple-vision-pro.webp",
         "imageCaption": "CSS-Tricks 원문 최상단 이미지",
         "tags": [
-          "CSS애니메이션",
-          "ScrollAnimation",
-          "퍼블리싱"
+          "CSS Scroll-driven Animations",
+          "Apple Vision Pro",
+          "Firefox fallback"
         ],
         "takeawayHtml": "Recreating Apple’s Vision Pro Animation in CSS",
         "deckHtml": "CSS Scroll-driven Animations가 제품형 인터랙션을 어디까지 대체할 수 있는지 보여주는 실험입니다. 다만 Firefox 지원과 fallback 설계까지 함께 봐야 실제 프로젝트 기준이 됩니다.",
@@ -959,7 +977,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "CSS애니메이션 / ScrollAnimation / 퍼블리싱"
+            "valueHtml": "CSS Scroll-driven Animations / Apple Vision Pro / Firefox fallback"
           },
           {
             "label": "국가",
@@ -1087,6 +1105,9 @@
         "area": "DEV",
         "categoryKey": "css",
         "category": "CSS",
+        "sourceType": "guide",
+        "sourceTypeLabel": "방법론/가이드",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-22",
         "route": "/articles/2026-04-27-07",
         "href": "/articles/2026-04-27-07",
@@ -1095,8 +1116,8 @@
         "imageCaption": "CSS-Tricks 원문 최상단 이미지",
         "tags": [
           "Astro",
-          "Markdown",
-          "퍼블리싱"
+          "Markdown component",
+          "prettier-ignore"
         ],
         "takeawayHtml": "Enhancing Astro With a Markdown Component",
         "deckHtml": "Astro에서 Markdown을 컴포넌트처럼 다루는 두 글을 묶었습니다. MDX와 별도 Markdown 컴포넌트 중 어디까지 UI로 끌어올릴지 정하는 것이 핵심입니다.",
@@ -1107,7 +1128,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "Astro / Markdown / 퍼블리싱"
+            "valueHtml": "Astro / Markdown component / prettier-ignore"
           },
           {
             "label": "국가",
@@ -1241,6 +1262,9 @@
         "area": "DEV",
         "categoryKey": "css",
         "category": "CSS",
+        "sourceType": "news",
+        "sourceTypeLabel": "기사/뉴스",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-22",
         "route": "/articles/2026-04-27-08",
         "href": "/articles/2026-04-27-08",
@@ -1248,9 +1272,9 @@
         "image": "https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_1280,h_402/co_white,e_outline:25/zskrkpi3ghncauchvd9z.png",
         "imageCaption": "Frontend Focus 원문 최상단 이미지",
         "tags": [
-          "FontFallback",
+          "font-family fallback",
           "CLS",
-          "타이포그래피"
+          "Soft Navigations API"
         ],
         "takeawayHtml": "font-family doesn&#x27;t fall back the way you think it does",
         "deckHtml": "font-family fallback은 생각보다 단순하지 않습니다. 폰트 로딩 중 상속과 metric 차이 때문에 깜빡임, 예기치 않은 글꼴, 레이아웃 시프트가 생길 수 있습니다.",
@@ -1261,7 +1285,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "FontFallback / CLS / 타이포그래피"
+            "valueHtml": "font-family fallback / CLS / Soft Navigations API"
           },
           {
             "label": "국가",
@@ -1389,6 +1413,9 @@
         "area": "DEV",
         "categoryKey": "javascript",
         "category": "JAVASCRIPT",
+        "sourceType": "blog_opinion",
+        "sourceTypeLabel": "블로그/오피니언",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-22",
         "route": "/articles/2026-04-27-09",
         "href": "/articles/2026-04-27-09",
@@ -1396,9 +1423,9 @@
         "image": "https://syntax.fm/og/998.jpg",
         "imageCaption": "Syntax.fm 원문 최상단 이미지",
         "tags": [
-          "AI코딩",
-          "Lint",
-          "품질관리"
+          "AI coding",
+          "ESLint",
+          "Sentry"
         ],
         "takeawayHtml": "998: How to Fix Vibe Coding",
         "deckHtml": "AI 코딩을 신뢰하려면 모델을 더 믿는 것이 아니라 lint, test, browser, error tracking 같은 결정론적 검증 루프를 붙여야 합니다.",
@@ -1409,7 +1436,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "AI코딩 / Lint / 품질관리"
+            "valueHtml": "AI coding / ESLint / Sentry"
           },
           {
             "label": "국가",
@@ -1537,6 +1564,9 @@
         "area": "DEV",
         "categoryKey": "javascript",
         "category": "JAVASCRIPT",
+        "sourceType": "news",
+        "sourceTypeLabel": "기사/뉴스",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-21",
         "route": "/articles/2026-04-27-10",
         "href": "/articles/2026-04-27-10",
@@ -1544,9 +1574,9 @@
         "image": "https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png",
         "imageCaption": "JavaScript Weekly 원문 최상단 이미지",
         "tags": [
-          "HTMLVideo",
-          "콘텐츠제작",
-          "JavaScript"
+          "HyperFrames",
+          "Remotion",
+          "video rendering"
         ],
         "takeawayHtml": "Create videos with HTML and JavaScript via HyperFrames",
         "deckHtml": "HyperFrames는 HTML과 JavaScript로 영상을 구성하는 프레임워크입니다. 웹 UI 구현 지식을 모션 콘텐츠 제작으로 확장하는 흐름으로 볼 수 있습니다.",
@@ -1557,7 +1587,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "HTMLVideo / 콘텐츠제작 / JavaScript"
+            "valueHtml": "HyperFrames / Remotion / video rendering"
           },
           {
             "label": "국가",
@@ -1685,6 +1715,9 @@
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
+        "sourceType": "guide",
+        "sourceTypeLabel": "방법론/가이드",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-26",
         "route": "/articles/2026-04-27-11",
         "href": "/articles/2026-04-27-11",
@@ -1692,9 +1725,9 @@
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Feej7ahebbskthy0wu0o3.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
-          "접근성QA",
-          "WCAG",
-          "실무검수"
+          "browser-side scans",
+          "AccessLint",
+          "axe-core"
         ],
         "takeawayHtml": "Scaling agentic A11y with browser-side scans",
         "deckHtml": "이번 주 접근성 자동 감사 글들을 하나로 묶었습니다. 브라우저 스캔, PR 검사, UX 감사 에이전트 모두 자동화는 초안이고 최종 판단은 실제 화면 검증에 남아 있습니다.",
@@ -1705,7 +1738,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "접근성QA / WCAG / 실무검수"
+            "valueHtml": "browser-side scans / AccessLint / axe-core"
           },
           {
             "label": "국가",
@@ -1864,6 +1897,9 @@
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
+        "sourceType": "guide",
+        "sourceTypeLabel": "방법론/가이드",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-25",
         "route": "/articles/2026-04-27-12",
         "href": "/articles/2026-04-27-12",
@@ -1871,9 +1907,9 @@
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F83aece4c3qgc0ef4tw1e.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
-          "접근성QA",
-          "WCAG",
-          "실무검수"
+          "Klein Blue",
+          "APCA",
+          "color slots"
         ],
         "takeawayHtml": "Why pure Klein blue disappears as text (and the two-slot fix)",
         "deckHtml": "브랜드 컬러를 터미널 텍스트에 그대로 쓰면 접근성이 깨질 수 있습니다. 역할별 색상 슬롯 분리가 더 현실적인 해결책입니다.",
@@ -1884,7 +1920,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "접근성QA / WCAG / 실무검수"
+            "valueHtml": "Klein Blue / APCA / color slots"
           },
           {
             "label": "국가",
@@ -2012,6 +2048,9 @@
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
+        "sourceType": "blog_opinion",
+        "sourceTypeLabel": "블로그/오피니언",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-24",
         "route": "/articles/2026-04-27-13",
         "href": "/articles/2026-04-27-13",
@@ -2020,8 +2059,8 @@
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
           "4:",
-          "접근성QA",
-          "WCAG"
+          "Radix",
+          "focus trap"
         ],
         "takeawayHtml": "Design to Code #4: Why I Chose Radix Over Custom Primitives",
         "deckHtml": "Radix 선택의 핵심은 컴포넌트 모양이 아니라 접근성 edge case를 직접 떠안지 않는 데 있습니다. focus trap 하나에도 고려할 조건이 많습니다.",
@@ -2032,7 +2071,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "접근성QA / WCAG / 실무검수"
+            "valueHtml": "Radix / focus trap / custom primitives"
           },
           {
             "label": "국가",
@@ -2160,6 +2199,9 @@
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
+        "sourceType": "guide",
+        "sourceTypeLabel": "방법론/가이드",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-24",
         "route": "/articles/2026-04-27-14",
         "href": "/articles/2026-04-27-14",
@@ -2167,9 +2209,9 @@
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fizmvg7j6pek0e0jovaxk.webp",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
-          "접근성QA",
-          "WCAG",
-          "실무검수"
+          "Flutter Semantics",
+          "screen readers",
+          "accessibility actions"
         ],
         "takeawayHtml": "A Practical Guide to Flutter Accessibility Part 2: Hiding Noise, Exposing Actions",
         "deckHtml": "Flutter 접근성은 라벨 제공에서 끝나지 않습니다. 스크린리더 사용자가 숨겨야 할 정보와 실행 가능한 action을 구분해야 합니다.",
@@ -2180,7 +2222,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "접근성QA / WCAG / 실무검수"
+            "valueHtml": "Flutter Semantics / screen readers / accessibility actions"
           },
           {
             "label": "국가",
@@ -2308,6 +2350,9 @@
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
+        "sourceType": "guide",
+        "sourceTypeLabel": "방법론/가이드",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-23",
         "route": "/articles/2026-04-27-15",
         "href": "/articles/2026-04-27-15",
@@ -2315,9 +2360,9 @@
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F80y5iuyy7m3axbjmy4c0.png",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
-          "접근성QA",
-          "WCAG",
-          "실무검수"
+          "EAA",
+          "Lighthouse",
+          "WCAG"
         ],
         "takeawayHtml": "The EAA Is Live. Here&#x27;s a 15-Minute Compliance Check Any Business Owner Can Run.",
         "deckHtml": "EAA 대응은 거창한 감사 전에 적용 대상과 핵심 실패 항목을 빠르게 확인하는 것부터 시작할 수 있습니다.",
@@ -2328,7 +2373,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "접근성QA / WCAG / 실무검수"
+            "valueHtml": "EAA / Lighthouse / WCAG"
           },
           {
             "label": "국가",
@@ -2456,6 +2501,9 @@
         "area": "DEV",
         "categoryKey": "web_accessibility",
         "category": "웹접근성",
+        "sourceType": "guide",
+        "sourceTypeLabel": "방법론/가이드",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-20",
         "route": "/articles/2026-04-27-16",
         "href": "/articles/2026-04-27-16",
@@ -2463,9 +2511,9 @@
         "image": "https://files.smashing.media/articles/session-timeouts-accessibility-barrier-authentication-design/session-timeouts-accessibility-barrier-authentication-design.jpg",
         "imageCaption": "Smashing Magazine 원문 최상단 이미지",
         "tags": [
-          "접근성QA",
+          "session timeouts",
           "WCAG",
-          "실무검수"
+          "aria-live"
         ],
         "takeawayHtml": "Session Timeouts: The Overlooked Accessibility Barrier In Authentication Design",
         "deckHtml": "세션 타임아웃은 보안 설정이면서 접근성 장벽입니다. 경고, 연장, 입력 보존이 없으면 사용자는 작업을 잃습니다.",
@@ -2476,7 +2524,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "접근성QA / WCAG / 실무검수"
+            "valueHtml": "session timeouts / WCAG / aria-live"
           },
           {
             "label": "국가",
@@ -2604,6 +2652,9 @@
         "area": "DEV",
         "categoryKey": "performance",
         "category": "Performance",
+        "sourceType": "news",
+        "sourceTypeLabel": "기사/뉴스",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-23",
         "route": "/articles/2026-04-27-17",
         "href": "/articles/2026-04-27-17",
@@ -2611,9 +2662,9 @@
         "image": "https://css-weekly.com/issues/issue-639/images/cssweekly-issue639-interactive-cover-component-og.jpg",
         "imageCaption": "CSS Weekly 원문 최상단 이미지",
         "tags": [
-          "프론트엔드",
-          "퍼블리싱",
-          "품질관리"
+          "lazy loading",
+          "LCP",
+          "interactive cover component"
         ],
         "takeawayHtml": "Issue #639",
         "deckHtml": "CSS Weekly 639호는 lazy loading, interactive cover, AI coding playground처럼 이번 주 CSS·프론트엔드 운영에서 확인할 항목을 묶습니다.",
@@ -2624,7 +2675,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "프론트엔드 / 퍼블리싱 / 품질관리"
+            "valueHtml": "lazy loading / LCP / interactive cover component"
           },
           {
             "label": "국가",
@@ -2752,6 +2803,9 @@
         "area": "DEV",
         "categoryKey": "tool",
         "category": "TOOL",
+        "sourceType": "blog_opinion",
+        "sourceTypeLabel": "블로그/오피니언",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-24",
         "route": "/articles/2026-04-27-18",
         "href": "/articles/2026-04-27-18",
@@ -2759,9 +2813,9 @@
         "image": "https://snap.fly.dev/podcast/680/img",
         "imageCaption": "The Changelog 원문 최상단 이미지",
         "tags": [
-          "AI에이전트",
-          "개발도구",
-          "UX품질"
+          "agent workspace",
+          "worktree",
+          "Amelia Wattenberger"
         ],
         "takeawayHtml": "Exploring with agents (Interview)",
         "deckHtml": "에이전트 시대의 개발 도구는 채팅창보다 workspace와 검증 UI가 중요해집니다. 프로토타입 이후 마지막 완성 단계가 더 어려워집니다.",
@@ -2772,7 +2826,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "AI에이전트 / 개발도구 / UX품질"
+            "valueHtml": "agent workspace / worktree / Amelia Wattenberger"
           },
           {
             "label": "국가",
@@ -2900,6 +2954,9 @@
         "area": "DEV",
         "categoryKey": "tool",
         "category": "TOOL",
+        "sourceType": "research",
+        "sourceTypeLabel": "리서치/리포트",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-24",
         "route": "/articles/2026-04-27-19",
         "href": "/articles/2026-04-27-19",
@@ -2907,9 +2964,9 @@
         "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fwww.axiondeepdigital.com%2Fimages%2Fmarketing%2Fstate-of-small-business-websites-2026-study-og.jpg",
         "imageCaption": "DEV Community 원문 최상단 이미지",
         "tags": [
-          "CoreWebVitals",
-          "성능QA",
-          "로딩전략"
+          "Core Web Vitals",
+          "axe-core Link Labels",
+          "small B2B sites"
         ],
         "takeawayHtml": "State of Small Business Websites (2026 Study). 96.9% Fail Core Web Vitals.",
         "deckHtml": "소규모 B2B 사이트 감사 결과는 성능과 접근성 기본기가 여전히 무너져 있음을 보여줍니다. LCP, FCP, 링크 이름부터 먼저 봐야 합니다.",
@@ -2920,7 +2977,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "CoreWebVitals / 성능QA / 로딩전략"
+            "valueHtml": "Core Web Vitals / axe-core Link Labels / small B2B sites"
           },
           {
             "label": "국가",
@@ -3048,6 +3105,9 @@
         "area": "DEV",
         "categoryKey": "tool",
         "category": "TOOL",
+        "sourceType": "blog_opinion",
+        "sourceTypeLabel": "블로그/오피니언",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-22",
         "route": "/articles/2026-04-27-20",
         "href": "/articles/2026-04-27-20",
@@ -3055,9 +3115,9 @@
         "image": "https://files.smashing.media/articles/ux-designer-nightmare-production-ready-becomes-design-deliverable/production-ready-becomes-design-deliverable-ux.jpg",
         "imageCaption": "Smashing Magazine 원문 최상단 이미지",
         "tags": [
-          "AI에이전트",
-          "개발도구",
-          "UX품질"
+          "production-ready",
+          "design systems",
+          "AI-generated UI"
         ],
         "takeawayHtml": "The UX Designer’s Nightmare: When “Production-Ready” Becomes A Design Deliverable",
         "deckHtml": "AI가 production-ready 화면을 생성할수록 UX와 엔지니어링의 검증 책임은 더 선명해져야 합니다. 디자인 시스템은 생성 UI의 guardrail입니다.",
@@ -3068,7 +3128,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "AI에이전트 / 개발도구 / UX품질"
+            "valueHtml": "production-ready / design systems / AI-generated UI"
           },
           {
             "label": "국가",
@@ -3196,6 +3256,9 @@
         "area": "DEV",
         "categoryKey": "tool",
         "category": "TOOL",
+        "sourceType": "news",
+        "sourceTypeLabel": "기사/뉴스",
+        "publicationDate": "2026-04-27",
         "date": "2026-04-20",
         "route": "/articles/2026-04-27-21",
         "href": "/articles/2026-04-27-21",
@@ -3203,9 +3266,9 @@
         "image": "https://syntax.fm/og/997.jpg",
         "imageCaption": "Syntax.fm 원문 최상단 이미지",
         "tags": [
-          "프론트엔드",
-          "퍼블리싱",
-          "품질관리"
+          "CSS Studio",
+          "View Transitions Toolkit",
+          "Sugar High"
         ],
         "takeawayHtml": "997: Rating and Roasting Your Projects",
         "deckHtml": "Syntax 997화는 이번 주 개발자들이 만든 UI·도구 실험을 훑는 쇼케이스입니다. 도입보다 후보 탐색용으로 보는 편이 맞습니다.",
@@ -3216,7 +3279,7 @@
           },
           {
             "label": "태그",
-            "valueHtml": "프론트엔드 / 퍼블리싱 / 품질관리"
+            "valueHtml": "CSS Studio / View Transitions Toolkit / Sugar High"
           },
           {
             "label": "국가",

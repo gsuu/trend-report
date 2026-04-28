@@ -1,0 +1,143 @@
+{
+  "date": "2026-04-28",
+  "sourceFile": "news-tracking/service-sources.json",
+  "totalArticles": 74,
+  "sourceResults": [
+    {
+      "name": "신세계그룹 뉴스룸",
+      "type": "feed",
+      "url": "https://www.shinsegaegroupnewsroom.com/feed/",
+      "status": "ok",
+      "count": 9,
+      "error": ""
+    },
+    {
+      "name": "쿠팡 뉴스룸",
+      "type": "feed",
+      "url": "https://news.coupang.com/feed/",
+      "status": "ok",
+      "count": 5,
+      "error": ""
+    },
+    {
+      "name": "컬리 뉴스룸",
+      "type": "feed",
+      "url": "https://newsroom.kurlycorp.com/feed/",
+      "status": "ok",
+      "count": 4,
+      "error": ""
+    },
+    {
+      "name": "오늘의집 뉴스룸",
+      "type": "feed",
+      "url": "https://ohstory.io/feed/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "네이버 보도자료",
+      "type": "feed",
+      "url": "https://www.navercorp.com/api/article/naver/rss",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "오픈서베이 블로그",
+      "type": "feed",
+      "url": "https://blog.opensurvey.co.kr/feed/",
+      "status": "ok",
+      "count": 2,
+      "error": ""
+    },
+    {
+      "name": "Spotify Newsroom",
+      "type": "feed",
+      "url": "https://newsroom.spotify.com/feed/",
+      "status": "ok",
+      "count": 10,
+      "error": ""
+    },
+    {
+      "name": "무신사 뉴스룸",
+      "type": "page",
+      "url": "https://newsroom.musinsa.com/news",
+      "status": "ok",
+      "count": 12,
+      "error": ""
+    },
+    {
+      "name": "카카오스타일 파트너라운지",
+      "type": "page",
+      "url": "https://partner.kakaostyle.com/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "CJ올리브영 뉴스룸",
+      "type": "page",
+      "url": "https://corp.oliveyoung.com/ko/news",
+      "status": "ok",
+      "count": 8,
+      "error": ""
+    },
+    {
+      "name": "카카오 보도자료",
+      "type": "page",
+      "url": "https://www.kakaocorp.com/page",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "당근 보도자료",
+      "type": "page",
+      "url": "https://about.daangn.com/company/pr/",
+      "status": "ok",
+      "count": 20,
+      "error": ""
+    },
+    {
+      "name": "야놀자 보도자료",
+      "type": "page",
+      "url": "https://www.yanoljagroup.com/press_release",
+      "status": "ok",
+      "count": 2,
+      "error": ""
+    },
+    {
+      "name": "PUBLY",
+      "type": "page",
+      "url": "https://publy.co/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Careet",
+      "type": "page",
+      "url": "https://www.careet.net/",
+      "status": "ok",
+      "count": 9,
+      "error": ""
+    },
+    {
+      "name": "The Edit - 까탈로그",
+      "type": "page",
+      "url": "http://the-edit.co.kr/newsletter",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "돈 밝히는 여자 Cathy",
+      "type": "page",
+      "url": "https://maily.so/cathyxcash",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    }
+  ]
+}

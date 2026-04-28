@@ -1,0 +1,212 @@
+[
+  {
+    "title": "Let’s Use the Nonexistent ::nth-letter Selector Now",
+    "link": "https://css-tricks.com/using-nonexistent-nth-letter-selector-now/",
+    "pubDate": "Mon, 27 Apr 2026 13:55:42 +0000",
+    "source": "CSS-Tricks",
+    "content": "My shim might give the powers that be another reason to say native support isn't necessary, or if lots of people use my :nth-letter hack in the wild, the browser gods might recognize the need to implement it for real. Let’s Use the Nonexistent ::nth-letter Selector Now originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "999: Writing Maintainable CSS",
+    "link": "https://syntax.fm/999",
+    "pubDate": "Mon, 27 Apr 2026 11:00:00 -0000",
+    "source": "Syntax.fm",
+    "content": "Scott and Wes break down what makes CSS truly manageable—from preventing style leaks and embracing fluid layouts to choosing the right methodology, whether that’s utility CSS, component-scoped styles, or CSS modules. They also dive into practical tips like leveraging CSS variables, layers, scoping, and tooling to keep your stylesheets clean and scalable. Show Notes 00:00 Welcome to Syntax! 01:31 Understanding CSS Manageability 01:44 This CSS doesn’t leak to other parts of website. 03:41 This CSS is easy to maintai…"
+  },
+  {
+    "title": "Five Reasons Divi Sites Fail Accessibility Audits — and the Fixes That Don't Require a Rebuild.",
+    "link": "https://dev.to/agentkit/five-reasons-divi-sites-fail-accessibility-audits-and-the-fixes-that-dont-require-a-rebuild-50kn",
+    "pubDate": "Mon, 27 Apr 2026 10:08:10 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "If you have a WordPress site built on Divi and an accessibility report telling you to rebuild it from scratch on a different theme, you probably do not need to rebuild it. You probably need to fix five specific things, and four of them take less than an hour each. Divi gets a bad rap in accessibility circles, and some of it is fair — the visual builder produces nested DOM that is heavier than what a developer would write by hand, and the shape-first design philosophy puts a lot of meaning in CSS that does not alwa…"
+  },
+  {
+    "title": "The “Bug-Free” Workforce: How AI Efficiency Is Subtly Disrupting The Interactions That Build Strong Teams",
+    "link": "https://smashingmagazine.com/2026/04/bug-free-workforce-ai-disrupting-teams/",
+    "pubDate": "Mon, 27 Apr 2026 10:00:00 GMT",
+    "source": "Smashing Magazine",
+    "content": "AI tools are eliminating the need to “bug” colleagues for help, but the informal interactions they replace are the very scaffolding that builds team trust, belonging, and innovation. Casey Hudetz and Eric Olive explore the research and potential impacts behind that risk and offer practical strategies for maintaining human connection while leveraging AI’s strengths."
+  },
+  {
+    "title": "712: Lazy Loading the Web with Scott Jehl",
+    "link": "https://shoptalkshow.com/712/",
+    "pubDate": "Mon, 27 Apr 2026 08:00:14 +0000",
+    "source": "ShopTalk Show",
+    "content": "Show Description Chris Coyier and Scott Jehl discuss the recent advancements in lazy loading on the web, the process of standardization, browser support, and the future of web performance optimization. Listen on Website Guests Scott Jehl Guest's Main URL • Guest's Social Tech lead of the Performance & Accessibility Team at Squarespace. Links Scott Jehl, Web Designer/Developer YouTube Embeds are Bananas Heavy and it's Fixable – Frontend Masters Blog How To Use Standard HTML Video & Audio Lazy-Loading on the Web Tod…"
+  },
+  {
+    "title": "Accessibility Testing: Best Practices",
+    "link": "https://dev.to/vitalyskadorva/accessibility-testing-best-practices-3li9",
+    "pubDate": "Mon, 27 Apr 2026 03:08:19 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Accessibility testing requires more than an automated scanner. A scanner catches roughly 30-50% of WCAG issues. The rest requires manual testing with a keyboard, a screen reader, and a process that covers every state of the application. This guide is tool-agnostic. Whether the team uses Cypress, Playwright, Selenium, or another framework, the practices apply. Tool-specific implementation guides are linked at the end. The compliance landscape has shifted. Over 5,000 accessibility lawsuits were filed in the US in 20…"
+  },
+  {
+    "title": "Scaling agentic A11y with browser-side scans",
+    "link": "https://dev.to/cameron-accesslint/scaling-agentic-a11y-with-browser-side-scans-1e3h",
+    "pubDate": "Sun, 26 Apr 2026 14:17:38 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Fanning out agents to read every component file is a tempting shape for accessibility review. It demos well in a small project. In a real codebase with hundreds of components, multiple routes, and several active branches, it's a budget problem. You're paying LLM rates for work a deterministic audit engine does in JavaScript. The asymmetry is the point. Rule checks against a rendered DOM are deterministic JavaScript, not LLM tokens. The agent's leverage is in the judgment: choosing the right alt text, the right lab…"
+  },
+  {
+    "title": "What WAVE and Avada Miss on Your Shopify Store. Here Are 5 WCAG Failures You Have to Catch by Hand.",
+    "link": "https://dev.to/agentkit/what-wave-and-avada-miss-on-your-shopify-store-here-are-5-wcag-failures-you-have-to-catch-by-hand-3hia",
+    "pubDate": "Sun, 26 Apr 2026 06:56:05 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "If you own a Shopify store and you have already taken accessibility seriously, you have probably run two tools on it: WAVE, the free browser scanner from WebAIM, and Avada Accessibility, the most installed accessibility app on the Shopify App Store. Between them you got a long report, you fixed what was on the list, and the score on the dashboard looks fine. The audit your customers actually experience is not the same audit those two tools ran. Roughly half of what WCAG 2.1 AA actually requires cannot be detected…"
+  },
+  {
+    "title": "Why pure Klein blue disappears as text (and the two-slot fix)",
+    "link": "https://dev.to/palo_alto_ai/why-pure-klein-blue-disappears-as-text-and-the-two-slot-fix-225p",
+    "pubDate": "Sat, 25 Apr 2026 16:33:28 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Yves Klein's IKB is the hex value 002FA7. On a dark terminal ground, that renders at APCA Lc -12 — below the threshold where text is functionally legible. I found this out after spending two days trying to wire IKB directly into every blue slot in my Claude Code theme and watching permission prompts become nearly unreadable. The fix isn't to abandon IKB. It's to split the work across two ANSI slots. ansi:blue gets pure IKB. Claude Code uses this slot for decorative borders and structural chrome — things you parse…"
+  },
+  {
+    "title": "Showit Has Two Documents. That's Why Your Accessibility Fixes Aren't Sticking.",
+    "link": "https://dev.to/agentkit/showit-has-two-documents-thats-why-your-accessibility-fixes-arent-sticking-4i25",
+    "pubDate": "Sat, 25 Apr 2026 13:50:41 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "If you built your site on Showit and ran a Lighthouse accessibility audit on it, the score you got is probably half the story. Showit is not like WordPress, Squarespace, or Webflow. Those platforms render one page that adapts to the screen size you are looking at. Showit does something different: it builds the desktop layout and the mobile layout as two entirely separate documents that share the same URL. When a visitor on a phone hits your homepage, they are not seeing your desktop site stretched smaller. They ar…"
+  },
+  {
+    "title": "I built a tool that runs a full UX + accessibility audit on any URL in under 5 minutes",
+    "link": "https://dev.to/amf_floyd_9e49aef1a680dae/i-built-a-tool-that-runs-a-full-ux-accessibility-audit-on-any-url-in-under-5-minutes-2eic",
+    "pubDate": "Sat, 25 Apr 2026 05:58:58 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "I've been doing UX audits manually for years — heuristic evaluations, WCAG checks, writing up findings. It takes hours per site. So I built Parallax to automate the whole thing. How it works: Paste any URL Free tier: 1 audit/month with summary scores and category breakdowns. Try it here: parallax-ux.com/audit I'd love feedback — what would make this more useful for your workflow?"
+  },
+  {
+    "title": "How We Built an Autonomous UX Auditing Agent",
+    "link": "https://dev.to/amf_floyd_9e49aef1a680dae/how-we-built-an-autonomous-ux-auditing-agent-46b9",
+    "pubDate": "Sat, 25 Apr 2026 03:21:49 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "We recently shipped Parallax — an AI agent that automatically audits UX quality. Here's how it works and the challenges we solved. Traditional UX testing requires: Hiring UX researchers ($80-150K/year) Running quarterly research cycles (2-3 months) Manual heuristic evaluation against Nielsen's 10 usability principles Accessibility scanning (WCAG compliance) Generating reports and prioritizing fixes Result: Most companies do UX audits 2-4x/year. Problems discovered in Q2 don't get fixed until Q3. Instead of crawlin…"
+  },
+  {
+    "title": "Exploring with agents (Interview)",
+    "link": "https://changelog.com/podcast/680",
+    "pubDate": "Fri, 24 Apr 2026 20:00:00 +0000",
+    "source": "The Changelog",
+    "content": "Today on the show I’m talking with Amelia Wattenberger — designer, data-viz veteran, ex-GitHub Next, and now designing Intent at Augment Code. What if the last 30% of any software project is about to become the hardest part you’ve ever done? That’s the argument Amelia is making today. We discuss the identity crisis developers are having as agents take over the keyboard, the epic redesign of developer tooling in this agent-first world, the arc from autocomplete to chat to CLI back to UI, why Intent treats a workspa…"
+  },
+  {
+    "title": "Audit WCAG 2.1 accessibility on every pull request (free GitHub Action)",
+    "link": "https://dev.to/jpatel3/audit-wcag-21-accessibility-on-every-pull-request-free-github-action-111b",
+    "pubDate": "Fri, 24 Apr 2026 18:03:40 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "I build web apps and I always mean to audit accessibility before shipping, I have to remember to open. So I built the thing I actually wanted: a GitHub Action that runs axe-core on every PR and fails the job if it finds serious violations. ## The install on: pull_request jobs: a11y: runs-on: ubuntu-latest permissions: { contents: read, pull-requests: write } steps: - uses: jpatel3/a11yscout@v1 with: urls: https://your-preview-url.example.com level: AA fail-on: serious That's it. You'll get a PR comment like: 3 vio…"
+  },
+  {
+    "title": "State of Small Business Websites (2026 Study). 96.9% Fail Core Web Vitals.",
+    "link": "https://dev.to/joshua_gutierrez/state-of-small-business-websites-2026-study-969-fail-core-web-vitals-106i",
+    "pubDate": "Fri, 24 Apr 2026 17:13:34 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Every performance article on Dev.to quotes the same two stats. You know them. Amazon. Walmart. The 100ms one. Everyone has seen them. Nobody measures what their own prospect list looks like. We did. 292 real B2B websites ran through a headless Chromium audit in April 2026. The results are not academic. 96.9% fail at least one Core Web Vital on mobile. Only 3.1% pass all three. 100% of 191 sites with valid accessibility data failed the axe-core Link Labels rule. The full dataset is open. The methodology is reproduc…"
+  },
+  {
+    "title": "Design to Code #4: Why I Chose Radix Over Custom Primitives",
+    "link": "https://dev.to/7onic/design-to-code-4-why-i-chose-radix-over-custom-primitives-50eo",
+    "pubDate": "Fri, 24 Apr 2026 13:34:50 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "I spent an entire afternoon trying to write a focus trap from scratch. The requirement seemed dead simple: when a modal is open, the Tab key should cycle through elements inside it—and nowhere else. When the modal closes, focus should snap back to whatever triggered it. I'd seen this in production apps a thousand times. How hard could it be? I sat down, cracked my knuckles, and started coding. The first version worked... until I tested it with a portal. Since the modal was rendering outside the main DOM tree, my t…"
+  },
+  {
+    "title": "A Practical Guide to Flutter Accessibility Part 2: Hiding Noise, Exposing Actions",
+    "link": "https://dev.to/gdg/a-practical-guide-to-flutter-accessibility-part-2-hiding-noise-exposing-actions-2f7i",
+    "pubDate": "Fri, 24 Apr 2026 11:14:27 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "In Part 1 you learned the basics. Semantics for labels and hints. MergeSemantics to remove double announcements. TalkBack and the Android Ally plugin to check the results. That covers most of a typical Flutter app. But not all of it. Some widgets are invisible to screen readers for a different reason. It's not a missing label. It's that assistive technology has no idea how to interact with them. A swipe-to-dismiss row. A star-rating control. A decorative icon that just adds noise. Adding a label to these won't cut…"
+  },
+  {
+    "title": "New to the web platform in April",
+    "link": "https://web.dev/blog/web-platform-04-2026?hl=en",
+    "pubDate": "Fri, 24 Apr 2026 07:00:00 GMT",
+    "source": "Web.dev",
+    "content": "Discover some of the interesting features that have landed in stable and beta web browsers during April 2026."
+  },
+  {
+    "title": "Recreating Apple’s Vision Pro Animation in CSS",
+    "link": "https://css-tricks.com/recreating-apples-vision-pro-animation-in-css/",
+    "pubDate": "Thu, 23 Apr 2026 13:22:57 +0000",
+    "source": "CSS-Tricks",
+    "content": "Putting CSS’s more recent scrolling animation capabilities to the test to recreate a complex animation of the Apple Vision Pro headset from Apple's website. Recreating Apple’s Vision Pro Animation in CSS originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Issue #639",
+    "link": "https://feedpress.me/link/24028/17324734/issue-639",
+    "pubDate": "Thu, 23 Apr 2026 00:00:00 GMT",
+    "source": "CSS Weekly",
+    "content": "Learn how to use lazy loading without hurting web performance, a small interactive cover component, how you can have fun with leaked Claude Code’s source code, and more."
+  },
+  {
+    "title": "Enhancing Astro With a Markdown Component",
+    "link": "https://css-tricks.com/astro-markdown-component/",
+    "pubDate": "Wed, 22 Apr 2026 13:49:57 +0000",
+    "source": "CSS-Tricks",
+    "content": "I use a Markdown Component for two main reasons: (1) It reduces the amount of markup I need to write, and (2) it converts typographic symbols. Here's how it works. Enhancing Astro With a Markdown Component originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "998: How to Fix Vibe Coding",
+    "link": "https://syntax.fm/998",
+    "pubDate": "Wed, 22 Apr 2026 11:00:00 -0000",
+    "source": "Syntax.fm",
+    "content": "Wes and Scott talk about making AI coding more reliable using deterministic tools like fallow, knip, ESLint, StyleLint, and Sentry. They cover code quality analysis, linting strategies, headless browsers, task workflows, and how to enforce better patterns so AI stops guessing and starts producing maintainable, predictable code. Show Notes 00:00 Welcome to Syntax! Losing two clients in one week 04:49 Code quality tools jscpd.dev knip.dev fallow.tools wallace 14:11 Finding and using components Storybook AI 17:28 Bro…"
+  },
+  {
+    "title": "The UX Designer’s Nightmare: When “Production-Ready” Becomes A Design Deliverable",
+    "link": "https://smashingmagazine.com/2026/04/production-ready-becomes-design-deliverable-ux/",
+    "pubDate": "Wed, 22 Apr 2026 10:00:00 GMT",
+    "source": "Smashing Magazine",
+    "content": "In a rush to embrace AI, the industry is redefining what it means to be a UX designer, blurring the line between design and engineering. Carrie Webster explores what’s gained, what’s lost, and why designers need to remain the guardians of the user experience."
+  },
+  {
+    "title": "font-family doesn't fall back the way you think it does",
+    "link": "https://frontendfoc.us/issues/738",
+    "pubDate": "Wed, 22 Apr 2026 00:00:00 +0000",
+    "source": "Frontend Focus",
+    "content": "🚀 Frontend Focus #​738 — April 22, 2026 | Read on the web Building a UI Without Breakpoints — Amit makes the case for moving away from global viewport breakpoints, instead shifting to using modern CSS such as clamp(), container queries, and auto-fit to create fluid interfaces no matter the screen. Amit Sheen Catch Bugs Before Your Frontend PRs Merge — Frontend bugs rarely stay in the diff. Greptile reviews each PR with full repo context, flags real issues, and suggests fixes that match your team. Works with GitHu…"
+  },
+  {
+    "title": "Create videos with HTML and JavaScript via HyperFrames",
+    "link": "https://javascriptweekly.com/issues/782",
+    "pubDate": "Tue, 21 Apr 2026 00:00:00 +0000",
+    "source": "JavaScript Weekly",
+    "content": "#​782 — April 21, 2026 Read on the Web JavaScript Weekly HyperFrames: Write HTML and JavaScript to Create Videos — An open-source framework for creating and rendering videos with HTML and JavaScript. Essentially a simpler non-React alternative to Remotion. It includes a variety of built-in blocks/components for common video effects and elements, and can also composite existing video and audio clips. GitHub repo. HeyGen Still Writing Tests Manually? Meticulous AI Is Here — Notion, Dropbox, Wiz and LaunchDarkly now…"
+  },
+  {
+    "title": "Markdown + Astro = ❤️",
+    "link": "https://css-tricks.com/markdown-astro/",
+    "pubDate": "Mon, 20 Apr 2026 13:55:16 +0000",
+    "source": "CSS-Tricks",
+    "content": "Although Astro has built-in support for Markdown via .md files, I'd argue that your Markdown experience can be enhanced with MDX. Markdown + Astro = ❤️ originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Session Timeouts: The Overlooked Accessibility Barrier In Authentication Design",
+    "link": "https://smashingmagazine.com/2026/04/session-timeouts-accessibility-barrier-authentication-design/",
+    "pubDate": "Mon, 20 Apr 2026 13:00:00 GMT",
+    "source": "Smashing Magazine",
+    "content": "Poorly handled session timeouts are more than a technical inconvenience. They can become serious accessibility barriers that interrupt essential online tasks, especially for people with disabilities. Here is how to implement thoughtful session management that improves usability, reduces frustration, and helps create a more accessible and respectful web."
+  },
+  {
+    "title": "997: Rating and Roasting Your Projects",
+    "link": "https://syntax.fm/997",
+    "pubDate": "Mon, 20 Apr 2026 11:00:00 -0000",
+    "source": "Syntax.fm",
+    "content": "Scott and Wes dig into a huge batch of community-submitted projects, from JSON tools and CSS editors to AI agents, view transitions, and everything in between. It’s a rapid-fire showcase of what developers have been building, including picks like Arrow JS, Sugar High, Drift, and a whole lot more. Show Notes 00:00 Welcome to Syntax! Wes’ Bluesky Post Wes’ X Post 01:20 JSON-Alexander. 02:43 FFF - Fastest File Search. 04:44 View Transitions Toolkit. 08:06 Agentation and Svelte Agentation. 11:21 CSS Studio. 13:12 Peon…"
+  },
+  {
+    "title": "711: Where did Oh My Zsh Come From? And Using Rails in 2026",
+    "link": "https://shoptalkshow.com/711/",
+    "pubDate": "Mon, 20 Apr 2026 07:57:25 +0000",
+    "source": "ShopTalk Show",
+    "content": "Show Description We've got Robby Russell, maintainer of Oh My Zsh, on the show to talk about why Chris has it installed, what makes a good Zsh plugin, Oh My Zsh plugins Robby recommends, what it's like working in Rails in 2026, dealing with project dependancies, and how Rails apps make use of frameworks? Listen on Website Watch on YouTube Guests Robby Russell Guest's Main URL • Guest's Social CEO and Partner at Planet Argon Links Oh My Zsh - a delightful & open source framework for Zsh Robby Russell - CEO, Partner…"
+  },
+  {
+    "title": "Introducing YouTube Channel Visualizer",
+    "link": "https://feedpress.me/link/24028/17322890/introducing-youtube-channel-visualizer",
+    "pubDate": "Mon, 20 Apr 2026 00:00:00 GMT",
+    "source": "CSS Weekly",
+    "content": "An overview of the YouTube Channel Visualizer tool."
+  }
+]
