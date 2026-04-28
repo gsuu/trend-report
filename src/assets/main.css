@@ -1567,7 +1567,7 @@ main {
 .article-section:not(.is-deep-dive) .summary-list {
   gap: 0;
   padding: 0;
-  border-top: 2px solid var(--ink);
+  border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: #fbfbfb;
 }
