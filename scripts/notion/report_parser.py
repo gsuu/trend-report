@@ -304,7 +304,7 @@ SECTION_BLOCK_PATTERN = re.compile(r"^@@(?P<kind>quote|subhead|paragraph|list)@@
 SUMMARY_LABEL_PATTERN = re.compile(r"^(?P<label>[^:：]{2,18})[:：]\s*(?P<value>.+)$")
 HEADLINE_SUMMARY_LABELS = {"업데이트", "핵심 업데이트", "핵심 내용", "주요 항목"}
 CORE_SUMMARY_LABELS = HEADLINE_SUMMARY_LABELS | {"서비스 맥락", "디자인 맥락", "기술 맥락", "변경 전", "변경 후"}
-SUMMARY_SECTION_TITLES = {"기술 변화 요약", "요약"}
+SUMMARY_SECTION_TITLES = {"기술 변화 요약", "디자인 레퍼런스 요약", "요약"}
 REFERENCE_LINK_PREFIXES = ("관련 뉴스", "관련 URL", "관련 링크", "관련 매거진", "보조 출처")
 HIDDEN_FACT_KEYS = {"출처 URL", "서비스 URL", "상세페이지 초점", "요약", "출처 유형", "sourceType"}
 SOURCE_TITLE_CACHE: dict[str, str] = {}
@@ -1403,10 +1403,10 @@ def issue_takeaway(issue: Issue) -> str:
 
 
 def issue_deck(issue: Issue) -> str:
-    if issue_area_key(issue) == "dev" and issue.meta.get("요약", "").strip():
+    if issue.meta.get("요약", "").strip():
         return issue.meta["요약"].strip()
 
-    items = issue.sections.get("업데이트 핵심", []) or issue.sections.get("요약", []) or issue.sections.get("기술 변화 요약", []) or issue.sections.get("디자인 변화 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
+    items = issue.sections.get("업데이트 핵심", []) or issue.sections.get("요약", []) or issue.sections.get("기술 변화 요약", []) or issue.sections.get("디자인 변화 요약", []) or issue.sections.get("디자인 레퍼런스 요약", []) or issue.sections.get("서비스 변화 요약", []) or issue.sections.get("핵심 업데이트", [])
     if issue_area_key(issue) == "dev" and items:
         return " ".join(strip_brief_label(str(item)).strip() for item in items if str(item).strip()).strip()
 
@@ -1564,7 +1564,7 @@ def issue_newsletter_summary(issue: Issue, limit: int = 76) -> str:
 
 
 def strip_brief_label(text: str) -> str:
-    for label in ("업데이트", "핵심 업데이트", "기술 맥락", "디자인 맥락", "서비스 맥락"):
+    for label in ("업데이트", "핵심 업데이트", "레퍼런스", "기술 맥락", "디자인 맥락", "서비스 맥락"):
         prefix = f"{label}:"
         if text.startswith(prefix):
             return text[len(prefix):].strip()

@@ -44,7 +44,9 @@ When collecting DESIGN newsletter or magazine items, use `news-tracking/design-s
 - Do not publish a design item only because it is visually attractive, branded, or AI-related. The original source must show a concrete screen, system, workflow, method, or production technique.
 - Use discovery sources such as design magazines only as leads. For main publication, trace the item to an official product blog, release note, newsroom, case page, design system documentation, or another reliable primary source where possible.
 - Use the collected original article title as the title standard. Do not rewrite it into an overly editorial or interpretive title unless the user explicitly asks.
-- Keep DESIGN `요약`, `디자인 포인트`, and `매거진 인사이트` layers distinct. Do not repeat the same sentence across these layers.
+- Add a DESIGN `요약` metadata line for the article-header deck. It should be a plain 1-2 sentence summary of the article, not the source name, not a promotional reason-to-read, and not a copy of the body summary.
+- Write the DESIGN body `요약` section as a plain summary of the original source content. Do not force a fixed bullet count; use as many bullets as needed to represent the source.
+- Keep the DESIGN metadata `요약`, body `요약`, `디자인 포인트`, and `매거진 인사이트` layers distinct. Do not repeat the same sentence across these layers.
 - Use Markdown backticks/code tags only for code-related expressions such as filenames, tools, APIs, CSS/HTML/ARIA properties, or config values. Do not wrap feature names, product names, Korean UI copy, quotes, or emphasis text in code style.
 - Use the original source page's top or representative image (`og:image`/`twitter:image`, falling back to a relevant first content image) as the DESIGN thumbnail only when it supports the design reference.
 - Do not use Notion for DESIGN publishing unless the user explicitly asks. After updating `runs/YYYY-MM-DD/magazine-report.md`, refresh magazine JSON/site data only.

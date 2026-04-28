@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T04:50:36.247426+00:00",
+  "generatedAt": "2026-04-28T05:21:34.460547+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -27,7 +27,7 @@
           "GSAP"
         ],
         "takeawayHtml": "Bark Studio, 모션이 메시지 순서를 만든다",
-        "deckHtml": "Webflow Showcase",
+        "deckHtml": "Bark Studio는 Webflow IX3와 GSAP 모션을 활용해 텍스트와 장면 전환의 순서를 설계한 마이크로사이트 사례입니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -59,37 +59,27 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "디자인 레퍼런스 요약",
-            "className": "article-section",
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
               {
                 "kind": "list",
-                "html": "레퍼런스: Bark Studio는 Webflow IX3 GSAP 애니메이션을 보여주기 위해 제작된 마이크로사이트입니다. Webflow CONF 25에 소개된 사례이며, Webflow 페이지에서 Interactions with GSAP 사용이 확인됩니다."
+                "html": "Bark Studio는 Webflow IX3와 GSAP 애니메이션을 전면에 둔 마이크로사이트입니다. Webflow CONF 25 featured 사례로 소개됐고, Webflow Showcase 원문에서도 Interactions with GSAP 사용이 확인됩니다."
               },
               {
                 "kind": "list",
-                "html": "볼 포인트: 캠페인형 웹사이트는 정보량보다 첫 장면의 리듬과 이동 방식이 브랜드 인상을 좌우합니다."
+                "html": "페이지는 스크롤 전환, 분할 텍스트, stagger, 장면 전환을 활용해 텍스트와 화면이 순차적으로 드러나도록 구성되어 있습니다."
               },
               {
                 "kind": "list",
-                "html": "기존 방식: 포트폴리오나 캠페인 페이지는 작업 이미지와 텍스트를 순서대로 나열하는 경우가 많았습니다."
-              },
-              {
-                "kind": "list",
-                "html": "표현 방식: 스크롤, 분할 텍스트, stagger, 화면 전환을 통해 사용자가 읽는 순서를 디자인합니다."
-              },
-              {
-                "kind": "list",
-                "html": "확인한 근거: Webflow Showcase 원문에서 IX3 GSAP animations와 Webflow CONF 25 featured 사례로 소개됩니다."
+                "html": "Webflow Showcase는 이 사이트를 IX3 GSAP animations 사례로 소개하며, Webflow CONF 25 featured 여부도 함께 표시합니다."
               }
             ],
             "itemsHtml": [
-              "레퍼런스: Bark Studio는 Webflow IX3 GSAP 애니메이션을 보여주기 위해 제작된 마이크로사이트입니다. Webflow CONF 25에 소개된 사례이며, Webflow 페이지에서 Interactions with GSAP 사용이 확인됩니다.",
-              "볼 포인트: 캠페인형 웹사이트는 정보량보다 첫 장면의 리듬과 이동 방식이 브랜드 인상을 좌우합니다.",
-              "기존 방식: 포트폴리오나 캠페인 페이지는 작업 이미지와 텍스트를 순서대로 나열하는 경우가 많았습니다.",
-              "표현 방식: 스크롤, 분할 텍스트, stagger, 화면 전환을 통해 사용자가 읽는 순서를 디자인합니다.",
-              "확인한 근거: Webflow Showcase 원문에서 IX3 GSAP animations와 Webflow CONF 25 featured 사례로 소개됩니다."
+              "Bark Studio는 Webflow IX3와 GSAP 애니메이션을 전면에 둔 마이크로사이트입니다. Webflow CONF 25 featured 사례로 소개됐고, Webflow Showcase 원문에서도 Interactions with GSAP 사용이 확인됩니다.",
+              "페이지는 스크롤 전환, 분할 텍스트, stagger, 장면 전환을 활용해 텍스트와 화면이 순차적으로 드러나도록 구성되어 있습니다.",
+              "Webflow Showcase는 이 사이트를 IX3 GSAP animations 사례로 소개하며, Webflow CONF 25 featured 여부도 함께 표시합니다."
             ]
           },
           {
@@ -198,7 +188,7 @@
           "브랜드표현"
         ],
         "takeawayHtml": "Dinamo Arizona b2b, 타입 specimen도 캠페인이 될 수 있다",
-        "deckHtml": "It&#x27;s Nice That",
+        "deckHtml": "Dinamo는 ABC Arizona 타입패밀리 확장을 OOH 캠페인, 포스터, 캐릭터 연출과 함께 보여주며 서체 소개를 캠페인 경험으로 확장했습니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -230,37 +220,32 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "디자인 레퍼런스 요약",
-            "className": "article-section",
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
               {
                 "kind": "list",
-                "html": "레퍼런스: Dinamo가 ABC Arizona 타입패밀리에 compressed와 condensed subfamily를 추가하며, horsegiirL을 앞세운 OOH 캠페인과 포스터형 타입 specimen을 함께 전개했습니다."
+                "html": "Dinamo는 ABC Arizona 타입패밀리에 compressed와 condensed subfamily를 추가하면서, horsegiirL을 앞세운 OOH 캠페인과 포스터형 타입 specimen을 함께 전개했습니다."
               },
               {
                 "kind": "list",
-                "html": "볼 포인트: 타입페이스 소개는 보통 글자꼴과 사용 예시를 보여주는 데 그치지만, 이번 사례는 인물과 야외 캠페인, 인쇄물을 묶어 하나의 브랜드 장면으로 만들었습니다."
+                "html": "원문은 이번 프로젝트가 Dinamo의 첫 OOH print campaign이라고 설명합니다."
               },
               {
                 "kind": "list",
-                "html": "기존 방식: 서체 소개는 글자 샘플, 굵기, 스타일 비교 중심으로 소비됐습니다."
+                "html": "캠페인에는 fold-out posters와 variable font karaoke가 포함되며, 타입 specimen을 인쇄물과 영상적 장면으로 확장합니다."
               },
               {
                 "kind": "list",
-                "html": "표현 방식: 캐릭터, 포스터, 실외 광고, variable font karaoke 같은 장면이 타입 경험을 확장합니다."
-              },
-              {
-                "kind": "list",
-                "html": "확인한 근거: 원문은 Dinamo의 첫 OOH print campaign이며, fold-out posters와 variable font karaoke를 언급합니다."
+                "html": "기사에서는 Arizona b2b가 기존 ABC Arizona의 새 하위 패밀리로 소개되고, 압축된 폭과 굵기 변화가 시각적 특징으로 다뤄집니다."
               }
             ],
             "itemsHtml": [
-              "레퍼런스: Dinamo가 ABC Arizona 타입패밀리에 compressed와 condensed subfamily를 추가하며, horsegiirL을 앞세운 OOH 캠페인과 포스터형 타입 specimen을 함께 전개했습니다.",
-              "볼 포인트: 타입페이스 소개는 보통 글자꼴과 사용 예시를 보여주는 데 그치지만, 이번 사례는 인물과 야외 캠페인, 인쇄물을 묶어 하나의 브랜드 장면으로 만들었습니다.",
-              "기존 방식: 서체 소개는 글자 샘플, 굵기, 스타일 비교 중심으로 소비됐습니다.",
-              "표현 방식: 캐릭터, 포스터, 실외 광고, variable font karaoke 같은 장면이 타입 경험을 확장합니다.",
-              "확인한 근거: 원문은 Dinamo의 첫 OOH print campaign이며, fold-out posters와 variable font karaoke를 언급합니다."
+              "Dinamo는 ABC Arizona 타입패밀리에 compressed와 condensed subfamily를 추가하면서, horsegiirL을 앞세운 OOH 캠페인과 포스터형 타입 specimen을 함께 전개했습니다.",
+              "원문은 이번 프로젝트가 Dinamo의 첫 OOH print campaign이라고 설명합니다.",
+              "캠페인에는 fold-out posters와 variable font karaoke가 포함되며, 타입 specimen을 인쇄물과 영상적 장면으로 확장합니다.",
+              "기사에서는 Arizona b2b가 기존 ABC Arizona의 새 하위 패밀리로 소개되고, 압축된 폭과 굵기 변화가 시각적 특징으로 다뤄집니다."
             ]
           },
           {
@@ -364,7 +349,7 @@
           "휴먼톤"
         ],
         "takeawayHtml": "Casi, 공공 캠페인도 손맛 있는 시스템이 필요하다",
-        "deckHtml": "It&#x27;s Nice That",
+        "deckHtml": "Casi의 아이덴티티는 기후 비영리단체의 메시지를 손맛 있는 표식, cut-out 그래픽, 불완전한 디자인 시스템으로 풀어낸 사례입니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -396,37 +381,32 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "디자인 레퍼런스 요약",
-            "className": "article-section",
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
               {
                 "kind": "list",
-                "html": "레퍼런스: Templo가 기후 비영리단체 Casi의 아이덴티티를 설계한 사례입니다. hobo hieroglyphics에서 착안한 손맛 있는 마크, cut-out 그래픽, 손으로 만든 듯한 애니메이션 언어가 핵심입니다."
+                "html": "Templo가 기후 비영리단체 Casi를 위해 설계한 아이덴티티 사례입니다. hobo hieroglyphics에서 착안한 표식, cut-out graphics, 손으로 만든 듯한 애니메이션이 브랜드 언어를 이룹니다."
               },
               {
                 "kind": "list",
-                "html": "볼 포인트: 기후나 공공 주제는 경고와 정보 전달에 치우치기 쉽지만, Casi는 인간적인 표식과 불완전한 형태로 참여 가능한 톤을 만듭니다."
+                "html": "원문은 Casi의 아이덴티티를 deliberate imperfect design system과 humanist approach로 설명합니다."
               },
               {
                 "kind": "list",
-                "html": "기존 방식: 공공 캠페인 디자인은 정확한 정보와 심각한 톤을 앞세우는 경우가 많았습니다."
+                "html": "그래픽 시스템은 cut-out graphics와 hand-crafted animation을 사용해 기후 주제를 더 인간적인 톤으로 전달합니다."
               },
               {
                 "kind": "list",
-                "html": "표현 방식: 손으로 만든 듯한 그래픽 시스템과 절제된 타이포그래피가 주제의 무게를 부드럽게 전달합니다."
-              },
-              {
-                "kind": "list",
-                "html": "확인한 근거: 원문은 deliberate imperfect design system, humanist approach, cut-out graphics, hand-crafted animation을 설명합니다."
+                "html": "Casi는 복잡한 기후 행동을 상징 체계와 움직임으로 풀어내며, 참여 가능한 브랜드 언어를 만드는 데 초점을 둡니다."
               }
             ],
             "itemsHtml": [
-              "레퍼런스: Templo가 기후 비영리단체 Casi의 아이덴티티를 설계한 사례입니다. hobo hieroglyphics에서 착안한 손맛 있는 마크, cut-out 그래픽, 손으로 만든 듯한 애니메이션 언어가 핵심입니다.",
-              "볼 포인트: 기후나 공공 주제는 경고와 정보 전달에 치우치기 쉽지만, Casi는 인간적인 표식과 불완전한 형태로 참여 가능한 톤을 만듭니다.",
-              "기존 방식: 공공 캠페인 디자인은 정확한 정보와 심각한 톤을 앞세우는 경우가 많았습니다.",
-              "표현 방식: 손으로 만든 듯한 그래픽 시스템과 절제된 타이포그래피가 주제의 무게를 부드럽게 전달합니다.",
-              "확인한 근거: 원문은 deliberate imperfect design system, humanist approach, cut-out graphics, hand-crafted animation을 설명합니다."
+              "Templo가 기후 비영리단체 Casi를 위해 설계한 아이덴티티 사례입니다. hobo hieroglyphics에서 착안한 표식, cut-out graphics, 손으로 만든 듯한 애니메이션이 브랜드 언어를 이룹니다.",
+              "원문은 Casi의 아이덴티티를 deliberate imperfect design system과 humanist approach로 설명합니다.",
+              "그래픽 시스템은 cut-out graphics와 hand-crafted animation을 사용해 기후 주제를 더 인간적인 톤으로 전달합니다.",
+              "Casi는 복잡한 기후 행동을 상징 체계와 움직임으로 풀어내며, 참여 가능한 브랜드 언어를 만드는 데 초점을 둡니다."
             ]
           },
           {
@@ -530,7 +510,7 @@
           "멀티포맷"
         ],
         "takeawayHtml": "매거진 리디자인은 화면보다 포맷 번역의 문제다",
-        "deckHtml": "It&#x27;s Nice That",
+        "deckHtml": "The New York Times Magazine 리디자인은 인쇄, 웹, 오디오, 비디오가 함께 존재하는 환경에서 매거진 경험을 다시 정리한 사례입니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -562,37 +542,32 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "디자인 레퍼런스 요약",
-            "className": "article-section",
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
               {
                 "kind": "list",
-                "html": "레퍼런스: The New York Times Magazine의 약 10년 만의 리디자인을 다룬 인터뷰입니다. 인쇄, 웹, 오디오, 비디오가 함께 존재하는 환경에서 매거진다운 경험을 어떻게 유지할지 다룹니다."
+                "html": "The New York Times Magazine의 약 10년 만의 리디자인을 다룬 인터뷰입니다. 핵심은 새 화면을 예쁘게 만든 일이 아니라, 인쇄·웹·오디오·비디오가 함께 존재하는 환경에서 매거진다운 경험을 유지하는 방법입니다."
               },
               {
                 "kind": "list",
-                "html": "볼 포인트: 콘텐츠 브랜드는 더 이상 한 지면만 설계하지 않습니다. 같은 이야기가 웹, 뉴스레터, 영상, 오디오, 소셜로 나뉘어 소비됩니다."
+                "html": "Gail Bichler는 매거진이 인쇄 지면뿐 아니라 웹, 오디오, 비디오까지 포함하는 포맷으로 확장됐다고 설명합니다."
               },
               {
                 "kind": "list",
-                "html": "기존 방식: 매거진 디자인은 지면과 웹 상세의 시각 정리에 집중하는 경우가 많았습니다."
+                "html": "리디자인은 column 포맷, 타이포그래피, 그리드, 캡션, pull quote, page furniture 같은 편집 장치를 다시 정리하는 작업으로 소개됩니다."
               },
               {
                 "kind": "list",
-                "html": "표현 방식: column 포맷, 타이포그래피, 그리드, 캡션, pull quote, page furniture까지 여러 매체에서 번역되는 규칙을 갖춥니다."
-              },
-              {
-                "kind": "list",
-                "html": "확인한 근거: 원문은 nearly a decade 만의 redesign과 print, web, audio, video 환경 변화를 언급합니다."
+                "html": "원문은 nearly a decade 만의 redesign이라는 맥락과 함께, 여러 매체에서 같은 매거진 경험을 유지하는 문제를 다룹니다."
               }
             ],
             "itemsHtml": [
-              "레퍼런스: The New York Times Magazine의 약 10년 만의 리디자인을 다룬 인터뷰입니다. 인쇄, 웹, 오디오, 비디오가 함께 존재하는 환경에서 매거진다운 경험을 어떻게 유지할지 다룹니다.",
-              "볼 포인트: 콘텐츠 브랜드는 더 이상 한 지면만 설계하지 않습니다. 같은 이야기가 웹, 뉴스레터, 영상, 오디오, 소셜로 나뉘어 소비됩니다.",
-              "기존 방식: 매거진 디자인은 지면과 웹 상세의 시각 정리에 집중하는 경우가 많았습니다.",
-              "표현 방식: column 포맷, 타이포그래피, 그리드, 캡션, pull quote, page furniture까지 여러 매체에서 번역되는 규칙을 갖춥니다.",
-              "확인한 근거: 원문은 nearly a decade 만의 redesign과 print, web, audio, video 환경 변화를 언급합니다."
+              "The New York Times Magazine의 약 10년 만의 리디자인을 다룬 인터뷰입니다. 핵심은 새 화면을 예쁘게 만든 일이 아니라, 인쇄·웹·오디오·비디오가 함께 존재하는 환경에서 매거진다운 경험을 유지하는 방법입니다.",
+              "Gail Bichler는 매거진이 인쇄 지면뿐 아니라 웹, 오디오, 비디오까지 포함하는 포맷으로 확장됐다고 설명합니다.",
+              "리디자인은 column 포맷, 타이포그래피, 그리드, 캡션, pull quote, page furniture 같은 편집 장치를 다시 정리하는 작업으로 소개됩니다.",
+              "원문은 nearly a decade 만의 redesign이라는 맥락과 함께, 여러 매체에서 같은 매거진 경험을 유지하는 문제를 다룹니다."
             ]
           },
           {
@@ -701,7 +676,7 @@
           "Playbook"
         ],
         "takeawayHtml": "eBay Playbook, 디자인 시스템 문서도 브랜드 경험이다",
-        "deckHtml": "Figma Blog",
+        "deckHtml": "eBay Playbook은 브랜드 원칙, 디자인 시스템, 접근성, 개발 문서를 하나의 문서 경험으로 묶은 사례입니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -733,37 +708,32 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "디자인 레퍼런스 요약",
-            "className": "article-section",
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
               {
                 "kind": "list",
-                "html": "레퍼런스: eBay가 Evo 디자인 시스템과 eBay Playbook을 통해 브랜드, 디자인 시스템, 접근성, 개발 문서를 하나의 경험으로 묶은 사례입니다."
+                "html": "eBay는 Evo 디자인 시스템과 eBay Playbook을 통해 브랜드, 디자인 시스템, 접근성, 개발 문서를 하나의 문서 경험으로 묶었습니다. Playbook은 단순 스펙 모음이 아니라 브랜드와 제품 경험을 잇는 통로로 소개됩니다."
               },
               {
                 "kind": "list",
-                "html": "볼 포인트: 디자인 시스템 문서는 팀이 매일 보는 제품입니다. 문서 자체가 보기 어렵고 재미없으면 시스템 채택률도 낮아집니다."
+                "html": "원문은 eBay Playbook이 300페이지가 넘는 문서이며, 브랜드와 제품 사이의 다리 역할을 한다고 설명합니다."
               },
               {
                 "kind": "list",
-                "html": "기존 방식: 디자인 시스템 문서는 레퍼런스 가이드나 컴포넌트 목록처럼 관리되는 경우가 많았습니다."
+                "html": "eBay는 Figma를 기반으로 Playbook을 업데이트하고, component status와 접근성 관련 정보를 함께 관리합니다."
               },
               {
                 "kind": "list",
-                "html": "표현 방식: eBay는 브랜드와 제품 경험을 잇는 Playbook 형태로 문서를 구성하고, Figma를 업데이트와 협업의 중심에 둡니다."
-              },
-              {
-                "kind": "list",
-                "html": "확인한 근거: 원문은 300페이지가 넘는 문서, component status, Figma 기반 업데이트, alt text 색상 상태 관리 등을 언급합니다."
+                "html": "기사에서는 alt text 색상 상태 관리처럼 문서 안에서 접근성 기준을 추적하는 방식도 언급됩니다."
               }
             ],
             "itemsHtml": [
-              "레퍼런스: eBay가 Evo 디자인 시스템과 eBay Playbook을 통해 브랜드, 디자인 시스템, 접근성, 개발 문서를 하나의 경험으로 묶은 사례입니다.",
-              "볼 포인트: 디자인 시스템 문서는 팀이 매일 보는 제품입니다. 문서 자체가 보기 어렵고 재미없으면 시스템 채택률도 낮아집니다.",
-              "기존 방식: 디자인 시스템 문서는 레퍼런스 가이드나 컴포넌트 목록처럼 관리되는 경우가 많았습니다.",
-              "표현 방식: eBay는 브랜드와 제품 경험을 잇는 Playbook 형태로 문서를 구성하고, Figma를 업데이트와 협업의 중심에 둡니다.",
-              "확인한 근거: 원문은 300페이지가 넘는 문서, component status, Figma 기반 업데이트, alt text 색상 상태 관리 등을 언급합니다."
+              "eBay는 Evo 디자인 시스템과 eBay Playbook을 통해 브랜드, 디자인 시스템, 접근성, 개발 문서를 하나의 문서 경험으로 묶었습니다. Playbook은 단순 스펙 모음이 아니라 브랜드와 제품 경험을 잇는 통로로 소개됩니다.",
+              "원문은 eBay Playbook이 300페이지가 넘는 문서이며, 브랜드와 제품 사이의 다리 역할을 한다고 설명합니다.",
+              "eBay는 Figma를 기반으로 Playbook을 업데이트하고, component status와 접근성 관련 정보를 함께 관리합니다.",
+              "기사에서는 alt text 색상 상태 관리처럼 문서 안에서 접근성 기준을 추적하는 방식도 언급됩니다."
             ]
           },
           {
@@ -867,7 +837,7 @@
           "편집가능성"
         ],
         "takeawayHtml": "Claude Design에서 만든 초안, Canva에서 브랜드 산출물로 다듬는다",
-        "deckHtml": "Canva Newsroom",
+        "deckHtml": "Canva와 Claude Design의 연동은 AI가 만든 아이디어를 편집 가능한 브랜드 산출물로 이어가는 제작 흐름을 보여줍니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -899,37 +869,32 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "디자인 레퍼런스 요약",
-            "className": "article-section",
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
               {
                 "kind": "list",
-                "html": "레퍼런스: Canva가 Anthropic과의 협업으로 Claude Design에서 생성한 아이디어나 초안을 Canva로 넘겨 fully editable, on-brand design으로 다듬을 수 있게 했습니다."
+                "html": "Canva가 Anthropic과 협업해 Claude Design에서 만든 아이디어나 초안을 Canva로 넘기고, fully editable, on-brand design으로 다듬을 수 있게 한 업데이트입니다."
               },
               {
                 "kind": "list",
-                "html": "볼 포인트: 디자인 AI에서 중요한 것은 초안을 빠르게 만드는 것만이 아니라, 브랜드에 맞게 고치고 승인 가능한 산출물로 만드는 흐름입니다."
+                "html": "원문은 Claude Design에서 생성한 AI-generated ideas를 Canva 안에서 fully editable, on-brand designs로 전환할 수 있다고 설명합니다."
               },
               {
                 "kind": "list",
-                "html": "기존 방식: AI가 만든 초안은 실제 편집 도구로 옮겨 다시 정리해야 했습니다."
+                "html": "이 연동은 Claude에서 시작한 아이디어를 Canva의 편집 환경으로 가져와 브랜드 자산에 맞게 다듬는 흐름을 만듭니다."
               },
               {
                 "kind": "list",
-                "html": "표현 방식: Claude Design의 아이디어를 Canva의 편집 가능한 디자인으로 이어가고, 브랜드 자산에 맞춰 다듬는 흐름이 생깁니다."
-              },
-              {
-                "kind": "list",
-                "html": "확인한 근거: 원문은 AI-generated ideas를 fully editable, on-brand designs로 전환하는 협업이라고 설명합니다."
+                "html": "Canva는 이 업데이트를 디자인 초안 생성과 실제 편집 가능한 산출물 사이를 연결하는 협업으로 소개합니다."
               }
             ],
             "itemsHtml": [
-              "레퍼런스: Canva가 Anthropic과의 협업으로 Claude Design에서 생성한 아이디어나 초안을 Canva로 넘겨 fully editable, on-brand design으로 다듬을 수 있게 했습니다.",
-              "볼 포인트: 디자인 AI에서 중요한 것은 초안을 빠르게 만드는 것만이 아니라, 브랜드에 맞게 고치고 승인 가능한 산출물로 만드는 흐름입니다.",
-              "기존 방식: AI가 만든 초안은 실제 편집 도구로 옮겨 다시 정리해야 했습니다.",
-              "표현 방식: Claude Design의 아이디어를 Canva의 편집 가능한 디자인으로 이어가고, 브랜드 자산에 맞춰 다듬는 흐름이 생깁니다.",
-              "확인한 근거: 원문은 AI-generated ideas를 fully editable, on-brand designs로 전환하는 협업이라고 설명합니다."
+              "Canva가 Anthropic과 협업해 Claude Design에서 만든 아이디어나 초안을 Canva로 넘기고, fully editable, on-brand design으로 다듬을 수 있게 한 업데이트입니다.",
+              "원문은 Claude Design에서 생성한 AI-generated ideas를 Canva 안에서 fully editable, on-brand designs로 전환할 수 있다고 설명합니다.",
+              "이 연동은 Claude에서 시작한 아이디어를 Canva의 편집 환경으로 가져와 브랜드 자산에 맞게 다듬는 흐름을 만듭니다.",
+              "Canva는 이 업데이트를 디자인 초안 생성과 실제 편집 가능한 산출물 사이를 연결하는 협업으로 소개합니다."
             ]
           },
           {
@@ -1038,7 +1003,7 @@
           "맥락UX"
         ],
         "takeawayHtml": "Nielsen Norman Group이 정리한 웹사이트 AI 챗봇 설계를 위한 10개 가이드라인",
-        "deckHtml": "Nielsen Norman Group",
+        "deckHtml": "Nielsen Norman Group은 웹사이트 AI 챗봇 설계에서 진입점, 제안 질문, 페이지 맥락, 결과 형식까지 함께 다뤄야 한다고 정리합니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -1070,37 +1035,32 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "디자인 레퍼런스 요약",
-            "className": "article-section",
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
               {
                 "kind": "list",
-                "html": "레퍼런스: Nielsen Norman Group이 웹사이트 AI 챗봇 설계를 위한 10개 가이드라인을 정리했습니다. 챗봇 진입점, 페이지 간 지속성, 제안 질문, 이미지 포함, progressive disclosure, 자동 스크롤, 리사이즈, 저장/공유, 음성 입력 등을 다룹니다."
+                "html": "Nielsen Norman Group이 웹사이트 AI 챗봇 설계를 위한 10개 가이드라인을 정리했습니다. 진입점, 페이지 간 지속성, 제안 질문, 이미지 포함, progressive disclosure, 자동 스크롤, 리사이즈, 저장/공유, 음성 입력 등을 다룹니다."
               },
               {
                 "kind": "list",
-                "html": "볼 포인트: 사이트 AI 챗봇은 범용 채팅창이 아니라 사용자가 현재 보고 있는 페이지와 목적을 이해하는 보조 도구여야 합니다."
+                "html": "원문은 사이트 특화 AI 챗봇이 capabilities, relevant prompt suggestions, page context를 명확히 보여야 한다고 설명합니다."
               },
               {
                 "kind": "list",
-                "html": "기존 방식: 챗봇은 대개 작은 버튼으로 숨어 있고, 사용자가 무엇을 물어봐야 하는지 직접 정해야 했습니다."
+                "html": "챗봇 응답에는 이미지, progressive disclosure, 자동 스크롤, 창 리사이즈 같은 인터페이스 조건이 함께 다뤄집니다."
               },
               {
                 "kind": "list",
-                "html": "표현 방식: 챗봇은 할 수 있는 일을 먼저 밝히고, 맥락에 맞는 질문과 결과 형식을 제안해야 합니다."
-              },
-              {
-                "kind": "list",
-                "html": "확인한 근거: 원문은 사이트 특화 AI 챗봇이 capabilities, relevant prompt suggestions, page context를 명확히 보여야 한다고 설명합니다."
+                "html": "저장과 공유, 음성 입력, 페이지 간 지속성처럼 대화 이후의 사용 흐름도 가이드라인에 포함됩니다."
               }
             ],
             "itemsHtml": [
-              "레퍼런스: Nielsen Norman Group이 웹사이트 AI 챗봇 설계를 위한 10개 가이드라인을 정리했습니다. 챗봇 진입점, 페이지 간 지속성, 제안 질문, 이미지 포함, progressive disclosure, 자동 스크롤, 리사이즈, 저장/공유, 음성 입력 등을 다룹니다.",
-              "볼 포인트: 사이트 AI 챗봇은 범용 채팅창이 아니라 사용자가 현재 보고 있는 페이지와 목적을 이해하는 보조 도구여야 합니다.",
-              "기존 방식: 챗봇은 대개 작은 버튼으로 숨어 있고, 사용자가 무엇을 물어봐야 하는지 직접 정해야 했습니다.",
-              "표현 방식: 챗봇은 할 수 있는 일을 먼저 밝히고, 맥락에 맞는 질문과 결과 형식을 제안해야 합니다.",
-              "확인한 근거: 원문은 사이트 특화 AI 챗봇이 capabilities, relevant prompt suggestions, page context를 명확히 보여야 한다고 설명합니다."
+              "Nielsen Norman Group이 웹사이트 AI 챗봇 설계를 위한 10개 가이드라인을 정리했습니다. 진입점, 페이지 간 지속성, 제안 질문, 이미지 포함, progressive disclosure, 자동 스크롤, 리사이즈, 저장/공유, 음성 입력 등을 다룹니다.",
+              "원문은 사이트 특화 AI 챗봇이 capabilities, relevant prompt suggestions, page context를 명확히 보여야 한다고 설명합니다.",
+              "챗봇 응답에는 이미지, progressive disclosure, 자동 스크롤, 창 리사이즈 같은 인터페이스 조건이 함께 다뤄집니다.",
+              "저장과 공유, 음성 입력, 페이지 간 지속성처럼 대화 이후의 사용 흐름도 가이드라인에 포함됩니다."
             ]
           },
           {
@@ -1209,7 +1169,7 @@
           "감각연출"
         ],
         "takeawayHtml": "향수 브랜드가 광고보다 영화처럼 기억되는 방식",
-        "deckHtml": "It&#x27;s Nice That",
+        "deckHtml": "Ffern은 향수 브랜드의 세계관을 제품 설명보다 영화적 장면, 계절감, 내부 film practice로 먼저 보여주는 사례입니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -1241,37 +1201,32 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "디자인 레퍼런스 요약",
-            "className": "article-section",
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
             "prose": false,
             "blocks": [
               {
                 "kind": "list",
-                "html": "레퍼런스: 향수 브랜드 Ffern이 영화 제작 방식을 브랜드 세계관의 중심에 두는 사례입니다. 제품 설명보다 계절감, 장면, 촬영 방식, 브랜드 내부 film practice가 전면에 나옵니다."
+                "html": "향수 브랜드 Ffern은 영화 제작 방식을 브랜드 세계관의 중심에 둡니다. 제품 설명보다 계절감, 장면, 촬영 방식, 내부 film practice가 먼저 보이는 사례입니다."
               },
               {
                 "kind": "list",
-                "html": "볼 포인트: 프리미엄 브랜드의 웹 경험은 제품 정보뿐 아니라 어떤 감각을 먼저 떠올리게 하는지가 중요합니다."
+                "html": "원문은 Ffern의 film practice가 브랜드 world building의 중심이라고 설명합니다."
               },
               {
                 "kind": "list",
-                "html": "기존 방식: 향수나 라이프스타일 브랜드 페이지는 제품 컷, 노트 설명, 구매 CTA 중심으로 구성되는 경우가 많았습니다."
+                "html": "Ffern은 in-house filmmaking team을 운영하며, 계절감과 장면 중심의 영상을 통해 향수 브랜드의 분위기를 구축합니다."
               },
               {
                 "kind": "list",
-                "html": "표현 방식: Ffern은 영화적 장면과 세계관을 통해 브랜드를 광고보다 감각적인 이야기로 기억하게 만듭니다."
-              },
-              {
-                "kind": "list",
-                "html": "확인한 근거: 원문은 Ffern의 film practice가 브랜드 world building의 중심이며, in-house filmmaking team을 운영한다고 설명합니다."
+                "html": "기사에서는 영화적 제작 방식이 단순한 광고물이 아니라 브랜드가 자신을 설명하는 주요 방식으로 다뤄집니다."
               }
             ],
             "itemsHtml": [
-              "레퍼런스: 향수 브랜드 Ffern이 영화 제작 방식을 브랜드 세계관의 중심에 두는 사례입니다. 제품 설명보다 계절감, 장면, 촬영 방식, 브랜드 내부 film practice가 전면에 나옵니다.",
-              "볼 포인트: 프리미엄 브랜드의 웹 경험은 제품 정보뿐 아니라 어떤 감각을 먼저 떠올리게 하는지가 중요합니다.",
-              "기존 방식: 향수나 라이프스타일 브랜드 페이지는 제품 컷, 노트 설명, 구매 CTA 중심으로 구성되는 경우가 많았습니다.",
-              "표현 방식: Ffern은 영화적 장면과 세계관을 통해 브랜드를 광고보다 감각적인 이야기로 기억하게 만듭니다.",
-              "확인한 근거: 원문은 Ffern의 film practice가 브랜드 world building의 중심이며, in-house filmmaking team을 운영한다고 설명합니다."
+              "향수 브랜드 Ffern은 영화 제작 방식을 브랜드 세계관의 중심에 둡니다. 제품 설명보다 계절감, 장면, 촬영 방식, 내부 film practice가 먼저 보이는 사례입니다.",
+              "원문은 Ffern의 film practice가 브랜드 world building의 중심이라고 설명합니다.",
+              "Ffern은 in-house filmmaking team을 운영하며, 계절감과 장면 중심의 영상을 통해 향수 브랜드의 분위기를 구축합니다.",
+              "기사에서는 영화적 제작 방식이 단순한 광고물이 아니라 브랜드가 자신을 설명하는 주요 방식으로 다뤄집니다."
             ]
           },
           {
