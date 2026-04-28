@@ -1333,6 +1333,8 @@ def issue_deck(issue: Issue) -> str:
 
     for label, value in labeled_items:
         if label in {"업데이트", "핵심 업데이트", "핵심 내용", "주요 항목"}:
+            if issue_area_key(issue) == "dev":
+                return value.strip()
             summary = deck_opening_sentence(value, issue.platform)
             if summary:
                 return expand_deck_summary(summary, labeled_items)

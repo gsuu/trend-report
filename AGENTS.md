@@ -21,5 +21,6 @@ When collecting and uploading DEV newsletter or magazine items, use the same sel
 - Treat the `ai-tf` weekly DEV digest as the primary reference for DEV source scope and article quality.
 - Include all DEV items that meet that digest standard, rather than over-pruning to only a few highlights.
 - Use the DEV article titles from the `ai-tf` digest as the title standard. Do not rewrite them into overly editorial or interpretive titles unless the user explicitly asks.
+- Use the DEV article descriptions/decks from the `ai-tf` digest summary as the description standard. Do not append generic technical-context filler to the list/card description.
 - Preserve the practical web publisher/front-end angle: HTML/CSS, JavaScript, accessibility, performance, and AI/developer tooling.
 - Do not use Notion for DEV publishing unless the user explicitly asks. After updating `runs/YYYY-MM-DD/magazine-report.md`, refresh magazine JSON/site data only.
