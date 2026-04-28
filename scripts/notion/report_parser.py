@@ -1660,7 +1660,10 @@ def render_index(report: Report) -> str:
               </template>
             </div>
             <template v-else>
-              <ul v-if="isBulletSummary(section)" class="bullet-summary-list">
+              <ul v-if="isTermExplanation(section)" class="term-explanation-list">
+                <li v-for="item in section.itemsHtml" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
+              </ul>
+              <ul v-else-if="isBulletSummary(section)" class="bullet-summary-list">
                 <li v-for="item in section.itemsHtml" :key="item" v-html="item"></li>
               </ul>
               <template v-else>
@@ -2016,6 +2019,9 @@ def render_index(report: Report) -> str:
         isBulletSummary(section) {{
           return (section && section.title === "기술 변화 요약") || String((section && section.className) || "").includes("is-bullet-summary");
         }},
+        isTermExplanation(section) {{
+          return (section && section.title === "용어 설명") || String((section && section.className) || "").includes("is-term-explanation");
+        }},
         isSummaryFact(item) {{
           const text = String(item);
           const match = text.match(/^([^:：]{{2,18}})[:：]\\s*(.+)$/);
@@ -2069,6 +2075,8 @@ def section_display_title(title: str) -> str:
 def section_class_name(title: str) -> str:
     if title in DETAIL_SECTION_TITLES:
         return "article-section is-deep-dive"
+    if title == "용어 설명":
+        return "article-section is-term-explanation"
     if title == "기술 변화 요약":
         return "article-section is-bullet-summary"
     return "article-section"
@@ -2119,6 +2127,13 @@ def render_reference_links(issue: Issue | None) -> str:
 
 def render_section_content(title: str, items: list[str], issue: Issue | None = None) -> str:
     if not is_detail_section(title):
+        if title == "용어 설명":
+            return f"""
+              <ul class="term-explanation-list">
+                {''.join(f'<li{summary_item_class_attr(item)}>{format_summary_item(item)}</li>' for item in items)}
+              </ul>
+            """
+
         if title == "기술 변화 요약":
             return f"""
               <ul class="bullet-summary-list">

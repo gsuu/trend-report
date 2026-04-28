@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T03:03:50.618534+00:00",
+  "generatedAt": "2026-04-28T03:10:12.649791+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -2314,6 +2314,20 @@
         "sourceTitle": "Dev.to - Accessibility",
         "referenceLinks": [],
         "sections": [
+          {
+            "title": "용어 설명",
+            "className": "article-section is-term-explanation",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "Showit: 디자이너와 소규모 비즈니스가 웹사이트를 시각적으로 제작할 수 있게 해주는 웹사이트 빌더입니다."
+              }
+            ],
+            "itemsHtml": [
+              "Showit: 디자이너와 소규모 비즈니스가 웹사이트를 시각적으로 제작할 수 있게 해주는 웹사이트 빌더입니다."
+            ]
+          },
           {
             "title": "기술 변화 요약",
             "className": "article-section is-bullet-summary",
