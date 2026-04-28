@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T01:25:30.668337+00:00",
+  "generatedAt": "2026-04-28T01:31:00.808777+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -950,7 +950,7 @@
           "ScrollAnimation",
           "퍼블리싱"
         ],
-        "takeawayHtml": "CSS 스크롤 애니메이션을 실무 레퍼런스로 봐야 한다",
+        "takeawayHtml": "Recreating Apple’s Vision Pro Animation in CSS",
         "deckHtml": "CSS-Tricks에서 Apple Vision Pro 웹사이트의 복잡한 애니메이션을 CSS만으로 재현하는 기사입니다. 이 항목은 HTML/CSS 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -1118,7 +1118,7 @@
           "Markdown",
           "퍼블리싱"
         ],
-        "takeawayHtml": "Astro Markdown 컴포넌트는 마크업 반복을 줄이는 선택지다",
+        "takeawayHtml": "Enhancing Astro With a Markdown Component",
         "deckHtml": "CSS-Tricks에서 Astro 프레임워크에서 Markdown 컴포넌트를 활용하여 작성해야 할 마크업 코드를 줄이고, 타이포그래피 기호를 자동으로 변환하는 방법을 소개합니다. 이 항목은 HTML/CSS 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -1286,7 +1286,7 @@
           "CLS",
           "타이포그래피"
         ],
-        "takeawayHtml": "폰트 폴백은 생각보다 레이아웃을 쉽게 흔든다",
+        "takeawayHtml": "font-family doesn&#x27;t fall back the way you think it does",
         "deckHtml": "Frontend Focus에서 font-family 폰트 스택의 폴백 메커니즘이 개발자의 예상과 다르게 작동하는 방식을 설명하는 글입니다. 이 항목은 HTML/CSS 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -1454,7 +1454,7 @@
           "Markdown",
           "퍼블리싱"
         ],
-        "takeawayHtml": "Astro와 MDX는 콘텐츠형 페이지의 구현 단가를 낮춘다",
+        "takeawayHtml": "Markdown + Astro = ❤️",
         "deckHtml": "CSS-Tricks에서 Astro는 기본적으로 .md 파일을 통한 마크다운을 지원하지만, MDX를 활용하면 마크다운 경험을 더욱 향상시킬 수 있다는 주장을 제시합니다. 이 항목은 HTML/CSS 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -1622,7 +1622,7 @@
           "Lint",
           "품질관리"
         ],
-        "takeawayHtml": "AI 코딩은 린트와 테스트로 추측을 줄여야 한다",
+        "takeawayHtml": "998: How to Fix Vibe Coding",
         "deckHtml": "Syntax.fm에서 웹 퍼블리셔가 AI 코딩 도구를 신뢰할 수 있게 만들기 위해 ESLint, StyleLint, knip 등의 결정론적 도구를 활용하는 방법을 논의합니다. 이 항목은 JavaScript 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -1790,7 +1790,7 @@
           "콘텐츠제작",
           "JavaScript"
         ],
-        "takeawayHtml": "HTML과 JavaScript로 영상 제작 워크플로우를 코드화한다",
+        "takeawayHtml": "Create videos with HTML and JavaScript via HyperFrames",
         "deckHtml": "HyperFrames는 HTML과 JavaScript를 활용하여 동영상을 제작할 수 있는 오픈소스 프레임워크입니다. 이 항목은 JavaScript 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -1958,7 +1958,7 @@
           "WCAG",
           "실무검수"
         ],
-        "takeawayHtml": "접근성 에이전트는 실제 DOM 스캔에서 출발해야 한다",
+        "takeawayHtml": "Scaling agentic A11y with browser-side scans",
         "deckHtml": "DEV Community에서 브라우저 기반 접근성 감사를 통해 LLM 비용을 최적화하는 방식을 제시합니다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -2126,7 +2126,7 @@
           "WCAG",
           "실무검수"
         ],
-        "takeawayHtml": "접근성 자동 검사만으로는 Shopify 문제의 절반을 놓칠 수 있다",
+        "takeawayHtml": "What WAVE and Avada Miss on Your Shopify Store. Here Are 5 WCAG Failures You Have to Catch by Hand.",
         "deckHtml": "DEV Community에서 Shopify 스토어의 접근성 검사에서 WAVE와 Avada 도구만으로는 WCAG 2.1 AA 요구사항의 약 50%를 놓칠 수 있습니다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -2294,7 +2294,7 @@
           "WCAG",
           "실무검수"
         ],
-        "takeawayHtml": "브랜드 컬러도 텍스트 역할과 장식 역할을 분리해야 한다",
+        "takeawayHtml": "Why pure Klein blue disappears as text (and the two-slot fix)",
         "deckHtml": "DEV Community에서 Klein Blue(IKB #002FA7)는 순수한 형태로 어두운 배경에서 텍스트 가독성이 떨어져 접근성 기준(APCA Lc -12)을 만족하지 못합니다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -2462,7 +2462,7 @@
           "WCAG",
           "실무검수"
         ],
-        "takeawayHtml": "분리된 모바일 문서는 접근성 수정도 두 번 필요하다",
+        "takeawayHtml": "Showit Has Two Documents. That&#x27;s Why Your Accessibility Fixes Aren&#x27;t Sticking.",
         "deckHtml": "DEV Community에서 Showit은 데스크톱과 모바일 레이아웃을 별도의 독립 문서로 구성하기 때문에, 접근성 수정이 한쪽 캔버스에만 적용되면 다른 쪽은 그대로 남아 감사 점수가 개선되지 않는 문제가 발생한다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -2630,7 +2630,7 @@
           "WCAG",
           "실무검수"
         ],
-        "takeawayHtml": "UX·접근성 감사 자동화는 빠른 1차 진단으로 써야 한다",
+        "takeawayHtml": "I built a tool that runs a full UX + accessibility audit on any URL in under 5 minutes",
         "deckHtml": "DEV Community에서 UX 및 접근성 감사를 자동화하는 &#x27;Parallax&#x27; 도구 소개. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -2798,7 +2798,7 @@
           "퍼블리싱",
           "품질관리"
         ],
-        "takeawayHtml": "자율 UX 감사는 사용자 플로우 기준으로 설계해야 한다",
+        "takeawayHtml": "How We Built an Autonomous UX Auditing Agent",
         "deckHtml": "DEV Community에서 AI 기반 UX 감사 도구 &#x27;Parallax&#x27;는 Nielsen의 10가지 유용성 휴리스틱과 WCAG 2.1 AA 접근성 기준을 자동으로 평가합니다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -2966,7 +2966,7 @@
           "WCAG",
           "실무검수"
         ],
-        "takeawayHtml": "접근성 검사는 PR 단계에서 실패하게 만들어야 한다",
+        "takeawayHtml": "Audit WCAG 2.1 accessibility on every pull request (free GitHub Action)",
         "deckHtml": "DEV Community에서 웹 개발자가 매 PR마다 자동으로 WCAG 2.1 접근성을 검사할 수 있는 GitHub Action 도구를 소개합니다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -3130,11 +3130,11 @@
         "image": "",
         "imageCaption": "",
         "tags": [
+          "4:",
           "접근성QA",
-          "WCAG",
-          "실무검수"
+          "WCAG"
         ],
-        "takeawayHtml": "접근성 primitive는 직접 만들기보다 검증된 라이브러리를 쓰는 편이 낫다",
+        "takeawayHtml": "Design to Code #4: Why I Chose Radix Over Custom Primitives",
         "deckHtml": "DEV Community에서 웹 퍼블리셔가 포커스 트랩, ARIA 속성, 스크린 리더 호환성 등 접근성 기능을 처음부터 구현하려다 예상치 못한 복잡성(포털 렌더링, contenteditable 요소, 브라우저/보조기술 호환성 등)을 마주함. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -3302,7 +3302,7 @@
           "WCAG",
           "실무검수"
         ],
-        "takeawayHtml": "스크린리더 노이즈를 줄이고 액션을 명확히 노출해야 한다",
+        "takeawayHtml": "A Practical Guide to Flutter Accessibility Part 2: Hiding Noise, Exposing Actions",
         "deckHtml": "DEV Community에서 Flutter 앱의 접근성을 향상시키기 위해 스크린 리더가 불필요한 요소는 숨기고 사용자 상호작용이 가능한 커스텀 제스처는 명명된 액션으로 노출해야 합니다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -3470,7 +3470,7 @@
           "WCAG",
           "실무검수"
         ],
-        "takeawayHtml": "자동 접근성 도구가 못 잡는 상호작용 문제를 수동 QA에 넣어야 한다",
+        "takeawayHtml": "Accessibility issues that automated tools won&#x27;t catch (from real audits)",
         "deckHtml": "DEV Community에서 자동화된 접근성 검사 도구는 구조적 오류를 잘 잡지만, 실제 사용자 경험의 심각한 문제들을 놓친다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -3638,7 +3638,7 @@
           "WCAG",
           "실무검수"
         ],
-        "takeawayHtml": "EAA 대응은 적용 범위 판단과 빠른 감사부터 시작해야 한다",
+        "takeawayHtml": "The EAA Is Live. Here&#x27;s a 15-Minute Compliance Check Any Business Owner Can Run.",
         "deckHtml": "DEV Community에서 2025년 6월부터 시행된 유럽접근성법(EAA)에 대해 비즈니스 오너가 15분 안에 자신의 웹사이트 규정 준수 여부를 확인할 수 있는 실용적인 가이드를 제시합니다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -3806,7 +3806,7 @@
           "WCAG",
           "실무검수"
         ],
-        "takeawayHtml": "세션 타임아웃은 인증 UX의 접근성 장벽이다",
+        "takeawayHtml": "Session Timeouts: The Overlooked Accessibility Barrier In Authentication Design",
         "deckHtml": "Smashing Magazine에서 세션 타임아웃이 접근성 측면에서 중요한 장벽이 될 수 있다는 점을 다룬 기사입니다. 이 항목은 웹접근성 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -3974,7 +3974,7 @@
           "퍼블리싱",
           "품질관리"
         ],
-        "takeawayHtml": "Lazy loading은 성능을 해치지 않는 우선순위 설계가 필요하다",
+        "takeawayHtml": "Issue #639",
         "deckHtml": "웹 성능을 저하시키지 않으면서 lazy loading을 효과적으로 활용하는 방법과 인터랙티브 커버 컴포넌트 구현 방법을 다룬 CSS 관련 뉴스레터입니다. 이 항목은 Performance 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -4142,7 +4142,7 @@
           "개발도구",
           "UX품질"
         ],
-        "takeawayHtml": "에이전트 시대의 개발자 도구는 마지막 30%를 도와야 한다",
+        "takeawayHtml": "Exploring with agents (Interview)",
         "deckHtml": "The Changelog에서 이 인터뷰는 AI 에이전트 시대의 개발자 도구 재설계에 관한 내용입니다. 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -4310,7 +4310,7 @@
           "성능QA",
           "로딩전략"
         ],
-        "takeawayHtml": "소규모 웹사이트의 성능·접근성 부채를 먼저 수치로 봐야 한다",
+        "takeawayHtml": "State of Small Business Websites (2026 Study). 96.9% Fail Core Web Vitals.",
         "deckHtml": "DEV Community에서 2026년 소규모 B2B 웹사이트 292개 감사 결과, 96.9%가 모바일 Core Web Vitals 중 최소 하나 이상 실패했으며, 모든 사이트(100%)가 접근성 링크 레이블 규칙을 위반했습니다. 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -4478,7 +4478,7 @@
           "개발도구",
           "UX품질"
         ],
-        "takeawayHtml": "프로덕션 레디 디자인은 시맨틱과 접근성까지 포함해야 한다",
+        "takeawayHtml": "The UX Designer’s Nightmare: When “Production-Ready” Becomes A Design Deliverable",
         "deckHtml": "Smashing Magazine에서 AI 도입으로 인해 UX 디자인 역할이 재정의되면서 디자인과 엔지니어링의 경계가 모호해지고 있습니다. 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -4646,7 +4646,7 @@
           "퍼블리싱",
           "품질관리"
         ],
-        "takeawayHtml": "작은 프론트엔드 도구에서 구현 힌트를 빠르게 얻는다",
+        "takeawayHtml": "997: Rating and Roasting Your Projects",
         "deckHtml": "Syntax.fm에서 웹 개발자들이 만든 다양한 프로젝트들을 빠르게 소개하는 에피소드입니다. 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
@@ -4814,7 +4814,7 @@
           "퍼블리싱",
           "품질관리"
         ],
-        "takeawayHtml": "개발 워크플로우 도구는 생산성 영향만 선별해 보면 된다",
+        "takeawayHtml": "711: Where did Oh My Zsh Come From? And Using Rails in 2026",
         "deckHtml": "ShopTalk Show에서 본 에피소드는 Oh My Zsh 유지보수자 Robby Russell과의 인터뷰로, 개발자 도구 및 워크플로우 최적화에 관한 내용입니다. 이 항목은 Tool 실무에서 화면 구현, 품질 검증, 유지보수 판단에 연결됩니다.",
         "facts": [
           {
