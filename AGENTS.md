@@ -31,3 +31,14 @@ When collecting and uploading DEV newsletter or magazine items, reproduce the sa
 - Use the original source page's top or representative image (`og:image`/`twitter:image`, falling back to the first content image) as the DEV thumbnail.
 - Preserve the practical web publisher/front-end angle: HTML/CSS, JavaScript, accessibility, performance, and AI/developer tooling.
 - Do not use Notion for DEV publishing unless the user explicitly asks. After updating `runs/YYYY-MM-DD/magazine-report.md`, refresh magazine JSON/site data only.
+
+## Korean Naturalization Skill
+
+When translating, adapting, or polishing English source material into Korean for newsletter or magazine writing, use the installed `humanize-korean` skill as the Korean naturalization standard.
+
+- The repository includes a vendored copy at `docs/agent-skills/humanize-korean/SKILL.md`.
+- If `humanize-korean` is not installed in the current Codex environment, read and follow `docs/agent-skills/humanize-korean/SKILL.md` and the files under `docs/agent-skills/humanize-korean/references/`.
+- Preserve source facts, product names, feature names, API/property names, version numbers, dates, and metrics.
+- Use `humanize-korean` to remove translationese, AI-like phrasing, stiff English sentence order, and unnatural Korean rhythm.
+- Do not use the skill to add claims, examples, numbers, or interpretations that are not present in the source.
+- For code-related expressions such as commands, filenames, packages, APIs, CSS/HTML/ARIA properties, and config values, preserve the original technical spelling.
