@@ -24,8 +24,9 @@ This is the DEV publishing standard. Do not replace it with an automatic LLM API
 - `ai-tf` DEV 다이제스트 생성 로직과 동일하게 최근 7일 RSS 후보를 기준으로 판단합니다.
 - 다이제스트 Markdown 결과물을 그대로 베끼지 말고, 후보 원문과 수집 데이터에서 직접 판단하세요.
 - 출처가 뉴스레터일 경우 가능하면 원문 링크를 따라 최종 기준 원문을 확인하세요.
-- 제목은 원문 제목을 기준으로 사용합니다. 과한 해석형 제목으로 바꾸지 마세요.
+- 제목은 원문 맥락과 출처 유형을 먼저 보고 정합니다. 단일 원문 글은 원문 제목, 기능명, API명, 도구명을 최대한 보존하고 과한 해석형 제목으로 바꾸지 마세요. 명세·릴리즈·가이드처럼 자료 성격이 중요한 글은 `출처/제품 + 핵심 기능·API + 자료 성격`이 드러나야 합니다. 여러 원문을 묶은 글만 공통 변화가 드러나는 제목으로 정리합니다.
 - 아티클 헤더 타이틀 밑 요약문구는 `요약` 메타로 따로 작성하세요. 이 문장은 원문 fact list가 아니라 독자가 왜 이 글을 열어야 하는지 알려주는 1-2문장 deck입니다.
+- 각 항목에는 `출처 유형` 메타를 반드시 작성하세요. 값은 `news`, `release_note`, `blog_opinion`, `reference`, `guide`, `research` 중 하나입니다. DEV에서는 공식 릴리즈·브라우저 업데이트·제품 업데이트는 `release_note`, 기술 블로그나 오피니언은 `blog_opinion`, 명세·가이드 성격은 `guide`, 리서치/벤치마크 글은 `research`를 우선 사용합니다.
 - `요약` 메타, 본문 `요약`, `매거진 인사이트`는 서로 같은 문장을 반복하면 안 됩니다.
 - Showit, Astro, MDN Baseline, axe처럼 일반 독자가 바로 알기 어려운 제품명·도구명·프로그램명은 `용어 설명` 섹션을 추가해 1-3개만 짧게 풀이하세요.
 - `용어 설명`은 정의만 씁니다. 업데이트 의미나 실무 해석은 본문 `요약`이나 `매거진 인사이트`에 둡니다.
@@ -60,6 +61,7 @@ This is the DEV publishing standard. Do not replace it with an automatic LLM API
 - 국가: GLOBAL
 - 카테고리: css|javascript|html|web_accessibility|tool|design_system
 - 직무 태그: 웹DEV
+- 출처 유형: news|release_note|blog_opinion|reference|guide|research 중 하나
 - 출처: 출처명
 - 출처 URL: 원문 URL
 - 보조 출처 1: 중복 주제를 다룬 추가 원문 URL

@@ -25,6 +25,50 @@ PRODUCTION_SITE_URL = "https://magazine.cttd.co.kr"
 SITE_DESCRIPTION = "CTTD Service/Design/DEV Weekly Trend Magazine"
 SITE_OG_IMAGE = "assets/cttd-logo-email.png"
 
+SOURCE_TYPE_LABELS = {
+    "news": "기사/뉴스",
+    "release_note": "공식 릴리즈",
+    "blog_opinion": "블로그/오피니언",
+    "reference": "레퍼런스/쇼케이스",
+    "guide": "방법론/가이드",
+    "research": "리서치/리포트",
+    "unknown": "미분류",
+}
+SOURCE_TYPE_ALIASES = {
+    "article": "news",
+    "news_article": "news",
+    "뉴스": "news",
+    "기사": "news",
+    "기사뉴스": "news",
+    "release": "release_note",
+    "product_update": "release_note",
+    "update": "release_note",
+    "공식릴리즈": "release_note",
+    "제품업데이트": "release_note",
+    "릴리즈노트": "release_note",
+    "blog": "blog_opinion",
+    "opinion": "blog_opinion",
+    "blog_post": "blog_opinion",
+    "블로그": "blog_opinion",
+    "오피니언": "blog_opinion",
+    "블로그오피니언": "blog_opinion",
+    "showcase": "reference",
+    "case": "reference",
+    "case_study": "reference",
+    "레퍼런스": "reference",
+    "쇼케이스": "reference",
+    "사례": "reference",
+    "method": "guide",
+    "howto": "guide",
+    "how_to": "guide",
+    "가이드": "guide",
+    "방법론": "guide",
+    "리서치": "research",
+    "리포트": "research",
+    "연구": "research",
+    "보고서": "research",
+}
+
 
 CATEGORY_LABELS = {
     "fashion": "fashion",
@@ -248,7 +292,7 @@ DEVELOP_DETECTION_KEYS = DEVELOP_CATEGORY_KEYS.union(
     if keyword not in DEVELOP_DETECTION_EXCLUDED_KEYWORDS
 )
 
-DETAIL_SECTION_TITLES = {"매거진 상세", "사이트 매거진 상세", "웹사이트 상세", "매거진 인사이트"}
+DETAIL_SECTION_TITLES = {"매거진 상세", "사이트 매거진 상세", "웹사이트 상세", "매거진 인사이트", "디자인 인사이트"}
 DEV_SECTION_HEADING_REPLACEMENTS = {
     "Frontend Development 관점": "구현 관점",
     "프론트엔드 개발 전문가 관점": "구현 관점",
@@ -262,7 +306,7 @@ HEADLINE_SUMMARY_LABELS = {"업데이트", "핵심 업데이트", "핵심 내용
 CORE_SUMMARY_LABELS = HEADLINE_SUMMARY_LABELS | {"서비스 맥락", "디자인 맥락", "기술 맥락", "변경 전", "변경 후"}
 SUMMARY_SECTION_TITLES = {"기술 변화 요약", "요약"}
 REFERENCE_LINK_PREFIXES = ("관련 뉴스", "관련 URL", "관련 링크", "관련 매거진", "보조 출처")
-HIDDEN_FACT_KEYS = {"출처 URL", "서비스 URL", "상세페이지 초점", "요약"}
+HIDDEN_FACT_KEYS = {"출처 URL", "서비스 URL", "상세페이지 초점", "요약", "출처 유형", "sourceType"}
 SOURCE_TITLE_CACHE: dict[str, str] = {}
 
 
@@ -413,6 +457,21 @@ def fetch_source_title(url: str) -> str:
 def issue_source_title(issue: Issue) -> str:
     source_url = issue.meta.get("출처 URL", "")
     return fetch_source_title(source_url) or issue.meta.get("출처", "") or source_url
+
+
+def normalize_source_type(value: str) -> str:
+    token = re.sub(r"[^0-9a-zA-Z가-힣]+", "_", value.strip().lower()).strip("_")
+    squashed = token.replace("_", "")
+    normalized = SOURCE_TYPE_ALIASES.get(token) or SOURCE_TYPE_ALIASES.get(squashed) or token
+    return normalized if normalized in SOURCE_TYPE_LABELS else "unknown"
+
+
+def issue_source_type(issue: Issue) -> str:
+    return normalize_source_type(issue.meta.get("출처 유형", "") or issue.meta.get("sourceType", ""))
+
+
+def issue_source_type_label(issue: Issue) -> str:
+    return SOURCE_TYPE_LABELS[issue_source_type(issue)]
 
 
 def is_hidden_fact_key(key: str) -> bool:
@@ -2217,6 +2276,8 @@ def report_payload(report: Report) -> dict[str, object]:
                 "area": issue_area_label(issue),
                 "categoryKey": issue_category_key(issue),
                 "category": issue_category_label(issue),
+                "sourceType": issue_source_type(issue),
+                "sourceTypeLabel": issue_source_type_label(issue),
                 "publicationDate": report.slug,
                 "date": issue_display_date(report, issue),
                 "route": issue_route(issue),
