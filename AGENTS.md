@@ -23,7 +23,8 @@ When collecting and uploading DEV newsletter or magazine items, reproduce the sa
 - Include all DEV items that pass the prompt criteria, rather than over-pruning to only a few highlights.
 - Use the collected original article title as the title standard. Do not rewrite it into an overly editorial or interpretive title unless the user explicitly asks.
 - Use the DEV summary generated from the original article content as the description standard. Do not append generic technical-context filler to the list/card description.
-- Write the DEV `기술 변화 요약` section as a list that summarizes the important original-source content. Do not force a fixed bullet count; include the meaningful points needed to represent the source.
+- Write the DEV `기술 변화 요약` section only after opening the original source URL. Summarize important source facts, not the existing digest sentence. Do not force a fixed bullet count; include the meaningful points needed to represent the source.
+- Each DEV technical-summary bullet must contain at least one concrete source detail such as a feature name, tool, API/property, browser/accessibility/performance condition, metric, limitation, or validation method.
 - Use the original source page's top or representative image (`og:image`/`twitter:image`, falling back to the first content image) as the DEV thumbnail.
 - Preserve the practical web publisher/front-end angle: HTML/CSS, JavaScript, accessibility, performance, and AI/developer tooling.
 - Do not use Notion for DEV publishing unless the user explicitly asks. After updating `runs/YYYY-MM-DD/magazine-report.md`, refresh magazine JSON/site data only.
