@@ -57,9 +57,9 @@ code {
   display: inline-block;
   max-width: 100%;
   padding: 0 5px;
-  border: 1px solid #d9d9d9;
+  border-radius: 0.2em;
   background: #f6f6f6;
-  color: #111111;
+  color: #d51f1f;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.88em;
   line-height: 1.45;
