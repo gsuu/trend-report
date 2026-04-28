@@ -371,7 +371,7 @@ function plainText(htmlText) {
 }
 
 function proseBlocks(blocks = []) {
-  return blocks.reduce((result, block) => {
+  const mergedBlocks = blocks.reduce((result, block) => {
     if (block.kind !== "highlight") {
       result.push({ ...block });
       return result;
@@ -384,6 +384,22 @@ function proseBlocks(blocks = []) {
     }
 
     result.push({ kind: "paragraph", html: block.html });
+    return result;
+  }, []);
+
+  return mergedBlocks.reduce((result, block) => {
+    if (block.kind !== "list") {
+      result.push(block);
+      return result;
+    }
+
+    const previous = result[result.length - 1];
+    if (previous?.kind === "list") {
+      previous.items.push(block.html);
+      return result;
+    }
+
+    result.push({ kind: "list", html: block.html, items: [block.html] });
     return result;
   }, []);
 }
@@ -654,11 +670,13 @@ function isDateInRange(value, range) {
           <section v-for="section in activeIssue.sections" :key="section.title" :class="section.className || ['article-section', { 'is-deep-dive': section.prose }]">
             <h2 v-text="section.title"></h2>
             <div v-if="section.prose" class="section-prose">
-              <template v-for="(block, index) in proseBlocks(section.blocks)" :key="block.kind + block.html + index">
+              <template v-for="(block, index) in proseBlocks(section.blocks)" :key="block.kind + (block.html || block.items?.join('')) + index">
                 <p v-if="block.kind === 'quote'" class="insight-lead" v-html="block.html"></p>
                 <h3 v-else-if="block.kind === 'subhead'" v-html="block.html"></h3>
                 <p v-else-if="block.kind === 'paragraph'" v-html="block.html"></p>
-                <ul v-else class="prose-list"><li v-html="block.html"></li></ul>
+                <ul v-else class="prose-list">
+                  <li v-for="item in block.items" :key="item" v-html="item"></li>
+                </ul>
               </template>
             </div>
             <template v-else>

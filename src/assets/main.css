@@ -1574,12 +1574,23 @@ main {
 }
 
 .section-prose .prose-list {
-  gap: 8px;
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0 0 0 22px;
+  list-style: disc;
 }
 
 .section-prose .prose-list li {
-  font-size: 16px;
-  line-height: 1.6;
+  display: list-item;
+  padding: 0;
+  font-size: 17px;
+  line-height: 1.7;
+  list-style: disc;
+}
+
+.section-prose .prose-list li::before {
+  content: none;
 }
 
 .article-footer {
