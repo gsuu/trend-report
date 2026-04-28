@@ -51,6 +51,22 @@ code {
   font-family: inherit;
 }
 
+.article-deck code,
+.summary-value code,
+.section-prose code {
+  display: inline-block;
+  max-width: 100%;
+  padding: 0 5px;
+  border: 1px solid #d9d9d9;
+  background: #f6f6f6;
+  color: #111111;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.88em;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  vertical-align: 0.04em;
+}
+
 h1 code,
 h2 code,
 h3 code,
@@ -1132,8 +1148,7 @@ main {
 }
 
 .article-deck code {
-  background: transparent;
-  padding: 0;
+  font-size: 0.82em;
 }
 
 .article-meta {
