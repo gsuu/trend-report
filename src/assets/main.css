@@ -1521,7 +1521,11 @@ main {
 }
 
 .article-section h2 {
+  display: block;
+  width: 100%;
   margin: 0 0 22px;
+  padding: 0 0 10px;
+  border-bottom: 2px solid var(--ink);
   font-size: 28px;
   font-weight: 600;
   line-height: 1.25;
