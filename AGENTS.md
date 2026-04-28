@@ -22,7 +22,8 @@ When collecting and uploading DEV newsletter or magazine items, reproduce the sa
 - After collection, the working AI must apply `docs/dev-digest-agent-prompt.md` to select, summarize, categorize, and write DEV items. Do not call an LLM API from the collection script.
 - Include all DEV items that pass the prompt criteria, rather than over-pruning to only a few highlights.
 - Use the collected original article title as the title standard. Do not rewrite it into an overly editorial or interpretive title unless the user explicitly asks.
-- Use the DEV summary generated from the original article content as the description standard. Do not append generic technical-context filler to the list/card description.
+- Add a DEV `요약` metadata line for the article-header deck. It should be a 1-2 sentence reader-facing summary, not a copy of the technical-summary bullets.
+- Keep the DEV `요약`, `기술 변화 요약`, and `매거진 인사이트` layers distinct. Do not repeat the same sentence across these layers.
 - Write the DEV `기술 변화 요약` section only after opening the original source URL. Summarize important source facts, not the existing digest sentence. Do not force a fixed bullet count; include the meaningful points needed to represent the source.
 - Each DEV technical-summary bullet must contain at least one concrete source detail such as a feature name, tool, API/property, browser/accessibility/performance condition, metric, limitation, or validation method.
 - Use the original source page's top or representative image (`og:image`/`twitter:image`, falling back to the first content image) as the DEV thumbnail.
