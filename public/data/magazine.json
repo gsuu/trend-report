@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-30T06:37:51.910102+00:00",
+  "generatedAt": "2026-04-30T06:51:25.956156+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -168,6 +168,167 @@
       },
       {
         "number": "02",
+        "platform": "Spotify",
+        "areaKey": "service",
+        "area": "Service",
+        "categoryKey": "etc",
+        "category": "etc",
+        "sourceType": "release_note",
+        "sourceTypeLabel": "공식 릴리즈",
+        "publicationDate": "2026-04-29",
+        "date": "2026-04-27",
+        "route": "/articles/2026-04-29-02",
+        "href": "/articles/2026-04-29-02",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-29-02",
+        "image": "https://newsroom.spotify.com/static/2026-04-27-fitness-hero.png",
+        "imageCaption": "Spotify Newsroom 공식 이미지",
+        "tags": [
+          "Spotify Fitness",
+          "Peloton",
+          "워크아웃UX"
+        ],
+        "takeawayHtml": "음악 앱이 운동 클래스 허브로 확장된다",
+        "deckHtml": "Spotify가 앱 안에 Fitness 허브를 신설해 Peloton의 1,400개 이상 운동 클래스(강습기구 없이 들을 수 있는 ad-free 클래스)를 Premium 사용자에게 열고, 모바일·데스크톱·TV에서 음성·영상 전환과 오프라인 다운로드까지 지원합니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-27"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "Spotify Fitness / Peloton / 워크아웃UX"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "etc"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹서비스기획 / 웹디자인"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Spotify Newsroom"
+          }
+        ],
+        "sourceUrl": "https://newsroom.spotify.com/2026-04-27/spotify-fitness-workouts-peloton/",
+        "sourceTitle": "Spotify Newsroom",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "Spotify는 앱 검색창에 &quot;fitness&quot;를 입력하면 진입하는 Fitness 허브를 신설해, 음악·팟캐스트와 같은 앱 안에서 운동 클래스를 듣게 했습니다."
+              },
+              {
+                "kind": "list",
+                "html": "Premium 사용자는 Peloton 강사 Rebecca Kennedy·Ally Love·Rad Lopez 등이 진행하는 1,400개 이상 ad-free 온디맨드 클래스를 강습기구 없이 사용할 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "무료 사용자에게도 Yoga with Kassandra·Chloe Ting 등 wellness creator 콘텐츠와 150개 이상 fitness 플레이리스트가 열립니다."
+              },
+              {
+                "kind": "list",
+                "html": "모바일·데스크톱·TV 사이에서 음성·영상 전환이 매끄럽게 이어지고, 오프라인 다운로드가 가능합니다."
+              },
+              {
+                "kind": "list",
+                "html": "영어가 기본이며 일부 클래스는 스페인어·독일어로 제공됩니다."
+              }
+            ],
+            "itemsHtml": [
+              "Spotify는 앱 검색창에 &quot;fitness&quot;를 입력하면 진입하는 Fitness 허브를 신설해, 음악·팟캐스트와 같은 앱 안에서 운동 클래스를 듣게 했습니다.",
+              "Premium 사용자는 Peloton 강사 Rebecca Kennedy·Ally Love·Rad Lopez 등이 진행하는 1,400개 이상 ad-free 온디맨드 클래스를 강습기구 없이 사용할 수 있습니다.",
+              "무료 사용자에게도 Yoga with Kassandra·Chloe Ting 등 wellness creator 콘텐츠와 150개 이상 fitness 플레이리스트가 열립니다.",
+              "모바일·데스크톱·TV 사이에서 음성·영상 전환이 매끄럽게 이어지고, 오프라인 다운로드가 가능합니다.",
+              "영어가 기본이며 일부 클래스는 스페인어·독일어로 제공됩니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "quote",
+                "html": "음악 앱이 운동 콘텐츠 허브로 들어오면, 음악·팟캐스트·운동·재생기기 제어가 한 앱 안에서 이어지는 사용 시간 단위가 만들어집니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "Spotify가 Peloton과 손잡은 것은 단순 콘텐츠 라이선싱이 아닙니다. 음악 앱이 사용자의 일과(아침 러닝·홈 트레이닝·요가) 안에서 차지하는 비중을 늘리려는 결정입니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "음악 스트리밍 시장은 ARPU·재생 시간·해지율의 한계에 부딪혀, 다음 성장 축을 콘텐츠 다각화(팟캐스트·오디오북)와 활동 다각화(피트니스·웰니스)로 옮기고 있습니다. Peloton 입장에서도 강습기구 보유자 외 사용자에게 클래스 콘텐츠를 팔 수 있는 채널이 절실해졌고, 두 회사의 이해가 맞물렸습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "사용자는 무엇을 덜 해도 될까"
+              },
+              {
+                "kind": "paragraph",
+                "html": "사용자는 운동 시간에 다른 앱을 열어 클래스를 시작하지 않아도 됩니다. 같은 Spotify 앱 안에서 음악·팟캐스트·운동 클래스를 같은 라이브러리·같은 재생기기 제어로 다룰 수 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "설계 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "피트니스·웰니스를 자사 서비스에 들일 때는 콘텐츠 라이선스보다 진입점·재생 통제·기기 전환의 일관성이 먼저입니다. Spotify는 검색창의 &quot;fitness&quot; 키워드 진입을 선택해 별도 탭을 만들지 않았는데, 이는 신규 허브가 충분히 검증되기 전에 메인 내비게이션을 흔들지 않으려는 결정으로 읽힙니다. 결제·플랜 분리(Premium 클래스, Free 플레이리스트)도 한 화면 안에서 흐트러지지 않게 노출해야 사용자가 가입 결정을 미루지 않습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "점검 질문"
+              },
+              {
+                "kind": "list",
+                "html": "우리 서비스에 새 콘텐츠 카테고리를 들일 때 별도 탭을 만들 것인가, 검색·키워드 진입으로 시작할 것인가?"
+              },
+              {
+                "kind": "list",
+                "html": "무료·유료 콘텐츠가 같은 화면에 노출될 때 가입 안내가 사용자 흐름을 끊지 않고 자연스럽게 들어가는가?"
+              },
+              {
+                "kind": "list",
+                "html": "모바일·데스크톱·TV 사이의 재생 전환이 사용자 학습 없이 이어지는가?"
+              }
+            ],
+            "itemsHtml": [
+              "@@quote@@음악 앱이 운동 콘텐츠 허브로 들어오면, 음악·팟캐스트·운동·재생기기 제어가 한 앱 안에서 이어지는 사용 시간 단위가 만들어집니다.",
+              "@@paragraph@@Spotify가 Peloton과 손잡은 것은 단순 콘텐츠 라이선싱이 아닙니다. 음악 앱이 사용자의 일과(아침 러닝·홈 트레이닝·요가) 안에서 차지하는 비중을 늘리려는 결정입니다.",
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@음악 스트리밍 시장은 ARPU·재생 시간·해지율의 한계에 부딪혀, 다음 성장 축을 콘텐츠 다각화(팟캐스트·오디오북)와 활동 다각화(피트니스·웰니스)로 옮기고 있습니다. Peloton 입장에서도 강습기구 보유자 외 사용자에게 클래스 콘텐츠를 팔 수 있는 채널이 절실해졌고, 두 회사의 이해가 맞물렸습니다.",
+              "@@subhead@@사용자는 무엇을 덜 해도 될까",
+              "@@paragraph@@사용자는 운동 시간에 다른 앱을 열어 클래스를 시작하지 않아도 됩니다. 같은 Spotify 앱 안에서 음악·팟캐스트·운동 클래스를 같은 라이브러리·같은 재생기기 제어로 다룰 수 있습니다.",
+              "@@subhead@@설계 관점",
+              "@@paragraph@@피트니스·웰니스를 자사 서비스에 들일 때는 콘텐츠 라이선스보다 진입점·재생 통제·기기 전환의 일관성이 먼저입니다. Spotify는 검색창의 &quot;fitness&quot; 키워드 진입을 선택해 별도 탭을 만들지 않았는데, 이는 신규 허브가 충분히 검증되기 전에 메인 내비게이션을 흔들지 않으려는 결정으로 읽힙니다. 결제·플랜 분리(Premium 클래스, Free 플레이리스트)도 한 화면 안에서 흐트러지지 않게 노출해야 사용자가 가입 결정을 미루지 않습니다.",
+              "@@subhead@@점검 질문",
+              "@@list@@우리 서비스에 새 콘텐츠 카테고리를 들일 때 별도 탭을 만들 것인가, 검색·키워드 진입으로 시작할 것인가?",
+              "@@list@@무료·유료 콘텐츠가 같은 화면에 노출될 때 가입 안내가 사용자 흐름을 끊지 않고 자연스럽게 들어가는가?",
+              "@@list@@모바일·데스크톱·TV 사이의 재생 전환이 사용자 학습 없이 이어지는가?"
+            ]
+          }
+        ],
+        "id": "2026-04-29-02",
+        "issueSlug": "2026-04-29",
+        "articleSlug": "2026-04-29-02"
+      },
+      {
+        "number": "03",
         "platform": "Smashing Magazine",
         "areaKey": "design",
         "area": "Design",
@@ -177,9 +338,9 @@
         "sourceTypeLabel": "블로그/오피니언",
         "publicationDate": "2026-04-29",
         "date": "2026-04-22",
-        "route": "/articles/2026-04-29-02",
-        "href": "/articles/2026-04-29-02",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-29-02",
+        "route": "/articles/2026-04-29-03",
+        "href": "/articles/2026-04-29-03",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-29-03",
         "image": "https://files.smashing.media/articles/ux-designer-nightmare-production-ready-becomes-design-deliverable/production-ready-becomes-design-deliverable-ux.jpg",
         "imageCaption": "Smashing Magazine 기사 대표 이미지",
         "tags": [
@@ -323,12 +484,353 @@
             ]
           }
         ],
-        "id": "2026-04-29-02",
+        "id": "2026-04-29-03",
         "issueSlug": "2026-04-29",
-        "articleSlug": "2026-04-29-02"
+        "articleSlug": "2026-04-29-03"
       },
       {
-        "number": "03",
+        "number": "04",
+        "platform": "pxd",
+        "areaKey": "design",
+        "area": "Design",
+        "categoryKey": "ai",
+        "category": "AI",
+        "sourceType": "blog_opinion",
+        "sourceTypeLabel": "블로그/오피니언",
+        "publicationDate": "2026-04-29",
+        "date": "2026-04-20",
+        "route": "/articles/2026-04-29-04",
+        "href": "/articles/2026-04-29-04",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-29-04",
+        "image": "https://story.pxd.co.kr/wp-content/uploads/sample/shadcn-mcp-hero.png",
+        "imageCaption": "pxd story 기사 대표 이미지",
+        "tags": [
+          "shadcn",
+          "ui",
+          "MCP"
+        ],
+        "takeawayHtml": "shadcn/ui CLI v4의 Skills·MCP·Preset로 AI 에이전트 컴포넌트 생성을 정확하게 만든다",
+        "deckHtml": "pxd의 doworld가 shadcn/ui CLI v4에 추가된 Skills·MCP·Preset 세 기능이 AI 코딩 에이전트(Claude·Cursor 등)에게 프로젝트의 정확한 컴포넌트 컨텍스트를 전달해, &quot;추측 기반 생성&quot;을 &quot;문서 기반 생성&quot;으로 바꾸는 패턴을 정리한 글입니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-20"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "shadcn/ui / MCP / preset / AI agent"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "KR"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "practical_skill"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹디자인 / 웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "pxd story"
+          }
+        ],
+        "sourceUrl": "https://story.pxd.co.kr/1895",
+        "sourceTitle": "pxd story",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "용어 설명",
+            "className": "article-section is-term-explanation",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "shadcn/ui: Radix UI primitive 위에 Tailwind 스타일을 얹어 컴포넌트 코드를 직접 복사하는 방식의 React 컴포넌트 라이브러리입니다."
+              },
+              {
+                "kind": "list",
+                "html": "MCP: Model Context Protocol. AI 에이전트가 외부 데이터·도구에 표준화된 방식으로 접근하도록 만든 프로토콜입니다."
+              }
+            ],
+            "itemsHtml": [
+              "shadcn/ui: Radix UI primitive 위에 Tailwind 스타일을 얹어 컴포넌트 코드를 직접 복사하는 방식의 React 컴포넌트 라이브러리입니다.",
+              "MCP: Model Context Protocol. AI 에이전트가 외부 데이터·도구에 표준화된 방식으로 접근하도록 만든 프로토콜입니다."
+            ]
+          },
+          {
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "글의 핵심 주장은 AI 코딩 에이전트가 컴포넌트를 잘못 import하거나 잘못된 prop 이름을 만들어내는 문제를 shadcn/ui CLI v4의 Skills·MCP·Preset 세 기능으로 해결할 수 있다는 것입니다."
+              },
+              {
+                "kind": "list",
+                "html": "Skills는 <code>npx skills add shadcn/ui</code> 한 줄로 프로젝트 설정·import 규칙·variants 정의를 AI가 읽을 수 있는 instructions 형태로 생성합니다."
+              },
+              {
+                "kind": "list",
+                "html": "MCP는 claude mcp add shadcn -- npx shadcn@latest mcp로 등록해, AI가 컴포넌트 문서·예제·prop 시그니처에 실시간 접근하게 만듭니다."
+              },
+              {
+                "kind": "list",
+                "html": "Preset은 <code>npx shadcn@latest init --preset a1Dg5eFl</code>처럼 디자인 시스템 ID 한 줄로 색·radius·variants·spacing을 다른 프로젝트에 그대로 적용합니다."
+              },
+              {
+                "kind": "list",
+                "html": "<code>--diff</code>, <code>--dry-run</code>, <code>--view</code> 플래그로 변경사항을 사전 검증하는 워크플로우도 함께 제시됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "작성자는 잘못된 import 경로(예: <code>import { Button } from &quot;shadcn/button&quot;</code>)가 <code>import { Button } from &quot;@/components/ui/button&quot;</code>로 바로잡히는 사례를 들어, &quot;AI에게 추측하지 말고 읽으라&quot;는 원칙을 강조합니다."
+              }
+            ],
+            "itemsHtml": [
+              "글의 핵심 주장은 AI 코딩 에이전트가 컴포넌트를 잘못 import하거나 잘못된 prop 이름을 만들어내는 문제를 shadcn/ui CLI v4의 Skills·MCP·Preset 세 기능으로 해결할 수 있다는 것입니다.",
+              "Skills는 <code>npx skills add shadcn/ui</code> 한 줄로 프로젝트 설정·import 규칙·variants 정의를 AI가 읽을 수 있는 instructions 형태로 생성합니다.",
+              "MCP는 claude mcp add shadcn -- npx shadcn@latest mcp로 등록해, AI가 컴포넌트 문서·예제·prop 시그니처에 실시간 접근하게 만듭니다.",
+              "Preset은 <code>npx shadcn@latest init --preset a1Dg5eFl</code>처럼 디자인 시스템 ID 한 줄로 색·radius·variants·spacing을 다른 프로젝트에 그대로 적용합니다.",
+              "<code>--diff</code>, <code>--dry-run</code>, <code>--view</code> 플래그로 변경사항을 사전 검증하는 워크플로우도 함께 제시됩니다.",
+              "작성자는 잘못된 import 경로(예: <code>import { Button } from &quot;shadcn/button&quot;</code>)가 <code>import { Button } from &quot;@/components/ui/button&quot;</code>로 바로잡히는 사례를 들어, &quot;AI에게 추측하지 말고 읽으라&quot;는 원칙을 강조합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "quote",
+                "html": "AI 컴포넌트 생성 정확도는 모델의 똑똑함보다, 프로젝트 컨텍스트를 AI가 읽을 수 있는 형태로 얼마나 정리해뒀는가가 결정합니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "doworld가 짚는 지점은 흥미롭습니다. AI에게 &quot;shadcn 버튼 만들어줘&quot;라고 시키면 종종 잘못된 경로·prop으로 코드를 만들지만, 이는 모델 한계가 아니라 컨텍스트 제공 부족이라는 진단입니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "왜 참고할 만한가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "디자인 시스템 운영 조직과 컴포넌트 라이브러리를 운영하는 팀에게 &quot;AI가 우리 시스템을 정확히 쓰게 만들려면 무엇을 정리해둬야 하는가&quot;의 구체적 답을 줍니다. shadcn/ui의 Skills·MCP·Preset은 그 자체가 답이라기보다, 같은 패턴(AI가 읽을 수 있는 instructions·실시간 문서·디자인 토큰 ID 공유)을 자체 시스템에 적용할 수 있는 청사진으로 보입니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "어디에 적용할 수 있을까"
+              },
+              {
+                "kind": "paragraph",
+                "html": "자체 디자인 시스템이 있는 조직, 컴포넌트 라이브러리 운영팀, AI 코딩 도구 도입을 검토하는 프론트엔드 조직에 직접 적용할 수 있습니다. 특히 컴포넌트 사용 규칙·prop 명명 규칙을 사람이 읽는 문서로만 두고 있다면, AI가 읽을 수 있는 instructions·MCP 서버로 옮기는 작업이 다음 단계입니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "디자인 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "AI 시대의 디자인 시스템은 &quot;팀이 보는 문서&quot;와 &quot;AI가 읽는 문서&quot; 두 가지로 나뉩니다. 두 문서가 따로 가면 AI 산출물이 시스템과 어긋나기 시작하고, 시스템 신뢰가 무너집니다. Preset 같은 ID 공유 패턴은 토큰·variants를 한 단위로 묶어 AI에게 일관되게 전달하는 첫걸음으로 볼 만합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "점검 질문"
+              },
+              {
+                "kind": "list",
+                "html": "우리 디자인 시스템 문서는 사람용 문서만 있는가, AI 에이전트가 읽을 수 있는 instructions·MCP·preset 형태도 있는가?"
+              },
+              {
+                "kind": "list",
+                "html": "AI 코딩 도구가 우리 컴포넌트의 import 경로·prop 명명 규칙을 정확히 쓰는지 마지막으로 확인한 적이 있는가?"
+              },
+              {
+                "kind": "list",
+                "html": "디자인 토큰·variants를 다른 프로젝트나 협업사에 공유할 때 ID 한 줄로 끝나는 구조가 가능한가?"
+              }
+            ],
+            "itemsHtml": [
+              "@@quote@@AI 컴포넌트 생성 정확도는 모델의 똑똑함보다, 프로젝트 컨텍스트를 AI가 읽을 수 있는 형태로 얼마나 정리해뒀는가가 결정합니다.",
+              "@@paragraph@@doworld가 짚는 지점은 흥미롭습니다. AI에게 &quot;shadcn 버튼 만들어줘&quot;라고 시키면 종종 잘못된 경로·prop으로 코드를 만들지만, 이는 모델 한계가 아니라 컨텍스트 제공 부족이라는 진단입니다.",
+              "@@subhead@@왜 참고할 만한가",
+              "@@paragraph@@디자인 시스템 운영 조직과 컴포넌트 라이브러리를 운영하는 팀에게 &quot;AI가 우리 시스템을 정확히 쓰게 만들려면 무엇을 정리해둬야 하는가&quot;의 구체적 답을 줍니다. shadcn/ui의 Skills·MCP·Preset은 그 자체가 답이라기보다, 같은 패턴(AI가 읽을 수 있는 instructions·실시간 문서·디자인 토큰 ID 공유)을 자체 시스템에 적용할 수 있는 청사진으로 보입니다.",
+              "@@subhead@@어디에 적용할 수 있을까",
+              "@@paragraph@@자체 디자인 시스템이 있는 조직, 컴포넌트 라이브러리 운영팀, AI 코딩 도구 도입을 검토하는 프론트엔드 조직에 직접 적용할 수 있습니다. 특히 컴포넌트 사용 규칙·prop 명명 규칙을 사람이 읽는 문서로만 두고 있다면, AI가 읽을 수 있는 instructions·MCP 서버로 옮기는 작업이 다음 단계입니다.",
+              "@@subhead@@디자인 관점",
+              "@@paragraph@@AI 시대의 디자인 시스템은 &quot;팀이 보는 문서&quot;와 &quot;AI가 읽는 문서&quot; 두 가지로 나뉩니다. 두 문서가 따로 가면 AI 산출물이 시스템과 어긋나기 시작하고, 시스템 신뢰가 무너집니다. Preset 같은 ID 공유 패턴은 토큰·variants를 한 단위로 묶어 AI에게 일관되게 전달하는 첫걸음으로 볼 만합니다.",
+              "@@subhead@@점검 질문",
+              "@@list@@우리 디자인 시스템 문서는 사람용 문서만 있는가, AI 에이전트가 읽을 수 있는 instructions·MCP·preset 형태도 있는가?",
+              "@@list@@AI 코딩 도구가 우리 컴포넌트의 import 경로·prop 명명 규칙을 정확히 쓰는지 마지막으로 확인한 적이 있는가?",
+              "@@list@@디자인 토큰·variants를 다른 프로젝트나 협업사에 공유할 때 ID 한 줄로 끝나는 구조가 가능한가?"
+            ]
+          }
+        ],
+        "id": "2026-04-29-04",
+        "issueSlug": "2026-04-29",
+        "articleSlug": "2026-04-29-04"
+      },
+      {
+        "number": "05",
+        "platform": "It's Nice That",
+        "areaKey": "design",
+        "area": "Design",
+        "categoryKey": "visual_trend",
+        "category": "visual_trend",
+        "sourceType": "reference",
+        "sourceTypeLabel": "레퍼런스/쇼케이스",
+        "publicationDate": "2026-04-29",
+        "date": "2026-04-28",
+        "route": "/articles/2026-04-29-05",
+        "href": "/articles/2026-04-29-05",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-29-05",
+        "image": "https://admin.itsnicethat.com/images/praktika-nai-identity-hero.jpg",
+        "imageCaption": "It's Nice That 기사 대표 이미지",
+        "tags": [
+          "Praktika",
+          "NAI",
+          "grid identity"
+        ],
+        "takeawayHtml": "Praktika가 리투아니아 건축 연구소 NAI 아이덴티티를 바닥 타일 격자에서 풀어낸 사례",
+        "deckHtml": "빌니우스·카우나스 기반 스튜디오 Praktika가 리투아니아 건축 연구소 NAI를 위해 건물 바닥의 흑백 민속 타일 패턴을 모더니즘 그리드로 옮긴 아이덴티티 시스템을 만들고, 4개 격자 안에 글자가 점점 커지는 모자이크 로고와 포스터·웨이파인딩·디지털·모션까지 확장 가능한 타이포 시스템으로 구성한 사례입니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-28"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "Praktika / NAI / grid identity / Lithuanian floor tiles"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "visual_trend"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹디자인"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "It&#x27;s Nice That"
+          }
+        ],
+        "sourceUrl": "https://www.itsnicethat.com/articles/praktika-nai-identity-graphic-design-project-280426",
+        "sourceTitle": "It's Nice That",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "Praktika는 NAI 빌딩 바닥의 흑백 민속 타일 패턴을 모더니즘 그래픽 그리드로 변환해, 모자이크 형식의 로고와 그리드 기반 포스터·웨이파인딩·디지털 디자인 시스템으로 확장했습니다."
+              },
+              {
+                "kind": "list",
+                "html": "로고는 4개의 그리드 안에 글자가 점차 크게 배치되는 구조로, 타입 자체가 그리드의 일부로 작동합니다."
+              },
+              {
+                "kind": "list",
+                "html": "시스템은 어떤 크기로도 확장 가능한 scale-based construction을 적용해, 작은 발행물부터 옥외 사이니지까지 같은 규칙으로 만들 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "모션·인터랙션 변형까지 미리 설계되어 있어, 인쇄 전용 아이덴티티가 디지털 환경에서도 흐트러지지 않습니다."
+              },
+              {
+                "kind": "list",
+                "html": "Praktika는 빌딩의 건축적 디테일을 단순 모티프 인용이 아니라 운영 가능한 그리드로 시스템화하는 접근을 보여줍니다."
+              }
+            ],
+            "itemsHtml": [
+              "Praktika는 NAI 빌딩 바닥의 흑백 민속 타일 패턴을 모더니즘 그래픽 그리드로 변환해, 모자이크 형식의 로고와 그리드 기반 포스터·웨이파인딩·디지털 디자인 시스템으로 확장했습니다.",
+              "로고는 4개의 그리드 안에 글자가 점차 크게 배치되는 구조로, 타입 자체가 그리드의 일부로 작동합니다.",
+              "시스템은 어떤 크기로도 확장 가능한 scale-based construction을 적용해, 작은 발행물부터 옥외 사이니지까지 같은 규칙으로 만들 수 있습니다.",
+              "모션·인터랙션 변형까지 미리 설계되어 있어, 인쇄 전용 아이덴티티가 디지털 환경에서도 흐트러지지 않습니다.",
+              "Praktika는 빌딩의 건축적 디테일을 단순 모티프 인용이 아니라 운영 가능한 그리드로 시스템화하는 접근을 보여줍니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "quote",
+                "html": "좋은 기관 아이덴티티는 모티프를 빌려오는 게 아니라, 모티프를 시스템 단위로 분해해 운영 가능한 규칙으로 다시 짭니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "Praktika의 작업이 흥미로운 지점은 &quot;리투아니아 건축 유산&quot;이라는 추상적 출발점을 4개 격자라는 구체적 운영 단위로 옮긴 것입니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "왜 참고할 만한가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "기관·문화재·박물관·건축 사무소 등 &quot;역사적 맥락을 시각화해야 하는&quot; 프로젝트의 직접 레퍼런스가 됩니다. 단순 패턴 인용이 아니라 그리드 시스템 → 타입 시스템 → 모션 변형까지 연결된 구조이므로, 자체 브랜드 시스템을 설계할 때 단계별 사고 흐름을 그대로 가져올 수 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "어디에 적용할 수 있을까"
+              },
+              {
+                "kind": "paragraph",
+                "html": "기관·문화·교육·건축·전시 분야 브랜드 아이덴티티 작업에 적용 가능합니다. 다만 Praktika의 패턴 추출 방식(바닥 타일 → 그리드)은 출발 모티프가 명확할 때 강력합니다. 모티프가 흐릿하거나 추상적인 브랜드에는 같은 방식이 어색할 수 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "디자인 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "기관 아이덴티티 시스템은 로고·컬러·타입을 따로 두지 말고, 한 그리드 안에서 셋이 함께 만들어지는 구조가 더 견고합니다. 모자이크 로고·scale-based 타이포·모션 변형을 같은 그리드 위에 올리는 패턴이 그 예입니다. 디지털 자산 확장도 처음 시스템 단계에서 정의하지 않으면, 사후에 모션·인터랙션을 더할 때 일관성이 무너집니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "점검 질문"
+              },
+              {
+                "kind": "list",
+                "html": "우리가 작업하는 기관·문화 브랜드 아이덴티티는 모티프 인용에 머무는가, 운영 가능한 시스템 단위로 분해되어 있는가?"
+              },
+              {
+                "kind": "list",
+                "html": "인쇄·디지털·모션·웨이파인딩이 같은 그리드 위에서 일관되게 만들어지는가, 매체별로 따로 설계되는가?"
+              }
+            ],
+            "itemsHtml": [
+              "@@quote@@좋은 기관 아이덴티티는 모티프를 빌려오는 게 아니라, 모티프를 시스템 단위로 분해해 운영 가능한 규칙으로 다시 짭니다.",
+              "@@paragraph@@Praktika의 작업이 흥미로운 지점은 &quot;리투아니아 건축 유산&quot;이라는 추상적 출발점을 4개 격자라는 구체적 운영 단위로 옮긴 것입니다.",
+              "@@subhead@@왜 참고할 만한가",
+              "@@paragraph@@기관·문화재·박물관·건축 사무소 등 &quot;역사적 맥락을 시각화해야 하는&quot; 프로젝트의 직접 레퍼런스가 됩니다. 단순 패턴 인용이 아니라 그리드 시스템 → 타입 시스템 → 모션 변형까지 연결된 구조이므로, 자체 브랜드 시스템을 설계할 때 단계별 사고 흐름을 그대로 가져올 수 있습니다.",
+              "@@subhead@@어디에 적용할 수 있을까",
+              "@@paragraph@@기관·문화·교육·건축·전시 분야 브랜드 아이덴티티 작업에 적용 가능합니다. 다만 Praktika의 패턴 추출 방식(바닥 타일 → 그리드)은 출발 모티프가 명확할 때 강력합니다. 모티프가 흐릿하거나 추상적인 브랜드에는 같은 방식이 어색할 수 있습니다.",
+              "@@subhead@@디자인 관점",
+              "@@paragraph@@기관 아이덴티티 시스템은 로고·컬러·타입을 따로 두지 말고, 한 그리드 안에서 셋이 함께 만들어지는 구조가 더 견고합니다. 모자이크 로고·scale-based 타이포·모션 변형을 같은 그리드 위에 올리는 패턴이 그 예입니다. 디지털 자산 확장도 처음 시스템 단계에서 정의하지 않으면, 사후에 모션·인터랙션을 더할 때 일관성이 무너집니다.",
+              "@@subhead@@점검 질문",
+              "@@list@@우리가 작업하는 기관·문화 브랜드 아이덴티티는 모티프 인용에 머무는가, 운영 가능한 시스템 단위로 분해되어 있는가?",
+              "@@list@@인쇄·디지털·모션·웨이파인딩이 같은 그리드 위에서 일관되게 만들어지는가, 매체별로 따로 설계되는가?"
+            ]
+          }
+        ],
+        "id": "2026-04-29-05",
+        "issueSlug": "2026-04-29",
+        "articleSlug": "2026-04-29-05"
+      },
+      {
+        "number": "06",
         "platform": "Smashing Magazine",
         "areaKey": "dev",
         "area": "DEV",
@@ -338,9 +840,9 @@
         "sourceTypeLabel": "방법론/가이드",
         "publicationDate": "2026-04-29",
         "date": "2026-04-20",
-        "route": "/articles/2026-04-29-03",
-        "href": "/articles/2026-04-29-03",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-29-03",
+        "route": "/articles/2026-04-29-06",
+        "href": "/articles/2026-04-29-06",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-29-06",
         "image": "https://files.smashing.media/articles/session-timeouts-accessibility-barrier-authentication-design/session-timeouts-accessibility-barrier-authentication-design.jpg",
         "imageCaption": "Smashing Magazine 기사 대표 이미지",
         "tags": [
@@ -498,12 +1000,12 @@
             ]
           }
         ],
-        "id": "2026-04-29-03",
+        "id": "2026-04-29-06",
         "issueSlug": "2026-04-29",
-        "articleSlug": "2026-04-29-03"
+        "articleSlug": "2026-04-29-06"
       },
       {
-        "number": "04",
+        "number": "07",
         "platform": "CSS-Tricks",
         "areaKey": "dev",
         "area": "DEV",
@@ -513,9 +1015,9 @@
         "sourceTypeLabel": "방법론/가이드",
         "publicationDate": "2026-04-29",
         "date": "2026-04-23",
-        "route": "/articles/2026-04-29-04",
-        "href": "/articles/2026-04-29-04",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-29-04",
+        "route": "/articles/2026-04-29-07",
+        "href": "/articles/2026-04-29-07",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-29-07",
         "image": "",
         "imageCaption": "이미지 확인 필요",
         "tags": [
@@ -688,12 +1190,12 @@
             ]
           }
         ],
-        "id": "2026-04-29-04",
+        "id": "2026-04-29-07",
         "issueSlug": "2026-04-29",
-        "articleSlug": "2026-04-29-04"
+        "articleSlug": "2026-04-29-07"
       },
       {
-        "number": "05",
+        "number": "08",
         "platform": "Chrome Developers",
         "areaKey": "dev",
         "area": "DEV",
@@ -703,9 +1205,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-04-29",
         "date": "2026-04-24",
-        "route": "/articles/2026-04-29-05",
-        "href": "/articles/2026-04-29-05",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-29-05",
+        "route": "/articles/2026-04-29-08",
+        "href": "/articles/2026-04-29-08",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-29-08",
         "image": "",
         "imageCaption": "이미지 확인 필요",
         "tags": [
@@ -853,12 +1355,12 @@
             ]
           }
         ],
-        "id": "2026-04-29-05",
+        "id": "2026-04-29-08",
         "issueSlug": "2026-04-29",
-        "articleSlug": "2026-04-29-05"
+        "articleSlug": "2026-04-29-08"
       },
       {
-        "number": "06",
+        "number": "09",
         "platform": "WebKit",
         "areaKey": "dev",
         "area": "DEV",
@@ -868,9 +1370,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-04-29",
         "date": "2026-04-23",
-        "route": "/articles/2026-04-29-06",
-        "href": "/articles/2026-04-29-06",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-29-06",
+        "route": "/articles/2026-04-29-09",
+        "href": "/articles/2026-04-29-09",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-29-09",
         "image": "",
         "imageCaption": "이미지 확인 필요",
         "tags": [
@@ -1034,9 +1536,194 @@
             ]
           }
         ],
-        "id": "2026-04-29-06",
+        "id": "2026-04-29-09",
         "issueSlug": "2026-04-29",
-        "articleSlug": "2026-04-29-06"
+        "articleSlug": "2026-04-29-09"
+      },
+      {
+        "number": "10",
+        "platform": "Syntax.fm",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "ai_tools",
+        "category": "ai_tools",
+        "sourceType": "blog_opinion",
+        "sourceTypeLabel": "블로그/오피니언",
+        "publicationDate": "2026-04-29",
+        "date": "2026-04-22",
+        "route": "/articles/2026-04-29-10",
+        "href": "/articles/2026-04-29-10",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-29-10",
+        "image": "",
+        "imageCaption": "이미지 확인 필요",
+        "tags": [
+          "vibe coding",
+          "AI coding tools",
+          "lint"
+        ],
+        "takeawayHtml": "AI 코딩의 vibe를 고치는 법 — 결정론 도구로 무작위성을 줄인다",
+        "deckHtml": "Syntax.fm 998회에서 Wes Bos·Scott Tolinski가 AI 코딩 도구가 만들어내는 비일관성·환각 문제를 결정론적 도구(knip·fallow·ESLint·StyleLint·jscpd·Storybook AI·agent-browser 같은 headless 브라우저)로 강제하는 흐름을 정리했습니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-22"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "vibe coding / AI coding tools / lint / static analysis"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "AI Tools"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Syntax.fm"
+          }
+        ],
+        "sourceUrl": "https://syntax.fm/998",
+        "sourceTitle": "Syntax.fm",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "용어 설명",
+            "className": "article-section is-term-explanation",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "vibe coding: AI에게 자연어로 의도를 던지고 결과 코드를 받아 쓰는 비결정론적 코딩 방식. 같은 프롬프트가 매번 다른 코드를 만들 수 있는 문제가 있습니다."
+              }
+            ],
+            "itemsHtml": [
+              "vibe coding: AI에게 자연어로 의도를 던지고 결과 코드를 받아 쓰는 비결정론적 코딩 방식. 같은 프롬프트가 매번 다른 코드를 만들 수 있는 문제가 있습니다."
+            ]
+          },
+          {
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "에피소드의 핵심 주장은 AI 코딩 도구의 비결정성·환각 문제는 모델 한계라기보다 결정론 도구를 함께 쓰지 않은 워크플로우 문제라는 것입니다."
+              },
+              {
+                "kind": "list",
+                "html": "호스트들은 lint·static analysis·중복 검사·시각 회귀 같은 결정론 도구로 AI 산출물을 강제 검증하는 패턴을 권합니다."
+              },
+              {
+                "kind": "list",
+                "html": "도구 목록에는 knip(미사용 코드 검출), fallow, ESLint, StyleLint, Sentry, jscpd(코드 중복 검사), Storybook AI(컴포넌트 시각 검증), headless 브라우저 기반 agent-browser가 포함됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "Wes Bos는 일주일 사이에 클라이언트 두 곳을 잃은 사례를 들어, AI 코드 품질 문제가 비즈니스 비용으로 직결됨을 짚습니다."
+              },
+              {
+                "kind": "list",
+                "html": "호스트들은 task workflow에 검증 단계를 강제하는 enforcement 패턴(예: lint 통과 못 하면 PR 불가)이 AI 시대에 더 중요하다고 정리합니다."
+              }
+            ],
+            "itemsHtml": [
+              "에피소드의 핵심 주장은 AI 코딩 도구의 비결정성·환각 문제는 모델 한계라기보다 결정론 도구를 함께 쓰지 않은 워크플로우 문제라는 것입니다.",
+              "호스트들은 lint·static analysis·중복 검사·시각 회귀 같은 결정론 도구로 AI 산출물을 강제 검증하는 패턴을 권합니다.",
+              "도구 목록에는 knip(미사용 코드 검출), fallow, ESLint, StyleLint, Sentry, jscpd(코드 중복 검사), Storybook AI(컴포넌트 시각 검증), headless 브라우저 기반 agent-browser가 포함됩니다.",
+              "Wes Bos는 일주일 사이에 클라이언트 두 곳을 잃은 사례를 들어, AI 코드 품질 문제가 비즈니스 비용으로 직결됨을 짚습니다.",
+              "호스트들은 task workflow에 검증 단계를 강제하는 enforcement 패턴(예: lint 통과 못 하면 PR 불가)이 AI 시대에 더 중요하다고 정리합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "quote",
+                "html": "AI가 코드를 빠르게 만들수록, 결정론적 검증 도구가 시스템에 들어가야 비결정성을 흡수할 수 있습니다."
+              },
+              {
+                "kind": "paragraph",
+                "html": "호스트들이 짚는 지점은 AI 도구에 대한 회의가 아니라, AI 도구 사용을 견딜 수 있게 만드는 인프라가 빠져 있다는 진단입니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "AI 코딩 도구가 일상화되면서 산출물의 평균 품질·일관성 문제가 팀 단위 비용으로 드러나고 있습니다. 이번 에피소드는 그 문제를 도구·워크플로우·enforcement의 3축으로 정리해, AI 도입을 검토하는 조직이 그대로 가져갈 수 있는 체크리스트가 됩니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "AI 산출물 검증은 사람 리뷰만으로는 한계가 명확합니다. 결정론 도구(knip·jscpd·StyleLint·Storybook AI)를 PR 단계에 강제로 끼워두고, 통과 못 하면 머지 못 하게 막는 enforcement가 가장 효과적입니다. agent-browser 같은 headless 브라우저는 컴포넌트 시각 회귀를 자동화해, AI 산출물의 화면 영향까지 잡아낼 수 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "AI 도구로 만든 코드가 통과해야 할 결정론 검증(lint·static analysis·중복 검사·시각 회귀)을 PR 템플릿에 명시합니다."
+              },
+              {
+                "kind": "list",
+                "html": "knip·jscpd 같은 미사용/중복 검출 도구를 CI에 추가해, AI가 빠르게 만든 코드의 부채를 자동으로 감지합니다."
+              },
+              {
+                "kind": "list",
+                "html": "Storybook AI나 시각 회귀 도구로 컴포넌트 산출물의 시각 일관성을 자동 검증합니다."
+              },
+              {
+                "kind": "list",
+                "html": "일주일에 한 번 AI 코드 PR의 품질 지표(인시던트 발생률·중복 비율·통과율)를 팀이 같이 봅니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "같이 보면 좋은 기술"
+              },
+              {
+                "kind": "list",
+                "html": "ESLint AI rules: AI 산출물에 자주 나타나는 패턴을 잡아내는 룰 셋이 등장하고 있어, AI 시대 lint 설정으로 별도 봐둘 만합니다."
+              },
+              {
+                "kind": "list",
+                "html": "jscpd: 코드 중복 검출 도구. AI 코드의 4배 중복 패턴을 잡는 데 직접 쓰입니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@quote@@AI가 코드를 빠르게 만들수록, 결정론적 검증 도구가 시스템에 들어가야 비결정성을 흡수할 수 있습니다.",
+              "@@paragraph@@호스트들이 짚는 지점은 AI 도구에 대한 회의가 아니라, AI 도구 사용을 견딜 수 있게 만드는 인프라가 빠져 있다는 진단입니다.",
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@AI 코딩 도구가 일상화되면서 산출물의 평균 품질·일관성 문제가 팀 단위 비용으로 드러나고 있습니다. 이번 에피소드는 그 문제를 도구·워크플로우·enforcement의 3축으로 정리해, AI 도입을 검토하는 조직이 그대로 가져갈 수 있는 체크리스트가 됩니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@AI 산출물 검증은 사람 리뷰만으로는 한계가 명확합니다. 결정론 도구(knip·jscpd·StyleLint·Storybook AI)를 PR 단계에 강제로 끼워두고, 통과 못 하면 머지 못 하게 막는 enforcement가 가장 효과적입니다. agent-browser 같은 headless 브라우저는 컴포넌트 시각 회귀를 자동화해, AI 산출물의 화면 영향까지 잡아낼 수 있습니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@AI 도구로 만든 코드가 통과해야 할 결정론 검증(lint·static analysis·중복 검사·시각 회귀)을 PR 템플릿에 명시합니다.",
+              "@@list@@knip·jscpd 같은 미사용/중복 검출 도구를 CI에 추가해, AI가 빠르게 만든 코드의 부채를 자동으로 감지합니다.",
+              "@@list@@Storybook AI나 시각 회귀 도구로 컴포넌트 산출물의 시각 일관성을 자동 검증합니다.",
+              "@@list@@일주일에 한 번 AI 코드 PR의 품질 지표(인시던트 발생률·중복 비율·통과율)를 팀이 같이 봅니다.",
+              "@@subhead@@같이 보면 좋은 기술",
+              "@@list@@ESLint AI rules: AI 산출물에 자주 나타나는 패턴을 잡아내는 룰 셋이 등장하고 있어, AI 시대 lint 설정으로 별도 봐둘 만합니다.",
+              "@@list@@jscpd: 코드 중복 검출 도구. AI 코드의 4배 중복 패턴을 잡는 데 직접 쓰입니다."
+            ]
+          }
+        ],
+        "id": "2026-04-29-10",
+        "issueSlug": "2026-04-29",
+        "articleSlug": "2026-04-29-10"
       },
       {
         "number": "01",

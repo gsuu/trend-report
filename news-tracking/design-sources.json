@@ -65,6 +65,21 @@
       "includeTitlePatterns": [
         "ux|user|research|usability|interface|journey|persona|content|design|visual|navigation"
       ]
+    },
+    {
+      "name": "pxd story",
+      "url": "https://story.pxd.co.kr/",
+      "rss": "https://pxdstory.tistory.com/rss",
+      "category": "kr_uiux_media",
+      "sourceRole": "reference",
+      "locale": "KR",
+      "topics": ["UIUX", "Korean Design", "Case Study", "Design System", "AI Tools"],
+      "includeTitlePatterns": [
+        "UI|UX|디자인|브랜드|서비스|앱|웹|리뉴얼|개편|사례|경험|트렌드|콘텐츠|컴포넌트|시스템|에이전트|AI|MCP|shadcn|toolkit|프로토타이핑|리서치"
+      ],
+      "excludeTitlePatterns": [
+        "채용|교육|수강|세미나|부트캠프"
+      ]
     }
   ],
   "pages": [

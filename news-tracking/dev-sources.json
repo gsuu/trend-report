@@ -52,6 +52,23 @@
       "url": "https://dev.to/t/a11y",
       "rss": "https://dev.to/feed/tag/a11y",
       "topics": ["Accessibility"]
+    },
+    {
+      "name": "WebKit Blog",
+      "url": "https://webkit.org/blog/",
+      "rss": "https://webkit.org/feed/",
+      "topics": ["Safari", "WebKit", "Web Standards", "Browser Updates"]
+    },
+    {
+      "name": "MDN Blog",
+      "url": "https://developer.mozilla.org/en-US/blog/",
+      "rss": "https://developer.mozilla.org/en-US/blog/rss.xml",
+      "topics": ["Web Standards", "MDN", "Web Platform"]
+    },
+    {
+      "name": "Chrome for Developers",
+      "url": "https://developer.chrome.com/blog",
+      "topics": ["Chrome", "Web Platform", "Browser Updates", "Web APIs"]
     }
   ],
   "podcasts": [

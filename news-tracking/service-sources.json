@@ -81,6 +81,30 @@
       "topics": ["content", "personalization", "subscription"],
       "includeTitlePatterns": ["personalized|playlist|premium|subscription|creator|discovery|recommendation|app|user|experience"],
       "excludeTitlePatterns": ["earnings|investor|jobs|podcast awards"]
+    },
+    {
+      "name": "토스 테크",
+      "url": "https://toss.tech/",
+      "rss": "https://toss.tech/rss.xml",
+      "category": "fintech",
+      "sourceRole": "official",
+      "locale": "KR",
+      "priority": "priority_korean_service",
+      "topics": ["fintech", "service_design", "internal_tools"],
+      "includeTitlePatterns": ["UX|UI|화면|디자인|서비스|토스플레이스|플로우|페이|결제|금융|챗봇|에이전트|온보딩|개편|리뉴얼|운영|어시스턴트|AB테스트|실험"],
+      "excludeTitlePatterns": ["StarRocks|Kafka|Kubernetes|Quantum|Cryptography|infra|backend|database|monitoring|observability"]
+    },
+    {
+      "name": "우아한형제들 기술블로그",
+      "url": "https://techblog.woowahan.com/",
+      "rss": "https://techblog.woowahan.com/feed/",
+      "category": "ecommerce",
+      "sourceRole": "official",
+      "locale": "KR",
+      "priority": "priority_korean_service",
+      "topics": ["food_delivery", "service_design", "frontend"],
+      "includeTitlePatterns": ["UX|UI|화면|디자인|서비스|배달의민족|배민|쿠팡이츠|온보딩|개편|리뉴얼|운영|메뉴|주문|리뷰|장바구니|결제|프론트엔드"],
+      "excludeTitlePatterns": ["Kafka|Kubernetes|infra|backend|database|monitoring|observability|채용|인터뷰"]
     }
   ],
   "pages": [
