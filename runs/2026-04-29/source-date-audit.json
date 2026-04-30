@@ -1,0 +1,56 @@
+[
+  {
+    "num": "01",
+    "platform": "Spotify",
+    "title": "음악·팟캐스트 추천이 Claude 대화창 안에서 끝난다",
+    "url": "https://newsroom.spotify.com/2026-04-23/claude-integration/",
+    "status": 200,
+    "finalUrl": "https://newsroom.spotify.com/2026-04-23/claude-integration/",
+    "date": "2026-04-23"
+  },
+  {
+    "num": "02",
+    "platform": "Smashing Magazine",
+    "title": "AI가 UX 디자이너에게 'Production-Ready 코드'까지 요구하면 어떻게 될까",
+    "url": "https://smashingmagazine.com/2026/04/production-ready-becomes-design-deliverable-ux/",
+    "status": 200,
+    "finalUrl": "https://smashingmagazine.com/2026/04/production-ready-becomes-design-deliverable-ux/",
+    "date": "2026-04-22"
+  },
+  {
+    "num": "03",
+    "platform": "Smashing Magazine",
+    "title": "인증 화면의 세션 만료, 접근성 가드레일이 빠지면 작성 중인 폼이 통째로 사라진다",
+    "url": "https://smashingmagazine.com/2026/04/session-timeouts-accessibility-barrier-authentication-design/",
+    "status": 200,
+    "finalUrl": "https://smashingmagazine.com/2026/04/session-timeouts-accessibility-barrier-authentication-design/",
+    "date": "2026-04-20"
+  },
+  {
+    "num": "04",
+    "platform": "CSS-Tricks",
+    "title": "Apple Vision Pro 마케팅 페이지의 스크롤 모션을 순수 CSS로 다시 만든다",
+    "url": "https://css-tricks.com/recreating-apples-vision-pro-animation-in-css/",
+    "status": 200,
+    "finalUrl": "https://css-tricks.com/recreating-apples-vision-pro-animation-in-css/",
+    "date": "2026-04-23"
+  },
+  {
+    "num": "05",
+    "platform": "Chrome Developers",
+    "title": "웹앱 매니페스트에 다국어 필드가 직접 들어간다",
+    "url": "https://developer.chrome.com/blog/manifest-localization?hl=en",
+    "status": 200,
+    "finalUrl": "https://developer.chrome.com/blog/manifest-localization?hl=en",
+    "date": "2026-04-24"
+  },
+  {
+    "num": "06",
+    "platform": "WebKit",
+    "title": "Safari Technology Preview 242가 CSS `attr()`과 HTML `closedby`를 지원한다",
+    "url": "https://webkit.org/blog/17934/release-notes-for-safari-technology-preview-242/",
+    "status": 200,
+    "finalUrl": "https://webkit.org/blog/17934/release-notes-for-safari-technology-preview-242/",
+    "date": "2026-04-23"
+  }
+]

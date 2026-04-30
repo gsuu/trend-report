@@ -6,7 +6,7 @@
     "url": "https://about.daangn.com/company/pr/archive/%EB%8B%B9%EA%B7%BC-ai-%EA%B8%B0%EB%B0%98-%EB%8C%80%ED%99%94%ED%98%95-%ED%9B%84%EA%B8%B0-%EC%9E%91%EC%84%B1-%EA%B8%B0%EB%8A%A5-%EC%B6%9C%EC%8B%9C/",
     "status": 200,
     "finalUrl": "https://about.daangn.com/company/pr/archive/%EB%8B%B9%EA%B7%BC-ai-%EA%B8%B0%EB%B0%98-%EB%8C%80%ED%99%94%ED%98%95-%ED%9B%84%EA%B8%B0-%EC%9E%91%EC%84%B1-%EA%B8%B0%EB%8A%A5-%EC%B6%9C%EC%8B%9C/",
-    "date": ""
+    "date": "2026-04-08"
   },
   {
     "num": "02",
@@ -42,7 +42,7 @@
     "url": "https://toss.tech/article/da-assistant-panda",
     "status": 200,
     "finalUrl": "https://toss.tech/article/da-assistant-panda",
-    "date": ""
+    "date": "2026-04-23"
   },
   {
     "num": "06",
@@ -177,7 +177,7 @@
     "url": "https://frontendfoc.us/issues/738",
     "status": 200,
     "finalUrl": "https://frontendfoc.us/issues/738",
-    "date": ""
+    "date": "2026-04-22"
   },
   {
     "num": "19",
@@ -195,7 +195,7 @@
     "url": "https://javascriptweekly.com/issues/782",
     "status": 200,
     "finalUrl": "https://javascriptweekly.com/issues/782",
-    "date": ""
+    "date": "2026-04-21"
   },
   {
     "num": "21",
@@ -250,5 +250,86 @@
     "status": 200,
     "finalUrl": "https://www.figma.com/blog/the-tldr-on-mcp/",
     "date": "2026-04-15"
+  },
+  {
+    "num": "05",
+    "platform": "OpenAI",
+    "title": "ChatGPT Images 2.0, 이제 승인 가능한가",
+    "url": "https://openai.com/index/introducing-chatgpt-images-2-0",
+    "status": 200,
+    "finalUrl": "https://openai.com/index/introducing-chatgpt-images-2-0",
+    "date": "2026-04-21"
+  },
+  {
+    "num": "09",
+    "platform": "Syntax.fm",
+    "title": "998: How to Fix Vibe Coding",
+    "url": "https://syntax.fm/998",
+    "status": 200,
+    "finalUrl": "https://syntax.fm/998",
+    "date": "2026-04-22"
+  },
+  {
+    "num": "12",
+    "platform": "DEV Community",
+    "title": "Why pure Klein blue disappears as text (and the two-slot fix)",
+    "url": "https://dev.to/palo_alto_ai/why-pure-klein-blue-disappears-as-text-and-the-two-slot-fix-225p",
+    "status": 200,
+    "finalUrl": "https://dev.to/palo_alto_ai/why-pure-klein-blue-disappears-as-text-and-the-two-slot-fix-225p",
+    "date": "2026-04-25"
+  },
+  {
+    "num": "13",
+    "platform": "DEV Community",
+    "title": "Design to Code #4: Why I Chose Radix Over Custom Primitives",
+    "url": "https://dev.to/7onic/design-to-code-4-why-i-chose-radix-over-custom-primitives-50eo",
+    "status": 200,
+    "finalUrl": "https://dev.to/7onic/design-to-code-4-why-i-chose-radix-over-custom-primitives-50eo",
+    "date": "2026-04-24"
+  },
+  {
+    "num": "14",
+    "platform": "DEV Community",
+    "title": "A Practical Guide to Flutter Accessibility Part 2: Hiding Noise, Exposing Actions",
+    "url": "https://dev.to/gdg/a-practical-guide-to-flutter-accessibility-part-2-hiding-noise-exposing-actions-2f7i",
+    "status": 200,
+    "finalUrl": "https://dev.to/gdg/a-practical-guide-to-flutter-accessibility-part-2-hiding-noise-exposing-actions-2f7i",
+    "date": "2026-04-24"
+  },
+  {
+    "num": "15",
+    "platform": "DEV Community",
+    "title": "The EAA Is Live. Here's a 15-Minute Compliance Check Any Business Owner Can Run.",
+    "url": "https://dev.to/agentkit/the-eaa-is-live-heres-a-15-minute-compliance-check-any-business-owner-can-run-4ld0",
+    "status": 200,
+    "finalUrl": "https://dev.to/agentkit/the-eaa-is-live-heres-a-15-minute-compliance-check-any-business-owner-can-run-4ld0",
+    "date": "2026-04-23"
+  },
+  {
+    "num": "16",
+    "platform": "Smashing Magazine",
+    "title": "Session Timeouts: The Overlooked Accessibility Barrier In Authentication Design",
+    "url": "https://smashingmagazine.com/2026/04/session-timeouts-accessibility-barrier-authentication-design/",
+    "status": 200,
+    "finalUrl": "https://smashingmagazine.com/2026/04/session-timeouts-accessibility-barrier-authentication-design/",
+    "date": "2026-04-20"
+  },
+  {
+    "num": "19",
+    "platform": "DEV Community",
+    "title": "State of Small Business Websites (2026 Study). 96.9% Fail Core Web Vitals.",
+    "url": "https://dev.to/joshua_gutierrez/state-of-small-business-websites-2026-study-969-fail-core-web-vitals-106i",
+    "status": 200,
+    "finalUrl": "https://dev.to/joshua_gutierrez/state-of-small-business-websites-2026-study-969-fail-core-web-vitals-106i",
+    "date": "2026-04-24"
+  },
+  {
+    "num": "21",
+    "platform": "Syntax.fm",
+    "title": "997: Rating and Roasting Your Projects",
+    "url": "https://syntax.fm/997",
+    "status": 200,
+    "finalUrl": "https://syntax.fm/997",
+    "date": "2026-04-20"
   }
 ]
