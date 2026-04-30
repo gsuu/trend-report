@@ -5,6 +5,7 @@ __pycache__/
 .env.local
 newsletters/
 config/subscribers.txt
+config/*-subscribers.txt
 node_modules/
 test-results/
 dist/
