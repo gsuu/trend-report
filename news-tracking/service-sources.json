@@ -72,17 +72,6 @@
       "excludeTitlePatterns": ["채용|웨비나|세미나|교육"]
     },
     {
-      "name": "Spotify Newsroom",
-      "url": "https://newsroom.spotify.com/",
-      "rss": "https://newsroom.spotify.com/feed/",
-      "category": "global_service_ux",
-      "sourceRole": "official",
-      "locale": "global",
-      "topics": ["content", "personalization", "subscription"],
-      "includeTitlePatterns": ["personalized|playlist|premium|subscription|creator|discovery|recommendation|app|user|experience"],
-      "excludeTitlePatterns": ["earnings|investor|jobs|podcast awards"]
-    },
-    {
       "name": "토스 테크",
       "url": "https://toss.tech/",
       "rss": "https://toss.tech/rss.xml",
@@ -105,6 +94,37 @@
       "topics": ["food_delivery", "service_design", "frontend"],
       "includeTitlePatterns": ["UX|UI|화면|디자인|서비스|배달의민족|배민|쿠팡이츠|온보딩|개편|리뉴얼|운영|메뉴|주문|리뷰|장바구니|결제|프론트엔드"],
       "excludeTitlePatterns": ["Kafka|Kubernetes|infra|backend|database|monitoring|observability|채용|인터뷰"]
+    },
+    {
+      "name": "Shopify Engineering",
+      "url": "https://shopify.engineering/",
+      "rss": "https://shopify.engineering/blog.atom",
+      "category": "global_commerce_standard",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": ["commerce", "checkout", "merchant"],
+      "includeTitlePatterns": ["commerce|checkout|merchant|cart|product|search|recommend|review|subscription|payment|storefront|app store|admin"],
+      "excludeTitlePatterns": ["hiring|career|salary|infrastructure only|ruby internals|database tuning"]
+    },
+    {
+      "name": "Stripe Sessions",
+      "url": "https://stripe.com/sessions/",
+      "rss": "https://stripe.com/blog/feed.rss",
+      "category": "global_commerce_standard",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": ["payment", "checkout", "subscription"],
+      "includeTitlePatterns": ["payment|checkout|subscription|billing|fraud|tax|invoice|wallet|link|terminal|connect|optimization|conversion"]
+    },
+    {
+      "name": "Klarna Newsroom",
+      "url": "https://www.klarna.com/international/press/",
+      "rss": "https://www.klarna.com/international/press/feed/",
+      "category": "global_commerce_standard",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": ["BNPL", "payment", "shopping"],
+      "includeTitlePatterns": ["app|shopping|payment|consumer|retailer|partner|AI|search|recommend|subscription|wallet|launch"]
     }
   ],
   "pages": [
@@ -121,6 +141,19 @@
       "excludeLinkPatterns": ["#", "mailto:", "/category", "/tag"],
       "excludeTitlePatterns": ["뉴스룸에 오신|Newsroom|채용|ESG|사회공헌"],
       "limit": 20
+    },
+    {
+      "name": "29CM Special Order",
+      "url": "https://shop.29cm.co.kr/special-order",
+      "category": "fashion",
+      "sourceRole": "official",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "topics": ["fashion", "commerce", "campaign"],
+      "includeLinkPatterns": ["29cm\\.co\\.kr"],
+      "includeTitlePatterns": ["기획전|스페셜|오더|브랜드|컬렉션|룩북|취향|시즌|프로모션|이벤트|쇼케이스"],
+      "excludeLinkPatterns": ["#", "mailto:", "/login", "/member"],
+      "limit": 18
     },
     {
       "name": "카카오스타일 파트너라운지",
@@ -148,6 +181,134 @@
       "excludeLinkPatterns": ["#", "mailto:", "/company/", "/sustainability/", "/legal"],
       "excludeTitlePatterns": ["채용|ESG|사회공헌"],
       "limit": 20
+    },
+    {
+      "name": "올리브영 이벤트",
+      "url": "https://www.oliveyoung.co.kr/store/main/getEventList.do",
+      "category": "beauty_promotion",
+      "sourceRole": "inspiration",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "topics": ["beauty", "promotion", "membership"],
+      "includeLinkPatterns": ["oliveyoung\\.co\\.kr"],
+      "includeTitlePatterns": ["이벤트|기획전|세일|쿠폰|혜택|브랜드|캠페인|프로모션|라이브|올영"],
+      "excludeLinkPatterns": ["#", "mailto:", "login"],
+      "excludeTitlePatterns": ["^올리브영 온라인몰$", "^기획전$", "^세일$", "^멤버십/쿠폰$", "^이벤트$"],
+      "limit": 18
+    },
+    {
+      "name": "W Concept 이벤트",
+      "url": "https://www.wconcept.co.kr/Event",
+      "category": "fashion_promotion",
+      "sourceRole": "inspiration",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "topics": ["fashion", "promotion", "campaign"],
+      "includeLinkPatterns": ["wconcept\\.co\\.kr"],
+      "includeTitlePatterns": ["이벤트|기획전|세일|쿠폰|혜택|브랜드|캠페인|프로모션|룩북|컬렉션"],
+      "excludeLinkPatterns": ["#", "mailto:", "login"],
+      "limit": 18
+    },
+    {
+      "name": "SSG 이벤트",
+      "url": "https://www.ssg.com/event/eventMain.ssg",
+      "category": "ecommerce_promotion",
+      "sourceRole": "inspiration",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "topics": ["commerce", "promotion", "membership"],
+      "includeLinkPatterns": ["ssg\\.com|event\\.ssg\\.com"],
+      "includeTitlePatterns": ["이벤트|기획전|쓱데이|세일|쿠폰|혜택|브랜드|캠페인|프로모션|라이브"],
+      "excludeLinkPatterns": ["#", "mailto:", "login"],
+      "excludeTitlePatterns": [
+        "^이벤트/쿠폰, 믿고 사는 즐거움 SSG\\.COM$",
+        "^브랜드관, 믿고 사는 즐거움 SSG\\.COM$",
+        "^이벤트/쿠폰 > 모든이벤트",
+        "^이벤트/쿠폰 > 이벤트 안내 페이지$"
+      ],
+      "limit": 18
+    },
+    {
+      "name": "11번가 뉴스룸",
+      "url": "https://news.11st.co.kr/",
+      "category": "ecommerce",
+      "sourceRole": "official",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "topics": ["commerce", "membership", "marketplace"],
+      "includeLinkPatterns": ["news\\.11st\\.co\\.kr/"],
+      "includeTitlePatterns": ["11번가|쇼킹딜|아마존|멤버십|배송|쿠폰|혜택|광고|판매자|커머스|앱|상품|리뷰|추천"],
+      "excludeLinkPatterns": ["#", "mailto:"],
+      "excludeTitlePatterns": ["채용|ESG|사회공헌"],
+      "limit": 20
+    },
+    {
+      "name": "G마켓 뉴스",
+      "url": "https://corp.gmarket.com/ko/news",
+      "category": "ecommerce",
+      "sourceRole": "official",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "topics": ["commerce", "marketplace", "membership"],
+      "includeLinkPatterns": ["corp\\.gmarket\\.com/ko/news/"],
+      "includeTitlePatterns": ["G마켓|지마켓|옥션|스마일클럽|빅스마일데이|커머스|앱|상품|리뷰|추천|판매자|배송|쿠폰"],
+      "excludeLinkPatterns": ["#", "mailto:"],
+      "excludeTitlePatterns": ["채용|ESG|사회공헌"],
+      "limit": 20
+    },
+    {
+      "name": "Kream Newsroom",
+      "url": "https://kream.co.kr/inside",
+      "category": "fashion",
+      "sourceRole": "official",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "topics": ["resale", "fashion", "commerce"],
+      "includeLinkPatterns": ["kream\\.co\\.kr/(?:inside|news)"],
+      "includeTitlePatterns": ["크림|KREAM|시세|검수|인증|배송|상품|커머스|앱|브랜드|컬렉션|드롭"],
+      "excludeLinkPatterns": ["#", "mailto:", "/login", "/sign"],
+      "excludeTitlePatterns": ["채용|ESG|사회공헌"],
+      "limit": 18
+    },
+    {
+      "name": "Brandi & Hint",
+      "url": "https://about.brandi.co.kr/news/",
+      "category": "fashion",
+      "sourceRole": "official",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "topics": ["fashion", "commerce", "social_commerce"],
+      "includeLinkPatterns": ["about\\.brandi\\.co\\.kr/news/"],
+      "includeTitlePatterns": ["브랜디|힌트|패션|커머스|앱|상품|리뷰|추천|판매자|배송|쿠폰|기획전|컬렉션"],
+      "excludeLinkPatterns": ["#", "mailto:"],
+      "excludeTitlePatterns": ["채용|ESG|사회공헌"],
+      "limit": 18
+    },
+    {
+      "name": "S.I.VILLAGE",
+      "url": "https://www.sivillage.com/promotion/getEventListAjax.siv",
+      "category": "fashion",
+      "sourceRole": "inspiration",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "topics": ["luxury_fashion", "promotion"],
+      "includeLinkPatterns": ["sivillage\\.com"],
+      "includeTitlePatterns": ["기획전|이벤트|브랜드|컬렉션|시즌|혜택|쿠폰|멤버십|VIP"],
+      "excludeLinkPatterns": ["#", "mailto:", "login"],
+      "limit": 18
+    },
+    {
+      "name": "SSF SHOP",
+      "url": "https://www.ssfshop.com/EventPlanShop/index",
+      "category": "fashion",
+      "sourceRole": "inspiration",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "topics": ["fashion", "promotion", "brand"],
+      "includeLinkPatterns": ["ssfshop\\.com"],
+      "includeTitlePatterns": ["기획전|이벤트|브랜드|컬렉션|시즌|혜택|쿠폰|멤버십|VIP|룩북"],
+      "excludeLinkPatterns": ["#", "mailto:", "login"],
+      "limit": 18
     },
     {
       "name": "카카오 보도자료",
@@ -195,52 +356,14 @@
       "name": "PUBLY",
       "url": "https://publy.co/",
       "category": "global_service_ux",
-      "sourceRole": "reference",
+      "sourceRole": "discovery",
+      "publishStatus": "reference_only",
       "locale": "KR",
       "topics": ["product", "planning", "growth"],
       "includeLinkPatterns": ["publy\\.co/(content|article|posts?)/"],
       "includeTitlePatterns": ["서비스|기획|PM|프로덕트|성장|리텐션|구독|고객|UX|커머스|전환"],
       "excludeLinkPatterns": ["#", "mailto:", "login", "signup"],
-      "limit": 16
-    },
-    {
-      "name": "Careet",
-      "url": "https://www.careet.net/",
-      "category": "trend_curation",
-      "sourceRole": "discovery",
-      "publishStatus": "reference_only",
-      "locale": "KR",
-      "topics": ["trend", "content", "generation"],
-      "includeLinkPatterns": ["careet\\.net"],
-      "includeTitlePatterns": ["트렌드|MZ|Z세대|밈|브랜드|마케팅|서비스|커뮤니티|SNS|인스타그램|틱톡"],
-      "excludeLinkPatterns": ["#", "mailto:", "login", "signup"],
-      "limit": 12
-    },
-    {
-      "name": "The Edit - 까탈로그",
-      "url": "http://the-edit.co.kr/newsletter",
-      "category": "trend_curation",
-      "sourceRole": "discovery",
-      "publishStatus": "reference_only",
-      "locale": "KR",
-      "topics": ["lifestyle", "commerce", "curation"],
-      "includeLinkPatterns": ["the-edit\\.co\\.kr"],
-      "includeTitlePatterns": ["까탈로그|신제품|브랜드|서비스|라이프|취향|라이프스타일|커뮤니티|디바이스"],
-      "excludeLinkPatterns": ["#", "mailto:", "login", "signup"],
-      "limit": 12
-    },
-    {
-      "name": "돈 밝히는 여자 Cathy",
-      "url": "https://maily.so/cathyxcash",
-      "category": "trend_curation",
-      "sourceRole": "discovery",
-      "publishStatus": "reference_only",
-      "locale": "KR",
-      "topics": ["business", "commerce", "brand"],
-      "includeLinkPatterns": ["maily\\.so/cathyxcash"],
-      "includeTitlePatterns": ["회사|브랜드|재무|비즈니스|커머스|플랫폼|실적|성장"],
-      "excludeLinkPatterns": ["#", "mailto:", "login", "signup"],
-      "limit": 12
+      "limit": 10
     }
   ]
 }

@@ -16,6 +16,21 @@
       ]
     },
     {
+      "name": "pxd story",
+      "url": "https://story.pxd.co.kr/",
+      "rss": "https://pxdstory.tistory.com/rss",
+      "category": "kr_uiux_media",
+      "sourceRole": "reference",
+      "locale": "KR",
+      "topics": ["UIUX", "Korean Design", "Case Study", "Design System", "AI Tools"],
+      "includeTitlePatterns": [
+        "UI|UX|디자인|브랜드|서비스|앱|웹|리뉴얼|개편|사례|경험|트렌드|콘텐츠|컴포넌트|시스템|에이전트|AI|MCP|shadcn|toolkit|프로토타이핑|리서치"
+      ],
+      "excludeTitlePatterns": [
+        "채용|교육|수강|세미나|부트캠프"
+      ]
+    },
+    {
       "name": "Figma Releases",
       "url": "https://figmareleases.blogspot.com/",
       "rss": "https://figmareleases.blogspot.com/feeds/posts/default",
@@ -24,7 +39,7 @@
       "locale": "global",
       "topics": ["Figma", "Design Tool", "Workflow"],
       "includeTitlePatterns": [
-        "design|component|variable|token|library|prototype|sites|make|slides|workflow|AI"
+        "design|component|variable|token|library|prototype|sites|make|slides|workflow|AI|dev mode"
       ]
     },
     {
@@ -51,7 +66,7 @@
         "ux|ui|design|research|usability|interface|pattern|content|design system|layout|typography|brand"
       ],
       "excludeTitlePatterns": [
-        "css|javascript|frontend|performance|browser|react|vue|node"
+        "css|javascript|frontend|performance|browser|react|vue|node|accessibility implementation|aria|wcag implementation"
       ]
     },
     {
@@ -67,18 +82,33 @@
       ]
     },
     {
-      "name": "pxd story",
-      "url": "https://story.pxd.co.kr/",
-      "rss": "https://pxdstory.tistory.com/rss",
-      "category": "kr_uiux_media",
+      "name": "Typewolf",
+      "url": "https://www.typewolf.com/",
+      "rss": "https://www.typewolf.com/feed/",
+      "category": "typography_reference",
       "sourceRole": "reference",
+      "locale": "global",
+      "topics": ["Typography", "Web Type", "Site of the Day"]
+    },
+    {
+      "name": "Brand New",
+      "url": "https://www.underconsideration.com/brandnew/",
+      "rss": "https://feeds.feedburner.com/underconsideration/brandnew",
+      "category": "brand_expression",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": ["Brand Identity", "Logo", "Rebranding"]
+    },
+    {
+      "name": "Toss Tech (Design tag)",
+      "url": "https://toss.tech/",
+      "rss": "https://toss.tech/rss.xml",
+      "category": "kr_uiux_case",
+      "sourceRole": "official",
       "locale": "KR",
-      "topics": ["UIUX", "Korean Design", "Case Study", "Design System", "AI Tools"],
+      "topics": ["Toss", "Design System", "Service Design"],
       "includeTitlePatterns": [
-        "UI|UX|디자인|브랜드|서비스|앱|웹|리뉴얼|개편|사례|경험|트렌드|콘텐츠|컴포넌트|시스템|에이전트|AI|MCP|shadcn|toolkit|프로토타이핑|리서치"
-      ],
-      "excludeTitlePatterns": [
-        "채용|교육|수강|세미나|부트캠프"
+        "디자인 시스템|design system|컴포넌트|component|토큰|디자인-코드|핸드오프|UI 라이브러리|타이포|컬러|모션|아이콘|일러스트|디자인 가이드|브랜드 시스템|디자인 운영|디자인 워크플로우"
       ]
     }
   ],
@@ -108,6 +138,19 @@
         "One UI|UX|UI|Interaction|인터랙션|디자인|경험|모션|가이드|스토리"
       ],
       "excludeLinkPatterns": ["#", "mailto:", "/download/"],
+      "limit": 12
+    },
+    {
+      "name": "Design Spectrum",
+      "url": "https://designspectrum.org/",
+      "category": "kr_uiux_media",
+      "sourceRole": "reference",
+      "locale": "KR",
+      "includeLinkPatterns": ["designspectrum\\.org/"],
+      "includeTitlePatterns": [
+        "디자인|UX|UI|브랜드|시스템|컴포넌트|리서치|콘텐츠|타이포|컬러|레퍼런스|사례|경험|커뮤니티|컨퍼런스|Spectrum"
+      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/login", "/sign", "/cdn-cgi/"],
       "limit": 12
     },
     {
@@ -151,75 +194,29 @@
       "limit": 12
     },
     {
-      "name": "Musinsa Newsroom - Campaigns",
-      "url": "https://newsroom.musinsa.com/",
-      "category": "kr_promotion_design",
-      "sourceRole": "reference",
-      "locale": "KR",
-      "includeLinkPatterns": ["newsroom\\.musinsa\\.com/newsroom-menu/"],
+      "name": "Mobbin",
+      "url": "https://mobbin.com/browse/ios/apps",
+      "category": "ux_pattern_reference",
+      "sourceRole": "inspiration",
+      "locale": "global",
+      "includeLinkPatterns": ["mobbin\\.com/(?:apps|flows|elements|screens)/"],
       "includeTitlePatterns": [
-        "무신사|29CM|기획전|캠페인|팝업|쇼케이스|룩북|컬렉션|브랜드|이벤트|프로모션|라이브|오프라인"
+        "app|flow|onboarding|checkout|search|profile|home|browse|signup|payment|cart|empty|paywall|settings|filter"
       ],
-      "excludeLinkPatterns": ["#", "mailto:", "/tag/"],
+      "excludeLinkPatterns": ["#", "mailto:", "/login", "/pricing", "/categories/"],
       "limit": 18
     },
     {
-      "name": "29CM - Special Order",
-      "url": "https://shop.29cm.co.kr/special-order",
-      "category": "kr_commerce_design",
+      "name": "Page Flows",
+      "url": "https://pageflows.com/",
+      "category": "ux_pattern_reference",
       "sourceRole": "inspiration",
-      "locale": "KR",
-      "includeLinkPatterns": ["29cm\\.co\\.kr"],
+      "locale": "global",
+      "includeLinkPatterns": ["pageflows\\.com/(?:recordings|patterns|companies|flow)/"],
       "includeTitlePatterns": [
-        "기획전|스페셜|오더|브랜드|컬렉션|룩북|취향|시즌|프로모션|이벤트|쇼케이스"
+        "onboarding|signup|checkout|payment|search|filter|empty|paywall|cancellation|cart|password|profile|invite|flow"
       ],
-      "excludeLinkPatterns": ["#", "mailto:", "/login", "/member"],
-      "limit": 18
-    },
-    {
-      "name": "Olive Young - Events",
-      "url": "https://www.oliveyoung.co.kr/store/main/getEventList.do",
-      "category": "kr_promotion_design",
-      "sourceRole": "inspiration",
-      "locale": "KR",
-      "includeLinkPatterns": ["oliveyoung\\.co\\.kr"],
-      "includeTitlePatterns": [
-        "이벤트|기획전|세일|쿠폰|혜택|브랜드|캠페인|프로모션|라이브|올영"
-      ],
-      "excludeLinkPatterns": ["#", "mailto:", "login"],
-      "excludeTitlePatterns": ["^올리브영 온라인몰$", "^기획전$", "^세일$", "^멤버십/쿠폰$", "^이벤트$"],
-      "limit": 18
-    },
-    {
-      "name": "W Concept - Events",
-      "url": "https://www.wconcept.co.kr/Event",
-      "category": "kr_promotion_design",
-      "sourceRole": "inspiration",
-      "locale": "KR",
-      "includeLinkPatterns": ["wconcept\\.co\\.kr"],
-      "includeTitlePatterns": [
-        "이벤트|기획전|세일|쿠폰|혜택|브랜드|캠페인|프로모션|룩북|컬렉션"
-      ],
-      "excludeLinkPatterns": ["#", "mailto:", "login"],
-      "limit": 18
-    },
-    {
-      "name": "SSG - Events",
-      "url": "https://www.ssg.com/event/eventMain.ssg",
-      "category": "kr_promotion_design",
-      "sourceRole": "inspiration",
-      "locale": "KR",
-      "includeLinkPatterns": ["ssg\\.com|event\\.ssg\\.com"],
-      "includeTitlePatterns": [
-        "이벤트|기획전|쓱데이|세일|쿠폰|혜택|브랜드|캠페인|프로모션|라이브"
-      ],
-      "excludeLinkPatterns": ["#", "mailto:", "login"],
-      "excludeTitlePatterns": [
-        "^이벤트/쿠폰, 믿고 사는 즐거움 SSG\\.COM$",
-        "^브랜드관, 믿고 사는 즐거움 SSG\\.COM$",
-        "^이벤트/쿠폰 > 모든이벤트",
-        "^이벤트/쿠폰 > 이벤트 안내 페이지$"
-      ],
+      "excludeLinkPatterns": ["#", "mailto:", "/login", "/pricing", "/plans"],
       "limit": 18
     },
     {
@@ -249,43 +246,30 @@
       "limit": 24
     },
     {
-      "name": "Land-book",
-      "url": "https://land-book.com/",
+      "name": "Lapa Ninja",
+      "url": "https://www.lapa.ninja/",
       "category": "landing_reference",
       "sourceRole": "inspiration",
       "locale": "global",
-      "includeLinkPatterns": ["land-book\\.com/(?:websites|site|gallery|showcase)/"],
+      "includeLinkPatterns": ["lapa\\.ninja/(?:design|category|page)/"],
       "includeTitlePatterns": [
-        "landing|website|saas|commerce|portfolio|agency|product|startup|brand|app"
+        "landing|saas|portfolio|product|brand|app|startup|agency|commerce"
       ],
-      "excludeLinkPatterns": ["#", "mailto:", "/pricing", "/login", "/sign"],
-      "limit": 24
+      "excludeLinkPatterns": ["#", "mailto:", "/pricing", "/login", "/sign", "/templates"],
+      "limit": 18
     },
     {
-      "name": "Godly",
-      "url": "https://godly.website/",
-      "category": "web_reference",
+      "name": "Cosmos",
+      "url": "https://www.cosmos.so/",
+      "category": "visual_trend",
       "sourceRole": "inspiration",
       "locale": "global",
-      "includeLinkPatterns": ["godly\\.website/(?:website|websites|site)/"],
+      "includeLinkPatterns": ["cosmos\\.so/(?:c|p|e)/"],
       "includeTitlePatterns": [
-        "website|landing|portfolio|product|brand|studio|saas|commerce|app|design"
+        "design|inspiration|brand|web|typography|color|graphic|editorial|illustration|3d|motion"
       ],
-      "excludeLinkPatterns": ["#", "mailto:", "/pricing", "/submit"],
-      "limit": 24
-    },
-    {
-      "name": "Httpster",
-      "url": "https://httpster.net/",
-      "category": "web_reference",
-      "sourceRole": "inspiration",
-      "locale": "global",
-      "includeLinkPatterns": ["httpster\\.net/"],
-      "includeTitlePatterns": [
-        "website|portfolio|studio|agency|brand|shop|commerce|editorial|product|design"
-      ],
-      "excludeLinkPatterns": ["#", "mailto:", "/about", "/submit"],
-      "limit": 24
+      "excludeLinkPatterns": ["#", "mailto:", "/login", "/sign", "/extension"],
+      "limit": 18
     },
     {
       "name": "The Brand Identity",
@@ -335,7 +319,7 @@
       "locale": "global",
       "includeLinkPatterns": ["figma\\.com/blog/"],
       "includeTitlePatterns": [
-        "design system|design systems|component|token|variable|library|documentation|workflow|handoff|prototype|AI"
+        "design system|design systems|component|token|variable|library|documentation|workflow|handoff|prototype|AI|dev mode"
       ],
       "excludeLinkPatterns": ["#", "mailto:", "/tag/", "/authors/"],
       "limit": 12
@@ -378,19 +362,6 @@
       ],
       "excludeLinkPatterns": ["#", "mailto:", "/tag/", "/authors/"],
       "limit": 12
-    },
-    {
-      "name": "Webflow Showcase",
-      "url": "https://webflow.com/made-in-webflow",
-      "category": "web_reference",
-      "sourceRole": "inspiration",
-      "locale": "global",
-      "includeLinkPatterns": ["webflow\\.com/made-in-webflow/"],
-      "includeTitlePatterns": [
-        "website|portfolio|landing|agency|brand|commerce|shop|product|startup|studio"
-      ],
-      "excludeLinkPatterns": ["#", "mailto:", "/marketplace", "/templates", "/popular"],
-      "limit": 24
     },
     {
       "name": "Canva Newsroom",

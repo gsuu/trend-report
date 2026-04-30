@@ -30,24 +30,33 @@
 
 ### Design ([design-sources.json](../news-tracking/design-sources.json))
 
+Design 3축 — 한국 UIUX 사례 / 글로벌 시각 표현·UX 패턴 / 디자인 도구·시스템 (디자이너 워크플로우)
+
 | 소스 | 유형 | 특성 |
 |------|------|------|
-| DIGITAL iNSIGHT, 디자인 컴파스, 디자인플러스 | RSS / 페이지 | 한국 UIUX 매거진 |
-| Smashing Magazine, NN/g, Figma Blog, Adobe Blog | RSS | 글로벌 디자인 가이드/사례 |
-| pxd story (story.pxd.co.kr) | RSS | 한국 UIUX 컨설팅의 케이스 스터디·AI 도구 적용기 |
-| It's Nice That, The Brand Identity, Muzli, Awwwards | 페이지 | 글로벌 브랜드 아이덴티티·웹 레퍼런스 |
-| Webflow Blog/Showcase, Framer Updates, Canva Newsroom | 페이지 | 디자인 도구 업데이트·쇼케이스 |
+| DIGITAL iNSIGHT, pxd story, 디자인스펙트럼, Design Compass, DesignDB | RSS / 페이지 | 한국 UIUX 매거진 |
+| 토스 디자인, 카카오 디자인, 라인 디자인, 삼성 디자인 | 페이지 | 한국 서비스의 디자인 케이스 |
+| Awwwards, Siteinspire, Lapa Ninja, Cosmos | 페이지 | 글로벌 웹·랜딩·인스피레이션 |
+| Mobbin, Page Flows | 페이지 | 모바일 앱 UX 패턴 |
+| It's Nice That, The Brand Identity, Brand New, Muzli, Fonts In Use, Typewolf | 페이지 / RSS | 브랜드·타이포·시각 트렌드 |
+| Smashing UX, NN/g, Figma DS, Into Design Systems | RSS / 페이지 | UX 가이드·디자인 시스템 거버넌스 |
+| Figma Releases, Adobe Blog, Framer Updates, Webflow Blog, Canva Newsroom | RSS / 페이지 | 디자이너 워크플로우 도구 |
 
 ### DEV ([dev-sources.json](../news-tracking/dev-sources.json))
 
+DEV 4축 — 프론트엔드 표준·브라우저 / UIUX 구현·접근성 / AI 코딩·도구 / 디자인 시스템 자동화
+
 | 소스 | 유형 | 특성 |
 |------|------|------|
-| Frontend Focus, CSS Weekly, JavaScript Weekly | RSS | 큐레이션 뉴스레터 — 후보 발견 출처로만 사용 |
-| Smashing Magazine, CSS-Tricks, web.dev | RSS | 가이드·기술 글 |
-| WebKit Blog, MDN Blog | RSS | 브라우저·표준 릴리즈 노트 |
-| Chrome for Developers | 페이지 | 브라우저 릴리즈 (RSS 미확인) |
-| Syntax.fm, ShopTalk Show, The Changelog | RSS | 팟캐스트 |
-| Dev.to Accessibility | RSS | 접근성 |
+| GeekNews | RSS | 한국 개발자 큐레이션 (프론트엔드/AI 신호 강함) |
+| Frontend Focus, CSS Weekly, JavaScript Weekly | RSS | 글로벌 큐레이션 뉴스레터 |
+| Smashing Magazine, CSS-Tricks, web.dev, Frontend Masters | RSS / 페이지 | 가이드·실무 글 |
+| WebKit Blog, MDN Blog, Chrome for Developers | RSS / 페이지 | 브라우저·표준 릴리즈 |
+| Vercel, Astro, React, Svelte | RSS | 프론트엔드 프레임워크 공식 |
+| Anthropic, OpenAI, GitHub Copilot/Changelog, Cursor, v0, Replit | RSS / 페이지 | AI 코딩 도구 |
+| Storybook, shadcn/ui releases, Builder.io | RSS / 페이지 | 디자인 시스템 자동화 |
+| Sara Soueidan, Adrian Roselli, Scott O'Hara, A11y Project, Deque | RSS | 접근성 |
+| Naver D2, KakaoEnt FE, Line Engineering KR | RSS | 한국 프론트엔드 블로그 |
 
 ## 수동 monitoring 체크리스트
 

@@ -1,9 +1,12 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-export const FEED_TIMEOUT_MS = 15000;
-export const PAGE_TIMEOUT_MS = 15000;
+export const FEED_TIMEOUT_MS = 25000;
+export const PAGE_TIMEOUT_MS = 25000;
 export const BOOTSTRAP_DAYS = 7;
+export const FETCH_RETRY_COUNT = 3;
+export const FETCH_RETRY_BASE_DELAY_MS = 1500;
+export const BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 
 export function outputDate() {
   return (process.env.TRACKING_OUTPUT_DATE || new Date().toISOString().slice(0, 10)).trim();
@@ -129,13 +132,37 @@ export function articleContent(item, limit = 520) {
   return shortText(item.contentSnippet || item["content:encoded"] || item.content || "", limit);
 }
 
-export async function fetchText(url, timeoutMs, userAgent) {
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function fetchTextOnce(url, timeoutMs, userAgent) {
   const response = await fetch(url, {
     signal: AbortSignal.timeout(timeoutMs),
-    headers: { "User-Agent": userAgent },
+    headers: {
+      "User-Agent": userAgent || BROWSER_UA,
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,application/rss+xml;q=0.9,*/*;q=0.8",
+      "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+    },
+    redirect: "follow",
   });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   return response.text();
+}
+
+export async function fetchText(url, timeoutMs, userAgent) {
+  let lastError;
+  for (let attempt = 0; attempt < FETCH_RETRY_COUNT; attempt += 1) {
+    try {
+      return await fetchTextOnce(url, timeoutMs, userAgent);
+    } catch (error) {
+      lastError = error;
+      if (attempt < FETCH_RETRY_COUNT - 1) {
+        await sleep(FETCH_RETRY_BASE_DELAY_MS * (attempt + 1));
+      }
+    }
+  }
+  throw lastError;
 }
 
 export async function fetchArticleMeta(url, { timeoutMs = PAGE_TIMEOUT_MS, userAgent, textLimit = 520 } = {}) {
