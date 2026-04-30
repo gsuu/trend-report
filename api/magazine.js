@@ -1,4 +1,4 @@
-import { fetchMagazineReport } from "../scripts/legacy/fetch_notion.mjs";
+import { fetchMagazineReport } from "../scripts/notion/fetch_notion.mjs";
 
 const cacheTtl = 5 * 60 * 1000;
 const staleTtl = 15 * 60 * 1000;

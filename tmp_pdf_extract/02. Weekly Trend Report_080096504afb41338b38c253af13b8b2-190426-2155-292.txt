@@ -1,0 +1,30 @@
+--- PAGE 1 ---
+02. Weekly Trend Report
+ 개요
+일본(JP) 및 한국(KR)의 주요 이커머스·뷰티 플랫폼에서 발생한 UI/UX 변경, AI 신기능, 뷰티 카테고리 이슈 등을 매주 수집·정리합니다.
+Product 팀이 경쟁 서비스 동향을 빠르게 파악하고 서비스 기획에 활용할 수 있도록 제공합니다.
+ 목적
+JP/KR 이커머스 플랫폼의 최신 업데이트를 주 1회 정기 모니터링
+UI/UX 변경·AI 도입·신기능 사례를 Product 팀 관점으로 해석
+경쟁 서비스 대비 기획 아이디어 발굴 및 벤치마킹 자료 축적
+ 대상 플랫폼
+국가 플랫폼
+일본 (6개) Rakuten Ichiba · Amazon Japan · Yahoo! Shopping · @cosme · ZOZOTOWN · Amazon Beauty Japan
+한국 (9개) 올리브영 · 화해 · 쿠팡 · SSG.COM · 롯데ON · 당근마켓 · 무신사 · 네이버 플러스 스토어 · G마켓
+ 진행 방법
+단계 내용
+1. 정보 수집 앱스토어 릴리즈 노트(iOS/Android), 공식 블로그·프레스룸, 주요 IT 미디어 (매일경제, 한경, IT조선, ITmedia 등)
+2. 이슈 선정 TOP 5 (JP 최소 2개 + KR 최소 2개) — 우선순위: ① UI/UX 변경 ② AI 활용 ③ 뷰티 카테고리 ④ 앱 신기능
+3. 리포트 작성 플랫폼별 변경 전/후 비교, 수치 포함, Product 팀 포인트 (우리 서비스 적용 가능성) 명시
+JP/KR 주요 이커머스 플랫폼의 주간 업데이트를 정리하는 트렌드 리포트입니다.
+매주 월요일 기준으로 작성되며, 하위 페이지에 주차별 리포트가 누적됩니다.
+
+--- PAGE 2 ---
+4. Wiki 발행 이 페이지 하위에 주차별 리포트 페이지 생성 (제목 형식: )[YYYY-MM-DD] JP/KR Weekly Trend Report
+ 발행 주기
+매주  기준 작성 및 발행월요일
+ 리포트 목록
+하위 페이지에서 주차별 리포트를 확인할 수 있습니다.
+[2026-04-20] JP/KR Weekly Trend Report
+[2026-04-13] JP/KR Weekly Trend Report
+[2026-04-07] JP/KR Weekly Trend Report

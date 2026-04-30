@@ -18,3 +18,11 @@ news-tracking/selected/
 news-tracking/review/
 reports/*-tracking-upload-report.md
 .vercel
+
+# Trend collect preview (API 키 없이 검증용)
+src/data/preview/
+src/data/report.preview.json
+package.json.test
+
+# Manual AI mode 임시 작업 폴더
+tmp/collect/

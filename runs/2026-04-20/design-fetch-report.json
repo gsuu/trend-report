@@ -1,0 +1,239 @@
+{
+  "date": "2026-04-20",
+  "sourceFile": "news-tracking/design-sources.json",
+  "totalArticles": 28,
+  "sourceResults": [
+    {
+      "name": "DIGITAL iNSIGHT",
+      "type": "feed",
+      "url": "https://ditoday.com/feed/",
+      "status": "ok",
+      "count": 6,
+      "error": ""
+    },
+    {
+      "name": "Figma Releases",
+      "type": "feed",
+      "url": "https://figmareleases.blogspot.com/feeds/posts/default",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Adobe Blog",
+      "type": "feed",
+      "url": "https://blog.adobe.com/feed.xml",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Smashing Magazine - UX Design",
+      "type": "feed",
+      "url": "https://www.smashingmagazine.com/feed/",
+      "status": "ok",
+      "count": 2,
+      "error": ""
+    },
+    {
+      "name": "Nielsen Norman Group",
+      "type": "feed",
+      "url": "https://www.nngroup.com/feed/rss/",
+      "status": "ok",
+      "count": 2,
+      "error": ""
+    },
+    {
+      "name": "DIGITAL iNSIGHT - UIUX",
+      "type": "page",
+      "url": "https://ditoday.com/ui-ux/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Samsung Design - UXUI",
+      "type": "page",
+      "url": "https://design.samsung.com/kr/explore/?tag=UXUI",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "DesignDB - Design News",
+      "type": "page",
+      "url": "https://www.designdb.com/?menuno=792",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Design Compass",
+      "type": "page",
+      "url": "https://designcompass.org/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Design X Blog",
+      "type": "page",
+      "url": "https://design-x.kr/blog",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Musinsa Newsroom - Campaigns",
+      "type": "page",
+      "url": "https://newsroom.musinsa.com/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "29CM - Special Order",
+      "type": "page",
+      "url": "https://shop.29cm.co.kr/special-order",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Olive Young - Events",
+      "type": "page",
+      "url": "https://www.oliveyoung.co.kr/store/main/getEventList.do",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "W Concept - Events",
+      "type": "page",
+      "url": "https://www.wconcept.co.kr/Event",
+      "status": "error",
+      "count": 0,
+      "error": "HTTP 500"
+    },
+    {
+      "name": "SSG - Events",
+      "type": "page",
+      "url": "https://www.ssg.com/event/eventMain.ssg",
+      "status": "ok",
+      "count": 4,
+      "error": ""
+    },
+    {
+      "name": "Awwwards - Websites",
+      "type": "page",
+      "url": "https://www.awwwards.com/websites/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Siteinspire",
+      "type": "page",
+      "url": "https://www.siteinspire.com/",
+      "status": "error",
+      "count": 0,
+      "error": "HTTP 429"
+    },
+    {
+      "name": "Land-book",
+      "type": "page",
+      "url": "https://land-book.com/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Godly",
+      "type": "page",
+      "url": "https://godly.website/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Httpster",
+      "type": "page",
+      "url": "https://httpster.net/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "The Brand Identity",
+      "type": "page",
+      "url": "https://the-brandidentity.com/",
+      "status": "ok",
+      "count": 11,
+      "error": ""
+    },
+    {
+      "name": "It's Nice That",
+      "type": "page",
+      "url": "https://www.itsnicethat.com/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Muzli",
+      "type": "page",
+      "url": "https://muz.li/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Figma Blog - Design Systems",
+      "type": "page",
+      "url": "https://www.figma.com/blog/design-systems/",
+      "status": "ok",
+      "count": 11,
+      "error": ""
+    },
+    {
+      "name": "Into Design Systems",
+      "type": "page",
+      "url": "https://www.intodesignsystems.com/blog",
+      "status": "ok",
+      "count": 2,
+      "error": ""
+    },
+    {
+      "name": "Framer Updates",
+      "type": "page",
+      "url": "https://www.framer.com/updates/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Webflow Blog",
+      "type": "page",
+      "url": "https://webflow.com/blog",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Webflow Showcase",
+      "type": "page",
+      "url": "https://webflow.com/made-in-webflow",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Canva Newsroom",
+      "type": "page",
+      "url": "https://www.canva.com/newsroom/news/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    }
+  ]
+}

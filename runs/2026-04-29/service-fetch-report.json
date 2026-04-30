@@ -1,0 +1,143 @@
+{
+  "date": "2026-04-29",
+  "sourceFile": "news-tracking/service-sources.json",
+  "totalArticles": 0,
+  "sourceResults": [
+    {
+      "name": "신세계그룹 뉴스룸",
+      "type": "feed",
+      "url": "https://www.shinsegaegroupnewsroom.com/feed/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "쿠팡 뉴스룸",
+      "type": "feed",
+      "url": "https://news.coupang.com/feed/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "컬리 뉴스룸",
+      "type": "feed",
+      "url": "https://newsroom.kurlycorp.com/feed/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "오늘의집 뉴스룸",
+      "type": "feed",
+      "url": "https://ohstory.io/feed/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "네이버 보도자료",
+      "type": "feed",
+      "url": "https://www.navercorp.com/api/article/naver/rss",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "오픈서베이 블로그",
+      "type": "feed",
+      "url": "https://blog.opensurvey.co.kr/feed/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Spotify Newsroom",
+      "type": "feed",
+      "url": "https://newsroom.spotify.com/feed/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "무신사 뉴스룸",
+      "type": "page",
+      "url": "https://newsroom.musinsa.com/news",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "카카오스타일 파트너라운지",
+      "type": "page",
+      "url": "https://partner.kakaostyle.com/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "CJ올리브영 뉴스룸",
+      "type": "page",
+      "url": "https://corp.oliveyoung.com/ko/news",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "카카오 보도자료",
+      "type": "page",
+      "url": "https://www.kakaocorp.com/page",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "당근 보도자료",
+      "type": "page",
+      "url": "https://about.daangn.com/company/pr/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "야놀자 보도자료",
+      "type": "page",
+      "url": "https://www.yanoljagroup.com/press_release",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "PUBLY",
+      "type": "page",
+      "url": "https://publy.co/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Careet",
+      "type": "page",
+      "url": "https://www.careet.net/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "The Edit - 까탈로그",
+      "type": "page",
+      "url": "http://the-edit.co.kr/newsletter",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "돈 밝히는 여자 Cathy",
+      "type": "page",
+      "url": "https://maily.so/cathyxcash",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    }
+  ]
+}

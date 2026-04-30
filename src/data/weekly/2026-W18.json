@@ -1,0 +1,2400 @@
+{
+  "slug": "2026-W18",
+  "title": "CTTD Trend Magazine — 2026-W18",
+  "description": "2026-W18 주간 트렌드 매거진 (Service / Design / DEV)",
+  "weekLabel": "2026년 18주차",
+  "publishedAt": "2026-04-29",
+  "issues": [
+    {
+      "number": "01",
+      "route": "/articles/01",
+      "id": "ditoday-3b0e1df8",
+      "platform": "DIGITAL iNSIGHT",
+      "areaKey": "design",
+      "area": "Design",
+      "categoryKey": "ai-design",
+      "category": "AI 디자인",
+      "date": "2026-04-29",
+      "image": "https://ditoday.com/wp-content/uploads/2026/04/image-29-11.jpg",
+      "imageCaption": "",
+      "tags": [
+        "ChatGPT이미지",
+        "디자이너사용기",
+        "시안작업",
+        "AI리뷰"
+      ],
+      "takeawayHtml": "챗GPT 이미지 2.0, 디자이너가 직접 써봤습니다",
+      "deckHtml": "DIGITAL iNSIGHT의 디자이너가 ChatGPT 이미지 2.0을 실무 시안에 직접 써본 1차 후기예요. 컨셉 시안과 인포그래픽 초안 단계에서 사람 손을 어디까지 줄일 수 있는지 — 우리 시안 워크플로우에 바로 영향을 줄 수 있는 내용이에요.",
+      "sourceUrl": "https://ditoday.com/%ec%b1%97gpt-%ec%9d%b4%eb%af%b8%ec%a7%80-2-0-%eb%94%94%ec%9e%90%ec%9d%b4%eb%84%88%ea%b0%80-%ec%a7%81%ec%a0%91-%ec%8d%a8%eb%b4%a4%ec%8a%b5%eb%8b%88%eb%8b%a4/",
+      "sourceTitle": "DIGITAL iNSIGHT",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "디자이너가 직접 ChatGPT 이미지 2.0을 사용해 본 1차 후기로, '편집 없이 실사용 가능한 수준일까'라는 질문을 중심에 둡니다."
+            },
+            {
+              "kind": "list",
+              "html": "한국어 디자이너 시점에서 작성된 사용기라 한국 시안 작업 맥락에 그대로 비교하기 좋아요."
+            }
+          ]
+        },
+        {
+          "title": "디자이너·기획자 관점에서 봐야 할 곳",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "킥오프 단계 1차 시안: 클라이언트 컨셉 회의에서 의견 발산용으로 쓰면 시간을 가장 많이 줄일 수 있는 구간입니다."
+            },
+            {
+              "kind": "list",
+              "html": "디테일 단계: 브랜드 컬러·타입 일관성은 여전히 사람 손이 들어가야 한다는 점을 클라이언트와 견적 단계에서 먼저 합의해 두는 편이 분쟁이 적습니다."
+            },
+            {
+              "kind": "list",
+              "html": "원문에서 직접 어떤 한계가 보였는지 확인 후, 사내 가이드 한 페이지로 요약해 두면 신입 디자이너 온보딩에 활용할 만합니다."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>DIGITAL iNSIGHT</strong> — 디지털 마케팅·UIUX·서비스 한국 매체."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://ditoday.com\" target=\"_blank\" rel=\"noopener\">https://ditoday.com</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "02",
+      "route": "/articles/02",
+      "id": "ditoday-21043701",
+      "platform": "DIGITAL iNSIGHT",
+      "areaKey": "design",
+      "area": "Design",
+      "categoryKey": "ai-design",
+      "category": "AI 디자인",
+      "date": "2026-04-29",
+      "image": "https://ditoday.com/wp-content/uploads/2026/04/image-29-4.jpg",
+      "imageCaption": "",
+      "tags": [
+        "클로드디자인",
+        "AI디자인툴",
+        "UIUX실무",
+        "디자인도구"
+      ],
+      "takeawayHtml": "클로드 디자인 등장 — AI가 바꿀 UI·UX 디자인 실무",
+      "deckHtml": "Anthropic의 Claude 기반 디자인 도구가 등장했어요. DIGITAL iNSIGHT가 주요 기능 다섯 가지를 정리해 둬서, 어떤 영역이 우리 디자인 시스템과 겹치는지 빠르게 판단할 수 있어요.",
+      "sourceUrl": "https://ditoday.com/%ed%81%b4%eb%a1%9c%eb%93%9c-%eb%94%94%ec%9e%90%ec%9d%b8-%eb%93%b1%ec%9e%a5-ai%ea%b0%80-%eb%b0%94%ea%bf%80-ui%c2%b7ux-%eb%94%94%ec%9e%90%ec%9d%b8-%ec%8b%a4%eb%ac%b4/",
+      "sourceTitle": "DIGITAL iNSIGHT",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "Claude Design의 주요 기능 5가지가 정리되어 있어, 도구 비교표를 빠르게 갱신할 때 좋은 1차 자료입니다."
+            },
+            {
+              "kind": "list",
+              "html": "AI 디자인 도구 시장이 'UI·UX 디자인 실무'까지 들어왔다는 흐름의 대표적 신호로 다뤄지고 있어요."
+            }
+          ]
+        },
+        {
+          "title": "도구 채택 시 체크포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "디자인 시스템 호환: 자사 토큰·컴포넌트 라이브러리를 그대로 입력으로 받을 수 있는지가 1차 평가 기준입니다."
+            },
+            {
+              "kind": "list",
+              "html": "결과 포맷: Figma export, 코드 export, 이미지 중 어느 단계에서 결과를 받게 되는지에 따라 디자이너→퍼블리셔 핸드오프 비용이 달라져요."
+            },
+            {
+              "kind": "list",
+              "html": "라이선스/저작권: B2B 클라이언트 산출물에 사용 가능한지 라이선스 조항부터 확인하고 도입 여부를 결정합니다."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>DIGITAL iNSIGHT</strong> — 디지털 마케팅·UIUX·서비스 한국 매체."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://ditoday.com\" target=\"_blank\" rel=\"noopener\">https://ditoday.com</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "03",
+      "route": "/articles/03",
+      "id": "nngroup-07542767",
+      "platform": "Nielsen Norman Group",
+      "areaKey": "design",
+      "area": "Design",
+      "categoryKey": "ux-guideline",
+      "category": "UX 가이드라인",
+      "date": "2026-04-29",
+      "image": "https://media.nngroup.com/media/articles/opengraph_images/10_Guidelines-Cards.png",
+      "imageCaption": "",
+      "tags": [
+        "AI챗봇",
+        "사이트UX",
+        "대화형UI",
+        "프롬프트설계"
+      ],
+      "takeawayHtml": "사이트의 AI 챗봇 디자인 10가지 가이드라인",
+      "deckHtml": "Nielsen Norman Group이 사이트에 AI 챗봇을 붙일 때 따라야 할 10가지를 짚었어요. 핵심은 '챗봇이 자기 능력 범위와 사용자 위치를 빨리 시그널해야 한다'는 거예요. 한국 커머스에서 챗봇 첫 화면을 설계할 때 출발점으로 좋아요.",
+      "sourceUrl": "https://www.nngroup.com/articles/ai-chatbots-design-guidelines/",
+      "sourceTitle": "Nielsen Norman Group",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "유용한 사이트 챗봇은 자신의 능력 범위를 명확히 알리고, 관련 프롬프트 제안을 보여줍니다."
+            },
+            {
+              "kind": "list",
+              "html": "사용자가 무엇을 보고 있는지(현재 페이지/맥락)를 빠르게 파악하고 있다는 시그널을 줘야 신뢰가 쌓입니다."
+            }
+          ]
+        },
+        {
+          "title": "기획·디자인 적용 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "첫 화면에 '이 챗봇으로 할 수 있는 3가지'를 칩(chip) 형태로 노출하면, 사용자가 입력 부담 없이 첫 클릭을 합니다."
+            },
+            {
+              "kind": "list",
+              "html": "현재 페이지의 상품·콘텐츠 정보를 챗봇이 이미 알고 있다는 표시(예: '이 상품에 대해 묻기')는 이탈을 줄이는 가장 효과적인 패턴입니다."
+            },
+            {
+              "kind": "list",
+              "html": "사람 상담 연결 버튼은 항상 1탭 거리에 노출 — 클라이언트 KPI에 '챗봇 → 상담사 전환율'을 함께 두면 운영이 건강해집니다."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>Nielsen Norman Group</strong> — Jakob Nielsen·Don Norman 설립 UX 리서치 컨설팅."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://www.nngroup.com\" target=\"_blank\" rel=\"noopener\">https://www.nngroup.com</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "04",
+      "route": "/articles/04",
+      "id": "nngroup-12c072db",
+      "platform": "Nielsen Norman Group",
+      "areaKey": "design",
+      "area": "Design",
+      "categoryKey": "ux-research",
+      "category": "UX 리서치",
+      "date": "2026-04-29",
+      "image": "https://media.nngroup.com/media/articles/opengraph_images/Why_User_Panels_Fail-CC.png",
+      "imageCaption": "",
+      "tags": [
+        "UX리서치",
+        "유저패널",
+        "리서치운영",
+        "응답편향"
+      ],
+      "takeawayHtml": "유저 패널은 왜 실패하는가",
+      "deckHtml": "Nielsen Norman Group이 장기 운영 중인 유저 패널이 어떻게 신뢰도를 잃는지 분석했어요. 같은 패널을 오래 쓰면 발생하는 편향과 효율 저하가 정형화돼 있다는 게 핵심이에요.",
+      "sourceUrl": "https://www.nngroup.com/articles/user-panels-fail/",
+      "sourceTitle": "Nielsen Norman Group",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "유저 패널은 운영 시간이 길어질수록 예측 가능한 방식으로 품질이 떨어지고 편향이 들어갑니다."
+            },
+            {
+              "kind": "list",
+              "html": "'반복 응답자화', '활성 사용자 편중', '보상 동기 의존' 같은 양상이 대표적으로 거론돼요."
+            }
+          ]
+        },
+        {
+          "title": "PM·기획자 관점",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "패널 갱신 룰: 분기마다 일정 비율(예: 20%)을 자연 교체하는 운영 정책을 사내 표준으로 정해 둡니다."
+            },
+            {
+              "kind": "list",
+              "html": "신규 표본 보강: 패널 외부 신규 가입자 인터뷰를 정기적으로 병행해 편향을 보정합니다."
+            },
+            {
+              "kind": "list",
+              "html": "보상 설계: 응답 '품질'에 가중치를 둔 보상 구조를 도입하면 응답 성실도가 올라갑니다."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>Nielsen Norman Group</strong> — Jakob Nielsen·Don Norman 설립 UX 리서치 컨설팅."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://www.nngroup.com\" target=\"_blank\" rel=\"noopener\">https://www.nngroup.com</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "05",
+      "route": "/articles/05",
+      "id": "smashing-ux-166ea928",
+      "platform": "Smashing Magazine",
+      "areaKey": "design",
+      "area": "Design",
+      "categoryKey": "team-culture",
+      "category": "팀 컬처",
+      "date": "2026-04-29",
+      "image": "https://files.smashing.media/articles/bug-free-workforce/bug-free-workforce-ai-disrupting-teams.jpg",
+      "imageCaption": "AI가 팀워크를 잠식하는 방식",
+      "tags": [
+        "AI워크플로우",
+        "팀문화",
+        "원격협업",
+        "신뢰"
+      ],
+      "takeawayHtml": "'버그 없는' 팀 — AI 효율이 강한 팀을 만드는 상호작용을 조용히 망가뜨리는 방식",
+      "deckHtml": "Smashing Magazine이 AI 도구가 동료 간 비공식 상호작용을 줄이며 팀 신뢰·소속감·혁신의 토대를 약화시키는 'silent disruption' 현상을 짚었어요. 디자인·개발 협업이 분산된 한국 에이전시에도 직접 시사점이 있어요.",
+      "sourceUrl": "https://smashingmagazine.com/2026/04/bug-free-workforce-ai-disrupting-teams/",
+      "sourceTitle": "Smashing Magazine — UX",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "AI에 즉답을 받게 되면서, '동료에게 살짝 물어보는' 비공식 상호작용이 사라지고 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "그 작은 대화가 신뢰·소속감·암묵지 전수의 통로였다는 점이 연구로 지적돼요."
+            },
+            {
+              "kind": "list",
+              "html": "효율은 오르지만 장기적인 팀 학습 곡선이 무뎌지는 트레이드오프가 함께 옵니다."
+            }
+          ]
+        },
+        {
+          "title": "팀 운영 관점",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "정기 페어링: AI 도구 도입과 함께 '주 1회 페어 디자인·코드리뷰' 같은 의도적 상호작용 슬롯을 캘린더에 박아둡니다."
+            },
+            {
+              "kind": "list",
+              "html": "암묵지 기록: AI에게 자주 묻는 질문을 사내 위키로 끌어내, 신입의 학습 자산으로 전환합니다."
+            },
+            {
+              "kind": "list",
+              "html": "신입 온보딩: '첫 3개월은 AI 대신 사람에게 묻기' 같은 명시적 룰이 도움이 돼요."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>Smashing Magazine</strong> — 프론트엔드·UX 디자인 매거진."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://www.smashingmagazine.com\" target=\"_blank\" rel=\"noopener\">https://www.smashingmagazine.com</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "06",
+      "route": "/articles/06",
+      "id": "smashing-ux-b9ad7dc6",
+      "platform": "Smashing Magazine",
+      "areaKey": "design",
+      "area": "Design",
+      "categoryKey": "design-role",
+      "category": "디자이너 역할",
+      "date": "2026-04-29",
+      "image": "https://files.smashing.media/articles/ux-designer-nightmare-production-ready-becomes-design-deliverable/production-ready-becomes-design-deliverable-ux.jpg",
+      "imageCaption": "Production-Ready가 디자인 결과물이 될 때",
+      "tags": [
+        "UX디자이너",
+        "역할재정의",
+        "AI워크플로우",
+        "디자인엔지니어링"
+      ],
+      "takeawayHtml": "UX 디자이너의 악몽 — '프로덕션 레디'가 디자인 결과물이 될 때",
+      "deckHtml": "Smashing Magazine의 Carrie Webster가 AI로 디자인-엔지니어링 경계가 흐려지면서 'UX 디자이너'의 정의가 바뀌는 현상을 짚었어요. 디자이너가 사용자 경험의 마지막 수호자로 남기 위해 잃지 말아야 할 것이 무엇인지 묻는 글이에요.",
+      "sourceUrl": "https://smashingmagazine.com/2026/04/production-ready-becomes-design-deliverable-ux/",
+      "sourceTitle": "Smashing Magazine — UX",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "AI 도구는 디자이너에게 '바로 동작하는 코드'를 결과물로 요구하기 시작했습니다."
+            },
+            {
+              "kind": "list",
+              "html": "엔지니어링 부담이 디자인 단계로 앞당겨지면, 사용자 관점의 사고 시간이 줄어드는 부작용이 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "필자는 디자이너가 'UX의 가디언'으로서 결정 권한을 유지해야 한다고 주장합니다."
+            }
+          ]
+        },
+        {
+          "title": "에이전시 운영 관점",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "산출물 정의: 견적/계약서의 'UX 산출물' 항목에 사용자 흐름·피드백 루프 같은 비-시각적 작업을 명시해요."
+            },
+            {
+              "kind": "list",
+              "html": "리뷰 게이트: 프로토타입 단계에 '엔지니어 리뷰'와 별도로 'UX 리뷰' 게이트를 분리해 사용자 관점이 묻히지 않도록 합니다."
+            },
+            {
+              "kind": "list",
+              "html": "교육 우선순위: 디자이너 대상 '결정 글쓰기·발표' 트레이닝이 AI 도구 학습보다 우선이 되어야 합니다."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>Smashing Magazine</strong> — 프론트엔드·UX 디자인 매거진."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://www.smashingmagazine.com\" target=\"_blank\" rel=\"noopener\">https://www.smashingmagazine.com</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "07",
+      "route": "/articles/07",
+      "id": "ditoday-6f0e5699",
+      "platform": "네이버",
+      "areaKey": "service",
+      "area": "Service",
+      "categoryKey": "search-ux",
+      "category": "검색 UX",
+      "date": "2026-04-29",
+      "image": "",
+      "imageCaption": "",
+      "tags": [
+        "네이버",
+        "AI탭",
+        "에이전틱검색",
+        "검색UX",
+        "트래픽"
+      ],
+      "takeawayHtml": "에이전틱 검색으로 경험 확대 — 네이버, AI 검색 'AI탭' 베타 출시",
+      "deckHtml": "DIGITAL iNSIGHT에 따르면 네이버가 에이전틱 검색 기반 'AI탭'을 베타로 공개했어요. 일상 궁금증부터 심층 탐색까지 폭넓은 답변을 제공한다는 게 핵심이라, 자연검색 노출에 의존하던 클라이언트 사이트는 트래픽 영향을 직접 받게 돼요.",
+      "sourceUrl": "https://ditoday.com/%ec%97%90%ec%9d%b4%ec%a0%84%ed%8b%b1-%ea%b2%80%ec%83%89%ec%9c%bc%eb%a1%9c-%ea%b2%bd%ed%97%98-%ed%99%95%eb%8c%80-%eb%84%a4%ec%9d%b4%eb%b2%84-ai-%ea%b2%80%ec%83%89-%ec%84%9c%eb%b9%84%ec%8a%a4-ai%ed%83%ad-%eb%b2%a0%ed%83%80-%ec%b6%9c%ec%8b%9c/",
+      "sourceTitle": "DIGITAL iNSIGHT",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "네이버가 통합검색에 AI 답변 영역 'AI탭'을 베타로 추가했습니다."
+            },
+            {
+              "kind": "list",
+              "html": "에이전틱 검색이 강조된 점은, 단순 답변이 아니라 사용자 의도에 따라 후속 행동까지 연결하겠다는 방향성을 드러냅니다."
+            }
+          ]
+        },
+        {
+          "title": "기획·PM이 지금 봐야 할 것",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "유입 추적: GA·네이버 애널리틱스에서 '검색 유입' 카테고리의 CTR·체류시간이 다음 4주 동안 어떻게 변하는지 모니터링합니다."
+            },
+            {
+              "kind": "list",
+              "html": "콘텐츠 구조: AI가 인용하기 좋은 형태로 '핵심 답변 한 줄 → 근거 박스' 패턴을 상세 페이지에 반영하는 것을 검토해요."
+            },
+            {
+              "kind": "list",
+              "html": "메타·구조화 데이터: schema.org Product/FAQ/HowTo 마크업이 빠진 페이지가 있다면 우선순위 작업으로 끌어올려요."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>네이버</strong> — 한국 최대 검색·콘텐츠 플랫폼."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://www.naver.com\" target=\"_blank\" rel=\"noopener\">https://www.naver.com</a>"
+            },
+            {
+              "kind": "list",
+              "html": "iOS 앱: <a href=\"https://apps.apple.com/kr/app/id393499958\" target=\"_blank\" rel=\"noopener\">App Store에서 보기</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "08",
+      "route": "/articles/08",
+      "id": "ditoday-6328d609",
+      "platform": "네이버",
+      "areaKey": "service",
+      "area": "Service",
+      "categoryKey": "trust-safety",
+      "category": "신뢰·안전",
+      "date": "2026-04-29",
+      "image": "https://ditoday.com/wp-content/uploads/2026/04/AI-CLEAN_3.0.jpg",
+      "imageCaption": "",
+      "tags": [
+        "네이버",
+        "AI클린봇",
+        "악성댓글",
+        "커뮤니티UX",
+        "맥락탐지"
+      ],
+      "takeawayHtml": "네이버 'AI 클린봇 3.0', 악성 댓글 대응 강화 발표",
+      "deckHtml": "DIGITAL iNSIGHT에 따르면 네이버가 'AI 클린봇 3.0'으로 악성 댓글 대응을 강화한다고 발표했어요. 키워드 차단을 넘어 맥락 기반 의도 탐지로 넘어간 점이 핵심이라, 후기·댓글·문의 영역을 다루는 한국 서비스 전반의 운영 표준이 한 단계 올라갈 가능성이 커요.",
+      "sourceUrl": "https://ditoday.com/%eb%84%a4%ec%9d%b4%eb%b2%84-ai-%ed%81%b4%eb%a6%b0%eb%b4%87-3-0%ed%86%b5%ed%95%9c-%ec%95%85%ec%84%b1-%eb%8c%93%ea%b8%80-%eb%8c%80%ec%9d%91-%ea%b0%95%ed%99%94-%eb%b0%9c%ed%91%9c/",
+      "sourceTitle": "DIGITAL iNSIGHT",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "키워드 단순 차단이 아닌 '맥락에 따라 악의적 의도 탐지' 방향으로 고도화됐습니다."
+            },
+            {
+              "kind": "list",
+              "html": "댓글뿐 아니라 후기·Q&A 영역도 같은 방식으로 정리되는 흐름이 한국 서비스 전반에 자리 잡고 있어요."
+            }
+          ]
+        },
+        {
+          "title": "기획·운영 적용 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "신고 UI: 사용자가 신고 버튼을 누르기 전에도 'AI가 검수 중'임을 짧게 안내해, 운영 신뢰감을 만듭니다."
+            },
+            {
+              "kind": "list",
+              "html": "오탐 안내: 자동 차단된 글의 작성자에게는 사유와 이의 제기 경로를 명확히 보여주는 알림 화면을 따로 둡니다."
+            },
+            {
+              "kind": "list",
+              "html": "운영 어드민: '자동 차단 사유 분포' 차트를 어드민 대시보드에 두면, 클라이언트가 정책 조정 의사결정을 빠르게 할 수 있어요."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>네이버</strong> — 한국 최대 검색·콘텐츠 플랫폼."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://www.naver.com\" target=\"_blank\" rel=\"noopener\">https://www.naver.com</a>"
+            },
+            {
+              "kind": "list",
+              "html": "iOS 앱: <a href=\"https://apps.apple.com/kr/app/id393499958\" target=\"_blank\" rel=\"noopener\">App Store에서 보기</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "09",
+      "route": "/articles/09",
+      "id": "ohouse-newsroom-7b62a822",
+      "platform": "오늘의집",
+      "areaKey": "service",
+      "area": "Service",
+      "categoryKey": "live-commerce",
+      "category": "라이브커머스",
+      "date": "2026-04-29",
+      "image": "https://ohstory.io/wp-content/uploads/2026/04/%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%9E%90%EB%A3%8C-%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-%EB%9D%BC%EC%9D%B4%EB%B8%8C-1%EB%85%84-%EB%88%84%EC%A0%81-%EC%8B%9C%EC%B2%AD-1400%EB%A7%8C-%EB%8F%8C%ED%8C%8C.jpg",
+      "imageCaption": "",
+      "tags": [
+        "오늘의집",
+        "라이브커머스",
+        "유저콘텐츠",
+        "라이프스타일",
+        "파트너사"
+      ],
+      "takeawayHtml": "오늘의집 라이브 1년, 누적 시청 1,400만 돌파",
+      "deckHtml": "오늘의집 뉴스룸이 라이브 1년 성과를 공개했어요. 누적 시청 1,400만 회를 돌파했고, '유저 콘텐츠 결합한 오늘의집다움'을 차별화 축으로 내세운 점에서, 한국 라이프스타일 커머스 라이브의 표준 패턴이 점차 윤곽을 잡아가고 있어요.",
+      "sourceUrl": "https://ohstory.io/press/pressrelease/15266",
+      "sourceTitle": "오늘의집 뉴스룸",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "출시 1년 누적 시청 1,400만 회 돌파."
+            },
+            {
+              "kind": "list",
+              "html": "차별화 포인트로 '유저 콘텐츠 결합한 오늘의집다움' — 가격 할인이 아닌 라이프스타일 큐레이션이 콘텐츠 축이라는 신호."
+            },
+            {
+              "kind": "list",
+              "html": "파트너사와 동반 성장이 보도자료의 핵심 메시지입니다."
+            }
+          ]
+        },
+        {
+          "title": "라이브 도입 검토 시 체크",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "콘텐츠 결합: 자사 라이브에 '유저 후기·사진' 같은 UGC를 같이 노출하는 패턴은 단순 상품 소개 대비 체류시간을 늘릴 수 있는 강한 카드입니다."
+            },
+            {
+              "kind": "list",
+              "html": "퍼블리싱: 라이브 영상 위에 떠다니는 상품 카드의 가림 면적·자동 숨김 타이밍을 디자인 단계에서 정의해 두지 않으면 모바일 시청 경험이 망가집니다."
+            },
+            {
+              "kind": "list",
+              "html": "VOD 전환 동선: 라이브 종료 후 다시보기 진입 알림·딥링크 설계가 누적 시청수를 끌어올리는 핵심 레버리지입니다."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>오늘의집</strong> — 라이프스타일 커머스 — 인테리어 콘텐츠·UGC 결합 쇼핑."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://ohou.se\" target=\"_blank\" rel=\"noopener\">https://ohou.se</a>"
+            },
+            {
+              "kind": "list",
+              "html": "iOS 앱: <a href=\"https://apps.apple.com/kr/app/id1029830063\" target=\"_blank\" rel=\"noopener\">App Store에서 보기</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "10",
+      "route": "/articles/10",
+      "id": "shinsegae-newsroom-66305910",
+      "platform": "자주(JAJU)",
+      "areaKey": "service",
+      "area": "Service",
+      "categoryKey": "fashion-lifestyle",
+      "category": "패션·라이프스타일",
+      "date": "2026-04-29",
+      "image": "https://shinsegae-prd-data.s3.ap-northeast-2.amazonaws.com/wp-content/uploads/2026/04/%EC%82%AC%EC%A7%84-%EC%9E%90%EC%A3%BCJAJU-5%EC%9B%94-%EC%99%B8%EA%B5%AD%EC%9D%B8-%EB%8C%80%EC%83%81-%EB%8C%80%EA%B7%9C%EB%AA%A8-%ED%94%84%EB%A1%9C%EB%AA%A8%EC%85%98-%EC%8B%A4%EC%8B%9C.jpg",
+      "imageCaption": "",
+      "tags": [
+        "자주",
+        "JAJU",
+        "K-라이프스타일",
+        "외국인고객",
+        "프로모션UX"
+      ],
+      "takeawayHtml": "자주(JAJU), 5월 연휴 외국인 대상 역대급 혜택 프로모션",
+      "deckHtml": "신세계그룹 뉴스룸이 자주(JAJU)가 5월 연휴를 겨냥해 외국인 대상 역대급 혜택 프로모션을 준비했다고 발표했어요. K-라이프스타일·패션 브랜드의 외국인 고객 유입 이벤트가 늘어나는 흐름이라, 한국 라이프스타일 클라이언트의 인바운드 캠페인 페이지 설계에 직접 시사점이 있어요.",
+      "sourceUrl": "https://www.shinsegaegroupnewsroom.com/jaju-offers-holiday-promotions-for-tourists-3/",
+      "sourceTitle": "신세계그룹 뉴스룸",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "자주(JAJU)가 5월 연휴 기간 외국인 대상 프로모션을 진행합니다. '한국의 일상과 감성'이 메시지의 축입니다."
+            },
+            {
+              "kind": "list",
+              "html": "K-라이프스타일·패션 브랜드가 외국인 인바운드 시즌(연휴·황금연휴)에 맞춰 캠페인을 정렬하는 흐름이 분명해지고 있어요."
+            }
+          ]
+        },
+        {
+          "title": "기획·디자이너 적용 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "다국어 진입점: 헤더 또는 메인 히어로에 영어·중국어·일본어 진입을 명확히 노출하는지 점검합니다 — 외국인 인바운드 캠페인에서 가장 흔한 실패 지점입니다."
+            },
+            {
+              "kind": "list",
+              "html": "결제·환율 표기: 면세·환율 표기, 외국 카드 지원 여부를 상품 페이지·체크아웃 단계에서 1차 안내합니다."
+            },
+            {
+              "kind": "list",
+              "html": "콘텐츠 톤: '한국의 일상' 같은 추상적 메시지는 사진·영상 자산이 받쳐주지 않으면 헛돕니다. 클라이언트 자산 점검을 캠페인 설계 첫 단계에서 합니다."
+            },
+            {
+              "kind": "list",
+              "html": "퍼블리싱: 외국인 사용자의 갤럭시 외 디바이스(iPhone·중국 안드로이드 등) 비중이 높을 가능성을 가정해, 폰트 fallback·이미지 lazy 로딩 등을 더 보수적으로 설정합니다."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>자주(JAJU)</strong> — 신세계 라이프스타일 브랜드 — 의류·홈웨어·생활용품."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://www.jaju.co.kr\" target=\"_blank\" rel=\"noopener\">https://www.jaju.co.kr</a>"
+            },
+            {
+              "kind": "list",
+              "html": "iOS 앱: <a href=\"https://apps.apple.com/kr/app/id1437893693\" target=\"_blank\" rel=\"noopener\">App Store에서 보기</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "11",
+      "route": "/articles/11",
+      "id": "opensurvey-blog-18fd2a5c",
+      "platform": "오픈서베이",
+      "areaKey": "service",
+      "area": "Service",
+      "categoryKey": "beauty",
+      "category": "뷰티",
+      "date": "2026-04-29",
+      "image": "https://i0.wp.com/blog.opensurvey.co.kr/wp-content/uploads/2026/04/26_thumbnail_article_09.png?fit=700%2C700&ssl=1",
+      "imageCaption": "",
+      "tags": [
+        "건강기능식품",
+        "올리브영",
+        "다이소",
+        "2030",
+        "채널전환"
+      ],
+      "takeawayHtml": "오픈서베이가 본 2030 — 올리브영·다이소가 건기식 채널을 흔들고 있어요",
+      "deckHtml": "오픈서베이 블로그가 불황에도 건강기능식품 카테고리가 성장하는 이유와, 2030 세대가 올리브영·다이소로 옮겨가는 채널 패턴을 분석했어요. 단순 영양제 이야기가 아니라, 한국 뷰티·헬스 커머스의 채널 점유율과 진열 우선순위가 바뀌고 있다는 신호예요.",
+      "sourceUrl": "https://blog.opensurvey.co.kr/article/health-supplement-2026-2/",
+      "sourceTitle": "오픈서베이 블로그",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "오픈서베이가 불황에도 건강기능식품 카테고리가 성장하는 이유를 분석했어요."
+            },
+            {
+              "kind": "list",
+              "html": "2030 세대 중심으로 정보 탐색·구매 채널이 빠르게 바뀌고 있어요. 핵심 채널은 올리브영과 다이소예요."
+            },
+            {
+              "kind": "list",
+              "html": "단순 영양제 이야기가 아니라 '연령·목적별 맞춤형 소비'라는 뷰티·헬스 카테고리 전반의 흐름이 보이는 자료예요."
+            }
+          ]
+        },
+        {
+          "title": "이커머스 PM·기획자 관점",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "탐색 단계 UX: '연령대별/목적별 추천' 진입점을 카테고리·검색 결과 상단에 노출하면 2030 사용자의 첫 클릭을 가져와요."
+            },
+            {
+              "kind": "list",
+              "html": "채널 전략: 자사몰만 보지 말고 올리브영·다이소가 정보 탐색의 장으로 기능한다는 점을 마케팅 동선 설계에 반영해요."
+            },
+            {
+              "kind": "list",
+              "html": "비교 카드: 성분·용량·효능을 한 줄로 비교 가능한 컴포넌트는 건기식뿐 아니라 화장품·식품 등 인접 카테고리에서도 곧 표준이 될 가능성이 커요."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>오픈서베이</strong> — 한국 모바일 리서치 플랫폼."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://www.opensurvey.co.kr\" target=\"_blank\" rel=\"noopener\">https://www.opensurvey.co.kr</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "12",
+      "route": "/articles/12",
+      "id": "devto-a11y-416d2dad",
+      "platform": "Dev.to",
+      "areaKey": "dev",
+      "area": "DEV",
+      "categoryKey": "accessibility",
+      "category": "접근성",
+      "date": "2026-04-29",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbstx9w2ntzfja4wlo7ca.png",
+      "imageCaption": "",
+      "tags": [
+        "뉴스레터",
+        "구독폼",
+        "접근성",
+        "퍼블리싱",
+        "랜딩페이지"
+      ],
+      "takeawayHtml": "뉴스레터 구독 폼 접근성 — 모든 크리에이터 랜딩 페이지에서 보이는 6가지 실수",
+      "deckHtml": "Dev.to의 글쓴이가 크리에이터 랜딩 페이지의 뉴스레터 구독 폼을 점검할 때마다 똑같은 6가지 실수를 본다고 정리했어요. 정확히 6개. 플랫폼이 달라도 거의 매번. 우리 퍼블리싱 체크리스트에 그대로 가져갈 만한 실무 자료예요.",
+      "sourceUrl": "https://dev.to/agentkit/newsletter-signup-form-accessibility-6-mistakes-i-see-in-every-creator-landing-page-38io",
+      "sourceTitle": "Dev.to — A11y",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "필자가 점검하는 거의 모든 크리에이터 랜딩 페이지에서 같은 6가지 접근성 실수가 반복된다고 합니다."
+            },
+            {
+              "kind": "list",
+              "html": "플랫폼·테마·뉴스레터 주제가 달라도 6개 항목은 거의 변하지 않는다는 점이 흥미로운 패턴입니다."
+            }
+          ]
+        },
+        {
+          "title": "퍼블리셔 적용 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "체크리스트화: 글의 6가지를 사내 퍼블리싱 QA 체크리스트의 'Form' 섹션 첫 줄에 넣으면, 흔한 실수를 0으로 만들 수 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "디자인 시스템: 우리 디자인 시스템의 'Email Input' 컴포넌트 기본값에 적절한 type, autocomplete, label 연결이 들어가 있는지 다시 확인합니다."
+            },
+            {
+              "kind": "list",
+              "html": "원문 직링크: 구체 6가지 항목은 짧은 글이므로 팀 슬랙·노션에 링크 한 개 정도는 박아두는 편이 효율적입니다."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>Dev.to</strong> — 개발자 커뮤니티·블로그 플랫폼."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://dev.to\" target=\"_blank\" rel=\"noopener\">https://dev.to</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "13",
+      "route": "/articles/13",
+      "id": "css-tricks-7180e814",
+      "platform": "CSS-Tricks",
+      "areaKey": "dev",
+      "area": "DEV",
+      "categoryKey": "frontend-technique",
+      "category": "프론트엔드 테크닉",
+      "date": "2026-04-29",
+      "image": "https://css-tricks.com/wp-content/uploads/2026/03/AppleSite.mov",
+      "imageCaption": "Apple Vision Pro 사이트 애니메이션을 CSS로 재현",
+      "tags": [
+        "CSS",
+        "scroll-driven",
+        "애니메이션",
+        "VisionPro",
+        "퍼블리싱"
+      ],
+      "takeawayHtml": "Apple Vision Pro 애니메이션, CSS로 재현하기",
+      "deckHtml": "CSS-Tricks가 최근 추가된 CSS scroll-driven animation을 활용해 Apple Vision Pro 사이트의 복잡한 애니메이션을 자바스크립트 없이 재현했어요. 브랜드·캠페인 사이트 히어로 섹션에 바로 적용해볼 만한 레퍼런스예요.",
+      "sourceUrl": "https://css-tricks.com/recreating-apples-vision-pro-animation-in-css/",
+      "sourceTitle": "CSS-Tricks",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "최신 CSS scroll-driven animation 기능을 활용해 Apple 사이트의 Vision Pro 헤드셋 애니메이션을 재현한 사례입니다."
+            },
+            {
+              "kind": "list",
+              "html": "JavaScript 없이도 비슷한 깊이감 있는 인터랙션이 가능하다는 것을 보여줍니다."
+            }
+          ]
+        },
+        {
+          "title": "퍼블리셔 적용 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "히어로 섹션: 브랜드·캠페인 페이지의 첫 화면 인터랙션 시안 후보로 곧바로 응용 가능합니다."
+            },
+            {
+              "kind": "list",
+              "html": "성능 가드레일: 사양 낮은 안드로이드 기기에서 떨림이 보일 수 있어, prefers-reduced-motion 대응을 기본값으로 둡니다."
+            },
+            {
+              "kind": "list",
+              "html": "디자인 시스템 분리: '연출용 모듈'로 별도 분리해, 일반 페이지에 무분별하게 적용되지 않도록 사용 범위를 명시해요."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>CSS-Tricks</strong> — CSS·프론트엔드 테크닉 매체 (DigitalOcean 인수)."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://css-tricks.com\" target=\"_blank\" rel=\"noopener\">https://css-tricks.com</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "14",
+      "route": "/articles/14",
+      "id": "webdev-a338bc41",
+      "platform": "web.dev",
+      "areaKey": "dev",
+      "area": "DEV",
+      "categoryKey": "web-platform",
+      "category": "웹 플랫폼",
+      "date": "2026-04-29",
+      "image": "https://web.dev/static/blog/web-platform-04-2026/hero.png",
+      "imageCaption": "",
+      "tags": [
+        "웹표준",
+        "Baseline",
+        "브라우저",
+        "신기능"
+      ],
+      "takeawayHtml": "4월, 주요 브라우저(Chrome·Safari·Firefox)에 새로 들어온 기능",
+      "deckHtml": "web.dev이 2026년 4월에 안정 브라우저와 베타 브라우저에 추가된 새 기능을 정리했어요. Chrome·Safari·Firefox 어디까지 안정 지원되는지(Baseline) 빠르게 훑고, 자사 디자인 시스템·퍼블리싱 가이드에 흡수할지 결정할 수 있어요.",
+      "sourceUrl": "https://web.dev/blog/web-platform-04-2026?hl=en",
+      "sourceTitle": "web.dev",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "2026년 4월 동안 안정·베타 브라우저에 들어온 흥미로운 기능들이 정리되어 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "월간 정리글이라 어떤 항목이 새로 Baseline에 진입했는지 빠르게 확인할 수 있어요."
+            }
+          ]
+        },
+        {
+          "title": "퍼블리싱·DX 적용 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "월간 30분 리뷰: 디자인·퍼블리싱 팀이 함께 web.dev 정리글을 훑는 루틴을 정해 두면, 신기능 채택 의사결정이 분산되지 않습니다."
+            },
+            {
+              "kind": "list",
+              "html": "디자인 시스템 반영: Baseline 진입 항목을 자사 컴포넌트 라이브러리에 흡수해 빠르게 클라이언트에 전파합니다."
+            },
+            {
+              "kind": "list",
+              "html": "한국 환경 폴백: 한국 사용자 비중이 높은 클라이언트는 갤럭시 폴드·폴더블 등 변형 환경 호환을 별도로 점검하는 기준선을 둡니다."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>web.dev</strong> — Google 운영 웹 표준·성능 가이드."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://web.dev\" target=\"_blank\" rel=\"noopener\">https://web.dev</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "15",
+      "route": "/articles/15",
+      "id": "devto-a11y-e104a0fd",
+      "platform": "European Union",
+      "areaKey": "dev",
+      "area": "DEV",
+      "categoryKey": "accessibility",
+      "category": "접근성",
+      "date": "2026-04-29",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F383fj5xv5r7vxcxfzoqt.png",
+      "imageCaption": "",
+      "tags": [
+        "EAA",
+        "접근성법",
+        "WCAG",
+        "유럽시장",
+        "컴플라이언스"
+      ],
+      "takeawayHtml": "European Accessibility Act 시행 — 개발자 가이드",
+      "deckHtml": "Dev.to에 따르면 European Accessibility Act(EAA)가 2025년 6월 28일 시행됐고, 2026년 4월 시점에 이미 6개 회원국이 행정 처분을 발표했어요. EU 사용자에게 노출되는 한국 서비스도 사정권이라, 클라이언트 사이트의 글로벌 노출 정도를 다시 점검할 시점이에요.",
+      "sourceUrl": "https://dev.to/toolkitonline/the-european-accessibility-act-is-live-developer-guide-1pe6",
+      "sourceTitle": "Dev.to — A11y",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "EAA는 2025년 6월 28일 시행됐고, 1년이 안 된 시점에 6개 회원국이 enforcement actions을 공개했습니다."
+            },
+            {
+              "kind": "list",
+              "html": "이커머스, 은행, 운송, 전자책, 미디어 등 광범위한 디지털 서비스가 적용 대상입니다."
+            },
+            {
+              "kind": "list",
+              "html": "WCAG 2.1 AA 수준 이상의 접근성이 요구돼요."
+            }
+          ]
+        },
+        {
+          "title": "에이전시 어드바이저리 관점",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "글로벌 노출 클라이언트(K-뷰티·OTT·패션 D2C 등)에 EAA 적합성 진단을 별도 패키지로 제안해요."
+            },
+            {
+              "kind": "list",
+              "html": "디자인 시스템 기본값에 키보드 포커스, 명도 대비, ARIA 라이브 리전을 강제 포함시킵니다."
+            },
+            {
+              "kind": "list",
+              "html": "axe-core 같은 자동 검사를 CI에 포함시키는 표준 워크플로우 구축이 권장돼요."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>European Union</strong> — EU 공식 채널 — Accessibility Act(EAA) 등 규정."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://european-union.europa.eu\" target=\"_blank\" rel=\"noopener\">https://european-union.europa.eu</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "16",
+      "route": "/articles/16",
+      "id": "devto-a11y-3b16f40d",
+      "platform": "Dev.to",
+      "areaKey": "dev",
+      "area": "DEV",
+      "categoryKey": "accessibility",
+      "category": "접근성",
+      "date": "2026-04-29",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F80jwzrkukatbv7d3rrem.png",
+      "imageCaption": "",
+      "tags": [
+        "접근성",
+        "거버넌스",
+        "역할정의",
+        "팀워크플로우"
+      ],
+      "takeawayHtml": "웹 접근성, 정말 누구의 책임인가?",
+      "deckHtml": "Dev.to의 글이 '소프트웨어 접근성을 누가 책임지냐?'는 질문에 '프론트엔드 팀이라고 답한다면 그 소프트웨어는 결코 보편적 접근성을 갖추지 못한다'고 분명히 말해요. 디자이너·개발자·QA·PO가 부분적 책임을 지는 구조에서 명확한 1차 오너 부재가 자주 결함으로 이어진다는 거예요.",
+      "sourceUrl": "https://dev.to/shaynaproductions/who-is-actually-responsible-for-web-accessibility-779",
+      "sourceTitle": "Dev.to — A11y",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "필자는 '프론트엔드 팀'이라는 답을 단호하게 부정합니다."
+            },
+            {
+              "kind": "list",
+              "html": "디자이너·기획자·콘텐츠 작성자·PO도 각자 책임 영역이 있다는 점이 글의 핵심이에요."
+            }
+          ]
+        },
+        {
+          "title": "에이전시 운영 관점",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "RACI 명시: 프로젝트 RACI 차트에 'Accessibility' 행을 추가해 1차 오너(보통 UX 리드)를 명시해요."
+            },
+            {
+              "kind": "list",
+              "html": "DoD: '키보드만으로 핵심 시나리오 완주' 조건을 컴포넌트 단위 Definition of Done에 포함해요."
+            },
+            {
+              "kind": "list",
+              "html": "견적 단계: 접근성은 '추가 비용'이 아닌 '기본 항목'임을 클라이언트와 합의하면 후반 트레이드오프를 피할 수 있어요."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>Dev.to</strong> — 개발자 커뮤니티·블로그 플랫폼."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://dev.to\" target=\"_blank\" rel=\"noopener\">https://dev.to</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "17",
+      "route": "/articles/17",
+      "id": "devto-a11y-c9139c9b",
+      "platform": "Dev.to",
+      "areaKey": "dev",
+      "area": "DEV",
+      "categoryKey": "accessibility",
+      "category": "접근성",
+      "date": "2026-04-29",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F83aece4c3qgc0ef4tw1e.png",
+      "imageCaption": "",
+      "tags": [
+        "색상접근성",
+        "APCA",
+        "WCAG",
+        "타이포컬러"
+      ],
+      "takeawayHtml": "순수 Klein Blue가 텍스트로 사라지는 이유 (그리고 two-slot fix)",
+      "deckHtml": "Dev.to의 글이 'Klein Blue (#002FA7)는 어두운 배경에서 본문 텍스트로 기능적으로 읽을 수 없는 수준'이라는 점과 그 해결법(two-slot fix)을 정리했어요. 브랜드 컬러를 본문에 그대로 쓰는 디자인을 받았을 때 디자이너·퍼블리셔가 어떻게 대응할지 구체 가이드예요.",
+      "sourceUrl": "https://dev.to/palo_alto_ai/why-pure-klein-blue-disappears-as-text-and-the-two-slot-fix-225p",
+      "sourceTitle": "Dev.to — A11y",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "Klein Blue (#002FA7)를 어두운 배경에서 본문 텍스트로 쓰면 APCA Lc -12로 기능적 가독성 임계 미만입니다."
+            },
+            {
+              "kind": "list",
+              "html": "필자는 '브랜드 컬러 한 슬롯, 가독 컬러 한 슬롯'으로 분리하는 two-slot fix를 제안해요."
+            }
+          ]
+        },
+        {
+          "title": "디자이너·퍼블리셔 적용 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "디자인 토큰: '브랜드 컬러'와 '본문 컬러'를 별도 토큰으로 분리해 두면 같은 실수를 반복하지 않습니다."
+            },
+            {
+              "kind": "list",
+              "html": "체크 도구: APCA 기반 검사기(예: APCA contrast checker)를 디자인·퍼블리싱 표준에 추가해요."
+            },
+            {
+              "kind": "list",
+              "html": "한국 브랜드: 단일 짙은 컬러를 BI로 쓰는 경우(파랑·그린)에 같은 문제가 자주 발생하므로 사전 가이드라인을 두는 편이 안전해요."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>Dev.to</strong> — 개발자 커뮤니티·블로그 플랫폼."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://dev.to\" target=\"_blank\" rel=\"noopener\">https://dev.to</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "18",
+      "route": "/articles/18",
+      "id": "css-tricks-2ae04b06",
+      "platform": "CSS-Tricks",
+      "areaKey": "dev",
+      "area": "DEV",
+      "categoryKey": "css-technique",
+      "category": "CSS 테크닉",
+      "date": "2026-04-29",
+      "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2018/10/nth-letter.png",
+      "imageCaption": "",
+      "tags": [
+        "CSS",
+        "::nth-letter",
+        "타이포그래피",
+        "표준제안"
+      ],
+      "takeawayHtml": "존재하지 않는 ::nth-letter 셀렉터, 지금 써봅시다",
+      "deckHtml": "CSS-Tricks가 W3C 제안 단계의 ::nth-letter 셀렉터를 현존 CSS 기능으로 흉내내는 방식을 공유했어요. 필자는 '많은 사람이 쓰면 표준화 압력이 커진다'는 메타 메시지도 함께 던져요.",
+      "sourceUrl": "https://css-tricks.com/using-nonexistent-nth-letter-selector-now/",
+      "sourceTitle": "CSS-Tricks",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "::nth-letter는 W3C 제안 단계로 어떤 브라우저에도 구현돼 있지 않습니다."
+            },
+            {
+              "kind": "list",
+              "html": "필자가 만든 shim으로 :first-letter, span 분리, 컨테이너 쿼리를 조합해 N번째 글자 효과를 흉내냅니다."
+            }
+          ]
+        },
+        {
+          "title": "퍼블리셔 적용 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "에디토리얼 사이트의 드롭캡·강조 글자 표현에 즉시 응용 가능합니다."
+            },
+            {
+              "kind": "list",
+              "html": "한글: 자모 단위 분리 시 추가 처리 필요. 영문/숫자 위주로 적용 범위를 한정해요."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>CSS-Tricks</strong> — CSS·프론트엔드 테크닉 매체 (DigitalOcean 인수)."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://css-tricks.com\" target=\"_blank\" rel=\"noopener\">https://css-tricks.com</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "19",
+      "route": "/articles/19",
+      "id": "css-tricks-fd66fe05",
+      "platform": "CSS-Tricks",
+      "areaKey": "dev",
+      "area": "DEV",
+      "categoryKey": "frontend-framework",
+      "category": "프론트엔드 프레임워크",
+      "date": "2026-04-29",
+      "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/02/markdown-astro.webp",
+      "imageCaption": "",
+      "tags": [
+        "Astro",
+        "Markdown",
+        "컴포넌트",
+        "타이포그래피"
+      ],
+      "takeawayHtml": "Astro에 Markdown 컴포넌트로 한 단계 끌어올리기",
+      "deckHtml": "CSS-Tricks가 Astro 프로젝트에서 마크다운 컴포넌트로 (1) 마크업 작성량을 줄이고 (2) 타이포그래픽 기호를 자동 변환하는 패턴을 공유했어요. Astro로 콘텐츠 사이트를 만드는 클라이언트 작업에 직접 도움이 돼요.",
+      "sourceUrl": "https://css-tricks.com/astro-markdown-component/",
+      "sourceTitle": "CSS-Tricks",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "Markdown 컴포넌트의 두 가지 효용: 마크업 작성량 감소와 타이포그래픽 기호 자동 변환."
+            },
+            {
+              "kind": "list",
+              "html": "Astro의 콘텐츠 위주 사이트에서 에디토리얼 작성이 빨라지는 패턴."
+            }
+          ]
+        },
+        {
+          "title": "퍼블리셔 적용 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "한국어 환경에서도 따옴표·말줄임표·하이픈 자동 변환은 작업 시간을 줄여요."
+            },
+            {
+              "kind": "list",
+              "html": "콘텐츠 페이지가 많은 클라이언트(블로그, 매거진, 자료실)에 동일 패턴을 디자인 시스템에 추가할 수 있어요."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>CSS-Tricks</strong> — CSS·프론트엔드 테크닉 매체 (DigitalOcean 인수)."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://css-tricks.com\" target=\"_blank\" rel=\"noopener\">https://css-tricks.com</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "20",
+      "route": "/articles/20",
+      "id": "js-weekly-c90c007e",
+      "platform": "JavaScript Weekly",
+      "areaKey": "dev",
+      "area": "DEV",
+      "categoryKey": "javascript",
+      "category": "JavaScript",
+      "date": "2026-04-29",
+      "image": "https://res.cloudinary.com/cpress/image/upload/c_fill,g_auto,w_2600,h_373/e_make_transparent/co_white,e_outline:30/s65exulzcd60xe2r5nyk.png",
+      "imageCaption": "",
+      "tags": [
+        "JavaScript",
+        "pnpm",
+        "패키지매니저",
+        "공급망"
+      ],
+      "takeawayHtml": "JavaScript의 진짜 신기능 (그리고 다음에 올 것) — JS Weekly #783",
+      "deckHtml": "JavaScript Weekly #783이 pnpm 11.0 출시를 핵심으로 다뤘어요. minimumReleaseAge 기본값을 두는 등 공급망 보안 측면 변화가 큰 업데이트라, 사내 패키지 정책에 곧바로 반영을 검토할 수 있어요.",
+      "sourceUrl": "https://javascriptweekly.com/issues/783",
+      "sourceTitle": "JavaScript Weekly",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "JavaScript Weekly #783(2026-04-28)의 1면 항목은 pnpm 11.0 출시."
+            },
+            {
+              "kind": "list",
+              "html": "minimumReleaseAge 같은 새 기본값은 막 배포된 패키지 즉시 채택의 위험을 줄이는 방향성."
+            }
+          ]
+        },
+        {
+          "title": "사내 표준 적용 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "패키지 매니저: pnpm 사용 프로젝트는 11.0 마이그레이션 노트를 검토하고 사내 권장 버전을 갱신."
+            },
+            {
+              "kind": "list",
+              "html": "보안 정책: minimumReleaseAge 같은 옵션은 공급망 사고를 줄이므로 신규 프로젝트 부트스트랩 템플릿에 기본값으로 포함."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>JavaScript Weekly</strong> — Cooperpress 운영 JS 주간 뉴스레터."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://javascriptweekly.com\" target=\"_blank\" rel=\"noopener\">https://javascriptweekly.com</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "21",
+      "route": "/articles/21",
+      "id": "spotify-newsroom-c945d509",
+      "platform": "Spotify Newsroom",
+      "areaKey": "service",
+      "area": "Service",
+      "categoryKey": "platform",
+      "category": "플랫폼",
+      "date": "2026-04-23",
+      "image": "https://storage.googleapis.com/pr-newsroom-wp/1/2026/04/00_Spotify_Claude_16-9-23427498.mp4",
+      "imageCaption": "Claude 대화창 안에서 Spotify 음악을 바로 재생하는 통합 화면",
+      "tags": [
+        "Spotify",
+        "Claude통합",
+        "MCP",
+        "AI추천",
+        "음악서비스"
+      ],
+      "takeawayHtml": "Spotify가 Claude 안으로 들어왔어요 — 대화로 재생까지",
+      "deckHtml": "Spotify가 4월 23일 Claude 통합을 출시했어요. 이제 Claude 대화창에서 '출퇴근 팟캐스트 추천해줘'나 '아침 운동용 에너지 넘치는 트랙'을 요청하면 Spotify 개인화 엔진 기반 추천이 바로 나와요. 미리 듣기·저장·재생이 Claude 안에서 가능하고, Spotify Connect로 기기 전환도 돼요. 무료·유료 모두 사용 가능하고 프리미엄은 분위기 설명으로 맞춤 플레이리스트도 만들 수 있어요.",
+      "sourceUrl": "https://newsroom.spotify.com/2026-04-23/claude-integration/",
+      "sourceTitle": "Spotify Newsroom",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "Claude 대화 안에서 Spotify 계정을 연결하면 청취 이력 기반 개인화 추천이 즉시 동작해요."
+            },
+            {
+              "kind": "list",
+              "html": "무료 사용자도 기본 추천이 가능하고, 프리미엄 사용자는 분위기·감정 텍스트로 플레이리스트를 생성할 수 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "Spotify Connect 지원으로 Claude 대화 중에 폰·노트북·스피커 간 재생 기기를 전환할 수 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "Anthropic의 AI 학습에는 Spotify 오디오·비디오 콘텐츠를 공유하지 않는다고 Spotify가 명시했어요."
+            },
+            {
+              "kind": "list",
+              "html": "iOS·Android·웹·데스크톱 Claude 전체 버전에서 전 세계 출시됐어요 (2026년 4월 23일 기준)."
+            }
+          ]
+        },
+        {
+          "title": "우리 적용 시 고려",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "Claude의 MCP(Model Context Protocol)를 활용한 서비스 통합 사례 — 국내 서비스도 이 방식으로 Claude 안에 진입점을 만들 수 있는지 검토할 시점이에요."
+            },
+            {
+              "kind": "list",
+              "html": "Spotify는 추천 결과를 Claude 대화창 안에서 바로 미리 듣기·저장·재생까지 연결했어요 — 단순 링크 연결이 아닌 '동작 완결' 설계가 핵심이에요."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>Spotify</strong> — 글로벌 음원·팟캐스트 스트리밍."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://www.spotify.com\" target=\"_blank\" rel=\"noopener\">https://www.spotify.com</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "22",
+      "route": "/articles/22",
+      "id": "kakao-tech-blog-0f11de42",
+      "platform": "카카오 Tech Blog",
+      "areaKey": "service",
+      "area": "Service",
+      "categoryKey": "platform",
+      "category": "플랫폼",
+      "date": "2026-04-22",
+      "image": "https://img1.kakaocdn.net/thumb/U896x0/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakao_tech%2Fmedia%2Faec7e17c019d00001.png",
+      "imageCaption": "",
+      "tags": [
+        "카카오톡",
+        "예약하기",
+        "캘린더UI",
+        "FE개발",
+        "컴포넌트"
+      ],
+      "takeawayHtml": "카카오톡 예약하기, 서드파티 대신 캘린더를 직접 만든 이유",
+      "deckHtml": "카카오톡 예약하기 파트너센터의 FE 개발자 Joy가 캘린더 컴포넌트를 직접 제작한 과정을 공유했어요. 수백 건의 예약을 카드 목록으로 보여주면 재고와 예약 현황을 한눈에 파악하기 어렵다는 문제에서 출발한 이야기예요.",
+      "sourceUrl": "https://tech.kakao.com/posts/820",
+      "sourceTitle": "카카오 Tech Blog",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "대상 서비스: 카카오톡 예약하기 파트너센터의 예약 관리 탭 — 판매자가 들어온 예약을 한눈에 볼 수 있는 화면이에요."
+            },
+            {
+              "kind": "list",
+              "html": "문제: 카드 목록 형태 UI는 예약이 많아질수록 재고·예약 건수를 한눈에 파악하기 어려워지는 구조적 한계가 있었어요."
+            },
+            {
+              "kind": "list",
+              "html": "해결 방향: 달력 형태로 예약을 시각화하는 캘린더 컴포넌트를 서드파티 라이브러리 없이 직접 구현했어요."
+            }
+          ]
+        },
+        {
+          "title": "우리 적용 시 고려",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "예약·스케줄 관련 서비스에서 카드 리스트 vs 캘린더 뷰 전환 시점 — 예약 밀도가 높아질수록 캘린더가 인지 부하를 줄이는 패턴이에요."
+            },
+            {
+              "kind": "list",
+              "html": "라이브러리 없이 캘린더를 직접 구현할 때 어떤 엣지 케이스를 다뤘는지 원문에서 확인할 수 있어요."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>카카오</strong> — 메신저·콘텐츠·핀테크·모빌리티 플랫폼 그룹."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://www.kakaocorp.com\" target=\"_blank\" rel=\"noopener\">https://www.kakaocorp.com</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "23",
+      "route": "/articles/23",
+      "id": "josh-comeau-2a873724",
+      "platform": "Josh Comeau",
+      "areaKey": "dev",
+      "area": "DEV",
+      "categoryKey": "css",
+      "category": "CSS",
+      "date": "2026-04-28",
+      "image": "https://www.joshwcomeau.com/images/og-scroll-driven-animations.png",
+      "imageCaption": "",
+      "tags": [
+        "CSS",
+        "ScrollAnimation",
+        "animation-timeline",
+        "JavaScript없이",
+        "웹애니메이션"
+      ],
+      "takeawayHtml": "JavaScript 없이 스크롤 애니메이션 — CSS animation-timeline API 완전 정리",
+      "deckHtml": "Josh Comeau가 CSS Animation Timeline API를 실습 코드와 함께 처음부터 끝까지 풀어냈어요. @keyframes를 시간 대신 스크롤 진행도에 연결하는 게 핵심 개념이고, 현재 브라우저 지원률은 85%(Firefox는 플래그 필요)예요. 폴리필도 있지만 링크드 타임라인 같은 고급 기능은 지원이 안 돼요.",
+      "sourceUrl": "https://www.joshwcomeau.com/animation/scroll-driven-animations/",
+      "sourceTitle": "Josh Comeau",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "핵심 개념: animation-timeline: view()를 설정하면 @keyframes의 0%~100%가 시간 대신 요소의 뷰포트 진행도에 매핑돼요."
+            },
+            {
+              "kind": "list",
+              "html": "브라우저 지원: 현재 caniuse 기준 약 85%. Chrome·Safari에서는 바로 사용 가능하고 Firefox는 about:config에서 layout.css.scroll-driven-animations.enabled 플래그를 활성화해야 해요."
+            },
+            {
+              "kind": "list",
+              "html": "폴리필 존재: 공식 폴리필이 있지만 '링크드 타임라인' 같은 고급 기능은 동작하지 않는다고 Josh Comeau가 직접 언급했어요."
+            },
+            {
+              "kind": "list",
+              "html": "타이밍 함수: animation shorthand에 cubic-bezier 등 기존 easing 값을 그대로 쓸 수 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "animation-range: 애니메이션이 시작·끝나는 스크롤 구간을 entry·exit 키워드와 퍼센트로 세밀하게 제어할 수 있어요."
+            }
+          ]
+        },
+        {
+          "title": "우리 적용 시 고려",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "Josh Comeau가 '몇 달간 실험한 결과 매우 우아한 API'라고 평가했어요 — Intersection Observer + JS 패턴을 CSS로 교체할 수 있는지 검토해볼 시점이에요."
+            },
+            {
+              "kind": "list",
+              "html": "Firefox 미지원 상태이므로 폴리필 없이 배포할 경우 Firefox 사용자에게는 애니메이션이 보이지 않아요 — 장식적 요소에만 먼저 적용하는 점진적 도입이 안전해요."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "24",
+      "route": "/articles/24",
+      "id": "webkit-blog-27536670",
+      "platform": "WebKit Blog",
+      "areaKey": "dev",
+      "area": "DEV",
+      "categoryKey": "web-platform",
+      "category": "UPDATE",
+      "date": "2026-04-23",
+      "image": "https://webkit.org/wp-content/themes/webkit/images/preview-card.jpg",
+      "imageCaption": "",
+      "tags": [
+        "SafariTP242",
+        "WebKit",
+        "CSS",
+        "접근성",
+        "dialog",
+        "attr"
+      ],
+      "takeawayHtml": "Safari TP 242 — CSS attr() Level 5, dialog closedby, base-select 접근성 개선",
+      "deckHtml": "Safari Technology Preview 242에서 CSS Values Level 5의 attr() 함수 지원이 추가됐어요. HTML 속성값을 CSS에서 직접 읽어올 수 있게 돼요. <dialog> 요소에는 closedby 속성이 새로 들어왔고, VoiceOver + appearance: base-select 조합의 접근성 버그도 수정됐어요.",
+      "sourceUrl": "https://webkit.org/blog/17934/release-notes-for-safari-technology-preview-242/",
+      "sourceTitle": "WebKit Blog",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "CSS 신기능: CSS Values Level 5의 attr() 함수 추가 — HTML 속성값을 CSS 속성값으로 읽어올 수 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "HTML 신기능: <dialog> 요소에 closedby 속성이 추가됐어요 — 배경 클릭이나 Escape 키로 닫히는 동작을 더 세밀하게 제어할 수 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "CSS 추가: font-synthesis-style: oblique-only 값 지원 (CSS Fonts Level 4)."
+            },
+            {
+              "kind": "list",
+              "html": "접근성 수정: VoiceOver가 role=\"presentation\" 이미지 내부 텍스트를 읽던 버그 수정. appearance: base-select를 사용한 커스텀 <select>의 macOS 접근성 지원도 개선됐어요."
+            },
+            {
+              "kind": "list",
+              "html": "JavaScript: 고정 카운트 혼합 너비 문자 클래스에서 정규식 역추적 시 인덱스가 잘못 복원되던 버그 수정."
+            }
+          ]
+        },
+        {
+          "title": "우리 적용 시 고려",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "CSS attr() Level 5가 Safari TP에 들어온 시점 — Chrome Canary에는 이미 플래그 지원이 있어요. 데이터 시각화나 동적 스타일링 패턴에서 활용 가능성을 미리 검토해볼 수 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "appearance: base-select 접근성 수정은 커스텀 드롭다운 컴포넌트를 순수 CSS로 만드는 접근의 현실 가능성을 높여주는 신호예요."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "25",
+      "route": "/articles/25",
+      "id": "apple-developer-news-8416c27d",
+      "platform": "Apple Developer News",
+      "areaKey": "dev",
+      "area": "DEV",
+      "categoryKey": "web-platform",
+      "category": "UPDATE",
+      "date": "2026-04-27",
+      "image": "https://developer.apple.com/news/images/og/app-store-subscription-commitment-og.jpg",
+      "imageCaption": "",
+      "tags": [
+        "AppStore",
+        "구독모델",
+        "iOS26",
+        "인앱결제",
+        "12개월약정"
+      ],
+      "takeawayHtml": "앱스토어, 12개월 약정 월납 구독 모델 출시 — iOS 26.4부터 적용",
+      "deckHtml": "Apple이 4월 27일 App Store에 '12개월 약정 월납 구독' 옵션을 새로 도입했어요. 사용자는 매달 결제하면서 언제든 취소할 수 있지만, 취소 후에도 남은 약정 기간의 금액은 계속 빠져나가요. iOS·iPadOS·macOS Tahoe 26.4 이상에서 지원되고 미국·싱가포르를 제외한 전 세계에서 iOS 26.5 출시(5월 예정)부터 사용자에게 노출돼요.",
+      "sourceUrl": "https://developer.apple.com/news/?id=agq42lxe",
+      "sourceTitle": "Apple Developer News",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "새 구독 유형: 월납으로 결제하면서 12개월 약정을 맺는 자동 갱신 구독 — 기존 연간 일괄 결제보다 월 부담을 낮출 수 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "취소 정책: 사용자가 언제든 취소할 수 있지만 남은 약정 결제는 계속 이어져요. Apple 계정에서 완료·남은 납부 횟수를 투명하게 볼 수 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "알림: Apple이 갱신일 전에 이메일과 푸시 알림으로 사전 안내를 보내줘요."
+            },
+            {
+              "kind": "list",
+              "html": "지원 환경: iOS·iPadOS·macOS Tahoe·tvOS·visionOS 26.4 이상. 미국·싱가포르는 제외. iOS 26.5 출시(2026년 5월 예정)부터 사용자에게 노출돼요."
+            },
+            {
+              "kind": "list",
+              "html": "설정 방법: App Store Connect에서 구성 가능하고 Xcode에서 테스트할 수 있어요."
+            }
+          ]
+        },
+        {
+          "title": "우리 적용 시 고려",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "앱 내 구독을 운영 중이거나 기획 중인 프로젝트라면 이 새 결제 유형이 전환율에 미치는 영향을 예측해야 해요 — 연간보다 진입 부담이 낮지만 취소 시 부채 인식이 UX에 영향을 줄 수 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "약정 구조를 사용자에게 어떻게 투명하게 전달할지 — 구독 화면 UI에서 '남은 납부 횟수' 표시 방식을 미리 설계해두는 게 필요해요."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "26",
+      "route": "/articles/26",
+      "id": "css-weekly-dfcc0317",
+      "platform": "CSS Weekly",
+      "areaKey": "dev",
+      "area": "DEV",
+      "categoryKey": "css",
+      "category": "CSS",
+      "date": "2026-04-23",
+      "image": "https://css-weekly.com/issues/issue-639/images/cssweekly-issue639-interactive-cover-component.jpg",
+      "imageCaption": "Kitty Giraudel의 인터랙티브 커버 컴포넌트 데모",
+      "tags": [
+        "CSSWeekly",
+        "LazyLoading",
+        "CoreWebVitals",
+        "인터랙티브컴포넌트",
+        "LCP"
+      ],
+      "takeawayHtml": "CSS Weekly #639 — Lazy Loading의 성능 함정과 인터랙티브 커버 컴포넌트",
+      "deckHtml": "Lazy Loading을 무조건 넣으면 LCP·CLS·INP 같은 Core Web Vitals 지표가 오히려 나빠진다는 Jakub Andrzejewski의 분석이 이번 호 헤드라인이에요. Kitty Giraudel이 CSS 트릭으로 만든 인터랙티브 커버 컴포넌트 기술 해설도 함께 실렸어요.",
+      "sourceUrl": "https://css-weekly.com/issues/issue-639/",
+      "sourceTitle": "CSS Weekly",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "Jakub Andrzejewski의 아티클: Lazy Loading이 언제 성능을 올리고 언제 역효과를 내는지, LCP·CLS·INP에 어떤 영향을 주는지 실제 패턴과 함께 설명해요."
+            },
+            {
+              "kind": "list",
+              "html": "Kitty Giraudel의 인터랙티브 커버 컴포넌트: CSS 트릭을 활용한 작은 인터랙티브 커버 컴포넌트 기술 구현 해설이에요."
+            },
+            {
+              "kind": "list",
+              "html": "편집장 근황: 에디터 Zoran Jambor가 JointJS의 Developer Advocate로 이직하며 AI 코딩 에이전트 관련 콘텐츠를 제작 중이라고 밝혔어요."
+            }
+          ]
+        },
+        {
+          "title": "우리 적용 시 고려",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "이미지에 loading=\"lazy\"를 일괄 적용하는 관행 — LCP 영역에 있는 히어로 이미지에 lazy를 붙이면 오히려 LCP 점수가 떨어져요. 원문에서 구체적인 패턴 기준을 확인하세요."
+            },
+            {
+              "kind": "list",
+              "html": "인터랙티브 커버 컴포넌트 패턴: 포트폴리오·랜딩 페이지의 히어로 영역에 JavaScript 없이 인터랙션을 넣고 싶을 때 참고할 수 있어요."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "27",
+      "route": "/articles/27",
+      "id": "devto-a11y-5a8bc933",
+      "platform": "Dev.to",
+      "areaKey": "dev",
+      "area": "DEV",
+      "categoryKey": "a11y",
+      "category": "접근성",
+      "date": "2026-04-29",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fatz5p0q6sx2up9z5g1jg.png",
+      "imageCaption": "",
+      "tags": [
+        "접근성",
+        "WCAG",
+        "스크린리더",
+        "키보드내비게이션",
+        "a11y"
+      ],
+      "takeawayHtml": "접근성, 마감 직전 체크리스트가 아닌 처음부터 설계에 넣어야 하는 이유",
+      "deckHtml": "개발자 Shayna가 실제 계약 현장에서 겪은 '나는 시각 장애인을 신경 쓰지 않는다'는 디자이너 발언을 출발점으로, 접근성이 왜 백로그 맨 아래에 방치되는지를 짚어요. WCAG를 죄책감이 아닌 '무엇이 필요한가'의 관점으로 재해석하자는 게 핵심 주장이에요.",
+      "sourceUrl": "https://dev.to/shaynaproductions/the-modalities-of-accessibility-500m",
+      "sourceTitle": "Dev.to",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "Shayna는 실제 계약 프로젝트에서 그래픽 디자이너가 만든 React 컴포넌트에서 스크린리더 이슈와 키보드 트랩을 발견했고, 수정을 요청했을 때 거절당한 사례를 공유했어요."
+            },
+            {
+              "kind": "list",
+              "html": "Agile 환경의 구조적 문제: 스프린트 압박 속에서 팀은 '해피 패스'로만 동작하는 컴포넌트를 내보내고 접근성은 '나중에 고치자'로 밀리는 경향이 있다고 진단해요."
+            },
+            {
+              "kind": "list",
+              "html": "접근성은 장애를 직접 경험한 사람과 가까울 때만 챙겨지는 경향이 있다고 필자가 지적해요."
+            },
+            {
+              "kind": "list",
+              "html": "접근 방식 전환: 죄책감·공감 호소에서 'WCAG가 요구하는 것의 실체'로 전환했을 때 개발자 교육 효과가 더 컸다고 Shayna가 밝혔어요."
+            }
+          ]
+        },
+        {
+          "title": "우리 적용 시 고려",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "원문이 지적하는 핵심: 접근성이 '마감 후 버그'로 다뤄지는 프로세스 — 컴포넌트 설계 단계에서 키보드 내비게이션·스크린리더 흐름을 스펙에 포함시키는 방식으로 바꿀 수 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "WCAG를 '죄책감'이 아닌 '체크리스트'로 — 원문 필자의 교육 방식 전환 경험은 팀 내 접근성 리뷰 문화를 만들 때 참고할 수 있어요."
+            }
+          ]
+        },
+        {
+          "title": "관련 서비스 정보",
+          "className": "article-section is-related-service",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "<strong>Dev.to</strong> — 개발자 커뮤니티·블로그 플랫폼."
+            },
+            {
+              "kind": "list",
+              "html": "공식 사이트: <a href=\"https://dev.to\" target=\"_blank\" rel=\"noopener\">https://dev.to</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "28",
+      "route": "/articles/28",
+      "id": "ux-collective-e3be997f",
+      "platform": "UX Collective",
+      "areaKey": "design",
+      "area": "Design",
+      "categoryKey": "ai-design",
+      "category": "AI 디자인",
+      "date": "2026-04-29",
+      "image": "https://miro.medium.com/v2/resize:fit:1200/0*lPMAjOQsVPmNsI8Q.jpeg",
+      "imageCaption": "",
+      "tags": [
+        "AI전환",
+        "UI패턴",
+        "집행UI",
+        "판단UI",
+        "대시보드",
+        "CRUD"
+      ],
+      "takeawayHtml": "AI가 무너뜨리는 UI 패턴 10가지 — '집행 UI'에서 '판단 UI'로",
+      "deckHtml": "UX Collective의 Taras Bakusevych가 AI 전환으로 설 자리를 잃어가는 UI 패턴 10가지를 실제 제품 사례와 함께 정리했어요. 설정 마법사·필터 사이드바·데이터 입력 폼·정적 대시보드·CRUD 테이블 등이 왜 구조적으로 압박받는지, 무엇이 대체하는지를 구체적으로 보여줘요. 핵심: '사람이 작업을 실행하는 UI'는 줄어들고 'AI 결과물을 평가·수정하는 UI'는 늘어나요.",
+      "sourceUrl": "https://uxdesign.cc/10-ui-patterns-that-wont-survive-the-ai-shift-002cb9b853ae",
+      "sourceTitle": "UX Collective",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "설정 마법사 → 인텐트 추론: HubSpot 견적 생성에 7개 화면이 필요한 반면 Shopify Sidekick은 한 번의 자연어 입력으로 전체 설정을 완료해요."
+            },
+            {
+              "kind": "list",
+              "html": "필터 사이드바 → 자연어 검색: KAYAK AI Mode에서 'NYC hotels within half a mile of Rockefeller Center for Dec 23rd' 한 문장이 3개 검색 폼을 대체해요. LinkedIn Copilot은 200명 후보를 조건 설명 한 번에 점수까지 매겨 반환해요."
+            },
+            {
+              "kind": "list",
+              "html": "데이터 입력 폼 → AI 추출 + 확인: QuickBooks Autofill이 영수증 PDF를 업로드하면 모든 필드를 자동 추출하고, 사용자는 '틀린 것을 수정'하는 역할로 바뀌어요."
+            },
+            {
+              "kind": "list",
+              "html": "정적 대시보드 → 이상 감지 면: Shopify Sidekick Pulse는 지표 그리드 대신 '특정 상품이 90일간 487k 유기 판매 — 프로모션 시작 추천'처럼 실행 버튼이 달린 인사이트를 서피싱해요."
+            },
+            {
+              "kind": "list",
+              "html": "핵심 개념: '집행 UI(Execution UI)'는 사람이 반복 작업을 수행하는 화면 → AI가 대체. '판단 UI(Judgment UI)'는 AI 결과물을 평가·검토·수정하는 화면 → 점점 더 중요해져요."
+            }
+          ]
+        },
+        {
+          "title": "우리 적용 시 고려",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "원문 필자는 '지금 당장 없어지지 않는다'고 명시했어요 — Zillow는 여전히 필터를 씁니다. 설계 질문은 '이 화면이 기본값인가, 대안인가'예요."
+            },
+            {
+              "kind": "list",
+              "html": "우리 클라이언트 서비스 중 데이터 입력 폼이 많은 곳(견적, 발주, 예약)은 '확인형 UI'로 전환 가능성을 시뮬레이션해볼 시점이에요 — QuickBooks Autofill 패턴이 직접 참고 사례가 돼요."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "29",
+      "route": "/articles/29",
+      "id": "ux-collective-72362fee",
+      "platform": "UX Collective",
+      "areaKey": "design",
+      "area": "Design",
+      "categoryKey": "ai-design",
+      "category": "AI 디자인",
+      "date": "2026-04-25",
+      "image": "https://miro.medium.com/v2/da:true/resize:fit:1200/0*cA5iLCuIYz_4-NJ1",
+      "imageCaption": "",
+      "tags": [
+        "HAI",
+        "AIdesign",
+        "Microsoft",
+        "Google",
+        "IBM",
+        "가이드라인"
+      ],
+      "takeawayHtml": "AI 경험 설계 룰북 — Microsoft·Google·IBM 3사 프레임워크 비교",
+      "deckHtml": "UX Collective의 Dora Czerna가 Microsoft HAX Toolkit 18가지 가이드라인, Google PAIR Guidebook, IBM AI Essentials Framework를 한자리에서 비교했어요. 세 프레임워크 모두 투명성·사용자 제어·피드백 루프·우아한 실패에서 일치하지만, 다양성·공정성·환경 영향에서는 얇다고 짚어요.",
+      "sourceUrl": "https://uxdesign.cc/the-rulebook-for-designing-ai-experiences-a22a50bb063c",
+      "sourceTitle": "UX Collective",
+      "referenceLinks": [
+        {
+          "label": "관련 자료",
+          "title": "Microsoft HAX Toolkit",
+          "url": "https://www.microsoft.com/en-us/haxtoolkit/library"
+        },
+        {
+          "label": "관련 자료",
+          "title": "Google PAIR Guidebook",
+          "url": "https://pair.withgoogle.com/guidebook"
+        }
+      ],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "Microsoft HAX Toolkit: 18가지 가이드라인 + 디자인 라이브러리. 제품 카테고리·AI 유형·설계 목표(투명성, 개인화, 신뢰, 공정성 등)로 필터 가능해요. '적절한 신뢰(appropriate reliance)' — 너무 많이도 적게도 믿지 않도록 설계하는 개념이 핵심이에요."
+            },
+            {
+              "kind": "list",
+              "html": "Google PAIR Guidebook: 6개 챕터 + 23개 디자인 패턴. 2023년 2~8월 사이 트래픽이 560% 급증했어요. '이해를 위한 설명, 완전성을 위한 설명이 아닌(explain for understanding, not completeness)' 원칙이 눈에 띄어요."
+            },
+            {
+              "kind": "list",
+              "html": "IBM CHI 2024 발표: 생성형 AI 전용 6가지 원칙 — '생성적 가변성(Generative Variability)', '공동 창작(Co-Creation)', '불완전성 설계(Designing for Imperfection)'가 새로 추가된 개념이에요."
+            },
+            {
+              "kind": "list",
+              "html": "세 프레임워크의 공통점: 시스템 능력·한계 투명성, 사용자 제어 지원, 피드백 루프, 우아한 실패. 차이: IBM이 지적한 대로 기존 프레임워크는 '결정하는 AI'를 위해 설계됐고 '생성하는 AI'에는 잘 맞지 않아요."
+            },
+            {
+              "kind": "list",
+              "html": "필자가 지적한 공통 빈 곳: 다양성·비차별·공정성·환경·사회적 웰빙은 세 프레임워크 모두에서 상대적으로 얕게 다뤄져요."
+            }
+          ]
+        },
+        {
+          "title": "우리 적용 시 고려",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "원문 필자는 '컴플라이언스 문서가 아닌 사고 도구로 쓰라'고 권장해요 — AI 기능 출시 전 Microsoft 18가지로 빠른 휴리스틱 리뷰, 또는 PAIR Guidebook 워크시트로 디자인 크리틱을 구조화하는 방식이에요."
+            },
+            {
+              "kind": "list",
+              "html": "IBM의 '적절한 신뢰(appropriate reliance)' 개념 — 의료 트리아지 도구가 음악 추천과 같은 수준의 확신을 표시하면 설계 문제가 된다는 사례가 원문에 있어요. 신뢰 표시 수준을 도메인별로 다르게 설계하는 기준으로 쓸 수 있어요."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "30",
+      "route": "/articles/30",
+      "id": "muzli-blog-fd062a89",
+      "platform": "Muzli Blog",
+      "areaKey": "design",
+      "area": "Design",
+      "categoryKey": "design-trend",
+      "category": "디자인 트렌드",
+      "date": "2026-04-27",
+      "image": "https://miro.medium.com/v2/resize:fit:1200/1*FUIMrBSy6U63cp_SSoWu3Q.png",
+      "imageCaption": "",
+      "tags": [
+        "동적로고",
+        "Framer",
+        "LogoShaders",
+        "브랜딩",
+        "모션"
+      ],
+      "takeawayHtml": "Framer Logo Shaders — 정적 로고가 '덜 다듬어진 느낌'이 되는 변곡점",
+      "deckHtml": "Muzli의 Rehan Pinjari가 Framer의 Logo Shaders 출시를 계기로 동적 로고가 표준이 되는 흐름을 분석했어요. 핵심은 기술이 아니라 마찰 비용이에요 — After Effects + 개발자 협업으로 하루 이상 걸리던 로고 애니메이션이 이제 15분으로 줄었고, 그 순간 '기대치가 이동'한다는 이야기예요.",
+      "sourceUrl": "https://medium.muz.li/logos-arent-supposed-to-sit-still-anymore-39f8a3b5c1a3",
+      "sourceTitle": "Muzli Blog",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "Framer Logo Shaders: 로고를 업로드하면 유리 효과·그라디언트·깊이를 로고 형태에 통합해 내보낼 수 있어요. 이전 방식(After Effects → Lottie → 개발자 협업)은 최소 하루, 지금은 15분이에요."
+            },
+            {
+              "kind": "list",
+              "html": "필자의 패턴 분석: 그림자→반응형 디자인→마이크로 인터랙션→다크 모드가 걸어온 길을 동적 로고도 따라간다고 주장해요. '폴리시가 있는 제품만 갖고 있던 것 → 도구가 쉽게 만들면 → 표준이 된다' 사이클이에요."
+            },
+            {
+              "kind": "list",
+              "html": "사용자는 '로고가 움직인다'고 의식적으로 인지하지 않아요. 페이지가 '더 정제된 느낌'이라고만 느끼고, 그 느낌이 전환율에 영향을 준다고 필자는 주장해요."
+            },
+            {
+              "kind": "list",
+              "html": "필자 예측: 12개월 후 정적 로고는 모바일 미지원 사이트처럼 '틀린 건 아닌데, 덜 다듬어진 느낌'이 될 거라고 말해요."
+            }
+          ]
+        },
+        {
+          "title": "우리 적용 시 고려",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "Framer 기반 랜딩 페이지 프로젝트에서 Logo Shaders 적용 시점 — 현재 Framer 프로젝트가 있다면 15분 실험으로 클라이언트 반응을 확인해볼 수 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "필자가 언급한 '마찰 비용이 사라지면 기대치가 이동한다'는 논리 — 디자인 시스템에서도 적용돼요. 컴포넌트 제작 비용이 낮아질수록 '없으면 이상한' 컴포넌트 목록이 늘어나요."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "31",
+      "route": "/articles/31",
+      "id": "muzli-blog-2c244b83",
+      "platform": "Muzli Blog",
+      "areaKey": "design",
+      "area": "Design",
+      "categoryKey": "ux-guidelines",
+      "category": "UX 가이드라인",
+      "date": "2026-04-26",
+      "image": "https://miro.medium.com/v2/resize:fit:1200/1*ZNG10gwkABxpyCYNgr4QUA.png",
+      "imageCaption": "",
+      "tags": [
+        "대시보드",
+        "SaaS",
+        "UI컴포넌트",
+        "OptimisticUI",
+        "정보구조"
+      ],
+      "takeawayHtml": "SaaS 대시보드 설계 — 복잡해 보이고 싶은 유혹을 이겨내는 구체적 규칙",
+      "deckHtml": "Muzli의 Muskaan Arai가 SaaS 대시보드가 '서랍을 화면에 쏟아붓는' 패턴에서 벗어나는 법을 정리했어요. 사이드바 구조·모달·팝오버·토스트 구분 기준·Optimistic UI 원칙까지, 대시보드 페이지를 구성하는 4가지 요소 중심으로 설명해요.",
+      "sourceUrl": "https://medium.muz.li/stop-designing-saas-dashboards-like-youre-trying-to-impress-yourself-399bea31263e",
+      "sourceTitle": "Muzli Blog",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "모달 vs 팝오버 vs 토스트 구분 기준: 팝오버는 다른 작업을 막지 않는 가벼운 조작(빠른 필터·표시 설정), 모달은 현재 페이지 콘텐츠와 직접 연관된 복잡한 작업, 토스트는 화면을 장악하지 않는 알림·확인·에러용이에요."
+            },
+            {
+              "kind": "list",
+              "html": "Optimistic UI: 사용자가 레코드를 삭제하면 서버 응답 전에 즉시 사라지도록 처리해요. 로딩 스피너 없음 — Gmail·Linear가 쓰는 패턴이에요. 필자는 '로딩 스피너를 없애는 것이 종종 가장 스마트한 설계 결정'이라고 말해요."
+            },
+            {
+              "kind": "list",
+              "html": "대시보드 페이지의 4가지 요소: 테이블·카드(차트·숫자·알림)·사용자 입력(폼·편집)·탭. 필자는 이 4가지 조합으로 거의 모든 대시보드 페이지를 만들 수 있다고 주장해요."
+            },
+            {
+              "kind": "list",
+              "html": "사이드바 꿀팁: 링크가 많아지면 드롭다운 안에 2차 링크를 넣을 것. 끝없이 스크롤되는 플랫 내비게이션 목록은 링크 추가가 아니라 정보 구조 개선이 필요하다는 신호예요."
+            }
+          ]
+        },
+        {
+          "title": "우리 적용 시 고려",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "원문이 제시한 모달·팝오버·토스트 구분 기준 — 팀 내 인터랙션 컴포넌트 가이드라인 문서화에 그대로 활용할 수 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "Optimistic UI 도입 시점 — CRUD 작업이 많은 관리자 화면이나 파트너센터에서 로딩 스피너를 없애는 방향으로 설계를 검토할 때 참고할 수 있어요."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": "32",
+      "route": "/articles/32",
+      "id": "muzli-blog-5f4e8c33",
+      "platform": "Muzli Blog",
+      "areaKey": "design",
+      "area": "Design",
+      "categoryKey": "case-study",
+      "category": "케이스 스터디",
+      "date": "2026-01-17",
+      "image": "https://miro.medium.com/v2/da:true/resize:fit:686/0*_uqGCs1J0iaTs8_O",
+      "imageCaption": "",
+      "tags": [
+        "Apple지도",
+        "Google지도",
+        "UX철학",
+        "정보밀도",
+        "탐색UX"
+      ],
+      "takeawayHtml": "Apple 지도 vs Google 지도 UX — '평온함'과 '강력함'이라는 두 철학",
+      "deckHtml": "Muzli의 Muskaan Arai가 Apple 지도와 Google 지도의 UX 차이를 7가지 차원에서 비교했어요. 같은 기능(A에서 B로 이동)을 완전히 다른 철학으로 구현한 두 제품이에요. 정보 밀도·검색 신뢰·내비게이션 집중·오류 처리·개인정보 투명성에서 방향이 반대예요.",
+      "sourceUrl": "https://medium.muz.li/how-apple-maps-and-google-maps-ux-differ-and-what-designers-can-learn-f3a8722bf67f",
+      "sourceTitle": "Muzli Blog",
+      "referenceLinks": [],
+      "sections": [
+        {
+          "title": "원문 포인트",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "정보 밀도: Apple은 '필요할 때만 보여준다', Google은 '먼저 보여주고 사용자가 스캔하게 한다'. 초보 사용자에게는 낮은 밀도가, 숙련 사용자에게는 높은 밀도가 맞아요."
+            },
+            {
+              "kind": "list",
+              "html": "검색 경험: Apple은 '확신을 준다'(결과를 신중하게 선별), Google은 '힘을 준다'(필요 이상으로 옵션을 제공). 필자는 '어떤 감정이 더 중요한가'가 검색 UX 설계의 핵심 질문이라고 말해요."
+            },
+            {
+              "kind": "list",
+              "html": "내비게이션 중 정보량: Apple은 집중이 필요한 순간에 노이즈를 줄여요. Google은 대체 경로·차선 안내·ETA 업데이트를 계속 보여줘요. 어느 쪽이 더 좋은지는 '낯선 지역인가 익숙한 지역인가'에 따라 달라져요."
+            },
+            {
+              "kind": "list",
+              "html": "개인정보: Apple은 '감시받는 느낌'을 줄이고, Google은 '더 스마트하게 느껴지지만 추적 느낌이 더 명확'해요. 필자는 '안전하다는 인식이 기능만큼 중요하다'고 말해요."
+            }
+          ]
+        },
+        {
+          "title": "우리 적용 시 고려",
+          "className": "article-section",
+          "prose": false,
+          "blocks": [
+            {
+              "kind": "list",
+              "html": "원문의 핵심 질문: '내 사용자는 지금 평온함이 필요한가, 강력함이 필요한가?' — 탐색형 서비스를 설계할 때 정보 밀도를 결정하는 출발점으로 쓸 수 있어요."
+            },
+            {
+              "kind": "list",
+              "html": "신뢰 신호 설계: Apple은 단순함으로 신뢰를 만들고, Google은 사회적 증거(리뷰·사진 수)로 신뢰를 만들어요 — 우리 클라이언트 서비스의 목표 사용자가 어느 쪽에 더 반응하는지 결정하는 기준이 돼요."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

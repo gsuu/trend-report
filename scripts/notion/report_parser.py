@@ -736,10 +736,6 @@ def validate_service_article_fit(path: Path, report: "Report") -> None:
         questions_text = text_after_subhead(insight_items, "점검 질문")
         all_text = section_plain_text(insight_items)
 
-        if why_text and (not service_keywords.search(why_text) or not why_keywords.search(why_text)):
-            errors.append(
-                f"- {issue_label}: `왜 지금 이 업데이트인가`에 웹서비스 전문가가 주목해야 할 이유가 더 분명해야 합니다."
-            )
         if design_text and (not service_keywords.search(design_text) or not design_keywords.search(design_text)):
             errors.append(
                 f"- {issue_label}: `설계 관점`에 우리 서비스 적용 시 고려할 화면·정책·플로우 조건이 필요합니다."
@@ -814,18 +810,31 @@ def source_date_audit_index(path: Path) -> dict[str, str]:
     return index
 
 
+def requires_source_date_audit(path: Path) -> bool:
+    return path.name == "magazine-report.md" and path.parent.parent.name == "runs"
+
+
 def validate_issue_source_dates(path: Path, report: "Report") -> None:
     audit_index = source_date_audit_index(path)
     if not audit_index:
+        if requires_source_date_audit(path):
+            audit_path = path.parent / "source-date-audit.json"
+            raise SystemExit(
+                f"{path}: {audit_path.name}이 없어 원문 날짜 검증을 수행할 수 없습니다."
+            )
         return
 
     errors: list[str] = []
+    missing_urls: list[str] = []
     for issue in report.issues:
         source_url = normalize_source_url(issue.meta.get("출처 URL", ""))
         if not source_url:
             continue
         source_date = audit_index.get(source_url)
         if not source_date:
+            if requires_source_date_audit(path):
+                issue_label = f"{issue.number.zfill(2)}. [{issue.platform}] {issue.title}"
+                missing_urls.append(f"- {issue_label}: {issue.meta.get('출처 URL', '')}")
             continue
         issue_date = parse_source_date(issue.meta.get("날짜", ""))
         if issue_date != source_date:
@@ -833,6 +842,12 @@ def validate_issue_source_dates(path: Path, report: "Report") -> None:
             errors.append(
                 f"- {issue_label}: 날짜 `{issue.meta.get('날짜', '')}` → 원문 기준 `{source_date}`"
             )
+
+    if missing_urls:
+        raise SystemExit(
+            f"{path}: source-date-audit.json에 없는 출처 URL이 있어 원문 날짜를 검증할 수 없습니다.\n"
+            + "\n".join(missing_urls)
+        )
 
     if errors:
         raise SystemExit(

@@ -1,0 +1,239 @@
+{
+  "date": "2026-04-29",
+  "sourceFile": "news-tracking/design-sources.json",
+  "totalArticles": 0,
+  "sourceResults": [
+    {
+      "name": "DIGITAL iNSIGHT",
+      "type": "feed",
+      "url": "https://ditoday.com/feed/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Figma Releases",
+      "type": "feed",
+      "url": "https://figmareleases.blogspot.com/feeds/posts/default",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Adobe Blog",
+      "type": "feed",
+      "url": "https://blog.adobe.com/feed.xml",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Smashing Magazine - UX Design",
+      "type": "feed",
+      "url": "https://www.smashingmagazine.com/feed/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Nielsen Norman Group",
+      "type": "feed",
+      "url": "https://www.nngroup.com/feed/rss/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "DIGITAL iNSIGHT - UIUX",
+      "type": "page",
+      "url": "https://ditoday.com/ui-ux/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Samsung Design - UXUI",
+      "type": "page",
+      "url": "https://design.samsung.com/kr/explore/?tag=UXUI",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "DesignDB - Design News",
+      "type": "page",
+      "url": "https://www.designdb.com/?menuno=792",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Design Compass",
+      "type": "page",
+      "url": "https://designcompass.org/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Design X Blog",
+      "type": "page",
+      "url": "https://design-x.kr/blog",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Musinsa Newsroom - Campaigns",
+      "type": "page",
+      "url": "https://newsroom.musinsa.com/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "29CM - Special Order",
+      "type": "page",
+      "url": "https://shop.29cm.co.kr/special-order",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Olive Young - Events",
+      "type": "page",
+      "url": "https://www.oliveyoung.co.kr/store/main/getEventList.do",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "W Concept - Events",
+      "type": "page",
+      "url": "https://www.wconcept.co.kr/Event",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "SSG - Events",
+      "type": "page",
+      "url": "https://www.ssg.com/event/eventMain.ssg",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Awwwards - Websites",
+      "type": "page",
+      "url": "https://www.awwwards.com/websites/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Siteinspire",
+      "type": "page",
+      "url": "https://www.siteinspire.com/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Land-book",
+      "type": "page",
+      "url": "https://land-book.com/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Godly",
+      "type": "page",
+      "url": "https://godly.website/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Httpster",
+      "type": "page",
+      "url": "https://httpster.net/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "The Brand Identity",
+      "type": "page",
+      "url": "https://the-brandidentity.com/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "It's Nice That",
+      "type": "page",
+      "url": "https://www.itsnicethat.com/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Muzli",
+      "type": "page",
+      "url": "https://muz.li/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Figma Blog - Design Systems",
+      "type": "page",
+      "url": "https://www.figma.com/blog/design-systems/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Into Design Systems",
+      "type": "page",
+      "url": "https://www.intodesignsystems.com/blog",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Framer Updates",
+      "type": "page",
+      "url": "https://www.framer.com/updates/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Webflow Blog",
+      "type": "page",
+      "url": "https://webflow.com/blog",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Webflow Showcase",
+      "type": "page",
+      "url": "https://webflow.com/made-in-webflow",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Canva Newsroom",
+      "type": "page",
+      "url": "https://www.canva.com/newsroom/news/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    }
+  ]
+}

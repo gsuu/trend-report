@@ -88,7 +88,7 @@ RSS 없는 스크래핑 결과는 상세 페이지의 `og:title`, `og:descriptio
 - 새 파일 `news-tracking/review/YYYY-MM-DD.md`
 - `scripts/tracking/collect_materials.mjs`
 
-1차 후보는 20~30개 사이로 만들고, 아래를 같이 출력합니다.
+1차 후보는 개수 고정 없이 기준을 통과한 항목으로 만들고, 아래를 같이 출력합니다.
 
 - 업로드 후보
 - 보류 후보

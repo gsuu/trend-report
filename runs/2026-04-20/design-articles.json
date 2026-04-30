@@ -1,0 +1,604 @@
+[
+  {
+    "title": "가구/인테리어 행사한눈에",
+    "link": "https://event.ssg.com/eventDetail.ssg?nevntId=1000000022147&domainSiteNo=6005&_mpop=new",
+    "pubDate": "Tue, 28 Apr 2026 07:37:29 GMT",
+    "content": "가구/홈데코 랜더스데이 프리미엄 브랜드/쓱단독 초특가혜택 한눈에보기 ssg.com",
+    "image": "https://sstatic.ssgcdn.com/promo/event/ssg/202603/42962905889427302.jpg",
+    "valueTags": [
+      "brand_expression",
+      "korean_reference",
+      "promotion_event_design",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "SSG - Events",
+    "sourceUrl": "https://www.ssg.com/event/eventMain.ssg",
+    "sourceRole": "inspiration",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_promotion_design",
+    "topics": []
+  },
+  {
+    "title": "매일매일 출석체크 이벤트",
+    "link": "https://event.ssg.com/eventDetail.ssg?nevntId=1000000020298&domainSiteNo=6005&_mpop=new",
+    "pubDate": "Tue, 28 Apr 2026 07:37:29 GMT",
+    "content": "매일매일 출석체크 룰렛 이벤트 룰렛 돌리고 출석체크도 쓱- ssg.com",
+    "image": "https://sstatic.ssgcdn.com/promo/event/ssg/202505/14883812392363550.png",
+    "valueTags": [
+      "korean_reference",
+      "promotion_event_design"
+    ],
+    "scraped": true,
+    "source": "SSG - Events",
+    "sourceUrl": "https://www.ssg.com/event/eventMain.ssg",
+    "sourceRole": "inspiration",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_promotion_design",
+    "topics": []
+  },
+  {
+    "title": "이벤트 안내 페이지",
+    "link": "https://event.ssg.com/eventDetail.ssg?nevntId=1000000000858&siteNo=6005&recruitmentPath=L6007001&eventCode=HPG02",
+    "pubDate": "Tue, 28 Apr 2026 07:37:29 GMT",
+    "content": "10만원 4월 한정 혜택 SSG.COM카드 Edition2",
+    "image": "https://sstatic.ssgcdn.com/promo/event/ssg/202506/16951978072177818.jpg",
+    "valueTags": [
+      "layout_pattern",
+      "korean_reference",
+      "promotion_event_design"
+    ],
+    "scraped": true,
+    "source": "SSG - Events",
+    "sourceUrl": "https://www.ssg.com/event/eventMain.ssg",
+    "sourceRole": "inspiration",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_promotion_design",
+    "topics": []
+  },
+  {
+    "title": "SSG.COM삼성카드 이벤트",
+    "link": "https://event.ssg.com/eventDetail.ssg?nevntId=1000000002385&recruitmentPath=SSG",
+    "pubDate": "Tue, 28 Apr 2026 07:37:29 GMT",
+    "content": "~10% SSG머니 적립 혜택 SSG.COM 삼성카드",
+    "image": "https://sstatic.ssgcdn.com/promo/event/ssg/202210/51149816253430414.jpg",
+    "valueTags": [
+      "layout_pattern",
+      "korean_reference",
+      "promotion_event_design"
+    ],
+    "scraped": true,
+    "source": "SSG - Events",
+    "sourceUrl": "https://www.ssg.com/event/eventMain.ssg",
+    "sourceRole": "inspiration",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_promotion_design",
+    "topics": []
+  },
+  {
+    "title": "원티드랩, AX 교육 콘텐츠 출시 “비개발자도 AI 에이전트 구축”",
+    "link": "https://ditoday.com/%ec%9b%90%ed%8b%b0%eb%93%9c%eb%9e%a9-ax-%ea%b5%90%ec%9c%a1-%ec%bd%98%ed%85%90%ec%b8%a0-%ec%b6%9c%ec%8b%9c-%eb%b9%84%ea%b0%9c%eb%b0%9c%ec%9e%90%eb%8f%84-ai-%ec%97%90%ec%9d%b4%ec%a0%84%ed%8a%b8/",
+    "pubDate": "Tue, 28 Apr 2026 05:25:17 +0000",
+    "content": "사내 AX 프로그램 기반... 내달 6일까지 예약 이벤트 The post 원티드랩, AX 교육 콘텐츠 출시 “비개발자도 AI 에이전트 구축” appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "promotion_event_design",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "에이전틱 검색으로 경험 확대… 네이버, AI 검색 서비스 ‘AI탭’ 베타 출시",
+    "link": "https://ditoday.com/%ec%97%90%ec%9d%b4%ec%a0%84%ed%8b%b1-%ea%b2%80%ec%83%89%ec%9c%bc%eb%a1%9c-%ea%b2%bd%ed%97%98-%ed%99%95%eb%8c%80-%eb%84%a4%ec%9d%b4%eb%b2%84-ai-%ea%b2%80%ec%83%89-%ec%84%9c%eb%b9%84%ec%8a%a4/",
+    "pubDate": "Tue, 28 Apr 2026 00:56:07 +0000",
+    "content": "일상 궁금증부터 심층 탐색까지 폭넓은 답변 제공해 검색 경험 확장 The post 에이전틱 검색으로 경험 확대… 네이버, AI 검색 서비스 ‘AI탭’ 베타 출시 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "korean_reference",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "디자이너 공개 오디션 열린다… 웹스미디어-티티서울, ‘DA’ 추진 맞손",
+    "link": "https://ditoday.com/%eb%94%94%ec%9e%90%ec%9d%b4%eb%84%88-%ea%b3%b5%ea%b0%9c-%ec%98%a4%eb%94%94%ec%85%98-%ec%97%b4%eb%a6%b0%eb%8b%a4-%ec%9b%b9%ec%8a%a4%eb%af%b8%eb%94%94%ec%96%b4-%ed%8b%b0%ed%8b%b0%ec%84%9c%ec%9a%b8/",
+    "pubDate": "Thu, 23 Apr 2026 02:06:01 +0000",
+    "content": "프로그램 홍보 등 협력... 지속가능 파트너십 구축 The post 디자이너 공개 오디션 열린다… 웹스미디어-티티서울, ‘DA’ 추진 맞손 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "korean_reference",
+      "korean_uiux_case"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "클로드 디자인 등장: AI가 바꿀 UI·UX 디자인 실무",
+    "link": "https://ditoday.com/%ed%81%b4%eb%a1%9c%eb%93%9c-%eb%94%94%ec%9e%90%ec%9d%b8-%eb%93%b1%ec%9e%a5-ai%ea%b0%80-%eb%b0%94%ea%bf%80-ui%c2%b7ux-%eb%94%94%ec%9e%90%ec%9d%b8-%ec%8b%a4%eb%ac%b4/",
+    "pubDate": "Fri, 24 Apr 2026 04:41:34 +0000",
+    "content": "클로드 디자인 주요 기능 5가지 정리 The post 클로드 디자인 등장: AI가 바꿀 UI·UX 디자인 실무 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "망고슬래브 ‘네모닉 닷’, 레드닷 디자인 어워드 본상",
+    "link": "https://ditoday.com/%eb%a7%9d%ea%b3%a0%ec%8a%ac%eb%9e%98%eb%b8%8c-%eb%84%a4%eb%aa%a8%eb%8b%89-%eb%8b%b7-%eb%a0%88%eb%93%9c%eb%8b%b7-%eb%94%94%ec%9e%90%ec%9d%b8-%ec%96%b4%ec%9b%8c%eb%93%9c-%eb%b3%b8%ec%83%81/",
+    "pubDate": "Fri, 24 Apr 2026 02:10:49 +0000",
+    "content": "AI 점자 라벨 프린터... CES·iF 이어 3관왕 The post 망고슬래브 ‘네모닉 닷’, 레드닷 디자인 어워드 본상 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "비즈하우스, 디자인 발주부터 인쇄까지 원스톱 해결 ‘기업 전용관’ 출시",
+    "link": "https://ditoday.com/%eb%b9%84%ec%a6%88%ed%95%98%ec%9a%b0%ec%8a%a4-%eb%94%94%ec%9e%90%ec%9d%b8-%eb%b0%9c%ec%a3%bc%eb%b6%80%ed%84%b0-%ec%9d%b8%ec%87%84%ea%b9%8c%ec%a7%80-%ec%9b%90%ec%8a%a4%ed%86%b1-%ed%95%b4%ea%b2%b0/",
+    "pubDate": "Fri, 24 Apr 2026 01:22:41 +0000",
+    "content": "발주 단계 간소화로 기업 캠페인·행사 운영 효과 증대 The post 비즈하우스, 디자인 발주부터 인쇄까지 원스톱 해결 ‘기업 전용관’ 출시 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "brand_expression",
+      "promotion_event_design",
+      "korean_uiux_case"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "The Brand Identity – Home of the Greatest in Brand & Design",
+    "link": "https://the-brandidentity.com/project/how-recent-turned-a-circle-square-and-triangle-into-ollas-identity",
+    "pubDate": "Tue, 28 Apr 2026 07:37:37 GMT",
+    "content": "Circle, square, triangle. Recent™ used those familiar primitive forms as the backbone of the identity for Olla – a liquid staking protocol built for the Aztec network, a privacy-focused blockchain. In plain terms, Olla lets anyone stake Aztec cryptocurrency, earn rewards and stay liquid, without having to understand the complicated infrastructure underneath. The Abu Dhabi and Amsterdam-based studio’s task was to build an identity that could convey that message to a first-time user.",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/04/how-recent-turned-a-circle-square-and-triangle-into-ollas-identity/Olla-Recent-11.png",
+    "valueTags": [
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "The Future of Design Systems is Automated",
+    "link": "https://www.figma.com/blog/the-future-of-design-systems-is-automated/",
+    "pubDate": "Tue, 28 Apr 2026 07:38:18 GMT",
+    "content": "Plugins, widgets, and tooling—the second edition of our series on the future of design systems.",
+    "image": "https://cdn.sanity.io/images/599r6htc/regionalized/f39e52f23352da57a0c6d40893645f0948ac9653-4240x2000.png?w=1200&q=70&fit=max&auto=format",
+    "valueTags": [
+      "design_system"
+    ],
+    "scraped": true,
+    "source": "Figma Blog - Design Systems",
+    "sourceUrl": "https://www.figma.com/blog/design-systems/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "The Future of Design Systems is Complicated",
+    "link": "https://www.figma.com/blog/the-future-of-design-systems-is-complicated/",
+    "pubDate": "Tue, 28 Apr 2026 07:38:18 GMT",
+    "content": "In this series, we talk to industry experts about how they’re managing the the future of design systems—from tooling to automation to accessibility.",
+    "image": "https://cdn.sanity.io/images/599r6htc/regionalized/04d8e7a52fc4c1502ef6cf47a8a2e8e77054e347-4240x2000.png?w=1200&q=70&fit=max&auto=format",
+    "valueTags": [
+      "design_system"
+    ],
+    "scraped": true,
+    "source": "Figma Blog - Design Systems",
+    "sourceUrl": "https://www.figma.com/blog/design-systems/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "The Future of Design Systems is Semantic",
+    "link": "https://www.figma.com/blog/the-future-of-design-systems-is-semantic/",
+    "pubDate": "Tue, 28 Apr 2026 07:38:18 GMT",
+    "content": "In this piece, we dig into the decreasing gap between design and code, increasing semantics, and one of Figma’s newest features: variables.",
+    "image": "https://cdn.sanity.io/images/599r6htc/regionalized/10e55cde1be89fb32aa3d7414fa3cd83b0859a51-3264x1836.jpg?w=1200&q=70&fit=max&auto=format",
+    "valueTags": [
+      "design_system"
+    ],
+    "scraped": true,
+    "source": "Figma Blog - Design Systems",
+    "sourceUrl": "https://www.figma.com/blog/design-systems/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "The Future of Design Systems Is Accessible",
+    "link": "https://www.figma.com/blog/the-future-of-design-systems-is-accessible/",
+    "pubDate": "Tue, 28 Apr 2026 07:38:18 GMT",
+    "content": "In the third part of our series, we talk to design system and accessibility experts about making inclusive systems a top priority.",
+    "image": "https://cdn.sanity.io/images/599r6htc/regionalized/1bb572a57fac69625aac7987811ce208d2f9526a-2784x1566.webp?w=1200&q=70&fit=max&auto=format",
+    "valueTags": [
+      "design_system"
+    ],
+    "scraped": true,
+    "source": "Figma Blog - Design Systems",
+    "sourceUrl": "https://www.figma.com/blog/design-systems/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "The Future of Design Systems is Marketing",
+    "link": "https://www.figma.com/blog/the-future-of-design-systems-is-marketing/",
+    "pubDate": "Tue, 28 Apr 2026 07:38:18 GMT",
+    "content": "Design systems have many benefits, but their impact is only as strong as their adoption. Designer Advocate Ana Boyer tells us how to get the entire team on board.",
+    "image": "https://cdn.sanity.io/images/599r6htc/regionalized/a59706bee6489a589593f5305c492986e4306359-3264x1836.png?w=1200&q=70&fit=max&auto=format",
+    "valueTags": [
+      "promotion_event_design",
+      "design_system"
+    ],
+    "scraped": true,
+    "source": "Figma Blog - Design Systems",
+    "sourceUrl": "https://www.figma.com/blog/design-systems/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "How to Supercharge your Design System with Slots",
+    "link": "https://www.figma.com/blog/supercharge-your-design-system-with-slots/",
+    "pubDate": "Tue, 28 Apr 2026 07:38:18 GMT",
+    "content": "Slots give you the ability to customize components without breaking the system. We’re sharing five field-tested tips from early users to help you unlock more freedom without giving up control.",
+    "image": "https://cdn.sanity.io/images/599r6htc/regionalized/3b967a15c2bee32ae90ca07e805c6375437a617e-1184x624.png?w=1200&q=70&fit=max&auto=format",
+    "valueTags": [
+      "design_system"
+    ],
+    "scraped": true,
+    "source": "Figma Blog - Design Systems",
+    "sourceUrl": "https://www.figma.com/blog/design-systems/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "The New Business Case For Design Systems",
+    "link": "https://www.figma.com/blog/the-new-business-case-for-design-systems/",
+    "pubDate": "Tue, 28 Apr 2026 07:38:18 GMT",
+    "content": "What you need to know about how to track and communicate the value of your design system",
+    "image": "https://cdn.sanity.io/images/599r6htc/regionalized/bbbd715863ae9596492a6b6eda14af49a9b802de-2400x1260.png?w=1200&q=70&fit=max&auto=format",
+    "valueTags": [
+      "design_system"
+    ],
+    "scraped": true,
+    "source": "Figma Blog - Design Systems",
+    "sourceUrl": "https://www.figma.com/blog/design-systems/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "5 Shifts Redefining Design Systems in the AI Era",
+    "link": "https://www.figma.com/blog/5-shifts-redefining-design-systems-in-the-ai-era/",
+    "pubDate": "Tue, 28 Apr 2026 07:38:18 GMT",
+    "content": "We spoke with product leaders and practitioners about the shifts they’re seeing in how design systems are built, used, and maintained.",
+    "image": "https://cdn.sanity.io/images/599r6htc/regionalized/7fc2f61c50effd159c77dd2ac3056de5261fb6a7-3262x1400.png?w=1200&q=70&fit=max&auto=format",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Figma Blog - Design Systems",
+    "sourceUrl": "https://www.figma.com/blog/design-systems/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "The Branding for Intercom’s AI Summit Looks Like an Alien Superbloom",
+    "link": "https://www.figma.com/blog/intercom-pioneer-ai-summit-branding/",
+    "pubDate": "Tue, 28 Apr 2026 07:38:18 GMT",
+    "content": "For the customer service and AI event Pioneer, Intercom’s designers used Figma to create a visual language of surreal flowers and shape-shifting pollen.",
+    "image": "https://cdn.sanity.io/images/599r6htc/regionalized/691176cc0ac6e3dbb7c331634d150ddff4295106-2400x1254.png?w=1200&q=70&fit=max&auto=format",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "promotion_event_design",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Figma Blog - Design Systems",
+    "sourceUrl": "https://www.figma.com/blog/design-systems/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "A Tale of Two Parameter Architectures—and How We Unified Them",
+    "link": "https://www.figma.com/blog/a-tale-of-two-parameter-architectures/",
+    "pubDate": "Tue, 28 Apr 2026 07:38:18 GMT",
+    "content": "After launching variables and component properties in quick succession, we were left with two different underlying architectures for parametrization. Here’s how we unified them.",
+    "image": "https://cdn.sanity.io/images/599r6htc/regionalized/0f2351d5fdeb4e0abdd87f41cd0f2dbc1b666c5b-3265x1837.png?w=1200&q=70&fit=max&auto=format",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_system"
+    ],
+    "scraped": true,
+    "source": "Figma Blog - Design Systems",
+    "sourceUrl": "https://www.figma.com/blog/design-systems/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "In Good Company: How Retailers Use Figma to Elevate E-commerce",
+    "link": "https://www.figma.com/blog/in-good-company-retailers/",
+    "pubDate": "Tue, 28 Apr 2026 07:38:18 GMT",
+    "content": "Brands like Nuuly, Ruggable, and GitHub are designing multidimensional experiences that build customer trust, serve employee needs, and uphold core values.",
+    "image": "https://cdn.sanity.io/images/599r6htc/regionalized/9ee1933d767363a82de7f74af40403ec7520a83a-3264x1836.png?w=1200&q=70&fit=max&auto=format",
+    "valueTags": [
+      "brand_expression",
+      "commerce_design",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Figma Blog - Design Systems",
+    "sourceUrl": "https://www.figma.com/blog/design-systems/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "The UX Designer’s Nightmare: When “Production-Ready” Becomes A Design Deliverable",
+    "link": "https://smashingmagazine.com/2026/04/production-ready-becomes-design-deliverable-ux/",
+    "pubDate": "Wed, 22 Apr 2026 10:00:00 GMT",
+    "content": "In a rush to embrace AI, the industry is redefining what it means to be a UX designer, blurring the line between design and engineering. Carrie Webster explores what’s gained, what’s lost, and why designers need to remain the guardians of the user experience.",
+    "image": "http://files.smashing.media/articles/ux-designer-nightmare-production-ready-becomes-design-deliverable/production-ready-becomes-design-deliverable-ux.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "What I Learned from Design Teams at WhatsApp, Miro and Atlassian Shipping with AI",
+    "link": "https://www.intodesignsystems.com/blog/design-teams-shipping-with-ai-2026",
+    "pubDate": "Tue, 28 Apr 2026 07:38:24 GMT",
+    "content": "Five lessons from the AI Conference 2026 for designers. How teams at WhatsApp, Miro, Atlassian, Figma and GitHub are shipping production code with Cursor, Claude Code and machine-readable design systems. Plus where the designer-engineer handoff is heading.",
+    "image": "https://www.intodesignsystems.com/blog/img/design-teams-shipping-with-ai-cover.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Into Design Systems",
+    "sourceUrl": "https://www.intodesignsystems.com/blog",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "Claude Code designs for me in Figma: No MCP needed",
+    "link": "https://www.intodesignsystems.com/blog/claude-code-figma-no-mcp",
+    "pubDate": "Tue, 28 Apr 2026 07:38:24 GMT",
+    "content": "Connect Claude Code to Figma in 60 seconds without MCP. No API key, no JSON config. Use Chrome DevTools in Figma Desktop. Free account works. Step-by-step tutorial for designers.",
+    "image": "https://www.intodesignsystems.com/blog/img/claude-code-figma-no-mcp.png",
+    "valueTags": [],
+    "scraped": true,
+    "source": "Into Design Systems",
+    "sourceUrl": "https://www.intodesignsystems.com/blog",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "The “Bug-Free” Workforce: How AI Efficiency Is Subtly Disrupting The Interactions That Build Strong Teams",
+    "link": "https://smashingmagazine.com/2026/04/bug-free-workforce-ai-disrupting-teams/",
+    "pubDate": "Mon, 27 Apr 2026 10:00:00 GMT",
+    "content": "AI tools are eliminating the need to “bug” colleagues for help, but the informal interactions they replace are the very scaffolding that builds team trust, belonging, and innovation. Casey Hudetz and Eric Olive explore the research and potential impacts behind that risk and offer practical strategies for maintaining human connection while leveraging AI’s strengths.",
+    "image": "http://files.smashing.media/articles/bug-free-workforce/bug-free-workforce-ai-disrupting-teams.jpg",
+    "valueTags": [
+      "motion_interaction",
+      "korean_uiux_case",
+      "prototyping",
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Why User Panels Fail",
+    "link": "https://www.nngroup.com/articles/user-panels-fail/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 24 Apr 2026 17:00:00 +0000",
+    "content": "User panels can deteriorate in predictable ways, introducing bias and reducing their effectiveness for ongoing research.",
+    "image": "",
+    "valueTags": [
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "10 Guidelines for Designing Your Site’s AI Chatbots",
+    "link": "https://www.nngroup.com/articles/ai-chatbots-design-guidelines/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 24 Apr 2026 17:00:00 +0000",
+    "content": "Helpful site-specific AI chatbots clearly state their capabilities, offer relevant prompt suggestions, and quickly signal they know what users are looking at.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  }
+]

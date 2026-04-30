@@ -1,0 +1,30 @@
+{
+  "date": "2026-04-29",
+  "status": "warn",
+  "summary": {
+    "total": 214,
+    "candidate": 146,
+    "nonCandidate": 68,
+    "issues": {
+      "error": 0,
+      "warn": 1
+    }
+  },
+  "runDataFiles": {
+    "trackingData": "runs/2026-04-29/tracking-data.json",
+    "editorialBrief": "runs/2026-04-29/editorial-brief.md",
+    "report": "runs/2026-04-29/magazine-report.md"
+  },
+  "checks": {
+    "strict": false,
+    "candidateRatio": 0.6822429906542056
+  },
+  "issues": [
+    {
+      "level": "warn",
+      "articleIndex": 106,
+      "message": "summary 길이가 짧아 본문 보강이 필요할 수 있습니다",
+      "articleTitle": "'AI네트워크 얼라이언스' 출범…\"차세대 이동통신 시장 20% 점유\""
+    }
+  ]
+}

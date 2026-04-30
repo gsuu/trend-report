@@ -98,6 +98,7 @@ DEVELOP_CATEGORY_KEYS = {
 }
 DEVELOP_SUBCATEGORY_ORDER = (
     "ai",
+    "web_platform",
     "html",
     "css",
     "javascript",
@@ -107,6 +108,7 @@ DEVELOP_SUBCATEGORY_ORDER = (
 )
 DEVELOP_SUBCATEGORY_CLASSIFICATION_ORDER = (
     "ai",
+    "web_platform",
     "web_accessibility",
     "css",
     "html",
@@ -119,11 +121,18 @@ DEVELOP_SUBCATEGORY_LABELS = {
     "css": "CSS",
     "javascript": "JAVASCRIPT",
     "web_accessibility": "웹접근성",
+    "web_platform": "UPDATE",
     "ai": "AI",
     "tool": "TOOL",
     "data_api": "DATA/API",
 }
 DEVELOP_SUBCATEGORY_KEYWORDS = {
+    "web_platform": {
+        "web_platform", "web-platform", "baseline", "browser", "브라우저",
+        "chrome", "safari", "firefox", "webkit", "release_notes",
+        "safari_technology_preview", "technology_preview", "interop",
+        "browser_support", "새로운_기능", "새_기능", "web_platform_update",
+    },
     "html": {
         "html",
         "dom",
@@ -934,6 +943,7 @@ def notion_report_items(report: dict[str, object], audience: str) -> list[dict[s
         }
         if audience == "dev":
             item["audienceCategory"] = develop_subcategory_label(classification_categories, tags)
+            item["category"] = item["audienceCategory"]
         items.append(item)
     return items
 

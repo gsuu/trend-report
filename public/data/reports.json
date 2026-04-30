@@ -1,0 +1,140 @@
+{
+  "reports": [
+    {
+      "slug": "2026-W18",
+      "title": "CTTD Trend Magazine — 2026-W18",
+      "weekLabel": "2026년 18주차",
+      "publishedAt": "2026-04-29",
+      "issueCount": 29
+    },
+    {
+      "slug": "2026-04-20",
+      "title": "2026-04-20 Weekly Trend Report",
+      "date": "2026-04-20",
+      "deck": "이번 주에 어떤 관심사 축을 다시 점검했고, 무엇을 채택하거나 제외했는지 정리한 운영형 리포트입니다.",
+      "summary": "패션·뷰티 커머스와 종합 커머스 흐름을 다시 보고, 날짜 검증까지 통과한 7건만 최종 반영했습니다.",
+      "highlights": [
+        "뷰티 커머스",
+        "종합 커머스/마켓플레이스",
+        "멤버십·CRM"
+      ],
+      "monitoredScope": {
+        "focusAxes": [
+          "뷰티 커머스",
+          "종합 커머스/마켓플레이스",
+          "멤버십·CRM"
+        ],
+        "platforms": [
+          "올리브영",
+          "다이소",
+          "당근",
+          "네이버쇼핑",
+          "G마켓"
+        ],
+        "weeklyPoint": "건강기능식품 구매 채널 변화, 추천 근거 노출, 프로모션형 구매 경험 여부를 중심으로 다시 점검했다."
+      },
+      "sections": [
+        {
+          "key": "service",
+          "label": "Service",
+          "heading": "CTTD 클라이언트 관점에서 바로 참고할 수 있는 서비스 변화",
+          "summary": "이번 회차는 개수를 채우지 않고, 날짜 검증과 실무 적합성을 모두 통과한 사례만 남겼다.",
+          "items": [
+            {
+              "number": "01",
+              "category": "research",
+              "title": "불황에도 건강기능식품 성장은 계속된다? 2030이 올리브영과 다이소로 향하는 이유",
+              "summary": "2030 소비자가 건강기능식품을 살 때 채널을 목적과 가격에 따라 어떻게 나눠 쓰는지 보여준다.",
+              "reason": "뷰티·웰니스 커머스에서 탐색, 입문 구매, 재구매 흐름을 어떻게 분리할지 바로 질문으로 바꿀 수 있다.",
+              "route": "/articles/2026-04-20-01",
+              "sourceUrl": "https://blog.opensurvey.co.kr/article/health-supplement-2026-2/"
+            }
+          ],
+          "excluded": [
+            {
+              "title": "당근, 중고거래 '바로구매' 기능 도입",
+              "reason": "원문 날짜가 2025년 9월 18일이라 2026년 4월 20일 회차 기준과 맞지 않는다.",
+              "revisitCondition": "같은 성격의 결제·신뢰 흐름 개편이 현재 회차 범위 안에서 다시 확인될 때."
+            },
+            {
+              "title": "당근, AI 기반 '여러 물건 글쓰기' 기능 출시",
+              "reason": "원문 날짜가 2025년 10월 24일이라 2026년 4월 20일 회차 기준과 맞지 않는다.",
+              "revisitCondition": "현재 회차 범위에서 실제 등록 플로우 변화가 다시 공개될 때."
+            }
+          ]
+        },
+        {
+          "key": "design",
+          "label": "Design",
+          "heading": "UIUX 참고 가치가 분명한 디자인 사례",
+          "summary": "검색, 디자인 시스템, AI 챗봇처럼 실제 화면 구조와 상호작용 설계에 바로 연결되는 항목만 추렸다.",
+          "items": [
+            {
+              "number": "02",
+              "category": "ai",
+              "title": "네이버 AI 검색 서비스 'AI탭' 베타 출시",
+              "summary": "검색 결과와 AI 답변을 병행하는 화면 구조를 국내 사례로 확인할 수 있다.",
+              "reason": "질문 기반 탐색 플로우와 결과 목록의 균형을 실제 서비스 화면 관점에서 볼 수 있다.",
+              "route": "/articles/2026-04-20-02",
+              "sourceUrl": "https://ditoday.com/%ec%97%90%ec%9d%b4%ec%a0%84%ed%8b%b1-%ea%b2%80%ec%83%89%ec%9c%bc%eb%a1%9c-%ea%b2%bd%ed%97%98-%ed%99%95%eb%8c%80-%eb%84%a4%ec%9d%b4%eb%b2%84-ai-%ea%b2%80%ec%83%89-%ec%84%9c%eb%b9%84%ec%8a%a4/"
+            },
+            {
+              "number": "03",
+              "category": "design_system",
+              "title": "How to Supercharge your Design System with Slots",
+              "summary": "디자인 시스템 일관성과 커스터마이징 자유도를 함께 다루는 구조를 설명한다.",
+              "reason": "반복 UI 컴포넌트에서 구조와 교체 가능 범위를 어떻게 나눌지 실무 기준을 준다.",
+              "route": "/articles/2026-04-20-03",
+              "sourceUrl": "https://www.figma.com/blog/supercharge-your-design-system-with-slots/"
+            },
+            {
+              "number": "04",
+              "category": "ai",
+              "title": "10 Guidelines for Designing Your Site's AI Chatbots",
+              "summary": "AI 챗봇의 기대치 조정과 후속 질문 설계를 화면 흐름 차원에서 정리했다.",
+              "reason": "AI 기능을 붙이는 것보다 사용자에게 무엇을 기대할 수 있는지 먼저 보이게 하는 설계 기준이 선명하다.",
+              "route": "/articles/2026-04-20-04",
+              "sourceUrl": "https://www.nngroup.com/articles/ai-chatbots-design-guidelines/"
+            }
+          ]
+        },
+        {
+          "key": "dev",
+          "label": "DEV",
+          "heading": "웹 퍼블리싱과 프런트엔드 관점에서 남길 만한 기술 메모",
+          "summary": "CSS 유지보수, 접근성 디버깅, AI 코딩 검증처럼 바로 실무 점검으로 이어지는 글만 유지했다.",
+          "items": [
+            {
+              "number": "05",
+              "category": "css",
+              "title": "999: Writing Maintainable CSS",
+              "summary": "CSS 범위 제어와 methodology 선택을 함께 묶어 점검하게 만든다.",
+              "reason": "AI가 CSS를 빠르게 만들수록 구조와 스코프를 먼저 정하는 기준이 더 중요해진다.",
+              "route": "/articles/2026-04-20-05",
+              "sourceUrl": "https://syntax.fm/999"
+            },
+            {
+              "number": "06",
+              "category": "web_accessibility",
+              "title": "Showit Has Two Documents. That's Why Your Accessibility Fixes Aren't Sticking.",
+              "summary": "렌더 구조 차이가 접근성 수정 결과를 어떻게 비틀어 놓는지 분명하게 보여준다.",
+              "reason": "표면 수정이 아니라 실제 문서 구조를 먼저 확인해야 한다는 점을 잘 짚는다.",
+              "route": "/articles/2026-04-20-06",
+              "sourceUrl": "https://dev.to/agentkit/showit-has-two-documents-thats-why-your-accessibility-fixes-arent-sticking-4i25"
+            },
+            {
+              "number": "07",
+              "category": "ai_tooling",
+              "title": "998: How to Fix Vibe Coding",
+              "summary": "AI 코딩 결과를 lint와 browser check로 검증해야 한다는 기본을 다시 세운다.",
+              "reason": "속도보다 검증 체계가 중요하다는 점을 팀 운영 기준으로 다시 확인할 수 있다.",
+              "route": "/articles/2026-04-20-07",
+              "sourceUrl": "https://syntax.fm/998"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2026-04-29T13:00:58.112Z"
+}
