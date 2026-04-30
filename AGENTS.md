@@ -25,14 +25,17 @@ Apply this tag rule to every Service, Design, and DEV magazine item.
 
 ## Magazine Summary Standard
 
-Apply this summary-layer rule to every Service, Design, and DEV magazine item.
+Apply this summary-layer rule to every Service, Design, and DEV magazine item. The single source of truth is [docs/magazine-writing-standard.md](docs/magazine-writing-standard.md). The rules below mirror that document; if anything diverges, the standard wins.
 
 - Do not force a fixed total issue count across Service, Design, and DEV. Publish as many items as pass the editorial bar for that run, and do not pad the issue to reach `20-30` combined items.
-- Add a `요약` metadata line for the article-header deck. It should be a plain 1-2 sentence summary of the article, not the source name, not the title repeated, not a promotional reason-to-read, and not a copy of the body summary.
+- Apply the **self-contained 요약** rule: a reader who never opens the source URL must, from the metadata `요약:` line and the body `##### 요약` bullets alone, understand who did what, what the core change or argument is, and why this article matters. Replace banner phrasing like `~를 다룹니다`, `~를 소개합니다`, `~에 대한 글입니다` with the actual finding.
+- Add a `요약` metadata line for the article-header deck. It should be 1-2 sentences and put `subject + what + how/why` into a single sentence. It must not repeat the source name, title, body summary, or a promotional reason-to-read.
+- The first bullet of the body `##### 요약` is the **single-line conclusion of the article**. Subsequent bullets carry concrete supporting facts (feature names, scope, screen changes, numbers, author's argument with evidence). Do not cap the bullet count: include as many meaningful points as the source supports, but do not pad with filler bullets. For DEV, at least one of the first two bullets must include a tech name, API, version, or browser condition (a content requirement, not a count cap).
 - Write the body summary only after opening the original source URL. Summarize important source facts, not RSS excerpts or existing digest sentences.
 - Keep the metadata `요약`, body summary, and insight layer distinct. Do not repeat the same sentence across these layers.
 - Do not force a fixed bullet count for body summaries; include the meaningful points needed to represent the source.
 - If the original source is a blog or opinion article rather than a product release note, summarize who is arguing what, which evidence or examples they use, and what CTTD can practically reference from it.
+- Use only the locked sub-heading sets defined in [docs/magazine-writing-standard.md](docs/magazine-writing-standard.md) for the `##### 매거진 인사이트` / `##### 디자인 인사이트` body. Do not invent new sub-headings (e.g. `이 레퍼런스에서 먼저 볼 장면`, `검수 포인트`, `도입 전 검수 포인트`); fold any such content into one of the four locked sub-headings for that area.
 
 ## SERVICE Digest Source Standard
 
