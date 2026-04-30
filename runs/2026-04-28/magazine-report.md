@@ -436,10 +436,6 @@ Service 제외 메모:
 - 이미지:
 - 이미지 설명: 이미지 확인 필요
 
-##### 용어 설명
-
-- Baseline: 주요 브라우저에서 특정 웹 기능을 안정적으로 사용할 수 있는지 보여주는 web.dev와 MDN의 호환성 기준입니다.
-
 ##### 요약
 
 - Chrome 147과 Firefox 150이 4월 stable로 올라왔고, Safari stable 릴리스는 없었다고 web.dev가 정리했습니다.
@@ -479,10 +475,6 @@ Service 제외 메모:
 - 이미지:
 - 이미지 설명: 이미지 확인 필요
 
-##### 용어 설명
-
-- Scott Jehl: Squarespace의 Performance & Accessibility Team tech lead이며, 웹 성능과 표준화 논의에 자주 참여하는 프론트엔드 엔지니어입니다.
-
 ##### 요약
 
 - 에피소드는 lazy loading의 최근 진전, 표준화 과정, 브라우저 지원, 웹 성능 최적화의 다음 흐름을 다룹니다.
@@ -519,11 +511,6 @@ Service 제외 메모:
 - 출처 URL: https://dev.to/7onic/design-to-code-4-why-i-chose-radix-over-custom-primitives-50eo
 - 이미지:
 - 이미지 설명: 이미지 확인 필요
-
-##### 용어 설명
-
-- Radix UI: React에서 접근성 중심의 headless UI primitive를 제공하는 컴포넌트 라이브러리입니다.
-- Roving tabindex: 라디오 그룹이나 메뉴처럼 하나의 위젯 안에서 방향키로 초점을 이동시키기 위해 `tabindex`를 조절하는 패턴입니다.
 
 ##### 요약
 
@@ -563,11 +550,6 @@ headless primitive를 선택할 때는 CSS 자유도만 보면 안 됩니다. po
 - 이미지:
 - 이미지 설명: 이미지 확인 필요
 
-##### 용어 설명
-
-- axe-core: 웹 접근성 자동 검사를 위해 널리 쓰이는 JavaScript 기반 오픈소스 검사 엔진입니다.
-- GitHub Actions: GitHub 저장소의 PR, push 같은 이벤트에 맞춰 테스트와 배포 작업을 자동 실행하는 CI 도구입니다.
-
 ##### 요약
 
 - 글은 `jpatel3/a11yscout@v1` GitHub Action을 PR 워크플로우에 넣어 preview URL을 검사하고, `level: AA`, `fail-on: serious` 같은 조건으로 접근성 위반 시 CI를 실패시키는 예시를 제공합니다.
@@ -604,11 +586,6 @@ headless primitive를 선택할 때는 CSS 자유도만 보면 안 됩니다. po
 - 출처 URL: https://dev.to/joshua_gutierrez/state-of-small-business-websites-2026-study-969-fail-core-web-vitals-106i
 - 이미지:
 - 이미지 설명: 이미지 확인 필요
-
-##### 용어 설명
-
-- Core Web Vitals: Google이 사용자 경험 품질을 보기 위해 제시한 성능 지표 묶음입니다. 대표적으로 LCP, CLS, INP가 있습니다.
-- Lighthouse: 웹페이지의 성능, 접근성, SEO 등을 측정하는 Google의 자동 감사 도구입니다.
 
 ##### 요약
 

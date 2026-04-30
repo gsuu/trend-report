@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-30T06:51:25.956156+00:00",
+  "generatedAt": "2026-04-30T08:05:49.198342+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -542,25 +542,6 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "용어 설명",
-            "className": "article-section is-term-explanation",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "shadcn/ui: Radix UI primitive 위에 Tailwind 스타일을 얹어 컴포넌트 코드를 직접 복사하는 방식의 React 컴포넌트 라이브러리입니다."
-              },
-              {
-                "kind": "list",
-                "html": "MCP: Model Context Protocol. AI 에이전트가 외부 데이터·도구에 표준화된 방식으로 접근하도록 만든 프로토콜입니다."
-              }
-            ],
-            "itemsHtml": [
-              "shadcn/ui: Radix UI primitive 위에 Tailwind 스타일을 얹어 컴포넌트 코드를 직접 복사하는 방식의 React 컴포넌트 라이브러리입니다.",
-              "MCP: Model Context Protocol. AI 에이전트가 외부 데이터·도구에 표준화된 방식으로 접근하도록 만든 프로토콜입니다."
-            ]
-          },
-          {
             "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
@@ -883,20 +864,6 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "용어 설명",
-            "className": "article-section is-term-explanation",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "WCAG 2.2 Level AA: 웹 콘텐츠 접근성 가이드라인 2.2의 두 번째 단계 적합성 기준입니다. 다수 공공·금융 서비스가 이 수준 충족을 의무 또는 권장 기준으로 둡니다."
-              }
-            ],
-            "itemsHtml": [
-              "WCAG 2.2 Level AA: 웹 콘텐츠 접근성 가이드라인 2.2의 두 번째 단계 적합성 기준입니다. 다수 공공·금융 서비스가 이 수준 충족을 의무 또는 권장 기준으로 둡니다."
-            ]
-          },
-          {
             "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
@@ -1057,20 +1024,6 @@
         "sourceTitle": "CSS-Tricks",
         "referenceLinks": [],
         "sections": [
-          {
-            "title": "용어 설명",
-            "className": "article-section is-term-explanation",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "Scroll-driven animations: 스크롤 위치를 애니메이션 timeline으로 사용해 JavaScript 없이 스크롤 기반 모션을 만드는 CSS 명세입니다."
-              }
-            ],
-            "itemsHtml": [
-              "Scroll-driven animations: 스크롤 위치를 애니메이션 timeline으로 사용해 JavaScript 없이 스크롤 기반 모션을 만드는 CSS 명세입니다."
-            ]
-          },
           {
             "title": "요약",
             "className": "article-section is-bullet-summary",
@@ -1247,20 +1200,6 @@
         "sourceTitle": "Chrome Developers",
         "referenceLinks": [],
         "sections": [
-          {
-            "title": "용어 설명",
-            "className": "article-section is-term-explanation",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "Web app manifest: PWA의 설치 화면·런처 아이콘·앱 이름 등을 정의하는 JSON 매니페스트 파일 명세입니다."
-              }
-            ],
-            "itemsHtml": [
-              "Web app manifest: PWA의 설치 화면·런처 아이콘·앱 이름 등을 정의하는 JSON 매니페스트 파일 명세입니다."
-            ]
-          },
           {
             "title": "요약",
             "className": "article-section is-bullet-summary",
@@ -1593,20 +1532,6 @@
         "sourceTitle": "Syntax.fm",
         "referenceLinks": [],
         "sections": [
-          {
-            "title": "용어 설명",
-            "className": "article-section is-term-explanation",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "vibe coding: AI에게 자연어로 의도를 던지고 결과 코드를 받아 쓰는 비결정론적 코딩 방식. 같은 프롬프트가 매번 다른 코드를 만들 수 있는 문제가 있습니다."
-              }
-            ],
-            "itemsHtml": [
-              "vibe coding: AI에게 자연어로 의도를 던지고 결과 코드를 받아 쓰는 비결정론적 코딩 방식. 같은 프롬프트가 매번 다른 코드를 만들 수 있는 문제가 있습니다."
-            ]
-          },
           {
             "title": "요약",
             "className": "article-section is-bullet-summary",
@@ -3088,20 +3013,6 @@
         ],
         "sections": [
           {
-            "title": "용어 설명",
-            "className": "article-section is-term-explanation",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "Baseline: 주요 브라우저에서 특정 웹 기능을 안정적으로 사용할 수 있는지 보여주는 web.dev와 MDN의 호환성 기준입니다."
-              }
-            ],
-            "itemsHtml": [
-              "Baseline: 주요 브라우저에서 특정 웹 기능을 안정적으로 사용할 수 있는지 보여주는 web.dev와 MDN의 호환성 기준입니다."
-            ]
-          },
-          {
             "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
@@ -3248,20 +3159,6 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "용어 설명",
-            "className": "article-section is-term-explanation",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "Scott Jehl: Squarespace의 Performance &amp; Accessibility Team tech lead이며, 웹 성능과 표준화 논의에 자주 참여하는 프론트엔드 엔지니어입니다."
-              }
-            ],
-            "itemsHtml": [
-              "Scott Jehl: Squarespace의 Performance &amp; Accessibility Team tech lead이며, 웹 성능과 표준화 논의에 자주 참여하는 프론트엔드 엔지니어입니다."
-            ]
-          },
-          {
             "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
@@ -3397,25 +3294,6 @@
         "sourceTitle": "DEV Community",
         "referenceLinks": [],
         "sections": [
-          {
-            "title": "용어 설명",
-            "className": "article-section is-term-explanation",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "Radix UI: React에서 접근성 중심의 headless UI primitive를 제공하는 컴포넌트 라이브러리입니다."
-              },
-              {
-                "kind": "list",
-                "html": "Roving tabindex: 라디오 그룹이나 메뉴처럼 하나의 위젯 안에서 방향키로 초점을 이동시키기 위해 tabindex를 조절하는 패턴입니다."
-              }
-            ],
-            "itemsHtml": [
-              "Radix UI: React에서 접근성 중심의 headless UI primitive를 제공하는 컴포넌트 라이브러리입니다.",
-              "Roving tabindex: 라디오 그룹이나 메뉴처럼 하나의 위젯 안에서 방향키로 초점을 이동시키기 위해 tabindex를 조절하는 패턴입니다."
-            ]
-          },
           {
             "title": "요약",
             "className": "article-section is-bullet-summary",
@@ -3558,25 +3436,6 @@
         "referenceLinks": [],
         "sections": [
           {
-            "title": "용어 설명",
-            "className": "article-section is-term-explanation",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "axe-core: 웹 접근성 자동 검사를 위해 널리 쓰이는 JavaScript 기반 오픈소스 검사 엔진입니다."
-              },
-              {
-                "kind": "list",
-                "html": "GitHub Actions: GitHub 저장소의 PR, push 같은 이벤트에 맞춰 테스트와 배포 작업을 자동 실행하는 CI 도구입니다."
-              }
-            ],
-            "itemsHtml": [
-              "axe-core: 웹 접근성 자동 검사를 위해 널리 쓰이는 JavaScript 기반 오픈소스 검사 엔진입니다.",
-              "GitHub Actions: GitHub 저장소의 PR, push 같은 이벤트에 맞춰 테스트와 배포 작업을 자동 실행하는 CI 도구입니다."
-            ]
-          },
-          {
             "title": "요약",
             "className": "article-section is-bullet-summary",
             "prose": false,
@@ -3712,25 +3571,6 @@
         "sourceTitle": "DEV Community",
         "referenceLinks": [],
         "sections": [
-          {
-            "title": "용어 설명",
-            "className": "article-section is-term-explanation",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "Core Web Vitals: Google이 사용자 경험 품질을 보기 위해 제시한 성능 지표 묶음입니다. 대표적으로 LCP, CLS, INP가 있습니다."
-              },
-              {
-                "kind": "list",
-                "html": "Lighthouse: 웹페이지의 성능, 접근성, SEO 등을 측정하는 Google의 자동 감사 도구입니다."
-              }
-            ],
-            "itemsHtml": [
-              "Core Web Vitals: Google이 사용자 경험 품질을 보기 위해 제시한 성능 지표 묶음입니다. 대표적으로 LCP, CLS, INP가 있습니다.",
-              "Lighthouse: 웹페이지의 성능, 접근성, SEO 등을 측정하는 Google의 자동 감사 도구입니다."
-            ]
-          },
           {
             "title": "요약",
             "className": "article-section is-bullet-summary",

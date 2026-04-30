@@ -112,9 +112,7 @@ Design (areaKey: "design") sections:
 
 DEV (areaKey: "dev") sections:
 [
-  // 용어 설명은 원문에 일반 독자가 바로 이해하기 어려운 도구·제품명·약어가 1-3개 있을 때만 추가. 없으면 생략.
-  { "title": "용어 설명", "className": "article-section is-term-explanation", "prose": false,
-    "blocks": [{ "kind": "list", "html": "Radix UI: ..." }] },
+  // 용어 풀이가 필요한 제품명·약어는 별도 섹션을 만들지 말고, 아래 "요약" 첫 등장 불릿 안에서 괄호로 짧게 처리합니다 (예: "Radix UI(접근성 중심 headless UI primitive)").
   { "title": "요약", "className": "article-section is-bullet-summary", "prose": false,
     "blocks": [{ "kind": "list", "html": "..." }, ...] },
   { "title": "매거진 인사이트", "className": "article-section is-deep-dive", "prose": true,

@@ -1872,44 +1872,6 @@ main {
   content: none;
 }
 
-.article-section.is-term-explanation {
-  padding: 22px 0;
-}
-
-.article-section.is-term-explanation h2 {
-  margin-bottom: 14px;
-  font-size: 18px;
-}
-
-.article-section.is-term-explanation .term-explanation-list {
-  display: grid;
-  gap: 0;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: var(--paper);
-}
-
-.article-section.is-term-explanation .term-explanation-list li {
-  display: grid;
-  grid-template-columns: 118px minmax(0, 1fr);
-  gap: 18px;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--line);
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.article-section.is-term-explanation .term-explanation-list li:last-child {
-  border-bottom: 0;
-}
-
-.article-section.is-term-explanation .term-explanation-list li::before {
-  content: none;
-}
-
 .summary-key {
   color: #777777;
   font-size: 12px;

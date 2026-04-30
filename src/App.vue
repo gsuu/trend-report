@@ -606,9 +606,6 @@ function isBulletSummary(section) {
   return section?.title === "기술 변화 요약" || section?.title === "요약" || String(section?.className || "").includes("is-bullet-summary");
 }
 
-function isTermExplanation(section) {
-  return section?.title === "용어 설명" || String(section?.className || "").includes("is-term-explanation");
-}
 
 function kstTodayStart() {
   const now = new Date();
@@ -784,10 +781,7 @@ function issuePublicationDate(issue) {
               </template>
             </div>
             <template v-else>
-              <ul v-if="isTermExplanation(section)" class="term-explanation-list">
-                <li v-for="item in section.itemsHtml" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
-              </ul>
-              <ul v-else-if="isBulletSummary(section)" class="bullet-summary-list">
+              <ul v-if="isBulletSummary(section)" class="bullet-summary-list">
                 <li v-for="item in section.itemsHtml" :key="item" v-html="item"></li>
               </ul>
               <template v-else>
