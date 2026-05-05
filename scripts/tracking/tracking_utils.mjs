@@ -21,6 +21,14 @@ export function runDir(runsDir, date = outputDate()) {
   return path.join(runsDir, date);
 }
 
+export function rawDir(runsDir, date = outputDate()) {
+  return path.join(runsDir, date, "raw");
+}
+
+export function magazineDir(runsDir, date = outputDate()) {
+  return path.join(runsDir, date, "magazine");
+}
+
 export function decodeHtml(value = "") {
   return String(value)
     .replace(/&amp;/g, "&")

@@ -31,6 +31,10 @@ function runDir(date) {
   return path.join(runsDir, date);
 }
 
+function magazineDir(date) {
+  return path.join(runDir(date), "magazine");
+}
+
 function runConfig(date) {
   return { TRACKING_OUTPUT_DATE: date };
 }
@@ -117,7 +121,7 @@ function buildSteps(date, options) {
     steps.push(stepCommand(
       "magazine.json 갱신",
       pythonCommand(),
-      ["scripts/magazine/export_json.py", path.join("runs", date, "magazine-report.md")],
+      ["scripts/magazine/export_json.py", path.join("runs", date, "magazine", "magazine-report.md")],
       {},
     ));
   }
@@ -169,7 +173,7 @@ async function main() {
     strictQc: hasArg("--strict-qc"),
     exportJson: hasArg("--export-json"),
     sendStage: argValue("--send-stage", ""),
-    report: argValue("--report", path.join("runs", date, "magazine-report.md")),
+    report: argValue("--report", path.join("runs", date, "magazine", "magazine-report.md")),
     sendTo: collectSendTo(),
     approved: hasArg("--approved"),
     audience: argValue("--audience", "general"),

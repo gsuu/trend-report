@@ -16,7 +16,7 @@ OUTPUT_PATH = ROOT / "public" / "data" / "magazine.json"
 
 
 def cumulative_report_paths() -> list[Path]:
-    paths = sorted(RUNS_DIR.glob("*/magazine-report.md"))
+    paths = sorted(RUNS_DIR.glob("*/magazine/magazine-report.md"))
     if not paths:
         raise SystemExit("누적할 Markdown 리포트 파일을 찾지 못했습니다.")
     return paths
@@ -53,7 +53,9 @@ def report_payload_from_path(report_path: Path) -> dict[str, object]:
     if not report_path.is_absolute():
         report_path = ROOT / report_path
     report = report_parser.parse_report(report_path)
-    report.slug = report_path.parent.name or report.slug
+    # runs/<date>/magazine/magazine-report.md에서 <date>를 slug로 사용
+    slug_dir = report_path.parent.parent if report_path.parent.name == "magazine" else report_path.parent
+    report.slug = slug_dir.name or report.slug
     payload = report_parser.report_payload(report)
 
     for issue_payload, issue in zip(payload.get("issues", []), report.issues):

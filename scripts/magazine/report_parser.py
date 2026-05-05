@@ -2458,9 +2458,9 @@ def write_site(report: Report) -> None:
 
 
 def latest_report() -> Path:
-    reports = sorted(RUNS_DIR.glob("*/magazine-report.md"))
+    reports = sorted(RUNS_DIR.glob("*/magazine/magazine-report.md"))
     if not reports:
-        raise FileNotFoundError("runs/ 안에 magazine-report.md 파일이 없습니다.")
+        raise FileNotFoundError("runs/ 안에 magazine/magazine-report.md 파일이 없습니다.")
     return reports[-1]
 
 

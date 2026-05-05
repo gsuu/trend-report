@@ -7,7 +7,7 @@ import {
   articleContent,
   fetchText,
   outputDate,
-  runDir as resolveRunDir,
+  rawDir as resolveRawDir,
   sinceDate,
   uniqueArticles,
 } from "./tracking_utils.mjs";
@@ -19,16 +19,16 @@ const sourcesPath = path.join(root, "news-tracking", "dev-sources.json");
 const runsDir = path.join(root, "runs");
 const parser = new Parser();
 
-function runDir(date = outputDate()) {
-  return resolveRunDir(runsDir, date);
+function rawDir(date = outputDate()) {
+  return resolveRawDir(runsDir, date);
 }
 
 function devArticlesPath(date = outputDate()) {
-  return path.join(runDir(date), "dev-articles.json");
+  return path.join(rawDir(date), "dev-articles.json");
 }
 
 function devFetchReportPath(date = outputDate()) {
-  return path.join(runDir(date), "dev-fetch-report.json");
+  return path.join(rawDir(date), "dev-fetch-report.json");
 }
 
 async function fetchRssFeed(url, source, since) {
@@ -92,7 +92,7 @@ async function collectArticles(sources) {
 
 async function main() {
   const date = outputDate();
-  const outputDir = runDir(date);
+  const outputDir = rawDir(date);
   await fs.mkdir(outputDir, { recursive: true });
 
   const sources = JSON.parse(await fs.readFile(sourcesPath, "utf8"));

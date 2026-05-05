@@ -42,7 +42,7 @@ When collecting and uploading SERVICE newsletter or magazine items, use `news-tr
 - Exclude partnerships, card benefits, e-coupon deals, one-off promotions, offline-only events, business results, hiring, ESG, and brand campaigns unless the original source shows a concrete screen, flow, policy, condition, permission, recommendation basis, approval step, or return trigger.
 - Use discovery sources only as leads. For main publication, trace the item to an official notice, newsroom, product update, app store release note, research source, or another reliable primary source where possible.
 - Follow the Magazine Summary Standard for the SERVICE metadata `요약`, body `서비스 변화 요약`, and `매거진 인사이트` layers.
-- Do not use Notion for SERVICE publishing unless the user explicitly asks. After updating `runs/YYYY-MM-DD/magazine-report.md`, refresh magazine JSON/site data only.
+- Do not use Notion for SERVICE publishing unless the user explicitly asks. After updating `runs/YYYY-MM-DD/magazine/magazine-report.md`, refresh magazine JSON/site data only.
 
 ## DEV Digest Source Standard
 
@@ -58,7 +58,7 @@ When collecting and uploading DEV newsletter or magazine items, reproduce the sa
 - Use Markdown backticks/code tags only for code-related expressions such as commands, filenames, package names, APIs, CSS/HTML/ARIA properties, or config values. Do not wrap feature names, product names, Korean UI copy, quotes, or emphasis text in code style.
 - Use the original source page's top or representative image (`og:image`/`twitter:image`, falling back to the first content image) as the DEV thumbnail.
 - Preserve the practical web publisher/front-end angle: HTML/CSS, JavaScript, accessibility, performance, and AI/developer tooling.
-- Do not use Notion for DEV publishing unless the user explicitly asks. After updating `runs/YYYY-MM-DD/magazine-report.md`, refresh magazine JSON/site data only.
+- Do not use Notion for DEV publishing unless the user explicitly asks. After updating `runs/YYYY-MM-DD/magazine/magazine-report.md`, refresh magazine JSON/site data only.
 
 ## Design Digest Source Standard
 
@@ -75,7 +75,7 @@ When collecting DESIGN newsletter or magazine items, use `news-tracking/design-s
 - Follow the Magazine Summary Standard for the DESIGN metadata `요약`, body `요약`, `디자인 포인트`, and `매거진 인사이트` layers.
 - Use Markdown backticks/code tags only for code-related expressions such as filenames, tools, APIs, CSS/HTML/ARIA properties, or config values. Do not wrap feature names, product names, Korean UI copy, quotes, or emphasis text in code style.
 - Use the original source page's top or representative image (`og:image`/`twitter:image`, falling back to a relevant first content image) as the DESIGN thumbnail only when it supports the design reference.
-- Do not use Notion for DESIGN publishing unless the user explicitly asks. After updating `runs/YYYY-MM-DD/magazine-report.md`, refresh magazine JSON/site data only.
+- Do not use Notion for DESIGN publishing unless the user explicitly asks. After updating `runs/YYYY-MM-DD/magazine/magazine-report.md`, refresh magazine JSON/site data only.
 
 ## Korean Naturalization Skill
 

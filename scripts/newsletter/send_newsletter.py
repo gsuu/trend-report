@@ -2032,7 +2032,9 @@ def combined_newsletter_plain_text(
 
 def save_preview(report_path: Path, newsletter_html: str, audience: str = "general") -> Path:
     audience = normalize_audience(audience)
-    preview_dir = report_path.parent / "newsletters"
+    # report가 runs/<date>/magazine/...에 있으면 newsletters는 runs/<date>/newsletters/로 보냄
+    base = report_path.parent.parent if report_path.parent.name == "magazine" else report_path.parent
+    preview_dir = base / "newsletters"
     preview_dir.mkdir(parents=True, exist_ok=True)
     suffix = "" if audience == "general" else f"-{audience}"
     output_path = preview_dir / f"{report_path.stem}{suffix}.html"

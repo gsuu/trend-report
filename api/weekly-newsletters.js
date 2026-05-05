@@ -358,7 +358,7 @@ async function fetchIssuesFromFiles() {
   const seenSignatures = new Set();
 
   for (const dir of runDirs.sort()) {
-    const magazinePath = path.join(runsDir, dir, "magazine.json");
+    const magazinePath = path.join(runsDir, dir, "magazine", "magazine.json");
     let data;
     try {
       data = JSON.parse(await fs.promises.readFile(magazinePath, "utf8"));

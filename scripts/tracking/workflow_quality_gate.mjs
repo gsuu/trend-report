@@ -22,12 +22,16 @@ function runDir(date) {
   return path.join(runsDir, date);
 }
 
+function magazineDir(date) {
+  return path.join(runDir(date), "magazine");
+}
+
 function trackingDataPath(date) {
-  return path.join(runDir(date), "tracking-data.json");
+  return path.join(magazineDir(date), "tracking-data.json");
 }
 
 function workflowStatePath(date) {
-  return path.join(runDir(date), "tracking-quality-state.json");
+  return path.join(magazineDir(date), "tracking-quality-state.json");
 }
 
 function outputDirRelative(filePath) {
@@ -204,8 +208,8 @@ async function main() {
     },
     runDataFiles: {
       trackingData: outputDirRelative(dataPath),
-      editorialBrief: outputDirRelative(runData.editorialBriefPath || path.join(runDir(date), "editorial-brief.md")),
-      report: outputDirRelative(path.join(runDir(date), "magazine-report.md")),
+      editorialBrief: outputDirRelative(runData.editorialBriefPath || path.join(magazineDir(date), "editorial-brief.md")),
+      report: outputDirRelative(path.join(magazineDir(date), "magazine-report.md")),
     },
     checks: {
       strict,
@@ -214,7 +218,7 @@ async function main() {
     issues: issueEntries,
   };
 
-  await fs.mkdir(runDir(date), { recursive: true });
+  await fs.mkdir(magazineDir(date), { recursive: true });
   await fs.writeFile(statePath, `${JSON.stringify(checks, null, 2)}\n`, "utf-8");
 
   console.log(`tracking-data: ${outputDirRelative(dataPath)}`);

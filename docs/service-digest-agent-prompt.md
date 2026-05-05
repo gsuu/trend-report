@@ -1,6 +1,6 @@
 # Service Digest Agent Prompt
 
-이 문서는 `npm run fetch:service`로 모은 `runs/YYYY-MM-DD/service-articles.json`을 읽고, 웹서비스기획자와 PM이 바로 회의에 가져갈 만한 SERVICE 후보를 고르는 기준입니다.
+이 문서는 `npm run fetch:service`로 모은 `runs/YYYY-MM-DD/raw/service-articles.json`을 읽고, 웹서비스기획자와 PM이 바로 회의에 가져갈 만한 SERVICE 후보를 고르는 기준입니다.
 
 수집 스크립트는 후보와 단서 태그만 모읍니다. LLM API를 호출하지 않고, 최종 채택/보류/제외 판단과 원문 확인, 요약 작성은 작업 AI가 이 문서를 기준으로 수행합니다.
 
@@ -19,7 +19,7 @@ SERVICE 후보의 중심은 "서비스 화면, 정책, 전환 흐름, 운영 흐
 
 ## 입력
 
-- `runs/YYYY-MM-DD/service-articles.json`
+- `runs/YYYY-MM-DD/raw/service-articles.json`
 - 필요 시 원문 URL
 - 필요 시 후보 발견 출처가 가리키는 공식 발표, 제품 공지, 뉴스룸, 앱스토어/플레이스토어, 보도자료, 리서치 원문
 

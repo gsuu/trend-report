@@ -4,11 +4,11 @@
 
 ## 입력
 
-- `runs/YYYY-MM-DD/editorial-brief.md`
-- `runs/YYYY-MM-DD/service-articles.json`
-- `runs/YYYY-MM-DD/design-articles.json`
-- `runs/YYYY-MM-DD/dev-articles.json`
-- 필요 시 legacy 후보인 `runs/YYYY-MM-DD/articles.json`
+- `runs/YYYY-MM-DD/magazine/editorial-brief.md`
+- `runs/YYYY-MM-DD/raw/service-articles.json`
+- `runs/YYYY-MM-DD/raw/design-articles.json`
+- `runs/YYYY-MM-DD/raw/dev-articles.json`
+- 필요 시 legacy 후보인 `runs/YYYY-MM-DD/raw/articles.json`
 - 필요하면 후보의 최종 기준 원문 URL
 
 ## 출력

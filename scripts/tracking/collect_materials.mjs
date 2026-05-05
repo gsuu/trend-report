@@ -50,8 +50,20 @@ function runDir(date = outputDate()) {
   return path.join(runsDir, date);
 }
 
-function runFile(date, fileName) {
-  return path.join(runDir(date), fileName);
+function rawDir(date = outputDate()) {
+  return path.join(runDir(date), "raw");
+}
+
+function magazineDir(date = outputDate()) {
+  return path.join(runDir(date), "magazine");
+}
+
+function rawFile(date, fileName) {
+  return path.join(rawDir(date), fileName);
+}
+
+function magazineFile(date, fileName) {
+  return path.join(magazineDir(date), fileName);
 }
 
 function run(command, args) {
@@ -72,7 +84,7 @@ async function latestRunFile(fileName) {
     .reverse();
 
   for (const run of runs) {
-    const candidate = runFile(run, fileName);
+    const candidate = rawFile(run, fileName);
     try {
       await fs.stat(candidate);
       return candidate;
@@ -399,7 +411,7 @@ async function readRunArticles(date) {
   const reportFiles = [];
 
   for (const fileName of CATEGORY_ARTICLE_FILES) {
-    const filePath = runFile(date, fileName);
+    const filePath = rawFile(date, fileName);
     try {
       const articles = JSON.parse(await fs.readFile(filePath, "utf8"));
       currentRunArticles.push(...articles);
@@ -410,7 +422,7 @@ async function readRunArticles(date) {
   }
 
   for (const fileName of CATEGORY_REPORT_FILES) {
-    const filePath = runFile(date, fileName);
+    const filePath = rawFile(date, fileName);
     try {
       await fs.stat(filePath);
       reportFiles.push(filePath);
@@ -579,10 +591,10 @@ function editorialBriefMarkdown(data) {
 }
 
 async function writeOutputs(articles, date, sourceFiles = [], reportFiles = []) {
-  await fs.mkdir(runDir(date), { recursive: true });
+  await fs.mkdir(magazineDir(date), { recursive: true });
 
-  const trackingDataPath = runFile(date, "tracking-data.json");
-  const editorialBriefPath = runFile(date, "editorial-brief.md");
+  const trackingDataPath = magazineFile(date, "tracking-data.json");
+  const editorialBriefPath = magazineFile(date, "editorial-brief.md");
   const data = {
     date,
     purpose: "collection_classification_source_only",

@@ -54,7 +54,7 @@
 
 ## 6. 글쓰기 에이전트
 
-목표는 `runs/YYYY-MM-DD/shortlist-20-30.md`의 항목을 그대로 `runs/YYYY-MM-DD/magazine-report.md`에 매거진 문장으로 작성하는 것입니다.
+목표는 `runs/YYYY-MM-DD/magazine/shortlist-20-30.md`의 항목을 그대로 `runs/YYYY-MM-DD/magazine/magazine-report.md`에 매거진 문장으로 작성하는 것입니다.
 
 글쓰기 규칙:
 
@@ -161,7 +161,7 @@ QA 기준:
 
 동기화 기준:
 
-- `runs/YYYY-MM-DD/magazine-report.md`, `public/data/magazine.json`, Notion DB의 제목, 플랫폼, 대분류, 소분류, deck, 태그를 비교합니다.
+- `runs/YYYY-MM-DD/magazine/magazine-report.md`, `public/data/magazine.json`, Notion DB의 제목, 플랫폼, 대분류, 소분류, deck, 태그를 비교합니다.
 - 로컬에서 수정한 글은 Notion에도 같은 제목과 본문으로 반영합니다.
 - Notion에서 삭제 또는 archive한 항목이 JSON에 다시 남아 있지 않은지 확인합니다.
 - Notion 수정 후 다시 export했을 때 카테고리와 route가 유지되는지 확인합니다.

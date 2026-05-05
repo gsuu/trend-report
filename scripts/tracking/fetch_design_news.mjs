@@ -15,7 +15,7 @@ import {
   matchesNone,
   outputDate,
   previousLinks,
-  runDir as resolveRunDir,
+  rawDir as resolveRawDir,
   sinceDate,
   uniqueArticles,
 } from "./tracking_utils.mjs";
@@ -27,16 +27,16 @@ const sourcesPath = path.join(root, "news-tracking", "design-sources.json");
 const runsDir = path.join(root, "runs");
 const parser = new Parser();
 
-function runDir(date = outputDate()) {
-  return resolveRunDir(runsDir, date);
+function rawDir(date = outputDate()) {
+  return resolveRawDir(runsDir, date);
 }
 
 function designArticlesPath(date = outputDate()) {
-  return path.join(runDir(date), "design-articles.json");
+  return path.join(rawDir(date), "design-articles.json");
 }
 
 function designFetchReportPath(date = outputDate()) {
-  return path.join(runDir(date), "design-fetch-report.json");
+  return path.join(rawDir(date), "design-fetch-report.json");
 }
 
 function articleFields(source) {
@@ -159,7 +159,7 @@ function sortArticles(a, b) {
 
 async function main() {
   const date = outputDate();
-  await fs.mkdir(runDir(date), { recursive: true });
+  await fs.mkdir(rawDir(date), { recursive: true });
 
   const sources = JSON.parse(await fs.readFile(sourcesPath, "utf8"));
   const since = sinceDate();
