@@ -1,10 +1,7 @@
-import { fetchMagazineReport } from "../scripts/legacy/fetch_notion.mjs";
+import fs from "node:fs/promises";
+import path from "node:path";
 
-const cacheTtl = 5 * 60 * 1000;
-const staleTtl = 15 * 60 * 1000;
-let cachedPayload;
-let cachedAt = 0;
-let pendingFetch;
+const MAGAZINE_JSON_PATH = path.join(process.cwd(), "public", "data", "magazine.json");
 
 export default async function handler(request, response) {
   if (request.method && request.method !== "GET") {
@@ -13,45 +10,14 @@ export default async function handler(request, response) {
   }
 
   try {
-    const report = await loadReport();
+    const raw = await fs.readFile(MAGAZINE_JSON_PATH, "utf8");
+    const payload = JSON.parse(raw);
     response.setHeader("Cache-Control", "public, s-maxage=300, stale-while-revalidate=600");
-    response.status(200).json({ ok: true, report });
+    response.status(200).json({ ok: true, report: payload.report });
   } catch (error) {
-    const staleReport = staleCachedReport();
-    if (staleReport) {
-      response.setHeader("Cache-Control", "public, s-maxage=60, stale-while-revalidate=300");
-      response.status(200).json({ ok: true, report: staleReport, stale: true });
-      return;
-    }
-
     response.status(500).json({
       ok: false,
-      error: error.message || "Failed to fetch magazine data.",
+      error: error.message || "Failed to read magazine data.",
     });
   }
-}
-
-async function loadReport() {
-  if (freshCachedReport()) return cachedPayload;
-  if (!pendingFetch) {
-    pendingFetch = fetchMagazineReport()
-      .then((report) => {
-        cachedPayload = report;
-        cachedAt = Date.now();
-        return report;
-      })
-      .finally(() => {
-        pendingFetch = null;
-      });
-  }
-  return pendingFetch;
-}
-
-function freshCachedReport() {
-  return cachedPayload && Date.now() - cachedAt < cacheTtl;
-}
-
-function staleCachedReport() {
-  if (!cachedPayload) return null;
-  return Date.now() - cachedAt < staleTtl ? cachedPayload : null;
 }

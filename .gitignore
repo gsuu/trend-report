@@ -3,7 +3,7 @@ __pycache__/
 .DS_Store
 .env
 .env.local
-newsletters/
+runs/*/newsletters/
 config/subscribers.txt
 config/*-subscribers.txt
 node_modules/
@@ -17,5 +17,4 @@ news-tracking/articles/
 news-tracking/candidates/
 news-tracking/selected/
 news-tracking/review/
-reports/*-tracking-upload-report.md
 .vercel

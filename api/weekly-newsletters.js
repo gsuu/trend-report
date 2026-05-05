@@ -158,10 +158,6 @@ function propertyTags(properties, names) {
     .filter(Boolean);
 }
 
-function hasProperty(properties, names) {
-  return names.find((name) => properties[name]);
-}
-
 function splitRecipients(value = "") {
   return value
     .split(/[,\n;]/)
@@ -339,85 +335,61 @@ function isNewsletterCronPausedToday() {
   return pausedCronDatesKst().has(kstDateString());
 }
 
-async function fetchIssuesFromNotion() {
-  const notionToken = process.env.NOTION_TOKEN || process.env.NOTION_API_KEY;
-  const databaseId = process.env.NOTION_DATABASE_ID;
-  if (!notionToken || !databaseId) throw new Error("NOTION_TOKEN and NOTION_DATABASE_ID are required.");
+function stripHtml(html = "") {
+  return String(html)
+    .replace(/<[^>]*>/g, "")
+    .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+    .trim();
+}
 
-  const notion = new Client({ auth: notionToken });
-  const database = await notion.databases.retrieve({ database_id: databaseId });
-  const databaseProperties = database.properties || {};
-  const dateProperty = hasProperty(databaseProperties, ["Date", "발행날짜", "Published Date", "날짜"]);
-  const sorts = dateProperty
-    ? [{ property: dateProperty, direction: "descending" }]
-    : [{ timestamp: "created_time", direction: "descending" }];
-  const pages = [];
-  let cursor;
-
-  do {
-    const response = await notion.databases.query({
-      database_id: databaseId,
-      start_cursor: cursor,
-      page_size: 100,
-      sorts,
-    });
-    pages.push(...response.results);
-    cursor = response.has_more ? response.next_cursor : undefined;
-  } while (cursor);
-
+async function fetchIssuesFromFiles() {
+  const runsDir = path.join(process.cwd(), "runs");
   const weekRange = previousKstWeekRange();
-  const weeklyPages = pages.filter((page) => {
-    const properties = page.properties || {};
-    const dateValue = propertyText(properties, ["Date", "발행날짜", "Published Date", "날짜"], "");
-    return dateInKstWeek(dateValue || page.created_time, weekRange);
-  });
-  const pageSignature = (page) => {
-    const properties = page.properties || {};
-    const title = propertyText(properties, ["Takeaway", "Title", "제목", "한줄 인사이트"], "");
-    const platform = propertyText(properties, ["Platform", "서비스", "플랫폼", "Brand", "브랜드명"], "");
-    const tags = propertyTags(properties, ["Tags", "태그"]);
-    const area = normalizeAreaKey(propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "service"), tags);
-    return [platform, area, title].map((value) => normalizeKey(value)).join("|");
-  };
-  const uniqueWeeklyPages = [];
-  const seenPageSignatures = new Set();
-  for (const page of weeklyPages) {
-    const signature = pageSignature(page);
-    if (signature && seenPageSignatures.has(signature)) continue;
-    if (signature) seenPageSignatures.add(signature);
-    uniqueWeeklyPages.push(page);
+
+  let runDirs;
+  try {
+    runDirs = await fs.promises.readdir(runsDir);
+  } catch {
+    return { issues: [], weekRange };
   }
-  const issues = uniqueWeeklyPages.map((page, index) => {
-    const properties = page.properties || {};
-    const tags = propertyTags(properties, ["Tags", "태그"]);
-    const areaKey = normalizeAreaKey(propertyText(properties, ["Area", "대분류", "대카테고리", "Type"], "service"), tags);
-    const categoryKey = normalizeCategoryKey(
-      normalizeKey(propertyText(properties, ["Category", "카테고리", "Subcategory", "소분류", "소카테고리"], areaKey === "dev" ? "javascript" : "ecommerce")),
-      areaKey,
-      tags,
-    );
-    const number = String(index + 1).padStart(2, "0");
-    const title = propertyText(properties, ["Takeaway", "Title", "제목", "한줄 인사이트"], "");
-    const deck = propertyText(properties, ["Deck", "Summary", "요약", "목록 요약", "설명"], "");
 
-    return {
-      id: page.id,
-      number,
-      platform: propertyText(properties, ["Platform", "서비스", "플랫폼", "Brand", "브랜드명"], "CTTD"),
-      areaKey,
-      area: areaLabel(areaKey),
-      categoryKey,
-      category: CATEGORY_LABELS[categoryKey] || categoryKey,
-      date: propertyText(properties, ["Date", "발행날짜", "Published Date", "날짜"], page.created_time || "").slice(0, 10),
-      title,
-      deck,
-      tags,
-      sourceUrl: propertyText(properties, ["Source URL", "출처 URL", "URL"], ""),
-      magazineUrl: `${siteUrl()}/articles/${number}`,
-    };
-  });
+  const allIssues = [];
+  const seenSignatures = new Set();
 
-  return { issues, weekRange };
+  for (const dir of runDirs.sort()) {
+    const magazinePath = path.join(runsDir, dir, "magazine.json");
+    let data;
+    try {
+      data = JSON.parse(await fs.promises.readFile(magazinePath, "utf8"));
+    } catch {
+      continue;
+    }
+
+    for (const issue of (data.report?.issues || [])) {
+      if (!dateInKstWeek(issue.date, weekRange)) continue;
+      const signature = [issue.platform, issue.areaKey, issue.takeawayHtml].map(normalizeKey).join("|");
+      if (seenSignatures.has(signature)) continue;
+      seenSignatures.add(signature);
+      allIssues.push({
+        id: issue.id || issue.issueSlug || "",
+        number: issue.number,
+        platform: issue.platform || "",
+        areaKey: issue.areaKey || "service",
+        area: issue.area || "",
+        categoryKey: issue.categoryKey || "",
+        category: issue.category || "",
+        date: issue.date || "",
+        title: stripHtml(issue.takeawayHtml),
+        deck: stripHtml(issue.deckHtml),
+        tags: issue.tags || [],
+        sourceUrl: issue.sourceUrl || "",
+        magazineUrl: issue.articleUrl || `${siteUrl()}/articles/${issue.number}`,
+      });
+    }
+  }
+
+  return { issues: allIssues, weekRange };
 }
 
 function renderAudienceHeading(label) {
@@ -689,7 +661,7 @@ export default async function handler(request, response) {
 
   try {
     ensureUnsubscribeLinksEnabled();
-    const { issues, weekRange } = await fetchIssuesFromNotion();
+    const { issues, weekRange } = await fetchIssuesFromFiles();
     const serviceIssues = issues.filter((issue) => issue.areaKey === "service");
     const designIssues = issues.filter((issue) => issue.areaKey === "design");
     const devIssues = issues.filter((issue) => issue.areaKey === "dev");

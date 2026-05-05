@@ -20,7 +20,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[2]
-PREVIEW_DIR = ROOT / "newsletters"
+# 뉴스레터 프리뷰는 해당 리포트와 같은 runs/<date>/newsletters/ 안에 저장
 SITE_MARK_COLOR = "rgba(238, 255, 72, 0.34)"
 SITE_MARK_FALLBACK_COLOR = "#f9ffc1"
 SITE_MARK_BACKGROUND = f"background:{SITE_MARK_FALLBACK_COLOR};background:{SITE_MARK_COLOR}"
@@ -2032,12 +2032,13 @@ def combined_newsletter_plain_text(
 
 def save_preview(report_path: Path, newsletter_html: str, audience: str = "general") -> Path:
     audience = normalize_audience(audience)
-    PREVIEW_DIR.mkdir(exist_ok=True)
+    preview_dir = report_path.parent / "newsletters"
+    preview_dir.mkdir(parents=True, exist_ok=True)
     suffix = "" if audience == "general" else f"-{audience}"
-    output_path = PREVIEW_DIR / f"{report_path.stem}{suffix}.html"
+    output_path = preview_dir / f"{report_path.stem}{suffix}.html"
     output_path.write_text(newsletter_html, encoding="utf-8")
     if audience == "dev":
-        legacy_output_path = PREVIEW_DIR / f"{report_path.stem}-develop.html"
+        legacy_output_path = preview_dir / f"{report_path.stem}-develop.html"
         legacy_output_path.write_text(newsletter_html, encoding="utf-8")
     return output_path
 

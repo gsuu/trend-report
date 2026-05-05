@@ -117,7 +117,7 @@ function buildSteps(date, options) {
     steps.push(stepCommand(
       "magazine.json 갱신",
       pythonCommand(),
-      ["scripts/notion/export_magazine_json.py", path.join("runs", date, "magazine-report.md")],
+      ["scripts/magazine/export_json.py", path.join("runs", date, "magazine-report.md")],
       {},
     ));
   }

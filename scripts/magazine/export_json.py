@@ -12,30 +12,19 @@ import report_parser
 
 ROOT = Path(__file__).resolve().parents[2]
 RUNS_DIR = ROOT / "runs"
-REPORTS_DIR = ROOT / "reports"
 OUTPUT_PATH = ROOT / "public" / "data" / "magazine.json"
 
 
-def report_slug_from_path(report_path: Path, fallback: str = "") -> str:
-    if report_path.name == "magazine-report.md" and report_path.parent.name:
-        return report_path.parent.name
-    return report_path.stem.replace("-uiux-web-service-weekly-trend-report", "") or fallback
-
-
 def cumulative_report_paths() -> list[Path]:
-    selected: dict[str, Path] = {}
-    for report_path in sorted(REPORTS_DIR.glob("*.md")):
-        selected[report_slug_from_path(report_path)] = report_path
-    for report_path in sorted(RUNS_DIR.glob("*/magazine-report.md")):
-        selected[report_slug_from_path(report_path)] = report_path
-    if not selected:
+    paths = sorted(RUNS_DIR.glob("*/magazine-report.md"))
+    if not paths:
         raise SystemExit("누적할 Markdown 리포트 파일을 찾지 못했습니다.")
-    return [selected[slug] for slug in sorted(selected)]
+    return paths
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Markdown 리포트들을 누적 매거진 정적 JSON으로 생성합니다.")
-    parser.add_argument("reports", nargs="*", help="입력 Markdown 리포트 경로들. 없으면 reports/*.md와 runs/*/magazine-report.md 전체를 사용합니다.")
+    parser.add_argument("reports", nargs="*", help="입력 Markdown 리포트 경로들. 없으면 runs/*/magazine-report.md 전체를 사용합니다.")
     parser.add_argument("--output", default=str(OUTPUT_PATH), help="출력 JSON 경로")
     return parser.parse_args()
 
@@ -64,7 +53,7 @@ def report_payload_from_path(report_path: Path) -> dict[str, object]:
     if not report_path.is_absolute():
         report_path = ROOT / report_path
     report = report_parser.parse_report(report_path)
-    report.slug = report_slug_from_path(report_path, report.slug)
+    report.slug = report_path.parent.name or report.slug
     payload = report_parser.report_payload(report)
 
     for issue_payload, issue in zip(payload.get("issues", []), report.issues):

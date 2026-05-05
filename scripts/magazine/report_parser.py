@@ -16,7 +16,7 @@ from urllib.request import Request, urlopen
 
 
 ROOT = Path(__file__).resolve().parents[2]
-REPORTS_DIR = ROOT / "reports"
+RUNS_DIR = ROOT / "runs"
 SITE_DIR = ROOT / "site"
 ASSETS_DIR = SITE_DIR / "assets"
 ARTICLES_DIR = SITE_DIR / "articles"
@@ -367,7 +367,7 @@ class Report:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Markdown 리포트를 CTTD 매거진 정적 사이트로 빌드합니다.")
-    parser.add_argument("report", nargs="?", help="빌드할 Markdown 리포트 경로. 없으면 reports/의 최신 파일을 사용합니다.")
+    parser.add_argument("report", nargs="?", help="빌드할 Markdown 리포트 경로. 없으면 runs/의 최신 magazine-report.md를 사용합니다.")
     return parser.parse_args()
 
 
@@ -2458,9 +2458,9 @@ def write_site(report: Report) -> None:
 
 
 def latest_report() -> Path:
-    reports = sorted(REPORTS_DIR.glob("*.md"))
+    reports = sorted(RUNS_DIR.glob("*/magazine-report.md"))
     if not reports:
-        raise FileNotFoundError("reports/ 안에 Markdown 리포트가 없습니다.")
+        raise FileNotFoundError("runs/ 안에 magazine-report.md 파일이 없습니다.")
     return reports[-1]
 
 
