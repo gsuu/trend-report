@@ -343,50 +343,56 @@ function stripHtml(html = "") {
     .trim();
 }
 
+function isWeeklySummaryIssue(issue) {
+  if (!issue) return false;
+  if (String(issue.number || "") === "00") return true;
+  if (String(issue.platform || "") === "CTTD 매거진 편집부") return true;
+  return false;
+}
+
 async function fetchIssuesFromFiles() {
-  const runsDir = path.join(process.cwd(), "runs");
+  const magazinePath = path.join(process.cwd(), "public", "data", "magazine.json");
   const weekRange = previousKstWeekRange();
 
-  let runDirs;
+  let data;
   try {
-    runDirs = await fs.promises.readdir(runsDir);
+    data = JSON.parse(await fs.promises.readFile(magazinePath, "utf8"));
   } catch {
     return { issues: [], weekRange };
   }
 
+  const rawIssues = data.report?.issues || [];
+
+  // 가장 최신 issueSlug에 속한 글만 채택
+  const latestSlug = rawIssues.reduce((acc, issue) => {
+    const slug = String(issue?.issueSlug || "");
+    return slug && slug > acc ? slug : acc;
+  }, "");
+
   const allIssues = [];
   const seenSignatures = new Set();
 
-  for (const dir of runDirs.sort()) {
-    const magazinePath = path.join(runsDir, dir, "magazine", "magazine.json");
-    let data;
-    try {
-      data = JSON.parse(await fs.promises.readFile(magazinePath, "utf8"));
-    } catch {
-      continue;
-    }
-
-    for (const issue of (data.report?.issues || [])) {
-      if (!dateInKstWeek(issue.date, weekRange)) continue;
-      const signature = [issue.platform, issue.areaKey, issue.takeawayHtml].map(normalizeKey).join("|");
-      if (seenSignatures.has(signature)) continue;
-      seenSignatures.add(signature);
-      allIssues.push({
-        id: issue.id || issue.issueSlug || "",
-        number: issue.number,
-        platform: issue.platform || "",
-        areaKey: issue.areaKey || "service",
-        area: issue.area || "",
-        categoryKey: issue.categoryKey || "",
-        category: issue.category || "",
-        date: issue.date || "",
-        title: stripHtml(issue.takeawayHtml),
-        deck: stripHtml(issue.deckHtml),
-        tags: issue.tags || [],
-        sourceUrl: issue.sourceUrl || "",
-        magazineUrl: issue.articleUrl || `${siteUrl()}/articles/${issue.number}`,
-      });
-    }
+  for (const issue of rawIssues) {
+    if (latestSlug && String(issue.issueSlug || "") !== latestSlug) continue;
+    if (isWeeklySummaryIssue(issue)) continue;
+    const signature = [issue.platform, issue.areaKey, issue.takeawayHtml].map(normalizeKey).join("|");
+    if (seenSignatures.has(signature)) continue;
+    seenSignatures.add(signature);
+    allIssues.push({
+      id: issue.id || issue.issueSlug || "",
+      number: issue.number,
+      platform: issue.platform || "",
+      areaKey: issue.areaKey || "service",
+      area: issue.area || "",
+      categoryKey: issue.categoryKey || "",
+      category: issue.category || "",
+      date: issue.date || "",
+      title: stripHtml(issue.takeawayHtml),
+      deck: stripHtml(issue.deckHtml),
+      tags: issue.tags || [],
+      sourceUrl: issue.sourceUrl || "",
+      magazineUrl: issue.articleUrl || `${siteUrl()}/articles/${issue.number}`,
+    });
   }
 
   return { issues: allIssues, weekRange };

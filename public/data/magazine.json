@@ -988,8 +988,8 @@
         "route": "/articles/2026-05-06-05",
         "href": "/articles/2026-05-06-05",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-05",
-        "image": "https://img.etnews.com/news/article/2026/05/06/news-p.v1.20260506.6dc9d25b99bb40f387756fec064193f0_T1.jpg",
-        "imageCaption": "무신사 뉴스룸 / 전자신문 보도 대표 이미지",
+        "image": "https://cdn.prod.website-files.com/60a3629e04f26d12caff56df/66ecfaef985b33d4c5c5911c_6.png",
+        "imageCaption": "무신사 뉴스룸 [팀무신사] 멀티 스토어 UI·UX 개편 본문 og:image",
         "tags": [
           "무신사",
           "멀티 스토어 홈",
@@ -1020,11 +1020,11 @@
           },
           {
             "label": "출처",
-            "valueHtml": "전자신문"
+            "valueHtml": "무신사 뉴스룸 (팀무신사)"
           }
         ],
-        "sourceUrl": "https://search.etnews.com/?kwd=%EB%AC%B4%EC%8B%A0%EC%82%AC+%EB%A9%80%ED%8B%B0+%EC%8A%A4%ED%86%A0%EC%96%B4",
-        "sourceTitle": "전자신문",
+        "sourceUrl": "https://newsroom.musinsa.com/newsroom-menu/2024-0920-teammusinsa",
+        "sourceTitle": "무신사 뉴스룸 (팀무신사)",
         "referenceLinks": [],
         "sections": [
           {

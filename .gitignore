@@ -4,6 +4,7 @@ __pycache__/
 .env
 .env.local
 runs/*/newsletters/
+newsletters/
 config/subscribers.txt
 config/*-subscribers.txt
 node_modules/

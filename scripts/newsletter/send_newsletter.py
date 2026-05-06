@@ -897,6 +897,16 @@ def section_text_summary(sections: object, limit: int = 128) -> str:
     return trim_newsletter_summary(parts, limit)
 
 
+def is_weekly_summary_issue(issue: dict[str, object]) -> bool:
+    if not isinstance(issue, dict):
+        return False
+    if str(issue.get("number") or "") == "00":
+        return True
+    if str(issue.get("platform") or "") == "CTTD 매거진 편집부":
+        return True
+    return False
+
+
 def notion_report_items(report: dict[str, object], audience: str) -> list[dict[str, object]]:
     audience = normalize_audience(audience)
     raw_issues = report.get("issues", [])
@@ -906,6 +916,8 @@ def notion_report_items(report: dict[str, object], audience: str) -> list[dict[s
     items: list[dict[str, object]] = []
     for issue in raw_issues:
         if not isinstance(issue, dict):
+            continue
+        if is_weekly_summary_issue(issue):
             continue
         tags = [str(tag) for tag in issue.get("tags", [])] if isinstance(issue.get("tags"), list) else []
         audience_categories = [
