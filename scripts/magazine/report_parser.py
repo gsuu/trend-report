@@ -167,22 +167,15 @@ DEVELOP_SUBCATEGORY_CLASSIFICATION_ORDER = (
     "javascript",
 )
 DEVELOP_SUBCATEGORY_LABELS = {
-    "html": "HTML",
-    "css": "CSS",
+    "html_css": "HTML/CSS",
     "javascript": "JAVASCRIPT",
     "web_accessibility": "웹접근성",
-    "update": "Update",
-    "ai": "AI",
-    "tool": "TOOL",
-    "data_api": "DATA/API",
     "performance": "Performance",
-    "accessibility": "Accessibility",
-    "browser": "Browser",
-    "frontend": "Frontend",
-    "ai_dev": "AI/DEV",
-    "publishing": "Publishing",
-    "ai_design": "AI/Design",
-    "pwa": "PWA",
+    "ai": "AI",
+    "tool": "Tool",
+    "update": "Update",
+    "insight": "Insight",
+    "etc": "Etc",
 }
 DEVELOP_SUBCATEGORY_KEYWORDS = {
     "html": {"html", "dom", "markup", "semantic_html", "semantics", "document", "web_components", "custom_elements", "custom_element", "template", "popover", "dialog", "details", "마크업", "시맨틱", "시맨틱_html", "웹컴포넌트"},
@@ -197,10 +190,20 @@ DEVELOP_SUBCATEGORY_KEYWORDS = {
 DESIGN_SUBCATEGORY_ORDER = (
     "ai",
     "global",
+    "insight",
+    "design_system",
+    "tool",
+    "update",
+    "etc",
 )
 DESIGN_SUBCATEGORY_LABELS = {
     "ai": "AI",
     "global": "global",
+    "insight": "INSIGHT",
+    "design_system": "DESIGN SYSTEM",
+    "tool": "TOOL",
+    "update": "UPDATE",
+    "etc": "ETC",
 }
 DESIGN_AI_KEYWORDS = {
     "ai",
@@ -240,10 +243,8 @@ SERVICE_SUBCATEGORY_LABELS = {
     "ecommerce": "ecommerce",
     "fashion": "fashion",
     "beauty": "beauty",
-    "book_content": "book",
-    "department_store": "department",
     "ai": "AI",
-    "service": "service",
+    "etc": "ETC",
 }
 SERVICE_SUBCATEGORY_KEYWORDS = {
     "platform": {
@@ -962,26 +963,56 @@ def issue_area_label(issue: Issue) -> str:
     return MAIN_CATEGORY_LABELS[issue_area_key(issue)]
 
 
+SERVICE_ALLOWED_CATEGORIES = {
+    "platform", "fintech", "ecommerce", "fashion", "beauty", "ai", "etc",
+}
+DESIGN_ALLOWED_CATEGORIES = {
+    "ai", "global", "insight", "design_system", "tool", "update", "etc",
+}
+DEV_ALLOWED_CATEGORIES = {
+    "html_css", "javascript", "web_accessibility", "performance",
+    "ai", "tool", "update", "insight", "etc",
+}
+CATEGORY_ALIASES = {
+    # raw token → canonical key
+    "html": "html_css", "css": "html_css", "htmlcss": "html_css", "html_css": "html_css",
+    "js": "javascript", "javascript": "javascript",
+    "web_accessibility": "web_accessibility", "웹접근성": "web_accessibility", "accessibility": "web_accessibility", "a11y": "web_accessibility",
+    "performance": "performance", "perf": "performance",
+    "ai": "ai",
+    "tool": "tool", "tools": "tool",
+    "update": "update", "updates": "update",
+    "insight": "insight", "insights": "insight",
+    "etc": "etc", "기타": "etc",
+    "platform": "platform",
+    "fintech": "fintech",
+    "ecommerce": "ecommerce", "e_commerce": "ecommerce",
+    "fashion": "fashion",
+    "beauty": "beauty",
+    "global": "global",
+    "design_system": "design_system", "designsystem": "design_system",
+}
+
+
 def issue_category_key(issue: Issue) -> str:
     area_key = issue_area_key(issue)
     raw_category = issue.category or issue.meta.get("카테고리", "")
-    normalized_raw_category = normalize_category_token(raw_category)
+    normalized = normalize_category_token(raw_category)
+    canonical = CATEGORY_ALIASES.get(normalized, normalized)
+
+    if area_key == "service":
+        if canonical in SERVICE_ALLOWED_CATEGORIES:
+            return canonical
+        return "etc"
     if area_key == "design":
-        tokens = issue_tokens(issue)
-        if normalized_raw_category == "ai" or tokens.intersection(DESIGN_AI_KEYWORDS):
-            return "ai"
-        return CATEGORY_KEYS.get(normalized_raw_category, normalized_raw_category) or "global"
-
-    if area_key != "dev":
-        return infer_service_category_key(issue, raw_category) or area_key
-
-    if normalized_raw_category:
-        return CATEGORY_KEYS.get(normalized_raw_category, normalized_raw_category)
-    tokens = issue_tokens(issue)
-    for category_key in DEVELOP_SUBCATEGORY_CLASSIFICATION_ORDER:
-        if tokens.intersection(DEVELOP_SUBCATEGORY_KEYWORDS.get(category_key, set())):
-            return category_key
-    return "javascript"
+        if canonical in DESIGN_ALLOWED_CATEGORIES:
+            return canonical
+        return "etc"
+    if area_key == "dev":
+        if canonical in DEV_ALLOWED_CATEGORIES:
+            return canonical
+        return "etc"
+    return area_key
 
 
 def issue_category_label(issue: Issue) -> str:
@@ -1720,22 +1751,9 @@ def render_index(report: Report) -> str:
               </template>
             </div>
             <template v-else>
-              <ul v-if="isTermExplanation(section)" class="term-explanation-list">
+              <ul class="summary-list">
                 <li v-for="item in section.itemsHtml" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
               </ul>
-              <ul v-else-if="isBulletSummary(section)" class="bullet-summary-list">
-                <li v-for="item in section.itemsHtml" :key="item" v-html="item"></li>
-              </ul>
-              <template v-else>
-                <ul class="summary-list">
-                  <li v-for="item in summaryCoreItems(section.itemsHtml, activeIssue)" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
-                </ul>
-                <div v-if="summaryFactItems(section.itemsHtml).length" class="summary-facts">
-                  <ul class="summary-fact-list">
-                    <li v-for="item in summaryFactItems(section.itemsHtml)" :key="item" :class="summaryItemClass(item)" v-html="formatSummaryItem(item)"></li>
-                  </ul>
-                </div>
-              </template>
             </template>
           </section>
           <footer class="article-footer">
@@ -2189,37 +2207,10 @@ def render_reference_links(issue: Issue | None) -> str:
 
 def render_section_content(title: str, items: list[str], issue: Issue | None = None) -> str:
     if not is_detail_section(title):
-        if title == "용어 설명":
-            return f"""
-              <ul class="term-explanation-list">
-                {''.join(f'<li{summary_item_class_attr(item)}>{format_summary_item(item)}</li>' for item in items)}
-              </ul>
-            """
-
-        if title in SUMMARY_SECTION_TITLES:
-            return f"""
-              <ul class="bullet-summary-list">
-                {''.join(f'<li>{clean_inline(item)}</li>' for item in items)}
-              </ul>
-            """
-
-        core_items, fact_items = split_summary_items(items, issue)
-        facts_html = (
-            f"""
-              <div class="summary-facts">
-                <ul class="summary-fact-list">
-                  {''.join(f'<li{summary_item_class_attr(item)}>{format_summary_item(item)}</li>' for item in fact_items)}
-                </ul>
-              </div>
-            """
-            if fact_items
-            else ""
-        )
         return f"""
               <ul class="summary-list">
-                {''.join(f'<li{summary_item_class_attr(item)}>{format_summary_item(item)}</li>' for item in core_items)}
+                {''.join(f'<li{summary_item_class_attr(item)}>{format_summary_item(item)}</li>' for item in items)}
               </ul>
-              {facts_html}
         """
 
     html_parts: list[str] = ['<div class="section-prose">']

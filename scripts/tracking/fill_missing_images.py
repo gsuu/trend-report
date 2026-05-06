@@ -20,14 +20,30 @@ USER_AGENT = "Mozilla/5.0 (compatible; trend-report-image-fill/1.0)"
 
 
 class ImageMetaParser(HTMLParser):
+    SKIP_PATTERNS = (
+        "facebookblank", "blank.png", "blank.gif", "spacer.gif", "spacer.png",
+        "logo", "favicon", "icon-", "/icons/", "avatar", "profile",
+        "1x1", "pixel.gif", "pixel.png", "transparent",
+    )
+    MIN_WIDTH = 200
+    MIN_HEIGHT = 120
+
     def __init__(self, base_url: str) -> None:
         super().__init__()
         self.base_url = base_url
         self.meta_images: list[str] = []
         self.link_images: list[str] = []
+        self.body_images: list[str] = []
+        self._in_header = False
+        self._in_nav = False
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attrs_dict = {key.lower(): value or "" for key, value in attrs}
+        if tag in {"header", "nav"}:
+            self._in_header = self._in_header or tag == "header"
+            self._in_nav = self._in_nav or tag == "nav"
+            return
+
         if tag == "meta":
             meta_key = (attrs_dict.get("property") or attrs_dict.get("name") or attrs_dict.get("itemprop") or "").lower()
             content = attrs_dict.get("content", "").strip()
@@ -37,18 +53,56 @@ class ImageMetaParser(HTMLParser):
             rel = attrs_dict.get("rel", "").lower()
             if "image_src" in rel:
                 self.add_image(attrs_dict.get("href", "").strip(), source="link")
+        elif tag == "img" and not (self._in_header or self._in_nav):
+            # Skip lazy-load placeholders by preferring data-src/data-original/srcset over src
+            src = (
+                attrs_dict.get("data-src")
+                or attrs_dict.get("data-original")
+                or attrs_dict.get("data-lazy-src")
+                or attrs_dict.get("data-srcset", "").split(",")[0].strip().split(" ")[0]
+                or attrs_dict.get("srcset", "").split(",")[0].strip().split(" ")[0]
+                or attrs_dict.get("src", "")
+            ).strip()
+            if not src:
+                return
+            # Filter by width/height if attribute present
+            try:
+                w = int(attrs_dict.get("width", "0") or 0)
+                h = int(attrs_dict.get("height", "0") or 0)
+                if (w and w < self.MIN_WIDTH) or (h and h < self.MIN_HEIGHT):
+                    return
+            except ValueError:
+                pass
+            self.add_image(src, source="body")
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "header":
+            self._in_header = False
+        elif tag == "nav":
+            self._in_nav = False
 
     @property
     def images(self) -> list[str]:
-        return [*self.meta_images, *self.link_images]
+        return [*self.meta_images, *self.link_images, *self.body_images]
 
     def add_image(self, value: str, source: str) -> None:
         if not value or value.startswith("data:"):
             return
 
         image_url = urljoin(self.base_url, html.unescape(value))
-        bucket = self.meta_images if source == "meta" else self.link_images
-        if image_url.startswith("https://") and image_url not in self.images:
+        if not image_url.startswith("https://"):
+            return
+        # Drop placeholders / logos / icons
+        lowered = image_url.lower()
+        if any(pat in lowered for pat in self.SKIP_PATTERNS):
+            return
+        if source == "meta":
+            bucket = self.meta_images
+        elif source == "link":
+            bucket = self.link_images
+        else:
+            bucket = self.body_images
+        if image_url not in self.images:
             bucket.append(image_url)
 
 
@@ -169,8 +223,41 @@ def extract_markdown_url(value: str) -> str:
     return plain_url.group(0).strip() if plain_url else ""
 
 
-def candidate_urls(block: list[str]) -> list[str]:
-    urls: list[str] = []
+PLATFORM_FALLBACK_DOMAINS: dict[str, list[str]] = {
+    "Spotify": ["https://newsroom.spotify.com/", "https://www.spotify.com/"],
+    "Figma": ["https://www.figma.com/blog/", "https://www.figma.com/"],
+    "WhatsApp": ["https://blog.whatsapp.com/", "https://www.whatsapp.com/"],
+    "Miro": ["https://miro.com/blog/", "https://miro.com/"],
+    "Atlassian": ["https://www.atlassian.com/blog", "https://www.atlassian.com/"],
+    "Remix": ["https://remix.run/blog", "https://remix.run/"],
+    "Shopify": ["https://www.shopify.com/news", "https://www.shopify.com/"],
+    "당근": ["https://about.daangn.com/", "https://www.daangn.com/"],
+    "당근알바": ["https://about.daangn.com/", "https://www.daangn.com/"],
+    "오늘의집": ["https://www.bucketplace.com/", "https://ohou.se/"],
+    "G마켓": ["https://corp.gmarket.com/", "https://www.gmarket.co.kr/"],
+    "무신사": ["https://www.musinsa.com/"],
+    "29CM": ["https://www.29cm.co.kr/"],
+    "올리브영": ["https://corp.oliveyoung.com/", "https://www.oliveyoung.co.kr/"],
+    "화해": ["https://www.hwahae.co.kr/"],
+    "네이버플러스 스토어": ["https://shopping.naver.com/", "https://corporate.naver.com/"],
+    "네이버": ["https://www.navercorp.com/", "https://shopping.naver.com/"],
+    "알바천국": ["https://www.alba.co.kr/"],
+    "CSS-Tricks": ["https://css-tricks.com/"],
+    "Claude": ["https://www.anthropic.com/news", "https://www.anthropic.com/"],
+    "Anthropic": ["https://www.anthropic.com/news", "https://www.anthropic.com/"],
+    "Canva": ["https://www.canva.com/newsroom/", "https://www.canva.com/"],
+    "Dinamo": ["https://abcdinamo.com/"],
+    "ZDNet korea": ["https://zdnet.co.kr/"],
+    "전자신문": ["https://www.etnews.com/"],
+    "Google Play": ["https://play.google.com/"],
+    "App Store": ["https://www.apple.com/app-store/"],
+}
+
+
+def candidate_urls(block: list[str]) -> list[tuple[str, str]]:
+    """Return (url, label) pairs. label='primary' for source URLs, or platform name for fallbacks."""
+    urls: list[tuple[str, str]] = []
+    seen: set[str] = set()
     preferred_fields = ("출처 URL", "이미지 출처")
 
     for field in preferred_fields:
@@ -179,8 +266,15 @@ def candidate_urls(block: list[str]) -> list[str]:
             if not value:
                 continue
             url = extract_markdown_url(value)
-            if url.startswith("https://") and url not in urls:
-                urls.append(url)
+            if url.startswith("https://") and url not in seen:
+                urls.append((url, "primary"))
+                seen.add(url)
+
+    platform = platform_name(block[0]) if block else "서비스"
+    for fallback in PLATFORM_FALLBACK_DOMAINS.get(platform, []):
+        if fallback not in seen:
+            urls.append((fallback, platform))
+            seen.add(fallback)
 
     return urls
 
@@ -192,15 +286,18 @@ def platform_name(heading: str) -> str:
     return "서비스"
 
 
-def fill_block(block: list[str], image_url: str) -> list[str]:
+def fill_block(block: list[str], image_url: str, related_service: str = "") -> list[str]:
     next_block = list(block)
     image_index = -1
     caption_index = -1
     source_index = -1
+    source_field_index = -1
 
     for index, line in metadata_lines(next_block):
         if field_value(line, "출처 URL"):
             source_index = index
+        if line.strip().startswith("- 출처:") and source_field_index < 0:
+            source_field_index = index
         if image_index < 0 and line.strip().startswith("- 이미지:"):
             image_index = index
         if caption_index < 0 and line.strip().startswith("- 이미지 설명:"):
@@ -214,11 +311,22 @@ def fill_block(block: list[str], image_url: str) -> list[str]:
         if caption_index >= insert_at:
             caption_index += 1
 
+    caption_label = (
+        f"{platform_name(next_block[0])} 공식 원문 이미지"
+        if not related_service
+        else f"{related_service} 공식 사이트 이미지 (관련 서비스)"
+    )
     if caption_index < 0:
-        caption = f"{platform_name(next_block[0])} 공식 원문 이미지"
-        next_block.insert((image_index if image_index >= 0 else source_index) + 2, f"- 이미지 설명: {caption}")
+        next_block.insert((image_index if image_index >= 0 else source_index) + 2, f"- 이미지 설명: {caption_label}")
     elif not field_value(next_block[caption_index], "이미지 설명"):
-        next_block[caption_index] = f"- 이미지 설명: {platform_name(next_block[0])} 공식 원문 이미지"
+        next_block[caption_index] = f"- 이미지 설명: {caption_label}"
+
+    if related_service and source_field_index >= 0:
+        current = field_value(next_block[source_field_index], "출처")
+        related_marker = f"관련 서비스: {related_service}"
+        if related_service not in current:
+            new_value = f"{current} / {related_marker}" if current else related_marker
+            next_block[source_field_index] = f"- 출처: {new_value}"
 
     return next_block
 
@@ -264,13 +372,16 @@ def update_file(path: Path, dry_run: bool) -> tuple[int, int, list[str]]:
 
         urls = candidate_urls(block)
         image_url = ""
-        for url in urls:
+        related_service = ""
+        for url, label in urls:
             image_url = resolve_image(url)
             if image_url:
+                if label != "primary":
+                    related_service = label
                 break
 
         if image_url:
-            replacements[(start, end)] = fill_block(block, image_url)
+            replacements[(start, end)] = fill_block(block, image_url, related_service)
             filled_images += 1
         else:
             unresolved.append(block[0].strip())

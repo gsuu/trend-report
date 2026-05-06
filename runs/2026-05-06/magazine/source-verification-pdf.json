@@ -1,0 +1,82 @@
+[
+  {
+    "id": "https://www.navercorp.com",
+    "title": "네이버플러스 스토어 — 대화형 쇼핑 AI 에이전트 베타",
+    "discovery_source": "ZDNet Korea — 베일 벗은 네이버 'AI 쇼핑 에이전트'…데이터 기반 상품 요약·추천",
+    "final_source_url": "",
+    "publisher": "네이버 (NAVER Corp.)",
+    "published_at": "2026-02-26",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "navercorp.com 보도자료(/promotion/pressReleasesView/...) 또는 네이버 검색 블로그(blog.naver.com/naver_search)에서 'AI 쇼핑 에이전트' 베타 출시 1차 글 URL을 확인하지 못함. Bing/DuckDuckGo/네이버 검색 모두 1차 출처 노출 안 됨. ZDNet 정리본은 발견 출처일 뿐 1차 출처가 아니므로 글쓰기 단계로 넘기지 않음.",
+    "area": "Service",
+    "category": "ecommerce",
+    "source_provided_by": "user_pdf_2026-04-28-weekly"
+  },
+  {
+    "id": "https://www.shinsegaegroupnewsroom.com/gmarket-2026-rebound-membership-launch/",
+    "title": "[보도자료 인사이드] 멤버십 원조 맛집, G마켓이 다시 뜨거워진 이유",
+    "discovery_source": "신세계그룹 뉴스룸 (1차 출처 자체)",
+    "final_source_url": "https://www.shinsegaegroupnewsroom.com/gmarket-2026-rebound-membership-launch/",
+    "publisher": "신세계그룹 뉴스룸",
+    "published_at": "2026-04-17",
+    "concrete_facts": [
+      "멤버십 명칭은 '꼭(GGOK)'이며 월 이용료 2,900원, 누적 구매 금액의 최대 5%를 적립해 매월 7만 원까지 페이백 — 9년 만에 선보이는 G마켓 독자 멤버십",
+      "캐시보장 정책: 한 달 동안 받은 적립금이 월회비보다 적으면 G마켓이 그 차액을 스마일캐시로 되돌려주는 구조",
+      "쓱7클럽과 동시 가입 시 양사에서 각각 1,000원씩 캐시백을 받아 월 3,800원으로 두 플랫폼 혜택을 모두 사용할 수 있고, 4,800원으로 꼭멤버십 X 쓱7클럽 X 티빙까지 묶어 이용 가능",
+      "G마켓은 3월에 전년 대비 총 거래액 12% 성장을 기록한 상태에서 멤버십을 출시 — 발표 책임자는 제임스 장(장승환) 대표"
+    ],
+    "image_url": "",
+    "image_source": "신세계그룹 뉴스룸 본문(대표 이미지 직접 URL은 본문 응답에 포함되지 않아 미기재)",
+    "verdict": "검증 통과",
+    "area": "Service",
+    "category": "ecommerce"
+  },
+  {
+    "id": "https://newsroom.musinsa.com",
+    "title": "무신사 — 멀티 스토어 홈 + AI 추천 효과 (구매 전환율 3배)",
+    "discovery_source": "전자신문 — 무신사, 앱 개편 후 구매 전환율 3배 증가…AI 추천 기술 효과",
+    "final_source_url": "",
+    "publisher": "무신사 (MUSINSA)",
+    "published_at": "2026-04 (정리본 보도 시점)",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "무신사 뉴스룸(newsroom.musinsa.com) 1~30+ 페이지(2025-08~2026-05)를 직접 훑었으나 '멀티 스토어 홈'·'AI 추천 시나리오 50배'·'구매 전환율 3배'·'페이지뷰 157% YoY' 표현이 들어간 1차 보도자료를 찾지 못함. 같은 시점 가까운 1차 출처는 2026-02-12 '패션 특화 AI 후기 요약 서비스 론칭'(/newsroom-menu/2026-0212-1)이지만 후보의 사실(전환율 3배·멀티 스토어 6개 카테고리)과 다른 별개 사안. 전자신문 정리본은 발견 출처일 뿐 무신사 1차 출처가 아니므로 글쓰기 단계로 넘기지 않음.",
+    "area": "Service",
+    "category": "fashion"
+  },
+  {
+    "id": "https://www.hwahae.co.kr",
+    "title": "화해 — '듀프템 찾기' AI 추천",
+    "discovery_source": "Google Play 화해 앱 릴리즈 노트(추정)",
+    "final_source_url": "",
+    "publisher": "버드뷰(화해)",
+    "published_at": "2026-04 (정리본 표기)",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "화해 공식 블로그(blog.hwahae.co.kr)·뉴스룸(news.hwahae.co.kr)·hwahae.co.kr/news 어느 경로에서도 '듀프템 찾기' AI 추천 출시 1차 글 URL을 확인하지 못함. Google Play 앱 상세 페이지(play.google.com/store/apps/details?id=com.brandi.hwahae)도 직접 fetch 실패(404). 릴리즈 노트의 어느 버전에 해당 문구가 들어갔는지, 어떤 화면/플로우 변화인지 1차 증빙 없음 — 글쓰기 단계로 넘기지 않음.",
+    "area": "Service",
+    "category": "beauty"
+  },
+  {
+    "id": "https://corp.oliveyoung.com",
+    "title": "올리브영 — 'Olive Young Festa JAPAN 2026' 일본 진출 (5/8~10 마쿠하리 멧세)",
+    "discovery_source": "정리본 — 올리브영, '뷰티 페스타' 일본 상륙…K뷰티 팬덤 확장",
+    "final_source_url": "",
+    "publisher": "CJ 올리브영",
+    "published_at": "2026-04 (정리본 보도 시점)",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "CJ 올리브영 코퍼레이트 사이트(corp.oliveyoung.com)는 SPA 구조라 메인 응답에 '올리브영 페스타 글로벌 확장' 메뉴 노출만 확인되고, 'Olive Young Festa JAPAN 2026' 보도자료의 직접 URL을 추출하지 못함. /communication/news, /news, /news/list 등 가능한 경로 모두 메인 페이지로 리다이렉트되어 개별 글 본문 도달 실패. 55개 K뷰티 브랜드·약 542㎡ 부스·KCON 연계 같은 정리본 사실을 본문에서 직접 확인하지 못해 글쓰기 단계로 넘기지 않음.",
+    "area": "Service",
+    "category": "beauty"
+  }
+]

@@ -1,0 +1,184 @@
+[
+  {
+    "title": "Microsoft Dumps Xbox Copilot AI, Sparking Accessibility Outcry",
+    "link": "https://dev.to/mlxio_ai/microsoft-dumps-xbox-copilot-ai-sparking-accessibility-outcry-20go",
+    "pubDate": "Tue, 05 May 2026 22:07:13 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Microsoft is retiring Xbox Copilot AI, a crucial accessibility feature, leaving gamers with disabilities without key support starting July 2024. Microsoft Announces Retirement of Xbox Copilot AI on Consoles and Mobile Microsoft is pulling the plug on Xbox Copilot AI, the accessibility feature that let gamers pair two controllers to act as one, starting with Xbox consoles, where supp... A Microsoft spokesperson said, “We are continually evaluating our products to ensure we’re delivering the best experiences for our…"
+  },
+  {
+    "title": "Creating Initial Requirements for an Accessible Navigation Component",
+    "link": "https://dev.to/shaynaproductions/creating-initial-requirements-for-an-accessible-navigation-component-3gdg",
+    "pubDate": "Tue, 05 May 2026 12:15:00 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Prologue A while ago, I decided to develop a fully accessible main navigation component in React after a fruitless search through third-party component libraries, npm packages and even GitHub repositories. A complex component needs requirements around all aspects of the component, and this article begins the process of defining those requirements. Note: This article is one of a series demonstrating building a React navigation component from scratch while considering accessibility through the process. This article…"
+  },
+  {
+    "title": "Rethinking The Experience Of System Tools",
+    "link": "https://smashingmagazine.com/2026/05/rethinking-experience-system-tools/",
+    "pubDate": "Tue, 05 May 2026 08:00:00 GMT",
+    "source": "Smashing Magazine",
+    "content": "Design always starts with function — function shapes form. But if that function can’t be made completely invisible and people still have to interact with it, it inevitably becomes part of their experience. In this article, Kyrylo Levashov shares four common software design assumptions."
+  },
+  {
+    "title": "Why Your Online Booking Widget Might Be Your Biggest ADA Risk",
+    "link": "https://dev.to/agentkit/why-your-online-booking-widget-might-be-your-biggest-ada-risk-5cd8",
+    "pubDate": "Tue, 05 May 2026 05:00:36 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "If you run a service business — a tutoring center, an auto repair shop, a therapist's office, a wedding photographer, a salon, a dental practice, a tax preparer — there is a good chance the page on your website that gets the most use is the one with your booking widget on it. That booking widget is also, statistically, the most likely thing on your entire site to get you sued. We say that with data. Across the demand letters and complaints we've reviewed in the last twelve months, the appointment-scheduling widget…"
+  },
+  {
+    "title": "Remix 3 drops React",
+    "link": "https://javascriptweekly.com/issues/784",
+    "pubDate": "Tue, 5 May 2026 00:00:00 +0000",
+    "source": "JavaScript Weekly",
+    "content": "#​784 — May 5, 2026 Read on the Web JavaScript Weekly Remix 3 Enters Beta — It's No Longer a React Framework — Remix has quite the back story. Created by the duo behind React Router in 2020 and seen as an alternative to Next.js, Remix was acquired by Shopify in 2022 and its core ideas folded into React Router v7 in 2024. Now, a new direction: a full-stack, web standards-first framework with its own UI component model and… no React. Michael Jackson (Remix) Build AI Features That Get Better Over Time — Join Scott Mo…"
+  },
+  {
+    "title": "Fixed-Height Cards: More Fragile Than They Look",
+    "link": "https://css-tricks.com/fixed-height-cards-more-fragile-than-they-look/",
+    "pubDate": "Mon, 04 May 2026 14:01:36 +0000",
+    "source": "CSS-Tricks",
+    "content": "Getting a multi-column of cards to line up equally is is a headache we've all faced, and it gets even harder when working with fixed heights. Fixed-Height Cards: More Fragile Than They Look originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Why Accessibility Widgets Fail (And What Developers Should Do Instead)",
+    "link": "https://dev.to/lizette_eboucher_3aef99/why-accessibility-widgets-fail-and-what-developers-should-do-instead-5c5",
+    "pubDate": "Mon, 04 May 2026 13:25:36 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "As developers, we’ve all seen accessibility widgets marketed as an easy solution to make websites ADA compliant. But recent legal action has shown that these tools don’t actually solve the problem. 👉 Full case study here: https://www.ecomback.com/blogs/ftc-final-order-accessibility-widget-provider-accessibe-to-pay-1m The Myth of “One-Click Accessibility” Accessibility is not something you can fix with a script. Real accessibility involves: Semantic markup Widgets don’t fix these — they only overlay UI controls. C…"
+  },
+  {
+    "title": "1001: Managing Deadlines + Stress",
+    "link": "https://syntax.fm/1001",
+    "pubDate": "Mon, 04 May 2026 11:00:00 -0000",
+    "source": "Syntax.fm",
+    "content": "Scott and Wes tackle the all-too-real stress of crunch time as a web developer—how to handle looming deadlines, avoid sloppy shortcuts, and stay methodical when everything feels like it’s falling apart. They share practical tips on planning, communicating, cutting scope, asking for help, and preventing the chaos from happening again next time. Show Notes 00:00 Welcome to Syntax! 02:53 The Importance of Planning and Organization. 05:16 Slow Down, Take a Step Back. 06:05 Identifying and Managing Tasks. 08:35 The Rol…"
+  },
+  {
+    "title": "713: AI + Design Systems with Brad and Ian Frost",
+    "link": "https://shoptalkshow.com/713/",
+    "pubDate": "Mon, 04 May 2026 08:03:50 +0000",
+    "source": "ShopTalk Show",
+    "content": "Show Description Brad and Ian Frost are back to chat about integrating AI into website and design system building, how to keep AI slop out of your design systems, building things humans need regardless of the tooling, and thinking of AI as a fancy linter. Listen on Website Guests Brad Frost Guest's Main URL • Guest's Social Ian Frost Guest's Main URL • Guest's Social Links Redesigning My Website While Painting a Mural: The Ancient Future of Web Design - YouTube AI & Design Systems Course with Brad Frost, TJ Pitre,…"
+  },
+  {
+    "title": "Six Accessibility Failures We Keep Finding in WooCommerce Stores (And the Plugins That Cause Them)",
+    "link": "https://dev.to/agentkit/six-accessibility-failures-we-keep-finding-in-woocommerce-stores-and-the-plugins-that-cause-them-1lpf",
+    "pubDate": "Mon, 04 May 2026 05:00:59 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "WooCommerce sits underneath a large share of small-business e-commerce on the web. It is free, runs on top of WordPress, and is flexible enough that a hobbyist can launch a store in an afternoon. That same flexibility is also why WooCommerce stores show up in ADA demand letters and EAA complaints out of proportion to their share of the market. The owner picked a theme that looked nice, installed five plugins to add the features they needed, and the combined output failed a half dozen WCAG criteria nobody on the te…"
+  },
+  {
+    "title": "What Is a VPAT? A Plain-English Guide for B2B SaaS and Service Providers",
+    "link": "https://dev.to/agentkit/what-is-a-vpat-a-plain-english-guide-for-b2b-saas-and-service-providers-57d0",
+    "pubDate": "Mon, 04 May 2026 05:00:36 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "The first time a prospect asks \"Can you send us your VPAT?\" most B2B founders react one of two ways. Either they panic and forward the email to a developer, or they reply \"What's a VPAT?\" and lose the deal to a competitor who already had one ready. Neither is necessary. A VPAT is a template, not a certification, and any company can produce one if they understand the document, do the underlying accessibility work honestly, and resist the temptation to overstate what their product actually supports. This guide expla…"
+  },
+  {
+    "title": "Accessibility in Firefox Extensions: ARIA, Focus Management, and Screen Readers",
+    "link": "https://dev.to/weatherclockdash/accessibility-in-firefox-extensions-aria-focus-management-and-screen-readers-iao",
+    "pubDate": "Mon, 04 May 2026 03:07:08 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Accessibility in Firefox Extensions: ARIA, Focus Management, and Screen Readers Browser extensions should work for everyone. Most accessibility mistakes are easy to fix once you know what to look for. The most important accessibility tool is HTML semantics. Use the right element for the job: Search Search Weather & Clock Dashboard Weather & Clock Dashboard Native elements are always better than ARIA-enhanced divs. Use ARIA only when native elements don't cover your use case. For new tab pages, autofocus is appropr…"
+  },
+  {
+    "title": "Keyboard Shortcuts in Firefox Extensions: A Complete Guide",
+    "link": "https://dev.to/weatherclockdash/keyboard-shortcuts-in-firefox-extensions-a-complete-guide-2n8o",
+    "pubDate": "Sun, 03 May 2026 23:59:56 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Keyboard Shortcuts in Firefox Extensions: A Complete Guide Good keyboard support separates a great extension from a mediocre one. Here's everything you need to know. For global keyboard shortcuts (accessible even when the extension isn't focused): { \"commands\": { \"_execute_action\": { \"suggested_key\": { \"default\": \"Ctrl+Shift+W\" }, \"description\": \"Open Weather & Clock Dashboard\" }, \"toggle-theme\": { \"suggested_key\": { \"default\": \"Ctrl+Shift+D\" }, \"description\": \"Toggle dark/light mode\" } } } Available modifiers: Ct…"
+  },
+  {
+    "title": "Dark Mode in Firefox Extensions: Respecting System Preferences",
+    "link": "https://dev.to/weatherclockdash/dark-mode-in-firefox-extensions-respecting-system-preferences-1iok",
+    "pubDate": "Sun, 03 May 2026 23:54:23 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Dark Mode in Firefox Extensions: Respecting System Preferences Firefox users who prefer dark mode shouldn't have to manually toggle it in every extension. Here's how to automatically respect the system preference. /* Default: light mode */ :root { --bg: #ffffff; --text: #1a1a1a; --card-bg: #f5f5f5; --border: #e0e0e0; } /* Auto dark mode from system */ @media (prefers-color-scheme: dark) { :root { --bg: #1a1a2e; --text: #e0e0e0; --card-bg: #16213e; --border: #2d3561; } } Using CSS custom properties makes this effor…"
+  },
+  {
+    "title": "Why IKB fails as readable text — and what I did about it",
+    "link": "https://dev.to/palo_alto_ai/why-ikb-fails-as-readable-text-and-what-i-did-about-it-ic7",
+    "pubDate": "Sun, 03 May 2026 16:39:12 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Yves Klein registered International Klein Blue as a pigment in 1960. Pure IKB (hex 002FA7) on a dark terminal ground measures Lc -12 on the APCA contrast scale — effectively invisible as text. That's the central problem I had to solve when building klein-blue. Claude Code uses specific ANSI slots for specific jobs: ansi:blue for decorative borders, ansi:blueBright for permission-prompt text you actually need to read. So I split IKB across both slots. Pure 002FA7 goes into the decorative slot where legibility doesn…"
+  },
+  {
+    "title": "Flutter Web Accessibility Guide — WCAG 2.2, Semantics, and Screen Reader Support",
+    "link": "https://dev.to/kanta13jp1/flutter-web-accessibility-guide-wcag-22-semantics-and-screen-reader-support-3f33",
+    "pubDate": "Sun, 03 May 2026 13:13:34 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Accessibility is not an afterthought — it's a quality signal. For Flutter Web, getting WCAG 2.2 compliance right requires understanding how Flutter's Semantics tree maps to browser accessibility APIs. This guide walks through practical implementation: contrast ratios, keyboard navigation, screen reader support, and automated testing. Flutter Web uses a hybrid rendering approach (CanvasKit or HTML), meaning the DOM accessibility tree is not automatically generated the way it is in traditional web apps. You must exp…"
+  },
+  {
+    "title": "Web Accessibility (A11y) for Juniors: What It Is and Why It Matters",
+    "link": "https://dev.to/edriso/web-accessibility-a11y-for-juniors-what-it-is-and-why-it-matters-2eoe",
+    "pubDate": "Sun, 03 May 2026 11:18:36 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "You probably saw the word a11y on Twitter, in a job post, or in a code review comment, and wondered what it actually means. So let me explain it the way I wish someone explained it to me when I started. A11y is a short way of writing accessibility. The number 11 is just the count of letters between the a and the y in the word accessibility. That is it. No hidden meaning. Accessibility means building websites and apps that everyone can actually use, including people who: can't see well or can't see at all and use a…"
+  },
+  {
+    "title": "What’s !important #10: HTML-in-Canvas, Hex Maps, E-ink Optimization, and More",
+    "link": "https://css-tricks.com/whats-important-10/",
+    "pubDate": "Fri, 01 May 2026 13:43:26 +0000",
+    "source": "CSS-Tricks",
+    "content": "Developers have been experimenting with HTML-in-Canvas, a hexagonal world map-analytics feature, a web-based OS for e-ink devices, replacing image sources using the content property, and more. This is What’s !important #10. What’s !important #10: HTML-in-Canvas, Hex Maps, E-ink Optimization, and More originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Designing Stable Interfaces For Streaming Content",
+    "link": "https://smashingmagazine.com/2026/05/designing-stable-interfaces-streaming-content/",
+    "pubDate": "Fri, 01 May 2026 08:00:00 GMT",
+    "source": "Smashing Magazine",
+    "content": "Streaming UIs are an easy concept on the surface, but are quite complicated in practice. There are many considerations that need to be accounted for, from layout shifts and motion preferences to proper markup and various states, that may not be instantly obvious. What happens if the stream is interrupted? Can users tab through the UI on the keyboard as it shifts? What ARIA attributes might be needed?"
+  },
+  {
+    "title": "The Importance of Native Randomness in CSS",
+    "link": "https://css-tricks.com/the-importance-of-native-randomness-in-css/",
+    "pubDate": "Thu, 30 Apr 2026 15:26:18 +0000",
+    "source": "CSS-Tricks",
+    "content": "We're getting new functions for generating random numbers in CSS! But the road to get here has been a long and winding one. The Importance of Native Randomness in CSS originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "A Fresh View In May (2026 Wallpapers Edition)",
+    "link": "https://smashingmagazine.com/2026/04/desktop-wallpaper-calendars-may-2026/",
+    "pubDate": "Thu, 30 Apr 2026 11:00:00 GMT",
+    "source": "Smashing Magazine",
+    "content": "Let’s welcome May with a new collection of desktop wallpapers! Following our monthly tradition, the wallpapers were created by the community for the community and can be downloaded for free. Enjoy!"
+  },
+  {
+    "title": "Build Your Online Store with WoodMart WooCommerce Theme",
+    "link": "https://feedpress.me/link/24028/17328512/build-your-online-store-with-woodmart-woocommerce-theme",
+    "pubDate": "Thu, 30 Apr 2026 00:00:00 GMT",
+    "source": "CSS Weekly",
+    "content": "A hands-on guide on how to get started with WoodMart, a WooCommerce theme built for serious online stores."
+  },
+  {
+    "title": "Bitwarden CLI compromised (News)",
+    "link": "https://changelog.com/news/185",
+    "pubDate": "Wed, 29 Apr 2026 15:00:00 +0000",
+    "source": "The Changelog",
+    "content": "Bitwarden's CLI got hit by the Checkmarx supply-chain campaign, TypeScript 7.0 beta lands with the Go-rewritten compiler running ~10x faster than 6.0, and pgBackRest lost its maintainer of thirteen years leaving anyone running production Postgres with a real dependency-trust task this week. We've also got Ubuntu 26.04 LTS shipping with TPM-backed full-disk encryption, and Matz dropping Spinel as an AOT path that takes Ruby to native binaries. This week was a good reminder that the tools we depend on are all moving…"
+  },
+  {
+    "title": "contrast()",
+    "link": "https://css-tricks.com/almanac/functions/c/contrast/",
+    "pubDate": "Wed, 29 Apr 2026 14:58:19 +0000",
+    "source": "CSS-Tricks",
+    "content": "The contrast() filter function increases or decreases the contrast of an element. contrast() originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "contrast-color()",
+    "link": "https://css-tricks.com/almanac/functions/c/contrast-color/",
+    "pubDate": "Wed, 29 Apr 2026 14:57:48 +0000",
+    "source": "CSS-Tricks",
+    "content": "The contrast-color() function takes a and returns either black or white, whichever is the most contrasting color for that value. contrast-color() originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "1000: Syntax Episode 1,000!",
+    "link": "https://syntax.fm/1000",
+    "pubDate": "Wed, 29 Apr 2026 11:00:00 -0000",
+    "source": "Syntax.fm",
+    "content": "Wes and Scott celebrate 1000 episodes of Syntax, reflecting on how the podcast started, the team behind it, memorable moments, listener stats, inside jokes, and how the show has evolved over time—from early recordings and sponsors to supercuts, spooky episodes, and what’s next. Show Notes 00:00 Welcome to Syntax! 02:01 Intro to Kaitlin 03:08 Intro to Randy 06:16 Intro to CJ 09:01 Intro to Niki 10:08 Who “yaps” more, Wes or Scott? 10:28 Brought to you by Sentry.io 18:37 Wes’ supercuts app 24:04 How Syntax got start…"
+  }
+]
