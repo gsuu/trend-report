@@ -4,8 +4,8 @@
 
 ## 절대 규칙
 
-1. **뉴스레터 수동 발송 순서** — `/newsletter-send` 등 사람이 트리거하는 발송은 테스트 메일을 `jisuk@cttd.co.kr`로만 먼저 보내고, 사용자가 채팅에서 명시 확인한 뒤에야 `cxd@cttd.co.kr` 포함 모든 구독자에게 최종 발송합니다. 이 순서는 사용자가 한 번 승인했더라도 매 발송마다 다시 확인합니다. 자세한 흐름은 `AGENTS.md`의 Newsletter Approval Flow.
-   - **예외:** Vercel cron(`/api/weekly-newsletters`, 목요일 10시 KST)에 의한 자동 발송은 의도된 동작이며 테스트·확인 단계 없이 Notion 구독자 전원에게 바로 나갑니다. cron 경로에 테스트 단계를 끼워넣지 마세요.
+1. **뉴스레터 발송 순서** — 모든 발송은 사람이 명시 트리거할 때만. 테스트 메일을 `jisuk@cttd.co.kr`로만 먼저 보내고, 사용자가 채팅에서 명시 확인한 뒤에야 `cxd@cttd.co.kr` 포함 모든 구독자에게 최종 발송합니다. 이 순서는 사용자가 한 번 승인했더라도 매 발송마다 다시 확인합니다. 자세한 흐름은 `AGENTS.md`의 Newsletter Approval Flow.
+   - 자동 발송 경로는 현재 모두 OFF: GitHub Actions `weekly-newsletter.yml` disabled, Vercel cron jobs OFF. 자동 발송을 켜려면 사용자 명시 요청이 있어야 하며, 켜더라도 코드 푸시·배포가 의도치 않게 발송을 트리거하지 않는지 별도 확인.
 2. **Notion 동기화는 명시 요청 시에만** — Service/Design/DEV 발행 후 자동으로 Notion에 올리지 않습니다. `runs/YYYY-MM-DD/magazine/magazine-report.md` 갱신 후 `public/data/magazine.json`만 새로 고칩니다.
 3. **원문 검증 없이 글쓰기 금지** — 모든 매거진 글은 최종 기준 원문(공식 뉴스룸/릴리즈 노트/제품 블로그)을 직접 열고 작성합니다. RSS 발췌나 큐레이션 글에서 본문을 만들지 않습니다.
 4. **shortlist는 임의로 줄이지 않음** — `shortlist-20-30.md`의 항목은 글쓰기 단계에서 4~7개로 압축하지 않습니다. 원문 부족·광고성·화면 미확인만 `수집했지만 제외한 것`으로 이동합니다.
