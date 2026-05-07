@@ -277,9 +277,12 @@ function expandSubscriberAudiences(values = []) {
   return NEWSLETTER_AUDIENCES.filter((audience) => selected.has(audience));
 }
 
-async function notionNewsletterSubscribers() {
+async function notionNewsletterSubscribers(debugStats) {
   const notionToken = process.env.NOTION_TOKEN || process.env.NOTION_API_KEY;
-  if (!notionToken) return [];
+  if (!notionToken) {
+    if (debugStats) debugStats.notionTokenMissing = true;
+    return [];
+  }
   const databaseId = subscriberDatabaseId();
 
   const notion = new Client({ auth: notionToken });
@@ -296,18 +299,51 @@ async function notionNewsletterSubscribers() {
     cursor = response.has_more ? response.next_cursor : undefined;
   } while (cursor);
 
+  if (debugStats) {
+    debugStats.pagesRaw = pages.length;
+    debugStats.statusCounts = {};
+    debugStats.audienceRawSamples = [];
+  }
+
+  const activePages = pages.filter((page) => {
+    const status = subscriberStatus(page);
+    if (debugStats) debugStats.statusCounts[status] = (debugStats.statusCounts[status] || 0) + 1;
+    return !["unsubscribed", "inactive", "해지"].includes(status);
+  });
+  if (debugStats) debugStats.activePages = activePages.length;
+
   const seenEmails = new Set();
-  return pages
-    .filter((page) => !["unsubscribed", "inactive", "해지"].includes(subscriberStatus(page)))
-    .map((page) => ({
-      email: subscriberEmail(page),
-      audiences: expandSubscriberAudiences(subscriberAudiences(page)),
-    }))
+  const result = activePages
+    .map((page) => {
+      const rawAudiences = subscriberAudiences(page);
+      const expanded = expandSubscriberAudiences(rawAudiences);
+      if (debugStats && debugStats.audienceRawSamples.length < 5) {
+        debugStats.audienceRawSamples.push({ raw: rawAudiences, expanded });
+      }
+      return {
+        email: subscriberEmail(page),
+        audiences: expanded,
+      };
+    })
     .filter((subscriber) => {
-      if (!subscriber.email || seenEmails.has(subscriber.email) || !subscriber.audiences.length) return false;
+      if (!subscriber.email) {
+        if (debugStats) debugStats.droppedNoEmail = (debugStats.droppedNoEmail || 0) + 1;
+        return false;
+      }
+      if (seenEmails.has(subscriber.email)) {
+        if (debugStats) debugStats.droppedDuplicate = (debugStats.droppedDuplicate || 0) + 1;
+        return false;
+      }
+      if (!subscriber.audiences.length) {
+        if (debugStats) debugStats.droppedNoAudience = (debugStats.droppedNoAudience || 0) + 1;
+        return false;
+      }
       seenEmails.add(subscriber.email);
       return true;
     });
+
+  if (debugStats) debugStats.finalSubscribers = result.length;
+  return result;
 }
 
 function isAuthorized(request) {
@@ -504,9 +540,10 @@ function renderPlainText(audiences, issuesByAudience, weekRange, recipientEmail 
   ].join("\n");
 }
 
-async function sendNewsletters(issuesByAudience, weekRange) {
-  const subscribers = await notionNewsletterSubscribers();
+async function sendNewsletters(issuesByAudience, weekRange, debugStats) {
+  const subscribers = await notionNewsletterSubscribers(debugStats);
   const sendDateLabel = kstDateString();
+  if (debugStats) debugStats.subscribersReturned = subscribers.length;
   if (!subscribers.length) return { sent: false, reason: "no recipients" };
 
   const port = Number.parseInt(process.env.SMTP_PORT || "587", 10);
@@ -524,10 +561,12 @@ async function sendNewsletters(issuesByAudience, weekRange) {
   let sent = 0;
   let skipped = 0;
   const failedRecipients = [];
+  if (debugStats) debugStats.skippedReasons = { noMatchingIssues: 0 };
   for (const subscriber of subscribers) {
     const selectedIssues = selectedIssuesByAudience(subscriber.audiences, issuesByAudience);
     if (!selectedIssues.length) {
       skipped += 1;
+      if (debugStats) debugStats.skippedReasons.noMatchingIssues += 1;
       continue;
     }
     try {
@@ -667,18 +706,20 @@ export default async function handler(request, response) {
 
   try {
     ensureUnsubscribeLinksEnabled();
+    const debugStats = {};
     const { issues, weekRange } = await fetchIssuesFromFiles();
     const serviceIssues = issues.filter((issue) => issue.areaKey === "service");
     const designIssues = issues.filter((issue) => issue.areaKey === "design");
     const devIssues = issues.filter((issue) => issue.areaKey === "dev");
+    debugStats.issueCounts = { service: serviceIssues.length, design: designIssues.length, dev: devIssues.length };
     const issuesByAudience = { service: serviceIssues, design: designIssues, dev: devIssues };
-    const results = await sendNewsletters(issuesByAudience, weekRange);
+    const results = await sendNewsletters(issuesByAudience, weekRange, debugStats);
     const archive = await archiveMarkdownToGithub(
       renderArchiveMarkdown({ weekRange, serviceIssues, designIssues, devIssues, results }),
       weekRange,
     );
-    response.status(200).json({ ok: true, issues: issues.length, weekRange: weekRangeLabel(weekRange), results, archive });
+    response.status(200).json({ ok: true, issues: issues.length, weekRange: weekRangeLabel(weekRange), results, archive, debug: debugStats });
   } catch (error) {
-    response.status(500).json({ ok: false, error: error.message });
+    response.status(500).json({ ok: false, error: error.message, stack: error.stack });
   }
 }
