@@ -142,6 +142,8 @@ function propertyText(properties, names, fallback = "") {
   if (prop.type === "select") return prop.select?.name || fallback;
   if (prop.type === "status") return prop.status?.name || fallback;
   if (prop.type === "url") return prop.url || fallback;
+  if (prop.type === "email") return prop.email || fallback;
+  if (prop.type === "phone_number") return prop.phone_number || fallback;
   if (prop.type === "date") return prop.date?.start || fallback;
   if (prop.type === "multi_select") return prop.multi_select.map((item) => item.name).join(", ");
   if (prop.type === "number") return String(prop.number ?? fallback);
