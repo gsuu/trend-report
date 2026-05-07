@@ -655,6 +655,17 @@ async function archiveMarkdownToGithub(markdown, weekRange) {
 }
 
 export default async function handler(request, response) {
+  // HARD KILL SWITCH — 자동 발송 사고 재발 방지용. 이 가드를 풀려면 사용자 명시 요청 필요.
+  if (process.env.NEWSLETTER_SEND_DISABLED !== "false") {
+    response.status(200).json({
+      ok: true,
+      skipped: true,
+      reason: "newsletter sends are disabled by hard kill switch (set NEWSLETTER_SEND_DISABLED=false to enable)",
+      dateKst: kstDateString(),
+    });
+    return;
+  }
+
   if (!isAuthorized(request)) {
     response.status(401).json({ ok: false, error: "Unauthorized" });
     return;
