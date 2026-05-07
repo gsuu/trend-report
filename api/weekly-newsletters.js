@@ -355,6 +355,12 @@ function isWeeklySummaryIssue(issue) {
   return false;
 }
 
+function daysSinceKst(slug, now = new Date()) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(slug)) return Infinity;
+  const slugDate = new Date(`${slug}T00:00:00+09:00`);
+  return (now.getTime() - slugDate.getTime()) / 86400000;
+}
+
 async function fetchIssuesFromFiles() {
   const magazinePath = path.join(process.cwd(), "public", "data", "magazine.json");
   const weekRange = previousKstWeekRange();
@@ -363,7 +369,7 @@ async function fetchIssuesFromFiles() {
   try {
     data = JSON.parse(await fs.promises.readFile(magazinePath, "utf8"));
   } catch {
-    return { issues: [], weekRange };
+    return { issues: [], weekRange, latestSlug: "", latestSlugAgeDays: Infinity };
   }
 
   const rawIssues = data.report?.issues || [];
@@ -400,7 +406,7 @@ async function fetchIssuesFromFiles() {
     });
   }
 
-  return { issues: allIssues, weekRange };
+  return { issues: allIssues, weekRange, latestSlug, latestSlugAgeDays: daysSinceKst(latestSlug) };
 }
 
 function renderAudienceHeading(label) {
@@ -683,7 +689,19 @@ export default async function handler(request, response) {
 
   try {
     ensureUnsubscribeLinksEnabled();
-    const { issues, weekRange } = await fetchIssuesFromFiles();
+    const { issues, weekRange, latestSlug, latestSlugAgeDays } = await fetchIssuesFromFiles();
+    const maxAgeDays = Number.parseFloat(process.env.NEWSLETTER_MAX_ISSUE_AGE_DAYS || "7");
+    if (latestSlugAgeDays > maxAgeDays) {
+      response.status(200).json({
+        ok: true,
+        skipped: true,
+        reason: `latest magazine issue (${latestSlug || "none"}) is ${latestSlugAgeDays === Infinity ? ">∞" : latestSlugAgeDays.toFixed(1)} days old, exceeding NEWSLETTER_MAX_ISSUE_AGE_DAYS=${maxAgeDays}; nothing new to send`,
+        latestSlug,
+        latestSlugAgeDays: latestSlugAgeDays === Infinity ? null : latestSlugAgeDays,
+        dateKst: kstDateString(),
+      });
+      return;
+    }
     const serviceIssues = issues.filter((issue) => issue.areaKey === "service");
     const designIssues = issues.filter((issue) => issue.areaKey === "design");
     const devIssues = issues.filter((issue) => issue.areaKey === "dev");
