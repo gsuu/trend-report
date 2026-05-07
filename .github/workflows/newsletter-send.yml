@@ -1,0 +1,54 @@
+name: Newsletter — Real send (전체 구독자)
+
+# Notion 구독자 DB의 활성 구독자 전원에게 발송. 되돌릴 수 없음.
+# 사전 조건:
+#   1. Newsletter — Test send 로 jisuk@cttd.co.kr 미리보기 검증 완료
+#   2. Vercel Settings → Environment Variables 에 NEWSLETTER_SEND_DISABLED=false 가
+#      등록돼 있어야 함 (안전 잠금. 실제 발송 직전에만 false 로 풀고, 직후 true 로 다시 잠그는 운영 권장)
+# 입력 confirm 필드에 'send' 라고 정확히 적어야 실행됩니다.
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: "전체 구독자 발송을 확인하려면 'send' 라고 정확히 입력하세요"
+        required: true
+        default: ""
+
+jobs:
+  send-real:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify confirmation input
+        run: |
+          if [ "${{ inputs.confirm }}" != "send" ]; then
+            echo "::error::confirm 입력값이 'send' 가 아닙니다 (입력: '${{ inputs.confirm }}'). 실행 중단."
+            exit 1
+          fi
+
+      - name: Trigger newsletter endpoint (real send)
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          set -e
+          STATUS=$(curl -sS -o response.json -w '%{http_code}' \
+            -H "Authorization: Bearer ${CRON_SECRET}" \
+            "https://magazine.cttd.co.kr/api/weekly-newsletters")
+          echo "HTTP status: ${STATUS}"
+          echo "--- response body ---"
+          cat response.json
+          echo
+          if [ "${STATUS}" != "200" ]; then
+            echo "::error::Real-send endpoint returned ${STATUS}"
+            exit 1
+          fi
+          # skipped 응답이면 차단 사유 출력
+          if grep -q '"skipped":true' response.json; then
+            echo "::warning::Send was skipped — check 'reason' field above (likely kill switch / stale issue / paused date)"
+            exit 0
+          fi
+          if ! grep -q '"mode":"real"' response.json; then
+            echo "::error::Response did not confirm real mode"
+            exit 1
+          fi
+          echo "::notice::Real send dispatched. Check Vercel logs and recipient inboxes."

@@ -1,0 +1,35 @@
+name: Newsletter — Test send (jisuk only)
+
+# 매거진 콘텐츠를 jisuk@cttd.co.kr 한 명에게만 보내 미리 검증.
+# 킬 스위치(NEWSLETTER_SEND_DISABLED)를 우회하므로 언제든 실행 가능.
+# 실제 발송 전 반드시 이 워크플로로 미리 확인하세요.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  send-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger newsletter endpoint in test mode
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          set -e
+          STATUS=$(curl -sS -o response.json -w '%{http_code}' \
+            -H "Authorization: Bearer ${CRON_SECRET}" \
+            "https://magazine.cttd.co.kr/api/weekly-newsletters?test=1")
+          echo "HTTP status: ${STATUS}"
+          echo "--- response body ---"
+          cat response.json
+          echo
+          if [ "${STATUS}" != "200" ]; then
+            echo "::error::Test endpoint returned ${STATUS}"
+            exit 1
+          fi
+          # 테스트 모드는 jisuk만 받아야 정상
+          if ! grep -q '"mode":"test"' response.json; then
+            echo "::error::Response is not in test mode"
+            exit 1
+          fi
+          echo "::notice::Test send dispatched. Check jisuk@cttd.co.kr inbox."

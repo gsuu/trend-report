@@ -515,8 +515,10 @@ function renderPlainText(audiences, issuesByAudience, weekRange, recipientEmail 
   ].join("\n");
 }
 
-async function sendNewsletters(issuesByAudience, weekRange) {
-  const subscribers = await notionNewsletterSubscribers();
+async function sendNewsletters(issuesByAudience, weekRange, options = {}) {
+  const subscribers = options.testMode
+    ? [{ email: "jisuk@cttd.co.kr", audiences: ["service", "design", "dev"] }]
+    : await notionNewsletterSubscribers();
   const sendDateLabel = kstDateString();
   if (!subscribers.length) return { sent: false, reason: "no recipients" };
 
@@ -661,12 +663,15 @@ async function archiveMarkdownToGithub(markdown, weekRange) {
 }
 
 export default async function handler(request, response) {
-  // HARD KILL SWITCH — 자동 발송 사고 재발 방지용. 이 가드를 풀려면 사용자 명시 요청 필요.
-  if (process.env.NEWSLETTER_SEND_DISABLED !== "false") {
+  const url = new URL(request.url, `https://${request.headers.host || "localhost"}`);
+  const testMode = url.searchParams.get("test") === "1" || url.searchParams.get("mode") === "test";
+
+  // HARD KILL SWITCH — 실제 발송 차단(테스트 발송은 우회). 풀려면 NEWSLETTER_SEND_DISABLED=false.
+  if (!testMode && process.env.NEWSLETTER_SEND_DISABLED !== "false") {
     response.status(200).json({
       ok: true,
       skipped: true,
-      reason: "newsletter sends are disabled by hard kill switch (set NEWSLETTER_SEND_DISABLED=false to enable)",
+      reason: "real-send is disabled by hard kill switch (set NEWSLETTER_SEND_DISABLED=false on Vercel to enable real send; test mode bypasses this)",
       dateKst: kstDateString(),
     });
     return;
@@ -677,7 +682,7 @@ export default async function handler(request, response) {
     return;
   }
 
-  if (isNewsletterCronPausedToday()) {
+  if (!testMode && isNewsletterCronPausedToday()) {
     response.status(200).json({ ok: true, skipped: true, reason: "newsletter cron paused for today", dateKst: kstDateString() });
     return;
   }
@@ -706,12 +711,14 @@ export default async function handler(request, response) {
     const designIssues = issues.filter((issue) => issue.areaKey === "design");
     const devIssues = issues.filter((issue) => issue.areaKey === "dev");
     const issuesByAudience = { service: serviceIssues, design: designIssues, dev: devIssues };
-    const results = await sendNewsletters(issuesByAudience, weekRange);
-    const archive = await archiveMarkdownToGithub(
-      renderArchiveMarkdown({ weekRange, serviceIssues, designIssues, devIssues, results }),
-      weekRange,
-    );
-    response.status(200).json({ ok: true, issues: issues.length, weekRange: weekRangeLabel(weekRange), results, archive });
+    const results = await sendNewsletters(issuesByAudience, weekRange, { testMode });
+    const archive = testMode
+      ? { archived: false, reason: "test mode: archive skipped" }
+      : await archiveMarkdownToGithub(
+          renderArchiveMarkdown({ weekRange, serviceIssues, designIssues, devIssues, results }),
+          weekRange,
+        );
+    response.status(200).json({ ok: true, mode: testMode ? "test" : "real", issues: issues.length, weekRange: weekRangeLabel(weekRange), results, archive });
   } catch (error) {
     response.status(500).json({ ok: false, error: error.message });
   }
