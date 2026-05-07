@@ -694,12 +694,24 @@ export default async function handler(request, response) {
     return;
   }
 
+  const todayKst = kstDateString();
+  const pausedDates = [...pausedCronDatesKst()];
+  console.log("[newsletter-diag] todayKst=%s pausedDatesKst=%j envSkip=%j", todayKst, pausedDates, process.env.NEWSLETTER_CRON_SKIP_DATES_KST || "(unset)");
+
   if (isNewsletterCronPausedToday()) {
-    response.status(200).json({ ok: true, skipped: true, reason: "newsletter cron paused for today", dateKst: kstDateString() });
+    console.log("[newsletter-diag] PAUSED for today -> returning 200 skipped");
+    response.status(200).json({ ok: true, skipped: true, reason: "newsletter cron paused for today", dateKst: todayKst, pausedDates });
     return;
   }
 
+  console.log("[newsletter-diag] env presence: SMTP_HOST=%s SMTP_FROM=%s SMTP_USER=%s SMTP_PASSWORD=%s NOTION_TOKEN=%s NOTION_API_KEY=%s SUBSCRIBERS_DB=%s UNSUBSCRIBE_SECRET=%s CRON_SECRET=%s",
+    !!process.env.SMTP_HOST, !!process.env.SMTP_FROM, !!process.env.SMTP_USER, !!process.env.SMTP_PASSWORD,
+    !!process.env.NOTION_TOKEN, !!process.env.NOTION_API_KEY,
+    !!process.env.NEWSLETTER_SUBSCRIBERS_DATABASE_ID,
+    !!process.env.NEWSLETTER_UNSUBSCRIBE_SECRET, !!process.env.CRON_SECRET);
+
   if (!process.env.SMTP_HOST || !process.env.SMTP_FROM) {
+    console.log("[newsletter-diag] missing SMTP env -> 500");
     response.status(500).json({ ok: false, error: "SMTP_HOST and SMTP_FROM are required." });
     return;
   }
@@ -712,14 +724,18 @@ export default async function handler(request, response) {
     const designIssues = issues.filter((issue) => issue.areaKey === "design");
     const devIssues = issues.filter((issue) => issue.areaKey === "dev");
     debugStats.issueCounts = { service: serviceIssues.length, design: designIssues.length, dev: devIssues.length };
+    console.log("[newsletter-diag] issueCounts=%j weekRange=%s", debugStats.issueCounts, weekRangeLabel(weekRange));
     const issuesByAudience = { service: serviceIssues, design: designIssues, dev: devIssues };
     const results = await sendNewsletters(issuesByAudience, weekRange, debugStats);
+    console.log("[newsletter-diag] sendResult=%j debug=%j", results, debugStats);
     const archive = await archiveMarkdownToGithub(
       renderArchiveMarkdown({ weekRange, serviceIssues, designIssues, devIssues, results }),
       weekRange,
     );
+    console.log("[newsletter-diag] archive=%j", archive);
     response.status(200).json({ ok: true, issues: issues.length, weekRange: weekRangeLabel(weekRange), results, archive, debug: debugStats });
   } catch (error) {
+    console.log("[newsletter-diag] ERROR %s\n%s", error.message, error.stack);
     response.status(500).json({ ok: false, error: error.message, stack: error.stack });
   }
 }
