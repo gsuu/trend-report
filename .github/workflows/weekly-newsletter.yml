@@ -1,0 +1,31 @@
+name: Weekly Newsletter Send
+
+on:
+  schedule:
+    # 매주 목요일 10:00 KST (01:00 UTC)
+    - cron: '0 1 * * 4'
+  workflow_dispatch:
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger production newsletter endpoint
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          set -e
+          if [ -z "${CRON_SECRET}" ]; then
+            echo "::warning::CRON_SECRET secret is empty; falling back to anonymous call (will fail if endpoint enforces auth)"
+          fi
+          STATUS=$(curl -sS -o response.json -w '%{http_code}' \
+            -H "Authorization: Bearer ${CRON_SECRET}" \
+            "https://magazine.cttd.co.kr/api/weekly-newsletters")
+          echo "HTTP status: ${STATUS}"
+          echo "--- response body ---"
+          cat response.json
+          echo
+          if [ "${STATUS}" != "200" ]; then
+            echo "::error::Newsletter endpoint returned ${STATUS}"
+            exit 1
+          fi
