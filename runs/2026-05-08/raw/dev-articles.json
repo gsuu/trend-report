@@ -1,0 +1,177 @@
+[
+  {
+    "title": "Why the Blue I Built This Theme Around Is Nearly Invisible as Text",
+    "link": "https://dev.to/palo_alto_ai/why-the-blue-i-built-this-theme-around-is-nearly-invisible-as-text-1lnm",
+    "pubDate": "Thu, 07 May 2026 17:52:17 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Most of my Claude Code screen is English sentences. Tool output, reasoning traces, permission prompts — I was reading paragraphs for hours on a theme tuned to highlight Python keywords. The colors were optimized for the wrong thing entirely. So I built klein-blue: four Terminal.app themes anchored to Yves Klein's IKB pigment, with contrast verified per ANSI slot against the specific roles Claude Code assigns to each color. The interesting constraint is that pure IKB fails as text on a dark ground. APCA Lc score: -…"
+  },
+  {
+    "title": "A Scrollytelling Gift for Mum on Mother’s Day 2026",
+    "link": "https://css-tricks.com/a-scrollytelling-gift-for-mum-on-mothers-day-2026/",
+    "pubDate": "Thu, 07 May 2026 14:22:38 +0000",
+    "source": "CSS-Tricks",
+    "content": "I will explain how my mum inspired this 2026 Mother’s Day scrollytelling experiment — but also, how she inspired my approach to dev and life. A Scrollytelling Gift for Mum on Mother’s Day 2026 originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Spacing Considerations in Accessible Design",
+    "link": "https://dev.to/shaynaproductions/spacing-considerations-in-accessible-design-47ad",
+    "pubDate": "Thu, 07 May 2026 12:15:00 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Prologue A while ago, I decided to develop a fully accessible main navigation component in React. While a preliminary set of requirements has been assembled for the component itself, design requirements still need to be considered. Most WCAG requirements regarding visual perceivability affect CSS and, by extension, design. If a design prototype in a system like Figma does not meet those visual requirements, it doesn't matter how clean the component code is; the visual aspect will not be accessible. This article co…"
+  },
+  {
+    "title": "Image Captioning API: Auto-Generate Alt Text and Descriptions",
+    "link": "https://dev.to/om_prakash_3311f8a4576605/image-captioning-api-auto-generate-alt-text-and-descriptions-34ib",
+    "pubDate": "Thu, 07 May 2026 10:02:29 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Image Captioning API: Auto-Generate Alt Text and Descriptions Most product catalogues, content feeds, and media libraries have one quiet shame: thousands of images with empty alt=\"\" attributes, no search metadata, and no human-readable description. Writing them by hand does not scale. Here is the endpoint that makes that problem go away. Today we are launching POST /v1/image/caption — a single endpoint that turns any public image URL into a caption tuned for the job you actually have: accessibility alt-tags, SEO d…"
+  },
+  {
+    "title": "Turning Images into Useful Text with AI",
+    "link": "https://dev.to/hushuai_wang_29fb41896f72/turning-images-into-useful-text-with-ai-43go",
+    "pubDate": "Thu, 07 May 2026 08:52:42 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Images are easy to understand visually, but they are not always easy to reuse as text. A screenshot, chart, product photo, document image, or social media graphic may contain useful information, but writing a clear description from scratch can take more time than expected. This is a common problem for creators, website owners, marketers, students, e-commerce sellers, and anyone who works with visual content. Sometimes you need alt text. Sometimes you need OCR. Sometimes you need a short caption, a product descript…"
+  },
+  {
+    "title": "♿ Web Accessibility Explained Like You're 5",
+    "link": "https://dev.to/esreekarreddy/web-accessibility-explained-like-youre-5-18ok",
+    "pubDate": "Wed, 06 May 2026 22:54:14 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Making websites usable for everyone Day 132 of 149 👉 Full deep-dive with code examples Curb cuts (ramps in sidewalks) were designed for wheelchairs, but help everyone: Parents with strollers People with luggage Delivery workers with carts Cyclists Web accessibility is the same! Designing for disabilities improves the experience for everyone. Over 1 billion people have disabilities: Visual → Blind, low vision, color blind Hearing → Deaf, hard of hearing Motor → Can't use mouse, limited movement Cognitive → Dyslexi…"
+  },
+  {
+    "title": "Google’s Prompt API",
+    "link": "https://css-tricks.com/googles-prompt-api/",
+    "pubDate": "Wed, 06 May 2026 19:41:29 +0000",
+    "source": "CSS-Tricks",
+    "content": "Mat Marquis on Google pulling the web standards equivalent of U2 album marketing: As a Chrome user, you’ll have received Gemini Nano in the form of a 4GB transfer recently; no permission asked or required. If you remove it, … Google’s Prompt API originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Why WCAG failed my terminal theme and what I used instead",
+    "link": "https://dev.to/palo_alto_ai/why-wcag-failed-my-terminal-theme-and-what-i-used-instead-1h8g",
+    "pubDate": "Wed, 06 May 2026 17:29:00 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Spent an afternoon watching pure IKB disappear against a dark ground. WCAG 2.1 contrast ratio for IKB (hex 002FA7): 3.2:1 — technically a pass for large text. APCA Lc score: -12 — effectively invisible. WCAG uses a symmetric formula that assumes light backgrounds; on dark ground it systematically overstates how readable dark colors are. APCA accounts for polarity, so the score for dark-on-dark reflects what actually happens. That failure drove most of the design decisions in klein-blue, a set of four Terminal.app…"
+  },
+  {
+    "title": "Making Zigzag CSS Layouts With a Grid + Transform Trick",
+    "link": "https://css-tricks.com/zigzag-css-grid-layouts/",
+    "pubDate": "Wed, 06 May 2026 13:50:44 +0000",
+    "source": "CSS-Tricks",
+    "content": "Most grid layouts sit in neat rows, perfectly aligned, like soldiers in formation. But sometimes you want something with more rhythm like, say, a zigzag pattern. Here's how to do it with CSS Grid. Making Zigzag CSS Layouts With a Grid + Transform Trick originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "1002: The Real Pricing of LLMs",
+    "link": "https://syntax.fm/1002",
+    "pubDate": "Wed, 06 May 2026 11:00:00 -0000",
+    "source": "Syntax.fm",
+    "content": "In this potluck episode of Syntax, Wes and Scott answer your questions about LLM usage-based pricing, security risks from malicious code in interviews, staying current in a fast-moving dev landscape, a new CSS linter, managing Node environments and tooling without losing your mind, and more! Show Notes 00:00 Welcome to Syntax! 01:17 Copilot’s new usage-based pricing and the end of cheap AI Model multipliers for annual Copilot Pro and Copilot Pro+ subscribers 08:53 Why Syntax dropped clever ad transitions 10:33 Deb…"
+  },
+  {
+    "title": "WCAG Color Contrast: Why Your UI Might Be Failing Accessibility Tests",
+    "link": "https://dev.to/snappy_tools/wcag-color-contrast-why-your-ui-might-be-failing-accessibility-tests-25i6",
+    "pubDate": "Wed, 06 May 2026 10:07:16 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "You've probably seen accessibility audits flag contrast ratio failures. Maybe Lighthouse gives your site a poor score, or a design review marks text as \"unreadable for low-vision users.\" But what does a contrast ratio actually measure, and what do the thresholds mean? Here's the practical explanation — with the math kept simple. The WCAG contrast ratio compares the relative luminance of two colours: foreground (text) and background. Luminance is a measure of perceived brightness, not just the raw RGB value. The fo…"
+  },
+  {
+    "title": "The Architecture Of Local-First Web Development",
+    "link": "https://smashingmagazine.com/2026/05/architecture-local-first-web-development/",
+    "pubDate": "Wed, 06 May 2026 10:00:00 GMT",
+    "source": "Smashing Magazine",
+    "content": "An honest perspective on building local-first web apps in 2026, written for developers who’ve been doing this long enough to be skeptical of silver bullets."
+  },
+  {
+    "title": "Structure, Code, and Accessibility: Building with Purpose",
+    "link": "https://dev.to/bowdennoah/structure-code-and-accessibility-building-with-purpose-ca7",
+    "pubDate": "Wed, 06 May 2026 09:21:50 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Most of my work starts with a simple idea: if something is clear, predictable, and well-structured, it becomes more accessible to more people. That principle comes from my experience working with the Asperger Syndrome & High Functioning Autism Association, but I’ve found it applies just as well to code and digital products. I’m currently exploring how small, practical tools can improve focus and daily interaction—things like simple interfaces, consistent layouts, and logic that doesn’t overwhelm the user. Clean co…"
+  },
+  {
+    "title": "RTL Is Not Just dir=\"rtl\": What I Learned Shipping Vue Templates for the Arab Web",
+    "link": "https://dev.to/amine_benmoussa_5d7d5a82/rtl-is-not-just-dirrtl-what-i-learned-shipping-vue-templates-for-the-arab-web-1gbb",
+    "pubDate": "Wed, 06 May 2026 08:39:00 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "I spent the last several months building Vue 3 templates with native RTL support. Along the way I learned that \"RTL support\" is one of the most overpromised, underdelivered claims in the frontend ecosystem. Most templates that advertise Arabic or RTL support do roughly this: [dir=\"rtl\"] { direction: rtl; } Ship it. Tweet it. Add a flag emoji to the README. Then a real Arabic-speaking user opens the page and within 5 seconds notices the gradient flowing the wrong way, the chevron icon pointing into a wall, the date…"
+  },
+  {
+    "title": "5 ARIA mistakes that make accessibility worse, not better",
+    "link": "https://dev.to/a11ysolutions/5-aria-mistakes-that-make-accessibility-worse-not-better-2pmp",
+    "pubDate": "Wed, 06 May 2026 08:34:27 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "There's a rule in accessibility that doesn't get enough attention: No ARIA is better than bad ARIA. Adding ARIA attributes without understanding them doesn't help assistive tech, it actively misleads it. Here are the mistakes I find most often in real audits: 1. role=\"button\" on a div — without keyboard support . That's what it's there for. 2. aria-label that duplicates visible text — badly Submit 3. aria-hidden=\"true\" on focusable elements 4. aria-live on everything 5. Decorative icons without aria-hidden is two…"
+  },
+  {
+    "title": "Sisyphus would have loved Skip Links & Page Structure | Trusted Tester Study Group 6",
+    "link": "https://dev.to/laura-wissiak/sisyphus-would-have-loved-skip-links-page-structure-trusted-tester-study-group-6-hn2",
+    "pubDate": "Wed, 06 May 2026 07:43:25 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "As we continue our journey toward becoming certified Trusted Testers, this session reinforced that accessibility is just as much about creating a predictable, logical, and efficient experience for everyone. ‘Repetitive Content’ means parts which are the same across multiple pages of a website. We want to ensure that users can bypass repeated blocks and navigate consistently across the same website. WCAG 2.4.1) The goal is to allow users to jump straight to the main content, without having to plow through the same…"
+  },
+  {
+    "title": "CSS, but make it random",
+    "link": "https://frontendfoc.us/issues/740",
+    "pubDate": "Wed, 6 May 2026 00:00:00 +0000",
+    "source": "Frontend Focus",
+    "content": "🚀 Frontend Focus #​740 — May 6, 2026 | Read on the web How to Use the Media Queries Range Syntax for Better Breakpoints — Set min-width: 300px and max-width: 300px at exactly 300px and both rules fire. Ahmad's solution? Ranged media queries. The syntax is widely supported, can also be used for container queries, and is easier to read and debug. Ahmad Shadeed Fast Dashboards Start with Fast Queries — When dashboards outgrow vanilla Postgres, most teams add a second database. Pipelines, stale data. TimescaleDB exte…"
+  },
+  {
+    "title": "Microsoft Dumps Xbox Copilot AI, Sparking Accessibility Outcry",
+    "link": "https://dev.to/mlxio_ai/microsoft-dumps-xbox-copilot-ai-sparking-accessibility-outcry-20go",
+    "pubDate": "Tue, 05 May 2026 22:07:13 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Microsoft is retiring Xbox Copilot AI, a crucial accessibility feature, leaving gamers with disabilities without key support starting July 2024. Microsoft Announces Retirement of Xbox Copilot AI on Consoles and Mobile Microsoft is pulling the plug on Xbox Copilot AI, the accessibility feature that let gamers pair two controllers to act as one, starting with Xbox consoles, where supp... A Microsoft spokesperson said, “We are continually evaluating our products to ensure we’re delivering the best experiences for our…"
+  },
+  {
+    "title": "Rethinking The Experience Of System Tools",
+    "link": "https://smashingmagazine.com/2026/05/rethinking-experience-system-tools/",
+    "pubDate": "Tue, 05 May 2026 08:00:00 GMT",
+    "source": "Smashing Magazine",
+    "content": "Design always starts with function — function shapes form. But if that function can’t be made completely invisible and people still have to interact with it, it inevitably becomes part of their experience. In this article, Kyrylo Levashov shares four common software design assumptions."
+  },
+  {
+    "title": "Remix 3 drops React",
+    "link": "https://javascriptweekly.com/issues/784",
+    "pubDate": "Tue, 5 May 2026 00:00:00 +0000",
+    "source": "JavaScript Weekly",
+    "content": "#​784 — May 5, 2026 Read on the Web JavaScript Weekly Remix 3 Enters Beta — It's No Longer a React Framework — Remix has quite the back story. Created by the duo behind React Router in 2020 and seen as an alternative to Next.js, Remix was acquired by Shopify in 2022 and its core ideas folded into React Router v7 in 2024. Now, a new direction: a full-stack, web standards-first framework with its own UI component model and… no React. Michael Jackson (Remix) Build AI Features That Get Better Over Time — Join Scott Mo…"
+  },
+  {
+    "title": "Fixed-Height Cards: More Fragile Than They Look",
+    "link": "https://css-tricks.com/fixed-height-cards-more-fragile-than-they-look/",
+    "pubDate": "Mon, 04 May 2026 14:01:36 +0000",
+    "source": "CSS-Tricks",
+    "content": "Getting a multi-column of cards to line up equally is is a headache we've all faced, and it gets even harder when working with fixed heights. Fixed-Height Cards: More Fragile Than They Look originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "1001: Managing Deadlines + Stress",
+    "link": "https://syntax.fm/1001",
+    "pubDate": "Mon, 04 May 2026 11:00:00 -0000",
+    "source": "Syntax.fm",
+    "content": "Scott and Wes tackle the all-too-real stress of crunch time as a web developer—how to handle looming deadlines, avoid sloppy shortcuts, and stay methodical when everything feels like it’s falling apart. They share practical tips on planning, communicating, cutting scope, asking for help, and preventing the chaos from happening again next time. Show Notes 00:00 Welcome to Syntax! 02:53 The Importance of Planning and Organization. 05:16 Slow Down, Take a Step Back. 06:05 Identifying and Managing Tasks. 08:35 The Rol…"
+  },
+  {
+    "title": "713: AI + Design Systems with Brad and Ian Frost",
+    "link": "https://shoptalkshow.com/713/",
+    "pubDate": "Mon, 04 May 2026 08:03:50 +0000",
+    "source": "ShopTalk Show",
+    "content": "Show Description Brad and Ian Frost are back to chat about integrating AI into website and design system building, how to keep AI slop out of your design systems, building things humans need regardless of the tooling, and thinking of AI as a fancy linter. Listen on Website Guests Brad Frost Guest's Main URL • Guest's Social Ian Frost Guest's Main URL • Guest's Social Links Redesigning My Website While Painting a Mural: The Ancient Future of Web Design - YouTube AI & Design Systems Course with Brad Frost, TJ Pitre,…"
+  },
+  {
+    "title": "What’s !important #10: HTML-in-Canvas, Hex Maps, E-ink Optimization, and More",
+    "link": "https://css-tricks.com/whats-important-10/",
+    "pubDate": "Fri, 01 May 2026 13:43:26 +0000",
+    "source": "CSS-Tricks",
+    "content": "Developers have been experimenting with HTML-in-Canvas, a hexagonal world map-analytics feature, a web-based OS for e-ink devices, replacing image sources using the content property, and more. This is What’s !important #10. What’s !important #10: HTML-in-Canvas, Hex Maps, E-ink Optimization, and More originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Designing Stable Interfaces For Streaming Content",
+    "link": "https://smashingmagazine.com/2026/05/designing-stable-interfaces-streaming-content/",
+    "pubDate": "Fri, 01 May 2026 08:00:00 GMT",
+    "source": "Smashing Magazine",
+    "content": "Streaming UIs are an easy concept on the surface, but are quite complicated in practice. There are many considerations that need to be accounted for, from layout shifts and motion preferences to proper markup and various states, that may not be instantly obvious. What happens if the stream is interrupted? Can users tab through the UI on the keyboard as it shifts? What ARIA attributes might be needed?"
+  }
+]
