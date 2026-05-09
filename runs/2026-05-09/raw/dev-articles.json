@@ -1,0 +1,170 @@
+[
+  {
+    "title": "We built a braille reader that runs entirely on your iPhone — no server, no photos sent anywhere",
+    "link": "https://dev.to/niixolabs/we-built-a-braille-reader-that-runs-entirely-on-your-iphone-no-server-no-photos-sent-anywhere-k7b",
+    "pubDate": "Fri, 08 May 2026 23:03:59 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "The problem we kept noticing Braille is everywhere in Japan — train handrails, elevator buttons, pill packaging, ATM panels. Most people walk past it without a second thought. We kept wondering: what would it take to make that text readable to anyone with a camera? That's how TenjiScan started. Not as an accessibility platform, but as a focused answer to one specific question. The core is Apple's Vision framework combined with a custom two-signal pipeline that interprets braille dot patterns. Point your camera at…"
+  },
+  {
+    "title": "Hiding Underlines on Hyperlinks: The Accessibility Bug No One Mentions",
+    "link": "https://dev.to/agentkit/hiding-underlines-on-hyperlinks-the-accessibility-bug-no-one-mentions-gi3",
+    "pubDate": "Fri, 08 May 2026 22:18:23 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "If you have built a website in the last decade, there is a good chance someone -- a designer, a theme developer, your own taste -- removed the underlines from your hyperlinks. The browser default is blue text with an underline, and almost every modern site has decided that the underline is ugly. The underline got swapped for a colour change, or a hover effect, or nothing at all. That choice is the single most common WCAG 2.1 failure we see in small-business audits. It is not the worst failure, and it is not the mo…"
+  },
+  {
+    "title": "How to Test Your Website with VoiceOver in 10 Minutes (No Coding Required)",
+    "link": "https://dev.to/agentkit/how-to-test-your-website-with-voiceover-in-10-minutes-no-coding-required-399l",
+    "pubDate": "Fri, 08 May 2026 22:17:40 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Automated scanners catch about 30 to 40 percent of accessibility problems. The rest -- the ones that actually frustrate real users and trigger ADA demand letters -- only show up when a screen reader meets your site. The good news: you do not need to be a developer to listen. Every Mac, iPhone, and iPad ships with a screen reader called VoiceOver. It is free, it is already installed, and you can be using it in about thirty seconds. This guide walks you through ten minutes of structured listening, gives you a checkl…"
+  },
+  {
+    "title": "Image Carousels and ADA Lawsuits: Why Auto-Rotating Sliders Keep Getting Small Businesses Sued",
+    "link": "https://dev.to/agentkit/image-carousels-and-ada-lawsuits-why-auto-rotating-sliders-keep-getting-small-businesses-sued-34hh",
+    "pubDate": "Fri, 08 May 2026 22:16:47 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "If you own a small business website built between 2014 and 2022, there is a very good chance your homepage starts with a giant rotating image carousel. Three to five photos, each with a headline and a button, fading or sliding from one to the next every four seconds. Your designer probably loved it. Your conversion rate consultant probably hated it. And in 2026, the plaintiff's lawyer who just sent you a demand letter probably mentioned it by name. Image carousels are one of the most-cited widgets in ADA Title III…"
+  },
+  {
+    "title": "Using CSS corner-shape For Folded Corners",
+    "link": "https://css-tricks.com/using-css-corner-shape-for-folded-corners/",
+    "pubDate": "Fri, 08 May 2026 13:54:10 +0000",
+    "source": "CSS-Tricks",
+    "content": "I came across Kitty Giraudel’s folded corners technique. I’ve been on a bit of a corner-shape kick lately, so I figured that corner-shape could be used to create folded corners as well. Using CSS corner-shape For Folded Corners originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "The Ultimate WCAG & APCA Contrast Checker for Modern Web Development",
+    "link": "https://dev.to/toolsmatic/the-ultimate-wcag-apca-contrast-checker-for-modern-web-development-2k98",
+    "pubDate": "Fri, 08 May 2026 07:31:02 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Building accessible web interfaces shouldn't be a guessing game. When you are picking a color palette, you need to know immediately if your text will be readable for all users, regardless of their visual capabilities or the screen they are using. That's why I built the ToolsMatic Contrast Checker Pro--a 100% offline, privacy-first accessibility workspace designed specifically for frontend developers and UI designers. Most contrast checkers just give you a pass/fail grade based on basic hex codes. I wanted a tool t…"
+  },
+  {
+    "title": "Why the Blue I Built This Theme Around Is Nearly Invisible as Text",
+    "link": "https://dev.to/palo_alto_ai/why-the-blue-i-built-this-theme-around-is-nearly-invisible-as-text-1lnm",
+    "pubDate": "Thu, 07 May 2026 17:52:17 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Most of my Claude Code screen is English sentences. Tool output, reasoning traces, permission prompts — I was reading paragraphs for hours on a theme tuned to highlight Python keywords. The colors were optimized for the wrong thing entirely. So I built klein-blue: four Terminal.app themes anchored to Yves Klein's IKB pigment, with contrast verified per ANSI slot against the specific roles Claude Code assigns to each color. The interesting constraint is that pure IKB fails as text on a dark ground. APCA Lc score: -…"
+  },
+  {
+    "title": "A Scrollytelling Gift for Mum on Mother’s Day 2026",
+    "link": "https://css-tricks.com/a-scrollytelling-gift-for-mum-on-mothers-day-2026/",
+    "pubDate": "Thu, 07 May 2026 14:22:38 +0000",
+    "source": "CSS-Tricks",
+    "content": "I will explain how my mum inspired this 2026 Mother’s Day scrollytelling experiment — but also, how she inspired my approach to dev and life. A Scrollytelling Gift for Mum on Mother’s Day 2026 originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Spacing Considerations in Accessible Design",
+    "link": "https://dev.to/shaynaproductions/spacing-considerations-in-accessible-design-47ad",
+    "pubDate": "Thu, 07 May 2026 12:15:00 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Prologue A while ago, I decided to develop a fully accessible main navigation component in React. While a preliminary set of requirements has been assembled for the component itself, design requirements still need to be considered. Most WCAG requirements regarding visual perceivability affect CSS and, by extension, design. If a design prototype in a system like Figma does not meet those visual requirements, it doesn't matter how clean the component code is; the visual aspect will not be accessible. This article co…"
+  },
+  {
+    "title": "Image Captioning API: Auto-Generate Alt Text and Descriptions",
+    "link": "https://dev.to/om_prakash_3311f8a4576605/image-captioning-api-auto-generate-alt-text-and-descriptions-34ib",
+    "pubDate": "Thu, 07 May 2026 10:02:29 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Image Captioning API: Auto-Generate Alt Text and Descriptions Most product catalogues, content feeds, and media libraries have one quiet shame: thousands of images with empty alt=\"\" attributes, no search metadata, and no human-readable description. Writing them by hand does not scale. Here is the endpoint that makes that problem go away. Today we are launching POST /v1/image/caption — a single endpoint that turns any public image URL into a caption tuned for the job you actually have: accessibility alt-tags, SEO d…"
+  },
+  {
+    "title": "Turning Images into Useful Text with AI",
+    "link": "https://dev.to/hushuai_wang_29fb41896f72/turning-images-into-useful-text-with-ai-43go",
+    "pubDate": "Thu, 07 May 2026 08:52:42 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Images are easy to understand visually, but they are not always easy to reuse as text. A screenshot, chart, product photo, document image, or social media graphic may contain useful information, but writing a clear description from scratch can take more time than expected. This is a common problem for creators, website owners, marketers, students, e-commerce sellers, and anyone who works with visual content. Sometimes you need alt text. Sometimes you need OCR. Sometimes you need a short caption, a product descript…"
+  },
+  {
+    "title": "♿ Web Accessibility Explained Like You're 5",
+    "link": "https://dev.to/esreekarreddy/web-accessibility-explained-like-youre-5-18ok",
+    "pubDate": "Wed, 06 May 2026 22:54:14 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Making websites usable for everyone Day 132 of 149 👉 Full deep-dive with code examples Curb cuts (ramps in sidewalks) were designed for wheelchairs, but help everyone: Parents with strollers People with luggage Delivery workers with carts Cyclists Web accessibility is the same! Designing for disabilities improves the experience for everyone. Over 1 billion people have disabilities: Visual → Blind, low vision, color blind Hearing → Deaf, hard of hearing Motor → Can't use mouse, limited movement Cognitive → Dyslexi…"
+  },
+  {
+    "title": "Google’s Prompt API",
+    "link": "https://css-tricks.com/googles-prompt-api/",
+    "pubDate": "Wed, 06 May 2026 19:41:29 +0000",
+    "source": "CSS-Tricks",
+    "content": "Mat Marquis on Google pulling the web standards equivalent of U2 album marketing: As a Chrome user, you’ll have received Gemini Nano in the form of a 4GB transfer recently; no permission asked or required. If you remove it, … Google’s Prompt API originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Why WCAG failed my terminal theme and what I used instead",
+    "link": "https://dev.to/palo_alto_ai/why-wcag-failed-my-terminal-theme-and-what-i-used-instead-1h8g",
+    "pubDate": "Wed, 06 May 2026 17:29:00 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Spent an afternoon watching pure IKB disappear against a dark ground. WCAG 2.1 contrast ratio for IKB (hex 002FA7): 3.2:1 — technically a pass for large text. APCA Lc score: -12 — effectively invisible. WCAG uses a symmetric formula that assumes light backgrounds; on dark ground it systematically overstates how readable dark colors are. APCA accounts for polarity, so the score for dark-on-dark reflects what actually happens. That failure drove most of the design decisions in klein-blue, a set of four Terminal.app…"
+  },
+  {
+    "title": "Making Zigzag CSS Layouts With a Grid + Transform Trick",
+    "link": "https://css-tricks.com/zigzag-css-grid-layouts/",
+    "pubDate": "Wed, 06 May 2026 13:50:44 +0000",
+    "source": "CSS-Tricks",
+    "content": "Most grid layouts sit in neat rows, perfectly aligned, like soldiers in formation. But sometimes you want something with more rhythm like, say, a zigzag pattern. Here's how to do it with CSS Grid. Making Zigzag CSS Layouts With a Grid + Transform Trick originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "1002: The Real Pricing of LLMs",
+    "link": "https://syntax.fm/1002",
+    "pubDate": "Wed, 06 May 2026 11:00:00 -0000",
+    "source": "Syntax.fm",
+    "content": "In this potluck episode of Syntax, Wes and Scott answer your questions about LLM usage-based pricing, security risks from malicious code in interviews, staying current in a fast-moving dev landscape, a new CSS linter, managing Node environments and tooling without losing your mind, and more! Show Notes 00:00 Welcome to Syntax! 01:17 Copilot’s new usage-based pricing and the end of cheap AI Model multipliers for annual Copilot Pro and Copilot Pro+ subscribers 08:53 Why Syntax dropped clever ad transitions 10:33 Deb…"
+  },
+  {
+    "title": "WCAG Color Contrast: Why Your UI Might Be Failing Accessibility Tests",
+    "link": "https://dev.to/snappy_tools/wcag-color-contrast-why-your-ui-might-be-failing-accessibility-tests-25i6",
+    "pubDate": "Wed, 06 May 2026 10:07:16 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "You've probably seen accessibility audits flag contrast ratio failures. Maybe Lighthouse gives your site a poor score, or a design review marks text as \"unreadable for low-vision users.\" But what does a contrast ratio actually measure, and what do the thresholds mean? Here's the practical explanation — with the math kept simple. The WCAG contrast ratio compares the relative luminance of two colours: foreground (text) and background. Luminance is a measure of perceived brightness, not just the raw RGB value. The fo…"
+  },
+  {
+    "title": "The Architecture Of Local-First Web Development",
+    "link": "https://smashingmagazine.com/2026/05/architecture-local-first-web-development/",
+    "pubDate": "Wed, 06 May 2026 10:00:00 GMT",
+    "source": "Smashing Magazine",
+    "content": "An honest perspective on building local-first web apps in 2026, written for developers who’ve been doing this long enough to be skeptical of silver bullets."
+  },
+  {
+    "title": "CSS, but make it random",
+    "link": "https://frontendfoc.us/issues/740",
+    "pubDate": "Wed, 6 May 2026 00:00:00 +0000",
+    "source": "Frontend Focus",
+    "content": "🚀 Frontend Focus #​740 — May 6, 2026 | Read on the web How to Use the Media Queries Range Syntax for Better Breakpoints — Set min-width: 300px and max-width: 300px at exactly 300px and both rules fire. Ahmad's solution? Ranged media queries. The syntax is widely supported, can also be used for container queries, and is easier to read and debug. Ahmad Shadeed Fast Dashboards Start with Fast Queries — When dashboards outgrow vanilla Postgres, most teams add a second database. Pipelines, stale data. TimescaleDB exte…"
+  },
+  {
+    "title": "Rethinking The Experience Of System Tools",
+    "link": "https://smashingmagazine.com/2026/05/rethinking-experience-system-tools/",
+    "pubDate": "Tue, 05 May 2026 08:00:00 GMT",
+    "source": "Smashing Magazine",
+    "content": "Design always starts with function — function shapes form. But if that function can’t be made completely invisible and people still have to interact with it, it inevitably becomes part of their experience. In this article, Kyrylo Levashov shares four common software design assumptions."
+  },
+  {
+    "title": "Remix 3 drops React",
+    "link": "https://javascriptweekly.com/issues/784",
+    "pubDate": "Tue, 5 May 2026 00:00:00 +0000",
+    "source": "JavaScript Weekly",
+    "content": "#​784 — May 5, 2026 Read on the Web JavaScript Weekly Remix 3 Enters Beta — It's No Longer a React Framework — Remix has quite the back story. Created by the duo behind React Router in 2020 and seen as an alternative to Next.js, Remix was acquired by Shopify in 2022 and its core ideas folded into React Router v7 in 2024. Now, a new direction: a full-stack, web standards-first framework with its own UI component model and… no React. Michael Jackson (Remix) Build AI Features That Get Better Over Time — Join Scott Mo…"
+  },
+  {
+    "title": "Fixed-Height Cards: More Fragile Than They Look",
+    "link": "https://css-tricks.com/fixed-height-cards-more-fragile-than-they-look/",
+    "pubDate": "Mon, 04 May 2026 14:01:36 +0000",
+    "source": "CSS-Tricks",
+    "content": "Getting a multi-column of cards to line up equally is is a headache we've all faced, and it gets even harder when working with fixed heights. Fixed-Height Cards: More Fragile Than They Look originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "1001: Managing Deadlines + Stress",
+    "link": "https://syntax.fm/1001",
+    "pubDate": "Mon, 04 May 2026 11:00:00 -0000",
+    "source": "Syntax.fm",
+    "content": "Scott and Wes tackle the all-too-real stress of crunch time as a web developer—how to handle looming deadlines, avoid sloppy shortcuts, and stay methodical when everything feels like it’s falling apart. They share practical tips on planning, communicating, cutting scope, asking for help, and preventing the chaos from happening again next time. Show Notes 00:00 Welcome to Syntax! 02:53 The Importance of Planning and Organization. 05:16 Slow Down, Take a Step Back. 06:05 Identifying and Managing Tasks. 08:35 The Rol…"
+  },
+  {
+    "title": "713: AI + Design Systems with Brad and Ian Frost",
+    "link": "https://shoptalkshow.com/713/",
+    "pubDate": "Mon, 04 May 2026 08:03:50 +0000",
+    "source": "ShopTalk Show",
+    "content": "Show Description Brad and Ian Frost are back to chat about integrating AI into website and design system building, how to keep AI slop out of your design systems, building things humans need regardless of the tooling, and thinking of AI as a fancy linter. Listen on Website Guests Brad Frost Guest's Main URL • Guest's Social Ian Frost Guest's Main URL • Guest's Social Links Redesigning My Website While Painting a Mural: The Ancient Future of Web Design - YouTube AI & Design Systems Course with Brad Frost, TJ Pitre,…"
+  }
+]
