@@ -1,0 +1,170 @@
+[
+  {
+    "title": "The true carbon cost of dark mode and whether it actually saves energy",
+    "link": "https://dev.to/devly-digital/the-true-carbon-cost-of-dark-mode-and-whether-it-actually-saves-energy-2e8b",
+    "pubDate": "Mon, 11 May 2026 20:38:26 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Dark mode can save energy. It can also save nothing. In some cases it can even increase energy consumption. The outcome depends on three factors: the type of screen, the brightness level, and what the user actually does after switching. Dark mode only affects energy consumption because of how the screen physically produces light. Different screen technologies respond very differently. OLED and AMOLED screens (organic light-emitting diode) illuminate each pixel individually. A black pixel on an OLED screen is liter…"
+  },
+  {
+    "title": "Tailwind v4 dark mode: the @theme vs @theme inline gotcha that broke my contrast tests",
+    "link": "https://dev.to/forrestmiller/tailwind-v4-dark-mode-the-theme-vs-theme-inline-gotcha-that-broke-my-contrast-tests-3p3o",
+    "pubDate": "Mon, 11 May 2026 18:06:38 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "TL;DR: in Tailwind v4 there are two ways to declare a color token in @theme. One compiles the hex value into your utility classes. The other emits a var(--...) reference that you can override from a wrapper class. Only one of these supports a multi-layer dark-mode cascade. I shipped six surfaces with invisible text because I picked the wrong one. I'm running Tailwind v4 on a side project. Dark mode needs to do real work: I have always-light containers (white toast wrappers), always-dark containers (gradient heroes…"
+  },
+  {
+    "title": "Web Accessibility (a11y) Guide for Developers: WCAG 2.2 in Practice",
+    "link": "https://dev.to/_6638a39c349d7e9c85ee20/web-accessibility-a11y-guide-for-developers-wcag-22-in-practice-502c",
+    "pubDate": "Mon, 11 May 2026 12:05:58 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "This article was originally published on AI Study Room. For the full version with working code examples and related articles, visit the original post. Web accessibility (a11y) is not just about compliance — accessible websites work better for everyone, including keyboard users, screen reader users, and people with temporary disabilities. The business case is strong: the EU Accessibility Act (2025) mandates accessibility for many digital products, and inaccessible websites lose an estimated 15-20% of potential user…"
+  },
+  {
+    "title": "1003: Skills Skills Skills",
+    "link": "https://syntax.fm/1003",
+    "pubDate": "Mon, 11 May 2026 11:00:00 -0000",
+    "source": "Syntax.fm",
+    "content": "Scott and Wes chat all things agent skills for web developers, sharing their favorites for everything from CSS animations and HTML generation to logo extraction, marketing copy, and video creation. Whether you’re just getting started with AI-powered development or looking to level up your workflow, this episode is packed with practical skills you can put to use today. Show Notes 00:00 Welcome to Syntax! 01:33 Hot Tip Skill 05:55 CSS Motion Systems 08:17 Agent Browser Skill 09:30 HTML Skill 12:01 Extract Logos Skil…"
+  },
+  {
+    "title": "CSS Color Contrast: The WCAG Rules Every Developer Should Know",
+    "link": "https://dev.to/snappy_tools/css-color-contrast-the-wcag-rules-every-developer-should-know-4gpo",
+    "pubDate": "Mon, 11 May 2026 10:08:09 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Color contrast is one of the most commonly overlooked accessibility requirements in web development — and one of the easiest to fail accidentally. You pick a beautiful grey text on a white background, it looks fine on your calibrated monitor, and then someone with low vision or a washed-out phone screen can't read it at all. This post covers how contrast ratios work, what WCAG requires, and how to check your colors before they ship. The contrast ratio between two colors is a number from 1:1 (no contrast — same col…"
+  },
+  {
+    "title": "Colophon: How we build Aggregata",
+    "link": "https://dev.to/jairusjoer/colophon-how-we-build-aggregata-1d0g",
+    "pubDate": "Mon, 11 May 2026 08:53:18 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "\"You can find a current version of our colophon here\" Aggregata has undergone numerous changes since its launch in August 2022 to provide our content in a more reliable and comprehensive way. From big changes like multilingualism to small details like the interactive plots, the table of contents and the RSS feed. Accessibility and richness of content are always in the foreground and influence not only our content, but also the platform on which we want to present it. In this article, we would like to share with yo…"
+  },
+  {
+    "title": "Keyboard traps: what they are, how to reproduce them, and how to fix them",
+    "link": "https://dev.to/a11ysolutions/keyboard-traps-what-they-are-how-to-reproduce-them-and-how-to-fix-them-157m",
+    "pubDate": "Mon, 11 May 2026 08:01:00 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Definition of a keyboard trap according to WCAG 2.1 SC 2.1.2: “If keyboard focus can be moved to a component using a keyboard interface, then focus can be moved away from that component using only a keyboard interface.” Why can’t static accessibility tools detect it? Because detecting a keyboard trap requires actual keyboard navigation — typically using the Tab key. Real case (educational platform): The login form contained a keyboard trap. When users activated the “Login” button with empty required fields, keyboa…"
+  },
+  {
+    "title": "714: Camping, Burnout, and Chris’ CSS Talk",
+    "link": "https://shoptalkshow.com/714/",
+    "pubDate": "Mon, 11 May 2026 07:33:28 +0000",
+    "source": "ShopTalk Show",
+    "content": "Show Description How responsible should you be for fixing your own website for others, Dave's got a blacklog of blog posts, Chris got a camper van, debating burnout even when you love your work, a weekly AI doomer check in, and Chris has a talk for Smashing Magazine happening by the time you hear this. Listen on Website Watch on YouTube Links Winnebago Revel | AWD Off-Grid Camper Van Naz Hamid Opus OP4 Camper | Premium Off-Road Inflatable Trailer USA HealthyGamerGG - YouTube Smashing Conferences — Smashing Magazin…"
+  },
+  {
+    "title": "Job Application Forms: The Accessibility Failures That Quietly Cost You Disabled Candidates",
+    "link": "https://dev.to/agentkit/job-application-forms-the-accessibility-failures-that-quietly-cost-you-disabled-candidates-4mg1",
+    "pubDate": "Mon, 11 May 2026 05:01:12 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "If you hire through a website -- a careers page, a Greenhouse job post, a LinkedIn Easy Apply listing, a Google Form, a PDF you ask people to email back -- there is a very good chance that disabled candidates are dropping out of your funnel before a human ever sees them. Not because they are not qualified. Because the application form does not work. This is not a small problem. The U.S. Bureau of Labor Statistics puts the labor-force participation rate for people with disabilities at roughly 24%, compared with 67%…"
+  },
+  {
+    "title": "Date Pickers Are the Most Common Accessibility Failure on Booking Sites — Here's Why",
+    "link": "https://dev.to/agentkit/date-pickers-are-the-most-common-accessibility-failure-on-booking-sites-heres-why-56j8",
+    "pubDate": "Mon, 11 May 2026 05:00:49 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "If you take bookings online, your customers are not failing to convert because of your photos or your pricing. They are failing to convert because they can't get past the date picker. I have audited a lot of small-business booking flows in the last six months — salons, dental clinics, family photographers, dog groomers, tutors, restaurants, mobile mechanics — and the same defect shows up on every single one. Somewhere between \"I want to book an appointment\" and \"thank you, your booking is confirmed,\" there is a ca…"
+  },
+  {
+    "title": "I built an offline Chrome extension that reads webpages aloud with AI voices and zero cloud calls",
+    "link": "https://dev.to/lavellehatcherjr/i-built-an-offline-chrome-extension-that-reads-webpages-aloud-with-ai-voices-and-zero-cloud-calls-57cp",
+    "pubDate": "Sun, 10 May 2026 23:58:58 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Every text-to-speech Chrome extension I tried had one of two problems. Either it sent my text to a server, or it used the browser's built-in voices that sound like a GPS from 2012. I wanted TTS that stays on my machine and doesn't sound terrible. So I built one. GlowReadTTS is a Chrome extension that reads text aloud using AI voices bundled directly in the extension package. No cloud, no accounts, no API keys, no network calls at all. Two ways to use it: Right-click mode: Select text on any webpage, right-click, c…"
+  },
+  {
+    "title": "Terminal themes optimize for code. Claude Code isn't code.",
+    "link": "https://dev.to/palo_alto_ai/terminal-themes-optimize-for-code-claude-code-isnt-code-54n7",
+    "pubDate": "Sun, 10 May 2026 16:44:27 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Most of what Claude Code outputs is English. Tool call results, reasoning traces, permission prompts, multi-paragraph explanations — on a busy session my screen is maybe 20% syntax-highlighted code. The rest is prose I'm reading at body size for hours at a stretch. Every terminal theme I tried was tuned for the wrong thing: contrast decisions optimized for scanning identifiers, accent stacks built around keywords, backgrounds chosen to make def pop. Nobody had tuned for comfortable sustained reading of paragraphs.…"
+  },
+  {
+    "title": "Countdown Timer Accessibility: Why Your Sale Widget Fails Screen Readers",
+    "link": "https://dev.to/agentkit/countdown-timer-accessibility-why-your-sale-widget-fails-screen-readers-1hc4",
+    "pubDate": "Sun, 10 May 2026 05:00:34 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Walk through a dozen Shopify or WooCommerce stores on a Saturday morning and you will see the same thing on most of them: a bright bar across the top of the screen counting down to the end of a sale. Two days, eleven hours, forty-two minutes, eighteen seconds. Seventeen. Sixteen. For a sighted shopper this is just visual noise. You glance, you understand, you keep scrolling. For a screen reader user, a low-vision user with screen magnification, or a customer with a cognitive disability, that same widget is one of…"
+  },
+  {
+    "title": "SRT Files Are Not Just Transcripts With Timestamps — And Formatting Them Like They Are Breaks Things",
+    "link": "https://dev.to/santhosh_guntupalli_cfedd/srt-files-are-not-just-transcripts-with-timestamps-and-formatting-them-like-they-are-breaks-things-2741",
+    "pubDate": "Sun, 10 May 2026 01:36:21 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "If you have ever delivered a formatted SRT file to a client and received a rejection for a problem that had nothing to do with the text, you have already learned this the hard way. The English was correct. The style guide rules were applied. The file looked clean in the editor. And then it broke in the player — wrong line breaks, misaligned timecodes, cue boundaries that no longer matched the audio. The formatting pass that fixed the text broke the structure. Because the tool doing the formatting did not know the…"
+  },
+  {
+    "title": "How To Build Polished WooCommerce Sites Fast with Blocksy",
+    "link": "https://feedpress.me/link/24028/17338167/how-to-build-polished-woocommerce-sites-fast-with-blocksy",
+    "pubDate": "Sat, 09 May 2026 00:00:00 GMT",
+    "source": "CSS Weekly",
+    "content": "Learn how to build polished WooCommerce and business sites fast with Blocksy WordPress theme."
+  },
+  {
+    "title": "Using CSS corner-shape For Folded Corners",
+    "link": "https://css-tricks.com/using-css-corner-shape-for-folded-corners/",
+    "pubDate": "Fri, 08 May 2026 13:54:10 +0000",
+    "source": "CSS-Tricks",
+    "content": "I came across Kitty Giraudel’s folded corners technique. I’ve been on a bit of a corner-shape kick lately, so I figured that corner-shape could be used to create folded corners as well. Using CSS corner-shape For Folded Corners originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Quick Tip: Use position:sticky in Your Lists",
+    "link": "https://feedpress.me/link/24028/17338168/css-tip-use-positionsticky-in-your-lists",
+    "pubDate": "Fri, 08 May 2026 00:00:00 GMT",
+    "source": "CSS Weekly",
+    "content": "A quick tip explaining why you should use `position: sticky` in your lists."
+  },
+  {
+    "title": "A Scrollytelling Gift for Mum on Mother’s Day 2026",
+    "link": "https://css-tricks.com/a-scrollytelling-gift-for-mum-on-mothers-day-2026/",
+    "pubDate": "Thu, 07 May 2026 14:22:38 +0000",
+    "source": "CSS-Tricks",
+    "content": "I will explain how my mum inspired this 2026 Mother’s Day scrollytelling experiment — but also, how she inspired my approach to dev and life. A Scrollytelling Gift for Mum on Mother’s Day 2026 originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Google’s Prompt API",
+    "link": "https://css-tricks.com/googles-prompt-api/",
+    "pubDate": "Wed, 06 May 2026 19:41:29 +0000",
+    "source": "CSS-Tricks",
+    "content": "Mat Marquis on Google pulling the web standards equivalent of U2 album marketing: As a Chrome user, you’ll have received Gemini Nano in the form of a 4GB transfer recently; no permission asked or required. If you remove it, … Google’s Prompt API originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Making Zigzag CSS Layouts With a Grid + Transform Trick",
+    "link": "https://css-tricks.com/zigzag-css-grid-layouts/",
+    "pubDate": "Wed, 06 May 2026 13:50:44 +0000",
+    "source": "CSS-Tricks",
+    "content": "Most grid layouts sit in neat rows, perfectly aligned, like soldiers in formation. But sometimes you want something with more rhythm like, say, a zigzag pattern. Here's how to do it with CSS Grid. Making Zigzag CSS Layouts With a Grid + Transform Trick originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "1002: The Real Pricing of LLMs",
+    "link": "https://syntax.fm/1002",
+    "pubDate": "Wed, 06 May 2026 11:00:00 -0000",
+    "source": "Syntax.fm",
+    "content": "In this potluck episode of Syntax, Wes and Scott answer your questions about LLM usage-based pricing, security risks from malicious code in interviews, staying current in a fast-moving dev landscape, a new CSS linter, managing Node environments and tooling without losing your mind, and more! Show Notes 00:00 Welcome to Syntax! 01:17 Copilot’s new usage-based pricing and the end of cheap AI Model multipliers for annual Copilot Pro and Copilot Pro+ subscribers 08:53 Why Syntax dropped clever ad transitions 10:33 Deb…"
+  },
+  {
+    "title": "The Architecture Of Local-First Web Development",
+    "link": "https://smashingmagazine.com/2026/05/architecture-local-first-web-development/",
+    "pubDate": "Wed, 06 May 2026 10:00:00 GMT",
+    "source": "Smashing Magazine",
+    "content": "An honest perspective on building local-first web apps in 2026, written for developers who’ve been doing this long enough to be skeptical of silver bullets."
+  },
+  {
+    "title": "CSS, but make it random",
+    "link": "https://frontendfoc.us/issues/740",
+    "pubDate": "Wed, 6 May 2026 00:00:00 +0000",
+    "source": "Frontend Focus",
+    "content": "🚀 Frontend Focus #​740 — May 6, 2026 | Read on the web How to Use the Media Queries Range Syntax for Better Breakpoints — Set min-width: 300px and max-width: 300px at exactly 300px and both rules fire. Ahmad's solution? Ranged media queries. The syntax is widely supported, can also be used for container queries, and is easier to read and debug. Ahmad Shadeed Fast Dashboards Start with Fast Queries — When dashboards outgrow vanilla Postgres, most teams add a second database. Pipelines, stale data. TimescaleDB exte…"
+  },
+  {
+    "title": "Rethinking The Experience Of System Tools",
+    "link": "https://smashingmagazine.com/2026/05/rethinking-experience-system-tools/",
+    "pubDate": "Tue, 05 May 2026 08:00:00 GMT",
+    "source": "Smashing Magazine",
+    "content": "Design always starts with function — function shapes form. But if that function can’t be made completely invisible and people still have to interact with it, it inevitably becomes part of their experience. In this article, Kyrylo Levashov shares four common software design assumptions."
+  }
+]

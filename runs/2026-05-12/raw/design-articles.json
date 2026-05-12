@@ -1,0 +1,447 @@
+[
+  {
+    "title": "현대카드 행사 안내",
+    "link": "https://event.ssg.com/eventDetail.ssg?nevntId=1000000022623",
+    "pubDate": "Tue, 12 May 2026 00:55:44 GMT",
+    "content": "8% 패션명품쓱세일 청구할인 현대카드",
+    "image": "https://sstatic.ssgcdn.com/promo/event/ssg/202401/35398994348967458.jpg",
+    "valueTags": [
+      "layout_pattern",
+      "promotion_event_design"
+    ],
+    "scraped": true,
+    "source": "SSG - Events",
+    "sourceUrl": "https://www.ssg.com/event/eventMain.ssg",
+    "sourceRole": "inspiration",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_promotion_design",
+    "topics": []
+  },
+  {
+    "title": "29CM, 홈 메인에 ‘슈즈 탭’ 전격 신설… “고감도 슈즈 셀렉션으로 브랜드 발견 경험 강화”",
+    "link": "https://newsroom.musinsa.com/newsroom-menu/2026-0512-29cm",
+    "pubDate": "Tue, 12 May 2026 00:55:40 GMT",
+    "content": "2026.05.12",
+    "image": "https://cdn.prod.website-files.com/60a3629e04f26d12caff56df/6a0196a174fbd1186f108c23_%5B29CM%20%EC%82%AC%EC%A7%84%EC%9E%90%EB%A3%8C%5D%20%EC%8A%88%EC%A6%88%20%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC%2040%25%20%EC%84%B1%EC%9E%A5%EC%84%B8%EC%97%90%20%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4%EC%97%90%20%EC%8A%88%EC%A6%88%20%ED%83%AD%20%EC%98%A4%ED%94%88.jpg",
+    "valueTags": [
+      "brand_expression",
+      "korean_reference",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "Musinsa Newsroom - Campaigns",
+    "sourceUrl": "https://newsroom.musinsa.com/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_promotion_design",
+    "topics": []
+  },
+  {
+    "title": "삼성, 리퀴드 글래스를 닮은 One UI 8.5 공식 배포 시작",
+    "link": "https://designcompass.org/2026/05/11/samsung-starts-official-one-ui-8-5-rollout/",
+    "pubDate": "Tue, 12 May 2026 00:55:38 GMT",
+    "content": "삼성이 One UI 8.5 공식 배포를 시작했습니다. 삼성은 2026년 5월 6일부터 한국에서 One UI 8.5 업데이트를 먼저 배포하고, 이후 다른 지역으로 순차 확대한다고 밝혔습니다. 이번 업데이트는 갤럭시 S25 시리즈, 갤럭시 S25 FE, 갤럭시 S24 시리즈, 갤럭시 S24 FE, 갤럭시 Z 폴드7·Z 플립7, 갤럭시 Z 폴드6·Z 플립6…",
+    "image": "https://designcompass.org/wp-content/uploads/2026/05/01_galaxy-one-ui-8-5.jpg",
+    "valueTags": [
+      "korean_reference",
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "현대자동차 ‘현대 N 레이싱 시뮬레이터’ 출시",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40595&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Tue, 12 May 2026 00:55:34 GMT",
+    "content": "현대자동차가 고성능 N의 드라이빙 경험을 가상 환경에서 구현한 ‘현대 N 레이싱 시뮬레이터’를 출시한다고 11일 밝혔다. 현대 N 레이싱 시뮬레이터 현대차는 LG전자, 소니(Sony), 로지텍(Logi...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260511103249939_3265.0.jpg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "움직이는 얼굴도 AI로 자동 모자이크… VDIT, v4.0.0 업데이트 버전 배포",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40596&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Tue, 12 May 2026 00:55:34 GMT",
+    "content": "아이엠지베이스는 자사의 iOS용 영상 편집 앱 VDIT(브이딧)의 v4.0.0 업데이트 버전을 배포했다고 12일 밝혔다. VDIT v4.0.0 업데이트 버전 ‘AI 얼굴 자동 감지 모자이크’ 소개 이미지....",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260512095109866_2462.0.png",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "어도비 계열사 셈러시, 국내 ‘AI 브랜드 가시성’ 프로그램 출시",
+    "link": "https://ditoday.com/%ec%96%b4%eb%8f%84%eb%b9%84-%ea%b3%84%ec%97%b4%ec%82%ac-%ec%85%88%eb%9f%ac%ec%8b%9c-%ea%b5%ad%eb%82%b4-ai-%eb%b8%8c%eb%9e%9c%eb%93%9c-%ea%b0%80%ec%8b%9c%ec%84%b1-%ed%94%84%eb%a1%9c%ea%b7%b8/",
+    "pubDate": "Tue, 12 May 2026 00:52:20 +0000",
+    "content": "18일부터 'AI 오딧' 컨설팅 개시 The post 어도비 계열사 셈러시, 국내 ‘AI 브랜드 가시성’ 프로그램 출시 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "brand_expression",
+      "korean_reference",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "스포티파이, ‘SongDNA’ 베타 출시… 음악 계보 연결해 콘텐츠 탐색 지원한다",
+    "link": "https://ditoday.com/%ec%8a%a4%ed%8f%ac%ed%8b%b0%ed%8c%8c%ec%9d%b4-songdna-%eb%b2%a0%ed%83%80-%ec%b6%9c%ec%8b%9c-%ec%9d%8c%ec%95%85-%ea%b3%84%eb%b3%b4-%ec%97%b0%ea%b2%b0%ed%95%b4-%ec%bd%98/",
+    "pubDate": "Tue, 12 May 2026 00:51:50 +0000",
+    "content": "창작자 협업부터 샘플링, 커버곡까지 음악이 이어지는 흐름 제공 The post 스포티파이, ‘SongDNA’ 베타 출시… 음악 계보 연결해 콘텐츠 탐색 지원한다 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "“AI가 만들지 않았습니다” 요즘 소비자 사로잡는 한 문장",
+    "link": "https://ditoday.com/ai%ea%b0%80-%eb%a7%8c%eb%93%a4%ec%a7%80-%ec%95%8a%ec%95%98%ec%8a%b5%eb%8b%88%eb%8b%a4-%ec%9a%94%ec%a6%98-%ec%86%8c%eb%b9%84%ec%9e%90-%ec%82%ac%eb%a1%9c%ec%9e%a1%eb%8a%94-%ed%95%9c/",
+    "pubDate": "Tue, 12 May 2026 00:11:13 +0000",
+    "content": "브랜드들이 다시 사람을 내세우는 까닭 The post “AI가 만들지 않았습니다” 요즘 소비자 사로잡는 한 문장 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "와일리, ‘넵’ AI 기반 광고 서비스로 광고 효율 3.4배 향상",
+    "link": "https://ditoday.com/%ec%99%80%ec%9d%bc%eb%a6%ac-%eb%84%b5-ai-%ea%b8%b0%eb%b0%98-%ea%b4%91%ea%b3%a0-%ec%84%9c%eb%b9%84%ec%8a%a4%eb%a1%9c-%ea%b4%91%ea%b3%a0-%ed%9a%a8%ec%9c%a8-3-4%eb%b0%b0-%ed%96%a5/",
+    "pubDate": "Tue, 12 May 2026 00:00:00 +0000",
+    "content": "소상공인 광고 시장에서 성과 개선하며 효율성 검증 The post 와일리, ‘넵’ AI 기반 광고 서비스로 광고 효율 3.4배 향상 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "한국디지털기업협회, 2025 앤어워드 연감 발행",
+    "link": "https://ditoday.com/%ed%95%9c%ea%b5%ad%eb%94%94%ec%a7%80%ed%84%b8%ea%b8%b0%ec%97%85%ed%98%91%ed%9a%8c-2025-%ec%95%a4%ec%96%b4%ec%9b%8c%eb%93%9c-%ec%97%b0%ea%b0%90-%eb%b0%9c%ed%96%89/",
+    "pubDate": "Mon, 11 May 2026 06:10:39 +0000",
+    "content": "디지털 산업의 기술 전반 확인하고 미디어 트렌드 확인 가능해 The post 한국디지털기업협회, 2025 앤어워드 연감 발행 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "visual_trend",
+      "korean_reference",
+      "korean_uiux_case"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "대홍기획, AI 검색 마케팅 솔루션 ‘GEO BOOST’ 론칭",
+    "link": "https://ditoday.com/%eb%8c%80%ed%99%8d%ea%b8%b0%ed%9a%8d-ai-%ea%b2%80%ec%83%89-%eb%a7%88%ec%bc%80%ed%8c%85-%ec%86%94%eb%a3%a8%ec%85%98-geo-boost-%eb%a1%a0%ec%b9%ad/",
+    "pubDate": "Mon, 11 May 2026 01:57:34 +0000",
+    "content": "브랜드 데이터 일관성 강화... 노출 가능성 ↑ The post 대홍기획, AI 검색 마케팅 솔루션 ‘GEO BOOST’ 론칭 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "공고 지원 수 350% 증가… 알바몬, AI 중심 앱 개편 성과 공개",
+    "link": "https://ditoday.com/%ea%b3%b5%ea%b3%a0-%ec%a7%80%ec%9b%90-%ec%88%98-350-%ec%a6%9d%ea%b0%80-%ec%95%8c%eb%b0%94%eb%aa%ac-ai-%ec%a4%91%ec%8b%ac-%ec%95%b1-%ea%b0%9c%ed%8e%b8-%ec%84%b1%ea%b3%bc-%ea%b3%b5%ea%b0%9c/",
+    "pubDate": "Mon, 11 May 2026 01:00:57 +0000",
+    "content": "향후에도 모바일 최적화 구직 경험 위해 UX 지속 고도화 예정 The post 공고 지원 수 350% 증가… 알바몬, AI 중심 앱 개편 성과 공개 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "인스타그램, 청소년 계정 보호 기능 고도화 및 콘텐츠 환경 개편 발표",
+    "link": "https://ditoday.com/%ec%9d%b8%ec%8a%a4%ed%83%80%ea%b7%b8%eb%9e%a8-%ec%b2%ad%ec%86%8c%eb%85%84-%ea%b3%84%ec%a0%95-%eb%b3%b4%ed%98%b8-%ea%b8%b0%eb%8a%a5-%ea%b3%a0%eb%8f%84%ed%99%94-%eb%b0%8f-%ec%bd%98%ed%85%90%ec%b8%a0/",
+    "pubDate": "Mon, 11 May 2026 00:47:17 +0000",
+    "content": "인스타그램을 운영 중인 글로벌 IT 기업 메타가 청소년 사용자에게 연령에 적합하고 안전한 온라인 경험을 제공하기 위해 ‘청소년 계정’의 보호 기능을 한층 강화한다고 11일 밝혔다. 업데이트된 청소년 계정은 사용자에게 노출되는 콘텐츠의 안전 기준을 강화한 것이 특징이다. 국내에 2025년 초 도입된 청소년 계정은 만 14세 이상 18세 이하의 청소년 이용자를 대상으로 계정 공개 범위, 연락 가능 대상, […] The post 인스타그램, 청소년 계정 보호 기능 고도화 및 콘텐츠 환경 개편 발표 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "korean_reference",
+      "korean_uiux_case"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "AI 에이전트 시대, 웹 에이전시는 어떤 역할을 해야 할까?",
+    "link": "https://ditoday.com/ai-%ec%97%90%ec%9d%b4%ec%a0%84%ed%8a%b8-%ec%8b%9c%eb%8c%80-%ec%9b%b9-%ec%97%90%ec%9d%b4%ec%a0%84%ec%8b%9c%eb%8a%94-%ec%96%b4%eb%96%a4-%ec%97%ad%ed%95%a0%ec%9d%84-%ed%95%b4%ec%95%bc-%ed%95%a0%ea%b9%8c/",
+    "pubDate": "Fri, 08 May 2026 09:24:56 +0000",
+    "content": "업력 28년 디자인 에이전시가 말하는 AI 시대 생존 전략 The post AI 에이전트 시대, 웹 에이전시는 어떤 역할을 해야 할까? appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/crown-creative-gives-barkhouse-an-identity-worthy-of-a-members-club",
+    "pubDate": "Tue, 12 May 2026 00:55:56 GMT",
+    "content": "Crown Creative’s identity for Barkhouse, a membership-based dog hotel and daycare on New York’s West 25th Street, opens with a wordmark that sets two typefaces against each other within the name. Conforto, a warm sans serif, carries the ‘BARK.’ Coconat, a contemporary serif, carries the ‘HOUSE.’ The split is not just a graphic flourish but a structural decision about who the brand is talking to at any given moment.",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/05/crown-creative-gives-barkhouse-an-identity-worthy-of-a-members-club/Barkhouse-NYC-Crown-Creative-01.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "The Architecture Of Local-First Web Development",
+    "link": "https://smashingmagazine.com/2026/05/architecture-local-first-web-development/",
+    "pubDate": "Wed, 06 May 2026 10:00:00 GMT",
+    "content": "An honest perspective on building local-first web apps in 2026, written for developers who’ve been doing this long enough to be skeptical of silver bullets.",
+    "image": "http://files.smashing.media/articles/architecture-local-first-web-development/architecture-local-first-web-development.jpg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Miro AI Design System: MCP + Claude Code Skills Playbook",
+    "link": "https://www.intodesignsystems.com/blog/miro-ai-design-system-mcp-claude-code-skills",
+    "pubDate": "Tue, 12 May 2026 00:56:38 GMT",
+    "content": "How Miro built an AI-enabled design system: Aura, MCP server, Claude Code skills, metadata that stopped AI hallucinations. Slack support questions down 70-80%, one skill from 33,000 to 410 tokens, 17 PRs in an hour.",
+    "image": "https://www.intodesignsystems.com/blog/img/miro-ai-design-system-thumbnail.png",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Into Design Systems",
+    "sourceUrl": "https://www.intodesignsystems.com/blog",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "Rethinking The Experience Of System Tools",
+    "link": "https://smashingmagazine.com/2026/05/rethinking-experience-system-tools/",
+    "pubDate": "Tue, 05 May 2026 08:00:00 GMT",
+    "content": "Design always starts with function — function shapes form. But if that function can’t be made completely invisible and people still have to interact with it, it inevitably becomes part of their experience. In this article, Kyrylo Levashov shares four common software design assumptions.",
+    "image": "http://files.smashing.media/articles/rethinking-experience-system-tools.jpg",
+    "valueTags": [],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Designing AI Agents: 4 Lessons from China’s Qwen Agent",
+    "link": "https://www.nngroup.com/articles/designing-ai-agents/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 08 May 2026 17:00:00 +0000",
+    "content": "A study of Qwen's AI agent reveals 4 design lessons: support discoverability, reuse familiar patterns, handle personal data carefully, and protect user autonomy.",
+    "image": "",
+    "valueTags": [
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "UX Writing: FAQs from Practitioners",
+    "link": "https://www.nngroup.com/articles/ux-writing-faqs/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 08 May 2026 17:00:00 +0000",
+    "content": "Get answers to frequently asked questions about UX writing from attendees of NN/G’s Writing Compelling Digital Copy course.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  }
+]
