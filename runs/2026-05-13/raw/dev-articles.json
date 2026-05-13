@@ -1,0 +1,170 @@
+[
+  {
+    "title": "Who Am I Writing For?",
+    "link": "https://dev.to/steady5063/who-am-i-writing-for-2bdb",
+    "pubDate": "Wed, 13 May 2026 00:33:39 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Recently, I was asked a question that really made me take a step back. “With all these AI tools, aren't they just to give users what you would write about anyways, so who are you writing for?” Yes, AI can generate content faster than ever before. It can summarize, rephrase, and expand on our content. It can also write test cases, code snippets, documentation, and even write articles. So why am I writing? Why am I spending time sitting here typing this out for the world to read when it may not even be read by a hum…"
+  },
+  {
+    "title": "Unpacking the WebAIM Million report: The Unfinished Homepage Pandemic",
+    "link": "https://dev.to/a11ynews/unpacking-the-webaim-million-report-the-unfinished-homepage-pandemic-3p1f",
+    "pubDate": "Tue, 12 May 2026 16:42:23 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "New WebAIM Million report just dropped! And nobody is surprised. Original post from A11y News New WebAIM Million report just dropped! And nobody is surprised. The results are so similar that I can still use chunks from a draft about the previous report: The Million report audited 1 million websites to give us a benchmark of progress in web accessibility over the years and the most common WCAG failures. (Spoilers ahead: It’s still low contrast.) Low contrast takes the first place — once again — by a landslide with…"
+  },
+  {
+    "title": "Soon We Can Finally Banish JavaScript to the ShadowRealm",
+    "link": "https://css-tricks.com/soon-we-can-finally-banish-javascript-to-the-shadowrealm/",
+    "pubDate": "Tue, 12 May 2026 13:59:35 +0000",
+    "source": "CSS-Tricks",
+    "content": "The proposed ShadowRealm API introduces a new kind of realm specifically designed for isolation, and only that. Soon We Can Finally Banish JavaScript to the ShadowRealm originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Foundational Accessibility Begins with the Base Components",
+    "link": "https://dev.to/shaynaproductions/foundational-accessibility-begins-with-the-base-components-2nac",
+    "pubDate": "Tue, 12 May 2026 12:15:00 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Prologue A while ago, I decided to develop a fully accessible main navigation component in React and write a series of articles documenting the steps it took to create a non-trivial accessible component. This article is part of the series and marks the first time code will be introduced and discussed. It's all about the base. I define base components as components that wrap elements that ultimately render to plain HTML from React. If your base components don't take accessibility into consideration, achieving acces…"
+  },
+  {
+    "title": "Focus indicators failing WCAG 1.4.11: real cases and exact fixes",
+    "link": "https://dev.to/a11ysolutions/focus-indicators-failing-wcag-1411-real-cases-and-exact-fixes-13hm",
+    "pubDate": "Tue, 12 May 2026 11:48:12 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Focus indicators failing WCAG 1.4.11: real cases and exact fixes A focus indicator is the visual signal that shows keyboard users which interactive element is currently focused. WCAG 2.1 SC 1.4.11 (Non-text Contrast) regulates focus indicators because users navigating with a keyboard must clearly perceive where focus is located. The minimum required contrast ratio for visible focus indicators is 3:1 against adjacent colors. Why static accessibility tools often miss these issues Most static accessibility scanners c…"
+  },
+  {
+    "title": "Color Contrast Failures: The Number One Accessibility Issue and How to Fix It",
+    "link": "https://dev.to/toolkitonline/color-contrast-failures-the-number-one-accessibility-issue-and-how-to-fix-it-13gd",
+    "pubDate": "Tue, 12 May 2026 11:17:27 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Color contrast failures are the single most common accessibility issue on the web. The WebAIM Million study found them on 83.6% of home pages tested. Yet they're also one of the easiest issues to fix — once you understand the rules. WCAG 2.2 defines two success criteria for color contrast: 1.4.3 Contrast (Minimum) — Level AA Normal text ( { const sRGB = c / 255; return sRGB lum2 ? [lum1, lum2] : [lum2, lum1]; return (lighter + 0.05) / (darker + 0.05); } Light grey (#767676) on white is exactly 4.54:1 — barely pass…"
+  },
+  {
+    "title": "Closing the Audio Gap in WCAG 2.2 Accessibility",
+    "link": "https://dev.to/stanlymt/closing-the-audio-gap-in-wcag-22-accessibility-5akj",
+    "pubDate": "Tue, 12 May 2026 09:16:26 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "The Web Has an Accessibility Problem — and It's Getting Worse Nearly 96% of the top one million homepages have detectable WCAG failures, according to the WebAIM Million 2026 report. That's not a rounding error. It means the overwhelming majority of websites are failing people with disabilities in measurable, automated-test-detectable ways — and the real number is almost certainly higher. Most accessibility conversations focus on alt text, color contrast, and form labels. Those matter. But there's a quieter gap tha…"
+  },
+  {
+    "title": "Your Coffee Shop Mobile Ordering App Is the Next ADA Lawsuit Target — Here's Why",
+    "link": "https://dev.to/agentkit/your-coffee-shop-mobile-ordering-app-is-the-next-ada-lawsuit-target-heres-why-343h",
+    "pubDate": "Tue, 12 May 2026 05:00:50 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "If you run a coffee shop, a café, or a third-wave specialty roaster, your mobile-ordering app is now your highest-revenue customer interaction. It is also, according to a federal appeals court that the Supreme Court declined to revisit, a place of public accommodation under the Americans with Disabilities Act. That makes it a legal liability the same way an inaccessible front door is — except your app is open 24 hours a day, used by hundreds of customers a week, and almost certainly has problems nobody on your tea…"
+  },
+  {
+    "title": "Building Inclusive E-Commerce Experiences for LGBTQ+ Niche Stores",
+    "link": "https://dev.to/alexis_vitre_cd2e187da346/building-inclusive-e-commerce-experiences-for-lgbtq-niche-stores-he2",
+    "pubDate": "Tue, 12 May 2026 02:16:38 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Breaking Down Barriers in Niche E-Commerce When building e-commerce platforms for underrepresented communities—particularly LGBTQ+ audiences—developers face unique challenges. Unlike mainstream retail platforms optimized for broad demographics, niche stores require thoughtful technical implementation to serve customers who often feel overlooked by generic solutions. If you've ever worked on a specialized shop like find ud af mere, you know the stakes are different. Your tech choices directly impact how welcome cus…"
+  },
+  {
+    "title": "Cryptographically valid malware hits npm",
+    "link": "https://javascriptweekly.com/issues/785",
+    "pubDate": "Tue, 12 May 2026 00:00:00 +0000",
+    "source": "JavaScript Weekly",
+    "content": "#​785 — May 12, 2026 Read on the Web JavaScript Weekly Anatomy of the TanStack npm Compromise — A new strain of the Shai-Hulud worm pushed malicious versions of TanStack packages to npm yesterday (containing a tripwire that would delete files if it detected token revocation), though it hit ~170 other packages too. Maintainer credentials weren’t stolen, with the attack instead chaining pull_request_target abuse, cache poisoning, and OIDC token theft from CI memory. Tanner Linsley ❓ What should you do? Consider an i…"
+  },
+  {
+    "title": "The true carbon cost of dark mode and whether it actually saves energy",
+    "link": "https://dev.to/devly-digital/the-true-carbon-cost-of-dark-mode-and-whether-it-actually-saves-energy-2e8b",
+    "pubDate": "Mon, 11 May 2026 20:38:26 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Dark mode can save energy. It can also save nothing. In some cases it can even increase energy consumption. The outcome depends on three factors: the type of screen, the brightness level, and what the user actually does after switching. Dark mode only affects energy consumption because of how the screen physically produces light. Different screen technologies respond very differently. OLED and AMOLED screens (organic light-emitting diode) illuminate each pixel individually. A black pixel on an OLED screen is liter…"
+  },
+  {
+    "title": "Tailwind v4 dark mode: the @theme vs @theme inline gotcha that broke my contrast tests",
+    "link": "https://dev.to/forrestmiller/tailwind-v4-dark-mode-the-theme-vs-theme-inline-gotcha-that-broke-my-contrast-tests-3p3o",
+    "pubDate": "Mon, 11 May 2026 18:06:38 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "TL;DR: in Tailwind v4 there are two ways to declare a color token in @theme. One compiles the hex value into your utility classes. The other emits a var(--...) reference that you can override from a wrapper class. Only one of these supports a multi-layer dark-mode cascade. I shipped six surfaces with invisible text because I picked the wrong one. I'm running Tailwind v4 on a side project. Dark mode needs to do real work: I have always-light containers (white toast wrappers), always-dark containers (gradient heroes…"
+  },
+  {
+    "title": "Web Accessibility (a11y) Guide for Developers: WCAG 2.2 in Practice",
+    "link": "https://dev.to/_6638a39c349d7e9c85ee20/web-accessibility-a11y-guide-for-developers-wcag-22-in-practice-502c",
+    "pubDate": "Mon, 11 May 2026 12:05:58 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "This article was originally published on AI Study Room. For the full version with working code examples and related articles, visit the original post. Web accessibility (a11y) is not just about compliance — accessible websites work better for everyone, including keyboard users, screen reader users, and people with temporary disabilities. The business case is strong: the EU Accessibility Act (2025) mandates accessibility for many digital products, and inaccessible websites lose an estimated 15-20% of potential user…"
+  },
+  {
+    "title": "1003: Skills Skills Skills",
+    "link": "https://syntax.fm/1003",
+    "pubDate": "Mon, 11 May 2026 11:00:00 -0000",
+    "source": "Syntax.fm",
+    "content": "Scott and Wes chat all things agent skills for web developers, sharing their favorites for everything from CSS animations and HTML generation to logo extraction, marketing copy, and video creation. Whether you’re just getting started with AI-powered development or looking to level up your workflow, this episode is packed with practical skills you can put to use today. Show Notes 00:00 Welcome to Syntax! 01:33 Hot Tip Skill 05:55 CSS Motion Systems 08:17 Agent Browser Skill 09:30 HTML Skill 12:01 Extract Logos Skil…"
+  },
+  {
+    "title": "CSS Color Contrast: The WCAG Rules Every Developer Should Know",
+    "link": "https://dev.to/snappy_tools/css-color-contrast-the-wcag-rules-every-developer-should-know-4gpo",
+    "pubDate": "Mon, 11 May 2026 10:08:09 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Color contrast is one of the most commonly overlooked accessibility requirements in web development — and one of the easiest to fail accidentally. You pick a beautiful grey text on a white background, it looks fine on your calibrated monitor, and then someone with low vision or a washed-out phone screen can't read it at all. This post covers how contrast ratios work, what WCAG requires, and how to check your colors before they ship. The contrast ratio between two colors is a number from 1:1 (no contrast — same col…"
+  },
+  {
+    "title": "714: Camping, Burnout, and Chris’ CSS Talk",
+    "link": "https://shoptalkshow.com/714/",
+    "pubDate": "Mon, 11 May 2026 07:33:28 +0000",
+    "source": "ShopTalk Show",
+    "content": "Show Description How responsible should you be for fixing your own website for others, Dave's got a blacklog of blog posts, Chris got a camper van, debating burnout even when you love your work, a weekly AI doomer check in, and Chris has a talk for Smashing Magazine happening by the time you hear this. Listen on Website Watch on YouTube Links Winnebago Revel | AWD Off-Grid Camper Van Naz Hamid Opus OP4 Camper | Premium Off-Road Inflatable Trailer USA HealthyGamerGG - YouTube Smashing Conferences — Smashing Magazin…"
+  },
+  {
+    "title": "How To Build Polished WooCommerce Sites Fast with Blocksy",
+    "link": "https://feedpress.me/link/24028/17338167/how-to-build-polished-woocommerce-sites-fast-with-blocksy",
+    "pubDate": "Sat, 09 May 2026 00:00:00 GMT",
+    "source": "CSS Weekly",
+    "content": "Learn how to build polished WooCommerce and business sites fast with Blocksy WordPress theme."
+  },
+  {
+    "title": "Using CSS corner-shape For Folded Corners",
+    "link": "https://css-tricks.com/using-css-corner-shape-for-folded-corners/",
+    "pubDate": "Fri, 08 May 2026 13:54:10 +0000",
+    "source": "CSS-Tricks",
+    "content": "I came across Kitty Giraudel’s folded corners technique. I’ve been on a bit of a corner-shape kick lately, so I figured that corner-shape could be used to create folded corners as well. Using CSS corner-shape For Folded Corners originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Quick Tip: Use position:sticky in Your Lists",
+    "link": "https://feedpress.me/link/24028/17338168/css-tip-use-positionsticky-in-your-lists",
+    "pubDate": "Fri, 08 May 2026 00:00:00 GMT",
+    "source": "CSS Weekly",
+    "content": "A quick tip explaining why you should use `position: sticky` in your lists."
+  },
+  {
+    "title": "A Scrollytelling Gift for Mum on Mother’s Day 2026",
+    "link": "https://css-tricks.com/a-scrollytelling-gift-for-mum-on-mothers-day-2026/",
+    "pubDate": "Thu, 07 May 2026 14:22:38 +0000",
+    "source": "CSS-Tricks",
+    "content": "I will explain how my mum inspired this 2026 Mother’s Day scrollytelling experiment — but also, how she inspired my approach to dev and life. A Scrollytelling Gift for Mum on Mother’s Day 2026 originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Google’s Prompt API",
+    "link": "https://css-tricks.com/googles-prompt-api/",
+    "pubDate": "Wed, 06 May 2026 19:41:29 +0000",
+    "source": "CSS-Tricks",
+    "content": "Mat Marquis on Google pulling the web standards equivalent of U2 album marketing: As a Chrome user, you’ll have received Gemini Nano in the form of a 4GB transfer recently; no permission asked or required. If you remove it, … Google’s Prompt API originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Making Zigzag CSS Layouts With a Grid + Transform Trick",
+    "link": "https://css-tricks.com/zigzag-css-grid-layouts/",
+    "pubDate": "Wed, 06 May 2026 13:50:44 +0000",
+    "source": "CSS-Tricks",
+    "content": "Most grid layouts sit in neat rows, perfectly aligned, like soldiers in formation. But sometimes you want something with more rhythm like, say, a zigzag pattern. Here's how to do it with CSS Grid. Making Zigzag CSS Layouts With a Grid + Transform Trick originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "1002: The Real Pricing of LLMs",
+    "link": "https://syntax.fm/1002",
+    "pubDate": "Wed, 06 May 2026 11:00:00 -0000",
+    "source": "Syntax.fm",
+    "content": "In this potluck episode of Syntax, Wes and Scott answer your questions about LLM usage-based pricing, security risks from malicious code in interviews, staying current in a fast-moving dev landscape, a new CSS linter, managing Node environments and tooling without losing your mind, and more! Show Notes 00:00 Welcome to Syntax! 01:17 Copilot’s new usage-based pricing and the end of cheap AI Model multipliers for annual Copilot Pro and Copilot Pro+ subscribers 08:53 Why Syntax dropped clever ad transitions 10:33 Deb…"
+  },
+  {
+    "title": "The Architecture Of Local-First Web Development",
+    "link": "https://smashingmagazine.com/2026/05/architecture-local-first-web-development/",
+    "pubDate": "Wed, 06 May 2026 10:00:00 GMT",
+    "source": "Smashing Magazine",
+    "content": "An honest perspective on building local-first web apps in 2026, written for developers who’ve been doing this long enough to be skeptical of silver bullets."
+  }
+]
