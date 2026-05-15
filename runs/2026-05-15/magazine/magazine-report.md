@@ -291,7 +291,7 @@ AI 검색·추천·주문 에이전트를 쇼핑 화면에 연동하는 기획 �
 - 날짜: 2026-05-14
 - 태그: Gotham Variable, 가변 서체, 타이포그래피, Monotype
 - 국가: GLOBAL
-- 카테고리: design/typography
+- 카테고리: dev/typography
 - 직무 태그: 웹디자인, 웹DEV
 - 출처 유형: news
 - 출처: 한국디자인진흥원 디자인DB

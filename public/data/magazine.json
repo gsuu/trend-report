@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T06:13:39.065957+00:00",
+  "generatedAt": "2026-05-15T06:14:04.742474+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -970,7 +970,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "design/typography"
+            "valueHtml": "dev/typography"
           },
           {
             "label": "직무 태그",
