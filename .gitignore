@@ -27,3 +27,7 @@ package.json.test
 
 # Manual AI mode 임시 작업 폴더
 tmp/collect/
+
+# Claude Code 워크트리 및 세션 파일
+.claude/worktrees/
+.claude/scheduled_tasks.lock

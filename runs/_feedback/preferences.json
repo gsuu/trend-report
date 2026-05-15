@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-14",
+  "policy": {
+    "scoreScale": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "autoDemote": false,
+    "softSortBonusOnly": true,
+    "note": "이 파일은 사용자 평가가 누적되는 가중치 저장소다. autoDemote=false이므로 우선순위 자체는 바꾸지 않고, shortlist 정렬과 안내 표시에만 가산점으로 반영한다."
+  },
+  "domains": {
+    "ohstory.io": {
+      "score": -1,
+      "count": 1
+    },
+    "newsroom.spotify.com": {
+      "score": -8,
+      "count": 4
+    },
+    "ditoday.com": {
+      "score": -4,
+      "count": 2
+    },
+    "smashingmagazine.com": {
+      "score": 0,
+      "count": 1
+    },
+    "nngroup.com": {
+      "score": -4,
+      "count": 2
+    },
+    "css-tricks.com": {
+      "score": -2,
+      "count": 1
+    },
+    "tanstack.com": {
+      "score": -2,
+      "count": 1
+    },
+    "dev.to": {
+      "score": -2,
+      "count": 1
+    },
+    "newsroom.musinsa.com": {
+      "score": -2,
+      "count": 1
+    }
+  },
+  "publishers": {
+    "오늘의집(버킷플레이스)": {
+      "score": -1,
+      "count": 1
+    },
+    "Spotify": {
+      "score": -8,
+      "count": 4
+    },
+    "DIGITAL iNSIGHT": {
+      "score": -4,
+      "count": 2
+    },
+    "Smashing Magazine, Victor Yocco (ServiceNow UX Researcher)": {
+      "score": 0,
+      "count": 1
+    },
+    "Nielsen Norman Group, Feifei Liu & Maria Rosala": {
+      "score": -2,
+      "count": 1
+    },
+    "Nielsen Norman Group, Anna Kaley": {
+      "score": -2,
+      "count": 1
+    },
+    "Mat Marquis · CSS-Tricks": {
+      "score": -2,
+      "count": 1
+    },
+    "TanStack 'Anatomy of the TanStack npm Compromise' (JavaScript Weekly 인용)": {
+      "score": -2,
+      "count": 1
+    },
+    "AgentKit (blog.a11yfix.dev / Dev.to)": {
+      "score": -2,
+      "count": 1
+    },
+    "무신사 뉴스룸 (29CM)": {
+      "score": -2,
+      "count": 1
+    }
+  },
+  "categories": {
+    "core_ecommerce": {
+      "score": -11,
+      "count": 6
+    },
+    "design_dev_reference": {
+      "score": -14,
+      "count": 8
+    }
+  },
+  "reasons": {
+    "general_appeal_low": {},
+    "audience_mismatch": {},
+    "stale_topic": {},
+    "promotional": {},
+    "weak_evidence": {},
+    "weak_source": {},
+    "other": {
+      "ditoday.com": 1,
+      "smashingmagazine.com": 1,
+      "nngroup.com": 2,
+      "dev.to": 1,
+      "newsroom.musinsa.com": 1
+    }
+  },
+  "history": [
+    {
+      "date": "2026-05-14",
+      "id": "service-0",
+      "score": -1,
+      "reasons": [],
+      "domain": "ohstory.io",
+      "publisher": "오늘의집(버킷플레이스)",
+      "category": "core_ecommerce",
+      "note": ""
+    },
+    {
+      "date": "2026-05-14",
+      "id": "service-10",
+      "score": -2,
+      "reasons": [],
+      "domain": "newsroom.spotify.com",
+      "publisher": "Spotify",
+      "category": "core_ecommerce",
+      "note": ""
+    },
+    {
+      "date": "2026-05-14",
+      "id": "service-29",
+      "score": -2,
+      "reasons": [],
+      "domain": "newsroom.spotify.com",
+      "publisher": "Spotify",
+      "category": "core_ecommerce",
+      "note": ""
+    },
+    {
+      "date": "2026-05-14",
+      "id": "service-31",
+      "score": -2,
+      "reasons": [],
+      "domain": "newsroom.spotify.com",
+      "publisher": "Spotify",
+      "category": "core_ecommerce",
+      "note": ""
+    },
+    {
+      "date": "2026-05-14",
+      "id": "service-32",
+      "score": -2,
+      "reasons": [],
+      "domain": "newsroom.spotify.com",
+      "publisher": "Spotify",
+      "category": "core_ecommerce",
+      "note": ""
+    },
+    {
+      "date": "2026-05-14",
+      "id": "ditoday-google-gemini-intelligence-widget",
+      "score": -2,
+      "reasons": [
+        "other"
+      ],
+      "domain": "ditoday.com",
+      "publisher": "DIGITAL iNSIGHT",
+      "category": "design_dev_reference",
+      "note": "design→dev 재분류 + 사용자 추가 지시로 오늘자 제외"
+    },
+    {
+      "date": "2026-05-14",
+      "id": "smashing-practical-interface-patterns-ai-transparency-part2",
+      "score": 0,
+      "reasons": [
+        "other"
+      ],
+      "domain": "smashingmagazine.com",
+      "publisher": "Smashing Magazine, Victor Yocco (ServiceNow UX Researcher)",
+      "category": "design_dev_reference",
+      "note": "사용자 기준: 패턴 가이드라서 design→dev 재분류"
+    },
+    {
+      "date": "2026-05-14",
+      "id": "ditoday-spotify-songdna-beta",
+      "score": -2,
+      "reasons": [],
+      "domain": "ditoday.com",
+      "publisher": "DIGITAL iNSIGHT",
+      "category": "design_dev_reference",
+      "note": ""
+    },
+    {
+      "date": "2026-05-14",
+      "id": "nng-designing-ai-agents-qwen",
+      "score": -2,
+      "reasons": [
+        "other"
+      ],
+      "domain": "nngroup.com",
+      "publisher": "Nielsen Norman Group, Feifei Liu & Maria Rosala",
+      "category": "design_dev_reference",
+      "note": "디자인 가이드라서 design→dev 재분류 + 사용자 추가 지시로 오늘자 제외"
+    },
+    {
+      "date": "2026-05-14",
+      "id": "nng-ux-writing-faqs",
+      "score": -2,
+      "reasons": [
+        "other"
+      ],
+      "domain": "nngroup.com",
+      "publisher": "Nielsen Norman Group, Anna Kaley",
+      "category": "design_dev_reference",
+      "note": "UX 라이팅 워크플로라서 design→dev 재분류 + 사용자 추가 지시로 오늘자 제외"
+    },
+    {
+      "date": "2026-05-14",
+      "id": "DEV-6",
+      "score": -2,
+      "reasons": [],
+      "domain": "css-tricks.com",
+      "publisher": "Mat Marquis · CSS-Tricks",
+      "category": "design_dev_reference",
+      "note": ""
+    },
+    {
+      "date": "2026-05-14",
+      "id": "DEV-7",
+      "score": -2,
+      "reasons": [],
+      "domain": "tanstack.com",
+      "publisher": "TanStack 'Anatomy of the TanStack npm Compromise' (JavaScript Weekly 인용)",
+      "category": "design_dev_reference",
+      "note": ""
+    },
+    {
+      "date": "2026-05-14",
+      "id": "dev-loading-spinners-screen-reader",
+      "score": -2,
+      "reasons": [
+        "other"
+      ],
+      "domain": "dev.to",
+      "publisher": "AgentKit (blog.a11yfix.dev / Dev.to)",
+      "category": "design_dev_reference",
+      "note": "DEV 보강 supplement 추가 후 사용자 추가 지시로 오늘자 제외"
+    },
+    {
+      "date": "2026-05-14",
+      "id": "design-supplement-29cm-special-pinmenu",
+      "score": -2,
+      "reasons": [
+        "other"
+      ],
+      "domain": "newsroom.musinsa.com",
+      "publisher": "무신사 뉴스룸 (29CM)",
+      "category": "core_ecommerce",
+      "note": "DESIGN 보강 supplement 추가 후 사용자 추가 지시로 오늘자 제외"
+    }
+  ]
+}
