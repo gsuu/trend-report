@@ -1,0 +1,191 @@
+[
+  {
+    "title": "New Equa11y Plugin for SuperCLI",
+    "link": "https://dev.to/javimosch/new-equa11y-plugin-for-supercli-4hep",
+    "pubDate": "Thu, 14 May 2026 21:59:44 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "New Equa11y Plugin for SuperCLI Stream-lined command line tool for running accessibility testing with axe-core and puppeteer by oslabs-beta npm install -g equa11y Verify: equa11y --version supercli plugins install ./plugins/Equa11y --on-conflict replace --json Plugin Source: https://github.com/oslabs-beta/Equa11y SuperCLI Repository: https://github.com/javimosch/supercli This plugin is part of SuperCLI — a curated collection of 1000+ CLI tools at your fingertips."
+  },
+  {
+    "title": "MedScan Assistant — AI medication label reader for seniors, powered by Gemma 4",
+    "link": "https://dev.to/msadlok/medscan-assistant-ai-medication-label-reader-for-seniors-powered-by-gemma-4-3kc6",
+    "pubDate": "Thu, 14 May 2026 16:47:08 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "This is a submission for the Gemma 4 Challenge: Build with Gemma 4 MedScan Assistant helps elderly and visually impaired people understand their medication labels. Half of all medication errors happen because patients misread or misunderstand the label — especially people with low vision or cognitive decline. Point your phone at any medication label → Gemma 4 reads and interprets it → the app reads the result aloud in plain language. Two markets supported: 🇺🇸 US Market — FDA Drug Facts panels, OTC/Rx labels 🇵🇱…"
+  },
+  {
+    "title": "Computing and Displaying Discounted Prices in CSS",
+    "link": "https://css-tricks.com/computing-and-displaying-discounted-prices-in-css/",
+    "pubDate": "Thu, 14 May 2026 14:05:01 +0000",
+    "source": "CSS-Tricks",
+    "content": "A clever use of CSS to calculate and display a discounted product price by providing a base price and discount amount, featuring modern CSS features like attr(), mod(), and round(). Computing and Displaying Discounted Prices in CSS originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Why Businesses Are Focusing More on Website Accessibility in 2026",
+    "link": "https://dev.to/eccomback/why-businesses-are-focusing-more-on-website-accessibility-in-2026-377a",
+    "pubDate": "Thu, 14 May 2026 13:02:34 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Website accessibility has become one of the most important digital priorities for businesses in 2026. As more companies expand their online presence, the need to create inclusive and accessible websites continues growing across industries. Businesses are increasingly recognizing that accessibility is not only about compliance but also about improving user experience, customer trust, and long-term digital growth. Modern websites serve users from many different backgrounds and abilities. Millions of people rely on a…"
+  },
+  {
+    "title": "Theming in the Modern Age",
+    "link": "https://dev.to/shaynaproductions/theming-in-the-modern-age-51ke",
+    "pubDate": "Thu, 14 May 2026 12:15:00 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Prologue A while ago, I decided to develop a fully accessible main navigation component in React and write a series of articles documenting the steps it took to create a non-trivial accessible component. In the last article, the focus was on the operability of foundational components that render valid HTML elements. This article focuses on screen perceivability and the foundational aspects around theming, design and CSS. CSS is used to illustrate design concepts. To that end, the theming system I'm using is solely…"
+  },
+  {
+    "title": "Trying this out for accessibility testing!",
+    "link": "https://dev.to/daniel_morgan_23/trying-this-out-for-accessibility-testing-4i67",
+    "pubDate": "Thu, 14 May 2026 11:43:56 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Been exploring accessibility tools recently and came across A11yInspect. Looks interesting for testing accessibility directly while building and also getting guidance without switching between too many tools. They’re offering Pro access free for 1 year for GAAD, so I signed up for the waitlist. Sharing in case it helps someone else here build more accessible stuff. Join the waitlist - https://www.barrierbreak.com/gaad-2026-a11yinspect-pro/"
+  },
+  {
+    "title": "Your Site Probably Blocks Pinch-to-Zoom on Mobile. That Is a Lawsuit Risk.",
+    "link": "https://dev.to/agentkit/your-site-probably-blocks-pinch-to-zoom-on-mobile-that-is-a-lawsuit-risk-1lni",
+    "pubDate": "Thu, 14 May 2026 05:00:44 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Open your website on a phone right now. Take two fingers and try to pinch-to-zoom on the body text. If the page resists, snaps back, or simply ignores you, your site has a problem that almost every accessibility consultant flags inside the first ten minutes of an audit. It is one of the easiest accessibility failures to ship by accident and one of the easiest to fix once a developer looks at it. It is also one of the failures that turns up most often in demand letters from US plaintiffs' firms in 2026, because eve…"
+  },
+  {
+    "title": "React and User Preferences: Respect the OS Settings Your Users Already Picked",
+    "link": "https://dev.to/childrentime/react-and-user-preferences-respect-the-os-settings-your-users-already-picked-5hdp",
+    "pubDate": "Thu, 14 May 2026 02:04:06 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "React and User Preferences: Respect the OS Settings Your Users Already Picked Every modern operating system asks the user, at some point, what kind of UI they want. Dark mode or light. High contrast or normal. Animations on or stripped down. Left-to-right or right-to-left. Preferred language. The user picks once, in System Settings, and from that moment on every well-built native app on the machine respects the choice. The web app you ship usually does not — it picks its own dark mode toggle, its own animation lib…"
+  },
+  {
+    "title": "Automation at the speed of Swamp (Friends)",
+    "link": "https://changelog.com/friends/130",
+    "pubDate": "Wed, 13 May 2026 21:00:00 +0000",
+    "source": "The Changelog",
+    "content": "This week I'm talking with Adam Jacob, founder of System Initiative and creator of Swamp, about what happens when AI agents change the entire shape of software development. We discuss how he went from an 18-person team down to five and shipped Swamp 900 times in four weeks, why he brought User Acceptance Testing (UAT) testing back from the 90s, why software architecture (and domain-driven design) suddenly matters more than knowing how to write code, the live demo where I pointed Swamp at my Proxmox box and watched…"
+  },
+  {
+    "title": "Why pure Klein blue disappears on dark ground — and how I routed around it",
+    "link": "https://dev.to/palo_alto_ai/why-pure-klein-blue-disappears-on-dark-ground-and-how-i-routed-around-it-41ce",
+    "pubDate": "Wed, 13 May 2026 19:56:26 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Spend a few hours in Claude Code and you notice something most terminal themes ignore: the screen is mostly prose. Tool output, reasoning traces, permission prompts — paragraphs of English, not syntax-highlighted code. Every theme I tried was tuned for the wrong workload. So I built klein-void around a different target: comfortable body-size prose legibility over long sessions, anchored to Yves Klein's IKB pigment. The first problem I hit was that pure IKB is invisible as text on a dark ground. WCAG gives it a pas…"
+  },
+  {
+    "title": "rotateX()",
+    "link": "https://css-tricks.com/almanac/functions/r/rotatex/",
+    "pubDate": "Wed, 13 May 2026 14:36:54 +0000",
+    "source": "CSS-Tricks",
+    "content": "The rotateX() function rotates an element around the x-axis in a three-dimensional space rotateX() originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "rotateY()",
+    "link": "https://css-tricks.com/almanac/functions/r/rotatey/",
+    "pubDate": "Wed, 13 May 2026 14:33:58 +0000",
+    "source": "CSS-Tricks",
+    "content": "The rotateY() function rotates an element around its vertical y-axis. rotateY() originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "rotateZ()",
+    "link": "https://css-tricks.com/almanac/functions/r/rotatez/",
+    "pubDate": "Wed, 13 May 2026 14:33:03 +0000",
+    "source": "CSS-Tricks",
+    "content": "The rotateZ() function rotates an element around its z-axis, so clockwise or counterclockwise. rotateZ() originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "rotate()",
+    "link": "https://css-tricks.com/almanac/functions/r/rotate/",
+    "pubDate": "Wed, 13 May 2026 14:32:47 +0000",
+    "source": "CSS-Tricks",
+    "content": "The rotate() function spins an element either clockwise or counterclockwise in a 2D plane. rotate() originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Practical Interface Patterns For AI Transparency (Part 2)",
+    "link": "https://smashingmagazine.com/2026/05/practical-interface-patterns-ai-transparency/",
+    "pubDate": "Wed, 13 May 2026 13:00:00 GMT",
+    "source": "Smashing Magazine",
+    "content": "Why traditional loading patterns like spinners fail in agentic AI experiences, and how interface patterns that reveal the system’s process, status, and decision-making can improve transparency and build user trust."
+  },
+  {
+    "title": "Keyboard Navigation Testing: A Developer Complete Guide to WCAG Operability",
+    "link": "https://dev.to/toolkitonline/keyboard-navigation-testing-a-developer-complete-guide-to-wcag-operability-454d",
+    "pubDate": "Wed, 13 May 2026 11:28:26 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Keyboard accessibility is one of the most important — and most neglected — aspects of web accessibility. An estimated 2.5 million Americans have motor disabilities that prevent mouse use. If your site can't be operated entirely by keyboard, you're excluding them completely. WCAG 2.2 Principle 2 (Operable) contains the keyboard requirements: 2.1.1 Keyboard (AA): All functionality must be operable via keyboard 2.1.2 No Keyboard Trap (AA): If focus moves into a component, it must be possible to move it out 2.4.3 Focu…"
+  },
+  {
+    "title": "1004: TanHacked",
+    "link": "https://syntax.fm/1004",
+    "pubDate": "Wed, 13 May 2026 11:00:00 -0000",
+    "source": "Syntax.fm",
+    "content": "Scott and Wes break down the “Mini Shai-Hulud” supply chain attack that compromised TanStack and other popular npm packages through a clever GitHub Actions cache poisoning exploit; a self-propagating worm that stole credentials and persisted through Claude Code hooks and VS Code tasks. They also cover how developers can protect themselves using pnpm’s security defaults, dev containers, and other practical defenses. Show Notes 00:00 Welcome to Syntax! 00:25 Understanding the Shai-Hulud Worm Post Mortem of Shai Hulu…"
+  },
+  {
+    "title": "Accessible and Functional Quantity Spinbutton Pattern",
+    "link": "https://dev.to/micaavigliano/accessible-and-functional-quantity-spinbutton-pattern-3f40",
+    "pubDate": "Wed, 13 May 2026 10:35:07 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "Hey! This is Mica writing, a human not an AI agent (nothing against them, not discrimination of any kind is allowed here). Just a brief disclaimer before starting: this post was non AI-generated (I am not going to lie, I tried to use it for some research but since the errors I found were not properly documented the AI invented answers, lol) because I felt the urgent need to start using my brain and hands to craft something from scratch. If you are a human, let's connect, at the end you will find the ways to reach…"
+  },
+  {
+    "title": "Focus indicators that fail WCAG 1.4.11: real cases and exact fixes",
+    "link": "https://dev.to/a11ysolutions/focus-indicators-that-fail-wcag-1411-real-cases-and-exact-fixes-4aeo",
+    "pubDate": "Wed, 13 May 2026 08:52:26 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "What is a focus indicator — and why does WCAG regulate it? When a user navigates a website using a keyboard, they need to know where they are on the page at all times. The focus indicator is the visual signal that answers that question: the outline, highlight, or state change that appears on the element currently receiving keyboard focus. WCAG Success Criterion 1.4.11 (Non-text Contrast) requires that the visual presentation of UI components, including focus and hover indicators, has a contrast ratio of at least 3…"
+  },
+  {
+    "title": "Online Course Accessibility: A Non-Developer's Guide to Teachable, Kajabi, and Thinkific",
+    "link": "https://dev.to/agentkit/online-course-accessibility-a-non-developers-guide-to-teachable-kajabi-and-thinkific-db0",
+    "pubDate": "Wed, 13 May 2026 05:00:49 +0000",
+    "source": "Dev.to - Accessibility",
+    "content": "If you sell online courses, the first thing that usually surprises you is how much accessibility responsibility still belongs to you after you have chosen a platform. Teachable, Kajabi, Thinkific, Podia, LearnWorlds, and Mighty Networks all market themselves as production-ready. They are, for the parts they control. But the parts you upload -- your video lessons, your PDF worksheets, your sales pages, your email funnels -- are yours. And those are the parts that draw demand letters. This guide is written for creat…"
+  },
+  {
+    "title": "A new HTML element for installing web apps",
+    "link": "https://frontendfoc.us/issues/741",
+    "pubDate": "Wed, 13 May 2026 00:00:00 +0000",
+    "source": "Frontend Focus",
+    "content": "🚀 Frontend Focus #​741 — May 13, 2026 | Read on the web Safari 26.5 Released: Here's the WebKit Features — Beyond the usual polish, 26.5 includes support for the :open pseudo-class, improvements to the CSS random() function, anchor positioning fixes, support for color-interpolation in SVG gradients, and Origin API support. Jen Simmons 🧭 In related Safari news, the latest Safari Technology Preview Release is out now. Prepare for Big Tech Frontend Interviews — Join Evgenii Ray for this detailed video course and la…"
+  },
+  {
+    "title": "Soon We Can Finally Banish JavaScript to the ShadowRealm",
+    "link": "https://css-tricks.com/soon-we-can-finally-banish-javascript-to-the-shadowrealm/",
+    "pubDate": "Tue, 12 May 2026 13:59:35 +0000",
+    "source": "CSS-Tricks",
+    "content": "The proposed ShadowRealm API introduces a new kind of realm specifically designed for isolation, and only that. Soon We Can Finally Banish JavaScript to the ShadowRealm originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  },
+  {
+    "title": "Cryptographically valid malware hits npm",
+    "link": "https://javascriptweekly.com/issues/785",
+    "pubDate": "Tue, 12 May 2026 00:00:00 +0000",
+    "source": "JavaScript Weekly",
+    "content": "#​785 — May 12, 2026 Read on the Web JavaScript Weekly Anatomy of the TanStack npm Compromise — A new strain of the Shai-Hulud worm pushed malicious versions of TanStack packages to npm yesterday (containing a tripwire that would delete files if it detected token revocation), though it hit ~170 other packages too. Maintainer credentials weren’t stolen, with the attack instead chaining pull_request_target abuse, cache poisoning, and OIDC token theft from CI memory. Tanner Linsley ❓ What should you do? Consider an i…"
+  },
+  {
+    "title": "1003: Skills Skills Skills",
+    "link": "https://syntax.fm/1003",
+    "pubDate": "Mon, 11 May 2026 11:00:00 -0000",
+    "source": "Syntax.fm",
+    "content": "Scott and Wes chat all things agent skills for web developers, sharing their favorites for everything from CSS animations and HTML generation to logo extraction, marketing copy, and video creation. Whether you’re just getting started with AI-powered development or looking to level up your workflow, this episode is packed with practical skills you can put to use today. Show Notes 00:00 Welcome to Syntax! 01:33 Hot Tip Skill 05:55 CSS Motion Systems 08:17 Agent Browser Skill 09:30 HTML Skill 12:01 Extract Logos Skil…"
+  },
+  {
+    "title": "714: Camping, Burnout, and Chris’ CSS Talk",
+    "link": "https://shoptalkshow.com/714/",
+    "pubDate": "Mon, 11 May 2026 07:33:28 +0000",
+    "source": "ShopTalk Show",
+    "content": "Show Description How responsible should you be for fixing your own website for others, Dave's got a blacklog of blog posts, Chris got a camper van, debating burnout even when you love your work, a weekly AI doomer check in, and Chris has a talk for Smashing Magazine happening by the time you hear this. Listen on Website Watch on YouTube Links Winnebago Revel | AWD Off-Grid Camper Van Naz Hamid Opus OP4 Camper | Premium Off-Road Inflatable Trailer USA HealthyGamerGG - YouTube Smashing Conferences — Smashing Magazin…"
+  },
+  {
+    "title": "How To Build Polished WooCommerce Sites Fast with Blocksy",
+    "link": "https://feedpress.me/link/24028/17338167/how-to-build-polished-woocommerce-sites-fast-with-blocksy",
+    "pubDate": "Sat, 09 May 2026 00:00:00 GMT",
+    "source": "CSS Weekly",
+    "content": "Learn how to build polished WooCommerce and business sites fast with Blocksy WordPress theme."
+  },
+  {
+    "title": "Using CSS corner-shape For Folded Corners",
+    "link": "https://css-tricks.com/using-css-corner-shape-for-folded-corners/",
+    "pubDate": "Fri, 08 May 2026 13:54:10 +0000",
+    "source": "CSS-Tricks",
+    "content": "I came across Kitty Giraudel’s folded corners technique. I’ve been on a bit of a corner-shape kick lately, so I figured that corner-shape could be used to create folded corners as well. Using CSS corner-shape For Folded Corners originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well."
+  }
+]
