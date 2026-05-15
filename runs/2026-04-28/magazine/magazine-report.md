@@ -278,8 +278,8 @@ AI 디자인 워크플로우를 도입할 때는 생성 화면보다 편집 화�
 - 출처 유형: guide
 - 출처: Nielsen Norman Group
 - 출처 URL: https://www.nngroup.com/articles/ai-chatbots-design-guidelines/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication
-- 이미지: 
-- 이미지 설명: 이미지 확인 필요
+- 이미지: https://media.nngroup.com/media/articles/opengraph_images/10_Guidelines-Cards.png
+- 이미지 설명: Nielsen Norman Group 원문 og:image — AI 챗봇 설계 10개 가이드라인 카드
 
 ##### 요약
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T05:48:41.049916+00:00",
+  "generatedAt": "2026-05-15T05:54:18.198693+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -790,8 +790,8 @@
         "route": "/articles/2026-05-15-06",
         "href": "/articles/2026-05-15-06",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-06",
-        "image": "",
-        "imageCaption": "이미지 확보 메모: 원문(ditoday.com) OG 이미지 자동 추출 실패. 카카오톡 공식 릴리즈 노트 또는 디투데이 원문에서 직접 확보 필요.",
+        "image": "https://ditoday.com/wp-content/uploads/2026/05/kakao-emotion.jpg",
+        "imageCaption": "디투데이 원문 og:image — 카카오톡 이모티콘·리액션 업데이트 커버",
         "tags": [
           "카카오톡",
           "이모티콘",
@@ -6599,8 +6599,8 @@
         "route": "/articles/2026-04-28-07",
         "href": "/articles/2026-04-28-07",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-28-07",
-        "image": "",
-        "imageCaption": "이미지 확인 필요",
+        "image": "https://media.nngroup.com/media/articles/opengraph_images/10_Guidelines-Cards.png",
+        "imageCaption": "Nielsen Norman Group 원문 og:image — AI 챗봇 설계 10개 가이드라인 카드",
         "tags": [
           "AI chatbots",
           "prompt suggestions",
