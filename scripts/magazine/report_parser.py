@@ -964,7 +964,7 @@ def issue_area_label(issue: Issue) -> str:
 
 
 SERVICE_ALLOWED_CATEGORIES = {
-    "platform", "fintech", "ecommerce", "fashion", "beauty", "ai", "etc",
+    "platform", "fintech", "ecommerce", "fashion", "beauty", "ai", "insight", "etc",
 }
 DESIGN_ALLOWED_CATEGORIES = {
     "ai", "global", "insight", "design_system", "tool", "update", "etc",
@@ -991,6 +991,20 @@ CATEGORY_ALIASES = {
     "beauty": "beauty",
     "global": "global",
     "design_system": "design_system", "designsystem": "design_system",
+    # service subcategory aliases
+    "core_ecommerce": "ecommerce", "commerce_adjacent": "ecommerce",
+    "consumer_research": "insight", "ux_research": "insight",
+    # design subcategory aliases
+    "design_ai": "ai", "design_ai_agent_ux": "ai", "design_ai_ux_pattern": "ai",
+    "design_messaging_ux": "update", "design_ux": "update",
+    "brand_expression": "etc", "visual_trend": "etc", "web_reference": "etc",
+    # dev subcategory aliases (dev/xxx format → dev_xxx after normalize)
+    "dev_css": "html_css", "dev_typography": "html_css", "dev_pwa": "html_css",
+    "dev_react": "javascript", "dev_js": "javascript",
+    "dev_ai": "ai", "dev_ai_infrastructure": "ai",
+    "dev_security": "etc", "dev_infrastructure": "etc",
+    "typography": "html_css", "pwa": "html_css",
+    "react": "javascript", "security": "etc",
 }
 
 
