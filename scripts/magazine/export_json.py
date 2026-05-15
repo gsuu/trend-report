@@ -77,6 +77,15 @@ def report_payload_from_path(report_path: Path) -> dict[str, object]:
     return payload
 
 
+def safe_report_payload(path: Path) -> "dict[str, object] | None":
+    try:
+        return report_payload_from_path(path)
+    except SystemExit as exc:
+        import sys
+        print(f"[skip] {path}: {exc}", file=sys.stderr)
+        return None
+
+
 def main() -> None:
     args = parse_args()
     report_paths = resolve_report_paths(args.reports)
@@ -88,7 +97,7 @@ def main() -> None:
     report_parser.clean_markdown = clean_markdown
     report_parser.issue_source_title = lambda issue: issue.meta.get("출처", "")
 
-    report_payloads = [report_payload_from_path(path) for path in report_paths]
+    report_payloads = [p for p in (safe_report_payload(path) for path in report_paths) if p is not None]
     latest_slug = max((str(payload.get("slug") or "") for payload in report_payloads), default="")
     issues = [
         issue

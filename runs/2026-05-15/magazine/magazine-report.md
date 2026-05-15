@@ -492,7 +492,7 @@ PWA 설치 버튼은 지금까지 브라우저마다 진입점 위치와 시점�
 - 출처 URL: https://tanstack.com/blog/npm-supply-chain-compromise-postmortem
 - 이미지: 
 - 이미지 설명: 이미지 확보 메모: 원문(tanstack.com) OG 이미지 없음. 공격 흐름 다이어그램 등 직접 제작하거나 GitHub Security Advisory GHSA-g7cv-rxg3-hmpx에서 확보 가능.
-- 요약: TanStack은 2026년 5월 11일 19시 20분~26분 UTC, 약 6분 동안 42개 npm 패키지 84개 버전이 악성 코드로 오염된 사건의 사후 분석 보고서를 공개했다. `pull_request_target` 트리거와 GitHub Actions 캐시 중독, OIDC 토큰 탈취가 연쇄적으로 연결된 공격 경로를 해부한다.
+- 요약: TanStack은 5월 11일 19시 20분~26분 UTC, 약 6분 동안 42개 npm 패키지 84개 버전이 악성 코드로 오염된 사건의 사후 분석 보고서를 공개했다. `pull_request_target` 트리거와 GitHub Actions 캐시 중독, OIDC 토큰 탈취가 연쇄적으로 연결된 공격 경로를 해부한다.
 
 
 ##### 용어 설명

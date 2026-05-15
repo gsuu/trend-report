@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T05:37:56.548049+00:00",
+  "generatedAt": "2026-05-15T05:44:52.242230+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -1615,7 +1615,7 @@
           "pull_request_target"
         ],
         "takeawayHtml": "TanStack npm 공급망 침해: pull_request_target · 캐시 중독 · OIDC 토큰 탈취 연쇄 공격 사후 분석",
-        "deckHtml": "TanStack은 2026년 5월 11일 19시 20분~26분 UTC, 약 6분 동안 42개 npm 패키지 84개 버전이 악성 코드로 오염된 사건의 사후 분석 보고서를 공개했다. pull_request_target 트리거와 GitHub Actions 캐시 중독, OIDC 토큰 탈취가 연쇄적으로 연결된 공격 경로를 해부한다.",
+        "deckHtml": "TanStack은 5월 11일 19시 20분~26분 UTC, 약 6분 동안 42개 npm 패키지 84개 버전이 악성 코드로 오염된 사건의 사후 분석 보고서를 공개했다. pull_request_target 트리거와 GitHub Actions 캐시 중독, OIDC 토큰 탈취가 연쇄적으로 연결된 공격 경로를 해부한다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -4798,7 +4798,7 @@
         "route": "/articles/2026-05-06-21",
         "href": "/articles/2026-05-06-21",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-21",
-        "image": "https://www.intodesignsystems.com/og-image-design-teams-ai-2026.jpg",
+        "image": "https://www.intodesignsystems.com/_next/image?url=%2Fblog%2Fimg%2Fdesign-teams-shipping-with-ai-cover.jpg&w=1200&q=90",
         "imageCaption": "Into Design Systems 블로그 og:image — AI Design Systems Conference 2026 발표 묶음 커버",
         "tags": [
           "디자인 시스템",

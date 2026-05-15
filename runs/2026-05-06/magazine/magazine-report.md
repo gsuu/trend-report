@@ -722,7 +722,7 @@ Slots를 도입할 때 가장 먼저 정해야 할 기준은 "구조에 속하�
 - 출처 유형: blog_opinion
 - 출처: Into Design Systems (Sil Bormüller)
 - 출처 URL: https://www.intodesignsystems.com/blog/design-teams-shipping-with-ai-2026
-- 이미지: https://www.intodesignsystems.com/og-image-design-teams-ai-2026.jpg
+- 이미지: https://www.intodesignsystems.com/_next/image?url=%2Fblog%2Fimg%2Fdesign-teams-shipping-with-ai-cover.jpg&w=1200&q=90
 - 이미지 설명: Into Design Systems 블로그 og:image — AI Design Systems Conference 2026 발표 묶음 커버
 - 요약: WhatsApp·Miro·Atlassian 디자인 팀이 AI Design Systems Conference 2026에서 공유한 'AI와 함께 출시하는 법'을 정리한 후기 글이다. 핵심은 디자인 시스템이 AI의 가드레일 역할을 할 때만 결과가 예측 가능해진다는 것.
 
