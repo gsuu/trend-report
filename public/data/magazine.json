@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T06:14:04.742474+00:00",
+  "generatedAt": "2026-05-15T06:15:09.601558+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -461,177 +461,6 @@
       },
       {
         "number": "04",
-        "platform": "Smashing Magazine",
-        "areaKey": "design",
-        "area": "Design",
-        "categoryKey": "etc",
-        "category": "ETC",
-        "sourceType": "guide",
-        "sourceTypeLabel": "방법론/가이드",
-        "publicationDate": "2026-05-15",
-        "date": "2026-05-15",
-        "route": "/articles/2026-05-15-04",
-        "href": "/articles/2026-05-15-04",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-04",
-        "image": "https://files.smashing.media/articles/practical-interface-patterns-ai-transparency/1-perplexity-ai.png",
-        "imageCaption": "Perplexity AI의 실시간 검색 활동 표시 화면. AI가 현재 어떤 검색어로 무엇을 조회하고 있는지 목록 형태로 나타낸다.",
-        "tags": [
-          "AI UX",
-          "에이전틱 인터페이스",
-          "진행 상태 패턴"
-        ],
-        "takeawayHtml": "AI 에이전트가 일하는 동안 화면에 무엇을 보여줄 것인가 — 4가지 투명성 패턴 가이드",
-        "deckHtml": "Smashing Magazine이 AI 에이전트 처리 중 스피너가 실패하는 이유와, 상황에 따라 선택할 수 있는 네 가지 투명성 패턴(Living Breadcrumb, Dynamic Checklist, Thinking Toggle, Audit Trail)을 정리한 실무 가이드.",
-        "facts": [
-          {
-            "label": "발행날짜",
-            "valueHtml": "2026-05-15"
-          },
-          {
-            "label": "태그",
-            "valueHtml": "AI UX, 에이전틱 인터페이스, 진행 상태 패턴, 투명성 설계"
-          },
-          {
-            "label": "국가",
-            "valueHtml": "GLOBAL"
-          },
-          {
-            "label": "카테고리",
-            "valueHtml": "design/ai_ux_pattern"
-          },
-          {
-            "label": "직무 태그",
-            "valueHtml": "웹디자인, 웹서비스기획"
-          },
-          {
-            "label": "출처",
-            "valueHtml": "Smashing Magazine"
-          }
-        ],
-        "sourceUrl": "https://smashingmagazine.com/2026/05/practical-interface-patterns-ai-transparency/",
-        "sourceTitle": "Smashing Magazine",
-        "referenceLinks": [],
-        "sections": [
-          {
-            "title": "요약",
-            "className": "article-section is-bullet-summary",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "스피너와 프로그레스 바는 파일 다운로드처럼 처리 시간이 균일할 때 만들어진 패턴이다. AI 에이전트가 20초 동안 추론하는 동안 스피너만 띄우면, 사용자는 시스템이 멈춘 건지 실패한 건지 구분하지 못한다."
-              },
-              {
-                "kind": "list",
-                "html": "상태 메시지를 &#x27;Action Word + Specific Item + Limits/Rules&#x27; 구조로 구성하면 AI가 요청을 올바르게 이해했는지, 설정한 범위 안에서 작동하고 있는지를 사용자가 실시간으로 확인할 수 있다. 예시: &quot;Scanning the prices on Lufthansa and United to find anything under $600.&quot;"
-              },
-              {
-                "kind": "list",
-                "html": "**Living Breadcrumb** — 앱 테두리나 메뉴 영역에서 맥박처럼 반응하는 인디케이터. &quot;Reading email → Drafting reply → Checking tone&quot; 방식으로 단계가 부드럽게 전환된다. 사용자의 주의를 빼앗지 않으면서 백그라운드 저우선순위 작업의 진행 상태를 표시하는 데 적합하다."
-              },
-              {
-                "kind": "list",
-                "html": "**Dynamic Checklist** — 단계별 체크리스트로 현재 상태와 남은 과정을 동시에 보여준다. Devin AI가 실제로 구현한 방식으로, 금융 거래나 여행 예약처럼 처리 시간이 예측 불가능한 고위험 다단계 작업에서 사용자 이탈을 줄인다."
-              },
-              {
-                "kind": "list",
-                "html": "**Thinking Toggle** — 진행 상태 메시지를 확장 가능한 컨트롤로 바꿔, 원시 터미널 로그를 선택적으로 열어볼 수 있게 한다. 코드 생성이나 시장 조사 같은 전문가 도구에 적합하며, 비즈니스 로직·보안 토큰 노출을 막기 위해 로그를 반드시 정제해야 한다."
-              },
-              {
-                "kind": "list",
-                "html": "**Audit Trail** — 작업이 완료된 결과 화면에서 의사결정 로직을 재검토할 수 있도록 한다. &quot;See how this price was calculated&quot;, &quot;View search sources&quot; 같은 링크가 그 역할을 한다."
-              },
-              {
-                "kind": "list",
-                "html": "원문은 패턴 선택 기준을 리스크와 작업 성격으로 나눈 표로 정리한다. Living Breadcrumb은 저위험 배경 작업, Dynamic Checklist는 가변 시간의 고위험 플로우, Thinking Toggle은 전문가 도구, Audit Trail은 모든 결과의 사후 검토에 대응한다."
-              }
-            ],
-            "itemsHtml": [
-              "스피너와 프로그레스 바는 파일 다운로드처럼 처리 시간이 균일할 때 만들어진 패턴이다. AI 에이전트가 20초 동안 추론하는 동안 스피너만 띄우면, 사용자는 시스템이 멈춘 건지 실패한 건지 구분하지 못한다.",
-              "상태 메시지를 &#x27;Action Word + Specific Item + Limits/Rules&#x27; 구조로 구성하면 AI가 요청을 올바르게 이해했는지, 설정한 범위 안에서 작동하고 있는지를 사용자가 실시간으로 확인할 수 있다. 예시: &quot;Scanning the prices on Lufthansa and United to find anything under $600.&quot;",
-              "**Living Breadcrumb** — 앱 테두리나 메뉴 영역에서 맥박처럼 반응하는 인디케이터. &quot;Reading email → Drafting reply → Checking tone&quot; 방식으로 단계가 부드럽게 전환된다. 사용자의 주의를 빼앗지 않으면서 백그라운드 저우선순위 작업의 진행 상태를 표시하는 데 적합하다.",
-              "**Dynamic Checklist** — 단계별 체크리스트로 현재 상태와 남은 과정을 동시에 보여준다. Devin AI가 실제로 구현한 방식으로, 금융 거래나 여행 예약처럼 처리 시간이 예측 불가능한 고위험 다단계 작업에서 사용자 이탈을 줄인다.",
-              "**Thinking Toggle** — 진행 상태 메시지를 확장 가능한 컨트롤로 바꿔, 원시 터미널 로그를 선택적으로 열어볼 수 있게 한다. 코드 생성이나 시장 조사 같은 전문가 도구에 적합하며, 비즈니스 로직·보안 토큰 노출을 막기 위해 로그를 반드시 정제해야 한다.",
-              "**Audit Trail** — 작업이 완료된 결과 화면에서 의사결정 로직을 재검토할 수 있도록 한다. &quot;See how this price was calculated&quot;, &quot;View search sources&quot; 같은 링크가 그 역할을 한다.",
-              "원문은 패턴 선택 기준을 리스크와 작업 성격으로 나눈 표로 정리한다. Living Breadcrumb은 저위험 배경 작업, Dynamic Checklist는 가변 시간의 고위험 플로우, Thinking Toggle은 전문가 도구, Audit Trail은 모든 결과의 사후 검토에 대응한다."
-            ]
-          },
-          {
-            "title": "인사이트",
-            "className": "article-section is-deep-dive",
-            "prose": true,
-            "blocks": [
-              {
-                "kind": "quote",
-                "html": "AI 에이전트 화면에서 &quot;처리 중&quot;을 표시하는 방법은 리스크 수준과 작업 복잡도에 따라 달라진다. 스피너 하나로 해결하려 하면 사용자는 결과를 믿지 못하거나, 이미 끝난 작업을 수동으로 검증하기 시작한다."
-              },
-              {
-                "kind": "subhead",
-                "html": "왜 참고할 만한가"
-              },
-              {
-                "kind": "paragraph",
-                "html": "이 가이드는 AI 기능을 실제 화면에 붙이려는 설계자에게 패턴 선택의 판단 근거를 준다. 에이전틱 경험에서는 &quot;AI가 지금 무엇을 하고 있는가&quot;를 어떤 형식으로 노출할지가 핵심 설계 결정이 된다. 이 글은 그 결정을 리스크와 작업 유형 두 축으로 정리해 선택 기준을 명확히 제시한다."
-              },
-              {
-                "kind": "subhead",
-                "html": "어디에 적용할 수 있을까"
-              },
-              {
-                "kind": "paragraph",
-                "html": "AI 추천 결과가 생성되는 동안의 검색 화면, 주문·결제·예약 처리 진행 중 상태 화면, AI 기반 문서 작성·분석 도구의 처리 로그 노출 방식 전반에 직접 대입할 수 있다. 특히 주문 처리나 금융 거래처럼 중간에 실패 단계가 섞일 수 있는 흐름에서 Dynamic Checklist를 쓰면, 부분 성공 시 어느 단계만 재시도해야 하는지를 사용자가 스스로 확인할 수 있게 된다."
-              },
-              {
-                "kind": "subhead",
-                "html": "디자인 관점"
-              },
-              {
-                "kind": "paragraph",
-                "html": "네 패턴은 화면 위계에서 서로 다른 자리를 차지한다. Living Breadcrumb은 주요 콘텐츠 영역을 방해하지 않는 앱 테두리나 상태바에 위치하고, Dynamic Checklist는 진행 중인 작업과 나란히 메인 화면에 노출된다. Thinking Toggle은 기본 상태에서 접혀 있어 원하는 사용자만 열어보는 구조이며, Audit Trail은 완료 이후 결과 화면에서 접근 가능한 보조 링크 형태다. 어떤 패턴을 쓰든 상태 메시지는 &#x27;Action Word + Specific Item + Limits/Rules&#x27; 세 요소를 갖춰야 사용자가 AI의 작동 범위를 읽을 수 있다."
-              },
-              {
-                "kind": "subhead",
-                "html": "점검 질문"
-              },
-              {
-                "kind": "list",
-                "html": "현재 서비스에서 AI가 처리를 완료하기까지 사용자가 기다리는 구간이 있다면, 그 구간의 상태 메시지가 &#x27;Action Word + Specific Item + Limits/Rules&#x27; 세 요소를 갖추고 있는가?"
-              },
-              {
-                "kind": "list",
-                "html": "AI 처리 결과가 나온 뒤, 사용자가 &quot;이 결과가 왜 이렇게 나왔는지&quot; 확인할 수 있는 Audit Trail이 화면에 존재하는가?"
-              },
-              {
-                "kind": "list",
-                "html": "고위험 다단계 처리(결제, 예약, 신청)에서 중간 단계 실패가 발생했을 때, 사용자가 어느 단계에서 무엇이 실패했는지 화면에서 파악할 수 있는가?"
-              },
-              {
-                "kind": "list",
-                "html": "Thinking Toggle처럼 처리 로그를 선택적으로 노출하는 구조를 도입할 경우, 비즈니스 로직이나 내부 데이터 구조가 로그에 그대로 노출되지 않도록 정제 기준이 마련되어 있는가?"
-              }
-            ],
-            "itemsHtml": [
-              "@@quote@@AI 에이전트 화면에서 &quot;처리 중&quot;을 표시하는 방법은 리스크 수준과 작업 복잡도에 따라 달라진다. 스피너 하나로 해결하려 하면 사용자는 결과를 믿지 못하거나, 이미 끝난 작업을 수동으로 검증하기 시작한다.",
-              "@@subhead@@왜 참고할 만한가",
-              "@@paragraph@@이 가이드는 AI 기능을 실제 화면에 붙이려는 설계자에게 패턴 선택의 판단 근거를 준다. 에이전틱 경험에서는 &quot;AI가 지금 무엇을 하고 있는가&quot;를 어떤 형식으로 노출할지가 핵심 설계 결정이 된다. 이 글은 그 결정을 리스크와 작업 유형 두 축으로 정리해 선택 기준을 명확히 제시한다.",
-              "@@subhead@@어디에 적용할 수 있을까",
-              "@@paragraph@@AI 추천 결과가 생성되는 동안의 검색 화면, 주문·결제·예약 처리 진행 중 상태 화면, AI 기반 문서 작성·분석 도구의 처리 로그 노출 방식 전반에 직접 대입할 수 있다. 특히 주문 처리나 금융 거래처럼 중간에 실패 단계가 섞일 수 있는 흐름에서 Dynamic Checklist를 쓰면, 부분 성공 시 어느 단계만 재시도해야 하는지를 사용자가 스스로 확인할 수 있게 된다.",
-              "@@subhead@@디자인 관점",
-              "@@paragraph@@네 패턴은 화면 위계에서 서로 다른 자리를 차지한다. Living Breadcrumb은 주요 콘텐츠 영역을 방해하지 않는 앱 테두리나 상태바에 위치하고, Dynamic Checklist는 진행 중인 작업과 나란히 메인 화면에 노출된다. Thinking Toggle은 기본 상태에서 접혀 있어 원하는 사용자만 열어보는 구조이며, Audit Trail은 완료 이후 결과 화면에서 접근 가능한 보조 링크 형태다. 어떤 패턴을 쓰든 상태 메시지는 &#x27;Action Word + Specific Item + Limits/Rules&#x27; 세 요소를 갖춰야 사용자가 AI의 작동 범위를 읽을 수 있다.",
-              "@@subhead@@점검 질문",
-              "@@list@@현재 서비스에서 AI가 처리를 완료하기까지 사용자가 기다리는 구간이 있다면, 그 구간의 상태 메시지가 &#x27;Action Word + Specific Item + Limits/Rules&#x27; 세 요소를 갖추고 있는가?",
-              "@@list@@AI 처리 결과가 나온 뒤, 사용자가 &quot;이 결과가 왜 이렇게 나왔는지&quot; 확인할 수 있는 Audit Trail이 화면에 존재하는가?",
-              "@@list@@고위험 다단계 처리(결제, 예약, 신청)에서 중간 단계 실패가 발생했을 때, 사용자가 어느 단계에서 무엇이 실패했는지 화면에서 파악할 수 있는가?",
-              "@@list@@Thinking Toggle처럼 처리 로그를 선택적으로 노출하는 구조를 도입할 경우, 비즈니스 로직이나 내부 데이터 구조가 로그에 그대로 노출되지 않도록 정제 기준이 마련되어 있는가?"
-            ]
-          }
-        ],
-        "id": "2026-05-15-04",
-        "issueSlug": "2026-05-15",
-        "articleSlug": "2026-05-15-04"
-      },
-      {
-        "number": "05",
         "platform": "Nielsen Norman Group",
         "areaKey": "design",
         "area": "Design",
@@ -641,9 +470,9 @@
         "sourceTypeLabel": "리서치/리포트",
         "publicationDate": "2026-05-15",
         "date": "2026-05-15",
-        "route": "/articles/2026-05-15-05",
-        "href": "/articles/2026-05-15-05",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-05",
+        "route": "/articles/2026-05-15-04",
+        "href": "/articles/2026-05-15-04",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-04",
         "image": "https://media.nngroup.com/media/editor/2026/04/30/ai-agent-type-or-dictate.jpg",
         "imageCaption": "NN/g 원문 삽입 이미지 — Qwen 에이전트의 채팅 입력 vs. GUI 카테고리 버튼 진입점 비교 화면",
         "tags": [
@@ -772,12 +601,12 @@
             ]
           }
         ],
-        "id": "2026-05-15-05",
+        "id": "2026-05-15-04",
         "issueSlug": "2026-05-15",
-        "articleSlug": "2026-05-15-05"
+        "articleSlug": "2026-05-15-04"
       },
       {
-        "number": "06",
+        "number": "05",
         "platform": "디투데이",
         "areaKey": "design",
         "area": "Design",
@@ -787,9 +616,9 @@
         "sourceTypeLabel": "기사/뉴스",
         "publicationDate": "2026-05-15",
         "date": "2026-05-15",
-        "route": "/articles/2026-05-15-06",
-        "href": "/articles/2026-05-15-06",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-06",
+        "route": "/articles/2026-05-15-05",
+        "href": "/articles/2026-05-15-05",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-05",
         "image": "https://ditoday.com/wp-content/uploads/2026/05/kakao-emotion.jpg",
         "imageCaption": "디투데이 원문 og:image — 카카오톡 이모티콘·리액션 업데이트 커버",
         "tags": [
@@ -928,12 +757,12 @@
             ]
           }
         ],
-        "id": "2026-05-15-06",
+        "id": "2026-05-15-05",
         "issueSlug": "2026-05-15",
-        "articleSlug": "2026-05-15-06"
+        "articleSlug": "2026-05-15-05"
       },
       {
-        "number": "07",
+        "number": "06",
         "platform": "한국디자인진흥원 디자인DB",
         "areaKey": "design",
         "area": "Design",
@@ -943,9 +772,9 @@
         "sourceTypeLabel": "기사/뉴스",
         "publicationDate": "2026-05-15",
         "date": "2026-05-14",
-        "route": "/articles/2026-05-15-07",
-        "href": "/articles/2026-05-15-07",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-07",
+        "route": "/articles/2026-05-15-06",
+        "href": "/articles/2026-05-15-06",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-06",
         "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260514101137460_6822.0.png",
         "imageCaption": "한국디자인진흥원 디자인DB, Gotham Variable 출시 소개 이미지",
         "tags": [
@@ -1089,12 +918,12 @@
             ]
           }
         ],
-        "id": "2026-05-15-07",
+        "id": "2026-05-15-06",
         "issueSlug": "2026-05-15",
-        "articleSlug": "2026-05-15-07"
+        "articleSlug": "2026-05-15-06"
       },
       {
-        "number": "08",
+        "number": "07",
         "platform": "CSS-Tricks",
         "areaKey": "dev",
         "area": "DEV",
@@ -1104,9 +933,9 @@
         "sourceTypeLabel": "블로그/오피니언",
         "publicationDate": "2026-05-15",
         "date": "2026-05-14",
-        "route": "/articles/2026-05-15-08",
-        "href": "/articles/2026-05-15-08",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-08",
+        "route": "/articles/2026-05-15-07",
+        "href": "/articles/2026-05-15-07",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-07",
         "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/s_7E3C7C97B7D8D52C02F5092EAFB87771069C4AA5BAFDB9C502DA16E57E7200D2_1776091945816_gsp-sale-prices.png",
         "imageCaption": "CSS-Tricks 원문 대표 이미지 — CSS로 할인가를 계산하고 표시하는 예시 화면",
         "tags": [
@@ -1249,12 +1078,12 @@
             ]
           }
         ],
-        "id": "2026-05-15-08",
+        "id": "2026-05-15-07",
         "issueSlug": "2026-05-15",
-        "articleSlug": "2026-05-15-08"
+        "articleSlug": "2026-05-15-07"
       },
       {
-        "number": "09",
+        "number": "08",
         "platform": "Anthropic (Code with Claude SF)",
         "areaKey": "dev",
         "area": "DEV",
@@ -1264,9 +1093,9 @@
         "sourceTypeLabel": "기사/뉴스",
         "publicationDate": "2026-05-15",
         "date": "2026-05-06",
-        "route": "/articles/2026-05-15-09",
-        "href": "/articles/2026-05-15-09",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-09",
+        "route": "/articles/2026-05-15-08",
+        "href": "/articles/2026-05-15-08",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-08",
         "image": "https://claude.com/images/code-with-claude-sf-og.jpg",
         "imageCaption": "Code with Claude San Francisco 이벤트 공식 페이지 대표 이미지",
         "tags": [
@@ -1414,12 +1243,12 @@
             ]
           }
         ],
-        "id": "2026-05-15-09",
+        "id": "2026-05-15-08",
         "issueSlug": "2026-05-15",
-        "articleSlug": "2026-05-15-09"
+        "articleSlug": "2026-05-15-08"
       },
       {
-        "number": "10",
+        "number": "09",
         "platform": "Chrome Developers Blog",
         "areaKey": "dev",
         "area": "DEV",
@@ -1429,9 +1258,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-05-15",
         "date": "2026-05-15",
-        "route": "/articles/2026-05-15-10",
-        "href": "/articles/2026-05-15-10",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-10",
+        "route": "/articles/2026-05-15-09",
+        "href": "/articles/2026-05-15-09",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-09",
         "image": "https://developer.chrome.com/static/blog/install-element-ot/image/fig1.png",
         "imageCaption": "Chrome Developers Blog 원문 본문 이미지",
         "tags": [
@@ -1589,12 +1418,12 @@
             ]
           }
         ],
-        "id": "2026-05-15-10",
+        "id": "2026-05-15-09",
         "issueSlug": "2026-05-15",
-        "articleSlug": "2026-05-15-10"
+        "articleSlug": "2026-05-15-09"
       },
       {
-        "number": "11",
+        "number": "10",
         "platform": "CSS-Tricks",
         "areaKey": "dev",
         "area": "DEV",
@@ -1604,9 +1433,9 @@
         "sourceTypeLabel": "방법론/가이드",
         "publicationDate": "2026-05-15",
         "date": "2026-05-15",
-        "route": "/articles/2026-05-15-11",
-        "href": "/articles/2026-05-15-11",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-11",
+        "route": "/articles/2026-05-15-10",
+        "href": "/articles/2026-05-15-10",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-10",
         "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/s_4309AEC000A3E54B3EAE7D9665BB7D541E09DE1556E769AE721013146BE52BD2_1775704329444_6.png",
         "imageCaption": "CSS-Tricks 원문 대표 이미지, corner-shape bevel로 구현한 폴드 카드 데모",
         "tags": [
@@ -1764,12 +1593,12 @@
             ]
           }
         ],
-        "id": "2026-05-15-11",
+        "id": "2026-05-15-10",
         "issueSlug": "2026-05-15",
-        "articleSlug": "2026-05-15-11"
+        "articleSlug": "2026-05-15-10"
       },
       {
-        "number": "12",
+        "number": "11",
         "platform": "React Doctor",
         "areaKey": "dev",
         "area": "DEV",
@@ -1779,9 +1608,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-05-15",
         "date": "2026-05-15",
-        "route": "/articles/2026-05-15-12",
-        "href": "/articles/2026-05-15-12",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-12",
+        "route": "/articles/2026-05-15-11",
+        "href": "/articles/2026-05-15-11",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-11",
         "image": "",
         "imageCaption": "이미지 확보 메모: 원문(react.doctor) OG 이미지 없음. 공식 사이트 스크린샷 또는 CLI 실행 결과 화면으로 대체 가능.",
         "tags": [
@@ -1919,9 +1748,9 @@
             ]
           }
         ],
-        "id": "2026-05-15-12",
+        "id": "2026-05-15-11",
         "issueSlug": "2026-05-15",
-        "articleSlug": "2026-05-15-12"
+        "articleSlug": "2026-05-15-11"
       },
       {
         "number": "00",
