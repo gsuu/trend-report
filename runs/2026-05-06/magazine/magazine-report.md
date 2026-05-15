@@ -538,8 +538,8 @@ C2C 일자리 매칭은 두 가지 마찰을 동시에 안고 있다. 구인자�
 - 출처 유형: news
 - 출처: DIGITAL iNSIGHT
 - 출처 URL: https://ditoday.com/구직-활동-편의성-높인다-알바천국-이력서-서비스-ui/
-- 이미지: https://ditoday.com/wp-content/uploads/2019/11/di_facebook.jpg
-- 이미지 설명: DIGITAL iNSIGHT 본문 상단 이미지. 알바천국 이력서 화면 스크린샷.
+- 이미지: https://ditoday.com/wp-content/uploads/2026/05/%EC%82%AC%EC%A7%84%EC%9E%90%EB%A3%8C-%EC%9D%B4%EB%A0%A5%EC%84%9C-%EC%84%9C%EB%B9%84%EC%8A%A4-UI%C2%B7UX-%EA%B0%9C%ED%8E%B8-1.jpg.webp
+- 이미지 설명: DIGITAL iNSIGHT 원문 사진자료 — 알바천국 이력서 서비스 UI·UX 개편 화면
 - 요약: 알바천국이 이력서 등록 단계를 핵심 항목만 받는 진입로와 자동 입력·진행률 안내로 나눠 다시 짰다.
 
 ##### 요약
@@ -646,8 +646,8 @@ Codex의 펫 자체보다 그 뒤에 깔린 패턴이 핵심이다. 긴 작업�
 - 출처 유형: release_note
 - 출처: Figma Blog (Zoë Adelman, Sarah Kelly)
 - 출처 URL: https://www.figma.com/blog/supercharge-your-design-system-with-slots/
-- 이미지: https://www.figma.com/blog/supercharge-your-design-system-with-slots/og-image
-- 이미지 설명: Figma 공식 블로그 og:image
+- 이미지: https://cdn.sanity.io/images/599r6htc/regionalized/3b967a15c2bee32ae90ca07e805c6375437a617e-1184x624.png?w=804&q=75&fit=max&auto=format&dpr=2
+- 이미지 설명: Figma 공식 블로그 본문 이미지 — Slots 기능 UI 설명 화면
 - 요약: Figma Slots는 컴포넌트를 detach하지 않고 안쪽 콘텐츠만 교체하게 해, 다이얼로그·카드·패널처럼 변형이 잦던 컴포넌트의 variant 폭증을 정리한다.
 
 ##### 요약
@@ -799,8 +799,8 @@ Slots를 도입할 때 가장 먼저 정해야 할 기준은 "구조에 속하�
 - 출처 유형: guide
 - 출처: Into Design Systems (Sil Bormüller)
 - 출처 URL: https://www.intodesignsystems.com/blog/claude-code-figma-no-mcp
-- 이미지: https://www.intodesignsystems.com/og-image-claude-code-figma.png
-- 이미지 설명: Into Design Systems 본문 og:image — `claude` CLI가 Figma 데스크톱과 연결된 화면
+- 이미지: https://www.intodesignsystems.com/_next/image?url=%2Fblog%2Fimg%2Fclaude-code-figma-no-mcp.png&w=1200&q=90
+- 이미지 설명: Into Design Systems 본문 이미지 — Claude Code가 Figma 데스크톱 디버그 모드로 연결된 화면
 - 요약: Figma 데스크톱의 Chrome DevTools 디버그 모드를 활용해 API 키와 MCP 설정 없이 1분 안에 Claude를 붙이고, `CLAUDE.md`에 작업 패턴을 학습시켜 개인 디자인 에이전트로 키우는 방법을 정리한 가이드.
 
 ##### 요약
