@@ -13,6 +13,9 @@
     "tracking:brief": "node scripts/tracking/collect_materials.mjs --no-fetch",
     "tracking:workflow": "node scripts/tracking/automation_runner.mjs",
     "tracking:quality": "node scripts/tracking/workflow_quality_gate.mjs",
+    "feedback:template": "node scripts/feedback/generate_template.mjs",
+    "feedback:apply": "node scripts/feedback/apply_feedback.mjs",
+    "feedback:score": "node scripts/feedback/score_priority.mjs",
     "magazine:export-json": "python scripts/magazine/export_json.py",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0"

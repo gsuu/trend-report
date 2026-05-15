@@ -33,8 +33,25 @@ npm run fetch:dev            # DEV 후보 수집
 npm run tracking:prepare     # 위 3개 합쳐 tracking-data.json + editorial-brief.md 생성
 npm run tracking:workflow    # 한 번에 전체 파이프라인 (날짜 지정: -- --date=YYYY-MM-DD)
 npm run tracking:quality     # 워크플로우 품질 게이트
+npm run feedback:template    # shortlist 후보별 평가 입력용 md 템플릿 생성 (-- --date=YYYY-MM-DD)
+npm run feedback:apply       # 채운 feedback md를 runs/_feedback/preferences.json에 누적
+npm run feedback:score       # 누적 prefs로 오늘 후보의 feedback-bonus.json 생성
 npm run magazine:export-json # magazine-report.md → public/data/magazine.json
 ```
+
+## 사용자 피드백 누적 (soft sort bonus only)
+
+`/digest-collect`로 shortlist를 만든 뒤 사용자가 후보별 점수(-2~+2)와 사유를 입력하면, 다음 shortlist 추릴 때 정렬 가산점으로만 반영된다. **우선순위 자동 강등이나 도메인 차단은 일어나지 않는다.**
+
+흐름:
+1. shortlist 직후 `npm run feedback:template -- --date=YYYY-MM-DD` → `runs/YYYY-MM-DD/magazine/feedback-YYYY-MM-DD.md` 생성
+2. 표의 `score`(-2~+2)·`reasons`·`note`를 채운다. 0점은 무시.
+3. `npm run feedback:apply -- --date=YYYY-MM-DD` → `runs/_feedback/preferences.json`에 도메인·발행처·카테고리별 누적
+4. 다음 날 shortlist 작성 전 `npm run feedback:score -- --date=YYYY-MM-DD` → `feedback-bonus.json` 생성. LLM이 같은 priority 안에서 가산점 큰 순으로 정렬
+
+사유 코드: `general_appeal_low` (독자 흥미 부족) · `audience_mismatch` (CTTD 독자와 무관) · `stale_topic` (이미 다룸) · `promotional` (홍보성) · `weak_evidence` (화면·플로우 근거 약함) · `weak_source` (출처 신뢰도 낮음) · `other`.
+
+채팅에서 항목별로 직접 답변하고 싶으면 "오늘 후보 평가 물어봐줘"라고 요청한다. 그 답변도 같은 prefs 파일로 합쳐진다.
 
 ## 작업 단위 슬래시 스킬
 

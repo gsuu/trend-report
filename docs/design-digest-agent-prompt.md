@@ -58,6 +58,23 @@ Design 글의 최종 출력 형식은 [매거진 원고 출력 기준](magazine-
 
 Service의 `요약`, `서비스 맥락`, `변경 전/후`, `사용자는 무엇을 덜 해도 될까` 라벨은 Design 글에 쓰지 않습니다.
 
+## DESIGN vs DEV 분류 기준 (2026-05-14 사용자 결정)
+
+> DESIGN은 **실제로 화면·인터랙션·시각 라벨이 바뀐 사례**만 둔다.
+
+가이드·패턴·워크플로·교훈 성격 글은 결과물이 보이지 않으므로 DEV 후보로 분류한다 — 그쪽 분류 기준은 [dev-digest-agent-prompt.md](dev-digest-agent-prompt.md)를 본다.
+
+| 형태 | 분류 | 예시 |
+|---|---|---|
+| 실제 출시된 화면·기능·인터랙션·시각 라벨 | **DESIGN** | 삼성 One UI 9 베타(마스킹 테이프·Quick Panel), Spotify SongDNA 카드, 넷플릭스 캠페인 앱 인터랙션, 'Not By AI' 배지·정책 |
+| AI 인터페이스 패턴 모음 (Living Breadcrumb·Dynamic Checklist 등) | **DEV** | Smashing의 'Practical Interface Patterns for AI Transparency' 같은 패턴 가이드 |
+| AI 에이전트 디자인 교훈/원칙 | **DEV** | NN/g 'Designing AI Agents: 4 Lessons' 류 |
+| UX 라이팅·Voice·Tone 가이드 | **DEV** | NN/g 'UX Writing FAQs' 류 워크플로 |
+| OS·플랫폼의 디자인 언어 변경 (Material 3 등) | **DEV** | 구글 제미나이 인텔리전스 + Material 3 Expressive 같은 표준 변경 |
+| 실제 사이트·캠페인 페이지 레퍼런스 | **DESIGN** | Awwwards·Siteinspire 사례, 국내 브랜드/커머스 리뉴얼 |
+
+판단 시 한 줄 점검: "이 글에서 보이는 게 결과물인가, 원칙인가?" 결과물이면 DESIGN, 원칙·패턴·체크리스트면 DEV.
+
 ## 먼저 보는 질문
 
 후보를 볼 때 아래 질문을 먼저 적용합니다.
@@ -107,6 +124,7 @@ Service의 `요약`, `서비스 맥락`, `변경 전/후`, `사용자는 무엇�
 - 결과 이미지는 예쁘지만 화면 구조, 톤, 제작 방식, 적용 포인트를 설명하기 어려운 글
 - 브랜드 캠페인 소개지만 웹디자이너가 참고할 화면, 콘텐츠 구조, 비주얼 시스템이 없는 글
 - 개발 구현, 브라우저, CSS/JS/API 중심 글. 이런 글은 DEV 후보로 보냅니다.
+- AI 인터페이스 패턴 가이드(Living Breadcrumb·Dynamic Checklist 류), AI 에이전트 디자인 교훈, UX 라이팅·Voice·Tone 가이드처럼 **실제 화면 변경 사례가 아닌 가이드·패턴·워크플로**는 DEV 후보로 보냅니다. 자세한 기준은 위 `## DESIGN vs DEV 분류 기준` 표를 봅니다.
 - 투자, 실적, 조직, 행사 참가 소식처럼 디자인 실무 적용 포인트가 없는 글
 - "AI로 더 쉽게 만든다" 정도의 홍보 문구만 있고 실제 입력 방식, 결과물, 작업 흐름이 없는 글
 - 쇼케이스 페이지의 썸네일만 있고 원문 사이트나 실제 화면을 확인할 수 없는 글
