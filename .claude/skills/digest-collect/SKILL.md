@@ -50,8 +50,12 @@ source-verifier는 각 후보의 최종 기준 원문을 직접 열어 구체 �
 
 `runs/YYYY-MM-DD/magazine/shortlist-20-30.md`를 작성한다.
 
-- 통과 후보를 우선순위 순으로 20~30개 골라 담는다.
-- 이커머스 core 후보를 먼저, platform/fintech/global service는 그 다음.
+**선발은 카테고리별로 독립적으로 수행한다.** SERVICE / DESIGN / DEV 세 카테고리는 한 풀에서 경쟁하지 않는다.
+
+- **SERVICE**: 검증 통과 후보 중 P0 → P1 → P2 순으로 5~10개 선발. `core_ecommerce` 우선, `commerce_adjacent` 그 다음.
+- **DESIGN**: 검증 통과 후보 중 P0 → P1 → P2 순으로 5~10개 선발. 디자인 시스템·화면 구현·브랜드 경험 직결 후보 우선.
+- **DEV**: 검증 통과 후보 중 P0 → P1 → P2 순으로 5~10개 선발. 프론트엔드 구현·접근성·브라우저 QA·디자인-코드 연동 직결 후보 우선.
+- 통과 후보가 5개 미만인 카테고리는 있는 것만 담고 강제로 채우지 않는다.
 - 같은 점수면 [docs/data-collection-strategy.md](../../../docs/data-collection-strategy.md) 우선순위를 따른다.
 - 각 항목에는 카테고리(Service/Design/DEV) + 소분류 + 직무 태그(`웹디자인`/`웹서비스기획`/`웹DEV`) + 최종 기준 원문 URL + 핵심 사실 3개 + 이미지 URL을 포함한다.
 - 하단에 `## 수집했지만 제외한 것` 섹션을 두고 `weak_promo`·`exclude`·`원문 부족` 항목을 브랜드/출처/대분류/제외 사유/다시 볼 조건과 함께 남긴다.
@@ -62,8 +66,8 @@ shortlist는 글쓰기 단계에서 다시 줄이지 않는다는 점을 첫 줄
 
 마무리로 한 메시지에 다음을 보고한다:
 
-- 카테고리별 검증 통과/제외 개수 (예: SERVICE 12/3, DESIGN 8/2, DEV 6/1)
-- shortlist 총 개수와 이커머스 core 후보 비중
+- 카테고리별 검증 통과/shortlist 선발/제외 개수 (예: SERVICE 12건 중 7 선발, DESIGN 8건 중 6 선발, DEV 6건 중 5 선발)
+- shortlist 총 개수 (SERVICE N + DESIGN N + DEV N = 합계)
 - 다음 단계 안내: "글쓰기로 진행하려면 `/magazine-write YYYY-MM-DD`" (스킬 미구현 시: "shortlist를 검토해주세요. 다음은 글쓰기 단계입니다.")
 
 ## 하지 않을 일

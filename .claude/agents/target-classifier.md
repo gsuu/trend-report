@@ -32,13 +32,11 @@ tools: Read, Write
 
 ## 우선순위
 
-[docs/target-fit-classifier-agent.md](../../docs/target-fit-classifier-agent.md) §Shortlist 우선순위:
+[docs/target-fit-classifier-agent.md](../../docs/target-fit-classifier-agent.md) §Shortlist 우선순위 참조. 핵심은 **카테고리별 독립 선발** — SERVICE / DESIGN / DEV가 한 풀에서 경쟁하지 않는다.
 
-1. `P0` — core_ecommerce 중 화면·플로우·정책 변화 확인된 후보
-2. `P1` — commerce_adjacent 중 이커머스에 바로 대입 가능한 후보
-3. `P1` — design_dev_reference 중 디자인 시스템·접근성 QA·프론트엔드 구현에 직접 연결되는 후보
-4. `P2` — 시장/리서치 맥락은 강하지만 화면 변화가 직접 확인되지 않는 후보
-5. `제외` — weak_promo 또는 exclude
+- SERVICE 내: P0(core_ecommerce) → P1(commerce_adjacent) → P2 → 제외
+- DESIGN 내: P0(화면·브랜드 시스템 즉시 연결) → P1(디자인 레퍼런스) → P2 → 제외
+- DEV 내: P0(구현·접근성·QA 직결) → P1(도구·표준·릴리즈 실무 참고) → P2 → 제외
 
 같은 점수 시 국내 이커머스, 패션/뷰티 커머스, CTTD 포트폴리오 관련 브랜드를 먼저 둔다. 글로벌 사례는 국내로 옮길 수 있는 구체 질문이 있을 때만.
 

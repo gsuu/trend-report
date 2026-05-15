@@ -1,0 +1,189 @@
+[
+  {
+    "title": "1004: TanHacked",
+    "link": "https://syntax.fm/1004",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "shortlistPriority": "P2",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "TanStack npm 공급망 공격 'Mini Shai-Hulud'는 GitHub Actions cache poisoning을 통해 자기 복제하는 웜 형태로 전파됨",
+      "공격은 pull_request_target 악용 → 캐시 중독 → OIDC 토큰 탈취 → npm publish 세 단계로 연쇄 발생",
+      "pnpm의 blockExoticSubdeps 설정 등 보안 기본값으로 방어 가능하다고 언급"
+    ],
+    "finalSourceUrl": "https://syntax.fm/1004",
+    "image": "",
+    "exclusion_reason": "Syntax 팟캐스트 에피소드로, 공식 뉴스룸·릴리즈 노트·제품 블로그가 아닌 큐레이션/해설 오디오 콘텐츠. TanStack 사건 자체의 원문(tanstack.com/blog)은 별도 항목으로 검증됨"
+  },
+  {
+    "title": "Computing and Displaying Discounted Prices in CSS",
+    "link": "https://css-tricks.com/computing-and-displaying-discounted-prices-in-css/",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "shortlistPriority": "P1",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "attr() 함수가 content 속성 외 모든 CSS 속성으로 범위가 확장됐으며, attr(data-price number) 형태로 HTML 데이터 속성을 숫자 타입으로 파싱해 CSS 계산에 직접 사용 가능 (현재 Baseline 미달성, 브라우저 지원 대기 중)",
+      "calc()로 할인가 연산(attr(data-price number) * (1 - attr(data-discount number))), mod()로 소수점 분리(mod()는 최근 Baseline 달성), round(down, …)으로 정수 부분 추출 가능",
+      "counter-set과 content를 조합해 달러 기호와 소수점을 포함한 가격 문자열을 CSS만으로 포맷팅: content: \"\\2000\\2000$\" counter(a) \".\" counter(b, decimal-leading-zero)"
+    ],
+    "finalSourceUrl": "https://css-tricks.com/computing-and-displaying-discounted-prices-in-css/",
+    "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/s_7E3C7C97B7D8D52C02F5092EAFB87771069C4AA5BAFDB9C502DA16E57E7200D2_1776091945816_gsp-sale-prices.png"
+  },
+  {
+    "title": "rotateX()",
+    "link": "https://css-tricks.com/almanac/functions/r/rotatex/",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "shortlistPriority": "P1",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "rotateX() 문법: rotateX( [ <angle> | <zero> ] ), deg·grad·rad·turn 단위 지원, 양수는 상단을 뒤로 기울임",
+      "3D 효과 구현에는 부모 요소에 perspective 속성이 필수이며 없으면 skewed된 왜곡 발생",
+      "CSS Transforms Module Level 2 명세에 정의, 모든 최신 브라우저에서 기본 지원"
+    ],
+    "finalSourceUrl": "https://css-tricks.com/almanac/functions/r/rotatex/",
+    "image": "",
+    "exclusion_reason": "CSS 알마낙 레퍼런스 단독 항목으로, 신규 기능이나 정책 변화가 아닌 기존 함수 참조 문서. 단독 발행보다 rotate 계열 함수 묶음 또는 다른 주제와 결합하는 것이 적합"
+  },
+  {
+    "title": "rotateY()",
+    "link": "https://css-tricks.com/almanac/functions/r/rotatey/",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "shortlistPriority": "P1",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "rotateY() 문법: rotateY( [ <angle> | <zero> ] ), 양수 각도는 오른쪽 가장자리 회전, 음수는 왼쪽 가장자리 회전",
+      "perspective 값이 낮으면(400px) 요소가 가까워 보이고 높으면(2000px) 멀어 보임, 없을 경우 납작하고 축소된 회전으로 보임",
+      "transform-origin: left center와 rotateY(-180deg) 조합으로 책 페이지 넘기기 효과 구현 가능, backface-visibility: hidden으로 뒷면 처리"
+    ],
+    "finalSourceUrl": "https://css-tricks.com/almanac/functions/r/rotatey/",
+    "image": "",
+    "exclusion_reason": "CSS 알마낙 레퍼런스 단독 항목. rotateX()와 동일하게 기존 함수 참조 문서로 신규성 부족"
+  },
+  {
+    "title": "rotateZ()",
+    "link": "https://css-tricks.com/almanac/functions/r/rotatez/",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "shortlistPriority": "P1",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "rotateZ() 문법: rotateZ( [ <angle> | <zero> ] ), 양수는 시계방향, 음수는 반시계방향 회전, deg·grad·rad·turn 단위 지원",
+      "rotateX(), rotateY()와 함께 사용하여 3D 변환 효과 구현 가능, 2D rotate() 함수와 달리 브라우저 매트릭스 계산 정확도 높음",
+      "요소를 GPU 합성 레이어로 승격시켜 메인 스레드 재계산을 피하므로 복잡한 애니메이션에서 성능 최적화에 유리, CSS Transforms Module Level 2 명세 정의"
+    ],
+    "finalSourceUrl": "https://css-tricks.com/almanac/functions/r/rotatez/",
+    "image": "",
+    "exclusion_reason": "CSS 알마낙 레퍼런스 단독 항목. rotateX/Y와 동일하게 기존 함수 참조 문서로 단독 발행 신규성 부족"
+  },
+  {
+    "title": "rotate()",
+    "link": "https://css-tricks.com/almanac/functions/r/rotate/",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "shortlistPriority": "P1",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "rotate() 문법: rotate( [ <angle> | <zero> ] ), 단일 angle 인자로 시계방향(양수)/반시계방향(음수) 회전",
+      "기본 회전 중심은 중심축이며, transform-origin으로 회전 중심점 변경 가능",
+      "아코디언 메뉴 45deg 회전(+ → x), 로딩 스피너(@keyframes spin { to { transform: rotate(360deg); } }), 햄버거 메뉴 변환 등 실용 사례 수록"
+    ],
+    "finalSourceUrl": "https://css-tricks.com/almanac/functions/r/rotate/",
+    "image": "",
+    "exclusion_reason": "CSS 알마낙 레퍼런스 단독 항목. 기존 함수 참조 문서로 신규 기능·정책 변화 없음"
+  },
+  {
+    "title": "A new HTML element for installing web apps",
+    "link": "https://frontendfoc.us/issues/741",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "shortlistPriority": "P1",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "<install> HTML 요소는 Chrome 및 Edge 버전 148 이상에서 지원(오리진 트라이얼 버전 148~153), about://flags/#web-app-install-element 플래그로 로컬 테스트 가능",
+      "현재 페이지 앱 설치: <install></install>, 다른 출처 앱 설치: <install installurl=\"https://awesome-app.com/\"></install>, manifestid 속성으로 매니페스트 ID 명시 가능",
+      "매니페스트에 id 필드가 필수 조건이며, 브라우저가 버튼 텍스트·언어·모양을 제어하므로 커스터마이징 제한됨. JavaScript 없이 작동하며 지원 감지는 'HTMLInstallElement' in window로 확인"
+    ],
+    "finalSourceUrl": "https://developer.chrome.com/blog/install-element-ot",
+    "image": ""
+  },
+  {
+    "title": "Soon We Can Finally Banish JavaScript to the ShadowRealm",
+    "link": "https://css-tricks.com/soon-we-can-finally-banish-javascript-to-the-shadowrealm/",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "shortlistPriority": "P1",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "ShadowRealm은 독립된 전역 객체와 내장 객체를 갖는 격리 실행 환경이지만 별도 스레드를 사용하지 않으며, 현재 TC39 Stage 2.7(원칙 승인, 검증 중) 단계로 아직 주요 브라우저에 구현되지 않음",
+      "제안 사양이 제공하는 메서드는 evaluate(문자열 코드 평가)와 importValue(모듈 동적 임포트) 두 가지뿐",
+      "주요 사용 사례: 테스트 스위트를 클린룸 환경에서 실행, 서드파티 라이브러리로 인한 전역 스코프 오염 방지. 단, 진정한 보안 경계가 아니며 ShadowRealm 내 코드가 다른 영역 코드 추론 가능"
+    ],
+    "finalSourceUrl": "https://css-tricks.com/soon-we-can-finally-banish-javascript-to-the-shadowrealm/",
+    "image": ""
+  },
+  {
+    "title": "Cryptographically valid malware hits npm (TanStack npm 공급망 침해 사후 분석)",
+    "link": "https://javascriptweekly.com/issues/785",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "shortlistPriority": "P1",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "TanStack 42개 패키지 84개 버전이 악성 배포됨. 공격 벡터: pull_request_target 남용 → GitHub Actions 캐시 중독(악성 vite_setup.mjs 주입) → runner process /proc 파일시스템을 통한 OIDC 토큰 탈취 → npm 직접 publish",
+      "악성 버전 노출 시간은 2026-05-11 19:20~19:26 UTC 약 6분이며, 외부 연구자가 약 20분 내 감지·보고. 영향받은 패키지: @tanstack/history, @tanstack/router 등 42종",
+      "대응: 84개 버전 deprecated 처리 및 npm 서버측 tarball 제거, 모든 GitHub Actions 캐시 삭제, bundle-size.yml 재구성(repository_owner 가드 추가), 유지관리자 7명 중 Manuel 제외 push 권한 제거"
+    ],
+    "finalSourceUrl": "https://tanstack.com/blog/npm-supply-chain-compromise-postmortem",
+    "image": ""
+  },
+  {
+    "title": "1003: Skills Skills Skills",
+    "link": "https://syntax.fm/1003",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "shortlistPriority": "P1",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "Syntax 팟캐스트 #1003(2026-05-11)에서 웹 개발자를 위한 에이전트 스킬을 다룸: CSS Motion Systems, Agent Browser Skill, HTML Skill, Extract Logos Skill, Dex Task Skill, Remotion & Hyper Frames, Marketing Skills 등",
+      "이전 Syntax 에피소드 #550에서 Remotion 창시자 Jonny Burger가 React 비디오 기능을 논의한 바 있음",
+      "wesbos.com/tips에서 Hot Tip Skill 확인 가능"
+    ],
+    "finalSourceUrl": "https://syntax.fm/1003",
+    "image": "",
+    "exclusion_reason": "Syntax 팟캐스트 에피소드로, 공식 뉴스룸·릴리즈 노트·제품 블로그가 아닌 큐레이션/해설 오디오 콘텐츠. 소개된 도구들에 대한 공식 원문 없음"
+  },
+  {
+    "title": "How To Build Polished WooCommerce Sites Fast with Blocksy",
+    "link": "https://feedpress.me/link/24028/17338167/how-to-build-polished-woocommerce-sites-fast-with-blocksy",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "shortlistPriority": "P1",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "Blocksy Header Builder로 실시간 헤더 편집 가능, Desktop·Tablet·Mobile별 개별 헤더 조정 지원",
+      "Blocksy Starter Sites 기능으로 빠른 프로젝트 시작 가능, WooCommerce settings 전용 조정 지원",
+      "creativethemes.com/blocksy/pricing/ 유료 플랜 제품"
+    ],
+    "finalSourceUrl": "https://css-weekly.com/videos/how-to-build-polished-woocommerce-sites-fast-with-blocksy",
+    "image": "",
+    "exclusion_reason": "CSS Weekly 스폰서 콘텐츠(Blocksy 후원)로, 홍보성 튜토리얼. 화면·플로우·정책 증거 없는 광고성 콘텐츠"
+  },
+  {
+    "title": "Using CSS corner-shape For Folded Corners",
+    "link": "https://css-tricks.com/using-css-corner-shape-for-folded-corners/",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "shortlistPriority": "P1",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "corner-shape 속성: corner-top-right-shape: bevel로 둥근 모서리 대신 직선을 그리며, 기본값은 corner-shape: round이고 border-radius에 내장됨",
+      "브라우저 지원: Chrome 전용, Safari와 Firefox 미지원. 미지원 브라우저에서는 border-radius 둥근 모서리로 폴백. 오늘 당장 필요하면 clip-path 방식 권장",
+      "두 좌표값만으로 폴드 효과를 동적 계산 가능하며, 컨테이너 스타일 쿼리로 조건부 처리하여 원근감 표현 가능. clip-path보다 코드가 간결하나 기능은 제한적"
+    ],
+    "finalSourceUrl": "https://css-tricks.com/using-css-corner-shape-for-folded-corners/",
+    "image": ""
+  }
+]
