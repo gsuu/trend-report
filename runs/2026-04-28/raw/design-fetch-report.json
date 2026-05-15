@@ -1,7 +1,7 @@
 {
   "date": "2026-04-28",
   "sourceFile": "news-tracking/design-sources.json",
-  "totalArticles": 124,
+  "totalArticles": 123,
   "sourceResults": [
     {
       "name": "DIGITAL iNSIGHT",
@@ -32,7 +32,7 @@
       "type": "feed",
       "url": "https://www.smashingmagazine.com/feed/",
       "status": "ok",
-      "count": 3,
+      "count": 2,
       "error": ""
     },
     {
@@ -48,7 +48,7 @@
       "type": "page",
       "url": "https://ditoday.com/ui-ux/",
       "status": "ok",
-      "count": 13,
+      "count": 12,
       "error": ""
     },
     {
@@ -168,7 +168,7 @@
       "type": "page",
       "url": "https://the-brandidentity.com/",
       "status": "ok",
-      "count": 14,
+      "count": 10,
       "error": ""
     },
     {

@@ -1,0 +1,97 @@
+{
+  "date": "2026-04-20",
+  "sourceFile": "news-tracking/dev-sources.json",
+  "totalArticles": 24,
+  "sourceResults": [
+    {
+      "name": "Frontend Focus",
+      "group": "newsletters",
+      "type": "feed",
+      "url": "https://frontendfoc.us/rss",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    },
+    {
+      "name": "CSS Weekly",
+      "group": "newsletters",
+      "type": "feed",
+      "url": "https://css-weekly.com/feed/",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    },
+    {
+      "name": "JavaScript Weekly",
+      "group": "newsletters",
+      "type": "feed",
+      "url": "https://javascriptweekly.com/rss",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Smashing Magazine",
+      "group": "blogs",
+      "type": "feed",
+      "url": "https://www.smashingmagazine.com/feed/",
+      "status": "ok",
+      "count": 2,
+      "error": ""
+    },
+    {
+      "name": "CSS-Tricks",
+      "group": "blogs",
+      "type": "feed",
+      "url": "https://css-tricks.com/feed/",
+      "status": "ok",
+      "count": 3,
+      "error": ""
+    },
+    {
+      "name": "Web.dev",
+      "group": "blogs",
+      "type": "feed",
+      "url": "https://web.dev/feed.xml",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    },
+    {
+      "name": "Dev.to - Accessibility",
+      "group": "blogs",
+      "type": "feed",
+      "url": "https://dev.to/feed/tag/a11y",
+      "status": "ok",
+      "count": 12,
+      "error": ""
+    },
+    {
+      "name": "Syntax.fm",
+      "group": "podcasts",
+      "type": "feed",
+      "url": "https://feed.syntax.fm/rss",
+      "status": "ok",
+      "count": 2,
+      "error": ""
+    },
+    {
+      "name": "ShopTalk Show",
+      "group": "podcasts",
+      "type": "feed",
+      "url": "https://shoptalkshow.com/feed/podcast/",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    },
+    {
+      "name": "The Changelog",
+      "group": "podcasts",
+      "type": "feed",
+      "url": "https://changelog.com/podcast/feed",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    }
+  ]
+}

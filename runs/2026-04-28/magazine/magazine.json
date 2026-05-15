@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T06:45:04.823373+00:00",
+  "generatedAt": "2026-04-28T09:02:38.171523+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -26,7 +26,7 @@
           "GSAP",
           "IX3"
         ],
-        "takeawayHtml": "Bark Studio, 모션이 메시지 순서를 만든다",
+        "takeawayHtml": "Bark Studio",
         "deckHtml": "Bark Studio는 Webflow IX3와 GSAP 모션을 활용해 텍스트와 장면 전환의 순서를 설계한 마이크로사이트 사례입니다.",
         "facts": [
           {
@@ -187,7 +187,7 @@
           "OOH campaign",
           "type specimen"
         ],
-        "takeawayHtml": "Dinamo Arizona b2b, 타입 specimen도 캠페인이 될 수 있다",
+        "takeawayHtml": "Yee Hawr: horsegiirL is the new face of Dinamo’s half sans half serif experiment in type design",
         "deckHtml": "Dinamo는 ABC Arizona 타입패밀리 확장을 OOH 캠페인, 포스터, 캐릭터 연출과 함께 보여주며 서체 소개를 캠페인 경험으로 확장했습니다.",
         "facts": [
           {
@@ -348,7 +348,7 @@
           "cut-out graphics",
           "hand-crafted animation"
         ],
-        "takeawayHtml": "Casi, 공공 캠페인도 손맛 있는 시스템이 필요하다",
+        "takeawayHtml": "Templo’s brand identity for climate non-profit Casi draws on the pragmatic mark-making of hieroglyphics",
         "deckHtml": "Casi의 아이덴티티는 기후 비영리단체의 메시지를 손맛 있는 표식, cut-out 그래픽, 불완전한 디자인 시스템으로 풀어낸 사례입니다.",
         "facts": [
           {
@@ -509,7 +509,7 @@
           "redesign",
           "print-web"
         ],
-        "takeawayHtml": "매거진 리디자인은 화면보다 포맷 번역의 문제다",
+        "takeawayHtml": "A new leaf: an exclusive look inside The New York Times Magazine redesign",
         "deckHtml": "The New York Times Magazine 리디자인은 인쇄, 웹, 오디오, 비디오가 함께 존재하는 환경에서 매거진 경험을 다시 정리한 사례입니다.",
         "facts": [
           {
@@ -675,7 +675,7 @@
           "Evo",
           "Figma"
         ],
-        "takeawayHtml": "eBay Playbook, 디자인 시스템 문서도 브랜드 경험이다",
+        "takeawayHtml": "How eBay Built a Bridge Between Brand and Product with Figma",
         "deckHtml": "eBay Playbook은 브랜드 원칙, 디자인 시스템, 접근성, 개발 문서를 하나의 문서 경험으로 묶은 사례입니다.",
         "facts": [
           {
@@ -836,7 +836,7 @@
           "Claude Design",
           "on-brand designs"
         ],
-        "takeawayHtml": "Claude Design에서 만든 초안, Canva에서 브랜드 산출물로 다듬는다",
+        "takeawayHtml": "Introducing Canva in Claude Design by Anthropic Labs",
         "deckHtml": "Canva와 Claude Design의 연동은 AI가 만든 아이디어를 편집 가능한 브랜드 산출물로 이어가는 제작 흐름을 보여줍니다.",
         "facts": [
           {
@@ -1002,7 +1002,7 @@
           "prompt suggestions",
           "page context"
         ],
-        "takeawayHtml": "Nielsen Norman Group이 정리한 웹사이트 AI 챗봇 설계를 위한 10개 가이드라인",
+        "takeawayHtml": "10 Guidelines for Designing Your Site’s AI Chatbots",
         "deckHtml": "Nielsen Norman Group은 웹사이트 AI 챗봇 설계에서 진입점, 제안 질문, 페이지 맥락, 결과 형식까지 함께 다뤄야 한다고 정리합니다.",
         "facts": [
           {
@@ -1168,7 +1168,7 @@
           "film practice",
           "world building"
         ],
-        "takeawayHtml": "향수 브랜드가 광고보다 영화처럼 기억되는 방식",
+        "takeawayHtml": "How Ffern is making branding feel less like advertising and more like cinema",
         "deckHtml": "Ffern은 향수 브랜드의 세계관을 제품 설명보다 영화적 장면, 계절감, 내부 film practice로 먼저 보여주는 사례입니다.",
         "facts": [
           {
@@ -1307,6 +1307,943 @@
         "id": "2026-04-28-08",
         "issueSlug": "2026-04-28",
         "articleSlug": "2026-04-28-08"
+      },
+      {
+        "number": "09",
+        "platform": "web.dev",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "수집했지만_제외한_것",
+        "category": "수집했지만_제외한_것",
+        "sourceType": "release_note",
+        "sourceTypeLabel": "공식 릴리즈",
+        "publicationDate": "2026-04-28",
+        "date": "2026-04-24",
+        "route": "/articles/2026-04-28-09",
+        "href": "/articles/2026-04-28-09",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-28-09",
+        "image": "",
+        "imageCaption": "이미지 확인 필요",
+        "tags": [
+          "Baseline",
+          "contrast-color()",
+          "ariaNotify()"
+        ],
+        "takeawayHtml": "New to the web platform in April",
+        "deckHtml": "2026년 4월 웹 플랫폼 업데이트는 contrast-color(), scroll-driven animation range, ariaNotify(), lazy-loaded image sizes=&quot;auto&quot;처럼 접근성·성능·UI 모션에 바로 닿는 변경을 포함합니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-24"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "Baseline / contrast-color() / ariaNotify() / lazy loading"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "HTML/CSS"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "web.dev"
+          }
+        ],
+        "sourceUrl": "https://web.dev/blog/web-platform-04-2026?hl=en",
+        "sourceTitle": "web.dev",
+        "referenceLinks": [
+          {
+            "label": "보조 출처",
+            "title": "Firefox 150 release notes for developers (Stable) - Mozilla | MDN",
+            "url": "https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/150"
+          }
+        ],
+        "sections": [
+          {
+            "title": "용어 설명",
+            "className": "article-section is-term-explanation",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "Baseline: 주요 브라우저에서 특정 웹 기능을 안정적으로 사용할 수 있는지 보여주는 web.dev와 MDN의 호환성 기준입니다."
+              }
+            ],
+            "itemsHtml": [
+              "Baseline: 주요 브라우저에서 특정 웹 기능을 안정적으로 사용할 수 있는지 보여주는 web.dev와 MDN의 호환성 기준입니다."
+            ]
+          },
+          {
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "Chrome 147과 Firefox 150이 4월 stable로 올라왔고, Safari stable 릴리스는 없었다고 web.dev가 정리했습니다."
+              },
+              {
+                "kind": "list",
+                "html": "<code>contrast-color()</code>는 Chrome 147 지원으로 주요 엔진에서 사용할 수 있는 Baseline Newly available 상태가 됐습니다. 배경색을 기준으로 검정 또는 흰색 중 대비가 높은 값을 반환해 텍스트 대비를 맞추는 데 쓰입니다."
+              },
+              {
+                "kind": "list",
+                "html": "Firefox 150은 animation-range-start, animation-range-end, animation-range를 지원해 scroll-driven animation의 시작과 끝 범위를 더 명확히 제어할 수 있게 했습니다."
+              },
+              {
+                "kind": "list",
+                "html": "Firefox 150은 Document와 Element의 <code>ariaNotify()</code>를 지원합니다. DOM 변경에 묶이지 않은 스크린리더 알림을 queue에 넣는 방식이라 ARIA live region을 보완할 수 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "Firefox 150은 lazy-loaded <code>&lt;img&gt;</code>의 sizes 속성에서 <code>&quot;auto&quot;</code>를 지원합니다. CSS가 적용된 실제 레이아웃 크기를 바탕으로 srcset 후보를 고를 수 있어 responsive image 설정이 단순해집니다."
+              },
+              {
+                "kind": "list",
+                "html": "Chrome 148 beta에는 name-only container queries, video/audio lazy loading, @supports 안의 <code>at-rule()</code> function이 포함됐고, Firefox 151 beta에는 CSS container style queries가 포함됐습니다."
+              }
+            ],
+            "itemsHtml": [
+              "Chrome 147과 Firefox 150이 4월 stable로 올라왔고, Safari stable 릴리스는 없었다고 web.dev가 정리했습니다.",
+              "<code>contrast-color()</code>는 Chrome 147 지원으로 주요 엔진에서 사용할 수 있는 Baseline Newly available 상태가 됐습니다. 배경색을 기준으로 검정 또는 흰색 중 대비가 높은 값을 반환해 텍스트 대비를 맞추는 데 쓰입니다.",
+              "Firefox 150은 animation-range-start, animation-range-end, animation-range를 지원해 scroll-driven animation의 시작과 끝 범위를 더 명확히 제어할 수 있게 했습니다.",
+              "Firefox 150은 Document와 Element의 <code>ariaNotify()</code>를 지원합니다. DOM 변경에 묶이지 않은 스크린리더 알림을 queue에 넣는 방식이라 ARIA live region을 보완할 수 있습니다.",
+              "Firefox 150은 lazy-loaded <code>&lt;img&gt;</code>의 sizes 속성에서 <code>&quot;auto&quot;</code>를 지원합니다. CSS가 적용된 실제 레이아웃 크기를 바탕으로 srcset 후보를 고를 수 있어 responsive image 설정이 단순해집니다.",
+              "Chrome 148 beta에는 name-only container queries, video/audio lazy loading, @supports 안의 <code>at-rule()</code> function이 포함됐고, Firefox 151 beta에는 CSS container style queries가 포함됐습니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "이번 업데이트는 새 기능 나열보다 다음 분기 QA 체크리스트에 가깝습니다. 색 대비, 스크롤 모션, 접근성 알림, 이미지 로딩처럼 사용자에게 바로 드러나는 영역이 여러 브라우저에서 동시에 움직이고 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "<code>contrast-color()</code>는 디자인 토큰의 foreground 계산을 단순화할 수 있지만, 실제 색 조합이 브랜드 기준과 WCAG 목표를 만족하는지는 별도로 확인해야 합니다. <code>ariaNotify()</code>는 지원 범위가 아직 제한적이므로 기존 live region 패턴을 바로 제거하기보다 보완 옵션으로 봐야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "프로모션 페이지와 긴 스크롤 캠페인에서 animation-range 지원 여부를 기준으로 모션 fallback을 정합니다."
+              },
+              {
+                "kind": "list",
+                "html": "lazy-loaded <code>&lt;img&gt;</code>에는 <code>sizes=&quot;auto&quot;</code> 적용 가능성을 검토하되, 미지원 브라우저의 기존 sizes 전략을 함께 둡니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성 QA에서는 <code>ariaNotify()</code>가 보조기술에 언제, 어떤 문장으로 전달되는지 기존 live region 패턴과 나란히 확인합니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@이번 업데이트는 새 기능 나열보다 다음 분기 QA 체크리스트에 가깝습니다. 색 대비, 스크롤 모션, 접근성 알림, 이미지 로딩처럼 사용자에게 바로 드러나는 영역이 여러 브라우저에서 동시에 움직이고 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@<code>contrast-color()</code>는 디자인 토큰의 foreground 계산을 단순화할 수 있지만, 실제 색 조합이 브랜드 기준과 WCAG 목표를 만족하는지는 별도로 확인해야 합니다. <code>ariaNotify()</code>는 지원 범위가 아직 제한적이므로 기존 live region 패턴을 바로 제거하기보다 보완 옵션으로 봐야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@프로모션 페이지와 긴 스크롤 캠페인에서 animation-range 지원 여부를 기준으로 모션 fallback을 정합니다.",
+              "@@list@@lazy-loaded <code>&lt;img&gt;</code>에는 <code>sizes=&quot;auto&quot;</code> 적용 가능성을 검토하되, 미지원 브라우저의 기존 sizes 전략을 함께 둡니다.",
+              "@@list@@접근성 QA에서는 <code>ariaNotify()</code>가 보조기술에 언제, 어떤 문장으로 전달되는지 기존 live region 패턴과 나란히 확인합니다."
+            ]
+          }
+        ],
+        "id": "2026-04-28-09",
+        "issueSlug": "2026-04-28",
+        "articleSlug": "2026-04-28-09"
+      },
+      {
+        "number": "10",
+        "platform": "ShopTalk Show",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "수집했지만_제외한_것",
+        "category": "수집했지만_제외한_것",
+        "sourceType": "blog_opinion",
+        "sourceTypeLabel": "블로그/오피니언",
+        "publicationDate": "2026-04-28",
+        "date": "2026-04-27",
+        "route": "/articles/2026-04-28-10",
+        "href": "/articles/2026-04-28-10",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-28-10",
+        "image": "",
+        "imageCaption": "이미지 확인 필요",
+        "tags": [
+          "lazy loading",
+          "video streaming",
+          "Web Standards"
+        ],
+        "takeawayHtml": "712: Lazy Loading the Web with Scott Jehl",
+        "deckHtml": "ShopTalk Show는 Scott Jehl과 함께 이미지, iframe, video/audio lazy loading의 표준화 과정과 브라우저 지원, 성능 최적화 기준을 다뤘습니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-27"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "lazy loading / video streaming / Web Standards"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "Performance"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "ShopTalk Show"
+          }
+        ],
+        "sourceUrl": "https://shoptalkshow.com/712/",
+        "sourceTitle": "ShopTalk Show",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "용어 설명",
+            "className": "article-section is-term-explanation",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "Scott Jehl: Squarespace의 Performance &amp; Accessibility Team tech lead이며, 웹 성능과 표준화 논의에 자주 참여하는 프론트엔드 엔지니어입니다."
+              }
+            ],
+            "itemsHtml": [
+              "Scott Jehl: Squarespace의 Performance &amp; Accessibility Team tech lead이며, 웹 성능과 표준화 논의에 자주 참여하는 프론트엔드 엔지니어입니다."
+            ]
+          },
+          {
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "에피소드는 lazy loading의 최근 진전, 표준화 과정, 브라우저 지원, 웹 성능 최적화의 다음 흐름을 다룹니다."
+              },
+              {
+                "kind": "list",
+                "html": "타임라인에는 이미지 lazy loading뿐 아니라 iframe lazy loading, video preload 제어, GIF 대체 흐름, autoplay 지연, video poster 속성 같은 주제가 포함됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "링크로 연결된 Squarespace Engineering 글은 HTML video/audio lazy loading을 오늘 적용하는 방법과 표준화 기여 과정을 함께 제시합니다."
+              },
+              {
+                "kind": "list",
+                "html": "성능 관점에서는 “무조건 늦게 로드”가 아니라, 사용자가 곧 볼 미디어와 화면 밖의 무거운 미디어를 어떻게 나눌지 결정하는 일이 핵심입니다."
+              }
+            ],
+            "itemsHtml": [
+              "에피소드는 lazy loading의 최근 진전, 표준화 과정, 브라우저 지원, 웹 성능 최적화의 다음 흐름을 다룹니다.",
+              "타임라인에는 이미지 lazy loading뿐 아니라 iframe lazy loading, video preload 제어, GIF 대체 흐름, autoplay 지연, video poster 속성 같은 주제가 포함됩니다.",
+              "링크로 연결된 Squarespace Engineering 글은 HTML video/audio lazy loading을 오늘 적용하는 방법과 표준화 기여 과정을 함께 제시합니다.",
+              "성능 관점에서는 “무조건 늦게 로드”가 아니라, 사용자가 곧 볼 미디어와 화면 밖의 무거운 미디어를 어떻게 나눌지 결정하는 일이 핵심입니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "이미지는 이미 lazy loading을 기본 옵션처럼 쓰지만, 실제 페이지 무게는 iframe, embedded video, autoplay media에서 더 크게 흔들리는 경우가 많습니다. 성능 최적화의 중심이 이미지에서 미디어 전체로 넓어지고 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "상품 상세, 캠페인 랜딩, 브랜드 필름 섹션은 video poster, preload, autoplay 조건을 따로 설계해야 합니다. iframe은 지도, YouTube, 리뷰 위젯처럼 전환과 직접 상관없는 영역부터 지연 로딩 후보로 봐야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "LCP 후보가 이미지인지 video poster인지 먼저 확인하고 미디어별 로딩 우선순위를 나눕니다."
+              },
+              {
+                "kind": "list",
+                "html": "YouTube, 지도, 리뷰 위젯 같은 iframe은 첫 화면 전환에 필요하지 않을 때 lazy loading 후보로 분류합니다."
+              },
+              {
+                "kind": "list",
+                "html": "CTA 근처의 핵심 이미지나 영상 poster는 지연 로딩으로 빈 영역이 생기지 않도록 예외 규칙을 둡니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@이미지는 이미 lazy loading을 기본 옵션처럼 쓰지만, 실제 페이지 무게는 iframe, embedded video, autoplay media에서 더 크게 흔들리는 경우가 많습니다. 성능 최적화의 중심이 이미지에서 미디어 전체로 넓어지고 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@상품 상세, 캠페인 랜딩, 브랜드 필름 섹션은 video poster, preload, autoplay 조건을 따로 설계해야 합니다. iframe은 지도, YouTube, 리뷰 위젯처럼 전환과 직접 상관없는 영역부터 지연 로딩 후보로 봐야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@LCP 후보가 이미지인지 video poster인지 먼저 확인하고 미디어별 로딩 우선순위를 나눕니다.",
+              "@@list@@YouTube, 지도, 리뷰 위젯 같은 iframe은 첫 화면 전환에 필요하지 않을 때 lazy loading 후보로 분류합니다.",
+              "@@list@@CTA 근처의 핵심 이미지나 영상 poster는 지연 로딩으로 빈 영역이 생기지 않도록 예외 규칙을 둡니다."
+            ]
+          }
+        ],
+        "id": "2026-04-28-10",
+        "issueSlug": "2026-04-28",
+        "articleSlug": "2026-04-28-10"
+      },
+      {
+        "number": "11",
+        "platform": "7onic",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "수집했지만_제외한_것",
+        "category": "수집했지만_제외한_것",
+        "sourceType": "blog_opinion",
+        "sourceTypeLabel": "블로그/오피니언",
+        "publicationDate": "2026-04-28",
+        "date": "2026-04-24",
+        "route": "/articles/2026-04-28-11",
+        "href": "/articles/2026-04-28-11",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-28-11",
+        "image": "",
+        "imageCaption": "이미지 확인 필요",
+        "tags": [
+          "4:",
+          "Radix UI",
+          "focus trap"
+        ],
+        "takeawayHtml": "Design to Code #4: Why I Chose Radix Over Custom Primitives",
+        "deckHtml": "이 글은 디자인 시스템에서 focus trap, roving tabindex, ARIA live region 같은 상호작용 접근성을 직접 구현하는 대신 Radix UI를 선택한 이유와 실제 trade-off를 설명합니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-24"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "Radix UI / focus trap / design system / accessibility"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "Design Systems"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "DEV Community"
+          }
+        ],
+        "sourceUrl": "https://dev.to/7onic/design-to-code-4-why-i-chose-radix-over-custom-primitives-50eo",
+        "sourceTitle": "DEV Community",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "용어 설명",
+            "className": "article-section is-term-explanation",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "Radix UI: React에서 접근성 중심의 headless UI primitive를 제공하는 컴포넌트 라이브러리입니다."
+              },
+              {
+                "kind": "list",
+                "html": "Roving tabindex: 라디오 그룹이나 메뉴처럼 하나의 위젯 안에서 방향키로 초점을 이동시키기 위해 tabindex를 조절하는 패턴입니다."
+              }
+            ],
+            "itemsHtml": [
+              "Radix UI: React에서 접근성 중심의 headless UI primitive를 제공하는 컴포넌트 라이브러리입니다.",
+              "Roving tabindex: 라디오 그룹이나 메뉴처럼 하나의 위젯 안에서 방향키로 초점을 이동시키기 위해 tabindex를 조절하는 패턴입니다."
+            ]
+          },
+          {
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "작성자는 modal focus trap을 직접 구현하다가 portal, contenteditable, Shift+Tab, Safari VoiceOver, ARIA 문제를 겪고 Radix UI로 전환했다고 설명합니다."
+              },
+              {
+                "kind": "list",
+                "html": "Radix의 Dialog는 portal 안의 focus lock을 처리하고, Select와 RadioGroup은 roving tabindex를 구현하며, Toast는 ARIA live region의 중복 announcement 문제를 줄이는 방향으로 설계됐다고 정리합니다."
+              },
+              {
+                "kind": "list",
+                "html": "Radix는 기본 CSS를 제공하지 않아 디자인 토큰 기반 시스템과 충돌이 적습니다. 글에서는 <code>figma-tokens.json</code>에서 CSS custom properties, Tailwind v3 preset, Tailwind v4 @theme, TypeScript types를 생성하는 파이프라인을 예로 듭니다."
+              },
+              {
+                "kind": "list",
+                "html": "단점도 명확히 짚습니다. Radix Select나 DropdownMenu가 닫힐 때 trigger에 <code>.focus()</code>를 호출하면서 :focus-visible ring이 의도치 않게 보일 수 있고, 작성자는 onCloseAutoFocus에서 <code>e.preventDefault()</code>를 호출하는 방식과 그 trade-off를 기록했습니다."
+              },
+              {
+                "kind": "list",
+                "html": "작성자는 Headless UI, React Aria와 비교한 뒤, 42개 컴포넌트를 가진 시스템에서는 Radix의 compositional model이 API 일관성을 유지하기 쉬웠다고 설명합니다."
+              }
+            ],
+            "itemsHtml": [
+              "작성자는 modal focus trap을 직접 구현하다가 portal, contenteditable, Shift+Tab, Safari VoiceOver, ARIA 문제를 겪고 Radix UI로 전환했다고 설명합니다.",
+              "Radix의 Dialog는 portal 안의 focus lock을 처리하고, Select와 RadioGroup은 roving tabindex를 구현하며, Toast는 ARIA live region의 중복 announcement 문제를 줄이는 방향으로 설계됐다고 정리합니다.",
+              "Radix는 기본 CSS를 제공하지 않아 디자인 토큰 기반 시스템과 충돌이 적습니다. 글에서는 <code>figma-tokens.json</code>에서 CSS custom properties, Tailwind v3 preset, Tailwind v4 @theme, TypeScript types를 생성하는 파이프라인을 예로 듭니다.",
+              "단점도 명확히 짚습니다. Radix Select나 DropdownMenu가 닫힐 때 trigger에 <code>.focus()</code>를 호출하면서 :focus-visible ring이 의도치 않게 보일 수 있고, 작성자는 onCloseAutoFocus에서 <code>e.preventDefault()</code>를 호출하는 방식과 그 trade-off를 기록했습니다.",
+              "작성자는 Headless UI, React Aria와 비교한 뒤, 42개 컴포넌트를 가진 시스템에서는 Radix의 compositional model이 API 일관성을 유지하기 쉬웠다고 설명합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "AI가 컴포넌트 코드를 빠르게 만들수록 “작동하는 UI”와 “접근성까지 검증된 UI”의 차이가 더 중요해집니다. focus, keyboard, screen reader 동작은 직접 다시 풀기보다 검증된 primitive 위에 팀의 디자인 토큰을 얹는 편이 현실적입니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "headless primitive를 선택할 때는 CSS 자유도만 보면 안 됩니다. portal, focus restore, keyboard modality, ARIA announcement, touch target 같은 상호작용 계약을 누가 책임지는지 먼저 봐야 합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "Dialog, Select, Dropdown, Tabs, Accordion처럼 focus와 keyboard 동작이 중요한 컴포넌트는 headless primitive 사용을 우선 검토합니다."
+              },
+              {
+                "kind": "list",
+                "html": "onCloseAutoFocus, :focus-visible, portal 동작처럼 실제 제품에서 조정한 예외는 디자인 시스템 문서에 남깁니다."
+              },
+              {
+                "kind": "list",
+                "html": "디자인 토큰과 primitive가 충돌하지 않도록 스타일 책임과 상호작용 책임을 컴포넌트 설계 단계에서 분리합니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@AI가 컴포넌트 코드를 빠르게 만들수록 “작동하는 UI”와 “접근성까지 검증된 UI”의 차이가 더 중요해집니다. focus, keyboard, screen reader 동작은 직접 다시 풀기보다 검증된 primitive 위에 팀의 디자인 토큰을 얹는 편이 현실적입니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@headless primitive를 선택할 때는 CSS 자유도만 보면 안 됩니다. portal, focus restore, keyboard modality, ARIA announcement, touch target 같은 상호작용 계약을 누가 책임지는지 먼저 봐야 합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@Dialog, Select, Dropdown, Tabs, Accordion처럼 focus와 keyboard 동작이 중요한 컴포넌트는 headless primitive 사용을 우선 검토합니다.",
+              "@@list@@onCloseAutoFocus, :focus-visible, portal 동작처럼 실제 제품에서 조정한 예외는 디자인 시스템 문서에 남깁니다.",
+              "@@list@@디자인 토큰과 primitive가 충돌하지 않도록 스타일 책임과 상호작용 책임을 컴포넌트 설계 단계에서 분리합니다."
+            ]
+          }
+        ],
+        "id": "2026-04-28-11",
+        "issueSlug": "2026-04-28",
+        "articleSlug": "2026-04-28-11"
+      },
+      {
+        "number": "12",
+        "platform": "DEV Community",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "수집했지만_제외한_것",
+        "category": "수집했지만_제외한_것",
+        "sourceType": "blog_opinion",
+        "sourceTypeLabel": "블로그/오피니언",
+        "publicationDate": "2026-04-28",
+        "date": "2026-04-24",
+        "route": "/articles/2026-04-28-12",
+        "href": "/articles/2026-04-28-12",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-28-12",
+        "image": "",
+        "imageCaption": "이미지 확인 필요",
+        "tags": [
+          "a11yscout",
+          "axe-core",
+          "GitHub Actions"
+        ],
+        "takeawayHtml": "Audit WCAG 2.1 accessibility on every pull request (free GitHub Action)",
+        "deckHtml": "a11yscout GitHub Action은 PR마다 axe-core 기반 접근성 검사를 실행하고, serious 이상 위반이 있으면 작업을 실패시키는 자동화 흐름을 제안합니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-24"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "a11yscout / axe-core / GitHub Actions / WCAG 2.1"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "Accessibility"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "DEV Community"
+          }
+        ],
+        "sourceUrl": "https://dev.to/jpatel3/audit-wcag-21-accessibility-on-every-pull-request-free-github-action-111b",
+        "sourceTitle": "DEV Community",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "용어 설명",
+            "className": "article-section is-term-explanation",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "axe-core: 웹 접근성 자동 검사를 위해 널리 쓰이는 JavaScript 기반 오픈소스 검사 엔진입니다."
+              },
+              {
+                "kind": "list",
+                "html": "GitHub Actions: GitHub 저장소의 PR, push 같은 이벤트에 맞춰 테스트와 배포 작업을 자동 실행하는 CI 도구입니다."
+              }
+            ],
+            "itemsHtml": [
+              "axe-core: 웹 접근성 자동 검사를 위해 널리 쓰이는 JavaScript 기반 오픈소스 검사 엔진입니다.",
+              "GitHub Actions: GitHub 저장소의 PR, push 같은 이벤트에 맞춰 테스트와 배포 작업을 자동 실행하는 CI 도구입니다."
+            ]
+          },
+          {
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "글은 <code>jpatel3/a11yscout@v1</code> GitHub Action을 PR 워크플로우에 넣어 preview URL을 검사하고, level: AA, fail-on: serious 같은 조건으로 접근성 위반 시 CI를 실패시키는 예시를 제공합니다."
+              },
+              {
+                "kind": "list",
+                "html": "PR 댓글 예시에는 button-name, image-alt, link-name 위반과 각각의 WCAG 기준이 표시됩니다."
+              },
+              {
+                "kind": "list",
+                "html": "선택 옵션으로 Vite plugin을 제공하며, build time에 data-a11yscout-src 속성을 주입해 axe-core의 CSS selector 결과를 <code>src/components/Button.tsx:12:4</code> 같은 파일 위치로 연결합니다."
+              },
+              {
+                "kind": "list",
+                "html": "현재 한계도 명시합니다. Next.js/webpack plugin, Vercel/Netlify preview URL 자동 감지, AI fix suggestions, persistent history는 아직 제공하지 않습니다."
+              }
+            ],
+            "itemsHtml": [
+              "글은 <code>jpatel3/a11yscout@v1</code> GitHub Action을 PR 워크플로우에 넣어 preview URL을 검사하고, level: AA, fail-on: serious 같은 조건으로 접근성 위반 시 CI를 실패시키는 예시를 제공합니다.",
+              "PR 댓글 예시에는 button-name, image-alt, link-name 위반과 각각의 WCAG 기준이 표시됩니다.",
+              "선택 옵션으로 Vite plugin을 제공하며, build time에 data-a11yscout-src 속성을 주입해 axe-core의 CSS selector 결과를 <code>src/components/Button.tsx:12:4</code> 같은 파일 위치로 연결합니다.",
+              "현재 한계도 명시합니다. Next.js/webpack plugin, Vercel/Netlify preview URL 자동 감지, AI fix suggestions, persistent history는 아직 제공하지 않습니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "접근성 검사는 릴리즈 직전 수동 점검으로 밀리기 쉽습니다. PR 단계에서 serious 위반을 막으면 버튼 이름, 이미지 대체 텍스트, 링크 이름처럼 기본적인 문제를 더 빨리 발견할 수 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "자동 검사는 WCAG 전체를 보장하지 않습니다. 하지만 PR comment와 source mapping이 있으면 “문제 있음”에서 끝나지 않고 컴포넌트 파일까지 바로 이동할 수 있습니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "Vite 기반 프로젝트는 preview URL 생성 이후 PR 워크플로우에 axe-core 기반 접근성 검사를 붙입니다."
+              },
+              {
+                "kind": "list",
+                "html": "button-name, image-alt, link-name처럼 자동 검사로 잡히는 기본 위반은 serious 이상에서 merge를 막는 기준을 둡니다."
+              },
+              {
+                "kind": "list",
+                "html": "Next.js나 webpack 프로젝트는 공식 플러그인 지원 전까지 핵심 페이지 2-3개를 대상으로 smoke test부터 작게 시작합니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@접근성 검사는 릴리즈 직전 수동 점검으로 밀리기 쉽습니다. PR 단계에서 serious 위반을 막으면 버튼 이름, 이미지 대체 텍스트, 링크 이름처럼 기본적인 문제를 더 빨리 발견할 수 있습니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@자동 검사는 WCAG 전체를 보장하지 않습니다. 하지만 PR comment와 source mapping이 있으면 “문제 있음”에서 끝나지 않고 컴포넌트 파일까지 바로 이동할 수 있습니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@Vite 기반 프로젝트는 preview URL 생성 이후 PR 워크플로우에 axe-core 기반 접근성 검사를 붙입니다.",
+              "@@list@@button-name, image-alt, link-name처럼 자동 검사로 잡히는 기본 위반은 serious 이상에서 merge를 막는 기준을 둡니다.",
+              "@@list@@Next.js나 webpack 프로젝트는 공식 플러그인 지원 전까지 핵심 페이지 2-3개를 대상으로 smoke test부터 작게 시작합니다."
+            ]
+          }
+        ],
+        "id": "2026-04-28-12",
+        "issueSlug": "2026-04-28",
+        "articleSlug": "2026-04-28-12"
+      },
+      {
+        "number": "13",
+        "platform": "Axion Deep Digital",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "수집했지만_제외한_것",
+        "category": "수집했지만_제외한_것",
+        "sourceType": "research",
+        "sourceTypeLabel": "리서치/리포트",
+        "publicationDate": "2026-04-28",
+        "date": "2026-04-24",
+        "route": "/articles/2026-04-28-13",
+        "href": "/articles/2026-04-28-13",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-28-13",
+        "image": "",
+        "imageCaption": "이미지 확인 필요",
+        "tags": [
+          "Core Web Vitals",
+          "Lighthouse",
+          "axe-core"
+        ],
+        "takeawayHtml": "State of Small Business Websites (2026 Study). 96.9% Fail Core Web Vitals.",
+        "deckHtml": "2026년 4월 292개 B2B 웹사이트를 headless Chromium으로 검사한 연구는 모바일 Core Web Vitals와 링크 접근성 실패가 소규모 비즈니스 사이트에서 얼마나 흔한지 보여줍니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-24"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "Core Web Vitals / Lighthouse / axe-core / LCP"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "Performance"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "DEV Community"
+          }
+        ],
+        "sourceUrl": "https://dev.to/joshua_gutierrez/state-of-small-business-websites-2026-study-969-fail-core-web-vitals-106i",
+        "sourceTitle": "DEV Community",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "용어 설명",
+            "className": "article-section is-term-explanation",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "Core Web Vitals: Google이 사용자 경험 품질을 보기 위해 제시한 성능 지표 묶음입니다. 대표적으로 LCP, CLS, INP가 있습니다."
+              },
+              {
+                "kind": "list",
+                "html": "Lighthouse: 웹페이지의 성능, 접근성, SEO 등을 측정하는 Google의 자동 감사 도구입니다."
+              }
+            ],
+            "itemsHtml": [
+              "Core Web Vitals: Google이 사용자 경험 품질을 보기 위해 제시한 성능 지표 묶음입니다. 대표적으로 LCP, CLS, INP가 있습니다.",
+              "Lighthouse: 웹페이지의 성능, 접근성, SEO 등을 측정하는 Google의 자동 감사 도구입니다."
+            ]
+          },
+          {
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "연구는 2026년 4월 한 주 동안 북미 B2B prospect list에서 뽑은 292개 도메인을 headless Chromium으로 검사했습니다. 작성자는 이 표본이 전체 웹을 대표하지 않고, 건설·전문 서비스 같은 소규모 B2B에 치우친 목적 표본이라고 밝힙니다."
+              },
+              {
+                "kind": "list",
+                "html": "유효한 모바일 Lighthouse 데이터가 있는 191개 사이트 중 96.9%가 Core Web Vitals 중 하나 이상을 실패했고, 세 지표를 모두 통과한 곳은 3.1%였습니다."
+              },
+              {
+                "kind": "list",
+                "html": "유효한 axe-core 데이터가 있는 191개 사이트는 모두 Link Labels rule에서 실패했습니다."
+              },
+              {
+                "kind": "list",
+                "html": "측정 파이프라인은 Puppeteer와 <code>@sparticuz/chromium</code>을 사용한 Lambda 기반 headless Chromium이며, Lighthouse mobile Core Web Vitals, axe-core 접근성 평가, 60개 이상의 technical SEO check, Open PageRank를 함께 봤습니다."
+              },
+              {
+                "kind": "list",
+                "html": "작성자는 Lighthouse CI 문서가 점수 변동을 인정한다는 점을 언급하면서도, 96.9% 실패율과 100% link label 실패는 작은 점수 오차로 뒤집히지 않는다고 설명합니다."
+              }
+            ],
+            "itemsHtml": [
+              "연구는 2026년 4월 한 주 동안 북미 B2B prospect list에서 뽑은 292개 도메인을 headless Chromium으로 검사했습니다. 작성자는 이 표본이 전체 웹을 대표하지 않고, 건설·전문 서비스 같은 소규모 B2B에 치우친 목적 표본이라고 밝힙니다.",
+              "유효한 모바일 Lighthouse 데이터가 있는 191개 사이트 중 96.9%가 Core Web Vitals 중 하나 이상을 실패했고, 세 지표를 모두 통과한 곳은 3.1%였습니다.",
+              "유효한 axe-core 데이터가 있는 191개 사이트는 모두 Link Labels rule에서 실패했습니다.",
+              "측정 파이프라인은 Puppeteer와 <code>@sparticuz/chromium</code>을 사용한 Lambda 기반 headless Chromium이며, Lighthouse mobile Core Web Vitals, axe-core 접근성 평가, 60개 이상의 technical SEO check, Open PageRank를 함께 봤습니다.",
+              "작성자는 Lighthouse CI 문서가 점수 변동을 인정한다는 점을 언급하면서도, 96.9% 실패율과 100% link label 실패는 작은 점수 오차로 뒤집히지 않는다고 설명합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "성능과 접근성은 대기업 사이트만의 문제가 아닙니다. 소규모 비즈니스 사이트일수록 첫 화면 이미지, 무거운 스크립트, 불명확한 링크 텍스트가 전환 전에 사용자를 떨어뜨릴 가능성이 큽니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "이 연구는 범용 통계로 쓰기보다 감사 체크리스트로 보는 편이 맞습니다. 모바일 LCP, FCP, CLS, link name, image alt, heading structure를 한 번에 검사하는 기본 루틴이 필요합니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "운영 중인 브랜드 사이트와 캠페인 랜딩은 Lighthouse 점수와 함께 LCP 원인 요소를 따로 기록합니다."
+              },
+              {
+                "kind": "list",
+                "html": "카드 UI에서 반복되는 “자세히 보기” 링크는 상품명이나 콘텐츠명을 포함한 accessible name으로 바꿉니다."
+              },
+              {
+                "kind": "list",
+                "html": "모바일 성능 QA에는 LCP, FCP, CLS와 axe-core link label 검사를 같은 체크리스트에 넣습니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@성능과 접근성은 대기업 사이트만의 문제가 아닙니다. 소규모 비즈니스 사이트일수록 첫 화면 이미지, 무거운 스크립트, 불명확한 링크 텍스트가 전환 전에 사용자를 떨어뜨릴 가능성이 큽니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@이 연구는 범용 통계로 쓰기보다 감사 체크리스트로 보는 편이 맞습니다. 모바일 LCP, FCP, CLS, link name, image alt, heading structure를 한 번에 검사하는 기본 루틴이 필요합니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@운영 중인 브랜드 사이트와 캠페인 랜딩은 Lighthouse 점수와 함께 LCP 원인 요소를 따로 기록합니다.",
+              "@@list@@카드 UI에서 반복되는 “자세히 보기” 링크는 상품명이나 콘텐츠명을 포함한 accessible name으로 바꿉니다.",
+              "@@list@@모바일 성능 QA에는 LCP, FCP, CLS와 axe-core link label 검사를 같은 체크리스트에 넣습니다."
+            ]
+          }
+        ],
+        "id": "2026-04-28-13",
+        "issueSlug": "2026-04-28",
+        "articleSlug": "2026-04-28-13"
+      },
+      {
+        "number": "14",
+        "platform": "Smashing Magazine",
+        "areaKey": "dev",
+        "area": "DEV",
+        "categoryKey": "수집했지만_제외한_것",
+        "category": "수집했지만_제외한_것",
+        "sourceType": "blog_opinion",
+        "sourceTypeLabel": "블로그/오피니언",
+        "publicationDate": "2026-04-28",
+        "date": "2026-04-22",
+        "route": "/articles/2026-04-28-14",
+        "href": "/articles/2026-04-28-14",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-28-14",
+        "image": "",
+        "imageCaption": "이미지 확인 필요",
+        "tags": [
+          "AI-generated code",
+          "accessibility debt",
+          "design systems"
+        ],
+        "takeawayHtml": "The UX Designer’s Nightmare: When “Production-Ready” Becomes A Design Deliverable",
+        "deckHtml": "Smashing Magazine은 AI 시대에 디자이너에게 production-ready code까지 요구되는 흐름이 접근성, 보안, 성능 debt를 만들 수 있다고 지적합니다.",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-04-22"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "AI-generated code / accessibility debt / design systems"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "GLOBAL"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "AI Tools"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹DEV"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "Smashing Magazine"
+          }
+        ],
+        "sourceUrl": "https://www.smashingmagazine.com/2026/04/production-ready-becomes-design-deliverable-ux/",
+        "sourceTitle": "Smashing Magazine",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "요약",
+            "className": "article-section is-bullet-summary",
+            "prose": false,
+            "blocks": [
+              {
+                "kind": "list",
+                "html": "글은 2026년 UX 채용 시장에서 AI-augmented development, technical orchestration, production-ready prototyping 요구가 늘면서 디자이너와 엔지니어의 역할 경계가 흐려지고 있다고 봅니다."
+              },
+              {
+                "kind": "list",
+                "html": "작성자는 AI가 생성한 functional code가 항상 좋은 코드는 아니며, 디자이너가 이해하지 못하는 JavaScript logic이나 CSS layout을 제출하면 debugging gap이 생긴다고 주장합니다."
+              },
+              {
+                "kind": "list",
+                "html": "접근성 관점에서는 AI가 만든 toggle switch가 시각적으로는 작동해도 semantic <code>&lt;div&gt;</code>에 머물러 keyboard focus와 screen reader 호환성을 놓칠 수 있다고 지적합니다."
+              },
+              {
+                "kind": "list",
+                "html": "성능 관점에서는 AI-generated code가 verbose해지고 CSS 파일과 중복 코드가 커져 page load와 SEO에 영향을 줄 수 있다고 설명합니다."
+              },
+              {
+                "kind": "list",
+                "html": "해결 방향으로는 solo full-stack designer가 아니라 human-AI-human loop를 제안합니다. 디자이너는 intent, accessibility, user flow prompt를 맡고, 엔지니어는 architecture와 performance prompt를 책임지는 협업 모델입니다."
+              },
+              {
+                "kind": "list",
+                "html": "디자인 시스템은 accessible components를 default로 제공해 AI가 생성한 UI도 token과 source of truth 안에서 움직이게 해야 한다고 정리합니다."
+              }
+            ],
+            "itemsHtml": [
+              "글은 2026년 UX 채용 시장에서 AI-augmented development, technical orchestration, production-ready prototyping 요구가 늘면서 디자이너와 엔지니어의 역할 경계가 흐려지고 있다고 봅니다.",
+              "작성자는 AI가 생성한 functional code가 항상 좋은 코드는 아니며, 디자이너가 이해하지 못하는 JavaScript logic이나 CSS layout을 제출하면 debugging gap이 생긴다고 주장합니다.",
+              "접근성 관점에서는 AI가 만든 toggle switch가 시각적으로는 작동해도 semantic <code>&lt;div&gt;</code>에 머물러 keyboard focus와 screen reader 호환성을 놓칠 수 있다고 지적합니다.",
+              "성능 관점에서는 AI-generated code가 verbose해지고 CSS 파일과 중복 코드가 커져 page load와 SEO에 영향을 줄 수 있다고 설명합니다.",
+              "해결 방향으로는 solo full-stack designer가 아니라 human-AI-human loop를 제안합니다. 디자이너는 intent, accessibility, user flow prompt를 맡고, 엔지니어는 architecture와 performance prompt를 책임지는 협업 모델입니다.",
+              "디자인 시스템은 accessible components를 default로 제공해 AI가 생성한 UI도 token과 source of truth 안에서 움직이게 해야 한다고 정리합니다."
+            ]
+          },
+          {
+            "title": "인사이트",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "subhead",
+                "html": "왜 지금 이 업데이트인가"
+              },
+              {
+                "kind": "paragraph",
+                "html": "AI로 만든 코드가 빠르게 프로토타입을 넘어 산출물처럼 취급되기 시작했습니다. 이제 중요한 질문은 “만들 수 있는가”가 아니라 “팀이 이해하고 유지할 수 있는가”입니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "구현 관점"
+              },
+              {
+                "kind": "paragraph",
+                "html": "AI-generated UI는 semantic markup, keyboard interaction, focus state, bundle size, security-sensitive flow를 따로 검수해야 합니다. 디자인 시스템에 접근성 기본값이 없으면 AI도 그 빈틈을 그대로 증폭시킵니다."
+              },
+              {
+                "kind": "subhead",
+                "html": "실무에 어떻게 적용할 수 있을까"
+              },
+              {
+                "kind": "list",
+                "html": "AI 프로토타입을 개발팀에 넘길 때 버튼의 accessible name, modal focus return, form error announcement를 acceptance criteria로 적습니다."
+              },
+              {
+                "kind": "list",
+                "html": "생성 코드의 semantic markup, keyboard interaction, bundle size는 화면 검수와 별도 항목으로 리뷰합니다."
+              },
+              {
+                "kind": "list",
+                "html": "디자인 시스템의 accessible component를 기본값으로 두고, AI가 만든 UI도 token과 component source of truth 안에서만 채택합니다."
+              }
+            ],
+            "itemsHtml": [
+              "@@subhead@@왜 지금 이 업데이트인가",
+              "@@paragraph@@AI로 만든 코드가 빠르게 프로토타입을 넘어 산출물처럼 취급되기 시작했습니다. 이제 중요한 질문은 “만들 수 있는가”가 아니라 “팀이 이해하고 유지할 수 있는가”입니다.",
+              "@@subhead@@구현 관점",
+              "@@paragraph@@AI-generated UI는 semantic markup, keyboard interaction, focus state, bundle size, security-sensitive flow를 따로 검수해야 합니다. 디자인 시스템에 접근성 기본값이 없으면 AI도 그 빈틈을 그대로 증폭시킵니다.",
+              "@@subhead@@실무에 어떻게 적용할 수 있을까",
+              "@@list@@AI 프로토타입을 개발팀에 넘길 때 버튼의 accessible name, modal focus return, form error announcement를 acceptance criteria로 적습니다.",
+              "@@list@@생성 코드의 semantic markup, keyboard interaction, bundle size는 화면 검수와 별도 항목으로 리뷰합니다.",
+              "@@list@@디자인 시스템의 accessible component를 기본값으로 두고, AI가 만든 UI도 token과 component source of truth 안에서만 채택합니다."
+            ]
+          }
+        ],
+        "id": "2026-04-28-14",
+        "issueSlug": "2026-04-28",
+        "articleSlug": "2026-04-28-14"
       }
     ],
     "issueSlugs": [

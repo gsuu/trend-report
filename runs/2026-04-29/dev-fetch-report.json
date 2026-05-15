@@ -1,0 +1,97 @@
+{
+  "date": "2026-04-29",
+  "sourceFile": "news-tracking/dev-sources.json",
+  "totalArticles": 0,
+  "sourceResults": [
+    {
+      "name": "Frontend Focus",
+      "group": "newsletters",
+      "type": "feed",
+      "url": "https://frontendfoc.us/rss",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "CSS Weekly",
+      "group": "newsletters",
+      "type": "feed",
+      "url": "https://css-weekly.com/feed/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "JavaScript Weekly",
+      "group": "newsletters",
+      "type": "feed",
+      "url": "https://javascriptweekly.com/rss",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Smashing Magazine",
+      "group": "blogs",
+      "type": "feed",
+      "url": "https://www.smashingmagazine.com/feed/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "CSS-Tricks",
+      "group": "blogs",
+      "type": "feed",
+      "url": "https://css-tricks.com/feed/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Web.dev",
+      "group": "blogs",
+      "type": "feed",
+      "url": "https://web.dev/feed.xml",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Dev.to - Accessibility",
+      "group": "blogs",
+      "type": "feed",
+      "url": "https://dev.to/feed/tag/a11y",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "Syntax.fm",
+      "group": "podcasts",
+      "type": "feed",
+      "url": "https://feed.syntax.fm/rss",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "ShopTalk Show",
+      "group": "podcasts",
+      "type": "feed",
+      "url": "https://shoptalkshow.com/feed/podcast/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "The Changelog",
+      "group": "podcasts",
+      "type": "feed",
+      "url": "https://changelog.com/podcast/feed",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    }
+  ]
+}

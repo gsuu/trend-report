@@ -1,0 +1,128 @@
+[
+  {
+    "num": "01",
+    "platform": "Webflow Showcase",
+    "title": "Bark Studio, 모션이 메시지 순서를 만든다",
+    "url": "https://webflow.com/made-in-webflow/website/bark-studio-dev",
+    "status": 200,
+    "finalUrl": "https://webflow.com/made-in-webflow/website/bark-studio-dev",
+    "date": "2026-04-28"
+  },
+  {
+    "num": "02",
+    "platform": "It's Nice That",
+    "title": "Dinamo Arizona b2b, 타입 specimen도 캠페인이 될 수 있다",
+    "url": "https://www.itsnicethat.com/articles/dinamo-arizona-type-design-project-270426",
+    "status": 200,
+    "finalUrl": "https://www.itsnicethat.com/articles/dinamo-arizona-type-design-project-270426",
+    "date": "2026-04-28"
+  },
+  {
+    "num": "03",
+    "platform": "It's Nice That",
+    "title": "Casi, 공공 캠페인도 손맛 있는 시스템이 필요하다",
+    "url": "https://www.itsnicethat.com/articles/templo-casi-branding-project-220426",
+    "status": 200,
+    "finalUrl": "https://www.itsnicethat.com/articles/templo-casi-branding-project-220426",
+    "date": "2026-04-28"
+  },
+  {
+    "num": "04",
+    "platform": "The New York Times Magazine",
+    "title": "매거진 리디자인은 화면보다 포맷 번역의 문제다",
+    "url": "https://www.itsnicethat.com/features/gail-bichler-the-new-york-times-magazine-redesign-publication-spotlight-080426",
+    "status": 200,
+    "finalUrl": "https://www.itsnicethat.com/features/gail-bichler-the-new-york-times-magazine-redesign-publication-spotlight-080426",
+    "date": "2026-04-28"
+  },
+  {
+    "num": "05",
+    "platform": "Figma",
+    "title": "eBay Playbook, 디자인 시스템 문서도 브랜드 경험이다",
+    "url": "https://www.figma.com/blog/how-ebay-built-a-bridge-between-brand-and-product-with-figma/",
+    "status": 200,
+    "finalUrl": "https://www.figma.com/blog/how-ebay-built-a-bridge-between-brand-and-product-with-figma/",
+    "date": "2026-04-28"
+  },
+  {
+    "num": "06",
+    "platform": "Canva",
+    "title": "Claude Design에서 만든 초안, Canva에서 브랜드 산출물로 다듬는다",
+    "url": "https://www.canva.com/newsroom/news/canva-claude-design/",
+    "status": 200,
+    "finalUrl": "https://www.canva.com/newsroom/news/canva-claude-design/",
+    "date": "2026-04-28"
+  },
+  {
+    "num": "07",
+    "platform": "Nielsen Norman Group",
+    "title": "Nielsen Norman Group이 정리한 웹사이트 AI 챗봇 설계를 위한 10개 가이드라인",
+    "url": "https://www.nngroup.com/articles/ai-chatbots-design-guidelines/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "status": 200,
+    "finalUrl": "https://www.nngroup.com/articles/ai-chatbots-design-guidelines/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "date": "2026-04-24"
+  },
+  {
+    "num": "08",
+    "platform": "Ffern",
+    "title": "향수 브랜드가 광고보다 영화처럼 기억되는 방식",
+    "url": "https://www.itsnicethat.com/features/ffern-film-spotlight-230326",
+    "status": 200,
+    "finalUrl": "https://www.itsnicethat.com/features/ffern-film-spotlight-230326",
+    "date": "2026-04-28"
+  },
+  {
+    "num": "09",
+    "platform": "web.dev",
+    "title": "New to the web platform in April",
+    "url": "https://web.dev/blog/web-platform-04-2026?hl=en",
+    "status": 200,
+    "finalUrl": "https://web.dev/blog/web-platform-04-2026?hl=en",
+    "date": "2026-04-24"
+  },
+  {
+    "num": "10",
+    "platform": "ShopTalk Show",
+    "title": "712: Lazy Loading the Web with Scott Jehl",
+    "url": "https://shoptalkshow.com/712/",
+    "status": 200,
+    "finalUrl": "https://shoptalkshow.com/712/",
+    "date": "2026-04-27"
+  },
+  {
+    "num": "11",
+    "platform": "7onic",
+    "title": "Design to Code #4: Why I Chose Radix Over Custom Primitives",
+    "url": "https://dev.to/7onic/design-to-code-4-why-i-chose-radix-over-custom-primitives-50eo",
+    "status": 200,
+    "finalUrl": "https://dev.to/7onic/design-to-code-4-why-i-chose-radix-over-custom-primitives-50eo",
+    "date": "2026-04-24"
+  },
+  {
+    "num": "12",
+    "platform": "DEV Community",
+    "title": "Audit WCAG 2.1 accessibility on every pull request",
+    "url": "https://dev.to/jpatel3/audit-wcag-21-accessibility-on-every-pull-request-free-github-action-111b",
+    "status": 200,
+    "finalUrl": "https://dev.to/jpatel3/audit-wcag-21-accessibility-on-every-pull-request-free-github-action-111b",
+    "date": "2026-04-24"
+  },
+  {
+    "num": "13",
+    "platform": "Axion Deep Digital",
+    "title": "State of Small Business Websites (2026 Study)",
+    "url": "https://dev.to/joshua_gutierrez/state-of-small-business-websites-2026-study-969-fail-core-web-vitals-106i",
+    "status": 200,
+    "finalUrl": "https://dev.to/joshua_gutierrez/state-of-small-business-websites-2026-study-969-fail-core-web-vitals-106i",
+    "date": "2026-04-24"
+  },
+  {
+    "num": "14",
+    "platform": "Smashing Magazine",
+    "title": "The UX Designer’s Nightmare: When “Production-Ready” Becomes A Design Deliverable",
+    "url": "https://www.smashingmagazine.com/2026/04/production-ready-becomes-design-deliverable-ux/",
+    "status": 200,
+    "finalUrl": "https://www.smashingmagazine.com/2026/04/production-ready-becomes-design-deliverable-ux/",
+    "date": "2026-04-22"
+  }
+]

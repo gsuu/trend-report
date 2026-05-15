@@ -1,0 +1,23 @@
+{
+  "date": "2026-04-20",
+  "status": "ok",
+  "summary": {
+    "total": 92,
+    "candidate": 61,
+    "nonCandidate": 31,
+    "issues": {
+      "error": 0,
+      "warn": 0
+    }
+  },
+  "runDataFiles": {
+    "trackingData": "runs/2026-04-20/tracking-data.json",
+    "editorialBrief": "runs/2026-04-20/editorial-brief.md",
+    "report": "runs/2026-04-20/magazine-report.md"
+  },
+  "checks": {
+    "strict": false,
+    "candidateRatio": 0.6630434782608695
+  },
+  "issues": []
+}

@@ -1,7 +1,7 @@
 {
   "date": "2026-04-28",
   "sourceFile": "news-tracking/service-sources.json",
-  "totalArticles": 74,
+  "totalArticles": 70,
   "sourceResults": [
     {
       "name": "신세계그룹 뉴스룸",
@@ -24,7 +24,7 @@
       "type": "feed",
       "url": "https://newsroom.kurlycorp.com/feed/",
       "status": "ok",
-      "count": 4,
+      "count": 1,
       "error": ""
     },
     {
@@ -48,7 +48,7 @@
       "type": "feed",
       "url": "https://blog.opensurvey.co.kr/feed/",
       "status": "ok",
-      "count": 2,
+      "count": 1,
       "error": ""
     },
     {
@@ -120,7 +120,7 @@
       "type": "page",
       "url": "https://www.careet.net/",
       "status": "ok",
-      "count": 9,
+      "count": 8,
       "error": ""
     },
     {

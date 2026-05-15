@@ -1,0 +1,492 @@
+# Trend Report 소스 단일 출처 (2026 재설계)
+# RSS 피드 + 페이지 스크래핑 + App Store 추적 통합. 정규식 룰은 명백한 노이즈만, 상세 필터는 AI가 담당.
+#
+# Source modes (자동 감지):
+#   - rss:      `rss` 필드만 있을 때 — RSS 파서 사용
+#   - scrape:   `pageUrl` 필드 — 페이지 HTML anchor 추출
+#   - appstore: `appId` 필드 — iTunes Lookup API
+
+defaults:
+  fetchTimeoutMs: 15000
+  maxItemsPerSource: 30
+  freshnessDays: 7
+
+categories:
+  - id: design
+    label: 디자인
+    audience: uiux
+  - id: service
+    label: 서비스
+    audience: uiux
+  - id: dev
+    label: 개발
+    audience: dev
+
+sources:
+  # ─────────────────────────────────────
+  # DESIGN (UIUX/디자인 트렌드)
+  # ─────────────────────────────────────
+  - id: ditoday
+    name: DIGITAL iNSIGHT
+    category: design
+    rss: https://ditoday.com/feed/
+    sourceRole: reference
+    locale: KR
+    excludePatterns: [채용, 부트캠프, 웨비나, 강의]
+
+  - id: figma-releases
+    name: Figma Releases
+    category: design
+    rss: https://figmareleases.blogspot.com/feeds/posts/default
+    sourceRole: official
+    locale: global
+
+  - id: adobe-blog
+    name: Adobe Blog
+    category: design
+    rss: https://blog.adobe.com/feed.xml
+    sourceRole: official
+    locale: global
+
+  - id: sidebar
+    name: Sidebar.io
+    category: design
+    rss: https://sidebar.io/rss
+    sourceRole: reference
+    locale: global
+
+  - id: ux-collective
+    name: UX Collective
+    category: design
+    rss: https://uxdesign.cc/feed
+    sourceRole: reference
+    locale: global
+
+  - id: muzli-blog
+    name: Muzli Blog
+    category: design
+    rss: https://medium.muz.li/feed
+    sourceRole: reference
+    locale: global
+
+  - id: awwwards-blog
+    name: Awwwards Blog
+    category: design
+    rss: https://www.awwwards.com/blog/feed/
+    sourceRole: reference
+    locale: global
+
+  - id: smashing-ux
+    name: Smashing Magazine — UX
+    category: design
+    rss: https://www.smashingmagazine.com/feed/
+    sourceRole: reference
+    locale: global
+
+  - id: nngroup
+    name: Nielsen Norman Group
+    category: design
+    rss: https://www.nngroup.com/feed/rss/
+    sourceRole: reference
+    locale: global
+
+  # ─────────────────────────────────────
+  # SERVICE (한국 서비스/커머스 동향)
+  # ─────────────────────────────────────
+  - id: shinsegae-newsroom
+    name: 신세계그룹 뉴스룸
+    category: service
+    rss: https://www.shinsegaegroupnewsroom.com/feed/
+    sourceRole: official
+    locale: KR
+
+  - id: coupang-newsroom
+    name: 쿠팡 뉴스룸
+    category: service
+    rss: https://news.coupang.com/feed/
+    sourceRole: official
+    locale: KR
+
+  - id: kurly-newsroom
+    name: 컬리 뉴스룸
+    category: service
+    rss: https://newsroom.kurlycorp.com/feed/
+    sourceRole: official
+    locale: KR
+
+  - id: ohouse-newsroom
+    name: 오늘의집 뉴스룸
+    category: service
+    rss: https://ohstory.io/feed/
+    sourceRole: official
+    locale: KR
+
+  - id: naver-corp
+    name: 네이버 보도자료
+    category: service
+    rss: https://www.navercorp.com/api/article/naver/rss
+    sourceRole: official
+    locale: KR
+
+  - id: opensurvey-blog
+    name: 오픈서베이 블로그
+    category: service
+    rss: https://blog.opensurvey.co.kr/feed/
+    sourceRole: reference
+    locale: KR
+  - id: outstanding-kr
+    name: 아웃스탠딩
+    category: service
+    rss: https://wp.outstanding.kr/feed/
+    sourceRole: reference
+    locale: KR
+    excludePatterns: [채용, 부고, 인사이동]
+
+  - id: spotify-newsroom
+    name: Spotify Newsroom
+    category: service
+    rss: https://newsroom.spotify.com/feed/
+    sourceRole: official
+    locale: global
+
+  # ─────────────────────────────────────
+  # FASHION / LIFESTYLE — RSS 매체
+  # ─────────────────────────────────────
+  - id: fashionbiz
+    name: 패션비즈
+    category: service
+    rss: https://www.fashionbiz.co.kr/rss/allArticle.xml
+    sourceRole: reference
+    locale: KR
+    excludePatterns: [채용, 부고, 인사이동]
+
+  - id: fashionn
+    name: 패션엔
+    category: service
+    rss: https://www.fashionn.com/board/rss/news/
+    sourceRole: reference
+    locale: KR
+
+  - id: fpost
+    name: 패션포스트
+    category: service
+    rss: https://www.fpost.co.kr/board/rss/board.php?bo_table=newsdesk
+    sourceRole: reference
+    locale: KR
+
+  # ─────────────────────────────────────
+  # FASHION / LIFESTYLE — 페이지 스크래핑 (RSS 미제공)
+  # ※ pageUrl·includeLinkPatterns는 운영 측 검증 후 정정 필요
+  # ─────────────────────────────────────
+  - id: musinsa-magazine
+    name: 무신사 매거진
+    category: service
+    mode: scrape
+    pageUrl: https://www.musinsa.com/main/musinsa/recommend
+    includeLinkPatterns: ["musinsa\\.com/.*report", "musinsa\\.com/.*magazine"]
+    excludeLinkPatterns: [login, signup, member]
+    sourceRole: reference
+    locale: KR
+
+  - id: 29cm-feature
+    name: 29CM 피처
+    category: service
+    mode: scrape
+    pageUrl: https://shop.29cm.co.kr/feature/list
+    includeLinkPatterns: ["29cm\\.co\\.kr/feature/"]
+    sourceRole: reference
+    locale: KR
+
+  - id: wconcept-story
+    name: W컨셉 스토리
+    category: service
+    mode: scrape
+    pageUrl: https://www.wconcept.co.kr/Story
+    includeLinkPatterns: ["wconcept\\.co\\.kr/Story"]
+    sourceRole: reference
+    locale: KR
+
+  # ─────────────────────────────────────
+  # APP STORE — 한국 패션·커머스·UX 핵심 앱 업데이트 추적
+  # iTunes Lookup API: 버전, 릴리스 노트, 스크린샷 자동 수집
+  # ※ appId는 https://apps.apple.com/kr/app/{name}/id{NUMBER} 의 NUMBER 부분
+  # ※ 현재 ID는 추정값 — 운영 전 verify 권장
+  # ─────────────────────────────────────
+  - id: appstore-musinsa
+    name: 무신사 (App)
+    category: service
+    mode: appstore
+    appId: "504871470"
+    country: kr
+    sourceRole: official
+    locale: KR
+
+  - id: appstore-29cm
+    name: 29CM (App)
+    category: service
+    mode: appstore
+    appId: "1163428215"
+    country: kr
+    sourceRole: official
+    locale: KR
+
+  - id: appstore-zigzag
+    name: 지그재그 (App)
+    category: service
+    mode: appstore
+    appId: "944755472"
+    country: kr
+    sourceRole: official
+    locale: KR
+
+  - id: appstore-ably
+    name: 에이블리 (App)
+    category: service
+    mode: appstore
+    appId: "1361177404"
+    country: kr
+    sourceRole: official
+    locale: KR
+
+  - id: appstore-coupang
+    name: 쿠팡 (App)
+    category: service
+    mode: appstore
+    appId: "454434967"
+    country: kr
+    sourceRole: official
+    locale: KR
+
+  - id: appstore-ohouse
+    name: 오늘의집 (App)
+    category: service
+    mode: appstore
+    appId: "1029830063"
+    country: kr
+    sourceRole: official
+    locale: KR
+
+  - id: appstore-kurly
+    name: 컬리 (App)
+    category: service
+    mode: appstore
+    appId: "1018769995"
+    country: kr
+    sourceRole: official
+    locale: KR
+
+  - id: appstore-toss
+    name: 토스 (App)
+    category: service
+    mode: appstore
+    appId: "839333328"
+    country: kr
+    sourceRole: official
+    locale: KR
+
+  - id: appstore-naver
+    name: 네이버 (App)
+    category: service
+    mode: appstore
+    appId: "393499958"
+    country: kr
+    sourceRole: official
+    locale: KR
+
+  - id: appstore-baemin
+    name: 배달의민족 (App)
+    category: service
+    mode: appstore
+    appId: "378084485"
+    country: kr
+    sourceRole: official
+    locale: KR
+
+
+  # ─────────────────────────────────────
+  # KOREAN UIUX CASE STUDIES — 한국 서비스의 UIUX 개선 사례 1차 자료
+  # 한국 테크·디자인 블로그 — 화면 개편, 기능 변경, A/B 테스트 결과 등
+  # ─────────────────────────────────────
+  - id: kakao-tech-blog
+    name: 카카오 Tech Blog
+    category: service
+    rss: https://tech.kakao.com/feed
+    sourceRole: official
+    locale: KR
+
+  - id: toss-blog
+    name: 토스 (Toss) 블로그
+    category: service
+    rss: https://blog.toss.im/rss
+    sourceRole: official
+    locale: KR
+
+  - id: woowahan-techblog
+    name: 우아한형제들 기술블로그
+    category: service
+    rss: https://techblog.woowahan.com/feed/
+    sourceRole: official
+    locale: KR
+
+  - id: kakao-design
+    name: 카카오 디자인
+    category: service
+    mode: scrape
+    pageUrl: https://kakao.design/recent
+    includeLinkPatterns: ["kakao\\.design/recent/[a-zA-Z0-9-]+"]
+    sourceRole: official
+    locale: KR
+
+  - id: daangn-design
+    name: 당근 디자인
+    category: service
+    mode: scrape
+    pageUrl: https://medium.com/daangn
+    includeLinkPatterns: ["medium\\.com/daangn/[^/]+"]
+    sourceRole: official
+    locale: KR
+
+  - id: line-design
+    name: LINE 디자인
+    category: service
+    mode: scrape
+    pageUrl: https://line.design
+    includeLinkPatterns: ["line\\.design/[^/?]+"]
+    sourceRole: official
+    locale: KR
+
+  # ─────────────────────────────────────
+  # DEV (프론트엔드/웹 개발)
+  # ─────────────────────────────────────
+  - id: smashing-dev
+    name: Smashing Magazine — Dev
+    category: dev
+    rss: https://www.smashingmagazine.com/feed/
+    sourceRole: reference
+    locale: global
+
+  - id: css-tricks
+    name: CSS-Tricks
+    category: dev
+    rss: https://css-tricks.com/feed/
+    sourceRole: reference
+    locale: global
+    priority: always
+
+  - id: webdev
+    name: web.dev
+    category: dev
+    rss: https://web.dev/feed.xml
+    sourceRole: official
+    locale: global
+    priority: always
+
+  - id: devto-a11y
+    name: Dev.to — A11y
+    category: dev
+    rss: https://dev.to/feed/tag/a11y
+    sourceRole: reference
+    locale: global
+
+  - id: frontend-focus
+    name: Frontend Focus
+    category: dev
+    rss: https://frontendfoc.us/rss
+    sourceRole: newsletter
+    locale: global
+
+  - id: css-weekly
+    name: CSS Weekly
+    category: dev
+    rss: https://css-weekly.com/feed/
+    sourceRole: newsletter
+    locale: global
+    priority: always
+
+  - id: js-weekly
+    name: JavaScript Weekly
+    category: dev
+    rss: https://javascriptweekly.com/rss
+    sourceRole: newsletter
+    locale: global
+    priority: always
+  - id: josh-comeau
+    name: Josh Comeau
+    category: dev
+    rss: https://www.joshwcomeau.com/rss.xml
+    sourceRole: reference
+    locale: global
+  # ─────────────────────────────────────
+  # DEV 핵심 업데이트 (always-include) — Astro / iOS·WebKit / Apple Developer
+  # priority: always — 다른 카테고리 항목보다 우선 채택, 관련도 컷오프 무시
+  # ─────────────────────────────────────
+  - id: astro-blog
+    name: Astro Blog
+    category: dev
+    rss: https://astro.build/rss.xml
+    sourceRole: official
+    locale: global
+    priority: always
+
+  - id: webkit-blog
+    name: WebKit Blog
+    category: dev
+    rss: https://webkit.org/feed/atom/
+    sourceRole: official
+    locale: global
+    priority: always
+
+  - id: apple-developer-news
+    name: Apple Developer News
+    category: dev
+    rss: https://developer.apple.com/news/rss/news.rss
+    sourceRole: official
+    locale: global
+    priority: always
+
+  # ─────────────────────────────────────
+  # YOUTUBE — AI 자동화 채널
+  # YouTube RSS: https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}
+  # 채널 ID 찾기: 채널 페이지 우클릭 → 페이지 소스 보기 → "channel_id" 검색
+  # 또는 https://commentpicker.com/youtube-channel-id.php 같은 도구 사용
+  # ※ 아래 channel_id는 검증 필요 — 잘못된 ID는 0건 처리됨 (워크플로우 안전)
+  # ─────────────────────────────────────
+  - id: yt-no-code-ai
+    name: AI 자동화 (No-Code)
+    category: dev
+    rss: https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA
+    sourceRole: reference
+    locale: global
+    priority: always
+
+  - id: yt-make-automation
+    name: Make·Zapier AI 자동화
+    category: dev
+    rss: https://www.youtube.com/feeds/videos.xml?channel_id=UC8mBSY8z7vqj6Bu8c4KZmjA
+    sourceRole: reference
+    locale: global
+    priority: always
+
+  - id: yt-n8n-tutorial
+    name: n8n AI Workflow
+    category: dev
+    rss: https://www.youtube.com/feeds/videos.xml?channel_id=UCdoadna9HFHsxXWhafhNvKw
+    sourceRole: reference
+    locale: global
+    priority: always
+
+  - id: yt-ai-jason
+    name: AI Jason (LangChain·AI Agent)
+    category: dev
+    rss: https://www.youtube.com/feeds/videos.xml?channel_id=UCNT3iAcHwH0yxONlfIwd_lg
+    sourceRole: reference
+    locale: global
+    priority: always
+
+  - id: yt-matt-wolfe
+    name: Matt Wolfe (AI 트렌드)
+    category: dev
+    rss: https://www.youtube.com/feeds/videos.xml?channel_id=UChpleBmo18P08aKCIgti38g
+    sourceRole: reference
+    locale: global
+    priority: always

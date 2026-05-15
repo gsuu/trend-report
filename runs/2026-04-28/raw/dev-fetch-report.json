@@ -1,7 +1,7 @@
 {
   "date": "2026-04-28",
   "sourceFile": "news-tracking/dev-sources.json",
-  "totalArticles": 30,
+  "totalArticles": 24,
   "sourceResults": [
     {
       "name": "Frontend Focus",
@@ -18,7 +18,7 @@
       "type": "feed",
       "url": "https://css-weekly.com/feed/",
       "status": "ok",
-      "count": 2,
+      "count": 1,
       "error": ""
     },
     {
@@ -27,7 +27,7 @@
       "type": "feed",
       "url": "https://javascriptweekly.com/rss",
       "status": "ok",
-      "count": 1,
+      "count": 0,
       "error": ""
     },
     {
@@ -36,7 +36,7 @@
       "type": "feed",
       "url": "https://www.smashingmagazine.com/feed/",
       "status": "ok",
-      "count": 3,
+      "count": 2,
       "error": ""
     },
     {
@@ -45,7 +45,7 @@
       "type": "feed",
       "url": "https://css-tricks.com/feed/",
       "status": "ok",
-      "count": 4,
+      "count": 3,
       "error": ""
     },
     {
@@ -72,7 +72,7 @@
       "type": "feed",
       "url": "https://feed.syntax.fm/rss",
       "status": "ok",
-      "count": 3,
+      "count": 2,
       "error": ""
     },
     {
@@ -81,7 +81,7 @@
       "type": "feed",
       "url": "https://shoptalkshow.com/feed/podcast/",
       "status": "ok",
-      "count": 2,
+      "count": 1,
       "error": ""
     },
     {

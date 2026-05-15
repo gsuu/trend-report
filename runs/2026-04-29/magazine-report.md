@@ -1,0 +1,484 @@
+# 2026-04-29 CTTD Trend Magazine
+
+이번 회차는 [docs/magazine-writing-standard.md](../../docs/magazine-writing-standard.md)의 새 표준(자체 완결 요약 + 잠금 소제목 셋)을 처음 적용한 매거진입니다. 4/29 자동 수집(214건)과 한국 디자인·서비스 블로그 직접 모니터링 결과 중 원문에서 화면·정책·구현 변화가 직접 확인되는 10개 항목을 채택했습니다.
+
+## Service
+
+이번 주 Service 모니터링 범위는 AI 통합 UX, 결제·중고거래 연결, 멤버십·CRM이며 Spotify Newsroom, 당근 보도자료, 무신사·신세계·쿠팡 뉴스룸을 중점적으로 확인했습니다. 한국 패션·뷰티 뉴스룸은 행사·캠페인·제휴 비중이 높아 화면·플로우 변화가 직접 확인된 항목이 없었고, AI 도구가 음악·콘텐츠 서비스의 검색·재생 진입점을 가져가는 흐름을 우선 채택했습니다.
+
+#### 01. [Spotify] 음악·팟캐스트 추천이 Claude 대화창 안에서 끝난다
+
+- 날짜: 2026-04-23
+- 태그: Spotify Connect / Claude integration / 추천UX
+- 국가: GLOBAL
+- 카테고리: ai
+- 직무 태그: 웹서비스기획 / 웹디자인
+- 출처 유형: release_note
+- 출처: Spotify Newsroom
+- 출처 URL: https://newsroom.spotify.com/2026-04-23/claude-integration/
+- 이미지: https://newsroom.spotify.com/static/2026-04-23-claude-hero.png
+- 이미지 설명: Spotify Newsroom 공식 이미지
+- 요약: Spotify가 Claude와 계정 연동을 열어, 사용자가 대화창에서 음악·팟캐스트·플레이리스트를 추천받고 미리듣기·저장·재생까지 마칠 수 있게 했습니다. Spotify Connect도 Claude 안에서 호출되어 재생 기기를 바꾸는 일까지 대화 안에서 끝납니다.
+
+##### 요약
+
+- Spotify는 Claude 안에서 계정을 연동한 사용자가 활동·기분에 맞는 트랙·플레이리스트·팟캐스트를 추천받아 미리듣기·저장·재생을 모두 대화창에서 처리하도록 했습니다.
+- Claude 안에서 Spotify Connect가 동작해, 재생 기기 전환과 제어가 Spotify 앱으로 이동하지 않고 대화창에서 끝납니다.
+- Premium 사용자는 분위기·상황을 자연어로 설명해 맞춤 플레이리스트를 생성할 수 있고, Free 사용자도 기본 추천·재생 기능을 씁니다.
+- Claude의 Free·Pro·Max 플랜 모두에서 동작하며, 웹·iOS·Android·데스크톱 클라이언트에서 사용할 수 있습니다.
+- 사용자는 Claude 설정에서 Spotify 연동을 언제든 해제할 수 있다고 명시됐습니다.
+
+##### 매거진 인사이트
+
+> AI 도구가 음악·콘텐츠 추천을 가져가면, Spotify의 진입점은 앱 홈이 아니라 사용자가 대화하던 화면이 됩니다.
+
+Spotify가 Claude에 직접 들어간 것은 단순 통합이 아니라 추천·검색·재생의 시작점을 외부로 옮긴 결정입니다. 자체 앱은 재생 인프라와 정산 채널로 남고, 사용자가 무엇을 들을지 정하는 순간은 다른 도구의 화면 안에서 일어납니다.
+
+###### 왜 지금 이 업데이트인가
+
+음악·팟캐스트 추천은 그동안 앱 홈, 검색, 추천 카드에서 시작됐습니다. AI 대화 도구가 일상 화면이 되면서, 추천 진입점이 앱 밖으로 옮겨가는 흐름이 보입니다. Spotify는 이 흐름을 막기보다 Connect까지 함께 보내, 재생 제어 권한을 자기 인프라에 묶어두는 방식으로 대응했습니다.
+
+###### 사용자는 무엇을 덜 해도 될까
+
+사용자는 Claude에서 음악을 떠올린 뒤 Spotify 앱을 열어 검색하지 않아도 됩니다. 미리듣기·저장·재생·기기 전환이 같은 대화 안에서 이어집니다. 다만 곡·플레이리스트가 누적되는 라이브러리는 여전히 Spotify 앱 안에 있어, 컬렉션 정리는 앱으로 돌아가야 합니다.
+
+###### 설계 관점
+
+자사 서비스를 외부 AI 도구에 노출할 때는 추천·미리듣기·재생·기기 제어가 한 화면 안에서 이어지도록 흐름을 통째로 넘겨야 의미가 있습니다. 일부만 노출하면 사용자는 결국 자사 앱과 외부 도구를 오갑니다. 동시에 Premium 가입·구매·라이브러리처럼 결제·소유 관련 행동은 자사 화면으로 돌려보내, 정산과 사용자 데이터 통제권을 잃지 않도록 분리해 둬야 합니다.
+
+###### 점검 질문
+
+- 우리 서비스의 추천·검색 진입점이 외부 AI 도구로 옮겨가는 흐름을 가정한 적이 있는가?
+- 외부 도구에 기능을 노출할 때 어디까지 흐름을 넘기고 어디서 자사 화면으로 회수할지 기준이 있는가?
+- 결제·라이브러리·구독처럼 통제권이 중요한 행동이 자사 화면 안에서 끝나도록 분리되어 있는가?
+
+#### 02. [Spotify] 음악 앱이 운동 클래스 허브로 확장된다
+
+- 날짜: 2026-04-27
+- 태그: Spotify Fitness / Peloton / 워크아웃UX
+- 국가: GLOBAL
+- 카테고리: etc
+- 직무 태그: 웹서비스기획 / 웹디자인
+- 출처 유형: release_note
+- 출처: Spotify Newsroom
+- 출처 URL: https://newsroom.spotify.com/2026-04-27/spotify-fitness-workouts-peloton/
+- 이미지: https://newsroom.spotify.com/static/2026-04-27-fitness-hero.png
+- 이미지 설명: Spotify Newsroom 공식 이미지
+- 요약: Spotify가 앱 안에 Fitness 허브를 신설해 Peloton의 1,400개 이상 운동 클래스(강습기구 없이 들을 수 있는 ad-free 클래스)를 Premium 사용자에게 열고, 모바일·데스크톱·TV에서 음성·영상 전환과 오프라인 다운로드까지 지원합니다.
+
+##### 요약
+
+- Spotify는 앱 검색창에 "fitness"를 입력하면 진입하는 Fitness 허브를 신설해, 음악·팟캐스트와 같은 앱 안에서 운동 클래스를 듣게 했습니다.
+- Premium 사용자는 Peloton 강사 Rebecca Kennedy·Ally Love·Rad Lopez 등이 진행하는 1,400개 이상 ad-free 온디맨드 클래스를 강습기구 없이 사용할 수 있습니다.
+- 무료 사용자에게도 Yoga with Kassandra·Chloe Ting 등 wellness creator 콘텐츠와 150개 이상 fitness 플레이리스트가 열립니다.
+- 모바일·데스크톱·TV 사이에서 음성·영상 전환이 매끄럽게 이어지고, 오프라인 다운로드가 가능합니다.
+- 영어가 기본이며 일부 클래스는 스페인어·독일어로 제공됩니다.
+
+##### 매거진 인사이트
+
+> 음악 앱이 운동 콘텐츠 허브로 들어오면, 음악·팟캐스트·운동·재생기기 제어가 한 앱 안에서 이어지는 사용 시간 단위가 만들어집니다.
+
+Spotify가 Peloton과 손잡은 것은 단순 콘텐츠 라이선싱이 아닙니다. 음악 앱이 사용자의 일과(아침 러닝·홈 트레이닝·요가) 안에서 차지하는 비중을 늘리려는 결정입니다.
+
+###### 왜 지금 이 업데이트인가
+
+음악 스트리밍 시장은 ARPU·재생 시간·해지율의 한계에 부딪혀, 다음 성장 축을 콘텐츠 다각화(팟캐스트·오디오북)와 활동 다각화(피트니스·웰니스)로 옮기고 있습니다. Peloton 입장에서도 강습기구 보유자 외 사용자에게 클래스 콘텐츠를 팔 수 있는 채널이 절실해졌고, 두 회사의 이해가 맞물렸습니다.
+
+###### 사용자는 무엇을 덜 해도 될까
+
+사용자는 운동 시간에 다른 앱을 열어 클래스를 시작하지 않아도 됩니다. 같은 Spotify 앱 안에서 음악·팟캐스트·운동 클래스를 같은 라이브러리·같은 재생기기 제어로 다룰 수 있습니다.
+
+###### 설계 관점
+
+피트니스·웰니스를 자사 서비스에 들일 때는 콘텐츠 라이선스보다 진입점·재생 통제·기기 전환의 일관성이 먼저입니다. Spotify는 검색창의 "fitness" 키워드 진입을 선택해 별도 탭을 만들지 않았는데, 이는 신규 허브가 충분히 검증되기 전에 메인 내비게이션을 흔들지 않으려는 결정으로 읽힙니다. 결제·플랜 분리(Premium 클래스, Free 플레이리스트)도 한 화면 안에서 흐트러지지 않게 노출해야 사용자가 가입 결정을 미루지 않습니다.
+
+###### 점검 질문
+
+- 우리 서비스에 새 콘텐츠 카테고리를 들일 때 별도 탭을 만들 것인가, 검색·키워드 진입으로 시작할 것인가?
+- 무료·유료 콘텐츠가 같은 화면에 노출될 때 가입 안내가 사용자 흐름을 끊지 않고 자연스럽게 들어가는가?
+- 모바일·데스크톱·TV 사이의 재생 전환이 사용자 학습 없이 이어지는가?
+
+## Design
+
+#### 03. [Smashing Magazine] AI가 UX 디자이너에게 'Production-Ready 코드'까지 요구하면 어떻게 될까
+
+- 날짜: 2026-04-22
+- 태그: UX designer / AI code / design deliverable
+- 국가: GLOBAL
+- 카테고리: method
+- 직무 태그: 웹디자인 / 웹서비스기획
+- 출처 유형: blog_opinion
+- 출처: Smashing Magazine
+- 출처 URL: https://smashingmagazine.com/2026/04/production-ready-becomes-design-deliverable-ux/
+- 이미지: https://files.smashing.media/articles/ux-designer-nightmare-production-ready-becomes-design-deliverable/production-ready-becomes-design-deliverable-ux.jpg
+- 이미지 설명: Smashing Magazine 기사 대표 이미지
+- 요약: Carrie Webster는 AI 도구로 UX 디자이너에게 production-ready 코드까지 요구하는 흐름이 디자인 전문성과 엔지니어링 전문성을 모두 얕게 만든다고 주장하며, 디자이너가 prompt operator가 아니라 사용자 경험의 가드레일이 되어야 한다고 제안합니다.
+
+##### 요약
+
+- 글의 핵심 주장은 AI가 코드를 빠르게 만들어줄수록 UX 디자이너에게 production-ready 산출물을 함께 요구하는 압력이 커지고, 그 결과 디자인과 엔지니어링 모두에서 어정쩡한 전문가가 양산된다는 것입니다.
+- 작성자는 AI 생성 코드의 92%에 최소 1개의 critical vulnerability가 있다는 보안 보고를 인용하고, AI 코드가 사람 코드 대비 4배 많은 중복을 만든다고 함께 제시합니다.
+- 디자이너가 AI 코드를 직접 PR에 올린 사례에서 PR당 인시던트 발생률이 23.5% 증가했다는 데이터, AI를 쓴 학습자가 직접 코딩한 학습자보다 이해도 테스트 점수가 17% 낮았다는 연구도 인용합니다.
+- 작성자는 디자이너 역할을 prompt operator로 좁히지 말고, 디자인 시스템을 가드레일로 두고 엔지니어와 협업해 접근성·일관성·신뢰를 지키는 방향을 제안합니다.
+- 직무 시장 데이터로는 UX·UI·Product Design 직군이 2034년까지 16% 성장 전망이고 전통 그래픽 디자인 직군은 3% 성장 전망이라는 BLS 통계, 디자이너 73%가 AI를 단순 도구가 아니라 주요 협업자로 본다는 설문도 인용됩니다.
+
+##### 디자인 인사이트
+
+> "production-ready"가 디자인 산출물 항목으로 들어오는 순간, 디자이너의 가장 큰 가치는 코드를 만드는 능력이 아니라 사용자 경험의 책임자라는 위치입니다.
+
+작성자가 가장 우려하는 지점은 AI가 디자이너의 도구를 늘리는 게 아니라, 평가 기준 자체를 코드 생산성으로 바꿔 버리는 흐름입니다. 디자이너가 코드 생산자로 평가받기 시작하면 사용자 경험을 책임질 사람이 조직에서 사라지고, AI가 만든 결과물을 검수할 가드레일이 무너집니다.
+
+###### 왜 참고할 만한가
+
+AI 코딩 도구를 디자인 워크플로우에 도입하는 의사 결정은 2026년 모든 디자인 조직의 공통 화두이고, 이 글은 그 전환을 받아들이되 직무 정의를 어떻게 지켜야 하는지에 대한 구체적 근거(취약점 비율, 중복 비율, 인시던트 증가율, 이해도 테스트 결과)를 모아둔 의견 글입니다. 막연한 'AI 시대' 담론이 아니라 디자인 시스템·엔지니어 협업·접근성 책임 같은 실무 재배치를 다룹니다.
+
+###### 어디에 적용할 수 있을까
+
+디자인 시스템 운영 조직, AI 코드 도구 도입을 검토하는 디자인팀, 디자이너 직무 기술서를 다시 쓰는 조직에 직접 적용할 수 있습니다. 디자인 시스템을 AI 산출물의 가드레일로 다시 설계하고, PR 리뷰 단계에서 디자이너가 어떤 영역(접근성·일관성·사용자 흐름)을 책임지는지를 명문화하는 데 쓸 수 있습니다.
+
+###### 디자인 관점
+
+디자이너 역할을 'AI를 잘 다루는 사람'으로 좁히지 않습니다. 디자인 시스템 토큰·컴포넌트 상태·접근성 조건이 AI 산출물에 자동 적용되도록 가드레일을 시스템 수준에서 만들고, 디자이너가 직접 설명할 수 있는 만큼만 PR에 코드를 올리는 규칙을 둡니다. 작성자가 인용한 데이터는 'AI를 쓰지 말자'가 아니라 'AI 산출물을 검수할 사람·시스템 없이 출시 책임을 디자이너에게만 떠넘기지 말자'는 신호로 읽어야 합니다.
+
+###### 점검 질문
+
+- 우리 조직의 디자이너 평가 기준이 코드 생산성 쪽으로 옮겨가고 있는가, 사용자 경험 책임 쪽에 남아 있는가?
+- AI 산출물(코드·컴포넌트)을 검수할 가드레일이 디자인 시스템·PR 리뷰·접근성 QA 어디에 있는가?
+- 디자이너가 직접 설명할 수 없는 코드를 PR에 올리지 않도록 하는 규칙이 합의되어 있는가?
+
+#### 04. [pxd] shadcn/ui CLI v4의 Skills·MCP·Preset로 AI 에이전트 컴포넌트 생성을 정확하게 만든다
+
+- 날짜: 2026-04-20
+- 태그: shadcn/ui / MCP / preset / AI agent
+- 국가: KR
+- 카테고리: practical_skill
+- 직무 태그: 웹디자인 / 웹DEV
+- 출처 유형: blog_opinion
+- 출처: pxd story
+- 출처 URL: https://story.pxd.co.kr/1895
+- 이미지: https://story.pxd.co.kr/wp-content/uploads/sample/shadcn-mcp-hero.png
+- 이미지 설명: pxd story 기사 대표 이미지
+- 요약: pxd의 doworld가 shadcn/ui CLI v4에 추가된 Skills·MCP·Preset 세 기능이 AI 코딩 에이전트(Claude·Cursor 등)에게 프로젝트의 정확한 컴포넌트 컨텍스트를 전달해, "추측 기반 생성"을 "문서 기반 생성"으로 바꾸는 패턴을 정리한 글입니다.
+
+##### 요약
+
+- 글의 핵심 주장은 AI 코딩 에이전트가 컴포넌트를 잘못 import하거나 잘못된 prop 이름을 만들어내는 문제를 shadcn/ui CLI v4의 Skills·MCP·Preset 세 기능으로 해결할 수 있다는 것입니다.
+- Skills는 `npx skills add shadcn/ui` 한 줄로 프로젝트 설정·import 규칙·variants 정의를 AI가 읽을 수 있는 instructions 형태로 생성합니다.
+- MCP는 `claude mcp add shadcn -- npx shadcn@latest mcp`로 등록해, AI가 컴포넌트 문서·예제·prop 시그니처에 실시간 접근하게 만듭니다.
+- Preset은 `npx shadcn@latest init --preset a1Dg5eFl`처럼 디자인 시스템 ID 한 줄로 색·radius·variants·spacing을 다른 프로젝트에 그대로 적용합니다.
+- `--diff`, `--dry-run`, `--view` 플래그로 변경사항을 사전 검증하는 워크플로우도 함께 제시됩니다.
+- 작성자는 잘못된 import 경로(예: `import { Button } from "shadcn/button"`)가 `import { Button } from "@/components/ui/button"`로 바로잡히는 사례를 들어, "AI에게 추측하지 말고 읽으라"는 원칙을 강조합니다.
+
+##### 디자인 인사이트
+
+> AI 컴포넌트 생성 정확도는 모델의 똑똑함보다, 프로젝트 컨텍스트를 AI가 읽을 수 있는 형태로 얼마나 정리해뒀는가가 결정합니다.
+
+doworld가 짚는 지점은 흥미롭습니다. AI에게 "shadcn 버튼 만들어줘"라고 시키면 종종 잘못된 경로·prop으로 코드를 만들지만, 이는 모델 한계가 아니라 컨텍스트 제공 부족이라는 진단입니다.
+
+###### 왜 참고할 만한가
+
+디자인 시스템 운영 조직과 컴포넌트 라이브러리를 운영하는 팀에게 "AI가 우리 시스템을 정확히 쓰게 만들려면 무엇을 정리해둬야 하는가"의 구체적 답을 줍니다. shadcn/ui의 Skills·MCP·Preset은 그 자체가 답이라기보다, 같은 패턴(AI가 읽을 수 있는 instructions·실시간 문서·디자인 토큰 ID 공유)을 자체 시스템에 적용할 수 있는 청사진으로 보입니다.
+
+###### 어디에 적용할 수 있을까
+
+자체 디자인 시스템이 있는 조직, 컴포넌트 라이브러리 운영팀, AI 코딩 도구 도입을 검토하는 프론트엔드 조직에 직접 적용할 수 있습니다. 특히 컴포넌트 사용 규칙·prop 명명 규칙을 사람이 읽는 문서로만 두고 있다면, AI가 읽을 수 있는 instructions·MCP 서버로 옮기는 작업이 다음 단계입니다.
+
+###### 디자인 관점
+
+AI 시대의 디자인 시스템은 "팀이 보는 문서"와 "AI가 읽는 문서" 두 가지로 나뉩니다. 두 문서가 따로 가면 AI 산출물이 시스템과 어긋나기 시작하고, 시스템 신뢰가 무너집니다. Preset 같은 ID 공유 패턴은 토큰·variants를 한 단위로 묶어 AI에게 일관되게 전달하는 첫걸음으로 볼 만합니다.
+
+###### 점검 질문
+
+- 우리 디자인 시스템 문서는 사람용 문서만 있는가, AI 에이전트가 읽을 수 있는 instructions·MCP·preset 형태도 있는가?
+- AI 코딩 도구가 우리 컴포넌트의 import 경로·prop 명명 규칙을 정확히 쓰는지 마지막으로 확인한 적이 있는가?
+- 디자인 토큰·variants를 다른 프로젝트나 협업사에 공유할 때 ID 한 줄로 끝나는 구조가 가능한가?
+
+#### 05. [It's Nice That] Praktika가 리투아니아 건축 연구소 NAI 아이덴티티를 바닥 타일 격자에서 풀어낸 사례
+
+- 날짜: 2026-04-28
+- 태그: Praktika / NAI / grid identity / Lithuanian floor tiles
+- 국가: GLOBAL
+- 카테고리: visual_trend
+- 직무 태그: 웹디자인
+- 출처 유형: reference
+- 출처: It's Nice That
+- 출처 URL: https://www.itsnicethat.com/articles/praktika-nai-identity-graphic-design-project-280426
+- 이미지: https://admin.itsnicethat.com/images/praktika-nai-identity-hero.jpg
+- 이미지 설명: It's Nice That 기사 대표 이미지
+- 요약: 빌니우스·카우나스 기반 스튜디오 Praktika가 리투아니아 건축 연구소 NAI를 위해 건물 바닥의 흑백 민속 타일 패턴을 모더니즘 그리드로 옮긴 아이덴티티 시스템을 만들고, 4개 격자 안에 글자가 점점 커지는 모자이크 로고와 포스터·웨이파인딩·디지털·모션까지 확장 가능한 타이포 시스템으로 구성한 사례입니다.
+
+##### 요약
+
+- Praktika는 NAI 빌딩 바닥의 흑백 민속 타일 패턴을 모더니즘 그래픽 그리드로 변환해, 모자이크 형식의 로고와 그리드 기반 포스터·웨이파인딩·디지털 디자인 시스템으로 확장했습니다.
+- 로고는 4개의 그리드 안에 글자가 점차 크게 배치되는 구조로, 타입 자체가 그리드의 일부로 작동합니다.
+- 시스템은 어떤 크기로도 확장 가능한 scale-based construction을 적용해, 작은 발행물부터 옥외 사이니지까지 같은 규칙으로 만들 수 있습니다.
+- 모션·인터랙션 변형까지 미리 설계되어 있어, 인쇄 전용 아이덴티티가 디지털 환경에서도 흐트러지지 않습니다.
+- Praktika는 빌딩의 건축적 디테일을 단순 모티프 인용이 아니라 운영 가능한 그리드로 시스템화하는 접근을 보여줍니다.
+
+##### 디자인 인사이트
+
+> 좋은 기관 아이덴티티는 모티프를 빌려오는 게 아니라, 모티프를 시스템 단위로 분해해 운영 가능한 규칙으로 다시 짭니다.
+
+Praktika의 작업이 흥미로운 지점은 "리투아니아 건축 유산"이라는 추상적 출발점을 4개 격자라는 구체적 운영 단위로 옮긴 것입니다.
+
+###### 왜 참고할 만한가
+
+기관·문화재·박물관·건축 사무소 등 "역사적 맥락을 시각화해야 하는" 프로젝트의 직접 레퍼런스가 됩니다. 단순 패턴 인용이 아니라 그리드 시스템 → 타입 시스템 → 모션 변형까지 연결된 구조이므로, 자체 브랜드 시스템을 설계할 때 단계별 사고 흐름을 그대로 가져올 수 있습니다.
+
+###### 어디에 적용할 수 있을까
+
+기관·문화·교육·건축·전시 분야 브랜드 아이덴티티 작업에 적용 가능합니다. 다만 Praktika의 패턴 추출 방식(바닥 타일 → 그리드)은 출발 모티프가 명확할 때 강력합니다. 모티프가 흐릿하거나 추상적인 브랜드에는 같은 방식이 어색할 수 있습니다.
+
+###### 디자인 관점
+
+기관 아이덴티티 시스템은 로고·컬러·타입을 따로 두지 말고, 한 그리드 안에서 셋이 함께 만들어지는 구조가 더 견고합니다. 모자이크 로고·scale-based 타이포·모션 변형을 같은 그리드 위에 올리는 패턴이 그 예입니다. 디지털 자산 확장도 처음 시스템 단계에서 정의하지 않으면, 사후에 모션·인터랙션을 더할 때 일관성이 무너집니다.
+
+###### 점검 질문
+
+- 우리가 작업하는 기관·문화 브랜드 아이덴티티는 모티프 인용에 머무는가, 운영 가능한 시스템 단위로 분해되어 있는가?
+- 인쇄·디지털·모션·웨이파인딩이 같은 그리드 위에서 일관되게 만들어지는가, 매체별로 따로 설계되는가?
+
+## DEV
+
+#### 06. [Smashing Magazine] 인증 화면의 세션 만료, 접근성 가드레일이 빠지면 작성 중인 폼이 통째로 사라진다
+
+- 날짜: 2026-04-20
+- 태그: session timeout / WCAG 2.2 / authentication / accessibility
+- 국가: GLOBAL
+- 카테고리: Accessibility
+- 직무 태그: 웹DEV
+- 출처 유형: guide
+- 출처: Smashing Magazine
+- 출처 URL: https://smashingmagazine.com/2026/04/session-timeouts-accessibility-barrier-authentication-design/
+- 이미지: https://files.smashing.media/articles/session-timeouts-accessibility-barrier-authentication-design/session-timeouts-accessibility-barrier-authentication-design.jpg
+- 이미지 설명: Smashing Magazine 기사 대표 이미지
+- 요약: Eleanor Hecks가 인증·신청 폼의 세션 만료가 장애·신경다양성 사용자에게 가장 자주 타격을 주는 접근성 장벽이라고 정리하고, WCAG 2.2 Level AA 기준에 맞춘 사전 알림·세션 연장·자동 저장 패턴을 사례와 함께 제시합니다.
+
+##### 요약
+
+- 글의 핵심 주장은 인증·신청 폼의 세션 타임아웃 처리 방식이 흔히 기술 편의 문제로 다뤄지지만 실제로는 가장 자주 발생하는 접근성 장벽이라는 점입니다.
+- 작성자는 미국 국무부 DS-260 비자 신청 폼이 약 20분 후 사전 알림 없이 로그아웃되고 작성 완료 시점에만 저장된다는 사례를 들고, 이 패턴이 보조 기기 사용자의 작성 시간을 통째로 날린다고 지적합니다.
+- 영국 연금 신청 폼은 만료 전 최소 2분 전 알림과 세션 연장을 제공해 WCAG 2.2 Level AA를 충족한 사례로 제시됩니다.
+- 웹 개발자 Bogdan Cerovac은 카운트다운 타이머가 1초 단위로 status를 갱신해 스크린리더에서 알림 폭주를 일으킨 패턴을 보고했고, 작성자는 timer 노출 방식 자체를 접근성 단위로 봐야 한다고 짚습니다.
+- 작성자가 권하는 가드레일은 만료 전 사전 알림, 사용자 명시적 세션 연장, 자동 저장(폼 단계별 저장), 알림 폭주 없는 타이머 표시, 로그아웃 시 안전 복귀 동선의 5개입니다.
+- 글에는 전 세계 약 13억 명이 유의미한 장애를 가지고 있고 약 20%가 신경다양성 사용자라는 통계가 함께 인용됩니다.
+
+##### 매거진 인사이트
+
+> 세션 타임아웃은 보안 정책이 아니라, 사용자가 작성 중인 화면을 어떻게 잃지 않게 할지에 대한 UX·접근성 결정입니다.
+
+이 글이 흥미로운 지점은 세션 만료를 보안 관점에서만 다루지 않는다는 것입니다. WCAG 2.2 Level AA가 사전 알림·세션 연장을 명시적으로 요구하는 이유를 사례로 풀어, 세션 타임아웃이 접근성 QA 항목으로 들어와야 하는 근거를 만듭니다.
+
+###### 왜 지금 이 업데이트인가
+
+European Accessibility Act 시행 이후 인증·신청 폼의 접근성 기준이 본격적으로 점검되고 있고, 이 글은 그동안 기술 정책으로만 다뤄지던 세션 타임아웃을 접근성 결함으로 다시 분류합니다. 비자·연금·세금 같은 긴 폼은 보조 기기 사용자에게 작성 시간이 길고, 한 번 잃으면 처음부터 다시 작성해야 하는 부담이 큽니다.
+
+###### 구현 관점
+
+세션 만료 처리는 만료 시각 결정·사전 알림 노출·세션 연장 호출·자동 저장 큐의 4개 구성으로 나눠 봐야 합니다. 카운트다운 timer는 `aria-live="polite"`로 묶지 말고 1분·30초·10초처럼 의미 있는 시점에만 announcement를 보내야 알림 폭주를 막을 수 있습니다. 자동 저장은 단계별로 저장하되, 마지막 저장 위치를 사용자 화면에 명시해 다시 시작할 때 어디서 이어가는지가 보여야 합니다.
+
+###### 실무에 어떻게 적용할 수 있을까
+
+- 인증·신청·결제 폼에서 세션 만료 시각·사전 알림 시점·자동 저장 단위를 한 페이지의 정책 문서로 만듭니다.
+- 카운트다운 timer는 `aria-live` 영역에 넣지 말고 별도 status 컴포넌트에서 의미 있는 시점에만 announcement를 보냅니다.
+- 자동 저장은 단계별로 끊고, 다시 로그인했을 때 마지막 저장 위치가 어디인지 화면 첫 줄에 보이게 합니다.
+- 접근성 QA에 세션 만료 시나리오를 추가합니다. NVDA·VoiceOver·TalkBack 각각에서 만료 알림이 어떻게 들리는지 확인합니다.
+
+#### 07. [CSS-Tricks] Apple Vision Pro 마케팅 페이지의 스크롤 모션을 순수 CSS로 다시 만든다
+
+- 날짜: 2026-04-23
+- 태그: scroll-driven animation / view timeline / position: sticky / CSS Grid
+- 국가: GLOBAL
+- 카테고리: HTML/CSS
+- 직무 태그: 웹DEV
+- 출처 유형: guide
+- 출처: CSS-Tricks
+- 출처 URL: https://css-tricks.com/recreating-apples-vision-pro-animation-in-css/
+- 이미지:
+- 이미지 설명: 이미지 확인 필요
+- 요약: John Rhea가 Apple Vision Pro 마케팅 페이지의 스크롤 기반 시퀀스 애니메이션을 JavaScript 없이 `animation-timeline`/`animation-range`/`position: sticky`/CSS Grid 겹침으로 재현하고, Firefox 미지원 같은 브라우저 fallback 조건을 함께 정리한 튜토리얼입니다.
+
+##### 요약
+
+- 글의 핵심 주장은 Apple Vision Pro 페이지의 'components 폭발 + 디바이스 회전' 시퀀스를 JavaScript 없이 순수 CSS scroll-driven animation으로 만들 수 있다는 것입니다.
+- 작성자는 두 stage를 CSS Grid의 `grid-area: 1 / 1 / 2 / 2`로 같은 셀에 겹친 뒤 `z-index`로 순서를 통제하는 layout 패턴을 보여줍니다.
+- 모션은 `animation-timeline: --apple-vp` view timeline에 묶이고, `animation-range: contain cover`/`animation-range: cover 10% contain`처럼 stage별로 trigger 범위를 다르게 둡니다.
+- 디바이스가 뷰포트에 머무는 효과는 `position: sticky`와 `--stage2-height` custom property 조합으로 만들어집니다.
+- 이미지 로딩은 `<link rel="preload" as="image">`로 먼저 받아 두고, 반응형은 `@media` 쿼리로 stage 사이의 stagger 값을 조정합니다.
+- Firefox는 작성 시점 기준 scroll-driven animation을 미지원이라 동작하지 않고, 작성자는 호환성 분기를 별도로 두지 않고 미지원 브라우저는 정적 화면으로 두는 fallback을 선택했다고 명시합니다.
+
+##### 매거진 인사이트
+
+> 스크롤 기반 마케팅 페이지의 모션이 JavaScript 영역을 떠나면, 캠페인 페이지의 성능과 접근성 기준이 한 단계 가벼워집니다.
+
+이 튜토리얼이 의미 있는 지점은 효과의 화려함이 아니라, 마케팅 페이지의 스크롤 시퀀스를 CSS만으로 끝낼 수 있는 시점이 왔다는 신호입니다. JavaScript 의존도가 줄면 LCP·CLS 지표와 reduced-motion 대응이 모두 단순해집니다.
+
+###### 왜 지금 이 업데이트인가
+
+scroll-driven animation은 Chrome·Edge·Safari TP에서 안정 단계로 넘어왔고, 이번 사례는 표준 명세만으로 상용 마케팅 페이지 수준의 시퀀스가 가능함을 보여줍니다. Firefox 미지원이라는 단점은 있지만, 캠페인 페이지에서 정적 fallback을 둘 수 있다면 도입 비용이 크게 낮아집니다.
+
+###### 구현 관점
+
+핵심 패턴은 같은 grid cell에 여러 stage를 겹쳐 두고 `animation-timeline`+`animation-range`로 trigger 시점을 분리하는 것입니다. `position: sticky`로 디바이스를 뷰포트 안에 고정한 뒤 다른 컴포넌트가 그 위에서 움직이게 만들고, 이미지 preload·반응형 stagger·fallback 정책을 함께 둬야 실제 캠페인에서 쓸 수 있습니다.
+
+###### 실무에 어떻게 적용할 수 있을까
+
+- 캠페인·랜딩 페이지의 스크롤 시퀀스 후보를 JavaScript→CSS scroll-driven animation으로 재구성할 수 있는지 점검합니다.
+- 같은 cell 겹침 layout이 깨지지 않도록 `grid-area`/`z-index` 규칙을 컴포넌트 가이드에 명시합니다.
+- Firefox·구형 브라우저용 정적 fallback과 `prefers-reduced-motion: reduce` 대응을 같은 컴포넌트 안에서 분기합니다.
+- LCP 후보 이미지는 `<link rel="preload" as="image">`로 먼저 받아 두고, stage 전환 직전에 추가 이미지가 끊기지 않게 합니다.
+
+###### 같이 보면 좋은 기술
+
+- View Timeline / Scroll Timeline: 이번 사례의 기반 명세로, MDN 호환성 표를 함께 봐야 fallback 결정을 할 수 있습니다.
+- `prefers-reduced-motion`: scroll-driven animation을 도입할 때 반드시 같이 두어야 할 접근성 분기입니다.
+
+#### 08. [Chrome Developers] 웹앱 매니페스트에 다국어 필드가 직접 들어간다
+
+- 날짜: 2026-04-24
+- 태그: web app manifest / manifest localization / Chrome 148
+- 국가: GLOBAL
+- 카테고리: HTML/CSS
+- 직무 태그: 웹DEV
+- 출처 유형: release_note
+- 출처: Chrome Developers
+- 출처 URL: https://developer.chrome.com/blog/manifest-localization?hl=en
+- 이미지:
+- 이미지 설명: 이미지 확인 필요
+- 요약: Chrome·Edge 148부터 웹앱 매니페스트에 `name_localized`, `short_name_localized`, `description_localized`, `icons_localized`, `shortcuts_localized` 같은 로컬라이제이션 필드가 직접 들어가, PWA 설치·런처 화면이 사용자 언어 설정에 맞춰 자동으로 표시됩니다.
+
+##### 요약
+
+- 글의 핵심 변화는 PWA 매니페스트에 다국어 필드를 직접 정의할 수 있게 되어, 클라이언트 측 우회 구현 없이 설치·런처 화면이 사용자 언어로 표시된다는 것입니다.
+- 추가된 필드는 `name_localized`, `short_name_localized`, `description_localized`, `icons_localized`, `shortcuts_localized` 5종이며, `shortcuts_localized` 안에서는 `name`·`short_name`·`description`·`icons`를 모두 언어별로 정의할 수 있습니다.
+- 지원 브라우저는 Chrome 148과 Microsoft Edge 148부터입니다.
+- 기존에는 매니페스트가 단일 언어만 지원해 사용자 언어별로 별도 PWA를 띄우거나 클라이언트 워크어라운드가 필요했던 시나리오가 정리됩니다.
+- 글에서는 다국어 사용자에게 설치 직후부터 일관된 언어 경험을 제공하는 것이 도입 동기로 제시됩니다.
+
+##### 매거진 인사이트
+
+> PWA의 설치·런처 화면은 그동안 다국어가 가장 약한 영역이었고, 이번 변경은 그 빈자리를 표준 명세에 직접 채웁니다.
+
+이번 변경이 의미 있는 지점은 새 기능 추가가 아니라, 그동안 클라이언트 측 우회로 채우던 영역이 명세 단으로 올라왔다는 점입니다. 설치 화면·런처 아이콘·shortcut 메뉴까지 한 번의 매니페스트 수정으로 다국어 처리를 끝낼 수 있습니다.
+
+###### 왜 지금 이 업데이트인가
+
+글로벌 서비스의 PWA 설치 비율이 늘어나면서 설치 화면 다국어 처리는 누락됐을 때 가장 먼저 보이는 결함이 됐습니다. 명세에 들어왔다는 것은 이제 다국어 미지원이 단순 누락이 아니라 명백한 회귀로 분류된다는 신호입니다.
+
+###### 구현 관점
+
+기존 `name`·`short_name`·`description`·`icons`·`shortcuts`는 fallback으로 그대로 두고, 새 필드를 추가하는 방식이 안전합니다. Chrome·Edge 148 이전 사용자는 fallback 값을 보게 되므로 fallback 언어를 사용자 다수가 이해 가능한 언어로 지정합니다. CI에서 매니페스트 검증을 추가해 새 필드의 키가 표준에 맞는지 확인합니다.
+
+###### 실무에 어떻게 적용할 수 있을까
+
+- 다국어 PWA를 운영하는 서비스는 매니페스트 다국어 필드 추가를 다음 분기 작업으로 잡습니다.
+- 마케팅 캠페인이 국가별로 다른 경우 `shortcuts_localized`를 활용해 설치 후 첫 진입점도 국가별로 분기합니다.
+- 기존 매니페스트 업데이트 흐름에 다국어 fallback 검증 단계를 추가합니다.
+
+#### 09. [WebKit] Safari Technology Preview 242가 CSS `attr()`과 HTML `closedby`를 지원한다
+
+- 날짜: 2026-04-23
+- 태그: Safari TP 242 / CSS attr() / HTML dialog / IndexedDB
+- 국가: GLOBAL
+- 카테고리: Others
+- 직무 태그: 웹DEV
+- 출처 유형: release_note
+- 출처: WebKit Blog
+- 출처 URL: https://webkit.org/blog/17934/release-notes-for-safari-technology-preview-242/
+- 이미지:
+- 이미지 설명: 이미지 확인 필요
+- 요약: Safari Technology Preview 242에 CSS `attr()` 함수가 들어와 속성 값을 스타일에서 직접 사용할 수 있게 됐고, HTML `dialog` 요소의 `closedby` 속성, IndexedDB `getAllRecords()`, WebRTC `RTCRtpReceiver.jitterBufferTarget`, sticky scroll 깜빡임 수정, VoiceOver의 presentation-role 이미지 읽기 버그 수정이 함께 포함됐습니다.
+
+##### 요약
+
+- 글의 핵심 변화는 Safari Technology Preview 242가 CSS·HTML·IndexedDB·WebRTC·접근성에 걸친 변경을 한 릴리스에 모아, 다음 Safari 안정 버전 직전 마지막 점검 시점이 됐다는 것입니다.
+- CSS는 `attr()` 함수와 `font-synthesis-style: oblique-only` 값이 추가됐습니다. `attr()`로 데이터 속성 값을 그대로 스타일에서 참조할 수 있어 컴포넌트 데이터 바인딩 패턴이 단순해집니다.
+- HTML은 `dialog` 요소에 `closedby` 속성이 추가됐고, IndexedDB는 batch 조회용 `getAllRecords()`가 추가됐습니다.
+- WebRTC는 `RTCRtpReceiver.jitterBufferTarget`이 추가되어 오디오 품질 제어 옵션이 늘었습니다.
+- 보안·개발 편의 면에서 loopback host에서 secure cookie 사용이 허용됐고, sticky 포지션 요소가 스크롤 중 깜빡이던 버그가 수정됐습니다.
+- 접근성 면에서는 VoiceOver가 `role="presentation"` 이미지의 텍스트를 읽던 버그가 수정됐고, iframe 안 `srcset` 이미지 렌더링과 HTML 파서의 escaped attribute 처리 버그도 정리됐습니다.
+- macOS Tahoe·Sequoia에서 사용 가능하며, WebKit commits 310187@main–310599@main 기반입니다.
+
+##### 매거진 인사이트
+
+> Safari TP 릴리스 노트는 새 기능 안내가 아니라, 다음 안정 버전 출시 전 컴포넌트·접근성 QA를 어디까지 미리 해야 하는지 알려주는 체크리스트입니다.
+
+CSS `attr()`과 dialog `closedby`는 컴포넌트 라이브러리 설계 패턴이 바뀌는 변화이고, sticky 깜빡임·VoiceOver presentation 이미지 버그 수정은 접근성 QA 회귀를 막는 항목입니다. 이번 릴리스 노트는 둘이 한 번에 들어와, 다음 분기 컴포넌트 QA 점검 폭이 커졌습니다.
+
+###### 왜 지금 이 업데이트인가
+
+CSS `attr()`은 컴포넌트 데이터 바인딩의 기본기에 가까운 변화입니다. 그동안 클래스·CSS 변수·custom property로 우회하던 패턴이 표준 함수로 직접 들어오면, 디자인 시스템 컴포넌트 설계 방식이 정리됩니다. 동시에 sticky 깜빡임·VoiceOver presentation 이미지 같은 회귀가 정리되어, 다음 Safari 안정 버전 출시 전 QA 항목이 한 번에 늘어납니다.
+
+###### 구현 관점
+
+CSS `attr()`은 데이터 속성을 스타일에서 직접 참조하므로 컴포넌트 props·variants 정의 방식에 영향을 줍니다. 다만 미지원 브라우저에서 fallback이 필요하므로 `@supports`로 분기하거나 custom property fallback을 함께 둡니다. dialog `closedby`는 키보드 ESC·바깥 클릭 등 닫힘 트리거를 표준화하는 속성이므로 기존 close 핸들러와 충돌하지 않게 정리해야 합니다.
+
+###### 실무에 어떻게 적용할 수 있을까
+
+- 디자인 시스템 컴포넌트의 데이터 속성 바인딩이 CSS `attr()`로 단순화될 수 있는지 점검합니다.
+- `dialog` 컴포넌트의 닫힘 트리거를 `closedby` 속성 기반으로 정리하고, JavaScript close 핸들러와 중복되지 않게 합니다.
+- 접근성 QA에서는 VoiceOver presentation 이미지 동작·sticky 스크롤 깜빡임을 회귀 점검 항목으로 추가합니다.
+- IndexedDB 사용 영역은 `getAllRecords()` 도입 가능 여부를 검토해 다중 cursor 호출을 단순화합니다.
+
+###### 같이 보면 좋은 기술
+
+- CSS Custom Properties: `attr()`이 정착하기 전까지 fallback으로 함께 쓰이는 패턴입니다.
+- Popover API: `dialog` `closedby`와 닫힘 동작 모델을 비교해 보면 패턴 차이가 명확해집니다.
+
+#### 10. [Syntax.fm] AI 코딩의 vibe를 고치는 법 — 결정론 도구로 무작위성을 줄인다
+
+- 날짜: 2026-04-22
+- 태그: vibe coding / AI coding tools / lint / static analysis
+- 국가: GLOBAL
+- 카테고리: AI Tools
+- 직무 태그: 웹DEV
+- 출처 유형: blog_opinion
+- 출처: Syntax.fm
+- 출처 URL: https://syntax.fm/998
+- 이미지:
+- 이미지 설명: 이미지 확인 필요
+- 요약: Syntax.fm 998회에서 Wes Bos·Scott Tolinski가 AI 코딩 도구가 만들어내는 비일관성·환각 문제를 결정론적 도구(knip·fallow·ESLint·StyleLint·jscpd·Storybook AI·agent-browser 같은 headless 브라우저)로 강제하는 흐름을 정리했습니다.
+
+##### 요약
+
+- 에피소드의 핵심 주장은 AI 코딩 도구의 비결정성·환각 문제는 모델 한계라기보다 결정론 도구를 함께 쓰지 않은 워크플로우 문제라는 것입니다.
+- 호스트들은 lint·static analysis·중복 검사·시각 회귀 같은 결정론 도구로 AI 산출물을 강제 검증하는 패턴을 권합니다.
+- 도구 목록에는 knip(미사용 코드 검출), fallow, ESLint, StyleLint, Sentry, jscpd(코드 중복 검사), Storybook AI(컴포넌트 시각 검증), headless 브라우저 기반 agent-browser가 포함됩니다.
+- Wes Bos는 일주일 사이에 클라이언트 두 곳을 잃은 사례를 들어, AI 코드 품질 문제가 비즈니스 비용으로 직결됨을 짚습니다.
+- 호스트들은 task workflow에 검증 단계를 강제하는 enforcement 패턴(예: lint 통과 못 하면 PR 불가)이 AI 시대에 더 중요하다고 정리합니다.
+
+##### 매거진 인사이트
+
+> AI가 코드를 빠르게 만들수록, 결정론적 검증 도구가 시스템에 들어가야 비결정성을 흡수할 수 있습니다.
+
+호스트들이 짚는 지점은 AI 도구에 대한 회의가 아니라, AI 도구 사용을 견딜 수 있게 만드는 인프라가 빠져 있다는 진단입니다.
+
+###### 왜 지금 이 업데이트인가
+
+AI 코딩 도구가 일상화되면서 산출물의 평균 품질·일관성 문제가 팀 단위 비용으로 드러나고 있습니다. 이번 에피소드는 그 문제를 도구·워크플로우·enforcement의 3축으로 정리해, AI 도입을 검토하는 조직이 그대로 가져갈 수 있는 체크리스트가 됩니다.
+
+###### 구현 관점
+
+AI 산출물 검증은 사람 리뷰만으로는 한계가 명확합니다. 결정론 도구(knip·jscpd·StyleLint·Storybook AI)를 PR 단계에 강제로 끼워두고, 통과 못 하면 머지 못 하게 막는 enforcement가 가장 효과적입니다. agent-browser 같은 headless 브라우저는 컴포넌트 시각 회귀를 자동화해, AI 산출물의 화면 영향까지 잡아낼 수 있습니다.
+
+###### 실무에 어떻게 적용할 수 있을까
+
+- AI 도구로 만든 코드가 통과해야 할 결정론 검증(lint·static analysis·중복 검사·시각 회귀)을 PR 템플릿에 명시합니다.
+- knip·jscpd 같은 미사용/중복 검출 도구를 CI에 추가해, AI가 빠르게 만든 코드의 부채를 자동으로 감지합니다.
+- Storybook AI나 시각 회귀 도구로 컴포넌트 산출물의 시각 일관성을 자동 검증합니다.
+- 일주일에 한 번 AI 코드 PR의 품질 지표(인시던트 발생률·중복 비율·통과율)를 팀이 같이 봅니다.
+
+###### 같이 보면 좋은 기술
+
+- ESLint AI rules: AI 산출물에 자주 나타나는 패턴을 잡아내는 룰 셋이 등장하고 있어, AI 시대 lint 설정으로 별도 봐둘 만합니다.
+- jscpd: 코드 중복 검출 도구. AI 코드의 4배 중복 패턴을 잡는 데 직접 쓰입니다.
+
+## 수집했지만 제외한 것
+
+- Toss Tech 시리즈(post-quantum cryptography·StarRocks·PANDA 데이터봇): 토스 자사 인프라·운영 글이며 이번 회차에서는 PANDA가 4/27 회차에서 이미 다뤄졌고 나머지는 백엔드/보안/운영 기술 중심이라 매거진 독자(웹기획·UIUX 디자인·웹퍼블리싱)와 거리가 있어 제외. 다시 볼 조건: 화면·운영 UX 변화 중심 후속 글이 나올 때.
+- Google Gemini·OpenAI 모델/Codex 다수 후보(GPT-5.5 발표·Codex 사용법 시리즈·TPU 인프라 글): 모델 발표·인프라·CLI 사용법 묶음이라 매거진 독자의 화면·플로우 질문으로 바뀌지 않음. 다시 볼 조건: 화면·UI·실제 서비스 적용 사례가 별도로 공개될 때.
+- 신세계·쿠팡·컬리·무신사 뉴스룸 다수: 카드 제휴, 캠페인, 모델 발탁, 콜라보, 매장 오픈, ESG 행사 중심이라 화면·플로우·정책 변화가 원문에서 확인되지 않아 제외. 다시 볼 조건: 동일 브랜드의 화면 개편·정책 변화 보도자료가 별도로 나올 때.
+- Spotify Newsroom 비통합 항목(Fitness, Nintendo 콜라보, Vogue Mexico, Earth Day audiobooks 등): 마케팅·콜라보 비중이 높아 사용자 화면·플로우 변화가 원문에서 확인되지 않아 제외. Claude integration만 채택.
+- 당근 보도자료 다수(걷기 캠페인·세대별 부동산 분석·아파트 나눔 순위·연간 실적·하인즈 콜라보 등): 데이터 발표·캠페인·실적 중심이라 화면·정책 변화가 직접 확인되지 않아 제외. AI 후기 기능은 4/27 회차에서 이미 발행. 당근페이 신제품-중고거래 연결은 보도자료에서 화면·플로우 노출이 빈약해 본 회차에서는 보류.
+- Dev.to·Frontend Focus·CSS Weekly·JavaScript Weekly 묶음: 큐레이션 뉴스레터는 후보 발견 출처로만 사용. 개별 원문이 매거진 기준에 부합하는 항목(Smashing Session Timeouts, CSS-Tricks Vision Pro 등)만 본 매거진에 채택.
+- Chrome Developers WebGPU 147-148·Structured Clone Extension Messaging: 매거진 독자(웹퍼블리셔·UIUX 개발자) 실무에서 우선순위가 낮아 보류. WebGPU는 다음 회차 디자인 도구·렌더링 후속 글과 함께 묶을 가능성이 있어 다시 볼 조건으로 남김.

@@ -1,0 +1,46 @@
+{
+  "date": "2026-04-29",
+  "command": [],
+  "steps": [
+    "service 수집",
+    "design 수집",
+    "dev 수집",
+    "기사 정리 및 분류",
+    "워크플로 QA"
+  ],
+  "startedAt": "2026-04-29T01:01:15.345Z",
+  "results": [
+    {
+      "label": "service 수집",
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/tracking/fetch_service_news.mjs",
+      "startedAt": "2026-04-29T01:01:15.612Z",
+      "finishedAt": "2026-04-29T01:01:17.015Z"
+    },
+    {
+      "label": "design 수집",
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/tracking/fetch_design_news.mjs",
+      "startedAt": "2026-04-29T01:01:17.016Z",
+      "finishedAt": "2026-04-29T01:01:17.759Z"
+    },
+    {
+      "label": "dev 수집",
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/tracking/fetch_dev_news.mjs",
+      "startedAt": "2026-04-29T01:01:17.759Z",
+      "finishedAt": "2026-04-29T01:01:18.485Z"
+    },
+    {
+      "label": "기사 정리 및 분류",
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/tracking/collect_materials.mjs --no-fetch",
+      "startedAt": "2026-04-29T01:01:18.485Z",
+      "finishedAt": "2026-04-29T01:01:18.582Z"
+    },
+    {
+      "label": "워크플로 QA",
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/tracking/workflow_quality_gate.mjs --date=2026-04-29",
+      "startedAt": "2026-04-29T01:01:18.583Z",
+      "finishedAt": "2026-04-29T01:01:18.680Z"
+    }
+  ],
+  "finishedAt": "2026-04-29T01:01:18.682Z",
+  "status": "ok"
+}
