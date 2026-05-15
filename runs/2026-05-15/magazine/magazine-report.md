@@ -585,8 +585,8 @@ AI 코딩 에이전트가 React 코드를 생성하는 비중이 늘면서, 생�
 - 출처 유형: blog_opinion
 - 출처: unix.foo (Cyrus)
 - 출처 URL: https://unix.foo/posts/local-ai-needs-to-be-norm/
-- 이미지: 
-- 이미지 설명: 이미지 확보 메모: 원문(unix.foo) OG 이미지 미제공. 개인 블로그로 공식 이미지 없음.
+- 이미지: https://unix.foo/images/brutalist_ios_main.png
+- 이미지 설명: unix.foo 원문 첫 번째 콘텐츠 이미지 — Brutalist Report iOS 앱 메인 화면
 - 요약: 개발자 Cyrus가 자신의 뉴스 애그리게이터 iOS 앱에 Apple 온디바이스 AI API를 직접 적용한 경험을 바탕으로, 요약·분류·추출 같은 변환 작업에는 클라우드 LLM 대신 로컬 모델을 기본값으로 써야 한다고 주장한다.
 
 

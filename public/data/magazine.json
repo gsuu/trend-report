@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T05:54:18.198693+00:00",
+  "generatedAt": "2026-05-15T06:09:08.846594+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -1937,8 +1937,8 @@
         "route": "/articles/2026-05-15-13",
         "href": "/articles/2026-05-15-13",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-13",
-        "image": "",
-        "imageCaption": "이미지 확보 메모: 원문(unix.foo) OG 이미지 미제공. 개인 블로그로 공식 이미지 없음.",
+        "image": "https://unix.foo/images/brutalist_ios_main.png",
+        "imageCaption": "unix.foo 원문 첫 번째 콘텐츠 이미지 — Brutalist Report iOS 앱 메인 화면",
         "tags": [
           "로컬AI",
           "온디바이스",
