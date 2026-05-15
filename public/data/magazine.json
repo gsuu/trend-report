@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T06:15:09.601558+00:00",
+  "generatedAt": "2026-05-15T06:17:27.767276+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -764,10 +764,10 @@
       {
         "number": "06",
         "platform": "한국디자인진흥원 디자인DB",
-        "areaKey": "design",
-        "area": "Design",
+        "areaKey": "dev",
+        "area": "DEV",
         "categoryKey": "etc",
-        "category": "ETC",
+        "category": "Etc",
         "sourceType": "news",
         "sourceTypeLabel": "기사/뉴스",
         "publicationDate": "2026-05-15",
