@@ -1,0 +1,159 @@
+[
+  {
+    "title": "서울 시민의 목소리를 시각화하기",
+    "link": "https://pxdstory.tistory.com/1897",
+    "pubDate": "Thu, 14 May 2026 19:46:44 +0900",
+    "content": "시민의 목소리를 데이터로 UI 디자인을 할 때 늘 부딪히는 문제가 있습니다. 다양한 의견을 가진 사용자의 목소리를 어떻게 정리하고 전달할까. 개개인의 목소리에 집중하면 맥락과 목표가 저마다 다른 모두를 만족시키기 어렵고, 그렇다고 평균을 내면 누구도 대표하지 못해 모두가 만족하지 못하는 디자인이 됩니다. 그래서 보통 퍼소나로 사용자를 몇 가지 유형으로 나눠 접근하게 됩니다. 정원오 서울시장 후보가 만든 '서울의 목소리'는 비슷한 문제를 도시 단위로 마주하고 있습니다. 서울 시민의 불편과 고충을 수집해 데이터 기반 해법을 찾고, 그 데이터를 공공데이터로 모두에게 공개하고 있습니다. 수천명의 시민 목소리를 어떻게 정리해 보여주고 있는지, 거기에서 어떤 정보를 얻어낼 수 있는지 시각화 측면에서 살펴보았습니다. 설문을 통해 시민의 의견을 수집하는데, 세개의 주관식 문항이 주된 질문입니다. 서울 생활에서의 고충 차기 서울시장에게 바라는 점 서울하면 떠오르는 키워드 정성 데이터를 보여주는 방식 서울의목소리 사이트는 데이터를 두…",
+    "image": "",
+    "valueTags": [
+      "korean_reference",
+      "korean_uiux_case"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "하네스 엔지니어링",
+    "link": "https://pxdstory.tistory.com/1896",
+    "pubDate": "Mon, 11 May 2026 07:50:18 +0900",
+    "content": "들어가며 OpenAI의 엔지니어링 팀이 5개월 동안 약 100만 줄의 프로덕션 코드를 만들었다. 놀라운 건 규모가 아니다. 수동으로 작성한 소스코드가 단 한 줄도 없다는 점이다. 소수의 엔지니어가 Codex 에이전트에게 작업을 지시하고, PR을 검토하고, CI 파이프라인을 관리했을 뿐이다. 애플리케이션 로직, 문서, CI 설정, 모니터링 설정까지 전부 AI 에이전트가 만들었다. 이 실험에서 OpenAI가 얻은 가장 중요한 교훈은 이것이다: \"어려운 건 AI 에이전트가 아니다. 에이전트가 일할 환경(harness)이 어렵다.\" 이 환경을 설계하는 분야가 바로 하네스 엔지니어링(Harness Engineering)이다. 하네스 엔지니어링이란? 비유로 이해하기 \"하네스(harness)\"는 말에게 씌우는 마구(馬具)다. 말이 아무리 빠르고 강해도, 고삐 없이는 짐을 나를 수 없고 밭을 갈 수도 없다. 방향을 잡아주고, 힘을 전달하고, 안전하게 제어하는 것이 마구의 역할이다. AI 에이전트도 마찬가지다. - GPT-5든 Cl…",
+    "image": "",
+    "valueTags": [
+      "design_ai_workflow"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/estudi-image-turns-radar-grids-and-storm-data-into-nados-crypto-brand",
+    "pubDate": "Sun, 17 May 2026 01:04:40 GMT",
+    "content": "NADO is a decentralised exchange built by the team behind Kraken, named as a playful spin on ‘tornado.’ That decision set up the brief faced by ESTUDI-IMAGE: build an identity for a high-stakes financial product around the imagery of weather systems, without letting the metaphor become overly decorative. The result is a brand grounded in radar grids, calibration marks, storm data and dither that feels as calm and precise.",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/05/estudi-image-turns-radar-grids-and-storm-data-into-nados-crypto-brand/NADO-ESTUDI-IMAGE-01.jpg",
+    "valueTags": [
+      "layout_pattern",
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Practical Interface Patterns For AI Transparency (Part 2)",
+    "link": "https://smashingmagazine.com/2026/05/practical-interface-patterns-ai-transparency/",
+    "pubDate": "Wed, 13 May 2026 13:00:00 GMT",
+    "content": "Why traditional loading patterns like spinners fail in agentic AI experiences, and how interface patterns that reveal the system’s process, status, and decision-making can improve transparency and build user trust.",
+    "image": "http://files.smashing.media/articles/practical-interface-patterns-ai-transparency/practical-interface-patterns-ai-transparency.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Small by Design: The Strength of Lean Design-System Teams",
+    "link": "https://www.nngroup.com/articles/lean-design-system-teams/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 15 May 2026 17:00:00 +0000",
+    "content": "Lean design-system teams, when strategically planned, can move faster, prioritize sharply, and scale impact beyond their size.",
+    "image": "",
+    "valueTags": [],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "What Designers Actually Struggle with on Product Teams",
+    "link": "https://www.nngroup.com/articles/designers-product-teams/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 15 May 2026 17:00:00 +0000",
+    "content": "Designers' top struggles aren't about design skills. They're about alignment, influence, and navigating org complexity — the work no one taught them to do.",
+    "image": "",
+    "valueTags": [],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "Ten Data-Backed Truths Of User Experience ROI",
+    "link": "https://smashingmagazine.com/2026/05/data-backed-truths-user-experience-roi/",
+    "pubDate": "Fri, 15 May 2026 10:00:00 GMT",
+    "content": "Every extra second of friction has a measurable business cost. Carrie Webster shares ten data-backed UX facts that link user experience directly to revenue, retention, and long-term growth.",
+    "image": "http://files.smashing.media/articles/data-backed-truths-user-experience-roi/data-backed-truths-user-experience-roi.jpg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  }
+]
