@@ -1,0 +1,184 @@
+[
+  {
+    "title": "서울 시민의 목소리를 시각화하기",
+    "link": "https://pxdstory.tistory.com/1897",
+    "pubDate": "Thu, 14 May 2026 19:46:44 +0900",
+    "content": "시민의 목소리를 데이터로 UI 디자인을 할 때 늘 부딪히는 문제가 있습니다. 다양한 의견을 가진 사용자의 목소리를 어떻게 정리하고 전달할까. 개개인의 목소리에 집중하면 맥락과 목표가 저마다 다른 모두를 만족시키기 어렵고, 그렇다고 평균을 내면 누구도 대표하지 못해 모두가 만족하지 못하는 디자인이 됩니다. 그래서 보통 퍼소나로 사용자를 몇 가지 유형으로 나눠 접근하게 됩니다. 정원오 서울시장 후보가 만든 '서울의 목소리'는 비슷한 문제를 도시 단위로 마주하고 있습니다. 서울 시민의 불편과 고충을 수집해 데이터 기반 해법을 찾고, 그 데이터를 공공데이터로 모두에게 공개하고 있습니다. 수천명의 시민 목소리를 어떻게 정리해 보여주고 있는지, 거기에서 어떤 정보를 얻어낼 수 있는지 시각화 측면에서 살펴보았습니다. 설문을 통해 시민의 의견을 수집하는데, 세개의 주관식 문항이 주된 질문입니다. 서울 생활에서의 고충 차기 서울시장에게 바라는 점 서울하면 떠오르는 키워드 정성 데이터를 보여주는 방식 서울의목소리 사이트는 데이터를 두…",
+    "image": "",
+    "valueTags": [
+      "korean_reference",
+      "korean_uiux_case"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "컬러 토큰 설계 3가지 방식 (스케일 / 시멘틱 / 하이브리드)",
+    "link": "https://pxdstory.tistory.com/1888",
+    "pubDate": "Mon, 18 May 2026 07:50:07 +0900",
+    "content": "AI의 등장과 디자인 자동화가 본격화되면서, 이제는 작업 속도 자체보다 그 속도 안에서도 서비스의 일관성을 끝까지 유지할 수 있는지가 더 중요해졌습니다. 한 때는 정말 픽셀 하나, 간격 하나에 목숨 걸며 그 정교함이 디자인의 실력을 가늠하는 기준처럼 여겨지던 시절도 있었는데요. 이제는 손으로 어떻게 만들었는지보다, 어떤 기준을 세워 그 결과가 나오도록 만들었는지가 더 중요해졌다는 것이죠. 이러한 변화 속에서 디자인 시스템은 서비스를 안정적으로 운용하기 위한 핵심 인프라로 자리 잡았으며, 이를 전담 조직으로 운영하는 기업 역시 빠르게 늘어나고 있습니다. 그렇다면 디자인 시스템 중에서도 가장 기초이면서도, 동시에 가장 큰 영향을 미치는 컬러 토큰 설계는 어떤 관점에서 접근해야 할까요? 최근 진행했던 프로젝트에서 컬러 토큰 체계를 새롭게 구축하는 과정에서 얻은 경험과 인사이트를 바탕으로, 컬러 토큰 설계를 어떤 관점에서 선택하고 구조화할 수 있는지 공유해보려고 합니다. 컬러 토큰의 기본 개념은 아래 글을 참고하세요 :)…",
+    "image": "",
+    "valueTags": [
+      "look_and_feel",
+      "korean_uiux_case",
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "삼성전자 ‘2026 호주 테크 세미나’ 열고 차세대 디스플레이 기술 선보여",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40604&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Mon, 18 May 2026 01:04:37 GMT",
+    "content": "삼성전자가 14일부터 15일(현지시간)까지 호주 시드니에서 ‘2026 호주 테크 세미나’를 열고 AI TV 신기술과 차세대 디스플레이 라인업을 선보였다. 호주 시드니에서 열린 삼성전자 ‘2026 호주 테크세...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260518083146164_8183.0.jpg",
+    "valueTags": [
+      "korean_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/korak-studios-punchy-identity-for-dig-in-art-diner-takes-inspiration-from-street-art-and-graffiti",
+    "pubDate": "Mon, 18 May 2026 01:04:54 GMT",
+    "content": "DIG IN Art Diner is a restaurant experience that sees great food and drink take inspiration from the art on its walls. Located on Dublin’s Camden Street, the venue underwent a refresh with the new concept of an ‘Art Diner’ – which sees large canvases, prints and sculptures positioned throughout the dining space. As part of the initial launch, the first collection boasts rare pieces by Banksy and Chloe Early as well as the only original painting in Ireland by Conor Harrington.",
+    "image": "https://the-brandidentity.com/uploads/articles/2022/06/korak-studios-punchy-identity-for-dig-in-art-diner-takes-inspiration-from-street-art-and-graffiti/DigIn-1.jpg",
+    "valueTags": [
+      "visual_trend",
+      "look_and_feel",
+      "brand_expression",
+      "commerce_design",
+      "commerce_campaign_design",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Practical Interface Patterns For AI Transparency (Part 2)",
+    "link": "https://smashingmagazine.com/2026/05/practical-interface-patterns-ai-transparency/",
+    "pubDate": "Wed, 13 May 2026 13:00:00 GMT",
+    "content": "Why traditional loading patterns like spinners fail in agentic AI experiences, and how interface patterns that reveal the system’s process, status, and decision-making can improve transparency and build user trust.",
+    "image": "http://files.smashing.media/articles/practical-interface-patterns-ai-transparency/practical-interface-patterns-ai-transparency.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Small by Design: The Strength of Lean Design-System Teams",
+    "link": "https://www.nngroup.com/articles/lean-design-system-teams/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 15 May 2026 17:00:00 +0000",
+    "content": "Lean design-system teams, when strategically planned, can move faster, prioritize sharply, and scale impact beyond their size.",
+    "image": "",
+    "valueTags": [],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "What Designers Actually Struggle with on Product Teams",
+    "link": "https://www.nngroup.com/articles/designers-product-teams/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 15 May 2026 17:00:00 +0000",
+    "content": "Designers' top struggles aren't about design skills. They're about alignment, influence, and navigating org complexity — the work no one taught them to do.",
+    "image": "",
+    "valueTags": [],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "Ten Data-Backed Truths Of User Experience ROI",
+    "link": "https://smashingmagazine.com/2026/05/data-backed-truths-user-experience-roi/",
+    "pubDate": "Fri, 15 May 2026 10:00:00 GMT",
+    "content": "Every extra second of friction has a measurable business cost. Carrie Webster shares ten data-backed UX facts that link user experience directly to revenue, retention, and long-term growth.",
+    "image": "http://files.smashing.media/articles/data-backed-truths-user-experience-roi/data-backed-truths-user-experience-roi.jpg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  }
+]
