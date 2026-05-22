@@ -1,0 +1,239 @@
+{
+  "date": "2026-05-22",
+  "sourceFile": "news-tracking/design-sources.json",
+  "totalArticles": 9,
+  "sourceResults": [
+    {
+      "name": "DIGITAL iNSIGHT",
+      "type": "feed",
+      "url": "https://ditoday.com/feed/",
+      "status": "error",
+      "count": 0,
+      "error": "Invalid character in entity name\nLine: 0\nColumn: 225\nChar: &"
+    },
+    {
+      "name": "pxd story",
+      "type": "feed",
+      "url": "https://pxdstory.tistory.com/rss",
+      "status": "ok",
+      "count": 3,
+      "error": ""
+    },
+    {
+      "name": "Figma Releases",
+      "type": "feed",
+      "url": "https://figmareleases.blogspot.com/feeds/posts/default",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Adobe Blog",
+      "type": "feed",
+      "url": "https://blog.adobe.com/feed.xml",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Smashing Magazine - UX Design",
+      "type": "feed",
+      "url": "https://www.smashingmagazine.com/feed/",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    },
+    {
+      "name": "Nielsen Norman Group",
+      "type": "feed",
+      "url": "https://www.nngroup.com/feed/rss/",
+      "status": "ok",
+      "count": 3,
+      "error": ""
+    },
+    {
+      "name": "Typewolf",
+      "type": "feed",
+      "url": "https://www.typewolf.com/feed/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Brand New",
+      "type": "feed",
+      "url": "https://feeds.feedburner.com/underconsideration/brandnew",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Toss Tech (Design tag)",
+      "type": "feed",
+      "url": "https://toss.tech/rss.xml",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "DIGITAL iNSIGHT - UIUX",
+      "type": "page",
+      "url": "https://ditoday.com/ui-ux/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Samsung Design - UXUI",
+      "type": "page",
+      "url": "https://design.samsung.com/kr/explore/?tag=UXUI",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Design Spectrum",
+      "type": "page",
+      "url": "https://designspectrum.org/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "DesignDB - Design News",
+      "type": "page",
+      "url": "https://www.designdb.com/?menuno=792",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    },
+    {
+      "name": "Design Compass",
+      "type": "page",
+      "url": "https://designcompass.org/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Design X Blog",
+      "type": "page",
+      "url": "https://design-x.kr/blog",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Mobbin",
+      "type": "page",
+      "url": "https://mobbin.com/browse/ios/apps",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Page Flows",
+      "type": "page",
+      "url": "https://pageflows.com/",
+      "status": "error",
+      "count": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Awwwards - Websites",
+      "type": "page",
+      "url": "https://www.awwwards.com/websites/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Siteinspire",
+      "type": "page",
+      "url": "https://www.siteinspire.com/",
+      "status": "error",
+      "count": 0,
+      "error": "HTTP 429"
+    },
+    {
+      "name": "Lapa Ninja",
+      "type": "page",
+      "url": "https://www.lapa.ninja/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Cosmos",
+      "type": "page",
+      "url": "https://www.cosmos.so/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "The Brand Identity",
+      "type": "page",
+      "url": "https://the-brandidentity.com/",
+      "status": "ok",
+      "count": 8,
+      "error": ""
+    },
+    {
+      "name": "It's Nice That",
+      "type": "page",
+      "url": "https://www.itsnicethat.com/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Muzli",
+      "type": "page",
+      "url": "https://muz.li/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Figma Blog - Design Systems",
+      "type": "page",
+      "url": "https://www.figma.com/blog/design-systems/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Into Design Systems",
+      "type": "page",
+      "url": "https://www.intodesignsystems.com/blog",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Framer Updates",
+      "type": "page",
+      "url": "https://www.framer.com/updates/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Webflow Blog",
+      "type": "page",
+      "url": "https://webflow.com/blog",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Canva Newsroom",
+      "type": "page",
+      "url": "https://www.canva.com/newsroom/news/",
+      "status": "error",
+      "count": 0,
+      "error": "HTTP 403"
+    }
+  ]
+}
