@@ -1,0 +1,61 @@
+{
+  "signalKeywords": [
+    {
+      "key": "ai_recommendation",
+      "label": "AI 추천·개인화",
+      "patterns": ["AI 추천", "개인화 추천", "추천 시스템", "personalization", "recommendation"]
+    },
+    {
+      "key": "ai_review",
+      "label": "AI 리뷰·후기",
+      "patterns": ["AI 리뷰", "리뷰 요약", "후기 AI", "review AI"]
+    },
+    {
+      "key": "search",
+      "label": "검색·탐색",
+      "patterns": ["검색", "search ranking", "검색 품질", "검색 개편"]
+    },
+    {
+      "key": "membership_crm",
+      "label": "멤버십·CRM",
+      "patterns": ["멤버십", "membership", "CRM", "리텐션", "구독"]
+    },
+    {
+      "key": "payment_checkout",
+      "label": "결제·주문",
+      "patterns": ["결제", "checkout", "장바구니", "주문 플로우", "원클릭"]
+    },
+    {
+      "key": "operator_ux",
+      "label": "운영자·셀러·어드민",
+      "patterns": ["셀러", "어드민", "운영자", "operator", "seller tool", "정산"]
+    },
+    {
+      "key": "design_system",
+      "label": "디자인 시스템",
+      "patterns": ["디자인 시스템", "design system", "design token"]
+    },
+    {
+      "key": "frontend_publisher",
+      "label": "프론트엔드·퍼블리셔",
+      "patterns": ["퍼블리셔", "프론트엔드", "frontend", "마크업", "publisher", "Vite", "11ty", "Astro"]
+    },
+    {
+      "key": "accessibility",
+      "label": "접근성",
+      "patterns": ["접근성", "accessibility", "WCAG", "ARIA"]
+    }
+  ],
+  "companies": [
+    { "name": "무신사", "area": "service", "category": "fashion_commerce", "url": "https://corp.musinsa.com/careers" },
+    { "name": "29CM", "area": "service", "category": "fashion_commerce", "url": "https://www.29cm.co.kr/footer/career" },
+    { "name": "올리브영", "area": "service", "category": "beauty_commerce", "url": "https://recruit.oliveyoung.com/" },
+    { "name": "컬리", "area": "service", "category": "ecommerce", "url": "https://careers.kurly.com/jobs" },
+    { "name": "오늘의집", "area": "service", "category": "lifestyle_commerce", "url": "https://www.bucketplace.com/careers/" },
+    { "name": "SSF SHOP", "area": "service", "category": "fashion_commerce", "url": "https://recruit.sife.co.kr/" },
+    { "name": "쿠팡", "area": "service", "category": "marketplace", "url": "https://www.coupang.jobs/kr/jobs/" },
+    { "name": "토스", "area": "service", "category": "fintech", "url": "https://toss.im/career/jobs" },
+    { "name": "카카오", "area": "service", "category": "platform", "url": "https://careers.kakao.com/jobs" },
+    { "name": "당근", "area": "service", "category": "platform", "url": "https://about.daangn.com/jobs/" }
+  ]
+}

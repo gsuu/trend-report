@@ -210,8 +210,14 @@ function onGlossaryLeave(event) {
   clearGlossaryTooltip(term);
 }
 
+const isSignalsPage = computed(() => {
+  const path = (route.value.split("?")[0] || "").replace(/\/$/, "");
+  return path.endsWith("/signals") || path === "/signals";
+});
+
 onMounted(() => {
   loadMagazineReport();
+  loadSignalsData();
   syncDocumentState();
   watch(activeIssue, (issue) => {
     document.body.querySelectorAll(":scope > .glossary-tooltip[data-glossary-host]").forEach((tooltip) => tooltip.remove());
@@ -257,6 +263,22 @@ async function loadStaticMagazineReport() {
     magazineLoading.value = false;
   } catch {
     // Static JSON is the source of truth. The bundled fallback keeps the page usable.
+  }
+}
+
+const signalsData = ref(null);
+
+async function loadSignalsData() {
+  if (signalsData.value) return;
+  try {
+    const response = await fetch(withBasePath("/data/signals.json"), {
+      headers: { Accept: "application/json" },
+      cache: "no-cache",
+    });
+    if (!response.ok) return;
+    signalsData.value = await response.json();
+  } catch {
+    // Signals data is optional.
   }
 }
 
@@ -952,18 +974,27 @@ function issuePublicationDate(issue) {
       <span>Magazine</span>
     </a>
     <nav class="header-category-nav" aria-label="매거진 카테고리">
-      <a :href="withBasePath(withListFilter('/'))" data-category-nav="" :class="{ 'is-active': !activeCategoryKey && !activeIssue }">전체</a>
+      <a :href="withBasePath(withListFilter('/'))" data-category-nav="" :class="{ 'is-active': !activeCategoryKey && !activeIssue && !isSignalsPage }">전체</a>
       <a
         v-for="category in categories"
         :key="category.key"
         :href="categoryPath(category.key)"
         :data-category-nav="category.key"
-        :class="{ 'is-active': activeCategoryKey === category.key }"
-        :aria-current="activeCategoryKey === category.key ? 'page' : undefined"
+        :class="{ 'is-active': activeCategoryKey === category.key && !isSignalsPage }"
+        :aria-current="activeCategoryKey === category.key && !isSignalsPage ? 'page' : undefined"
       >
         <span class="category-nav-label">{{ category.label }}</span>
         <span v-if="category.jobLabel" class="category-nav-job" aria-hidden="true">{{ category.jobLabel }}</span>
         <span v-if="category.jobLabel" class="sr-only">독자 직무 {{ category.jobLabel }}</span>
+      </a>
+      <a
+        :href="withBasePath('/signals')"
+        data-category-nav="signals"
+        :class="{ 'is-active': isSignalsPage }"
+        :aria-current="isSignalsPage ? 'page' : undefined"
+      >
+        <span class="category-nav-label">Signals</span>
+        <span class="category-nav-job" aria-hidden="true">채용 신호</span>
       </a>
     </nav>
     <div class="header-actions">
@@ -1076,7 +1107,37 @@ function issuePublicationDate(issue) {
     </div>
   </Teleport>
 
-  <main :class="{ 'article-main': activeIssue }">
+  <main v-if="isSignalsPage" class="signals-page" aria-label="채용 신호 모니터링">
+    <header class="signals-header">
+      <p class="signals-eyebrow">discovery signals</p>
+      <h1>채용 공고 키워드 신호</h1>
+      <p class="signals-deck">메인 매거진 글은 아니지만 다음 분기 제품 방향을 가리키는 보조 지표. 모니터링 대상 회사들의 공개 채용 페이지를 키워드 기준으로 집계합니다.</p>
+    </header>
+    <section v-if="!signalsData || !signalsData.signals?.length" class="signals-empty">
+      <p>아직 집계된 채용 신호가 없습니다.</p>
+      <p class="signals-empty-hint">로컬에서 <code>npm run fetch:signals</code>를 실행하면 <code>public/data/signals.json</code>이 생성됩니다.</p>
+    </section>
+    <section v-else class="signals-grid">
+      <article v-for="signal in signalsData.signals" :key="signal.key" class="signals-card">
+        <header>
+          <h2>{{ signal.label }}</h2>
+          <strong>{{ signal.total }}</strong>
+        </header>
+        <ul v-if="signal.breakdown.length">
+          <li v-for="entry in signal.breakdown" :key="entry.company + signal.key">
+            <span>{{ entry.company }}</span>
+            <em>{{ entry.count }}</em>
+          </li>
+        </ul>
+        <p v-else class="signals-empty-row">언급 회사 없음</p>
+      </article>
+    </section>
+    <footer v-if="signalsData?.generatedAt" class="signals-footer">
+      <p>마지막 집계: {{ signalsData.generatedAt.slice(0, 10) }}</p>
+      <p v-if="signalsData.note" class="signals-note">{{ signalsData.note }}</p>
+    </footer>
+  </main>
+  <main v-else :class="{ 'article-main': activeIssue }">
     <article v-if="activeIssue" :key="'story-' + (activeIssue.route || activeIssue.number)" class="article-layout">
         <header class="article-hero">
           <p class="article-brand" v-text="activeIssue.platform"></p>

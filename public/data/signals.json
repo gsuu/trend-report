@@ -1,0 +1,7 @@
+{
+  "generatedAt": "",
+  "sourceFile": "news-tracking/jobs-tracking.json",
+  "signals": [],
+  "companies": [],
+  "note": "이 파일은 `npm run fetch:appstore`와 별개로 `node scripts/tracking/fetch_job_signals.mjs`(추가 가능: package.json scripts에 fetch:signals)로 채워집니다. 채용 공고는 sourceTier=discovery 등급으로, 메인 매거진 글로 발행하지 않고 /signals 사이드 페이지에서만 집계됩니다."
+}
