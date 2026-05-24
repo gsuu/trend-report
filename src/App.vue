@@ -714,10 +714,10 @@ function splitChecklistSentences(html) {
   return parts.map((part) => part.trim()).filter(Boolean);
 }
 
-const EMPHASIZED_SUBHEADS = ["설계 관점", "점검 질문", "디자인 관점", "구현 관점"];
+const EMPHASIZED_SUBHEAD_PATTERN = /(점검 질문|짚을 점|관점)/;
 function isEmphasizedSubhead(html) {
   if (!html) return false;
-  return EMPHASIZED_SUBHEADS.some((label) => html.includes(label));
+  return EMPHASIZED_SUBHEAD_PATTERN.test(html);
 }
 
 const SOURCE_TYPE_BADGES = {
@@ -752,10 +752,19 @@ function proseBlocks(blocks = []) {
   }, []);
 
   let lastSubheadIsChecklist = false;
+  let justAfterSubhead = false;
   const checklistConverted = mergedBlocks.map((block) => {
     if (block.kind === "subhead") {
       lastSubheadIsChecklist = /점검\s*질문/.test(plainText(block.html));
+      justAfterSubhead = true;
       return block;
+    }
+    if (justAfterSubhead && block.kind === "quote") {
+      justAfterSubhead = false;
+      return { ...block, kind: "hint" };
+    }
+    if (block.kind !== "subhead") {
+      justAfterSubhead = false;
     }
     if (lastSubheadIsChecklist && block.kind === "paragraph") {
       const items = splitChecklistSentences(block.html);
@@ -1313,6 +1322,7 @@ function issuePublicationDate(issue) {
             <div v-if="section.prose" class="section-prose">
               <template v-for="(block, index) in proseBlocks(section.blocks)" :key="block.kind + (block.html || block.items?.join('')) + index">
                 <p v-if="block.kind === 'quote'" class="insight-lead" v-html="block.html"></p>
+                <p v-else-if="block.kind === 'hint'" class="prose-hint" v-html="block.html"></p>
                 <h3
                   v-else-if="block.kind === 'subhead'"
                   :class="{ 'is-emphasized': isEmphasizedSubhead(block.html) }"

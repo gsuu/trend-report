@@ -2424,6 +2424,23 @@ main {
   line-height: 1.5;
 }
 
+.section-prose .prose-hint {
+  margin: -8px 0 4px;
+  padding: 6px 12px;
+  border-left: 2px solid #cccccc;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.section-prose h3.is-emphasized + .prose-hint {
+  margin-top: 4px;
+  padding-left: 18px;
+  border-left-color: #aaaaaa;
+}
+
 .section-prose h3 {
   position: relative;
   margin: 42px 0 0;
