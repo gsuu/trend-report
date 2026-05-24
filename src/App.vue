@@ -783,10 +783,10 @@ function sourceTypeBadge(issue) {
 }
 
 const ARTICLE_NATURE_BADGES = {
-  decision: { label: "🎯 결정용", description: "회의 직전 결정 단서가 되는 글" },
-  context: { label: "🗺️ 맥락용", description: "장기 트렌드·리서치 맥락을 잡는 글" },
-  case: { label: "📁 사례용", description: "여러 브랜드·화면을 비교한 사례 모음" },
-  debate: { label: "⚔️ 논쟁용", description: "업계 논쟁·관점이 갈리는 글" },
+  decision: { label: "결정용", description: "회의 직전 결정 단서가 되는 글" },
+  context: { label: "맥락용", description: "장기 트렌드·리서치 맥락을 잡는 글" },
+  case: { label: "사례용", description: "여러 브랜드·화면을 비교한 사례 모음" },
+  debate: { label: "논쟁용", description: "업계 논쟁·관점이 갈리는 글" },
 };
 function articleNatureBadge(issue) {
   if (!issue) return null;
@@ -1312,7 +1312,7 @@ function issuePublicationDate(issue) {
               role="note"
               aria-label="클라이언트에게 묻기"
             >
-              <span class="meeting-question-label" aria-hidden="true">💬 클라이언트에게 묻기</span>
+              <span class="meeting-question-label" aria-hidden="true">클라이언트에게 묻기</span>
               <p class="meeting-question-body" v-text="activeIssue.meetingQuestion"></p>
             </aside>
             <p class="article-deck" v-html="activeIssue.deckHtml"></p>
@@ -1377,7 +1377,7 @@ function issuePublicationDate(issue) {
             class="code-artifacts"
             aria-label="코드 산출물"
           >
-            <span class="code-artifacts-label" aria-hidden="true">🛠️ 코드 산출물</span>
+            <span class="code-artifacts-label" aria-hidden="true">코드 산출물</span>
             <ul>
               <li v-for="artifact in activeIssue.codeArtifacts" :key="artifact.label + artifact.url">
                 <a v-if="artifact.url" :href="artifact.url" target="_blank" rel="noreferrer" :class="['code-artifact-chip', 'is-' + artifact.type]">
@@ -1431,11 +1431,11 @@ function issuePublicationDate(issue) {
                 <p v-if="block.kind === 'quote'" class="insight-lead" v-html="block.html"></p>
                 <p v-else-if="block.kind === 'hint'" class="prose-hint" v-html="block.html"></p>
                 <div v-else-if="block.kind === 'data'" class="data-highlight">
-                  <span class="data-highlight-label" aria-hidden="true">📊 데이터</span>
+                  <span class="data-highlight-label" aria-hidden="true">데이터</span>
                   <p v-html="block.html"></p>
                 </div>
                 <blockquote v-else-if="block.kind === 'inline-quote'" class="inline-quote">
-                  <span class="inline-quote-label" aria-hidden="true">❝ 인용</span>
+                  <span class="inline-quote-label" aria-hidden="true">인용</span>
                   <p v-html="block.html"></p>
                 </blockquote>
                 <h3
@@ -1466,17 +1466,17 @@ function issuePublicationDate(issue) {
             aria-label="에디터 큐레이션 인덱스"
           >
             <article v-if="activeIssue.curationNote" class="curation-card curation-note-card">
-              <span class="curation-label" aria-hidden="true">📝 에디터의 큐레이션 노트</span>
+              <span class="curation-label" aria-hidden="true">에디터의 큐레이션 노트</span>
               <p class="curation-note-body" v-text="activeIssue.curationNote"></p>
             </article>
             <article v-if="activeIssue.articleHighlights?.length" class="curation-card curation-highlights-card">
-              <span class="curation-label" aria-hidden="true">📖 이 글에서 만나는 것</span>
+              <span class="curation-label" aria-hidden="true">이 글에서 만나는 것</span>
               <ul>
                 <li v-for="highlight in activeIssue.articleHighlights" :key="'h-' + highlight" v-text="highlight"></li>
               </ul>
             </article>
             <article v-if="nextToReadIssues.length || activeIssue.externalReads?.length" class="curation-card curation-related-card">
-              <span class="curation-label" aria-hidden="true">📚 같이 살펴보면 좋은 글</span>
+              <span class="curation-label" aria-hidden="true">같이 살펴보면 좋은 글</span>
               <ul>
                 <li v-for="related in nextToReadIssues" :key="'rel-' + related.id">
                   <a :href="storyRoute(related)">
@@ -1515,7 +1515,7 @@ function issuePublicationDate(issue) {
             aria-label="슬라이드 인용"
           >
             <div class="pull-quote-head">
-              <span class="pull-quote-label">📌 슬라이드 인용</span>
+              <span class="pull-quote-label">슬라이드 인용</span>
               <button type="button" class="pull-quote-copy" @click="copyPullQuote(activeIssue)">
                 <span v-if="copyStatus">{{ copyStatus }}</span>
                 <span v-else>복사</span>
@@ -1533,7 +1533,7 @@ function issuePublicationDate(issue) {
             class="source-verification-card"
             aria-label="출처 검증"
           >
-            <span class="source-verification-label">📚 출처 검증</span>
+            <span class="source-verification-label">출처 검증</span>
             <dl class="source-verification-grid">
               <template v-if="activeIssue.sourceVerification.publisher">
                 <dt>매체</dt>
