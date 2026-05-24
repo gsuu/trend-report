@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-24T02:00:24.242652+00:00",
+  "generatedAt": "2026-05-24T02:27:31.432680+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -36,6 +36,7 @@
         "takeawayHtml": "오늘의집 &#x27;로컬의 선택&#x27; 기획전 — 144종 큐레이션과 &#x27;늘신선&#x27; 신선식품 브랜드 론칭",
         "deckHtml": "오늘의집이 전국 로컬 애착템 144종을 엮은 &#x27;로컬의 선택&#x27; 기획전을 열고, 신선식품 브랜드 &#x27;늘신선&#x27;을 신세계푸드와의 협업으로 정식 론칭했다.",
         "meetingQuestion": "우리 서비스의 테마 기획전 진입 화면에서 테마별 상품 구성이 일반 카테고리 리스팅과 어떻게 시각적으로 구분되어 있는가. '브랜드 단독 입점' 또는 '협업 상품'처럼 큐레이션 맥락을 설명하는 정보가 상품 카드 레벨에서 노출되고 있는가, 아니면 상세 페이지에서만 확인 가능한가.",
+        "pullQuote": "오늘의집이 5월 25일까지 '로컬의 선택' 기획전을 운영한다. 전국 로컬 애착템 144종을 로컬푸드·로컬장인·로컬상점 세 테마로 엮어 큐레이션 진입점을 하나의 브랜딩 프레임으로 묶었다.",
         "codeArtifacts": [],
         "flow": [
           "홈/탐색",
@@ -44,6 +45,13 @@
         "changeType": [],
         "brandNormalized": "오늘의집",
         "readingMinutes": 5,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "오늘의집 뉴스룸",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "태그",
@@ -194,6 +202,7 @@
         "takeawayHtml": "오픈서베이 일본 Z세대 트렌드 리포트 2026 — 광고 반응률 63%, 카테고리마다 다른 소비 기준",
         "deckHtml": "오픈서베이가 일본 거주 Z세대 1,000명을 대상으로 조사한 소비·관계·직업 인식 결과를 담은 리포트다. 광고 구매 유도율 63%와 카테고리별로 엇갈리는 품질·가격 우선순위가 핵심 데이터다.",
         "meetingQuestion": "현재 운영 중인 카테고리별 상품 상세 페이지에서 가격 정보와 품질·성분·스펙 정보 중 어느 쪽이 더 상단에 배치되어 있는가?",
+        "pullQuote": "오픈서베이가 2026년 5월 14일 발행한 리서치 보고서. 1997~2008년생(만 18~29세) 일본 거주 남녀 1,000명을 대상으로 2026년 1월 29일부터 2월 3일까지 조사했다. 인식·가치관, 관심사, 소비행태 세 영역을 다룬다.",
         "codeArtifacts": [],
         "flow": [],
         "changeType": [
@@ -201,6 +210,13 @@
         ],
         "brandNormalized": "오픈서베이",
         "readingMinutes": 5,
+        "articleNature": "context",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "오픈서베이 블로그",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -365,11 +381,19 @@
         "takeawayHtml": "청년 1인가구 가전 채널 3위가 오늘의집 — 오피스텔 거주자 이용률 55%",
         "deckHtml": "오픈서베이가 만 25~36세 1인가구 400명을 조사한 결과, 가전 구매 채널 3위로 오늘의집(28.2%)이 진입했다. 오피스텔 거주자의 이용률은 55.2%로, 아파트(45.7%)·빌라(39.0%) 대비 유의미하게 높았다.",
         "meetingQuestion": "우리 서비스의 가전·리빙 카테고리에서 \"공간 크기\" 또는 \"거주 형태\"를 기준으로 상품을 먼저 좁혀주는 진입 흐름이 있는가?",
+        "pullQuote": "** 오픈서베이가 2026년 5월 11일 발행한 청년 1인가구 트렌드 리포트 2026 2편에서, 전국 만 25~36세 1인가구 400명의 가전 구매 채널 순위를 공개했다. 네이버쇼핑(63.2%), 쿠팡(53.4%)에 이어 오늘의집(28.2%)이 3위로 확인됐다.",
         "codeArtifacts": [],
         "flow": [],
         "changeType": [],
         "brandNormalized": "오늘의집",
         "readingMinutes": 5,
+        "articleNature": "context",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "오픈서베이 블로그",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -534,6 +558,7 @@
         "takeawayHtml": "Qwen AI 쇼핑 에이전트 테스트로 도출한 이커머스 설계 교훈 4가지",
         "deckHtml": "NN/g가 알리바바 Qwen AI 쇼핑 에이전트를 6명에게 테스트한 결과, 주소 무단 노출·가격 변동 미표시·진입점 혼재라는 세 가지 설계 실패를 확인했다. AI 에이전트가 사용자 데이터에 접근하고 거래를 중개할 때 어떤 투명성 기준을 갖춰야 하는지를 구체적인 장면으로 보여주는 리서치다.",
         "meetingQuestion": "우리 서비스에 AI 에이전트가 사용자 주소·구매 이력·위치 정보에 접근할 때, 접근 범위와 사용 목적이 동의 화면에서 명확히 보이는가? AI 추천 상품 카드에 배송비·수수료·최소 구매 조건이 포함돼 있는가, 아니면 결제 직전에야 드러나는가? 버튼형 AI 진입 포인트가 자동으로 전송하는 프롬프트가 해당 카테고리 범위에 비해 너무 구체적이거나 엉뚱하지 않은가?",
+        "pullQuote": "NN/g는 알리바바의 Qwen AI 에이전트를 대상으로 6명 사용자 테스트를 진행했다. 글의 저자는 Feifei Liu와 Maria Rosala이며, 2026년 5월 8일 발행됐다.",
         "codeArtifacts": [],
         "flow": [
           "결제/주문",
@@ -546,6 +571,13 @@
         ],
         "brandNormalized": "Nielsen Norman Group",
         "readingMinutes": 6,
+        "articleNature": "context",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "Nielsen Norman Group",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -700,6 +732,7 @@
         "takeawayHtml": "카카오톡 v26.4.0: 리액션 6종에서 114종으로, 이모티콘 스토어에 탭 구조 신설",
         "deckHtml": "카카오톡 v26.4.0에서 리액션이 기존 6종에서 114종으로 확대됐고, 이모티콘 스토어에 신규탭·인기탭이 신설됐다. 감정 표현 레이어와 콘텐츠 탐색 구조를 동시에 손봤다는 점에서 메시징 UX의 설계 방향을 읽을 수 있다.",
         "meetingQuestion": "우리 화면에서 선택지가 몇 개 이상일 때 탭 구조나 검색 기능을 도입하는가? 그 기준이 명시돼 있는가?",
+        "pullQuote": "v26.4.0부터 메시지 리액션이 기존 6종에서 114종으로 확대됐다. 메시지당 최대 30개 리액션을 적용할 수 있으며, 보유한 미니 이모티콘을 리액션으로 쓸 수 있다. 이모티콘 플러스 구독자는 구독 미니 이모티콘까지 리액션으로 사용 가능하다.",
         "codeArtifacts": [],
         "flow": [
           "검색",
@@ -712,6 +745,13 @@
         ],
         "brandNormalized": "카카오",
         "readingMinutes": 5,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "디투데이",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -876,6 +916,7 @@
         "takeawayHtml": "고담이 가변 서체가 됐다 — Gotham Variable 출시와 브랜드 타이포그래피 파일 전략의 변화",
         "deckHtml": "Monotype이 고담(Gotham) 출시 25주년을 맞아 Weight·Width 두 축을 자유롭게 조정할 수 있는 가변 서체 Gotham Variable을 공개했다. 54종 스타일 추가, 베트남어 지원, 파일 구조 간소화로 브랜드 타이포그래피 시스템의 운용 방식이 달라진다.",
         "meetingQuestion": "현재 서비스에서 불러오는 웹폰트 파일이 몇 가지인가? 가변 서체 한 파일로 통합했을 때 로딩 전략과 FOUT(Flash of Unstyled Text) 처리 방식이 어떻게 달라지는가?",
+        "pullQuote": "2001년 1월 GQ 매거진 표지로 처음 공개된 고담(Gotham)이 25주년을 맞아 Gotham Variable로 전환됐다. Jonathan Hoefler와 Tobias Frere-Jones가 원설계하고, 이번 업데이트는 리드 디자이너 Sara Soskolne이 이끌었다.",
         "codeArtifacts": [],
         "flow": [
           "비주얼/브랜드",
@@ -887,6 +928,13 @@
         ],
         "brandNormalized": "한국디자인진흥원 디자인DB",
         "readingMinutes": 6,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "한국디자인진흥원 디자인DB",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -1056,6 +1104,7 @@
         "takeawayHtml": "CSS <code>attr()</code>·<code>calc()</code>로 할인가를 직접 계산하고 포맷팅하기",
         "deckHtml": "HTML data- 속성에 담긴 숫자를 CSS attr(), calc(), mod(), round(), counter-set만으로 읽어 할인가를 계산하고 달러 기호·소수점까지 포맷팅하는 방법을 단계별로 설명한다. attr() 타입 파싱은 아직 Baseline 미달성이며, 브라우저 전체 지원을 기다려야 실무에 쓸 수 있다.",
         "meetingQuestion": "",
+        "pullQuote": "attr(data-price number) 문법처럼 HTML 데이터 속성을 숫자 타입으로 직접 파싱하는 기능은 attr( ) 확장 명세에 해당한다. 기존 attr()은 content 속성에서만 동작했으나, 이 확장 명세는 어떤 CSS 속성에서도 속성값을 읽어올 수 있게 한다.",
         "codeArtifacts": [],
         "flow": [
           "프론트엔드 표준"
@@ -1065,6 +1114,13 @@
         ],
         "brandNormalized": "CSS-Tricks",
         "readingMinutes": 6,
+        "articleNature": "debate",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "CSS-Tricks",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -1233,6 +1289,7 @@
         "takeawayHtml": "Code with Claude SF — Anthropic이 공개한 에이전트 인프라 이관의 분기점",
         "deckHtml": "2026년 5월 6일 샌프란시스코에서 열린 Code with Claude 행사에서 Anthropic은 에이전트 메모리, Managed Agents, 컨텍스트 캐싱 등 개발자가 직접 구현하던 에이전트 인프라 레이어를 Claude 플랫폼 안으로 편입하는 방향을 공개했다.",
         "meetingQuestion": "",
+        "pullQuote": "5월 6일 샌프란시스코 행사에서 Anthropic은 세 개 트랙(Research, Claude Platform, Claude Code)으로 세션을 구성했고, 키노트에는 Boris Cherny(Claude Code 리드), Ami Vora, Dianne Penn을 포함한 여러 연사가 등단했다.",
         "codeArtifacts": [],
         "flow": [
           "검색",
@@ -1247,6 +1304,13 @@
         ],
         "brandNormalized": "Anthropic",
         "readingMinutes": 6,
+        "articleNature": "case",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "Anthropic (Code with Claude SF)",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -1420,6 +1484,7 @@
         "takeawayHtml": "Chrome/Edge의 <code>&lt;install&gt;</code> 요소 — HTML 선언만으로 PWA 설치 버튼을 삽입하는 오리진 트라이얼",
         "deckHtml": "Chrome과 Edge 148+에서 오리진 트라이얼 중인 요소를 사용하면 JavaScript 없이 HTML 한 줄로 PWA 설치 버튼을 삽입할 수 있다. 브라우저가 버튼 텍스트·언어·외형을 직접 제어하며, 지원하지 않는 브라우저에서는 자식 콘텐츠를 폴백으로 렌더링한다.",
         "meetingQuestion": "",
+        "pullQuote": "` 요소는 Chrome·Edge 148+에서 지원하며, 오리진 트라이얼 기간은 148–153이다. 로컬 테스트는 about://flags/#web-app-install-element` 플래그로 활성화한다.",
         "codeArtifacts": [],
         "flow": [
           "프론트엔드 표준"
@@ -1427,6 +1492,13 @@
         "changeType": [],
         "brandNormalized": "Chrome",
         "readingMinutes": 6,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "Chrome Developers Blog",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -1610,6 +1682,7 @@
         "takeawayHtml": "CSS corner-shape로 접힌 모서리 구현하기 — CSS-Tricks 가이드",
         "deckHtml": "CSS corner-shape 속성으로 clip-path 없이 두 좌표값만으로 접힌 모서리 효과를 구현하는 방법을 안내한다. 현재 Chrome 전용이며, 미지원 브라우저는 border-radius 폴백으로 처리된다.",
         "meetingQuestion": "",
+        "pullQuote": "border-radius는 내부적으로 corner-shape: round를 포함하고 있다. 각 모서리는 x축·y축 두 좌표로 정의되며, corner-shape는 이 두 좌표 사이를 어떤 곡률로 연결할지 지정한다.",
         "codeArtifacts": [],
         "flow": [
           "프론트엔드 표준"
@@ -1620,6 +1693,13 @@
         ],
         "brandNormalized": "CSS-Tricks",
         "readingMinutes": 7,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "CSS-Tricks",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -1797,6 +1877,7 @@
         "takeawayHtml": "React Doctor — React 코드베이스 진단 도구, AI 에이전트에 규칙 설치 지원",
         "deckHtml": "React 코드베이스를 스캔해 보안·성능·정확성·아키텍처 영역에서 0~100 점수로 진단하는 도구. Claude Code, Codex, Cursor 등 50개 이상 코딩 에이전트에 React 품질 규칙을 심는 설치 명령도 제공한다.",
         "meetingQuestion": "",
+        "pullQuote": "npx -y react-doctor@latest . 명령으로 현재 디렉터리의 React 코드베이스를 스캔하며, 보안·성능·정확성·아키텍처 4개 영역을 검사한 뒤 0~100 사이의 점수와 실행 가능한 진단 목록을 출력한다.",
         "codeArtifacts": [],
         "flow": [
           "리뷰/콘텐츠",
@@ -1808,6 +1889,13 @@
         ],
         "brandNormalized": "Anthropic",
         "readingMinutes": 5,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "React Doctor",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -1969,6 +2057,7 @@
         "takeawayHtml": "2026-05-06 이주의 요약 — 한 분기 안에 거래·인증·디자인 시스템이 동시에 움직였다",
         "deckHtml": "이번 주 매거진은 SERVICE 13건·DESIGN 13건·DEV 5건으로, 거래의 세 단계(결제·등록·안전)와 디자인 시스템의 AI 가드레일 흐름이 동시에 움직였다. 본 카드에는 이주에 다룬 31건의 한 줄 요약과, 편집 회의에서 이번 회차 매거진에는 싣지 않기로 한 항목까지 함께 정리한다.",
         "meetingQuestion": "",
+        "pullQuote": "이번 주 매거진은 SERVICE 13건·DESIGN 13건·DEV 5건으로, 거래의 세 단계(결제·등록·안전)와 디자인 시스템의 AI 가드레일 흐름이 동시에 움직였다. 본 카드에는 이주에 다룬 31건의 한 줄 요약과, 편집 회의에서 이번 회차 매거진에는 싣지 않기로 한 항목까지 함께 정리한다.",
         "codeArtifacts": [],
         "flow": [
           "디자인 시스템"
@@ -1976,6 +2065,13 @@
         "changeType": [],
         "brandNormalized": "CTTD 매거진 편집부",
         "readingMinutes": 12,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "CTTD 매거진 편집부",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -2331,11 +2427,19 @@
         "takeawayHtml": "쇼핑을 &#x27;경험&#x27;으로 바꾼 오늘의집 라이브 1년의 여정",
         "deckHtml": "오늘의집 라이브가 1년간 누적 시청 1,400만 명을 모은 비결을 인테리어 솔루션 큐레이션과 유저 공간 데이터 활용으로 정리한 자체 회고 글입니다.",
         "meetingQuestion": "",
+        "pullQuote": "오늘의집이 라이브 서비스 1주년을 맞아 158번의 방송과 101개 브랜드 협업, 누적 시청자 1,400만 명이라는 운영 결과를 자체 뉴스룸에 회고로 정리했습니다. 단순 판매 채널이 아니라 '공간 솔루션을 제시하는 라이브'로 포지셔닝한 1년치 운영 사례를 묶은 글입니다.",
         "codeArtifacts": [],
         "flow": [],
         "changeType": [],
         "brandNormalized": "오늘의집",
         "readingMinutes": 5,
+        "articleNature": "debate",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "오늘의집 뉴스룸 (Bucketplace)",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -2480,6 +2584,7 @@
         "takeawayHtml": "당근, 한 분기 안에 거래의 세 단계를 화면 단위로 다시 짠 흐름",
         "deckHtml": "당근이 결제·셀러 등록·안전 분기를 한 분기 안에 차례로 손보며, 중고거래에 묶여 있던 거래 흐름을 동네 생활 전반으로 옮기는 화면 재설계를 단행했다.",
         "meetingQuestion": "",
+        "pullQuote": "업데이트 — 2026년 1월 5일 당근페이가 페이히어 POS가 깔린 전국 8만여 동네 매장에서 QR 결제로 확장됐다. 그보다 앞서 2025년 10월 24일에는 사진 30장을 한 번에 올리면 AI가 물품별로 분류해 판매글 초안을 자동 작성하는 '여러 물건 글쓰기'가 정식 출시됐고, 9월 8일에는 게시글·채팅·동네인증·휴대기기 정보를 종합 분석하는 사기 패턴...",
         "codeArtifacts": [],
         "flow": [],
         "changeType": [
@@ -2488,6 +2593,13 @@
         ],
         "brandNormalized": "당근",
         "readingMinutes": 6,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "당근 보도자료",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -2632,6 +2744,7 @@
         "takeawayHtml": "G마켓이 9년 만에 꺼낸 &#x27;꼭 멤버십&#x27;, 회비를 못 채운 달엔 차액을 돌려준다",
         "deckHtml": "G마켓이 9년 만에 독자 멤버십 &#x27;꼭&#x27;을 4월 23일 출시했습니다. 월회비보다 적립이 적으면 차액을 스마일캐시로 돌려주는 캐시 보장 제도가 핵심입니다.",
         "meetingQuestion": "",
+        "pullQuote": "G마켓이 4월 23일 월 2,900원 구독형 멤버십 '꼭'을 출시했습니다. 누적 구매 금액의 최대 5%를 매월 7만 원까지 스마일캐시로 페이백하고, 월 적립이 회비에 못 미치면 그 차액을 보전합니다.",
         "codeArtifacts": [],
         "flow": [
           "멤버십/리텐션"
@@ -2639,6 +2752,13 @@
         "changeType": [],
         "brandNormalized": "G마켓",
         "readingMinutes": 4,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "신세계그룹 뉴스룸",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -2783,6 +2903,7 @@
         "takeawayHtml": "네이버플러스 스토어, 멀티 에이전트 구조의 &#x27;쇼핑 AI 에이전트&#x27; 베타 출시",
         "deckHtml": "네이버플러스 스토어가 키워드 한 번에 탐색 가이드와 비교·요약·리뷰 분석을 함께 돌리는 대화형 쇼핑 AI 에이전트를 베타로 열었다. 단일 모델이 아니라 단계마다 최적 모델을 갈아 끼우는 멀티 에이전트 구조라는 점이 핵심이다.",
         "meetingQuestion": "",
+        "pullQuote": "네이버플러스 스토어가 키워드 검색에 대화형 쇼핑 AI 에이전트를 붙여, 탐색 가이드부터 상품 요약·비교·리뷰 분석까지 한 흐름에서 처리하는 베타를 시작했다.",
         "codeArtifacts": [],
         "flow": [],
         "changeType": [
@@ -2790,6 +2911,13 @@
         ],
         "brandNormalized": "네이버",
         "readingMinutes": 4,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "ZDNet Korea",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -2934,6 +3062,7 @@
         "takeawayHtml": "무신사 멀티 스토어 홈 + AI 추천 시나리오 50배 — 개편 8개월 후의 안정화 흐름",
         "deckHtml": "무신사가 지난해 8월 도입한 카테고리별 멀티 스토어 홈과 AI 추천 시나리오 50배 확대가 8개월이 지난 시점까지 효과를 이어가고 있습니다. 전자신문 보도에 따르면 개편 후 구매 전환율은 약 3배, 거래액은 약 4배 늘었습니다.",
         "meetingQuestion": "",
+        "pullQuote": "무신사가 2025년 8월 단일 홈 화면을 뷰티·플레이어·아울렛·부티크·스니커즈·키즈 6개 카테고리 특화 멀티 스토어 홈으로 분리하고, 같은 시기 개인화 추천 시스템을 업그레이드했습니다. 2026년 4월 25일 v4.74.1 안정화 업데이트까지 후속 관리가 이어지고 있습니다.",
         "codeArtifacts": [],
         "flow": [
           "홈/탐색",
@@ -2944,6 +3073,13 @@
         ],
         "brandNormalized": "무신사",
         "readingMinutes": 5,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "전자신문",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -3088,6 +3224,7 @@
         "takeawayHtml": "화해 &#x27;궁합 점수·내 사용템&#x27; — 1,000만 리뷰로 내 피부와 제품의 적합도를 AI가 점수화",
         "deckHtml": "화해가 피부 타입·퍼스널컬러·피부 고민과 제품의 적합도를 AI가 분석해 점수로 보여 주는 &#x27;궁합 점수&#x27;와, 사용 중인 제품을 정리해 두는 &#x27;내 사용템&#x27;을 함께 출시했습니다. 사용자가 성분표를 직접 해석하지 않고도 자기 피부 기준으로 제품을 거를 수 있게 됩니다.",
         "meetingQuestion": "",
+        "pullQuote": "화해가 2026년 4월 28일 AI 기반 신기능 '궁합 점수'와 '내 사용템'을 출시했습니다. 사용자가 입력한 피부 타입, 퍼스널컬러, 피부 고민과 제품의 적합도를 AI가 분석해 점수 형태로 안내하고, 주의 성분과 성분 조합 유의사항, 추가 추천 제품까지 함께 제공합니다. 출시를 기념해 5월 3일까지 래플 이벤트가 진행됩니다.",
         "codeArtifacts": [],
         "flow": [
           "리뷰/콘텐츠"
@@ -3095,6 +3232,13 @@
         "changeType": [],
         "brandNormalized": "화해",
         "readingMinutes": 5,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "화해 공식 뉴스룸 (버드뷰)",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -3239,11 +3383,19 @@
         "takeawayHtml": "당근알바, 신뢰와 효율을 분리해 동시에 손본 분기",
         "deckHtml": "당근알바가 한 분기 안에서 금융결제원 인증서와 AI 자기소개·구인글·매칭을 차례로 얹었다. 신뢰 장치와 효율 장치를 같은 화면에 섞지 않고 서로 다른 진입점에 분리해 동시에 강화한 흐름이다.",
         "meetingQuestion": "",
+        "pullQuote": "당근알바가 12월 23일 금융결제원과 협업해 금융인증서를 새 인증 수단으로 추가했다. 그보다 앞선 10월 2일에는 자기소개·구인글 작성과 지원자 매칭을 AI로 자동화해, 같은 분기 안에서 인증과 입력 자동화를 다른 화면에 분리해 얹었다.",
         "codeArtifacts": [],
         "flow": [],
         "changeType": [],
         "brandNormalized": "당근",
         "readingMinutes": 6,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "당근 보도자료",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -3388,6 +3540,7 @@
         "takeawayHtml": "29CM 선물하기, 받는 사람 세그먼트 큐레이션으로 재구매 40%를 만들다",
         "deckHtml": "29CM가 부모·친구·연인·아이별 큐레이션으로 만든 선물하기가 지난해 재구매 비중 40%, 4년간 연평균 70% 성장을 기록했다.",
         "meetingQuestion": "",
+        "pullQuote": "29CM가 5월 가정의 달을 맞아 선물하기 코너에 '오월 선물 상점' 기획전을 열고, 일러스트 메시지 카드 20종을 새로 더했다. 온라인 기획전은 5월 1~14일, 오프라인 럭키드로우 응모는 서울 성수동 이구홈에서 5월 1~5일 진행한다.",
         "codeArtifacts": [],
         "flow": [
           "홈/탐색"
@@ -3395,6 +3548,13 @@
         "changeType": [],
         "brandNormalized": "29CM",
         "readingMinutes": 4,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "무신사 뉴스룸",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -3539,11 +3699,19 @@
         "takeawayHtml": "Verified by Spotify — 인증 뱃지에서 &#x27;AI 페르소나&#x27;를 빼는 첫 정의",
         "deckHtml": "Spotify가 아티스트 프로필에 &#x27;Verified by Spotify&#x27; 뱃지와 활동 상세 섹션을 베타로 붙이면서, 인증 대상에서 AI 페르소나 프로필을 처음으로 명시 제외했다.",
         "meetingQuestion": "",
+        "pullQuote": "Spotify가 아티스트 프로필에 연한 그린 체크 아이콘과 'Verified by Spotify' 텍스트가 붙는 인증 뱃지를 도입하고, 모바일 프로필 'About' 영역에 커리어 마일스톤·발매 활동·투어 활동을 정리한 아티스트 활동 상세 섹션을 베타로 함께 연다.",
         "codeArtifacts": [],
         "flow": [],
         "changeType": [],
         "brandNormalized": "Spotify",
         "readingMinutes": 5,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "Spotify Newsroom",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -3688,6 +3856,7 @@
         "takeawayHtml": "올리브영 &#x27;페스타 JAPAN 2026&#x27; — 글로벌몰 일본 매출 258% 증가 위에 K-뷰티 셀렉트 큐레이션을 오프라인으로",
         "deckHtml": "일본 법인 설립 1년 만에 글로벌몰 일본 매출이 258% 늘었고, 올리브영은 이 흐름 위에 마쿠하리 멧세 페스타로 오프라인 K-뷰티 셀렉트 큐레이션을 옮기고 도쿄 1호 매장 입지 검토를 더합니다.",
         "meetingQuestion": "",
+        "pullQuote": "올리브영이 5월 8일부터 10일까지 일본 지바현 마쿠하리 멧세에서 '올리브영 페스타 JAPAN 2026'을 열고, KCON JAPAN 2026과 연계해 K뷰티 55개 브랜드 부스를 164평 규모로 운영합니다. 이번 페스타는 도쿄 1호 오프라인 매장 입지 검토(인용 보도)와 8월 미국 LA 페스타로 이어지는 월드투어의 첫 무대입니다.",
         "codeArtifacts": [],
         "flow": [
           "홈/탐색",
@@ -3696,6 +3865,13 @@
         "changeType": [],
         "brandNormalized": "올리브영",
         "readingMinutes": 5,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "올리브영 보도",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -3840,11 +4016,19 @@
         "takeawayHtml": "오픈서베이가 정리한 2026 청년 1인가구 트렌드 — 가구·인테리어 구매처에서 오늘의집이 네이버쇼핑 다음 2위",
         "deckHtml": "만 25~36세 2,000명·1인가구 거주자 400명을 대상으로 한 조사에서 오늘의집이 가구·인테리어 소품 구매처 2위(42.9%), 가전 구매처 3위(28.2%)로 집계됐다.",
         "meetingQuestion": "",
+        "pullQuote": "오픈서베이가 만 25~36세 청년의 소비·거주·자취 데이터를 정리한 「청년 1인가구 트렌드 리포트 2026」을 공개했다. 가구·인테리어, 가전, 거주 만족도 항목에서 채널·동기 데이터가 함께 제시된다.",
         "codeArtifacts": [],
         "flow": [],
         "changeType": [],
         "brandNormalized": "오늘의집",
         "readingMinutes": 5,
+        "articleNature": "context",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "오픈서베이 트렌드리포트",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -4014,6 +4198,7 @@
         "takeawayHtml": "알바천국이 긴 이력서를 &#x27;핵심 입력 → 이어서 작성 → 진행률&#x27;로 쪼갠 방식",
         "deckHtml": "알바천국이 이력서 등록 단계를 핵심 항목만 받는 진입로와 자동 입력·진행률 안내로 나눠 다시 짰다.",
         "meetingQuestion": "",
+        "pullQuote": "사전 등록된 이력서가 없어도 학력·경력·희망 업직종 등 핵심 항목만 입력하면 지원 절차 안에서 바로 작성을 마칠 수 있는 '초간편 이력서'를 추가했다. 온라인·이메일 공고 모두에서 쓸 수 있다.",
         "codeArtifacts": [],
         "flow": [
           "검색",
@@ -4025,6 +4210,13 @@
         ],
         "brandNormalized": "알바천국",
         "readingMinutes": 4,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "DIGITAL iNSIGHT",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -4164,6 +4356,7 @@
         "takeawayHtml": "민음사 세계문학전집 앱이 보여준 &#x27;컬렉션 정복감&#x27; 시각화",
         "deckHtml": "민음사 신규 앱의 서가 UI를 두고 한 개발자가 자신의 앱을 따라했다고 주장하면서 유사성 논란이 시작됐는데, Design Compass는 책장 은유 자체는 2010년 전후 iBooks까지 거슬러 올라가는 오래된 패턴이라며 표절 단정에 거리를 뒀다. 글의 초점은 논란 자체보다, 민음사 앱이 세계문학전집의 컬러 아이덴티티와 빈/채움 슬롯을 결합해 &#x27;컬렉션 정복감&#x27;을 시각화한 방식에 있다.",
         "meetingQuestion": "",
+        "pullQuote": "한 개발자가 민음사 신규 세계문학 앱이 자신의 앱 '사자의 풀밭'(서가에 책을 진열하는 방식, 책 두께 표현, 완독 버튼 등)을 따라했다고 주장하며 유사성 논란이 일었다. 기사에는 알라딘 '나도 서점 주인' 같은 유사 서가형 앱 사례도 함께 거론된다.",
         "codeArtifacts": [],
         "flow": [],
         "changeType": [
@@ -4172,6 +4365,13 @@
         ],
         "brandNormalized": "민음사",
         "readingMinutes": 4,
+        "articleNature": "debate",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "Design Compass",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -4301,6 +4501,7 @@
         "takeawayHtml": "진행 상태를 캐릭터 오버레이로 — OpenAI Codex 펫이 만든 &#x27;이탈 없는 대기&#x27; 패턴",
         "deckHtml": "OpenAI Codex 데스크톱 앱이 작업 진행·대기·검토 상태를 캐릭터 오버레이로 알리는 펫 기능을 추가했다. 긴 작업의 결과를 기다리는 동안 사용자가 워크스페이스를 떠나지 않게 만드는 진행 표시 패턴이다.",
         "meetingQuestion": "",
+        "pullQuote": "Codex 데스크톱 앱이 화면 위에 떠 있는 작은 캐릭터 오버레이로 세 가지 상태를 알린다. 지금 작업 중인지, 사용자의 입력을 기다리는지, 검토 준비가 끝났는지를 펫의 모습으로 구분한다.",
         "codeArtifacts": [],
         "flow": [
           "알림/CRM"
@@ -4311,6 +4512,13 @@
         ],
         "brandNormalized": "OpenAI",
         "readingMinutes": 5,
+        "articleNature": "debate",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "Design Compass",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -4450,6 +4658,7 @@
         "takeawayHtml": "Figma Slots — detach 없이 콘텐츠만 갈아끼우는 디자인 시스템 패턴",
         "deckHtml": "Figma Slots는 컴포넌트를 detach하지 않고 안쪽 콘텐츠만 교체하게 해, 다이얼로그·카드·패널처럼 변형이 잦던 컴포넌트의 variant 폭증을 정리한다.",
         "meetingQuestion": "",
+        "pullQuote": "Slots는 컴포넌트의 바깥 구조를 그대로 둔 채 안쪽 콘텐츠 영역만 유연하게 바꿀 수 있는 영역이다. 메뉴·버튼·아이콘 같은 요소를 컴포넌트에서 detach하지 않고도 교체할 수 있어, 구조는 깨지지 않으면서 콘텐츠만 흐를 수 있다.",
         "codeArtifacts": [],
         "flow": [
           "리뷰/콘텐츠",
@@ -4461,6 +4670,13 @@
         ],
         "brandNormalized": "Figma",
         "readingMinutes": 5,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "Figma Blog (Zoë Adelman, Sarah Kelly)",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -4605,6 +4821,7 @@
         "takeawayHtml": "디자인 시스템이 &#x27;AI 결과 검수자&#x27;에서 &#x27;생성 단계 가드레일&#x27;로 옮겨가는 다섯 가지 흐름",
         "deckHtml": "Figma는 디자인 시스템의 역할이 사후 일관성 점검 도구에서 AI가 결과를 만들기 직전에 참고하는 가드레일로 옮겨가고 있다고 정리한다. &#x27;taste&#x27;를 시스템에 인코딩하고, Figma Make의 system-aligned 변형 탐색, LinkedIn의 LLM 가드레일 사례까지 같은 방향을 가리킨다.",
         "meetingQuestion": "",
+        "pullQuote": "디자인 시스템의 역할이 가이드 문서에서 팀의 미감과 판단(taste)을 인코딩하는 매개체로 옮겨가고 있다. Figma의 Wayne Sun은 \"디자인 시스템은 영혼을 잃지 않고도 확장되는 제품 경험의 문을 연다\"고 정리한다. 컴포넌트와 인터랙션이 모든 개발 단계에서 디자이너의 감각을 운반해 제품 고유성이 흐려지는 것을 막는다는 설명이다.",
         "codeArtifacts": [],
         "flow": [
           "홈/탐색",
@@ -4616,6 +4833,13 @@
         ],
         "brandNormalized": "Figma",
         "readingMinutes": 6,
+        "articleNature": "debate",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "Figma (Emma Webster)",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -4760,6 +4984,7 @@
         "takeawayHtml": "WhatsApp·Miro·Atlassian 디자인 팀이 AI와 함께 출시하는 법 — 디자인 시스템을 &#x27;AI 가드레일&#x27;로",
         "deckHtml": "WhatsApp·Miro·Atlassian 디자인 팀이 AI Design Systems Conference 2026에서 공유한 &#x27;AI와 함께 출시하는 법&#x27;을 정리한 후기 글이다. 핵심은 디자인 시스템이 AI의 가드레일 역할을 할 때만 결과가 예측 가능해진다는 것.",
         "meetingQuestion": "",
+        "pullQuote": "WhatsApp Web 디자인 시스템을 이끄는 Sebastian Rousseau는 디자이너 1명·엔지니어 1명 구성으로 일하면서, Claude Code와 VS Code로 직접 프로덕션 코드를 커밋한다. 발표는 이 흐름을 'no Figma-to-engineer relay race'로 표현했다 — Figma에서 엔지니어로 넘기는 릴레이 단계 자체를 없앴다는 뜻...",
         "codeArtifacts": [],
         "flow": [
           "리뷰/콘텐츠",
@@ -4772,6 +4997,13 @@
         ],
         "brandNormalized": "Figma",
         "readingMinutes": 7,
+        "articleNature": "debate",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "Into Design Systems (Sil Bormüller)",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -4916,6 +5148,7 @@
         "takeawayHtml": "토큰이 흐르는 화면을 안정시키는 법 — Smashing Magazine이 정리한 스트리밍 UI 설계 패턴",
         "deckHtml": "AI 응답·실시간 자막처럼 토큰이 한 글자씩 들어오는 화면을 흔들림 없이 보여주려면 자동 스크롤·DOM 갱신·렌더 주기를 어떻게 분리해야 하는지 정리한 가이드다. 스크롤 임계값 60px, live node 패턴, requestAnimationFrame 버퍼링 세 갈래로 묶어 설명한다.",
         "meetingQuestion": "",
+        "pullQuote": "글쓴이는 스트리밍 UI에서 흔히 깨지는 지점을 세 가지로 묶는다. 사용자가 위로 올려둔 화면을 자동 스크롤이 다시 끌어내리는 문제, 컨테이너가 커지며 아래 콘텐츠를 밀어내는 레이아웃 시프트, 토큰이 디스플레이 갱신 주기보다 빨리 들어와 DOM이 과도하게 갱신되는 문제다.",
         "codeArtifacts": [],
         "flow": [
           "리뷰/콘텐츠",
@@ -4931,6 +5164,13 @@
         ],
         "brandNormalized": "Smashing Magazine",
         "readingMinutes": 8,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "Smashing Magazine",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -5078,6 +5318,7 @@
         "takeawayHtml": "Figma 데스크톱 디버그 모드만으로 Claude를 디자인 작업에 붙이는 방법",
         "deckHtml": "Figma 데스크톱의 Chrome DevTools 디버그 모드를 활용해 API 키와 MCP 설정 없이 1분 안에 Claude를 붙이고, CLAUDE.md에 작업 패턴을 학습시켜 개인 디자인 에이전트로 키우는 방법을 정리한 가이드.",
         "meetingQuestion": "",
+        "pullQuote": "GitHub의 figma-cli 저장소를 받은 뒤 터미널에서 해당 폴더로 이동해 claude 명령을 실행하고, 첫 메시지로 Setup: install dependencies and connect to Figma만 입력하면 약 1분 안에 Figma 데스크톱과 연결된다. API 키 발급이나 JSON 설정은 필요하지 않다.",
         "codeArtifacts": [],
         "flow": [
           "비교/추천",
@@ -5090,6 +5331,13 @@
         ],
         "brandNormalized": "Figma",
         "readingMinutes": 5,
+        "articleNature": "case",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "Into Design Systems (Sil Bormüller)",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -5227,11 +5475,19 @@
         "takeawayHtml": "고정 높이 카드는 생각보다 쉽게 깨진다 — 본질 사이즈에 맡기는 4가지 패턴",
         "deckHtml": "고정 높이 카드는 번역·폰트 확대·이미지 누락이 합쳐지면 콘텐츠가 경계를 넘는다. 글쓴이는 잘라내기 트릭과 절대 위치 대신 flex 컬럼·flex: 1·grid auto-fit·clamp()로 본질 사이즈에 맡기는 패턴을 권한다.",
         "meetingQuestion": "",
+        "pullQuote": "고정 높이 카드는 번역·폰트 확대·이미지 누락이 합쳐지면 콘텐츠가 경계를 넘는다. 글쓴이는 잘라내기 트릭과 절대 위치 대신 flex 컬럼·flex: 1·grid auto-fit·clamp()로 본질 사이즈에 맡기는 패턴을 권한다.",
         "codeArtifacts": [],
         "flow": [],
         "changeType": [],
         "brandNormalized": "CSS-Tricks",
         "readingMinutes": 7,
+        "articleNature": "debate",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "CSS-Tricks (Kevine Nzapdi)",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -5418,6 +5674,7 @@
         "takeawayHtml": "CSS <code>contrast-color()</code> — 배경 색에 따라 텍스트 흑/백을 자동 결정하는 새 함수",
         "deckHtml": "CSS contrast-color()는 배경 색을 인자로 받아 흑백 중 대비가 큰 쪽을 돌려주는 새 함수다. 아직 브라우저 지원이 제한적이라 @supports 폴백이 필요하다.",
         "meetingQuestion": "",
+        "pullQuote": "contrast-color()는 인자로 받은 색에 대해 검정과 흰색 중 더 대비가 큰 쪽을 반환한다. 예를 들어 color: contrast-color(var(--swatch));처럼 카드 배경 변수에 묶어 텍스트 색을 자동으로 결정할 수 있다.",
         "codeArtifacts": [],
         "flow": [
           "비주얼/브랜드",
@@ -5429,6 +5686,13 @@
         ],
         "brandNormalized": "CSS-Tricks",
         "readingMinutes": 6,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "CSS-Tricks Almanac",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -5590,6 +5854,7 @@
         "takeawayHtml": "What&#x27;s !important #10 — <code>sizes=auto</code>와 HTML-in-Canvas가 동시에 흔드는 이미지 표준",
         "deckHtml": "CSS-Tricks의 큐레이션 시리즈 10회차가 sizes=auto, HTML-in-Canvas, CSS content 속성으로 본 이미지 처리 표준의 변화를 한 자리에 모았다.",
         "meetingQuestion": "",
+        "pullQuote": "sizes=auto는 lazy-loaded `에 한해 브라우저가 실제 렌더 크기를 보고 적합한 srcset` 후보를 직접 고르게 한다. 반응형 브레이크포인트마다 sizes 미디어 쿼리 문자열을 손으로 짜던 작업을 줄이는 새 속성이다.",
         "codeArtifacts": [],
         "flow": [
           "결제/주문",
@@ -5598,6 +5863,13 @@
         "changeType": [],
         "brandNormalized": "CSS-Tricks",
         "readingMinutes": 8,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "CSS-Tricks (Daniel Schwarz)",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -5796,6 +6068,7 @@
         "takeawayHtml": "CSS에 들어온 네이티브 랜덤 — <code>random()</code>과 <code>random-item()</code>이 바꾸는 변주 설계",
         "deckHtml": "CSS Values and Units Module Level 5에 random()과 random-item()이 정식 도입되면서, 그동안 JS와 전처리기로 우회하던 변주를 CSS 안에서 선언적으로 다룰 수 있게 됐다.",
         "meetingQuestion": "",
+        "pullQuote": "CSS Values and Units Module Level 5에 두 함수가 추가됐다. random()은 지정한 최솟값·최댓값 사이의 임의 값을 돌려주고, random-item()은 주어진 리스트에서 하나를 골라 돌려준다.",
         "codeArtifacts": [],
         "flow": [
           "디자인 시스템",
@@ -5806,6 +6079,13 @@
         ],
         "brandNormalized": "CSS-Tricks",
         "readingMinutes": 7,
+        "articleNature": "debate",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "CSS-Tricks",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -5979,6 +6259,7 @@
         "takeawayHtml": "Bark Studio, 모션이 메시지 순서를 만든다",
         "deckHtml": "Bark Studio는 Webflow IX3와 GSAP 모션을 활용해 텍스트와 장면 전환의 순서를 설계한 마이크로사이트 사례입니다.",
         "meetingQuestion": "",
+        "pullQuote": "Bark Studio는 Webflow IX3와 GSAP 애니메이션을 전면에 둔 마이크로사이트입니다. Webflow CONF 25 featured 사례로 소개됐고, Webflow Showcase 원문에서도 Interactions with GSAP 사용이 확인됩니다.",
         "codeArtifacts": [],
         "flow": [
           "알림/CRM"
@@ -5990,6 +6271,13 @@
         ],
         "brandNormalized": "Webflow Showcase",
         "readingMinutes": 4,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "Webflow Showcase",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -6144,6 +6432,7 @@
         "takeawayHtml": "Dinamo Arizona b2b, 타입 specimen도 캠페인이 될 수 있다",
         "deckHtml": "Dinamo는 ABC Arizona 타입패밀리 확장을 OOH 캠페인, 포스터, 캐릭터 연출과 함께 보여주며 서체 소개를 캠페인 경험으로 확장했습니다.",
         "meetingQuestion": "",
+        "pullQuote": "Dinamo는 ABC Arizona 타입패밀리에 compressed와 condensed subfamily를 추가하면서, horsegiirL을 앞세운 OOH 캠페인과 포스터형 타입 specimen을 함께 전개했습니다.",
         "codeArtifacts": [],
         "flow": [
           "접근성"
@@ -6151,6 +6440,13 @@
         "changeType": [],
         "brandNormalized": "It's Nice That",
         "readingMinutes": 4,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "It's Nice That",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -6305,6 +6601,7 @@
         "takeawayHtml": "Casi, 공공 캠페인도 손맛 있는 시스템이 필요하다",
         "deckHtml": "Casi의 아이덴티티는 기후 비영리단체의 메시지를 손맛 있는 표식, cut-out 그래픽, 불완전한 디자인 시스템으로 풀어낸 사례입니다.",
         "meetingQuestion": "",
+        "pullQuote": "Templo가 기후 비영리단체 Casi를 위해 설계한 아이덴티티 사례입니다. hobo hieroglyphics에서 착안한 표식, cut-out graphics, 손으로 만든 듯한 애니메이션이 브랜드 언어를 이룹니다.",
         "codeArtifacts": [],
         "flow": [
           "디자인 시스템",
@@ -6315,6 +6612,13 @@
         ],
         "brandNormalized": "It's Nice That",
         "readingMinutes": 4,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "It's Nice That",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -6469,6 +6773,7 @@
         "takeawayHtml": "매거진 리디자인은 화면보다 포맷 번역의 문제다",
         "deckHtml": "The New York Times Magazine 리디자인은 인쇄, 웹, 오디오, 비디오가 함께 존재하는 환경에서 매거진 경험을 다시 정리한 사례입니다.",
         "meetingQuestion": "",
+        "pullQuote": "The New York Times Magazine의 약 10년 만의 리디자인을 다룬 인터뷰입니다. 핵심은 새 화면을 예쁘게 만든 일이 아니라, 인쇄·웹·오디오·비디오가 함께 존재하는 환경에서 매거진다운 경험을 유지하는 방법입니다.",
         "codeArtifacts": [],
         "flow": [
           "비주얼/브랜드"
@@ -6478,6 +6783,13 @@
         ],
         "brandNormalized": "The New York Times Magazine",
         "readingMinutes": 4,
+        "articleNature": "debate",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "It's Nice That",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -6637,6 +6949,7 @@
         "takeawayHtml": "eBay Playbook, 디자인 시스템 문서도 브랜드 경험이다",
         "deckHtml": "eBay Playbook은 브랜드 원칙, 디자인 시스템, 접근성, 개발 문서를 하나의 문서 경험으로 묶은 사례입니다.",
         "meetingQuestion": "",
+        "pullQuote": "eBay는 Evo 디자인 시스템과 eBay Playbook을 통해 브랜드, 디자인 시스템, 접근성, 개발 문서를 하나의 문서 경험으로 묶었습니다. Playbook은 단순 스펙 모음이 아니라 브랜드와 제품 경험을 잇는 통로로 소개됩니다.",
         "codeArtifacts": [],
         "flow": [
           "디자인 시스템",
@@ -6646,6 +6959,13 @@
         "changeType": [],
         "brandNormalized": "Figma",
         "readingMinutes": 3,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "Figma Blog",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -6800,6 +7120,7 @@
         "takeawayHtml": "Claude Design에서 만든 초안, Canva에서 브랜드 산출물로 다듬는다",
         "deckHtml": "Canva와 Claude Design의 연동은 AI가 만든 아이디어를 편집 가능한 브랜드 산출물로 이어가는 제작 흐름을 보여줍니다.",
         "meetingQuestion": "",
+        "pullQuote": "Canva가 Anthropic과 협업해 Claude Design에서 만든 아이디어나 초안을 Canva로 넘기고, fully editable, on-brand design으로 다듬을 수 있게 한 업데이트입니다.",
         "codeArtifacts": [],
         "flow": [
           "비주얼/브랜드"
@@ -6809,6 +7130,13 @@
         ],
         "brandNormalized": "Anthropic",
         "readingMinutes": 4,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "Canva Newsroom",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -6968,6 +7296,7 @@
         "takeawayHtml": "Nielsen Norman Group이 정리한 웹사이트 AI 챗봇 설계를 위한 10개 가이드라인",
         "deckHtml": "Nielsen Norman Group은 웹사이트 AI 챗봇 설계에서 진입점, 제안 질문, 페이지 맥락, 결과 형식까지 함께 다뤄야 한다고 정리합니다.",
         "meetingQuestion": "",
+        "pullQuote": "Nielsen Norman Group이 웹사이트 AI 챗봇 설계를 위한 10개 가이드라인을 정리했습니다. 진입점, 페이지 간 지속성, 제안 질문, 이미지 포함, progressive disclosure, 자동 스크롤, 리사이즈, 저장/공유, 음성 입력 등을 다룹니다.",
         "codeArtifacts": [],
         "flow": [],
         "changeType": [
@@ -6975,6 +7304,13 @@
         ],
         "brandNormalized": "Nielsen Norman Group",
         "readingMinutes": 4,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "Nielsen Norman Group",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",
@@ -7134,6 +7470,7 @@
         "takeawayHtml": "향수 브랜드가 광고보다 영화처럼 기억되는 방식",
         "deckHtml": "Ffern은 향수 브랜드의 세계관을 제품 설명보다 영화적 장면, 계절감, 내부 film practice로 먼저 보여주는 사례입니다.",
         "meetingQuestion": "",
+        "pullQuote": "향수 브랜드 Ffern은 영화 제작 방식을 브랜드 세계관의 중심에 둡니다. 제품 설명보다 계절감, 장면, 촬영 방식, 내부 film practice가 먼저 보이는 사례입니다.",
         "codeArtifacts": [],
         "flow": [
           "비주얼/브랜드",
@@ -7144,6 +7481,13 @@
         ],
         "brandNormalized": "Ffern",
         "readingMinutes": 3,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "",
+          "publisher": "It's Nice That",
+          "originalLanguage": "",
+          "verificationNote": ""
+        },
         "facts": [
           {
             "label": "발행날짜",

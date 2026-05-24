@@ -734,6 +734,40 @@ function sourceTypeBadge(issue) {
   return SOURCE_TYPE_BADGES[key] || null;
 }
 
+const ARTICLE_NATURE_BADGES = {
+  decision: { label: "🎯 결정용", description: "회의 직전 결정 단서가 되는 글" },
+  context: { label: "🗺️ 맥락용", description: "장기 트렌드·리서치 맥락을 잡는 글" },
+  case: { label: "📁 사례용", description: "여러 브랜드·화면을 비교한 사례 모음" },
+  debate: { label: "⚔️ 논쟁용", description: "업계 논쟁·관점이 갈리는 글" },
+};
+function articleNatureBadge(issue) {
+  if (!issue) return null;
+  return ARTICLE_NATURE_BADGES[issue.articleNature || "decision"] || null;
+}
+
+const ORIGINAL_LANGUAGE_LABELS = {
+  ko: "한국어",
+  ja: "일본어",
+  en: "영어",
+  "zh-cn": "중국어",
+};
+function originalLanguageLabel(code) {
+  if (!code) return "";
+  return ORIGINAL_LANGUAGE_LABELS[code] || code.toUpperCase();
+}
+
+const copyStatus = ref("");
+async function copyPullQuote(issue) {
+  if (!issue?.pullQuote) return;
+  try {
+    await navigator.clipboard.writeText(issue.pullQuote);
+    copyStatus.value = "복사됨";
+  } catch {
+    copyStatus.value = "복사 실패";
+  }
+  setTimeout(() => { copyStatus.value = ""; }, 1500);
+}
+
 function proseBlocks(blocks = []) {
   const mergedBlocks = blocks.reduce((result, block) => {
     if (block.kind !== "highlight") {
@@ -1232,6 +1266,12 @@ function issuePublicationDate(issue) {
                   :class="['source-type-badge', 'is-' + sourceTypeBadge(activeIssue).variant]"
                   :title="sourceTypeBadge(activeIssue).description"
                 >{{ sourceTypeBadge(activeIssue).label }}</span>
+                <span v-if="articleNatureBadge(activeIssue)" aria-hidden="true">|</span>
+                <span
+                  v-if="articleNatureBadge(activeIssue)"
+                  class="article-nature-badge"
+                  :title="articleNatureBadge(activeIssue).description"
+                >{{ articleNatureBadge(activeIssue).label }}</span>
                 <span v-if="activeIssue.readingMinutes" aria-hidden="true">|</span>
                 <span v-if="activeIssue.readingMinutes" class="reading-minutes">약 {{ activeIssue.readingMinutes }}분</span>
                 <span v-if="isIssueVisited(activeIssue)" aria-hidden="true">|</span>
@@ -1345,6 +1385,54 @@ function issuePublicationDate(issue) {
             </template>
           </section>
 
+          <aside
+            v-if="activeIssue.pullQuote"
+            class="pull-quote-card"
+            aria-label="슬라이드 인용"
+          >
+            <div class="pull-quote-head">
+              <span class="pull-quote-label">📌 슬라이드 인용</span>
+              <button type="button" class="pull-quote-copy" @click="copyPullQuote(activeIssue)">
+                <span v-if="copyStatus">{{ copyStatus }}</span>
+                <span v-else>복사</span>
+              </button>
+            </div>
+            <p class="pull-quote-body" v-text="activeIssue.pullQuote"></p>
+          </aside>
+          <aside
+            v-if="activeIssue.sourceVerification && (
+              activeIssue.sourceVerification.publisher
+              || activeIssue.sourceVerification.author
+              || activeIssue.sourceVerification.originalLanguage
+              || activeIssue.sourceVerification.verificationNote
+            )"
+            class="source-verification-card"
+            aria-label="출처 검증"
+          >
+            <span class="source-verification-label">📚 출처 검증</span>
+            <dl class="source-verification-grid">
+              <template v-if="activeIssue.sourceVerification.publisher">
+                <dt>매체</dt>
+                <dd v-text="activeIssue.sourceVerification.publisher"></dd>
+              </template>
+              <template v-if="activeIssue.sourceVerification.author">
+                <dt>저자</dt>
+                <dd v-text="activeIssue.sourceVerification.author"></dd>
+              </template>
+              <template v-if="activeIssue.sourceVerification.originalLanguage">
+                <dt>원문 언어</dt>
+                <dd>{{ originalLanguageLabel(activeIssue.sourceVerification.originalLanguage) }}</dd>
+              </template>
+              <template v-if="activeIssue.date">
+                <dt>발행일</dt>
+                <dd v-text="activeIssue.date"></dd>
+              </template>
+              <template v-if="activeIssue.sourceVerification.verificationNote">
+                <dt>검증 메모</dt>
+                <dd v-text="activeIssue.sourceVerification.verificationNote"></dd>
+              </template>
+            </dl>
+          </aside>
           <footer class="article-footer">
             <div class="tag-row">
               <span v-for="tag in activeIssue.tags" :key="tag" v-text="'#' + tag"></span>

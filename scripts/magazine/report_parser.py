@@ -313,7 +313,14 @@ HIDDEN_FACT_KEYS = {
     "CodePen", "Stackblitz", "Codesandbox", "Storybook", "GitHub", "데모",
     "코드 스니펫", "환경설정",
     "흐름", "변화 유형", "브랜드",
+    "핵심 인용", "저자", "매체", "원문 언어", "검증 메모", "글 성격",
 }
+
+ARTICLE_NATURE_VALUES = {"decision", "context", "case", "debate"}
+LOCALE_LANGUAGE_MAP = {"KR": "ko", "ko": "ko", "JP": "ja", "ja": "ja",
+                       "CN": "zh-cn", "zh-cn": "zh-cn",
+                       "US": "en", "EN": "en", "en": "en",
+                       "GLOBAL": "en", "global": "en"}
 
 FLOW_TAXONOMY = {
     "홈/탐색": ["홈", "탐색", "home", "discovery", "feed", "큐레이션", "브랜드관"],
@@ -2484,6 +2491,79 @@ def extract_reading_minutes(issue: Issue) -> int:
     return minutes
 
 
+_SUMMARY_SECTION_CANDIDATES = (
+    "요약",
+    "서비스 변화 요약",
+    "기술 변화 요약",
+    "디자인 레퍼런스 요약",
+)
+
+
+def _first_summary_bullet(issue: Issue) -> str:
+    for section_title, items in issue.sections.items():
+        if section_title not in _SUMMARY_SECTION_CANDIDATES and not section_title.endswith("요약"):
+            continue
+        for item in items:
+            text = re.sub(r"^[^:：]{1,16}[:：]\s*", "", str(item)).strip()
+            text = re.sub(r"<[^>]+>", "", text)
+            if text:
+                return text
+    return ""
+
+
+def extract_pull_quote(issue: Issue) -> str:
+    explicit = (issue.meta.get("핵심 인용") or "").strip()
+    if explicit:
+        return meta_text(explicit, limit=200)
+    fallback = _first_summary_bullet(issue)
+    if fallback:
+        return meta_text(fallback, limit=200)
+    meta_summary = (issue.meta.get("요약") or "").strip()
+    if meta_summary:
+        return meta_text(meta_summary, limit=200)
+    return ""
+
+
+def extract_source_verification(issue: Issue) -> dict[str, str]:
+    locale = issue.meta.get("locale") or ""
+    publisher = (issue.meta.get("매체") or issue.meta.get("출처") or "").strip()
+    original_language = (issue.meta.get("원문 언어") or LOCALE_LANGUAGE_MAP.get(locale, "")).strip()
+    return {
+        "author": (issue.meta.get("저자") or "").strip(),
+        "publisher": publisher,
+        "originalLanguage": original_language,
+        "verificationNote": (issue.meta.get("검증 메모") or "").strip(),
+    }
+
+
+def _detect_article_nature(issue: Issue, source_type: str) -> str:
+    explicit = (issue.meta.get("글 성격") or "").strip().lower()
+    if explicit in ARTICLE_NATURE_VALUES:
+        return explicit
+    if source_type == "research":
+        return "context"
+    if source_type == "blog_opinion":
+        return "debate"
+    brand = (issue.meta.get("브랜드") or "")
+    if re.search(r"[,/·∙]", brand) or len(brand.split()) > 2:
+        return "case"
+    title_lower = issue.title.lower()
+    summary_text = " ".join(str(item) for item in issue.sections.get("요약", []))
+    body_lower = f"{title_lower} {summary_text.lower()}"
+    if any(token in body_lower for token in ["여러 브랜드", "비교", "사례 모음", "vs", "vs."]):
+        return "case"
+    if any(token in body_lower for token in ["논쟁", "찬반", "debate", "controversy"]):
+        return "debate"
+    if any(token in body_lower for token in ["트렌드 리포트", "리서치", "조사 결과"]):
+        return "context"
+    return "decision"
+
+
+def extract_article_nature(issue: Issue) -> str:
+    source_type = normalize_source_type(issue.meta.get("출처 유형", "") or issue.meta.get("sourceType", ""))
+    return _detect_article_nature(issue, source_type)
+
+
 def extract_meeting_question(issue: Issue) -> str:
     explicit = (issue.meta.get("회의 질문") or "").strip()
     if explicit:
@@ -2538,11 +2618,14 @@ def report_payload(report: Report) -> dict[str, object]:
                 "takeawayHtml": clean_inline(issue_display_title(issue)),
                 "deckHtml": clean_inline(issue_display_description(issue)),
                 "meetingQuestion": extract_meeting_question(issue),
+                "pullQuote": extract_pull_quote(issue),
                 "codeArtifacts": extract_code_artifacts(issue),
                 "flow": extract_flow_tags(issue),
                 "changeType": extract_change_types(issue),
                 "brandNormalized": extract_brand_normalized(issue),
                 "readingMinutes": extract_reading_minutes(issue),
+                "articleNature": extract_article_nature(issue),
+                "sourceVerification": extract_source_verification(issue),
                 "facts": facts,
                 "sourceUrl": issue.meta.get("출처 URL", ""),
                 "sourceTitle": issue_source_title(issue),
