@@ -316,7 +316,18 @@ HIDDEN_FACT_KEYS = {
     "핵심 인용", "저자", "매체", "원문 언어", "검증 메모", "글 성격",
     "클라이언트 적합",
     "큐레이션 사유", "이 글에서 만나는 것", "외부 참고",
+    "흥미 시그널", "흥미 분류",
 }
+
+INTEREST_SIGNAL_KEYS = {"hot_topic", "vivid_case", "surprising", "familiar", "quotable"}
+INTEREST_SIGNAL_LABELS = {
+    "hot_topic": "화제성",
+    "vivid_case": "사례 구체성",
+    "surprising": "의외성",
+    "familiar": "친숙함",
+    "quotable": "인용 가능성",
+}
+INTEREST_CLASS_VALUES = {"published", "monthly_digest", "excluded_interest"}
 
 V3_BODY_SECTION_LABELS = ("매거진",)
 V3_HIGHLIGHT_FALLBACK_LIMIT = 5
@@ -2636,6 +2647,33 @@ def extract_article_nature(issue: Issue) -> str:
     return _detect_article_nature(issue, source_type)
 
 
+def extract_interest_signals(issue: Issue) -> list[dict[str, str]]:
+    explicit = (issue.meta.get("흥미 시그널") or "").strip()
+    tokens: list[str] = []
+    if explicit:
+        for piece in re.split(r"[,/|·]", explicit):
+            cleaned = piece.strip().lower()
+            if cleaned in INTEREST_SIGNAL_KEYS:
+                tokens.append(cleaned)
+    return [
+        {"key": token, "label": INTEREST_SIGNAL_LABELS[token]}
+        for token in tokens
+        if token in INTEREST_SIGNAL_LABELS
+    ]
+
+
+def extract_interest_class(issue: Issue) -> str:
+    explicit = (issue.meta.get("흥미 분류") or "").strip().lower()
+    if explicit in INTEREST_CLASS_VALUES:
+        return explicit
+    signals = extract_interest_signals(issue)
+    if len(signals) >= 2:
+        return "published"
+    if len(signals) == 1:
+        return "monthly_digest"
+    return ""
+
+
 def _normalize_client_fit_token(token: str) -> str | None:
     cleaned = token.strip().lower().replace("·", "").replace(" ", "_")
     if cleaned in CLIENT_FIT_KEYS:
@@ -2827,6 +2865,8 @@ def report_payload(report: Report) -> dict[str, object]:
                 "articleNature": extract_article_nature(issue),
                 "sourceVerification": extract_source_verification(issue),
                 "clientFit": extract_client_fit(issue),
+                "interestSignals": extract_interest_signals(issue),
+                "interestClass": extract_interest_class(issue),
                 "facts": facts,
                 "sourceUrl": issue.meta.get("출처 URL", ""),
                 "sourceTitle": issue_source_title(issue),

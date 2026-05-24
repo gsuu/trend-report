@@ -67,6 +67,8 @@
 - 원문 언어: ko|ja|en|zh-cn 중 하나 (선택; 비어 있으면 locale에서 자동)
 - 검증 메모: 어떻게 검증했는지 1줄 — **클라이언트 임원의 깐깐한 출처 질문에 즉답하기 위함**. 예: "원문 본문 직접 확인 + 공식 트위터 교차 확인" (선택, 매거진 검증 박스에 노출)
 - 클라이언트 적합: 표준 키워드 셋 중 2~4개 — fashion_commerce, beauty_commerce, food_d2c, lifestyle_commerce, fintech, content_platform, marketplace, o2o, b2b_saas, travel, healthcare, edu (선택; 비어 있으면 category/brand에서 자동 fallback)
+- 흥미 시그널: hot_topic, vivid_case, surprising, familiar, quotable 중 2개 이상 (shortlist에서 받은 결과 그대로. 글 노출에 영향 없고 운영 점검용)
+- 흥미 분류: published | monthly_digest | excluded_interest (shortlist에서 받은 결과 그대로. 비어 있으면 시그널 수에서 자동 추론)
 ```
 
 묶음 DEV 항목처럼 보조 원문이 있으면 `보조 출처 1`, `보조 출처 2`, `관련 링크 1` 형식으로 이어서 씁니다.

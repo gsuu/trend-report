@@ -174,13 +174,13 @@
 
 ## 우선순위와 다음 액션
 
-| 단계 | 작업 | 의존성 | 상태 |
-|---|---|---|---|
-| 1 | `docs/target-fit-classifier-agent.md`에 5시그널 정의 + 자동 평가 3개 명시 | 없음 | 대기 |
-| 2 | `target-classifier` 에이전트 프롬프트(.claude/agents)에 친숙함·인용 가능성 평가 로직 추가 | 1 | 대기 |
-| 3 | `source-verifier` 에이전트 프롬프트에 사례 구체성(사용자 인용·구체 수치·인물 발화 1개 이상) 평가 추가 | 1 | 대기 |
-| 4 | shortlist 작성 가이드(`docs/magazine-agent-workflow.md` 또는 디지스트 prompt)에 사람 평가 2개(화제성·의외성) 1줄 메모 명시 | 1 | 대기 |
-| 5 | parser에 `interestSignals` 메타·payload 필드 신설. 자동 평가 3개는 자동 fallback, 사람 평가 2개는 메타에서 받음 | 1 | 대기 |
-| 6 | shortlist 출력 형식에 시그널 평가 + 3단 분류(published/monthly_digest/excluded) 명시 | 4 | 대기 |
-| 7 | magazine-writer 큐레이션 노트 작성 가이드 보정 — "시그널을 자연스럽게 녹여 1-3문장" | 1 | 대기 |
-| 8 | v3 sample 글 교체 — 시그널 3+ 강한 글로 (NN/g Qwen AI 또는 KakaoTalk v26.4.0) | 1-7 무관 | 대기 |
+| 단계 | 작업 | 상태 |
+|---|---|---|
+| 1 | `docs/target-fit-classifier-agent.md`에 5시그널 정의 + 자동 평가 3개 명시 | ✅ Done (2026-05-24) |
+| 2 | `target-classifier` 프롬프트에 친숙함·인용 가능성 평가 + interest_signals_auto·interest_class_provisional 출력 | ✅ Done (2026-05-24) |
+| 3 | `source-verifier` 프롬프트에 사례 구체성(`vivid_case`) 평가 + interest_signal_vivid_case 출력 | ✅ Done (2026-05-24) |
+| 4 | `magazine-agent-workflow.md` §4 shortlist 작성에 사람 평가 2개(`hot_topic`·`surprising`) 메모 + 3단 분류 확정 | ✅ Done (2026-05-24) |
+| 5 | parser에 `interestSignals`·`interestClass` payload 필드 + 자동 fallback (시그널 수 → 분류 추론) | ✅ Done (2026-05-24) |
+| 6 | shortlist 출력 형식에 3단 분류 명시 (workflow doc 안에 포함) | ✅ Done (2026-05-24) |
+| 7 | magazine-writer 큐레이션 노트 작성 가이드 — 시그널 라벨 직접 X, 시점 풀어 쓰기 + 3가지 예시 | ✅ Done (2026-05-24) |
+| 8 | v3 sample 글 교체 — NN/g Qwen AI 사용자 테스트 (시그널 3개 강: vivid_case·surprising·quotable) | ✅ Done (2026-05-24) |

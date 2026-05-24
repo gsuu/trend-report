@@ -46,6 +46,22 @@
 
 선별 순서와 우선순위는 [타겟 적합성 분류 에이전트](target-fit-classifier-agent.md)의 `Shortlist 우선순위`를 따릅니다. 같은 점수일 때의 수집/채택 우선순위는 [데이터 수집 전략](data-collection-strategy.md)을 따릅니다.
 
+### 직원 흥미도 사람 평가 2개 메모 (9번째 회의, 2026-05-24)
+
+target-classifier가 자동으로 박은 흥미 시그널 3개(`vivid_case`·`familiar`·`quotable`)에 더해, shortlist 작성 단계에서 **사람(라이터·편집자) 평가 2개**를 1줄 메모로 추가합니다:
+
+- 🔥 **화제성** (`hot_topic`): "이번 주 업계·동료들이 이야기하는 주제인가?" — 강하면 `hot_topic` 시그널 추가
+- 💡 **의외성** (`surprising`): "일반적 예상과 다른 결과/실패 사례/뜻밖의 접근인가?" — 강하면 `surprising` 시그널 추가
+
+shortlist 항목마다 다음을 추가:
+- 시그널 최종 배열: `[vivid_case, familiar, quotable, hot_topic, surprising]` 중 강한 것들
+- 흥미 분류 최종:
+  - `published` — 시그널 2개 이상 강 → 글 작성 후보
+  - `monthly_digest` — 시그널 1개 강 → 한 달 다이제스트 묶음 후보
+  - `excluded_interest` — 시그널 0개 → `수집했지만 제외한 것`
+
+흥미 분류 기준은 [매거진 큐레이션 — 직원 흥미도 회의](curation-interest-meeting-2026-05.md).
+
 ## 5. 카테고리 분류 에이전트
 
 목표는 통과한 후보를 Service / Design / DEV와 각 소분류에 맞게 정리하는 것입니다.
