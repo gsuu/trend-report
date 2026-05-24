@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-24T02:31:09.067680+00:00",
+  "generatedAt": "2026-05-24T03:17:30.478943+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -52,6 +52,12 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [
+          {
+            "key": "lifestyle_commerce",
+            "label": "라이프스타일 커머스"
+          }
+        ],
         "facts": [
           {
             "label": "태그",
@@ -217,6 +223,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -394,6 +401,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -578,6 +586,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -752,6 +761,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -935,6 +945,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -1121,6 +1132,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -1311,6 +1323,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -1499,6 +1512,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -1700,6 +1714,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -1896,6 +1911,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -2072,6 +2088,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -2440,6 +2457,12 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [
+          {
+            "key": "lifestyle_commerce",
+            "label": "라이프스타일 커머스"
+          }
+        ],
         "facts": [
           {
             "label": "발행날짜",
@@ -2600,6 +2623,16 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [
+          {
+            "key": "o2o",
+            "label": "O2O · 매장"
+          },
+          {
+            "key": "marketplace",
+            "label": "마켓플레이스"
+          }
+        ],
         "facts": [
           {
             "label": "발행날짜",
@@ -2759,6 +2792,12 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [
+          {
+            "key": "marketplace",
+            "label": "마켓플레이스"
+          }
+        ],
         "facts": [
           {
             "label": "발행날짜",
@@ -2918,6 +2957,16 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [
+          {
+            "key": "content_platform",
+            "label": "콘텐츠 플랫폼"
+          },
+          {
+            "key": "marketplace",
+            "label": "마켓플레이스"
+          }
+        ],
         "facts": [
           {
             "label": "발행날짜",
@@ -3080,6 +3129,12 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [
+          {
+            "key": "fashion_commerce",
+            "label": "패션 커머스"
+          }
+        ],
         "facts": [
           {
             "label": "발행날짜",
@@ -3239,6 +3294,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -3396,6 +3452,16 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [
+          {
+            "key": "o2o",
+            "label": "O2O · 매장"
+          },
+          {
+            "key": "marketplace",
+            "label": "마켓플레이스"
+          }
+        ],
         "facts": [
           {
             "label": "발행날짜",
@@ -3555,6 +3621,12 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [
+          {
+            "key": "fashion_commerce",
+            "label": "패션 커머스"
+          }
+        ],
         "facts": [
           {
             "label": "발행날짜",
@@ -3712,6 +3784,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -3872,6 +3945,12 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [
+          {
+            "key": "beauty_commerce",
+            "label": "뷰티 커머스"
+          }
+        ],
         "facts": [
           {
             "label": "발행날짜",
@@ -4029,6 +4108,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -4217,6 +4297,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -4372,6 +4453,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -4519,6 +4601,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -4677,6 +4760,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -4840,6 +4924,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -5004,6 +5089,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -5171,6 +5257,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -5338,6 +5425,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -5488,6 +5576,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -5693,6 +5782,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -5870,6 +5960,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -6086,6 +6177,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -6278,6 +6370,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -6447,6 +6540,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -6619,6 +6713,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -6790,6 +6885,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -6966,6 +7062,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -7137,6 +7234,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -7311,6 +7409,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",
@@ -7488,6 +7587,7 @@
           "originalLanguage": "",
           "verificationNote": ""
         },
+        "clientFit": [],
         "facts": [
           {
             "label": "발행날짜",

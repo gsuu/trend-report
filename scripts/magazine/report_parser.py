@@ -314,6 +314,64 @@ HIDDEN_FACT_KEYS = {
     "코드 스니펫", "환경설정",
     "흐름", "변화 유형", "브랜드",
     "핵심 인용", "저자", "매체", "원문 언어", "검증 메모", "글 성격",
+    "클라이언트 적합",
+}
+
+CLIENT_FIT_KEYS = {
+    "fashion_commerce": "패션 커머스",
+    "beauty_commerce": "뷰티 커머스",
+    "food_d2c": "식품 D2C",
+    "lifestyle_commerce": "라이프스타일 커머스",
+    "fintech": "핀테크",
+    "content_platform": "콘텐츠 플랫폼",
+    "marketplace": "마켓플레이스",
+    "o2o": "O2O · 매장",
+    "b2b_saas": "B2B SaaS",
+    "travel": "여행·숙박",
+    "healthcare": "헬스케어",
+    "edu": "교육",
+}
+
+CLIENT_FIT_LABEL_TO_KEY = {label: key for key, label in CLIENT_FIT_KEYS.items()}
+
+CLIENT_FIT_CATEGORY_HINTS = {
+    "fashion": ["fashion_commerce"],
+    "beauty": ["beauty_commerce"],
+    "food": ["food_d2c"],
+    "ecommerce": ["lifestyle_commerce", "fashion_commerce"],
+    "fintech": ["fintech"],
+    "marketplace": ["marketplace"],
+    "lifestyle_commerce": ["lifestyle_commerce"],
+    "platform": ["content_platform"],
+    "ai": ["b2b_saas"],
+    "travel": ["travel"],
+    "o2o": ["o2o"],
+    "book_content": ["content_platform"],
+    "department_store": ["fashion_commerce", "lifestyle_commerce"],
+    "service": [],
+    "consumer_research": [],
+    "insight": [],
+}
+
+CLIENT_FIT_BRAND_HINTS = {
+    "무신사": ["fashion_commerce"],
+    "29CM": ["fashion_commerce"],
+    "지그재그": ["fashion_commerce"],
+    "에이블리": ["fashion_commerce"],
+    "올리브영": ["beauty_commerce"],
+    "컬리": ["food_d2c", "lifestyle_commerce"],
+    "쿠팡": ["marketplace"],
+    "오늘의집": ["lifestyle_commerce"],
+    "토스": ["fintech"],
+    "카카오": ["content_platform", "marketplace"],
+    "네이버": ["content_platform", "marketplace"],
+    "11번가": ["marketplace"],
+    "당근": ["o2o", "marketplace"],
+    "야놀자": ["travel"],
+    "배민": ["o2o", "food_d2c"],
+    "SSG.COM": ["marketplace"],
+    "신세계인터내셔날": ["fashion_commerce"],
+    "G마켓": ["marketplace"],
 }
 
 ARTICLE_NATURE_VALUES = {"decision", "context", "case", "debate"}
@@ -2570,6 +2628,43 @@ def extract_article_nature(issue: Issue) -> str:
     return _detect_article_nature(issue, source_type)
 
 
+def _normalize_client_fit_token(token: str) -> str | None:
+    cleaned = token.strip().lower().replace("·", "").replace(" ", "_")
+    if cleaned in CLIENT_FIT_KEYS:
+        return cleaned
+    label = token.strip()
+    if label in CLIENT_FIT_LABEL_TO_KEY:
+        return CLIENT_FIT_LABEL_TO_KEY[label]
+    return None
+
+
+def extract_client_fit(issue: Issue) -> list[dict[str, str]]:
+    explicit_raw = (issue.meta.get("클라이언트 적합") or "").strip()
+    keys: list[str] = []
+    if explicit_raw:
+        for piece in re.split(r"[,/|·]", explicit_raw):
+            key = _normalize_client_fit_token(piece)
+            if key and key not in keys:
+                keys.append(key)
+    if not keys:
+        for hint in CLIENT_FIT_CATEGORY_HINTS.get(issue.category, []):
+            if hint not in keys:
+                keys.append(hint)
+        brand = (issue.meta.get("브랜드") or "").strip()
+        if not brand:
+            brand = issue.platform
+        for brand_key, hints in CLIENT_FIT_BRAND_HINTS.items():
+            if brand_key in brand:
+                for hint in hints:
+                    if hint not in keys:
+                        keys.append(hint)
+    return [
+        {"key": key, "label": CLIENT_FIT_KEYS[key]}
+        for key in keys[:4]
+        if key in CLIENT_FIT_KEYS
+    ]
+
+
 def extract_meeting_question(issue: Issue) -> str:
     explicit = (issue.meta.get("회의 질문") or "").strip()
     if explicit:
@@ -2632,6 +2727,7 @@ def report_payload(report: Report) -> dict[str, object]:
                 "readingMinutes": extract_reading_minutes(issue),
                 "articleNature": extract_article_nature(issue),
                 "sourceVerification": extract_source_verification(issue),
+                "clientFit": extract_client_fit(issue),
                 "facts": facts,
                 "sourceUrl": issue.meta.get("출처 URL", ""),
                 "sourceTitle": issue_source_title(issue),

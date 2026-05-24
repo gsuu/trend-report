@@ -419,9 +419,9 @@ const activeSubcategory = computed(() => {
 });
 
 const AREA_JOB_LABELS = {
-  service: { role: "기획자", roleEn: "PM", subscribeHint: "이커머스 기획·서비스" },
-  design: { role: "디자이너", roleEn: "Designer", subscribeHint: "UIUX 비주얼·브랜드" },
-  dev: { role: "퍼블리셔", roleEn: "Publisher", subscribeHint: "마크업·CSS·인터랙션·정적 빌드" },
+  service: { role: "기획자", roleEn: "PM", subscribeHint: "클라이언트 의사결정자에게 제안하는 기획자용" },
+  design: { role: "디자이너", roleEn: "Designer", subscribeHint: "클라이언트 시안·브랜드 작업하는 디자이너용" },
+  dev: { role: "퍼블리셔", roleEn: "Publisher", subscribeHint: "클라이언트 프로젝트 구현하는 퍼블리셔용" },
 };
 
 function areaJobLabel(key) {
@@ -499,6 +499,7 @@ const isExploreOpen = ref(false);
 const exploreBrand = ref("");
 const exploreFlow = ref("");
 const exploreChangeType = ref("");
+const exploreClientFit = ref("");
 
 const baseCategoryIssues = computed(() => {
   if (!activeCategory.value) return filteredIssues.value;
@@ -542,8 +543,23 @@ const availableChangeTypes = computed(() => {
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
 });
 
+const availableClientFit = computed(() => {
+  const counts = new Map();
+  const labelByKey = new Map();
+  for (const issue of baseCategoryIssues.value) {
+    for (const fit of issue.clientFit || []) {
+      if (!fit || !fit.key) continue;
+      counts.set(fit.key, (counts.get(fit.key) || 0) + 1);
+      labelByKey.set(fit.key, fit.label || fit.key);
+    }
+  }
+  return [...counts.entries()]
+    .map(([key, count]) => ({ key, label: labelByKey.get(key) || key, count }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+});
+
 const hasExploreFilters = computed(() => Boolean(
-  exploreBrand.value || exploreFlow.value || exploreChangeType.value
+  exploreBrand.value || exploreFlow.value || exploreChangeType.value || exploreClientFit.value
 ));
 
 const visibleIssues = computed(() => {
@@ -557,6 +573,9 @@ const visibleIssues = computed(() => {
   if (exploreChangeType.value) {
     pool = pool.filter((issue) => (issue.changeType || []).includes(exploreChangeType.value));
   }
+  if (exploreClientFit.value) {
+    pool = pool.filter((issue) => (issue.clientFit || []).some((f) => f && f.key === exploreClientFit.value));
+  }
   return pool;
 });
 
@@ -566,6 +585,7 @@ function toggleExplore() {
     exploreBrand.value = "";
     exploreFlow.value = "";
     exploreChangeType.value = "";
+    exploreClientFit.value = "";
   }
 }
 
@@ -576,6 +596,8 @@ function selectExplore(kind, value) {
     exploreFlow.value = exploreFlow.value === value ? "" : value;
   } else if (kind === "changeType") {
     exploreChangeType.value = exploreChangeType.value === value ? "" : value;
+  } else if (kind === "clientFit") {
+    exploreClientFit.value = exploreClientFit.value === value ? "" : value;
   }
 }
 
@@ -583,6 +605,7 @@ function resetExplore() {
   exploreBrand.value = "";
   exploreFlow.value = "";
   exploreChangeType.value = "";
+  exploreClientFit.value = "";
 }
 
 const masonryColumnCount = computed(() => {
@@ -739,7 +762,7 @@ function splitChecklistSentences(html) {
   return parts.map((part) => part.trim()).filter(Boolean);
 }
 
-const EMPHASIZED_SUBHEAD_PATTERN = /(점검 질문|짚을 점|관점)/;
+const EMPHASIZED_SUBHEAD_PATTERN = /(점검 질문|짚을 점|관점|액션 가설|가져올|다듬을|줄이는 작업)/;
 function isEmphasizedSubhead(html) {
   if (!html) return false;
   return EMPHASIZED_SUBHEAD_PATTERN.test(html);
@@ -1190,6 +1213,19 @@ function issuePublicationDate(issue) {
           >{{ ctype.label }}<small>{{ ctype.count }}</small></button>
         </div>
       </div>
+      <div v-if="availableClientFit.length" class="explore-group">
+        <span class="explore-group-label">클라이언트 적합</span>
+        <div class="explore-chips">
+          <button
+            v-for="fit in availableClientFit"
+            :key="'fit-' + fit.key"
+            type="button"
+            class="explore-chip"
+            :class="{ 'is-active': exploreClientFit === fit.key }"
+            @click="selectExplore('clientFit', fit.key)"
+          >{{ fit.label }}<small>{{ fit.count }}</small></button>
+        </div>
+      </div>
       <button v-if="hasExploreFilters" type="button" class="explore-reset" @click="resetExplore">필터 초기화</button>
     </div>
   </section>
@@ -1207,15 +1243,15 @@ function issuePublicationDate(issue) {
             <span id="subscribe-category-label" class="subscribe-category-label">구독 카테고리<span aria-hidden="true">*</span></span>
             <label>
               <input type="checkbox" :checked="subscribeAudiences.includes('Service')" @change="toggleSubscribeAudience('Service')">
-              <span>Service<small class="subscribe-job-hint">기획자 · 이커머스 서비스</small></span>
+              <span>Service<small class="subscribe-job-hint">기획자 · 클라이언트 의사결정자 미팅 자료</small></span>
             </label>
             <label>
               <input type="checkbox" :checked="subscribeAudiences.includes('Design')" @change="toggleSubscribeAudience('Design')">
-              <span>Design<small class="subscribe-job-hint">디자이너 · UIUX 비주얼</small></span>
+              <span>Design<small class="subscribe-job-hint">디자이너 · 클라이언트 시안·브랜드 작업</small></span>
             </label>
             <label>
               <input type="checkbox" :checked="subscribeAudiences.includes('DEV')" @change="toggleSubscribeAudience('DEV')">
-              <span>DEV<small class="subscribe-job-hint">퍼블리셔 · 마크업·CSS·인터랙션·정적 빌드</small></span>
+              <span>DEV<small class="subscribe-job-hint">퍼블리셔 · 클라이언트 프로젝트 구현</small></span>
             </label>
           </div>
           <label class="subscribe-field">
@@ -1301,6 +1337,12 @@ function issuePublicationDate(issue) {
                 <span v-if="activeIssue.readingMinutes" class="reading-minutes">약 {{ activeIssue.readingMinutes }}분</span>
                 <span v-if="isIssueVisited(activeIssue)" aria-hidden="true">|</span>
                 <span v-if="isIssueVisited(activeIssue)" class="visited-badge" aria-label="이미 본 글">이미 본 글</span>
+              </div>
+              <div v-if="activeIssue.clientFit && activeIssue.clientFit.length" class="client-fit-row" aria-label="적용 가능 클라이언트 유형">
+                <span class="client-fit-label">적용 가능 클라이언트</span>
+                <ul>
+                  <li v-for="fit in activeIssue.clientFit" :key="'fit-' + fit.key" class="client-fit-chip">{{ fit.label }}</li>
+                </ul>
               </div>
               <button class="article-share-button" type="button" :aria-label="shareStatus || '공유하기'" :title="shareStatus || '공유하기'" @click="shareIssue(activeIssue)">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
