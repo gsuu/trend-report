@@ -1389,6 +1389,86 @@ main {
   }
 }
 
+.code-artifacts {
+  margin: 12px 0 4px;
+}
+
+.code-artifacts-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.code-artifacts ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.code-artifact-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 1px solid #111111;
+  border-radius: 999px;
+  color: #111111;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  background: #ffffff;
+  transition: background-color 0.12s ease;
+}
+
+.code-artifact-chip:hover,
+.code-artifact-chip:focus-visible {
+  background: #111111;
+  color: #ffffff;
+}
+
+.code-artifact-chip.is-static {
+  background: #f4f4f0;
+  color: #555555;
+  border-color: #d6d6cf;
+  cursor: default;
+}
+
+.code-artifact-chip.is-static:hover {
+  background: #f4f4f0;
+  color: #555555;
+}
+
+.code-artifact-chip.is-config {
+  background: #fff5d6;
+  border-color: #c79a00;
+  color: #6a4c00;
+}
+
+.code-artifact-chip.is-config:hover,
+.code-artifact-chip.is-config:focus-visible {
+  background: #6a4c00;
+  color: #ffffff;
+}
+
+.code-artifact-type {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 10.5px;
+}
+
+.code-artifact-title {
+  font-weight: 500;
+  font-size: 12px;
+}
+
 .article-meta {
   display: flex;
   flex-wrap: wrap;

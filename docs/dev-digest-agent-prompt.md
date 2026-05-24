@@ -15,10 +15,12 @@ DEV는 GeekNews 스타일의 "프론트엔드 UIUX 개발자에게 유익한 최
 
 DEV 4축 스코프:
 
-1. 프론트엔드 표준·브라우저 — HTML/CSS/JavaScript, Web Platform API, Chrome/Safari/Firefox/WebKit 릴리즈, Baseline/Interop, Web Component
+1. 프론트엔드 표준·브라우저 — HTML/CSS/JavaScript, Web Platform API, Chrome/Safari/Firefox/WebKit 릴리즈, Baseline/Interop, Web Component, **정적 사이트 생성기·빌드 도구(11ty/Eleventy, Astro, Vite, Tailwind, PostCSS) 환경설정**
 2. UIUX 구현·접근성 — 컴포넌트 구현, 디자인-코드 연동, 접근성(ARIA/WCAG/스크린 리더/키보드), 성능 (Core Web Vitals)
 3. AI 코딩·도구 — Claude Code, Cursor, Copilot, v0, Bolt, Replit, OpenAI Codex 등 프론트엔드 실무 워크플로우를 바꾸는 AI 도구
 4. 디자인 시스템 자동화 — Storybook, shadcn/ui, Builder.io, Locofy, Anima, Figma Dev Mode 등 디자인-코드 파이프라인 자동화
+
+> **퍼블리셔 직무 정의(확정):** 마크업·CSS·접근성·인터랙션 구현이 본업이며, **FrontDEV 일부인 vite/11ty/Astro 같은 정적 사이트 생성기와 환경설정도 직접 다룹니다.** 다만 데이터·백엔드·서버·DB·인프라·ML 학습은 다루지 않습니다. 이 경계가 DEV 4축 1번 항목과 명시 제외 항목(아래 "Backend 개발 중심 글은 제외")의 기준선입니다.
 
 기준:
 
@@ -46,6 +48,7 @@ DEV 4축 스코프:
 - 썸네일은 원문 페이지의 최상단/대표 이미지(`og:image`, `twitter:image`, 첫 본문 이미지 순서)를 사용하세요.
 - 일반적인 기술 맥락 문장이나 뻔한 filler를 붙이지 마세요.
 - DEV 항목을 지나치게 줄이지 말고, 기준에 맞는 후보는 모두 포함하세요.
+- **각 DEV 항목은 코드 산출물 메타 1개 이상을 의무로 작성합니다.** `CodePen` / `Stackblitz` / `Codesandbox` / `Storybook` / `GitHub` / `데모` / `코드 스니펫` / `환경설정` 중 하나입니다. vite·11ty·Astro·Tailwind·PostCSS 설정 변경 글이라면 `환경설정: <filename> https://...` 라인을 반드시 둡니다. 형식·표시 규칙은 [매거진 원고 출력 기준 — 코드 산출물 메타 규칙](magazine-writing-standard.md#코드-산출물-메타-규칙-dev-퍼블리셔)을 따릅니다.
 
 카테고리는 다음 중 하나로 분류하세요:
 

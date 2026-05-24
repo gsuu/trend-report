@@ -972,6 +972,25 @@ function issuePublicationDate(issue) {
               </svg>
             </button>
           </div>
+          <aside
+            v-if="activeIssue.codeArtifacts && activeIssue.codeArtifacts.length"
+            class="code-artifacts"
+            aria-label="코드 산출물"
+          >
+            <span class="code-artifacts-label" aria-hidden="true">🛠️ 코드 산출물</span>
+            <ul>
+              <li v-for="artifact in activeIssue.codeArtifacts" :key="artifact.label + artifact.url">
+                <a v-if="artifact.url" :href="artifact.url" target="_blank" rel="noreferrer" :class="['code-artifact-chip', 'is-' + artifact.type]">
+                  <span class="code-artifact-type">{{ artifact.label }}</span>
+                  <span class="code-artifact-title">{{ artifact.title }}</span>
+                </a>
+                <span v-else :class="['code-artifact-chip', 'is-' + artifact.type, 'is-static']">
+                  <span class="code-artifact-type">{{ artifact.label }}</span>
+                  <span class="code-artifact-title">{{ artifact.title }}</span>
+                </span>
+              </li>
+            </ul>
+          </aside>
         </header>
 
         <div class="article-body">

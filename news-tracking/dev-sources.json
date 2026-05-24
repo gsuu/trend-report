@@ -181,6 +181,24 @@
       "topics": ["Astro", "Islands", "Content Sites"]
     },
     {
+      "name": "Eleventy (11ty) Blog",
+      "url": "https://www.11ty.dev/blog/",
+      "rss": "https://www.11ty.dev/blog/feed.xml",
+      "category": "static_site_generator",
+      "sourceRole": "official",
+      "locale": "global",
+      "topics": ["11ty", "Eleventy", "Static Site Generator", "Content Sites"]
+    },
+    {
+      "name": "Vite Blog",
+      "url": "https://vite.dev/blog",
+      "rss": "https://vite.dev/blog/feed.xml",
+      "category": "build_tool",
+      "sourceRole": "official",
+      "locale": "global",
+      "topics": ["Vite", "Build Tool", "ESM", "Dev Server"]
+    },
+    {
       "name": "React Blog",
       "url": "https://react.dev/blog",
       "rss": "https://react.dev/rss.xml",

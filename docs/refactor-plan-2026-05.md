@@ -274,9 +274,9 @@
 | **1차 (즉시)** | 안건 1: 직무 라벨(service=기획자/design=디자이너/dev=퍼블리셔) 병기 | 없음 | 1~2일 | 사이트 UX 즉시 개선 | ✅ Done (2026-05-24) |
 | | 안건 6-A: `meeting_question` 메타 | 없음 | 1일 | SERVICE 매거진 가치 강화 | ✅ Done (2026-05-24) |
 | | 안건 7-A: 점수제 수집 필터 | 없음 | 2일 | 노이즈 감소, 운영 시간 절약 | ✅ Done (2026-05-24) |
-| **2차 (1~2주)** | 안건 3: 재발견 메타(`flow`,`brand_normalized`,`change_type`) + `/explore` | 안건 1 | 1주 | 누적 자산 활용도 |
-| | 안건 5: 퍼블리셔 분리 + `code_artifacts` + vite/11ty/Astro 소스 추가 | 안건 1 | 3일 | DEV 직군 가치 |
-| | 안건 2: discovery vs verification 등급 + 신규 소스 (디스콰이엇·유아이볼·GDWeb·Codrops·11ty/Astro) | 없음 | 1주 | 발견 폭 확장 |
+| **2차 (1~2주)** | 안건 3: 재발견 메타(`flow`,`brand_normalized`,`change_type`) + `/explore` | 안건 1 | 1주 | 누적 자산 활용도 | 진행 중 |
+| | 안건 5: 퍼블리셔 분리 + `code_artifacts` + vite/11ty/Astro 소스 추가 | 안건 1 | 3일 | DEV 직군 가치 | ✅ Done (2026-05-24) |
+| | 안건 2: discovery vs verification 등급 + 신규 소스 (디스콰이엇·유아이볼·GDWeb·Codrops·11ty/Astro) | 없음 | 1주 | 발견 폭 확장 | 대기 |
 | **3차 (1개월)** | 안건 4: `/gallery` 다중 스크린샷 + 가로 비교 | 안건 3, 안건 1 | 2주 | 디자이너 가치 폭발 |
 | | 안건 7-B: 앱스토어 RN 자동 수집 | 안건 7-A | 1주 | 신호 강도 1위 출처 확보 |
 | | 안건 6-B: 채용 신호 `/signals` | 안건 2 | 1주 | PM 선행 지표 |
