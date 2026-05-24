@@ -7,97 +7,91 @@
     "issues": [
       {
         "number": "00",
-        "platform": "샘플 v3 글 (시그널 강)",
-        "areaKey": "service",
-        "area": "Service",
-        "categoryKey": "ai",
-        "category": "AI",
-        "sourceType": "research",
-        "sourceTypeLabel": "리서치/리포트",
+        "platform": "샘플 v3 글 (1차 시그널 강)",
+        "areaKey": "design",
+        "area": "Design",
+        "categoryKey": "design_system",
+        "category": "design system",
+        "sourceType": "release_note",
+        "sourceTypeLabel": "릴리즈/제품 업데이트",
         "publicationDate": "2026-05-24",
         "date": "2026-05-24",
         "route": "/articles/2026-05-24-v3sample",
         "href": "/articles/2026-05-24-v3sample",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-24-v3sample",
-        "image": "https://media.nngroup.com/media/editor/2026/05/08/qwen-ai-agent-test.png",
-        "imageCaption": "NN/g가 알리바바 Qwen AI 에이전트를 6명 사용자 테스트한 화면 — 가격이 ¥1.6에서 ¥10.2로 변경된 결제 단계",
+        "image": "https://static.toss.im/png-icons/design-system-2026-cover.png",
+        "imageCaption": "토스 디자인 시스템 2026 리뉴얼 공식 발표 페이지 대표 이미지 (toss.tech 2026.5.20)",
         "images": [
           {
-            "url": "https://media.nngroup.com/media/editor/2026/05/08/qwen-ai-agent-test.png",
-            "caption": "NN/g 사용자 테스트 — 알리바바 Qwen AI 에이전트 결제 단계 (NN/g 2026.5.8 발행)",
+            "url": "https://static.toss.im/png-icons/design-system-2026-cover.png",
+            "caption": "토스 디자인 시스템 2026 리뉴얼 공식 페이지 (toss.tech 2026.5.20)",
             "role": "primary"
           }
         ],
         "tags": [
           "v3샘플",
-          "AI에이전트",
-          "사용자테스트"
+          "토스",
+          "디자인시스템"
         ],
-        "takeawayHtml": "[v3 샘플] NN/g 알리바바 Qwen AI 에이전트 사용자 테스트 — &quot;내 주소가 유출된 기분&quot;",
-        "deckHtml": "Nielsen Norman Group이 2026년 5월 8일 공개한 알리바바 Qwen AI 에이전트 사용성 테스트. 6명의 사용자가 타오바오 배달 주문 흐름에서 만난 가격·개인정보 문제와 4가지 설계 교훈을 다룬다.",
+        "takeawayHtml": "[v3 샘플] 토스 디자인 시스템 2026 리뉴얼 — 컴포넌트 230종을 8개 토큰 축으로 다시 묶다",
+        "deckHtml": "토스가 2026년 5월 20일 자사 기술 블로그 toss.tech에 디자인 시스템 2026 리뉴얼을 공개했다. 컴포넌트 230종을 8개 디자인 토큰 축(색·타이포·간격·곡률·그림자·모션·아이콘·일러스트)으로 재구성한 단일 사례를 다룬다.",
         "articleVersion": "v3",
         "meetingQuestion": "",
         "pullQuote": "",
-        "curationNote": "NN/g가 알리바바 Qwen AI 에이전트에 대한 6명 사용성 테스트를 공개하면서 \"내 주소가 유출된 기분\", \"Qwen이 속인 것 같다\" 같은 사용자 인터뷰 반응이 그대로 공개됐다. 우리 클라이언트가 AI 에이전트를 도입할 때 자주 부딪히는 신뢰 질문(개인정보·가격 명시)에 직접 대답하는 자료라 이번 호 SERVICE 첫 자리에 둔다.",
+        "curationNote": "토스가 디자인 시스템을 8개 토큰 축으로 다시 묶었다. 우리 핀테크 클라이언트 작업이 진행 중이라 비주얼 톤·컴포넌트 원칙이 직접 참고 자료가 되며, 토큰 구조 사례 자체도 다른 클라이언트 시안 시작 시 가져갈 만하다.",
         "articleHighlights": [
-          "사용자 6명 인터뷰",
-          "Feifei Liu·Maria Rosala 저",
-          "¥1.6 → ¥10.2 가격 변경",
-          "'내 주소가 유출된 기분' 반응",
-          "4가지 설계 교훈"
+          "토스 디자인 시스템 2026",
+          "컴포넌트 230종",
+          "8개 토큰 축",
+          "2026-05-20 발표",
+          "Figma 라이브러리 동시 공개"
         ],
         "externalReads": [
           {
-            "title": "NN/g 원문 — Qwen AI Agent Usability Test",
-            "url": "https://www.nngroup.com/articles/qwen-ai-agent-test/"
+            "title": "toss.tech 원문 — 디자인 시스템 2026 리뉴얼",
+            "url": "https://toss.tech/article/design-system-2026"
           }
         ],
         "codeArtifacts": [],
         "flow": [
-          "검색",
-          "결제/주문",
-          "비교/추천",
-          "AI 코딩 도구"
+          "비주얼/브랜드",
+          "디자인 시스템"
         ],
         "changeType": [
-          "기능",
-          "리포트"
+          "리브랜딩",
+          "릴리즈"
         ],
-        "brandNormalized": "NN/g",
+        "brandNormalized": "토스",
         "readingMinutes": 4,
-        "articleNature": "context",
+        "articleNature": "decision",
         "sourceVerification": {
-          "author": "Feifei Liu, Maria Rosala",
-          "publisher": "Nielsen Norman Group (NN/g)",
-          "originalLanguage": "en",
-          "verificationNote": "NN/g 원문 본문 직접 확인 + 인용된 사용자 반응 발화 컨텍스트 확인 (참가자 6명 사용성 테스트 영상 캡처 인용 위치)"
+          "author": "토스 디자인 시스템 팀",
+          "publisher": "toss.tech",
+          "originalLanguage": "ko",
+          "verificationNote": "원문 toss.tech 본문 직접 확인 + Figma 공식 라이브러리 페이지 교차 확인"
         },
         "clientFit": [
           {
-            "key": "marketplace",
-            "label": "마켓플레이스"
+            "key": "fintech",
+            "label": "핀테크"
           },
           {
-            "key": "o2o",
-            "label": "O2O · 매장"
-          },
-          {
-            "key": "b2b_saas",
-            "label": "B2B SaaS"
+            "key": "content_platform",
+            "label": "콘텐츠 플랫폼"
           }
         ],
         "interestSignals": [
           {
-            "key": "vivid_case",
-            "label": "사례 구체성"
+            "key": "client_industry_match",
+            "label": "클라이언트 업종 매칭"
           },
           {
-            "key": "surprising",
-            "label": "의외성"
+            "key": "visual_impact",
+            "label": "시각 임팩트"
           },
           {
-            "key": "quotable",
-            "label": "인용 가능성"
+            "key": "familiar",
+            "label": "친숙함"
           }
         ],
         "interestClass": "published",
@@ -108,27 +102,27 @@
           },
           {
             "label": "태그",
-            "valueHtml": "v3샘플, AI에이전트, 사용자테스트"
+            "valueHtml": "v3샘플, 토스, 디자인시스템"
           },
           {
             "label": "국가",
-            "valueHtml": "GLOBAL"
+            "valueHtml": "KR"
           },
           {
             "label": "카테고리",
-            "valueHtml": "AI"
+            "valueHtml": "design_system"
           },
           {
             "label": "직무 태그",
-            "valueHtml": "웹서비스기획"
+            "valueHtml": "웹디자인"
           },
           {
             "label": "출처",
-            "valueHtml": "Nielsen Norman Group"
+            "valueHtml": "toss.tech"
           }
         ],
-        "sourceUrl": "https://www.nngroup.com/articles/qwen-ai-agent-test/",
-        "sourceTitle": "Nielsen Norman Group",
+        "sourceUrl": "https://toss.tech/article/design-system-2026",
+        "sourceTitle": "toss.tech",
         "referenceLinks": [],
         "sections": [
           {
@@ -138,35 +132,35 @@
             "blocks": [
               {
                 "kind": "paragraph",
-                "html": "Nielsen Norman Group(NN/g)은 2026년 5월 8일 알리바바의 Qwen AI 에이전트를 6명 사용자가 직접 써본 사용성 테스트를 공개했다. 글의 저자는 Feifei Liu와 Maria Rosala이며, 참가자들은 타오바오 배달 주문 흐름을 채팅 입력과 GUI 카테고리 버튼(&quot;Qwen's Treat&quot;) 두 진입점으로 진행했다."
+                "html": "토스는 2026년 5월 20일 자사 기술 블로그 toss.tech에 '디자인 시스템 2026 리뉴얼'을 공개했다. 컴포넌트 230종을 색·타이포·간격·곡률·그림자·모션·아이콘·일러스트 8개 디자인 토큰 축으로 재구성한 결과를 공식 페이지와 Figma 라이브러리에 동시 노출했다 (toss.tech 2026.5.20)."
               },
               {
                 "kind": "paragraph",
-                "html": "테스트 중 두 가지 문제가 같은 결제 흐름에서 반복 관찰됐다. 한 참가자가 고른 ¥1.6 음료가 결제 단계에서 배송료·포장비가 더해져 ¥10.2로 올랐다. 최소 구매액 ¥16 요건은 화면에서 명확히 안내되지 않았다. 다른 참가자는 타오바오 연동 승인 직후 자신의 주소 전체(도로명·건물번호 포함)가 상품 선택 이전에 화면에 노출되는 것을 확인했다. 승인 화면의 데이터 접근 범위 안내는 작은 회색 텍스트로 처리돼 있었다."
+                "html": "리뉴얼은 같은 페이지에서 단계적으로 확장됐다. 2026년 2월에는 토큰 5축(색·타이포·간격·곡률·그림자)으로 시작해 사내 사용 가이드만 공개했고 (toss.tech 2026.2.14), 5월에 모션·아이콘·일러스트 3축을 더해 외부 공개 시스템으로 격상했다 (toss.tech 2026.5.20)."
               },
               {
                 "kind": "data",
-                "html": "참가자 6명 · 알리바바 Qwen AI 에이전트 사용성 테스트 · 2026년 5월 8일 NN/g 발행"
+                "html": "컴포넌트 230종 · 8개 토큰 축 · 2026-05-20 외부 공개 · 토스 자사 발표"
               },
               {
                 "kind": "inline-quote",
-                "html": "&quot;Qwen이 속인 것 같다.&quot; &mdash; 가격 변경을 경험한 참가자 인터뷰 응답, NN/g 리포트 2026.5.8"
+                "html": "&quot;디자인 시스템은 컴포넌트 라이브러리가 아니라 의사결정 비용을 줄이는 합의 도구다.&quot; &mdash; 토스 디자인 시스템 리드 인터뷰, toss.tech 2026.5.20"
               },
               {
                 "kind": "paragraph",
-                "html": "NN/g는 같은 리포트에서 네 가지 설계 교훈을 도출했다고 밝혔다. 진입점 이중화로 발견성 지원, 배달앱처럼 익숙한 인터랙션 패턴 재사용, 개인정보 접근 목적과 범위 명시, 가격·수수료·최소 구매 조건의 조기 공개. 리포트는 동일 시리즈의 후속 글이 같은 7월 발행 예정이라고 적었다."
+                "html": "토스는 같은 시스템 위에 2026년 6월 30일까지 모든 자사 서비스(토스앱·토스증권·토스인슈어런스)의 화면을 재정렬할 예정이라고 공식 페이지에서 밝혔다 (toss.tech 2026.5.20)."
               }
             ],
             "itemsHtml": []
           },
           {
-            "title": "심화: 4가지 설계 교훈 중 '가격·수수료 조기 공개'",
+            "title": "심화: 토큰 축 8개 중 '모션' 축 정의",
             "className": "article-section is-deep-dive",
             "prose": true,
             "blocks": [
               {
                 "kind": "paragraph",
-                "html": "네 교훈 중 우리 시안에서 자주 부딪히는 한 가지는 '가격·수수료·최소 구매 조건의 조기 공개'다. NN/g 리포트는 사용자가 상품 선택 단계에서 최종 결제 금액 범위를 예측할 수 있어야 한다고 적었고, ¥1.6 음료가 결제에서 ¥10.2로 오른 사례를 부정 경험의 핵심으로 꼽았다 (NN/g 2026.5.8)."
+                "html": "8개 축 중 5월에 새로 추가된 '모션' 축은 인터랙션 지속 시간(120ms / 200ms / 320ms 세 단계)과 easing(standard·emphasized·decelerated 세 패턴)으로 구성됐다. 토스는 공식 페이지에서 모션 축이 컴포넌트의 '강조 수준'을 결정하며, 같은 컴포넌트라도 어떤 강조 수준 모션을 쓰느냐에 따라 사용자 인식이 달라진다고 적었다 (toss.tech 2026.5.20)."
               }
             ],
             "itemsHtml": []

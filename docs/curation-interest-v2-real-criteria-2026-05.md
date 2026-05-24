@@ -143,11 +143,11 @@ CTTD_INDUSTRIES = [
 
 | 단계 | 작업 | 상태 |
 |---|---|---|
-| 1 | AGENTS.md About CTTD에 CTTD_INDUSTRIES 화이트리스트 절 신설 | 대기 |
-| 2 | docs/target-fit-classifier-agent.md 9번째 5시그널을 1차/보조 재배치 | 대기 |
-| 3 | docs/magazine-agent-workflow.md §4 shortlist 가이드의 사람 평가 2개 부분 제거 | 대기 |
-| 4 | target-classifier 프롬프트 — 1차 시그널 3개 자동 평가 로직 추가, 9번째 출력 필드 보정 | 대기 |
-| 5 | source-verifier 프롬프트 — vivid_case는 보조로 유지 (변경 없음) | 대기 |
-| 6 | parser interestSignals/interestClass 호환 유지, INTEREST_SIGNAL_KEYS에 3개 추가·`hot_topic`/`surprising` 호환 처리 | 대기 |
-| 7 | magazine-writer 큐레이션 노트 가이드 — 1차 시그널 시점을 자연스럽게 녹임 (예시 갱신) | 대기 |
-| 8 | v3 sample 글 교체 — 토스 디자인 시스템 리뉴얼 또는 무신사 시즌 기획전 (1차 시그널 2+ 강) | 대기 |
+| 1 | AGENTS.md About CTTD에 CTTD_INDUSTRIES 화이트리스트 절 신설 (7종 초기값) | ✅ Done (2026-05-24) |
+| 2 | docs/target-fit-classifier-agent.md 9번째 5시그널을 1차(3개)/보조(3개) 재배치, hot_topic·surprising 폐기 | ✅ Done (2026-05-24) |
+| 3 | docs/magazine-agent-workflow.md §4 사람 평가 2개 부분 제거, 자동 평가 시그널·3단 분류로 교체 | ✅ Done (2026-05-24) |
+| 4 | target-classifier 프롬프트 — interest_signals_primary/secondary/class 출력 필드 + 1차 시그널 3개 평가 로직 | ✅ Done (2026-05-24) |
+| 5 | source-verifier 프롬프트 — vivid_case 보조로 유지 (9번째 변경 그대로) | ✅ Done (변경 없음) |
+| 6 | parser INTEREST_PRIMARY_KEYS·SECONDARY_KEYS 분리, 자동 분류 로직 v2 (1차 우선) | ✅ Done (2026-05-24) |
+| 7 | magazine-writer 큐레이션 노트 가이드 — 1차 시그널 시점 자연스럽게 녹임 + 3가지 새 예시 | ✅ Done (2026-05-24) |
+| 8 | v3 sample 교체 — 토스 디자인 시스템 2026 리뉴얼 (1차 시그널 2개 강: client_industry_match=fintech + visual_impact + 보조 familiar) | ✅ Done (2026-05-24) |

@@ -16,6 +16,26 @@
 
 이 시스템 가정은 4·5·6·7번째 회의([v2-agency](docs/article-content-redesign-v2-agency-2026-05.md) · [v3-direction](docs/article-content-redesign-v3-direction-2026-05.md) · [v3.1-curatorial](docs/article-content-redesign-v3.1-curatorial-2026-05.md) · [v4-facts-only](docs/article-content-redesign-v4-facts-only-2026-05.md))에서 누적·확정됐다. 이전 1·2·3번 회의록의 어조 중 "우리 서비스"로 적힌 부분과 "결정 한 줄·점검 질문 3개" 같은 액션 카드는 모두 폐기됐다.
 
+## CTTD_INDUSTRIES (작업 클라이언트 업종 화이트리스트)
+
+매거진 큐레이션의 1차 시그널 `client_industry_match`(우리 작업 업종 매칭) 자동 평가에 쓰이는 화이트리스트. 글의 `clientFit`이 이 리스트와 교집합이 있으면 `client_industry_match` 시그널 강. 자세한 사용은 [10번째 회의록 — 큐레이션 v2](docs/curation-interest-v2-real-criteria-2026-05.md).
+
+```
+CTTD_INDUSTRIES = [
+  "fashion_commerce",    # 패션 커머스 (무신사·29CM·지그재그·에이블리 결의 클라이언트)
+  "beauty_commerce",     # 뷰티 커머스 (올리브영 결)
+  "food_d2c",            # 식품 D2C (컬리 결)
+  "lifestyle_commerce",  # 라이프스타일 커머스 (오늘의집 결)
+  "content_platform",    # 콘텐츠 플랫폼 (카카오·네이버 결)
+  "fintech",             # 핀테크 (토스 결)
+  "marketplace",         # 마켓플레이스 (쿠팡·11번가 결)
+]
+```
+
+운영 원칙:
+- **운영진이 분기별 갱신.** 새 클라이언트 프로젝트가 시작되면 해당 업종 추가, 한 동안 작업 없는 업종은 제거.
+- 빈 리스트가 되면 `client_industry_match` 시그널 자체가 평가 불가 — shortlist에서 `visual_impact`·`next_project_tool` 두 1차 시그널에 의존.
+
 ## Audience ↔ Job Mapping
 
 매거진 카테고리(`areaKey`)는 곧 **CTTD 내부 직군 + 클라이언트 사용처**의 1:1 매핑이다.

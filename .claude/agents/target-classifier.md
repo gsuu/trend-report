@@ -27,13 +27,22 @@ tools: Read, Write
 - `한 줄 화두` — 한 문장. 이 글이 던지는 핵심 화두를 매거진 편집자 시점으로 잡은 한 줄. ("당근이 결제·등록·안전을 동시에 손봤다", "Figma가 디자인 시스템 ROI를 비즈니스 지표로 옮겼다" 같은 형태)
 - `적용 포인트` — 한 문장. CTTD 독자(웹기획자·UIUX·웹DEV)가 자기 화면·플로우·시스템에 옮긴다면 무엇을 점검할지 행동 지향 질문으로.
 - `제외 사유` — `weak_promo` 또는 `exclude`일 때만
-- **[v6 9번째 회의] `interest_signals_auto`** — 자동 평가 가능한 시그널 배열. 다음 3종 중 강한 것:
-  - `familiar` — `brandNormalized`(또는 `platform`)이 화이트리스트 매칭 (한국 메이저 + 글로벌 메이저 + 기술 매체; [target-fit-classifier-agent.md](../../docs/target-fit-classifier-agent.md) §친숙함 표 참조)
+- **[v2 10번째 회의] `interest_signals_primary`** — 1차 시그널 배열. 다음 3종 중 강한 것:
+  - `client_industry_match` — `clientFit` 메타 또는 자동 추론된 카테고리가 `CTTD_INDUSTRIES` 화이트리스트([AGENTS.md](../../AGENTS.md#cttd_industries-작업-클라이언트-업종-화이트리스트))와 교집합 1+
+  - `visual_impact` — 이미지 1장 이상 + (`area` ∈ {design} 또는 `category`/제목 키워드 매칭: visual·brand·design·캠페인·기획전·룩북·landing·redesign·rebrand)
+  - `next_project_tool` — `codeArtifacts` 1+ OR `brandNormalized` ∈ DEV_TOOL_BRANDS (Figma·Vercel·Vite·11ty·Astro·Tailwind·Storybook·shadcn·Radix·v0·Cursor·Anthropic·OpenAI·Notion·GitHub·Codrops·web.dev·WebKit·Chrome·MDN)
+- **[v2] `interest_signals_secondary`** — 보조 시그널 배열. 다음 3종 중 강한 것:
+  - `familiar` — `brandNormalized`(또는 `platform`)이 화이트리스트 매칭 (한국 메이저 + 글로벌 메이저 + 기술 매체; [target-fit-classifier-agent.md](../../docs/target-fit-classifier-agent.md) §보조 시그널 표 참조)
   - `quotable` — `요약` 메타가 한 문장 + 구체 정보(수치·날짜·기능명) / 첫 단락에 발화자 인용 또는 데이터 후보 / 첫 단락 60-180자 단정한 한 문장 — 셋 중 하나 이상
   - `vivid_case` — source-verifier가 평가해 source-verification.json에 박은 값을 그대로 받아 합침
-- **[v6] `interest_class_provisional`** — `published_candidate` / `monthly_digest_candidate` / `excluded_interest`. 자동 평가 3개 시그널만으로 잠정. shortlist 단계에서 사람 평가 2개(`hot_topic`·`surprising`) 추가 후 확정.
+- **[v2] `interest_class`** — `published` / `monthly_digest` / `excluded_interest`. 자동 평가 결과:
+  - `published` = 1차 1+ 강 + (보조 1+ 강 OR 적합성 P0/P1)
+  - `monthly_digest` = 1차 0개 + 보조 2+ 강
+  - `excluded_interest` = 1차 0개 + 보조 1개 이하
 
-> JSON 키는 영문으로 — `target_judgment`, `priority`, `screen`, `headline`, `application_point`, `exclusion_reason`, `interest_signals_auto`, `interest_class_provisional`. 출력 markdown/UI 라벨은 한글 그대로.
+**v2에서 폐기**: 9번째 회의의 `hot_topic`·`surprising` 사람 평가는 추상적·평가 어려움으로 폐기. shortlist 단계 사람 평가 없음 (자동만).
+
+> JSON 키는 영문으로 — `target_judgment`, `priority`, `screen`, `headline`, `application_point`, `exclusion_reason`, `interest_signals_primary`, `interest_signals_secondary`, `interest_class`. 출력 markdown/UI 라벨은 한글 그대로.
 
 ## 우선순위
 

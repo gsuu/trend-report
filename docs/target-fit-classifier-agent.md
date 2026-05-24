@@ -2,42 +2,40 @@
 
 이 에이전트의 역할은 후보를 잘 쓰는 것이 아니라, CTTD 독자가 읽을 이유가 없는 후보를 shortlist 전에 걸러내는 것입니다. 보도자료를 UX 문장으로 바꾸는 일을 하지 않고, 원문이 실제로 보여주는 화면·플로우·정책 변화만 기준으로 판단합니다.
 
-**2026-05-24 9번째 회의 추가 (직원 흥미도 5시그널)**: 적합성 판정과 별도로 **"직원이 펴서 흥미로워할만한가"** 를 평가합니다. 적합성이 통과되어도 흥미 시그널이 1개 이하면 `monthly_digest` 또는 제외로 분리. 자세한 정의는 [curation-interest-meeting-2026-05.md](curation-interest-meeting-2026-05.md).
+**2026-05-24 10번째 회의 (v2 정정)**: 9번째 회의의 5시그널(`hot_topic`·`vivid_case`·`surprising`·`familiar`·`quotable`)이 실제 사용자 직감과 빗나간 문제(NN/g 글이 3시그널 강이었는데도 "관심 없음" 평가) 정정. **"흥미"가 아니라 "에이전시 실무에 직접 쓸 만한가"** 가 진짜 기준임을 확인. 1차 시그널 3개를 새로 박고, 9번째 5시그널은 보조로 격하 또는 폐기. 자세한 정의는 [curation-interest-v2-real-criteria-2026-05.md](curation-interest-v2-real-criteria-2026-05.md).
 
-## 직원 흥미도 5시그널
+## 1차 시그널 3개 (필수, 1개 이상 강해야 통과)
 
-| 시그널 | 정의 | 강한 신호 예 | 자동/사람 평가 |
-|---|---|---|---|
-| 🔥 **화제성** (`hot_topic`) | 업계·동료들이 이번 주 이야기하는 주제 | KakaoTalk 새 버전, OpenAI 새 기능, Figma 발표 | 사람 (shortlist 단계) |
-| 🔬 **사례 구체성** (`vivid_case`) | 사용자 인용·구체 수치·인물 발화가 살아있음 | "내 주소가 유출된 기분", 전환율 +47% | 자동 (`source-verifier`) |
-| 💡 **의외성** (`surprising`) | 일반적 예상과 다른 결과·실패 사례 | 알리바바 AI가 ¥1.6 음료를 ¥10.2로 청구 | 사람 (shortlist 단계) |
-| 🤝 **친숙함** (`familiar`) | 일상에서 쓰는 서비스 / 메이저 브랜드 | 토스·카카오·네이버·당근·Figma·Notion | **자동 (이 에이전트)** |
-| 📎 **인용 가능성** (`quotable`) | 클라이언트 회의에 그대로 들고 갈 한 줄·한 화면 | "토스가 결제 단계 4→2단계 단축 (2026.5.20 공식 발표)" | **자동 (이 에이전트)** |
-
-### 친숙함 자동 평가 — 브랜드 화이트리스트 매칭
-
-`brandNormalized` 메타(자동 추출됨)가 다음 화이트리스트에 매칭되면 `familiar` 시그널 강. 매칭 안 되면 약.
-
-- **한국 메이저**: 토스 · 카카오 · 네이버 · 쿠팡 · 당근 · 배민 · 야놀자 · 무신사 · 29CM · 컬리 · 올리브영 · 오늘의집 · SSG.COM · 신세계인터내셔날 · G마켓 · 11번가 · 지그재그 · 에이블리
-- **글로벌 메이저**: Figma · Notion · Slack · Spotify · Mobbin · OpenAI · Anthropic · Vercel · GitHub · Stripe · Airbnb · Uber
-- **기술 매체**: web.dev · MDN · WebKit · Chrome (Chrome for Developers) · NN/g
-
-### 인용 가능성 자동 평가 — 한 줄 압축 가능성
-
-다음 셋 중 하나 이상이 있어야 `quotable` 시그널 강:
-- `요약` 메타가 한 문장 + 구체 정보(수치·날짜·기능명) 포함
-- 본문 첫 단락에 발화자 인용 또는 데이터 박스 후보 1개 이상
-- 첫 단락 길이가 단정한 한 문장 (60-180자)
-
-## 흥미도 분류 (3단)
-
-| 분류 | 시그널 수 | shortlist 처리 |
+| 시그널 | 정의 | 자동 평가 기준 |
 |---|---|---|
-| `published` | 2개 이상 강 | 통과 → 글 작성 후보 |
-| `monthly_digest` | 1개 강 | 보류 → 별도 분류, 한 달에 한 번 "지난 한 달 산업 뉴스 다이제스트" 묶음 글로 한꺼번에 처리 |
-| `excluded_interest` | 0개 | 제외 → `수집했지만 제외한 것`으로 이동 |
+| 🏢 **`client_industry_match`** (클라이언트 업종 매칭) | 우리 에이전시가 작업한·작업 중인 클라이언트와 같은 업종 다른 회사의 사례 | `clientFit` 메타가 `CTTD_INDUSTRIES` 화이트리스트와 교집합 1+ ([AGENTS.md About CTTD](../AGENTS.md#cttd_industries-작업-클라이언트-업종-화이트리스트) 참조) |
+| 🎨 **`visual_impact`** (시각 임팩트) | 시각적으로 강한 디자인 사례 — 시즌 캠페인·랜딩·브랜드 리뉴얼·인터랙션·키비주얼 | 이미지 1장 이상 + `area` ∈ {design} 또는 `category` 키워드(visual·brand·design·캠페인·기획전·룩북·landing·redesign·rebrand 등) 매칭 |
+| 🔧 **`next_project_tool`** (다음 프로젝트 도구) | 우리 다음 프로젝트에 적용 가능한 새 도구·기술·환경설정 발표 | `codeArtifacts` 1+ OR `brandNormalized` ∈ `DEV_TOOL_BRANDS` (Figma·Vercel·Vite·11ty·Astro·Tailwind·Storybook·shadcn·Radix·v0·Cursor·Anthropic·OpenAI·Notion·GitHub·Codrops·web.dev·WebKit·Chrome·MDN) |
 
-**적합성 판정과 결합**: shortlist는 적합성(`P0/P1/P2/제외`) **AND** 흥미도(`published`) 둘 다 통과한 후보만 통과시킵니다. P0이라도 흥미도 0이면 `monthly_digest` 또는 제외.
+## 보조 시그널 3개 (1차 보강용)
+
+| 시그널 | 9번째 회의 정의 그대로 |
+|---|---|
+| 🔬 **`vivid_case`** (사례 구체성) | source-verifier가 평가 — 사용자 인용·구체 수치·인물 발화 1+ |
+| 🤝 **`familiar`** (친숙함) | brand 화이트리스트 매칭 — 한국 메이저(토스·카카오·네이버·쿠팡·당근·배민·야놀자·무신사·29CM·컬리·올리브영·오늘의집·SSG·G마켓·11번가·지그재그·에이블리·신세계인터내셔날) + 글로벌 메이저(Figma·Notion·Slack·Spotify·Mobbin·OpenAI·Anthropic·Vercel·GitHub·Stripe·Airbnb·Uber) + 기술 매체(web.dev·MDN·WebKit·Chrome·NN/g) |
+| 📎 **`quotable`** (인용 가능성) | 요약 메타가 한 문장 + 구체 정보 OR 첫 단락 발화자 인용/데이터 후보 OR 첫 단락 60-180자 |
+
+## 9번째 회의에서 폐기된 시그널
+
+| 시그널 | 폐기 사유 |
+|---|---|
+| 🔥 ~~`hot_topic`~~ (화제성) | 추상적·자동 평가 불가·실제 흥미 판단에 약 |
+| 💡 ~~`surprising`~~ (의외성) | 사용자가 E(실패·논쟁) 후보 안 골랐다 — 매거진 결에 부적합 |
+
+## 흥미도 분류 (3단, v2 보정)
+
+| 분류 | 기준 |
+|---|---|
+| `published` | **1차 시그널 1개 이상 강** AND (보조 시그널 1개 이상 강 OR 적합성 P0/P1) |
+| `monthly_digest` | 1차 시그널 0개 + 보조 시그널 2개 이상 강 |
+| `excluded_interest` | 1차 시그널 0개 + 보조 시그널 1개 이하 |
+
+**적합성 판정과 결합**: shortlist는 적합성(`P0/P1/P2/제외`) **AND** 흥미도(`published`) 둘 다 통과한 후보만 통과시킵니다. **1차 시그널이 0개인 글은 적합성이 P0이라도 `monthly_digest` 또는 제외** — 직원 실무 적용도가 약하기 때문.
 
 ## 입력
 

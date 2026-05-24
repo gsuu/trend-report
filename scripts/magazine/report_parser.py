@@ -319,13 +319,18 @@ HIDDEN_FACT_KEYS = {
     "흥미 시그널", "흥미 분류",
 }
 
-INTEREST_SIGNAL_KEYS = {"hot_topic", "vivid_case", "surprising", "familiar", "quotable"}
+INTEREST_PRIMARY_KEYS = {"client_industry_match", "visual_impact", "next_project_tool"}
+INTEREST_SECONDARY_KEYS = {"vivid_case", "familiar", "quotable"}
+INTEREST_SIGNAL_KEYS = INTEREST_PRIMARY_KEYS | INTEREST_SECONDARY_KEYS | {"hot_topic", "surprising"}
 INTEREST_SIGNAL_LABELS = {
-    "hot_topic": "화제성",
+    "client_industry_match": "클라이언트 업종 매칭",
+    "visual_impact": "시각 임팩트",
+    "next_project_tool": "다음 프로젝트 도구",
     "vivid_case": "사례 구체성",
-    "surprising": "의외성",
     "familiar": "친숙함",
     "quotable": "인용 가능성",
+    "hot_topic": "화제성",
+    "surprising": "의외성",
 }
 INTEREST_CLASS_VALUES = {"published", "monthly_digest", "excluded_interest"}
 
@@ -2667,9 +2672,13 @@ def extract_interest_class(issue: Issue) -> str:
     if explicit in INTEREST_CLASS_VALUES:
         return explicit
     signals = extract_interest_signals(issue)
-    if len(signals) >= 2:
+    primary_count = sum(1 for s in signals if s["key"] in INTEREST_PRIMARY_KEYS)
+    secondary_count = sum(1 for s in signals if s["key"] in INTEREST_SECONDARY_KEYS)
+    if primary_count >= 1 and (secondary_count >= 1 or len(signals) >= 2):
         return "published"
-    if len(signals) == 1:
+    if primary_count >= 1:
+        return "published"
+    if secondary_count >= 2:
         return "monthly_digest"
     return ""
 

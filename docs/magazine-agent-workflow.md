@@ -46,21 +46,19 @@
 
 선별 순서와 우선순위는 [타겟 적합성 분류 에이전트](target-fit-classifier-agent.md)의 `Shortlist 우선순위`를 따릅니다. 같은 점수일 때의 수집/채택 우선순위는 [데이터 수집 전략](data-collection-strategy.md)을 따릅니다.
 
-### 직원 흥미도 사람 평가 2개 메모 (9번째 회의, 2026-05-24)
+### 에이전시 실무 적용도 시그널 (10번째 회의 v2, 2026-05-24)
 
-target-classifier가 자동으로 박은 흥미 시그널 3개(`vivid_case`·`familiar`·`quotable`)에 더해, shortlist 작성 단계에서 **사람(라이터·편집자) 평가 2개**를 1줄 메모로 추가합니다:
+shortlist에서는 target-classifier·source-verifier가 자동으로 박은 시그널을 그대로 받습니다. 사람 평가 단계는 폐기 (9번째 회의의 `hot_topic`·`surprising` 사람 평가는 추상적·평가 어려움으로 v2에서 제거).
 
-- 🔥 **화제성** (`hot_topic`): "이번 주 업계·동료들이 이야기하는 주제인가?" — 강하면 `hot_topic` 시그널 추가
-- 💡 **의외성** (`surprising`): "일반적 예상과 다른 결과/실패 사례/뜻밖의 접근인가?" — 강하면 `surprising` 시그널 추가
+- **1차 시그널 3개 (1개 이상 강해야 통과)** — `client_industry_match` · `visual_impact` · `next_project_tool`
+- **보조 시그널 3개 (1차 보강)** — `vivid_case` · `familiar` · `quotable`
 
-shortlist 항목마다 다음을 추가:
-- 시그널 최종 배열: `[vivid_case, familiar, quotable, hot_topic, surprising]` 중 강한 것들
-- 흥미 분류 최종:
-  - `published` — 시그널 2개 이상 강 → 글 작성 후보
-  - `monthly_digest` — 시그널 1개 강 → 한 달 다이제스트 묶음 후보
-  - `excluded_interest` — 시그널 0개 → `수집했지만 제외한 것`
+shortlist 분류 (자동):
+- `published` — 1차 1개 이상 강 + (보조 1개 이상 강 OR 적합성 P0/P1)
+- `monthly_digest` — 1차 0개 + 보조 2개 이상 강 (한 달에 한 번 묶음 다이제스트)
+- `excluded_interest` — 1차 0개 + 보조 1개 이하 (`수집했지만 제외한 것`)
 
-흥미 분류 기준은 [매거진 큐레이션 — 직원 흥미도 회의](curation-interest-meeting-2026-05.md).
+상세 시그널 정의·자동 평가 기준은 [target-fit-classifier-agent.md §1차 시그널·보조 시그널](target-fit-classifier-agent.md#1차-시그널-3개-필수-1개-이상-강해야-통과) 그리고 [10번째 회의록 v2](curation-interest-v2-real-criteria-2026-05.md).
 
 ## 5. 카테고리 분류 에이전트
 
