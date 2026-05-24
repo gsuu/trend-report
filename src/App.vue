@@ -939,6 +939,15 @@ function issuePublicationDate(issue) {
           <p class="article-brand" v-text="activeIssue.platform"></p>
           <h1 v-html="activeIssue.takeawayHtml"></h1>
           <p class="article-deck" v-html="activeIssue.deckHtml"></p>
+          <aside
+            v-if="activeIssue.meetingQuestion"
+            class="meeting-question"
+            role="note"
+            aria-label="클라이언트에게 묻기"
+          >
+            <span class="meeting-question-label" aria-hidden="true">💬 클라이언트에게 묻기</span>
+            <p class="meeting-question-body" v-text="activeIssue.meetingQuestion"></p>
+          </aside>
           <div class="article-meta-row">
             <div class="article-meta">
               <time v-text="activeIssue.date"></time>

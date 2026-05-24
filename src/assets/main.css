@@ -1352,6 +1352,43 @@ main {
   font-size: 0.82em;
 }
 
+.meeting-question {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 18px 0 14px;
+  padding: 16px 18px;
+  border-left: 3px solid #111111;
+  background: #f4f4f0;
+}
+
+.meeting-question-label {
+  color: #111111;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.meeting-question-body {
+  margin: 0;
+  color: #111111;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .meeting-question {
+    padding: 14px 14px;
+  }
+
+  .meeting-question-body {
+    font-size: 15px;
+  }
+}
+
 .article-meta {
   display: flex;
   flex-wrap: wrap;

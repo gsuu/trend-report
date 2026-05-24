@@ -307,7 +307,10 @@ HEADLINE_SUMMARY_LABELS = {"업데이트", "핵심 업데이트", "핵심 내용
 CORE_SUMMARY_LABELS = HEADLINE_SUMMARY_LABELS | {"서비스 맥락", "디자인 맥락", "기술 맥락", "변경 전", "변경 후"}
 SUMMARY_SECTION_TITLES = {"기술 변화 요약", "디자인 레퍼런스 요약", "요약"}
 REFERENCE_LINK_PREFIXES = ("관련 뉴스", "관련 URL", "관련 링크", "관련 매거진", "보조 출처")
-HIDDEN_FACT_KEYS = {"출처 URL", "서비스 URL", "상세페이지 초점", "요약", "출처 유형", "sourceType"}
+HIDDEN_FACT_KEYS = {"출처 URL", "서비스 URL", "상세페이지 초점", "요약", "출처 유형", "sourceType", "회의 질문"}
+
+MEETING_QUESTION_INSIGHT_SECTIONS = ("매거진 인사이트", "디자인 인사이트")
+MEETING_QUESTION_SUBHEADS = {"점검 질문"}
 SOURCE_TITLE_CACHE: dict[str, str] = {}
 
 
@@ -2277,6 +2280,27 @@ def render_section_content(title: str, items: list[str], issue: Issue | None = N
     return "\n".join(html_parts)
 
 
+def extract_meeting_question(issue: Issue) -> str:
+    explicit = (issue.meta.get("회의 질문") or "").strip()
+    if explicit:
+        return meta_text(explicit, limit=240)
+    for section_title in MEETING_QUESTION_INSIGHT_SECTIONS:
+        items = issue.sections.get(section_title, [])
+        if not items:
+            continue
+        capture = False
+        for item in items:
+            kind, text = split_section_block(item)
+            if kind == "subhead":
+                capture = text.strip() in MEETING_QUESTION_SUBHEADS
+                continue
+            if not capture:
+                continue
+            if kind in {"paragraph", "list", "highlight"}:
+                return meta_text(text, limit=240)
+    return ""
+
+
 def report_payload(report: Report) -> dict[str, object]:
     issues = []
     for issue in report.issues:
@@ -2308,6 +2332,7 @@ def report_payload(report: Report) -> dict[str, object]:
                 "tags": issue.tags,
                 "takeawayHtml": clean_inline(issue_display_title(issue)),
                 "deckHtml": clean_inline(issue_display_description(issue)),
+                "meetingQuestion": extract_meeting_question(issue),
                 "facts": facts,
                 "sourceUrl": issue.meta.get("출처 URL", ""),
                 "sourceTitle": issue_source_title(issue),

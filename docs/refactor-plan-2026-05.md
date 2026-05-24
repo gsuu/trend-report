@@ -200,10 +200,18 @@
 
 **비주얼 디자이너**: 디자이너도 채용 공고 봅니다. "키비주얼 디렉터" 같은 포지션 = 리브랜딩 신호.
 
-**결론**:
-1. 글마다 `meeting_question` 필드(SERVICE는 의무, Design/DEV는 선택).
-2. 채용 공고는 메인 매거진 외 `/signals` 페이지에 집계.
-3. SERVICE 매거진 상단 "클라이언트 질문" 박스 디자인.
+**결론 (6-A 구현 완료, 6-B는 안건 2-B 채용공고 수집 후 진행):**
+1. ✅ 글마다 `회의 질문` 메타 라인(SERVICE 의무, Design/DEV 선택). 비어 있으면 본문 `점검 질문` 섹션 첫 문장 자동 fallback.
+2. 채용 공고는 메인 매거진 외 `/signals` 페이지에 집계 — 안건 2-B 진행 후.
+3. ✅ 상세 페이지 상단에 `💬 클라이언트에게 묻기` 박스 노출 (`.meeting-question` 스타일).
+
+**6-A 구현 (PR #2):**
+- `scripts/magazine/report_parser.py`: `회의 질문`을 HIDDEN_FACT_KEYS에 추가, `extract_meeting_question` 헬퍼 신설(명시 메타 우선, 없으면 본문 `점검 질문` 섹션 첫 paragraph/list 자동 추출), payload에 `meetingQuestion` 필드.
+- `src/App.vue`: 상세 hero 하단에 `<aside class="meeting-question">` 노출.
+- `src/assets/main.css`: 박스 스타일(좌측 검정 보더 + 베이지 배경 + 라벨/본문 두 줄).
+- `docs/magazine-writing-standard.md`: 공통 메타에 `회의 질문` 추가 + 작성 규칙 절 신설.
+- `docs/service-digest-agent-prompt.md`: writer가 SERVICE 글에 회의 질문 1문장을 의무로 작성한다는 명시.
+- `npm run magazine:export-json`으로 magazine.json 재생성 (43건 중 6건 fallback 자동 채움).
 
 ---
 
@@ -254,8 +262,8 @@
 | 단계 | 안건 | 의존성 | 기간 | 영향 | 상태 |
 |---|---|---|---|---|---|
 | **1차 (즉시)** | 안건 1: 직무 라벨(service=기획자/design=디자이너/dev=퍼블리셔) 병기 | 없음 | 1~2일 | 사이트 UX 즉시 개선 | ✅ Done (2026-05-24) |
-| | 안건 6-A: `meeting_question` 메타 | 없음 | 1일 | SERVICE 매거진 가치 강화 | 다음 |
-| | 안건 7-A: 점수제 수집 필터 | 없음 | 2일 | 노이즈 감소, 운영 시간 절약 | 대기 |
+| | 안건 6-A: `meeting_question` 메타 | 없음 | 1일 | SERVICE 매거진 가치 강화 | ✅ Done (2026-05-24) |
+| | 안건 7-A: 점수제 수집 필터 | 없음 | 2일 | 노이즈 감소, 운영 시간 절약 | 다음 |
 | **2차 (1~2주)** | 안건 3: 재발견 메타(`flow`,`brand_normalized`,`change_type`) + `/explore` | 안건 1 | 1주 | 누적 자산 활용도 |
 | | 안건 5: 퍼블리셔 분리 + `code_artifacts` + vite/11ty/Astro 소스 추가 | 안건 1 | 3일 | DEV 직군 가치 |
 | | 안건 2: discovery vs verification 등급 + 신규 소스 (디스콰이엇·유아이볼·GDWeb·Codrops·11ty/Astro) | 없음 | 1주 | 발견 폭 확장 |
