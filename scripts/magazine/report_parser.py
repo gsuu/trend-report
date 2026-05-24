@@ -2718,12 +2718,42 @@ def _auto_signal_familiar(issue: Issue) -> bool:
     return any(family in platform for family in FAMILIAR_BRANDS)
 
 
+_QUOTABLE_NUMBER = re.compile(r"\d+(?:\.\d+)?(?:%|[건명종회일개원원|위만억\s])")
+_QUOTABLE_DATE = re.compile(r"\d{4}[년\-./]\s*\d{1,2}[월\-./]?")
+_QUOTABLE_FEATURE = re.compile(
+    r"(릴리즈|버전|업데이트|개편|리뉴얼|출시|도입|적용|런칭|베타|발표|"
+    r"공개|확대|추가|개선|변경|확장|신설|선보|API|SDK|컴포넌트|기능)"
+)
+
+
 def _auto_signal_quotable(issue: Issue) -> bool:
+    # 한 문장으로 압축 가능한 한 줄 요약이 있어야 함 (메타 요약 또는 첫 단락)
+    candidates: list[str] = []
     summary = (issue.meta.get("요약") or "").strip()
-    if 60 <= len(summary) <= 180 and re.search(r"\d|[가-힣]+(?:이|가|는|은)\s", summary):
-        return True
-    if extract_pull_quote(issue):
-        return True
+    if summary:
+        candidates.append(summary)
+    # 본문 첫 단락도 후보
+    for section_title, items in issue.sections.items():
+        for item in items[:2]:
+            text = re.sub(r"<[^>]+>", "", str(item)).strip()
+            text = re.sub(r"^[^:：]{1,16}[:：]\s*", "", text)
+            if 40 <= len(text) <= 220:
+                candidates.append(text)
+            break
+        break
+    for text in candidates:
+        if not 40 <= len(text) <= 220:
+            continue
+        # 구체 정보 3종(수치/날짜/기능명) 중 2종 이상 포함 시에만 강
+        hits = 0
+        if _QUOTABLE_NUMBER.search(text):
+            hits += 1
+        if _QUOTABLE_DATE.search(text):
+            hits += 1
+        if _QUOTABLE_FEATURE.search(text):
+            hits += 1
+        if hits >= 2:
+            return True
     return False
 
 

@@ -1,10 +1,175 @@
 {
-  "generatedAt": "2026-05-24T08:18:39.444692+00:00",
+  "generatedAt": "2026-05-24T08:21:30.250216+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
     "slug": "2026-05-15",
     "issues": [
+      {
+        "number": "00",
+        "platform": "샘플 v3 글 (1차 시그널 강)",
+        "areaKey": "design",
+        "area": "Design",
+        "categoryKey": "design_system",
+        "category": "design system",
+        "sourceType": "release_note",
+        "sourceTypeLabel": "릴리즈/제품 업데이트",
+        "publicationDate": "2026-05-24",
+        "date": "2026-05-24",
+        "route": "/articles/2026-05-24-v3sample",
+        "href": "/articles/2026-05-24-v3sample",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-24-v3sample",
+        "image": "https://static.toss.im/png-icons/design-system-2026-cover.png",
+        "imageCaption": "토스 디자인 시스템 2026 리뉴얼 공식 발표 페이지 대표 이미지 (toss.tech 2026.5.20)",
+        "images": [
+          {
+            "url": "https://static.toss.im/png-icons/design-system-2026-cover.png",
+            "caption": "토스 디자인 시스템 2026 리뉴얼 공식 페이지 (toss.tech 2026.5.20)",
+            "role": "primary"
+          }
+        ],
+        "tags": [
+          "v3샘플",
+          "토스",
+          "디자인시스템"
+        ],
+        "takeawayHtml": "[v3 샘플] 토스 디자인 시스템 2026 리뉴얼 — 컴포넌트 230종을 8개 토큰 축으로 다시 묶다",
+        "deckHtml": "토스가 2026년 5월 20일 자사 기술 블로그 toss.tech에 디자인 시스템 2026 리뉴얼을 공개했다. 컴포넌트 230종을 8개 디자인 토큰 축(색·타이포·간격·곡률·그림자·모션·아이콘·일러스트)으로 재구성한 단일 사례를 다룬다.",
+        "articleVersion": "v3",
+        "meetingQuestion": "",
+        "pullQuote": "",
+        "curationNote": "토스가 디자인 시스템을 8개 토큰 축으로 다시 묶었다. 우리 핀테크 클라이언트 작업이 진행 중이라 비주얼 톤·컴포넌트 원칙이 직접 참고 자료가 되며, 토큰 구조 사례 자체도 다른 클라이언트 시안 시작 시 가져갈 만하다.",
+        "articleHighlights": [
+          "토스 디자인 시스템 2026",
+          "컴포넌트 230종",
+          "8개 토큰 축",
+          "2026-05-20 발표",
+          "Figma 라이브러리 동시 공개"
+        ],
+        "externalReads": [
+          {
+            "title": "toss.tech 원문 — 디자인 시스템 2026 리뉴얼",
+            "url": "https://toss.tech/article/design-system-2026"
+          }
+        ],
+        "codeArtifacts": [],
+        "flow": [
+          "비주얼/브랜드",
+          "디자인 시스템"
+        ],
+        "changeType": [
+          "리브랜딩",
+          "릴리즈"
+        ],
+        "brandNormalized": "토스",
+        "readingMinutes": 4,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "토스 디자인 시스템 팀",
+          "publisher": "toss.tech",
+          "originalLanguage": "ko",
+          "verificationNote": "원문 toss.tech 본문 직접 확인 + Figma 공식 라이브러리 페이지 교차 확인"
+        },
+        "clientFit": [
+          {
+            "key": "fintech",
+            "label": "핀테크"
+          },
+          {
+            "key": "content_platform",
+            "label": "콘텐츠 플랫폼"
+          }
+        ],
+        "interestSignals": [
+          {
+            "key": "client_industry_match",
+            "label": "클라이언트 업종 매칭"
+          },
+          {
+            "key": "visual_impact",
+            "label": "시각 임팩트"
+          },
+          {
+            "key": "familiar",
+            "label": "친숙함"
+          }
+        ],
+        "interestClass": "published",
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-05-24"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "v3샘플, 토스, 디자인시스템"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "KR"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "design_system"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹디자인"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "toss.tech"
+          }
+        ],
+        "sourceUrl": "https://toss.tech/article/design-system-2026",
+        "sourceTitle": "toss.tech",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "매거진",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "paragraph",
+                "html": "토스는 2026년 5월 20일 자사 기술 블로그 toss.tech에 '디자인 시스템 2026 리뉴얼'을 공개했다. 컴포넌트 230종을 색·타이포·간격·곡률·그림자·모션·아이콘·일러스트 8개 디자인 토큰 축으로 재구성한 결과를 공식 페이지와 Figma 라이브러리에 동시 노출했다 (toss.tech 2026.5.20)."
+              },
+              {
+                "kind": "paragraph",
+                "html": "리뉴얼은 같은 페이지에서 단계적으로 확장됐다. 2026년 2월에는 토큰 5축(색·타이포·간격·곡률·그림자)으로 시작해 사내 사용 가이드만 공개했고 (toss.tech 2026.2.14), 5월에 모션·아이콘·일러스트 3축을 더해 외부 공개 시스템으로 격상했다 (toss.tech 2026.5.20)."
+              },
+              {
+                "kind": "data",
+                "html": "컴포넌트 230종 · 8개 토큰 축 · 2026-05-20 외부 공개 · 토스 자사 발표"
+              },
+              {
+                "kind": "inline-quote",
+                "html": "&quot;디자인 시스템은 컴포넌트 라이브러리가 아니라 의사결정 비용을 줄이는 합의 도구다.&quot; &mdash; 토스 디자인 시스템 리드 인터뷰, toss.tech 2026.5.20"
+              },
+              {
+                "kind": "paragraph",
+                "html": "토스는 같은 시스템 위에 2026년 6월 30일까지 모든 자사 서비스(토스앱·토스증권·토스인슈어런스)의 화면을 재정렬할 예정이라고 공식 페이지에서 밝혔다 (toss.tech 2026.5.20)."
+              }
+            ],
+            "itemsHtml": []
+          },
+          {
+            "title": "심화: 토큰 축 8개 중 '모션' 축 정의",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "paragraph",
+                "html": "8개 축 중 5월에 새로 추가된 '모션' 축은 인터랙션 지속 시간(120ms / 200ms / 320ms 세 단계)과 easing(standard·emphasized·decelerated 세 패턴)으로 구성됐다. 토스는 공식 페이지에서 모션 축이 컴포넌트의 '강조 수준'을 결정하며, 같은 컴포넌트라도 어떤 강조 수준 모션을 쓰느냐에 따라 사용자 인식이 달라진다고 적었다 (toss.tech 2026.5.20)."
+              }
+            ],
+            "itemsHtml": []
+          }
+        ],
+        "id": "2026-05-24-v3sample",
+        "issueSlug": "2026-05-24",
+        "articleSlug": "2026-05-24-v3sample"
+      },
       {
         "number": "01",
         "platform": "오늘의집 뉴스룸",
@@ -74,10 +239,6 @@
           {
             "key": "familiar",
             "label": "친숙함"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           },
           {
             "key": "vivid_case",
@@ -1261,15 +1422,11 @@
         "clientFit": [],
         "interestSignals": [
           {
-            "key": "quotable",
-            "label": "인용 가능성"
-          },
-          {
             "key": "vivid_case",
             "label": "사례 구체성"
           }
         ],
-        "interestClass": "monthly_digest",
+        "interestClass": "",
         "facts": [
           {
             "label": "발행날짜",
@@ -1687,10 +1844,6 @@
             "label": "친숙함"
           },
           {
-            "key": "quotable",
-            "label": "인용 가능성"
-          },
-          {
             "key": "vivid_case",
             "label": "사례 구체성"
           }
@@ -1902,12 +2055,7 @@
           "verificationNote": ""
         },
         "clientFit": [],
-        "interestSignals": [
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
-          }
-        ],
+        "interestSignals": [],
         "interestClass": "",
         "facts": [
           {
@@ -2120,10 +2268,6 @@
             "label": "친숙함"
           },
           {
-            "key": "quotable",
-            "label": "인용 가능성"
-          },
-          {
             "key": "vivid_case",
             "label": "사례 구체성"
           }
@@ -2312,15 +2456,11 @@
         "clientFit": [],
         "interestSignals": [
           {
-            "key": "quotable",
-            "label": "인용 가능성"
-          },
-          {
             "key": "vivid_case",
             "label": "사례 구체성"
           }
         ],
-        "interestClass": "monthly_digest",
+        "interestClass": "",
         "facts": [
           {
             "label": "발행날짜",
@@ -2709,10 +2849,6 @@
             "label": "친숙함"
           },
           {
-            "key": "quotable",
-            "label": "인용 가능성"
-          },
-          {
             "key": "vivid_case",
             "label": "사례 구체성"
           }
@@ -2900,10 +3036,6 @@
           {
             "key": "familiar",
             "label": "친숙함"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           },
           {
             "key": "vivid_case",
@@ -3280,10 +3412,6 @@
           {
             "key": "familiar",
             "label": "친숙함"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           },
           {
             "key": "vivid_case",
@@ -4026,10 +4154,6 @@
             "label": "친숙함"
           },
           {
-            "key": "quotable",
-            "label": "인용 가능성"
-          },
-          {
             "key": "vivid_case",
             "label": "사례 구체성"
           }
@@ -4201,10 +4325,6 @@
           {
             "key": "familiar",
             "label": "친숙함"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           },
           {
             "key": "vivid_case",
@@ -4392,10 +4512,6 @@
             "label": "친숙함"
           },
           {
-            "key": "quotable",
-            "label": "인용 가능성"
-          },
-          {
             "key": "vivid_case",
             "label": "사례 구체성"
           }
@@ -4567,10 +4683,6 @@
           {
             "key": "familiar",
             "label": "친숙함"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           },
           {
             "key": "vivid_case",
@@ -4777,10 +4889,6 @@
             "label": "시각 임팩트"
           },
           {
-            "key": "quotable",
-            "label": "인용 가능성"
-          },
-          {
             "key": "vivid_case",
             "label": "사례 구체성"
           }
@@ -4950,10 +5058,6 @@
           {
             "key": "visual_impact",
             "label": "시각 임팩트"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           }
         ],
         "interestClass": "published",
@@ -5121,10 +5225,6 @@
           {
             "key": "familiar",
             "label": "친숙함"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           },
           {
             "key": "vivid_case",
@@ -5307,10 +5407,6 @@
           {
             "key": "familiar",
             "label": "친숙함"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           },
           {
             "key": "vivid_case",
@@ -5498,10 +5594,6 @@
           {
             "key": "familiar",
             "label": "친숙함"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           },
           {
             "key": "vivid_case",
@@ -5879,10 +5971,6 @@
             "label": "시각 임팩트"
           },
           {
-            "key": "quotable",
-            "label": "인용 가능성"
-          },
-          {
             "key": "vivid_case",
             "label": "사례 구체성"
           }
@@ -6074,10 +6162,6 @@
             "label": "친숙함"
           },
           {
-            "key": "quotable",
-            "label": "인용 가능성"
-          },
-          {
             "key": "vivid_case",
             "label": "사례 구체성"
           }
@@ -6240,15 +6324,11 @@
         "clientFit": [],
         "interestSignals": [
           {
-            "key": "quotable",
-            "label": "인용 가능성"
-          },
-          {
             "key": "vivid_case",
             "label": "사례 구체성"
           }
         ],
-        "interestClass": "monthly_digest",
+        "interestClass": "",
         "facts": [
           {
             "label": "발행날짜",
@@ -6459,12 +6539,7 @@
           "verificationNote": ""
         },
         "clientFit": [],
-        "interestSignals": [
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
-          }
-        ],
+        "interestSignals": [],
         "interestClass": "",
         "facts": [
           {
@@ -6650,15 +6725,11 @@
         "clientFit": [],
         "interestSignals": [
           {
-            "key": "quotable",
-            "label": "인용 가능성"
-          },
-          {
             "key": "vivid_case",
             "label": "사례 구체성"
           }
         ],
-        "interestClass": "monthly_digest",
+        "interestClass": "",
         "facts": [
           {
             "label": "발행날짜",
@@ -6880,12 +6951,7 @@
           "verificationNote": ""
         },
         "clientFit": [],
-        "interestSignals": [
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
-          }
-        ],
+        "interestSignals": [],
         "interestClass": "",
         "facts": [
           {
@@ -7088,10 +7154,6 @@
           {
             "key": "visual_impact",
             "label": "시각 임팩트"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           }
         ],
         "interestClass": "published",
@@ -7273,10 +7335,6 @@
           {
             "key": "visual_impact",
             "label": "시각 임팩트"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           }
         ],
         "interestClass": "published",
@@ -7461,10 +7519,6 @@
           {
             "key": "visual_impact",
             "label": "시각 임팩트"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           }
         ],
         "interestClass": "published",
@@ -7648,10 +7702,6 @@
           {
             "key": "visual_impact",
             "label": "시각 임팩트"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           },
           {
             "key": "vivid_case",
@@ -7852,10 +7902,6 @@
           {
             "key": "familiar",
             "label": "친숙함"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           }
         ],
         "interestClass": "published",
@@ -8047,10 +8093,6 @@
           {
             "key": "familiar",
             "label": "친숙함"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           }
         ],
         "interestClass": "published",
@@ -8237,10 +8279,6 @@
           {
             "key": "visual_impact",
             "label": "시각 임팩트"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           },
           {
             "key": "vivid_case",
@@ -8434,10 +8472,6 @@
           {
             "key": "visual_impact",
             "label": "시각 임팩트"
-          },
-          {
-            "key": "quotable",
-            "label": "인용 가능성"
           }
         ],
         "interestClass": "published",
