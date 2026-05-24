@@ -1333,8 +1333,6 @@ function issuePublicationDate(issue) {
                   class="article-nature-badge"
                   :title="articleNatureBadge(activeIssue).description"
                 >{{ articleNatureBadge(activeIssue).label }}</span>
-                <span v-if="activeIssue.readingMinutes" aria-hidden="true">|</span>
-                <span v-if="activeIssue.readingMinutes" class="reading-minutes">약 {{ activeIssue.readingMinutes }}분</span>
                 <span v-if="isIssueVisited(activeIssue)" aria-hidden="true">|</span>
                 <span v-if="isIssueVisited(activeIssue)" class="visited-badge" aria-label="이미 본 글">이미 본 글</span>
               </div>
