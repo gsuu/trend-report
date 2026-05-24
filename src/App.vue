@@ -1301,13 +1301,13 @@ function issuePublicationDate(issue) {
     </footer>
   </main>
   <main v-else :class="{ 'article-main': activeIssue }">
-    <article v-if="activeIssue" :key="'story-' + (activeIssue.route || activeIssue.number)" class="article-layout">
+    <article v-if="activeIssue" :key="'story-' + (activeIssue.route || activeIssue.number)" class="article-layout" :data-version="activeIssue.articleVersion || 'v2'">
         <header class="article-hero">
           <div class="article-hero-text">
             <p class="article-brand" v-text="activeIssue.platform"></p>
             <h1 v-html="activeIssue.takeawayHtml"></h1>
             <aside
-              v-if="activeIssue.meetingQuestion"
+              v-if="activeIssue.articleVersion !== 'v3' && activeIssue.meetingQuestion"
               class="meeting-question"
               role="note"
               aria-label="클라이언트에게 묻기"
@@ -1327,9 +1327,9 @@ function issuePublicationDate(issue) {
                   :class="['source-type-badge', 'is-' + sourceTypeBadge(activeIssue).variant]"
                   :title="sourceTypeBadge(activeIssue).description"
                 >{{ sourceTypeBadge(activeIssue).label }}</span>
-                <span v-if="articleNatureBadge(activeIssue)" aria-hidden="true">|</span>
+                <span v-if="activeIssue.articleVersion !== 'v3' && articleNatureBadge(activeIssue)" aria-hidden="true">|</span>
                 <span
-                  v-if="articleNatureBadge(activeIssue)"
+                  v-if="activeIssue.articleVersion !== 'v3' && articleNatureBadge(activeIssue)"
                   class="article-nature-badge"
                   :title="articleNatureBadge(activeIssue).description"
                 >{{ articleNatureBadge(activeIssue).label }}</span>
@@ -1424,7 +1424,7 @@ function issuePublicationDate(issue) {
             <figcaption v-text="activeIssue.imageCaption"></figcaption>
           </figure>
 
-          <section v-for="section in articleSections" :key="section.title" :class="section.className || ['article-section', { 'is-deep-dive': section.prose }]">
+          <section v-for="section in articleSections" :key="section.title" :class="section.className || ['article-section', { 'is-deep-dive': section.prose }]" :data-section-title="section.title">
             <h2 v-text="section.title"></h2>
             <div v-if="section.prose" class="section-prose">
               <template v-for="(block, index) in proseBlocks(section.blocks)" :key="block.kind + (block.html || block.items?.join('')) + index">
@@ -1460,7 +1460,41 @@ function issuePublicationDate(issue) {
             </template>
           </section>
 
-          <section v-if="nextToReadIssues.length" class="next-to-read" aria-label="다음으로 볼 글">
+          <section
+            v-if="activeIssue.articleVersion === 'v3' && (activeIssue.curationNote || activeIssue.articleHighlights?.length || nextToReadIssues.length || activeIssue.externalReads?.length)"
+            class="curation-index"
+            aria-label="에디터 큐레이션 인덱스"
+          >
+            <article v-if="activeIssue.curationNote" class="curation-card curation-note-card">
+              <span class="curation-label" aria-hidden="true">📝 에디터의 큐레이션 노트</span>
+              <p class="curation-note-body" v-text="activeIssue.curationNote"></p>
+            </article>
+            <article v-if="activeIssue.articleHighlights?.length" class="curation-card curation-highlights-card">
+              <span class="curation-label" aria-hidden="true">📖 이 글에서 만나는 것</span>
+              <ul>
+                <li v-for="highlight in activeIssue.articleHighlights" :key="'h-' + highlight" v-text="highlight"></li>
+              </ul>
+            </article>
+            <article v-if="nextToReadIssues.length || activeIssue.externalReads?.length" class="curation-card curation-related-card">
+              <span class="curation-label" aria-hidden="true">📚 같이 살펴보면 좋은 글</span>
+              <ul>
+                <li v-for="related in nextToReadIssues" :key="'rel-' + related.id">
+                  <a :href="storyRoute(related)">
+                    <strong v-text="related.brandNormalized || related.platform"></strong>
+                    <span v-html="related.takeawayHtml"></span>
+                  </a>
+                </li>
+                <li v-for="ext in activeIssue.externalReads" :key="'ext-' + ext.url">
+                  <a :href="ext.url" target="_blank" rel="noreferrer">
+                    <strong>외부 참고 ↗</strong>
+                    <span v-text="ext.title"></span>
+                  </a>
+                </li>
+              </ul>
+            </article>
+          </section>
+
+          <section v-if="activeIssue.articleVersion !== 'v3' && nextToReadIssues.length" class="next-to-read" aria-label="다음으로 볼 글">
             <h2>다음으로 볼 글</h2>
             <div class="next-to-read-grid">
               <a v-for="other in nextToReadIssues" :key="'next-' + other.id" :href="storyRoute(other)" class="next-to-read-card">
@@ -1476,7 +1510,7 @@ function issuePublicationDate(issue) {
             </div>
           </section>
           <aside
-            v-if="activeIssue.pullQuote"
+            v-if="activeIssue.articleVersion !== 'v3' && activeIssue.pullQuote"
             class="pull-quote-card"
             aria-label="슬라이드 인용"
           >

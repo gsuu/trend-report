@@ -293,7 +293,7 @@ DEVELOP_DETECTION_KEYS = DEVELOP_CATEGORY_KEYS.union(
     if keyword not in DEVELOP_DETECTION_EXCLUDED_KEYWORDS
 )
 
-DETAIL_SECTION_TITLES = {"매거진 상세", "사이트 매거진 상세", "웹사이트 상세", "매거진 인사이트", "디자인 인사이트"}
+DETAIL_SECTION_TITLES = {"매거진 상세", "사이트 매거진 상세", "웹사이트 상세", "매거진 인사이트", "디자인 인사이트", "매거진"}
 DEV_SECTION_HEADING_REPLACEMENTS = {
     "Frontend Development 관점": "구현 관점",
     "프론트엔드 개발 전문가 관점": "구현 관점",
@@ -315,7 +315,11 @@ HIDDEN_FACT_KEYS = {
     "흐름", "변화 유형", "브랜드",
     "핵심 인용", "저자", "매체", "원문 언어", "검증 메모", "글 성격",
     "클라이언트 적합",
+    "큐레이션 사유", "이 글에서 만나는 것", "외부 참고",
 }
+
+V3_BODY_SECTION_LABELS = ("매거진",)
+V3_HIGHLIGHT_FALLBACK_LIMIT = 5
 
 CLIENT_FIT_KEYS = {
     "fashion_commerce": "패션 커머스",
@@ -739,7 +743,11 @@ def split_section_block(item: str) -> tuple[str, str]:
 
 
 def is_detail_section(title: str) -> bool:
-    return title in DETAIL_SECTION_TITLES
+    if title in DETAIL_SECTION_TITLES:
+        return True
+    if title.startswith("심화"):
+        return True
+    return False
 
 
 def validate_dev_article_headings(path: Path, lines: list[str]) -> None:
@@ -2638,6 +2646,93 @@ def _normalize_client_fit_token(token: str) -> str | None:
     return None
 
 
+def is_v3_article(issue: Issue) -> bool:
+    return any(label in issue.sections for label in V3_BODY_SECTION_LABELS)
+
+
+def extract_curation_note(issue: Issue) -> str:
+    explicit = (issue.meta.get("큐레이션 사유") or "").strip()
+    if explicit:
+        return meta_text(explicit, limit=400)
+    if is_v3_article(issue):
+        for label in V3_BODY_SECTION_LABELS:
+            items = issue.sections.get(label) or []
+            for item in items:
+                text = re.sub(r"<[^>]+>", "", str(item)).strip()
+                if text:
+                    return meta_text(text, limit=400)
+    return ""
+
+
+_HIGHLIGHT_PROPER_NOUN_PATTERN = re.compile(
+    r"(?:[A-Z][\w'.\-]{2,}(?:\s+[A-Z][\w'.\-]{2,})*|[가-힣]{2,}(?:\s+[가-힣]{2,})?)"
+)
+_HIGHLIGHT_NUMBER_PATTERN = re.compile(r"\d[\d,]*(?:\.\d+)?(?:[%원달러]|개|건|명|종|회|일)?")
+_HIGHLIGHT_DATE_PATTERN = re.compile(r"\d{4}[년.\-/]\s*\d{1,2}[월.\-/]?\s*\d{0,2}일?")
+
+
+def extract_article_highlights(issue: Issue) -> list[str]:
+    explicit = (issue.meta.get("이 글에서 만나는 것") or "").strip()
+    if explicit:
+        items = [piece.strip() for piece in re.split(r"[,/·∙]", explicit) if piece.strip()]
+        return items[:V3_HIGHLIGHT_FALLBACK_LIMIT]
+    body_text_parts: list[str] = []
+    for label in V3_BODY_SECTION_LABELS:
+        for item in issue.sections.get(label, []):
+            body_text_parts.append(re.sub(r"<[^>]+>", "", str(item)))
+    body_text = " ".join(body_text_parts)
+    if not body_text:
+        return []
+    seen: list[str] = []
+    for match in _HIGHLIGHT_DATE_PATTERN.finditer(body_text):
+        token = match.group(0).strip()
+        if token and token not in seen:
+            seen.append(token)
+        if len(seen) >= V3_HIGHLIGHT_FALLBACK_LIMIT:
+            return seen
+    for match in _HIGHLIGHT_NUMBER_PATTERN.finditer(body_text):
+        token = match.group(0).strip()
+        if len(token) < 2:
+            continue
+        if token and token not in seen:
+            seen.append(token)
+        if len(seen) >= V3_HIGHLIGHT_FALLBACK_LIMIT:
+            return seen
+    for match in _HIGHLIGHT_PROPER_NOUN_PATTERN.finditer(body_text):
+        token = match.group(0).strip()
+        if len(token) < 2 or token in seen:
+            continue
+        seen.append(token)
+        if len(seen) >= V3_HIGHLIGHT_FALLBACK_LIMIT:
+            return seen
+    return seen
+
+
+def extract_external_reads(issue: Issue) -> list[dict[str, str]]:
+    raw = (issue.meta.get("외부 참고") or "").strip()
+    if not raw:
+        return []
+    reads: list[dict[str, str]] = []
+    for piece in re.split(r"\n|;", raw):
+        piece = piece.strip()
+        if not piece:
+            continue
+        markdown_link = re.match(r"\[([^\]]+)\]\((https?://[^)]+)\)", piece)
+        if markdown_link:
+            reads.append({"title": markdown_link.group(1).strip(), "url": markdown_link.group(2).strip()})
+            continue
+        if "|" in piece:
+            label, url = piece.split("|", 1)
+            reads.append({"title": label.strip(), "url": url.strip()})
+            continue
+        url_match = re.search(r"https?://\S+", piece)
+        if url_match:
+            url = url_match.group(0).rstrip(".,)")
+            title = piece.replace(url, "").strip(" -–:") or url
+            reads.append({"title": title, "url": url})
+    return reads[:3]
+
+
 def extract_client_fit(issue: Issue) -> list[dict[str, str]]:
     explicit_raw = (issue.meta.get("클라이언트 적합") or "").strip()
     keys: list[str] = []
@@ -2718,8 +2813,12 @@ def report_payload(report: Report) -> dict[str, object]:
                 "tags": issue.tags,
                 "takeawayHtml": clean_inline(issue_display_title(issue)),
                 "deckHtml": clean_inline(issue_display_description(issue)),
-                "meetingQuestion": extract_meeting_question(issue),
-                "pullQuote": extract_pull_quote(issue),
+                "articleVersion": "v3" if is_v3_article(issue) else "v2",
+                "meetingQuestion": "" if is_v3_article(issue) else extract_meeting_question(issue),
+                "pullQuote": "" if is_v3_article(issue) else extract_pull_quote(issue),
+                "curationNote": extract_curation_note(issue),
+                "articleHighlights": extract_article_highlights(issue),
+                "externalReads": extract_external_reads(issue),
                 "codeArtifacts": extract_code_artifacts(issue),
                 "flow": extract_flow_tags(issue),
                 "changeType": extract_change_types(issue),
