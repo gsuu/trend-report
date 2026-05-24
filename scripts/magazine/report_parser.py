@@ -312,6 +312,77 @@ HIDDEN_FACT_KEYS = {
     "sourceType", "회의 질문",
     "CodePen", "Stackblitz", "Codesandbox", "Storybook", "GitHub", "데모",
     "코드 스니펫", "환경설정",
+    "흐름", "변화 유형", "브랜드",
+}
+
+FLOW_TAXONOMY = {
+    "홈/탐색": ["홈", "탐색", "home", "discovery", "feed", "큐레이션", "브랜드관"],
+    "검색": ["검색", "search", "query", "filter", "필터"],
+    "비교/추천": ["추천", "추천 근거", "비교", "compare", "recommendation", "추천 시스템", "AI 추천", "개인화"],
+    "리뷰/콘텐츠": ["리뷰", "후기", "review", "rating", "콘텐츠", "후기 UX"],
+    "결제/주문": ["결제", "주문", "checkout", "cart", "장바구니", "쿠폰", "포인트"],
+    "회원/온보딩": ["회원가입", "로그인", "온보딩", "signup", "login", "onboarding", "프로필"],
+    "멤버십/리텐션": ["멤버십", "membership", "구독", "subscription", "리텐션", "재방문", "찜", "재입고"],
+    "알림/CRM": ["알림", "푸시", "notification", "CRM", "이메일", "메시지"],
+    "O2O/픽업": ["픽업", "매장", "오프라인", "방문", "pickup", "store visit", "O2O"],
+    "운영자/어드민": ["어드민", "셀러 도구", "운영자", "운영자 UX", "정산", "admin", "seller"],
+    "디자인 시스템": ["디자인 시스템", "design system", "토큰", "컴포넌트 표준"],
+    "비주얼/브랜드": ["브랜드", "리브랜딩", "키비주얼", "타이포", "컬러", "아이덴티티"],
+    "프론트엔드 표준": ["CSS", "HTML", "JS", "browser", "WebKit", "Chrome", "표준", "Baseline"],
+    "접근성": ["접근성", "accessibility", "ARIA", "WCAG", "스크린리더"],
+    "정적 빌드/환경설정": ["Vite", "11ty", "Eleventy", "Astro", "Tailwind", "PostCSS", "환경설정", "build", "config"],
+    "AI 코딩 도구": ["Claude Code", "Cursor", "Copilot", "v0", "Bolt", "Replit", "AI 코딩"],
+}
+
+CHANGE_TYPE_KEYS = {
+    "정책": ["정책", "혜택 변경", "약관", "조건"],
+    "화면": ["화면", "UI", "리뉴얼", "개편", "재배치"],
+    "플로우": ["플로우", "동선", "단계", "전환"],
+    "기능": ["기능", "feature", "출시", "도입", "런칭"],
+    "제거": ["제거", "종료", "deprecat", "삭제"],
+    "리브랜딩": ["리브랜딩", "rebrand", "아이덴티티"],
+    "릴리즈": ["릴리즈", "release", "버전", "version"],
+    "리포트": ["리포트", "리서치", "research", "report", "조사"],
+}
+
+BRAND_ALIASES = {
+    "오늘의집": ["오늘의집", "bucketplace", "오스토리", "ohstory"],
+    "무신사": ["무신사", "musinsa"],
+    "29CM": ["29CM", "29cm"],
+    "컬리": ["컬리", "kurly", "마켓컬리", "뷰티컬리"],
+    "쿠팡": ["쿠팡", "coupang"],
+    "올리브영": ["올리브영", "oliveyoung", "CJ올리브영"],
+    "SSG.COM": ["SSG", "ssg.com", "신세계"],
+    "신세계인터내셔날": ["신세계인터내셔날", "SI빌리지", "S.I.VILLAGE", "ssfshop", "SSF SHOP"],
+    "G마켓": ["G마켓", "gmarket"],
+    "11번가": ["11번가", "11st"],
+    "네이버": ["네이버", "naver"],
+    "카카오": ["카카오", "kakao"],
+    "토스": ["토스", "toss"],
+    "당근": ["당근", "daangn", "당근마켓"],
+    "야놀자": ["야놀자", "yanolja", "NOL"],
+    "배민": ["배민", "배달의민족", "우아한형제들"],
+    "Spotify": ["spotify"],
+    "Mobbin": ["mobbin"],
+    "Figma": ["figma"],
+    "Astro": ["astro"],
+    "11ty": ["11ty", "eleventy"],
+    "Vite": ["vite"],
+    "GeekNews": ["geeknews", "긱뉴스"],
+    "Codrops": ["codrops"],
+    "Anthropic": ["anthropic", "claude"],
+    "OpenAI": ["openai", "chatgpt"],
+    "Vercel": ["vercel", "v0"],
+    "Chrome": ["chrome for developers", "chrome dev"],
+    "WebKit": ["webkit"],
+    "MDN": ["mdn"],
+    "web.dev": ["web.dev"],
+    "오픈서베이": ["오픈서베이", "opensurvey"],
+    "PUBLY": ["publy", "퍼블리"],
+    "디스콰이엇": ["disquiet", "디스콰이엇"],
+    "유아이볼": ["uibowl", "유아이볼"],
+    "GDWEB": ["gdweb", "지디웹"],
+    "노트폴리오": ["notefolio", "노트폴리오"],
 }
 
 MEETING_QUESTION_INSIGHT_SECTIONS = ("매거진 인사이트", "디자인 인사이트")
@@ -2296,6 +2367,67 @@ def render_section_content(title: str, items: list[str], issue: Issue | None = N
     return "\n".join(html_parts)
 
 
+def _split_csv(value: str) -> list[str]:
+    return [piece.strip() for piece in re.split(r"[,/|]", value or "") if piece.strip()]
+
+
+def detect_flows_from_text(text: str) -> list[str]:
+    haystack = text.lower()
+    flows = []
+    for flow_name, keywords in FLOW_TAXONOMY.items():
+        for keyword in keywords:
+            if keyword.lower() in haystack:
+                flows.append(flow_name)
+                break
+    return flows
+
+
+def detect_change_types_from_text(text: str) -> list[str]:
+    haystack = text.lower()
+    types = []
+    for type_name, keywords in CHANGE_TYPE_KEYS.items():
+        for keyword in keywords:
+            if keyword.lower() in haystack:
+                types.append(type_name)
+                break
+    return types
+
+
+def detect_brand(platform: str, text: str) -> str:
+    haystack = f"{platform or ''} {text or ''}".lower()
+    for brand, aliases in BRAND_ALIASES.items():
+        for alias in aliases:
+            if alias.lower() in haystack:
+                return brand
+    return (platform or "").strip()
+
+
+def extract_flow_tags(issue: Issue) -> list[str]:
+    explicit = _split_csv(issue.meta.get("흐름", ""))
+    if explicit:
+        return explicit
+    summary_text = " ".join(issue.sections.get("요약", []))
+    title_text = issue.title
+    combined = f"{title_text} {summary_text}"
+    return detect_flows_from_text(combined)
+
+
+def extract_change_types(issue: Issue) -> list[str]:
+    explicit = _split_csv(issue.meta.get("변화 유형", ""))
+    if explicit:
+        return explicit
+    summary_text = " ".join(issue.sections.get("요약", []))
+    return detect_change_types_from_text(f"{issue.title} {summary_text}")
+
+
+def extract_brand_normalized(issue: Issue) -> str:
+    explicit = (issue.meta.get("브랜드") or "").strip()
+    if explicit:
+        return explicit
+    summary_text = " ".join(issue.sections.get("요약", []))
+    return detect_brand(issue.platform, f"{issue.title} {summary_text}")
+
+
 def extract_code_artifacts(issue: Issue) -> list[dict[str, str]]:
     artifacts: list[dict[str, str]] = []
     for label, type_key in CODE_ARTIFACT_META_KEYS.items():
@@ -2370,6 +2502,9 @@ def report_payload(report: Report) -> dict[str, object]:
                 "deckHtml": clean_inline(issue_display_description(issue)),
                 "meetingQuestion": extract_meeting_question(issue),
                 "codeArtifacts": extract_code_artifacts(issue),
+                "flow": extract_flow_tags(issue),
+                "changeType": extract_change_types(issue),
+                "brandNormalized": extract_brand_normalized(issue),
                 "facts": facts,
                 "sourceUrl": issue.meta.get("출처 URL", ""),
                 "sourceTitle": issue_source_title(issue),

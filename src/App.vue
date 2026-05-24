@@ -409,11 +409,95 @@ const subcategories = computed(() => {
   return [...counts.values()].sort((a, b) => a.order - b.order);
 });
 
-const visibleIssues = computed(() => {
+const isExploreOpen = ref(false);
+const exploreBrand = ref("");
+const exploreFlow = ref("");
+const exploreChangeType = ref("");
+
+const baseCategoryIssues = computed(() => {
   if (!activeCategory.value) return filteredIssues.value;
   if (!activeSubcategory.value) return categoryIssues.value;
   return categoryIssues.value.filter((issue) => issue.categoryKey === activeSubcategory.value);
 });
+
+const availableBrands = computed(() => {
+  const counts = new Map();
+  for (const issue of baseCategoryIssues.value) {
+    const brand = (issue.brandNormalized || "").trim();
+    if (!brand) continue;
+    counts.set(brand, (counts.get(brand) || 0) + 1);
+  }
+  return [...counts.entries()]
+    .map(([key, count]) => ({ key, label: key, count }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+});
+
+const availableFlows = computed(() => {
+  const counts = new Map();
+  for (const issue of baseCategoryIssues.value) {
+    for (const flow of issue.flow || []) {
+      counts.set(flow, (counts.get(flow) || 0) + 1);
+    }
+  }
+  return [...counts.entries()]
+    .map(([key, count]) => ({ key, label: key, count }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+});
+
+const availableChangeTypes = computed(() => {
+  const counts = new Map();
+  for (const issue of baseCategoryIssues.value) {
+    for (const ctype of issue.changeType || []) {
+      counts.set(ctype, (counts.get(ctype) || 0) + 1);
+    }
+  }
+  return [...counts.entries()]
+    .map(([key, count]) => ({ key, label: key, count }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+});
+
+const hasExploreFilters = computed(() => Boolean(
+  exploreBrand.value || exploreFlow.value || exploreChangeType.value
+));
+
+const visibleIssues = computed(() => {
+  let pool = baseCategoryIssues.value;
+  if (exploreBrand.value) {
+    pool = pool.filter((issue) => (issue.brandNormalized || "") === exploreBrand.value);
+  }
+  if (exploreFlow.value) {
+    pool = pool.filter((issue) => (issue.flow || []).includes(exploreFlow.value));
+  }
+  if (exploreChangeType.value) {
+    pool = pool.filter((issue) => (issue.changeType || []).includes(exploreChangeType.value));
+  }
+  return pool;
+});
+
+function toggleExplore() {
+  isExploreOpen.value = !isExploreOpen.value;
+  if (!isExploreOpen.value) {
+    exploreBrand.value = "";
+    exploreFlow.value = "";
+    exploreChangeType.value = "";
+  }
+}
+
+function selectExplore(kind, value) {
+  if (kind === "brand") {
+    exploreBrand.value = exploreBrand.value === value ? "" : value;
+  } else if (kind === "flow") {
+    exploreFlow.value = exploreFlow.value === value ? "" : value;
+  } else if (kind === "changeType") {
+    exploreChangeType.value = exploreChangeType.value === value ? "" : value;
+  }
+}
+
+function resetExplore() {
+  exploreBrand.value = "";
+  exploreFlow.value = "";
+  exploreChangeType.value = "";
+}
 
 const masonryColumnCount = computed(() => {
   if (viewportWidth.value <= 640) return 1;
@@ -883,6 +967,20 @@ function issuePublicationDate(issue) {
       </a>
     </nav>
     <div class="header-actions">
+      <button
+        class="explore-toggle"
+        type="button"
+        :aria-pressed="isExploreOpen"
+        :class="{ 'is-active': isExploreOpen }"
+        @click="toggleExplore"
+      >
+        <span>Explore</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18" />
+          <path d="M6 12h12" />
+          <path d="M10 18h4" />
+        </svg>
+      </button>
       <button class="subscribe-link" type="button" @click="openSubscribe">
         <span>Subscribe</span>
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -892,6 +990,51 @@ function issuePublicationDate(issue) {
       </button>
     </div>
   </header>
+
+  <section v-if="isExploreOpen && !activeIssue" class="explore-panel" aria-label="다중 필터 탐색">
+    <div class="explore-panel-inner">
+      <div v-if="availableBrands.length" class="explore-group">
+        <span class="explore-group-label">브랜드</span>
+        <div class="explore-chips">
+          <button
+            v-for="brand in availableBrands"
+            :key="'brand-' + brand.key"
+            type="button"
+            class="explore-chip"
+            :class="{ 'is-active': exploreBrand === brand.key }"
+            @click="selectExplore('brand', brand.key)"
+          >{{ brand.label }}<small>{{ brand.count }}</small></button>
+        </div>
+      </div>
+      <div v-if="availableFlows.length" class="explore-group">
+        <span class="explore-group-label">플로우/패턴</span>
+        <div class="explore-chips">
+          <button
+            v-for="flow in availableFlows"
+            :key="'flow-' + flow.key"
+            type="button"
+            class="explore-chip"
+            :class="{ 'is-active': exploreFlow === flow.key }"
+            @click="selectExplore('flow', flow.key)"
+          >{{ flow.label }}<small>{{ flow.count }}</small></button>
+        </div>
+      </div>
+      <div v-if="availableChangeTypes.length" class="explore-group">
+        <span class="explore-group-label">변화 유형</span>
+        <div class="explore-chips">
+          <button
+            v-for="ctype in availableChangeTypes"
+            :key="'ctype-' + ctype.key"
+            type="button"
+            class="explore-chip"
+            :class="{ 'is-active': exploreChangeType === ctype.key }"
+            @click="selectExplore('changeType', ctype.key)"
+          >{{ ctype.label }}<small>{{ ctype.count }}</small></button>
+        </div>
+      </div>
+      <button v-if="hasExploreFilters" type="button" class="explore-reset" @click="resetExplore">필터 초기화</button>
+    </div>
+  </section>
 
   <Teleport to="body">
     <div v-if="isSubscribeOpen" class="subscribe-modal" role="dialog" aria-modal="true" aria-labelledby="subscribe-title">
