@@ -332,6 +332,16 @@ const activeSubcategory = computed(() => {
   return match ? decodeURIComponent(match[1]) : "";
 });
 
+const AREA_JOB_LABELS = {
+  service: { role: "기획자", roleEn: "PM", subscribeHint: "이커머스 기획·서비스" },
+  design: { role: "디자이너", roleEn: "Designer", subscribeHint: "UIUX 비주얼·브랜드" },
+  dev: { role: "퍼블리셔", roleEn: "Publisher", subscribeHint: "마크업·CSS·인터랙션·정적 빌드" },
+};
+
+function areaJobLabel(key) {
+  return AREA_JOB_LABELS[key] || null;
+}
+
 const categories = computed(() => {
   const categoryMap = new Map();
   for (const issue of issues.value) {
@@ -340,6 +350,8 @@ const categories = computed(() => {
       categoryMap.set(key, {
         key,
         label: issue.area || "분류 없음",
+        jobLabel: AREA_JOB_LABELS[key]?.role || "",
+        jobLabelEn: AREA_JOB_LABELS[key]?.roleEn || "",
         count: 0,
       });
     }
@@ -865,7 +877,9 @@ function issuePublicationDate(issue) {
         :class="{ 'is-active': activeCategoryKey === category.key }"
         :aria-current="activeCategoryKey === category.key ? 'page' : undefined"
       >
-        {{ category.label }}
+        <span class="category-nav-label">{{ category.label }}</span>
+        <span v-if="category.jobLabel" class="category-nav-job" aria-hidden="true">{{ category.jobLabel }}</span>
+        <span v-if="category.jobLabel" class="sr-only">독자 직무 {{ category.jobLabel }}</span>
       </a>
     </nav>
     <div class="header-actions">
@@ -892,15 +906,15 @@ function issuePublicationDate(issue) {
             <span id="subscribe-category-label" class="subscribe-category-label">구독 카테고리<span aria-hidden="true">*</span></span>
             <label>
               <input type="checkbox" :checked="subscribeAudiences.includes('Service')" @change="toggleSubscribeAudience('Service')">
-              <span>Service</span>
+              <span>Service<small class="subscribe-job-hint">기획자 · 이커머스 서비스</small></span>
             </label>
             <label>
               <input type="checkbox" :checked="subscribeAudiences.includes('Design')" @change="toggleSubscribeAudience('Design')">
-              <span>Design</span>
+              <span>Design<small class="subscribe-job-hint">디자이너 · UIUX 비주얼</small></span>
             </label>
             <label>
               <input type="checkbox" :checked="subscribeAudiences.includes('DEV')" @change="toggleSubscribeAudience('DEV')">
-              <span>DEV</span>
+              <span>DEV<small class="subscribe-job-hint">퍼블리셔 · 마크업·CSS·인터랙션·정적 빌드</small></span>
             </label>
           </div>
           <label class="subscribe-field">

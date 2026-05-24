@@ -1,5 +1,21 @@
 # Project Operating Rules
 
+## Audience ↔ Job Mapping
+
+매거진 카테고리(`areaKey`)는 곧 독자 직군이다. 1:1 매핑을 유지한다.
+
+| areaKey | 카테고리 라벨 | 독자 직군 | 한 줄 정의 | 제외 범위 |
+|---|---|---|---|---|
+| `service` | Service | 기획자 (PM) | 이커머스 서비스 구조·전환·정책·플로우·운영자 UX를 보는 독자 | — |
+| `design` | Design | 디자이너 (UIUX 비주얼) | UI·비주얼·브랜드·콘텐츠 표현·디자인 시스템을 보는 독자 | — |
+| `dev` | DEV | 퍼블리셔 (UIUX 퍼블리셔) | 마크업·CSS·접근성·인터랙션 구현 + Vite·11ty·Astro 같은 정적 사이트 빌드·환경설정을 다루는 독자 | 데이터·백엔드·서버·DB·인프라·ML |
+
+운영 원칙:
+
+- 한 글은 정확히 하나의 `areaKey`를 가진다. PM 글이 디자이너에게도 유익한 경우는 본문에서 다루고, 글의 1차 독자만으로 카테고리를 정한다.
+- 사이트 헤더·구독 모달·태그·문서에서 "Service/Design/DEV" 카테고리 라벨과 함께 직군 라벨(기획자/디자이너/퍼블리셔)을 병기한다.
+- DEV(퍼블리셔) 글은 데이터 파이프라인·서버·DB·인프라·ML 학습을 다루지 않는다. 프론트엔드라도 백엔드 중심 API 사용법은 제외, 브라우저 API·CSS·HTML·ARIA·정적 사이트 빌드(11ty/Astro/Vite/Tailwind)는 포함.
+
 ## Newsletter Approval Flow
 
 When the user provides a PDF, asks to collect source material, and then asks to send the newsletter:

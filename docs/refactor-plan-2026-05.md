@@ -70,7 +70,18 @@
 
 **시스템 운영자**: `magazine.json`에 `audience` 배열이 이미 존재합니다(`service`/`design`/`dev`). 사이트 라우팅과 뉴스레터 audience 발송은 이걸 쓰는데, 사이트 메인에서 audience 필터링 UI가 빠져 있습니다.
 
-**결론**: 카테고리(Service/Design/DEV) × 직무(PM/Designer/Publisher) 2축. 사이트에 직무 필터 칩 추가. `audience`를 `pm` / `designer` / `publisher`로 세분화 (현재 `dev`를 `publisher`로 대체하거나 공존).
+**결론 (2026-05-24 사용자 확정 + 구현 완료):** 카테고리(Service/Design/DEV)와 독자 직군은 1:1 매핑이다. 별도 직무 축을 만들지 않고, 기존 `areaKey`를 그대로 두되 사이트·구독 모달·문서·태그 라벨에 직군명을 **병기**한다.
+
+- `service` → 기획자 (PM)
+- `design` → 디자이너 (UIUX 비주얼)
+- `dev` → 퍼블리셔 (UIUX 퍼블리셔, 마크업·CSS·인터랙션 + Vite·11ty·Astro 같은 정적 사이트 빌드. 데이터·백엔드·서버·DB·인프라·ML 제외)
+
+**구현 (PR #2 안에 누적 커밋):**
+1. `src/App.vue`에 `AREA_JOB_LABELS` 상수 신설 + `categories` 컴퓨티드에 `jobLabel`/`jobLabelEn` 부여.
+2. 헤더 카테고리 칩에 `category-nav-label` + `category-nav-job` 마크업으로 카테고리명 옆에 직군 라벨 노출. 스크린리더 보조 텍스트(`sr-only`) 동봉.
+3. 구독 모달의 Service/Design/DEV 체크박스에 `subscribe-job-hint` 보조 텍스트로 직군·범위 힌트 노출.
+4. `src/assets/main.css`에 헤더 칩과 구독 힌트 스타일 추가.
+5. `AGENTS.md` 최상단에 **Audience ↔ Job Mapping** 절 신설 (카테고리·직군·정의·제외 범위 표).
 
 ---
 
@@ -240,11 +251,11 @@
 
 ## Part 3. 우선순위와 다음 액션
 
-| 단계 | 안건 | 의존성 | 기간 | 영향 |
-|---|---|---|---|---|
-| **1차 (즉시)** | 안건 1: 직무 필터 + audience 세분화 | 없음 | 1~2일 | 사이트 UX 즉시 개선 |
-| | 안건 6-A: `meeting_question` 메타 | 없음 | 1일 | SERVICE 매거진 가치 강화 |
-| | 안건 7-A: 점수제 수집 필터 | 없음 | 2일 | 노이즈 감소, 운영 시간 절약 |
+| 단계 | 안건 | 의존성 | 기간 | 영향 | 상태 |
+|---|---|---|---|---|---|
+| **1차 (즉시)** | 안건 1: 직무 라벨(service=기획자/design=디자이너/dev=퍼블리셔) 병기 | 없음 | 1~2일 | 사이트 UX 즉시 개선 | ✅ Done (2026-05-24) |
+| | 안건 6-A: `meeting_question` 메타 | 없음 | 1일 | SERVICE 매거진 가치 강화 | 다음 |
+| | 안건 7-A: 점수제 수집 필터 | 없음 | 2일 | 노이즈 감소, 운영 시간 절약 | 대기 |
 | **2차 (1~2주)** | 안건 3: 재발견 메타(`flow`,`brand_normalized`,`change_type`) + `/explore` | 안건 1 | 1주 | 누적 자산 활용도 |
 | | 안건 5: 퍼블리셔 분리 + `code_artifacts` + vite/11ty/Astro 소스 추가 | 안건 1 | 3일 | DEV 직군 가치 |
 | | 안건 2: discovery vs verification 등급 + 신규 소스 (디스콰이엇·유아이볼·GDWeb·Codrops·11ty/Astro) | 없음 | 1주 | 발견 폭 확장 |
