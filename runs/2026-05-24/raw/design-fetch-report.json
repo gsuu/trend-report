@@ -1,0 +1,346 @@
+{
+  "date": "2026-05-24",
+  "sourceFile": "news-tracking/design-sources.json",
+  "totalArticles": 0,
+  "totalSkippedByScore": 0,
+  "scoring": {
+    "denyWeight": -2,
+    "allowWeight": 2,
+    "threshold": 0,
+    "denyTitlePatterns": [
+      "(^|\\s)모델(\\s|$)",
+      "화보",
+      "콘서트",
+      "기부",
+      "(^|\\s)ESG(\\s|$)",
+      "세일\\s*오픈",
+      "채용",
+      "공채",
+      "투자\\s*유치",
+      "매출",
+      "영업이익",
+      "팝업\\s*스토어\\s*오픈"
+    ],
+    "allowTitlePatterns": [
+      "리브랜딩",
+      "리뉴얼",
+      "브랜드\\s*아이덴티티",
+      "디자인\\s*시스템",
+      "타이포",
+      "컬러\\s*시스템",
+      "Awwwards",
+      "Mobbin",
+      "Figma",
+      "(^|\\s)UI(\\s|$)",
+      "(^|\\s)UX(\\s|$)",
+      "인터랙션",
+      "모션",
+      "랜딩\\s*페이지",
+      "키비주얼",
+      "비주얼\\s*디렉션",
+      "아이코노그래피",
+      "Storybook",
+      "shadcn",
+      "Radix"
+    ]
+  },
+  "sourceResults": [
+    {
+      "name": "DIGITAL iNSIGHT",
+      "type": "feed",
+      "url": "https://ditoday.com/feed/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "pxd story",
+      "type": "feed",
+      "url": "https://pxdstory.tistory.com/rss",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Figma Releases",
+      "type": "feed",
+      "url": "https://figmareleases.blogspot.com/feeds/posts/default",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Adobe Blog",
+      "type": "feed",
+      "url": "https://blog.adobe.com/feed.xml",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Smashing Magazine - UX Design",
+      "type": "feed",
+      "url": "https://www.smashingmagazine.com/feed/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Nielsen Norman Group",
+      "type": "feed",
+      "url": "https://www.nngroup.com/feed/rss/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Typewolf",
+      "type": "feed",
+      "url": "https://www.typewolf.com/feed/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Brand New",
+      "type": "feed",
+      "url": "https://feeds.feedburner.com/underconsideration/brandnew",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Toss Tech (Design tag)",
+      "type": "feed",
+      "url": "https://toss.tech/rss.xml",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "DIGITAL iNSIGHT - UIUX",
+      "type": "page",
+      "url": "https://ditoday.com/ui-ux/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Samsung Design - UXUI",
+      "type": "page",
+      "url": "https://design.samsung.com/kr/explore/?tag=UXUI",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Design Spectrum",
+      "type": "page",
+      "url": "https://designspectrum.org/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "DesignDB - Design News",
+      "type": "page",
+      "url": "https://www.designdb.com/?menuno=792",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Design Compass",
+      "type": "page",
+      "url": "https://designcompass.org/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Design X Blog",
+      "type": "page",
+      "url": "https://design-x.kr/blog",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Mobbin",
+      "type": "page",
+      "url": "https://mobbin.com/browse/ios/apps",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Page Flows",
+      "type": "page",
+      "url": "https://pageflows.com/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Awwwards - Websites",
+      "type": "page",
+      "url": "https://www.awwwards.com/websites/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Siteinspire",
+      "type": "page",
+      "url": "https://www.siteinspire.com/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Lapa Ninja",
+      "type": "page",
+      "url": "https://www.lapa.ninja/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Cosmos",
+      "type": "page",
+      "url": "https://www.cosmos.so/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "The Brand Identity",
+      "type": "page",
+      "url": "https://the-brandidentity.com/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "It's Nice That",
+      "type": "page",
+      "url": "https://www.itsnicethat.com/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Muzli",
+      "type": "page",
+      "url": "https://muz.li/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Figma Blog - Design Systems",
+      "type": "page",
+      "url": "https://www.figma.com/blog/design-systems/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Into Design Systems",
+      "type": "page",
+      "url": "https://www.intodesignsystems.com/blog",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Framer Updates",
+      "type": "page",
+      "url": "https://www.framer.com/updates/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Webflow Blog",
+      "type": "page",
+      "url": "https://webflow.com/blog",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Canva Newsroom",
+      "type": "page",
+      "url": "https://www.canva.com/newsroom/news/",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "유아이볼 (UI Bowl)",
+      "type": "page",
+      "url": "https://uibowl.io/template",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "GDWEB 디자인 어워드",
+      "type": "page",
+      "url": "https://www.gdweb.co.kr/sub/list.asp",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "노트폴리오 (Notefolio) - HOT",
+      "type": "page",
+      "url": "https://notefolio.net/explore?sort=hot",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "디비컷 (DBcut)",
+      "type": "page",
+      "url": "https://dbcut.kr/index.php",
+      "status": "error",
+      "count": 0,
+      "skippedByScore": 0,
+      "error": "fetch failed"
+    }
+  ]
+}

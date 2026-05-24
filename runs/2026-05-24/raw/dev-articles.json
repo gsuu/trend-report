@@ -1,0 +1,20 @@
+[
+  {
+    "title": "shadcn@4.8.0",
+    "link": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.0",
+    "pubDate": "2026-05-21T13:58:22.000Z",
+    "source": "shadcn/ui Releases",
+    "sourceTier": "verification",
+    "sourceRole": "official",
+    "category": "design_system_automation",
+    "content": "Minor Changes #10715 51e3cfaf32faeff2589e5c74d81ffd109f509e93 Thanks @shadcn! - add shadcn registry validate command #10708 c8ab3801ecf97c0350ac0234a25e61f19ccaba62 Thanks @shadcn! - add include to registry.json Patch Changes #10567 1c4a53a37adeba36dbd5c07980c5bb6d295cea9e Thanks @shadcn! - fix failing version derivation test",
+    "signalScore": 2,
+    "signalReasons": [
+      {
+        "kind": "allow",
+        "pattern": "shadcn",
+        "weight": 2
+      }
+    ]
+  }
+]
