@@ -1980,7 +1980,10 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
-  margin: 36px 0 28px;
+  max-width: 660px;
+  margin: 56px auto 28px;
+  padding-top: 36px;
+  border-top: 2px solid #111111;
 }
 
 @media (min-width: 720px) {
@@ -2000,7 +2003,7 @@ main {
   flex-direction: column;
   gap: 10px;
   padding: 18px 22px;
-  border: 1px solid #d6d6cf;
+  border: 1px solid #ececec;
   border-radius: 10px;
   background: #ffffff;
 }
@@ -2012,8 +2015,8 @@ main {
 }
 
 .curation-highlights-card {
-  background: #fff5d6;
-  border-color: #e0c473;
+  background: #ffffff;
+  border-color: #ececec;
 }
 
 .curation-related-card {
@@ -2049,7 +2052,7 @@ main {
 .curation-highlights-card li {
   display: inline-flex;
   padding: 4px 10px;
-  background: #ffffff;
+  background: #fff5d6;
   border: 1px solid #d6c483;
   border-radius: 999px;
   color: #5c3f00;
