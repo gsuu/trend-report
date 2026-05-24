@@ -6,6 +6,165 @@
     "slug": "2026-05-15",
     "issues": [
       {
+        "number": "00",
+        "platform": "샘플 v3 글",
+        "areaKey": "service",
+        "area": "Service",
+        "categoryKey": "ecommerce",
+        "category": "ecommerce",
+        "sourceType": "news",
+        "sourceTypeLabel": "기사/뉴스",
+        "publicationDate": "2026-05-24",
+        "date": "2026-05-24",
+        "route": "/articles/2026-05-24-v3sample",
+        "href": "/articles/2026-05-24-v3sample",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-24-v3sample",
+        "image": "https://ohstory.io/wp-content/uploads/2026/05/%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-%EB%B3%B4%EB%8F%84%EC%9E%90%EB%A3%8C-%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-%EC%A0%84%EA%B5%AD-%EB%A1%9C%EC%BB%AC-%EC%95%A0%EC%B0%A9%ED%85%9C-144%EC%A2%85-%EB%AA%A8%EC%9D%80-%E2%80%98%EB%A1%9C%EC%BB%AC%EC%9D%98-%EC%84%A0%ED%83%9D-%EA%B8%B0%ED%9A%8D%EC%A0%84-%EC%A7%84%ED%96%89-1024x683.png",
+        "imageCaption": "오늘의집 '로컬의 선택' 기획전 보도자료 대표 이미지",
+        "images": [
+          {
+            "url": "https://ohstory.io/wp-content/uploads/2026/05/%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-%EB%B3%B4%EB%8F%84%EC%9E%90%EB%A3%8C-%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-%EC%A0%84%EA%B5%AD-%EB%A1%9C%EC%BB%AC-%EC%95%A0%EC%B0%A9%ED%85%9C-144%EC%A2%85-%EB%AA%A8%EC%9D%80-%E2%80%98%EB%A1%9C%EC%BB%AC%EC%9D%98-%EC%84%A0%ED%83%9D-%EA%B8%B0%ED%9A%8D%EC%A0%84-%EC%A7%84%ED%96%89-1024x683.png",
+            "caption": "오늘의집 '로컬의 선택' 기획전 진입 화면 (2026.5.22 캡처)",
+            "role": "primary"
+          }
+        ],
+        "tags": [
+          "v3샘플",
+          "큐레이션",
+          "오늘의집"
+        ],
+        "takeawayHtml": "[v3 샘플] 오늘의집 '로컬의 선택' — 같은 주 다른 회사의 흐름과 나란히",
+        "deckHtml": "v3 형식 시각 확인용 더미 글. 매거진 블록 600-900자(씬→흐름→함의) + 큐레이션 인덱스 3블록 + 심화 섹션이 사이트에 어떻게 보이는지 점검합니다.",
+        "articleVersion": "v3",
+        "meetingQuestion": "",
+        "pullQuote": "",
+        "curationNote": "오늘의집의 로컬 큐레이션과 컬리의 신선식품 협업은 같은 주에 발표됐다. 두 사례 모두 자체 카테고리 위에 외부 브랜드 협업을 얹는 패턴이라 이번 호 SERVICE에서 함께 다룬다.",
+        "articleHighlights": [
+          "오늘의집 144종 큐레이션",
+          "2026-05-15 발표",
+          "신세계푸드 협업 '늘신선'",
+          "로컬 테마 3축",
+          "외부 협업 큐레이션 패턴"
+        ],
+        "externalReads": [
+          {
+            "title": "오늘의집 공식 보도자료 — 로컬의 선택",
+            "url": "https://ohstory.io/press/pressrelease/15331"
+          },
+          {
+            "title": "컬리 늘신선 정식 론칭 보도자료",
+            "url": "https://www.kurly.com/press/release-sample"
+          }
+        ],
+        "codeArtifacts": [],
+        "flow": [
+          "홈/탐색",
+          "리뷰/콘텐츠",
+          "비주얼/브랜드"
+        ],
+        "changeType": [
+          "화면",
+          "기능"
+        ],
+        "brandNormalized": "오늘의집",
+        "readingMinutes": 4,
+        "articleNature": "decision",
+        "sourceVerification": {
+          "author": "오늘의집 커뮤니케이션팀",
+          "publisher": "오늘의집 뉴스룸",
+          "originalLanguage": "ko",
+          "verificationNote": "원문 보도자료 본문 직접 확인 + 컬리 공식 보도자료 교차 확인 + 디에디트 인터뷰 인용 발화자 확인"
+        },
+        "clientFit": [
+          {
+            "key": "lifestyle_commerce",
+            "label": "라이프스타일 커머스"
+          },
+          {
+            "key": "food_d2c",
+            "label": "식품 D2C"
+          },
+          {
+            "key": "fashion_commerce",
+            "label": "패션 커머스"
+          }
+        ],
+        "facts": [
+          {
+            "label": "발행날짜",
+            "valueHtml": "2026-05-24"
+          },
+          {
+            "label": "태그",
+            "valueHtml": "v3샘플, 큐레이션, 오늘의집"
+          },
+          {
+            "label": "국가",
+            "valueHtml": "KR"
+          },
+          {
+            "label": "카테고리",
+            "valueHtml": "ecommerce"
+          },
+          {
+            "label": "직무 태그",
+            "valueHtml": "웹서비스기획"
+          },
+          {
+            "label": "출처",
+            "valueHtml": "샘플 v3 글 (시각 검증용)"
+          }
+        ],
+        "sourceUrl": "https://ohstory.io/press/pressrelease/15331",
+        "sourceTitle": "오늘의집 뉴스룸",
+        "referenceLinks": [],
+        "sections": [
+          {
+            "title": "매거진",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "paragraph",
+                "html": "오늘의집은 2026년 5월 15일 자사 뉴스룸에서 '로컬의 선택' 기획전을 공개했다. 전국 144종 상품을 로컬푸드·로컬장인·로컬상점 3개 테마 탭으로 정리한 화면이 진입점에 펼쳐졌다 (2026년 5월 22일 캡처)."
+              },
+              {
+                "kind": "paragraph",
+                "html": "같은 주, 컬리는 2026년 5월 20일 신세계푸드와 협업한 신선식품 브랜드 '늘신선'을 정식 론칭했다 (컬리 공식 보도자료, 2026.5.20). 두 회사 모두 자체 카테고리 구조 위에 외부 브랜드 협업을 얹는 방식을 택했다."
+              },
+              {
+                "kind": "data",
+                "html": "144종 · 3개 테마 · 2026.5.15 ~ 2026.6.30 운영 · 오늘의집 자사 발표"
+              },
+              {
+                "kind": "inline-quote",
+                "html": "\"카테고리 진입점을 편집 테마로 옮기면 큐레이션 신뢰가 카테고리 안에서 다시 만들어진다.\" — 오늘의집 큐레이션 디렉터 인터뷰 · 디에디트 2026.5.18"
+              },
+              {
+                "kind": "paragraph",
+                "html": "오늘의집은 2026년 6월 30일까지 같은 진입점에서 '로컬 시즌 2'를 운영할 예정이라고 보도자료에서 밝혔다 (오늘의집 뉴스룸 · 2026.5.15)."
+              }
+            ],
+            "itemsHtml": []
+          },
+          {
+            "title": "심화: 같은 패턴 다른 분야 ─ 외부 브랜드 협업 큐레이션",
+            "className": "article-section is-deep-dive",
+            "prose": true,
+            "blocks": [
+              {
+                "kind": "paragraph",
+                "html": "외부 브랜드 협업을 자체 카테고리 진입점으로 끌어올리는 패턴은 패션 영역에서도 관찰된다. 무신사는 2026년 4월 '무신사 스탠다드 × 자라' 협업관을 메인 홈에 노출했고 (무신사 뉴스룸 2026.4.18), 29CM는 같은 시기 '29CM 콜렉티브' 큐레이션 진입점을 별도 탭으로 추가했다 (29CM 공식 인스타그램 2026.4.22)."
+              }
+            ],
+            "itemsHtml": []
+          }
+        ],
+        "id": "2026-05-24-v3sample",
+        "issueSlug": "2026-05-24",
+        "articleSlug": "2026-05-24-v3sample"
+      },
+      {
         "number": "01",
         "platform": "오늘의집 뉴스룸",
         "areaKey": "service",
