@@ -38,6 +38,8 @@ npm run feedback:template    # shortlist 후보별 평가 입력용 md 템플릿
 npm run feedback:apply       # 채운 feedback md를 runs/_feedback/preferences.json에 누적
 npm run feedback:score       # 누적 prefs로 오늘 후보의 feedback-bonus.json 생성
 npm run magazine:export-json # magazine-report.md → public/data/magazine.json
+npm run magazine:dashboard   # 일일 수집·발행 대시보드 HTML 생성 (날짜 인자 옵션)
+npm run fetch:signals        # 채용 공고 키워드 신호 집계 → public/data/signals.json
 ```
 
 ## 사용자 피드백 누적 (soft sort bonus only)

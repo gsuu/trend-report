@@ -19,6 +19,7 @@
     "feedback:apply": "node scripts/feedback/apply_feedback.mjs",
     "feedback:score": "node scripts/feedback/score_priority.mjs",
     "magazine:export-json": "python scripts/magazine/export_json.py",
+    "magazine:dashboard": "python scripts/magazine/build_dashboard.py",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0"
   },
