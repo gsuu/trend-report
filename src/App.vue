@@ -316,6 +316,45 @@ const activeIssue = computed(() => {
   return issues.value.find((issue) => issue.number === articleSlug || issue.articleSlug === articleSlug || issue.id === articleSlug) || null;
 });
 
+const primaryHeroImage = computed(() => {
+  const issue = activeIssue.value;
+  if (!issue) return null;
+  if (Array.isArray(issue.images) && issue.images.length > 0) {
+    return issue.images[0];
+  }
+  if (issue.image) {
+    return { url: issue.image, caption: issue.imageCaption || "" };
+  }
+  return null;
+});
+
+const sameBrandIssues = computed(() => {
+  const issue = activeIssue.value;
+  if (!issue?.brandNormalized) return [];
+  return issues.value
+    .filter((other) => other.id !== issue.id && other.brandNormalized === issue.brandNormalized)
+    .slice(0, 3);
+});
+
+const sameFlowIssues = computed(() => {
+  const issue = activeIssue.value;
+  if (!issue?.flow?.length) return [];
+  const issueFlows = new Set(issue.flow);
+  return issues.value
+    .filter((other) => {
+      if (other.id === issue.id) return false;
+      if (!Array.isArray(other.flow)) return false;
+      return other.flow.some((flow) => issueFlows.has(flow));
+    })
+    .slice(0, 5);
+});
+
+const showArticleSidebar = computed(() => Boolean(
+  activeIssue.value?.meetingQuestion
+  || sameBrandIssues.value.length
+  || sameFlowIssues.value.length
+));
+
 const articleSections = computed(() => {
   const issue = activeIssue.value;
   if (!issue || !Array.isArray(issue.sections)) return [];
@@ -1160,50 +1199,63 @@ function issuePublicationDate(issue) {
   <main v-else :class="{ 'article-main': activeIssue }">
     <article v-if="activeIssue" :key="'story-' + (activeIssue.route || activeIssue.number)" class="article-layout">
         <header class="article-hero">
-          <p class="article-brand" v-text="activeIssue.platform"></p>
-          <h1 v-html="activeIssue.takeawayHtml"></h1>
-          <p class="article-deck" v-html="activeIssue.deckHtml"></p>
-          <aside
-            v-if="activeIssue.meetingQuestion"
-            class="meeting-question"
-            role="note"
-            aria-label="클라이언트에게 묻기"
-          >
-            <span class="meeting-question-label" aria-hidden="true">💬 클라이언트에게 묻기</span>
-            <p class="meeting-question-body" v-text="activeIssue.meetingQuestion"></p>
-          </aside>
-          <div class="article-meta-row">
-            <div class="article-meta">
-              <time v-text="activeIssue.date"></time>
-              <span aria-hidden="true">|</span>
-              <span class="category-label" v-text="activeIssue.category"></span>
-              <span v-if="sourceTypeBadge(activeIssue)" aria-hidden="true">|</span>
-              <span
-                v-if="sourceTypeBadge(activeIssue)"
-                :class="['source-type-badge', 'is-' + sourceTypeBadge(activeIssue).variant]"
-                :title="sourceTypeBadge(activeIssue).description"
-              >{{ sourceTypeBadge(activeIssue).label }}</span>
-              <span v-if="activeIssue.readingMinutes" aria-hidden="true">|</span>
-              <span v-if="activeIssue.readingMinutes" class="reading-minutes">약 {{ activeIssue.readingMinutes }}분</span>
-              <span v-if="activeIssue.sourceUrl" aria-hidden="true">|</span>
-              <a v-if="activeIssue.sourceUrl" class="article-source-link" :href="activeIssue.sourceUrl" target="_blank" rel="noreferrer">
-                <span>원문 바로보기</span>
+          <div class="article-hero-text">
+            <p class="article-brand" v-text="activeIssue.platform"></p>
+            <h1 v-html="activeIssue.takeawayHtml"></h1>
+            <aside
+              v-if="activeIssue.meetingQuestion"
+              class="meeting-question"
+              role="note"
+              aria-label="클라이언트에게 묻기"
+            >
+              <span class="meeting-question-label" aria-hidden="true">💬 클라이언트에게 묻기</span>
+              <p class="meeting-question-body" v-text="activeIssue.meetingQuestion"></p>
+            </aside>
+            <p class="article-deck" v-html="activeIssue.deckHtml"></p>
+            <div class="article-meta-row">
+              <div class="article-meta">
+                <time v-text="activeIssue.date"></time>
+                <span aria-hidden="true">|</span>
+                <span class="category-label" v-text="activeIssue.category"></span>
+                <span v-if="sourceTypeBadge(activeIssue)" aria-hidden="true">|</span>
+                <span
+                  v-if="sourceTypeBadge(activeIssue)"
+                  :class="['source-type-badge', 'is-' + sourceTypeBadge(activeIssue).variant]"
+                  :title="sourceTypeBadge(activeIssue).description"
+                >{{ sourceTypeBadge(activeIssue).label }}</span>
+                <span v-if="activeIssue.readingMinutes" aria-hidden="true">|</span>
+                <span v-if="activeIssue.readingMinutes" class="reading-minutes">약 {{ activeIssue.readingMinutes }}분</span>
+                <span v-if="isIssueVisited(activeIssue)" aria-hidden="true">|</span>
+                <span v-if="isIssueVisited(activeIssue)" class="visited-badge" aria-label="이미 본 글">이미 본 글</span>
+              </div>
+              <button class="article-share-button" type="button" :aria-label="shareStatus || '공유하기'" :title="shareStatus || '공유하기'" @click="shareIssue(activeIssue)">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M7 17 17 7" />
-                  <path d="M9 7h8v8" />
+                  <circle cx="18" cy="5" r="3" />
+                  <circle cx="6" cy="12" r="3" />
+                  <circle cx="18" cy="19" r="3" />
+                  <path d="M8.6 10.7 15.4 6.3" />
+                  <path d="M8.6 13.3 15.4 17.7" />
                 </svg>
-              </a>
+              </button>
             </div>
-            <button class="article-share-button" type="button" :aria-label="shareStatus || '공유하기'" :title="shareStatus || '공유하기'" @click="shareIssue(activeIssue)">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="18" cy="5" r="3" />
-                <circle cx="6" cy="12" r="3" />
-                <circle cx="18" cy="19" r="3" />
-                <path d="M8.6 10.7 15.4 6.3" />
-                <path d="M8.6 13.3 15.4 17.7" />
-              </svg>
-            </button>
           </div>
+          <figure
+            v-if="primaryHeroImage"
+            class="article-hero-image"
+          >
+            <img
+              :src="optimizedImageUrl(primaryHeroImage.url, 780)"
+              :alt="primaryHeroImage.caption || activeIssue.platform"
+              decoding="async"
+              fetchpriority="high"
+              @error="hideBrokenImage"
+            >
+            <figcaption v-if="primaryHeroImage.caption" v-text="primaryHeroImage.caption"></figcaption>
+          </figure>
+        </header>
+
+        <div class="article-body">
+          <div class="article-body-main">
           <aside
             v-if="activeIssue.codeArtifacts && activeIssue.codeArtifacts.length"
             class="code-artifacts"
@@ -1223,9 +1275,6 @@ function issuePublicationDate(issue) {
               </li>
             </ul>
           </aside>
-        </header>
-
-        <div class="article-body">
           <div
             v-if="activeIssue.images && activeIssue.images.length > 1"
             class="article-gallery"
@@ -1304,6 +1353,32 @@ function issuePublicationDate(issue) {
           <div class="article-list-actions">
             <a class="article-list-link" :href="withBasePath(detailReturnRoute)" @click.prevent="goToList">목록보기</a>
           </div>
+          </div>
+          <aside v-if="showArticleSidebar" class="article-sidebar" aria-label="연관 정보">
+            <div v-if="activeIssue.meetingQuestion" class="sidebar-card sidebar-meeting-question">
+              <span class="sidebar-card-label">💬 클라이언트에게 묻기</span>
+              <p v-text="activeIssue.meetingQuestion"></p>
+            </div>
+            <div v-if="sameBrandIssues.length" class="sidebar-card">
+              <span class="sidebar-card-label">같은 브랜드 다른 글</span>
+              <ul class="sidebar-card-list">
+                <li v-for="issue in sameBrandIssues" :key="'brand-' + issue.id">
+                  <a :href="storyRoute(issue)" v-html="issue.takeawayHtml"></a>
+                </li>
+              </ul>
+            </div>
+            <div v-if="sameFlowIssues.length" class="sidebar-card">
+              <span class="sidebar-card-label">같은 플로우 다른 사례</span>
+              <ul class="sidebar-card-list">
+                <li v-for="issue in sameFlowIssues" :key="'flow-' + issue.id">
+                  <a :href="storyRoute(issue)">
+                    <strong v-text="issue.brandNormalized || issue.platform"></strong>
+                    <span v-html="issue.takeawayHtml"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
         </div>
     </article>
 
