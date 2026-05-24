@@ -11,8 +11,10 @@ import {
   fetchArticleMeta,
   fetchText,
   itemImage,
+  evaluateSignalScore,
   matchesAny,
   matchesNone,
+  mergeScoring,
   outputDate,
   previousLinks,
   rawDir as resolveRawDir,
@@ -74,22 +76,25 @@ function designValueTags(article) {
   return [...tags];
 }
 
-async function fetchRssFeed(source, since) {
+async function fetchRssFeed(source, since, scoring) {
   try {
     const xml = await fetchText(source.rss, FEED_TIMEOUT_MS, "CTTD Trend Report Design RSS Tracker");
     const feed = await parser.parseString(xml);
-    const articles = feed.items
-      .filter((item) => {
-        if (!item.pubDate && !item.isoDate) return false;
-        const pubDate = new Date(item.pubDate || item.isoDate);
-        return !Number.isNaN(pubDate.getTime()) && pubDate >= since;
-      })
-      .filter((item) => {
-        const text = `${item.title || ""} ${articleContent(item)}`;
-        return matchesAny(text, source.includeTitlePatterns || [])
-          && matchesNone(text, source.excludeTitlePatterns || []);
-      })
-      .map((item) => ({
+    const articles = [];
+    let skippedByScore = 0;
+    for (const item of feed.items) {
+      if (!item.pubDate && !item.isoDate) continue;
+      const pubDate = new Date(item.pubDate || item.isoDate);
+      if (Number.isNaN(pubDate.getTime()) || pubDate < since) continue;
+      const text = `${item.title || ""} ${articleContent(item)}`;
+      if (!matchesAny(text, source.includeTitlePatterns || [])) continue;
+      if (!matchesNone(text, source.excludeTitlePatterns || [])) continue;
+      const signal = evaluateSignalScore(text, scoring);
+      if (signal.evaluated && !signal.passes) {
+        skippedByScore += 1;
+        continue;
+      }
+      articles.push({
         title: cleanTitle(item.title || ""),
         link: item.link || "",
         pubDate: item.pubDate || item.isoDate || "",
@@ -97,15 +102,18 @@ async function fetchRssFeed(source, since) {
         image: itemImage(item),
         valueTags: [],
         ...articleFields(source),
-      }));
-    return { articles, error: "" };
+        signalScore: signal.score,
+        signalReasons: signal.reasons,
+      });
+    }
+    return { articles, error: "", skippedByScore };
   } catch (error) {
     console.error(`Error fetching ${source.name}: ${error.message}`);
-    return { articles: [], error: error.message };
+    return { articles: [], error: error.message, skippedByScore: 0 };
   }
 }
 
-async function scrapePage(source, seenPreviousLinks) {
+async function scrapePage(source, seenPreviousLinks, scoring) {
   try {
     const html = await fetchText(source.url, PAGE_TIMEOUT_MS, "CTTD Trend Report Design Page Scraper");
     const seenLinks = new Set();
@@ -124,12 +132,19 @@ async function scrapePage(source, seenPreviousLinks) {
       .slice(0, source.limit || 12);
 
     const articles = [];
+    let skippedByScore = 0;
     for (const item of candidates) {
       const meta = await fetchArticleMeta(item.link, {
         userAgent: "CTTD Design Article Metadata Scraper",
       });
       const title = cleanTitle(meta.title || item.title);
       if (!matchesNone(title, source.excludeTitlePatterns || [])) continue;
+      const signalText = `${title} ${meta.content || item.title || ""}`;
+      const signal = evaluateSignalScore(signalText, scoring);
+      if (signal.evaluated && !signal.passes) {
+        skippedByScore += 1;
+        continue;
+      }
       articles.push({
         title,
         link: item.link,
@@ -139,12 +154,14 @@ async function scrapePage(source, seenPreviousLinks) {
         valueTags: [],
         scraped: true,
         ...articleFields(source),
+        signalScore: signal.score,
+        signalReasons: signal.reasons,
       });
     }
-    return { articles, error: "" };
+    return { articles, error: "", skippedByScore };
   } catch (error) {
     console.error(`Error scraping ${source.name}: ${error.message}`);
-    return { articles: [], error: error.message };
+    return { articles: [], error: error.message, skippedByScore: 0 };
   }
 }
 
@@ -162,22 +179,27 @@ async function main() {
   await fs.mkdir(rawDir(date), { recursive: true });
 
   const sources = JSON.parse(await fs.readFile(sourcesPath, "utf8"));
+  const globalScoring = sources.scoring || {};
   const since = sinceDate();
   const seenPreviousLinks = await previousLinks(runsDir, designArticlesPath, date);
   const articles = [];
   const sourceResults = [];
+  let totalSkippedByScore = 0;
 
   console.log("Fetching design feeds...");
   for (const source of sources.feeds || []) {
     if (!source.rss) continue;
-    const result = await fetchRssFeed(source, since);
+    const scoring = mergeScoring(globalScoring, source.scoring || {});
+    const result = await fetchRssFeed(source, since, scoring);
     articles.push(...result.articles);
+    totalSkippedByScore += result.skippedByScore || 0;
     sourceResults.push({
       name: source.name,
       type: "feed",
       url: source.rss,
       status: result.error ? "error" : "ok",
       count: result.articles.length,
+      skippedByScore: result.skippedByScore || 0,
       error: result.error,
     });
   }
@@ -185,14 +207,17 @@ async function main() {
   console.log("Scraping design pages...");
   for (const source of sources.pages || []) {
     if (!source.url) continue;
-    const result = await scrapePage(source, seenPreviousLinks);
+    const scoring = mergeScoring(globalScoring, source.scoring || {});
+    const result = await scrapePage(source, seenPreviousLinks, scoring);
     articles.push(...result.articles);
+    totalSkippedByScore += result.skippedByScore || 0;
     sourceResults.push({
       name: source.name,
       type: "page",
       url: source.url,
       status: result.error ? "error" : "ok",
       count: result.articles.length,
+      skippedByScore: result.skippedByScore || 0,
       error: result.error,
     });
   }
@@ -208,10 +233,12 @@ async function main() {
     date,
     sourceFile: "news-tracking/design-sources.json",
     totalArticles: output.length,
+    totalSkippedByScore,
+    scoring: globalScoring,
     sourceResults,
   }, null, 2)}\n`, "utf8");
 
-  console.log(`Fetched ${output.length} design articles`);
+  console.log(`Fetched ${output.length} design articles (skipped by score: ${totalSkippedByScore})`);
   console.log(`Saved to ${outputPath}`);
   console.log(`Saved fetch report to ${reportPath}`);
   console.log("Next: use docs/design-digest-agent-prompt.md to select UIUX design references.");

@@ -231,10 +231,20 @@
 
 **시스템 운영자**: Apptweak·Sensor Tower 같은 ASO 도구 API는 유료. 우선 무료 경로: App Store RSS Feed Generator(Apple 제공) 활용 가능.
 
-**결론**:
-1. 자동 수집 점수제 도입(블랙/화이트 키워드 ± 가산).
-2. 앱스토어 릴리즈 노트 자동 수집: `news-tracking/appstore-tracking.json`(앱 ID 리스트) + 주 1회 cron 스크랩.
+**결론 (7-A 구현 완료, 7-B는 다음 단계):**
+1. ✅ 자동 수집 점수제 도입(블랙/화이트 키워드 ± 가산, threshold 0). 기존 include/excludeTitlePatterns는 강제 차단/통과로 그대로 두고, 점수는 가중 평가로 추가됨.
+2. 앱스토어 릴리즈 노트 자동 수집은 별도 작업(7-B).
 3. 수집된 릴리즈 노트는 discovery_source 등급.
+
+**7-A 구현 (PR #2):**
+- `scripts/tracking/tracking_utils.mjs`: `mergeScoring()`, `evaluateSignalScore()` 헬퍼 신설. global + per-source scoring 머지 후 텍스트에 정규식 매칭, deny는 -2/allow는 +2 가산, threshold 이상만 통과.
+- `scripts/tracking/fetch_service_news.mjs`, `fetch_design_news.mjs`, `fetch_dev_news.mjs`: RSS/page 필터에 점수제 통합. 글마다 `signalScore`/`signalReasons` 메타 저장, fetch-report에 `totalSkippedByScore` 집계.
+- `fetch_dev_news.mjs` 보강: `sources.feeds` 그룹도 처리하도록 확장 (기존엔 newsletters/blogs/podcasts만 봤음).
+- `news-tracking/{service,design,dev}-sources.json` 최상단에 `scoring` 객체 추가:
+  - SERVICE — deny 18개(캠페인·매장 오픈·콜라보·모델·화보·기부·ESG·채용 시작·투자 유치), allow 26개(리뉴얼·개편·AI·개인화·추천·멤버십·결제·리뷰·운영자 UX 등).
+  - DESIGN — deny 12개(모델·화보·ESG·채용·매출), allow 20개(리브랜딩·디자인 시스템·Awwwards·Mobbin·Figma·인터랙션·shadcn·Radix 등).
+  - DEV — deny 23개(backend·kubernetes·kafka·data pipeline·ETL·model training·infra·devops·채용), allow 37개(CSS·HTML·JS·React·Vue·**Vite·Astro·11ty·Eleventy·Tailwind**·Storybook·shadcn·접근성·MDN·web.dev·GSAP·Lenis 등).
+- 스모크 테스트: "신세계 단독 콜라보 매장 오픈 모델 화보"는 -8, "컬리 멤버십 AI 추천 결제 개편"은 +14, "Astro 5 출시 11ty 차이"는 +4, "Kafka data pipeline backend model training"은 -6으로 적절히 분리됨.
 
 ---
 
@@ -263,7 +273,7 @@
 |---|---|---|---|---|---|
 | **1차 (즉시)** | 안건 1: 직무 라벨(service=기획자/design=디자이너/dev=퍼블리셔) 병기 | 없음 | 1~2일 | 사이트 UX 즉시 개선 | ✅ Done (2026-05-24) |
 | | 안건 6-A: `meeting_question` 메타 | 없음 | 1일 | SERVICE 매거진 가치 강화 | ✅ Done (2026-05-24) |
-| | 안건 7-A: 점수제 수집 필터 | 없음 | 2일 | 노이즈 감소, 운영 시간 절약 | 다음 |
+| | 안건 7-A: 점수제 수집 필터 | 없음 | 2일 | 노이즈 감소, 운영 시간 절약 | ✅ Done (2026-05-24) |
 | **2차 (1~2주)** | 안건 3: 재발견 메타(`flow`,`brand_normalized`,`change_type`) + `/explore` | 안건 1 | 1주 | 누적 자산 활용도 |
 | | 안건 5: 퍼블리셔 분리 + `code_artifacts` + vite/11ty/Astro 소스 추가 | 안건 1 | 3일 | DEV 직군 가치 |
 | | 안건 2: discovery vs verification 등급 + 신규 소스 (디스콰이엇·유아이볼·GDWeb·Codrops·11ty/Astro) | 없음 | 1주 | 발견 폭 확장 |

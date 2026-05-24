@@ -1,4 +1,45 @@
 {
+  "scoring": {
+    "denyWeight": -2,
+    "allowWeight": 2,
+    "threshold": 0,
+    "denyTitlePatterns": [
+      "(^|\\s)모델(\\s|$)",
+      "화보",
+      "콘서트",
+      "기부",
+      "(^|\\s)ESG(\\s|$)",
+      "세일\\s*오픈",
+      "채용",
+      "공채",
+      "투자\\s*유치",
+      "매출",
+      "영업이익",
+      "팝업\\s*스토어\\s*오픈"
+    ],
+    "allowTitlePatterns": [
+      "리브랜딩",
+      "리뉴얼",
+      "브랜드\\s*아이덴티티",
+      "디자인\\s*시스템",
+      "타이포",
+      "컬러\\s*시스템",
+      "Awwwards",
+      "Mobbin",
+      "Figma",
+      "(^|\\s)UI(\\s|$)",
+      "(^|\\s)UX(\\s|$)",
+      "인터랙션",
+      "모션",
+      "랜딩\\s*페이지",
+      "키비주얼",
+      "비주얼\\s*디렉션",
+      "아이코노그래피",
+      "Storybook",
+      "shadcn",
+      "Radix"
+    ]
+  },
   "feeds": [
     {
       "name": "DIGITAL iNSIGHT",

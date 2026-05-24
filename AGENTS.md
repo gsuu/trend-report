@@ -16,6 +16,15 @@
 - 사이트 헤더·구독 모달·태그·문서에서 "Service/Design/DEV" 카테고리 라벨과 함께 직군 라벨(기획자/디자이너/퍼블리셔)을 병기한다.
 - DEV(퍼블리셔) 글은 데이터 파이프라인·서버·DB·인프라·ML 학습을 다루지 않는다. 프론트엔드라도 백엔드 중심 API 사용법은 제외, 브라우저 API·CSS·HTML·ARIA·정적 사이트 빌드(11ty/Astro/Vite/Tailwind)는 포함.
 
+## Source Scoring (자동 수집 점수제)
+
+자동 수집(`fetch:service|design|dev`)은 기존 `includeTitlePatterns`/`excludeTitlePatterns`(완전 차단/통과) 위에 **점수제 보정**을 같이 돌린다. 노이즈 키워드만 있다고 즉시 제외하지 않고, 신호 키워드가 같이 있으면 살리는 부드러운 필터.
+
+- 각 `news-tracking/*-sources.json` 최상단의 `scoring` 객체에서 정의한다.
+- 기본값: `denyWeight: -2`, `allowWeight: +2`, `threshold: 0`. 점수 합이 threshold 미만이면 후보에서 제외.
+- 글마다 `signalScore`/`signalReasons`를 저장하고, fetch-report에 `totalSkippedByScore`를 집계한다.
+- 패턴 추가/조정 시 다음 회차 fetch 결과의 통과/탈락 수를 같이 본다. 노이즈가 다시 늘면 deny 키워드를 보강하고, 정상 글이 빠지면 allow 키워드를 추가한다.
+
 ## Newsletter Approval Flow
 
 When the user provides a PDF, asks to collect source material, and then asks to send the newsletter:

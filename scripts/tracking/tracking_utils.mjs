@@ -81,6 +81,52 @@ export function matchesNone(value, patterns = []) {
   return !patterns.some((pattern) => new RegExp(pattern, "i").test(value));
 }
 
+export function mergeScoring(global = {}, perSource = {}) {
+  return {
+    denyTitlePatterns: [
+      ...(global.denyTitlePatterns || []),
+      ...(perSource.denyTitlePatterns || []),
+    ],
+    allowTitlePatterns: [
+      ...(global.allowTitlePatterns || []),
+      ...(perSource.allowTitlePatterns || []),
+    ],
+    denyWeight: perSource.denyWeight ?? global.denyWeight ?? -2,
+    allowWeight: perSource.allowWeight ?? global.allowWeight ?? 2,
+    threshold: perSource.threshold ?? global.threshold ?? 0,
+  };
+}
+
+export function evaluateSignalScore(value, scoring = {}) {
+  const denyPatterns = scoring.denyTitlePatterns || [];
+  const allowPatterns = scoring.allowTitlePatterns || [];
+  const denyWeight = scoring.denyWeight ?? -2;
+  const allowWeight = scoring.allowWeight ?? 2;
+  const threshold = scoring.threshold ?? 0;
+  let score = 0;
+  const reasons = [];
+  for (const pattern of denyPatterns) {
+    if (new RegExp(pattern, "i").test(value)) {
+      score += denyWeight;
+      reasons.push({ kind: "deny", pattern, weight: denyWeight });
+    }
+  }
+  for (const pattern of allowPatterns) {
+    if (new RegExp(pattern, "i").test(value)) {
+      score += allowWeight;
+      reasons.push({ kind: "allow", pattern, weight: allowWeight });
+    }
+  }
+  const hasAnyPattern = denyPatterns.length > 0 || allowPatterns.length > 0;
+  return {
+    score,
+    threshold,
+    passes: hasAnyPattern ? score >= threshold : true,
+    reasons,
+    evaluated: hasAnyPattern,
+  };
+}
+
 export function cleanTitle(value = "") {
   return decodeHtml(value)
     .replace(/\s+[-|]\s+.+$/g, "")
