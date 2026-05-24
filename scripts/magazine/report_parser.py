@@ -334,6 +334,39 @@ INTEREST_SIGNAL_LABELS = {
 }
 INTEREST_CLASS_VALUES = {"published", "monthly_digest", "excluded_interest"}
 
+# CTTD 작업 클라이언트 업종 (AGENTS.md About CTTD §CTTD_INDUSTRIES 와 동기화)
+CTTD_INDUSTRIES = {
+    "fashion_commerce", "beauty_commerce", "food_d2c", "lifestyle_commerce",
+    "content_platform", "fintech", "marketplace",
+}
+
+# next_project_tool 자동 평가 — 우리 다음 프로젝트에 적용 가능한 도구·기술 브랜드
+DEV_TOOL_BRANDS = {
+    "Figma", "Vercel", "Vite", "11ty", "Astro", "Tailwind", "Storybook",
+    "shadcn", "Radix", "v0", "Cursor", "Anthropic", "OpenAI", "Notion",
+    "GitHub", "Codrops", "web.dev", "WebKit", "Chrome", "MDN",
+}
+
+# familiar 자동 평가 — 한국 메이저 + 글로벌 메이저 + 기술 매체
+FAMILIAR_BRANDS = {
+    # 한국 메이저
+    "토스", "카카오", "네이버", "쿠팡", "당근", "배민", "야놀자",
+    "무신사", "29CM", "컬리", "올리브영", "오늘의집", "SSG.COM",
+    "신세계인터내셔날", "G마켓", "11번가", "지그재그", "에이블리",
+    # 글로벌 메이저
+    "Figma", "Notion", "Slack", "Spotify", "Mobbin",
+    "OpenAI", "Anthropic", "Vercel", "GitHub", "Stripe", "Airbnb", "Uber",
+    # 기술 매체
+    "web.dev", "MDN", "WebKit", "Chrome", "NN/g",
+}
+
+# visual_impact 자동 평가 — area=design이거나 다음 키워드가 category/title에 매칭
+VISUAL_KEYWORDS = (
+    "visual", "brand", "design", "캠페인", "기획전", "룩북", "lookbook",
+    "landing", "redesign", "rebrand", "리뉴얼", "리브랜딩", "비주얼",
+    "키비주얼", "타이포",
+)
+
 V3_BODY_SECTION_LABELS = ("매거진",)
 V3_HIGHLIGHT_FALLBACK_LIMIT = 5
 
@@ -2652,18 +2685,94 @@ def extract_article_nature(issue: Issue) -> str:
     return _detect_article_nature(issue, source_type)
 
 
+def _auto_signal_client_industry_match(issue: Issue) -> bool:
+    client_fit = extract_client_fit(issue)
+    fit_keys = {entry["key"] for entry in client_fit}
+    return bool(fit_keys & CTTD_INDUSTRIES)
+
+
+def _auto_signal_visual_impact(issue: Issue) -> bool:
+    has_image = bool(issue.image) or any(
+        re.match(r"^이미지\s*\d+$", key) for key in issue.meta
+    )
+    if not has_image:
+        return False
+    if issue.area.lower() == "design":
+        return True
+    haystack = f"{issue.title} {issue.category}".lower()
+    return any(kw.lower() in haystack for kw in VISUAL_KEYWORDS)
+
+
+def _auto_signal_next_project_tool(issue: Issue) -> bool:
+    if extract_code_artifacts(issue):
+        return True
+    brand = extract_brand_normalized(issue)
+    return brand in DEV_TOOL_BRANDS
+
+
+def _auto_signal_familiar(issue: Issue) -> bool:
+    brand = extract_brand_normalized(issue)
+    if brand in FAMILIAR_BRANDS:
+        return True
+    platform = issue.platform or ""
+    return any(family in platform for family in FAMILIAR_BRANDS)
+
+
+def _auto_signal_quotable(issue: Issue) -> bool:
+    summary = (issue.meta.get("요약") or "").strip()
+    if 60 <= len(summary) <= 180 and re.search(r"\d|[가-힣]+(?:이|가|는|은)\s", summary):
+        return True
+    if extract_pull_quote(issue):
+        return True
+    return False
+
+
+def _auto_signal_vivid_case(issue: Issue) -> bool:
+    body_text_parts: list[str] = []
+    for items in issue.sections.values():
+        for item in items:
+            body_text_parts.append(re.sub(r"<[^>]+>", "", str(item)))
+    body_text = " ".join(body_text_parts)
+    if not body_text:
+        return False
+    if re.search(r"&quot;|\"[^\"]{4,}\"|『[^』]+』|「[^」]+」", body_text):
+        return True
+    if re.search(r"\d+(?:\.\d+)?\s*(?:%|건|명|종|회|일|개|원|달러|위)", body_text):
+        return True
+    if re.search(r"인터뷰|발화|코멘트|발언|밝혔다|말했다", body_text):
+        return True
+    return False
+
+
 def extract_interest_signals(issue: Issue) -> list[dict[str, str]]:
     explicit = (issue.meta.get("흥미 시그널") or "").strip()
-    tokens: list[str] = []
     if explicit:
+        tokens: list[str] = []
         for piece in re.split(r"[,/|·]", explicit):
             cleaned = piece.strip().lower()
             if cleaned in INTEREST_SIGNAL_KEYS:
                 tokens.append(cleaned)
+        return [
+            {"key": token, "label": INTEREST_SIGNAL_LABELS[token]}
+            for token in tokens
+            if token in INTEREST_SIGNAL_LABELS
+        ]
+    auto_tokens: list[str] = []
+    if _auto_signal_client_industry_match(issue):
+        auto_tokens.append("client_industry_match")
+    if _auto_signal_visual_impact(issue):
+        auto_tokens.append("visual_impact")
+    if _auto_signal_next_project_tool(issue):
+        auto_tokens.append("next_project_tool")
+    if _auto_signal_familiar(issue):
+        auto_tokens.append("familiar")
+    if _auto_signal_quotable(issue):
+        auto_tokens.append("quotable")
+    if _auto_signal_vivid_case(issue):
+        auto_tokens.append("vivid_case")
     return [
         {"key": token, "label": INTEREST_SIGNAL_LABELS[token]}
-        for token in tokens
-        if token in INTEREST_SIGNAL_LABELS
+        for token in auto_tokens
     ]
 
 
