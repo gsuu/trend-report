@@ -1934,6 +1934,82 @@ main {
   color: #111111;
 }
 
+.next-to-read {
+  margin: 36px 0 24px;
+}
+
+.next-to-read > h2 {
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.next-to-read-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.next-to-read-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid #ececec;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111111;
+  text-decoration: none;
+  transition: border-color 0.12s ease, transform 0.12s ease;
+}
+
+.next-to-read-card:hover,
+.next-to-read-card:focus-visible {
+  border-color: #111111;
+  transform: translateY(-1px);
+}
+
+.next-to-read-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #f4f4f0;
+}
+
+.next-to-read-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.next-to-read-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.next-to-read-brand {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.next-to-read-body strong {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.next-to-read-body small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
 @media (max-width: 640px) {
   .pull-quote-body {
     font-size: 16px;
@@ -2555,6 +2631,61 @@ main {
   margin-top: 4px;
   padding-left: 18px;
   border-left-color: #aaaaaa;
+}
+
+.section-prose .data-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 8px 0;
+  padding: 18px 22px;
+  background: #fff5d6;
+  border-radius: 8px;
+  border-left: 4px solid #c79a00;
+}
+
+.section-prose .data-highlight-label {
+  color: #6a4c00;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.section-prose .data-highlight p {
+  margin: 0;
+  color: #6a4c00;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.section-prose .inline-quote {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 8px 0;
+  padding: 14px 20px;
+  border-left: 3px solid #555555;
+  background: #f4f4f0;
+  border-radius: 0 6px 6px 0;
+}
+
+.section-prose .inline-quote-label {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.section-prose .inline-quote p {
+  margin: 0;
+  color: #111111;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.6;
+  font-style: italic;
 }
 
 .section-prose h3 {

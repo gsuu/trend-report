@@ -664,6 +664,12 @@ def normalize_detail_block(kind: str, text: str) -> tuple[str, str]:
         highlight_match = re.match(r"^(?:\[?흥미로운 대목\]?|원문에서 흥미로운 대목)[:：]\s*(.+)$", clean_text)
         if highlight_match:
             return "highlight", highlight_match.group(1).strip()
+        data_match = re.match(r"^데이터[:：]\s*(.+)$", clean_text)
+        if data_match:
+            return "data", data_match.group(1).strip()
+        inline_quote_match = re.match(r"^인용[:：]\s*(.+)$", clean_text)
+        if inline_quote_match:
+            return "inline-quote", inline_quote_match.group(1).strip()
     return kind, clean_text
 
 

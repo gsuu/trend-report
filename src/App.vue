@@ -355,6 +355,31 @@ const showArticleSidebar = computed(() => Boolean(
   || sameFlowIssues.value.length
 ));
 
+const nextToReadIssues = computed(() => {
+  const issue = activeIssue.value;
+  if (!issue) return [];
+  const issueFlows = new Set(issue.flow || []);
+  const issueChangeTypes = new Set(issue.changeType || []);
+  const scored = [];
+  for (const other of issues.value) {
+    if (other.id === issue.id) continue;
+    if (isWeeklySummaryIssue(other)) continue;
+    let score = 0;
+    if (other.brandNormalized && other.brandNormalized === issue.brandNormalized) score += 3;
+    if (Array.isArray(other.flow)) {
+      score += other.flow.filter((f) => issueFlows.has(f)).length;
+    }
+    if (other.publicationDate && other.publicationDate === issue.publicationDate) score += 1;
+    if (Array.isArray(other.changeType)) {
+      score += other.changeType.filter((c) => issueChangeTypes.has(c)).length * 0.5;
+    }
+    if (score > 0) scored.push({ issue: other, score });
+  }
+  scored.sort((a, b) => b.score - a.score
+    || String(b.issue.publicationDate || "").localeCompare(String(a.issue.publicationDate || "")));
+  return scored.slice(0, 3).map((entry) => entry.issue);
+});
+
 const articleSections = computed(() => {
   const issue = activeIssue.value;
   if (!issue || !Array.isArray(issue.sections)) return [];
@@ -1363,6 +1388,14 @@ function issuePublicationDate(issue) {
               <template v-for="(block, index) in proseBlocks(section.blocks)" :key="block.kind + (block.html || block.items?.join('')) + index">
                 <p v-if="block.kind === 'quote'" class="insight-lead" v-html="block.html"></p>
                 <p v-else-if="block.kind === 'hint'" class="prose-hint" v-html="block.html"></p>
+                <div v-else-if="block.kind === 'data'" class="data-highlight">
+                  <span class="data-highlight-label" aria-hidden="true">📊 데이터</span>
+                  <p v-html="block.html"></p>
+                </div>
+                <blockquote v-else-if="block.kind === 'inline-quote'" class="inline-quote">
+                  <span class="inline-quote-label" aria-hidden="true">❝ 인용</span>
+                  <p v-html="block.html"></p>
+                </blockquote>
                 <h3
                   v-else-if="block.kind === 'subhead'"
                   :class="{ 'is-emphasized': isEmphasizedSubhead(block.html) }"
@@ -1385,6 +1418,21 @@ function issuePublicationDate(issue) {
             </template>
           </section>
 
+          <section v-if="nextToReadIssues.length" class="next-to-read" aria-label="다음으로 볼 글">
+            <h2>다음으로 볼 글</h2>
+            <div class="next-to-read-grid">
+              <a v-for="other in nextToReadIssues" :key="'next-' + other.id" :href="storyRoute(other)" class="next-to-read-card">
+                <div v-if="other.image" class="next-to-read-thumb">
+                  <img :src="optimizedImageUrl(other.image, 280)" :alt="other.imageCaption || other.platform" loading="lazy" @error="hideBrokenImage">
+                </div>
+                <div class="next-to-read-body">
+                  <span class="next-to-read-brand" v-text="other.brandNormalized || other.platform"></span>
+                  <strong v-html="other.takeawayHtml"></strong>
+                  <small><time v-text="other.date"></time> · {{ other.readingMinutes || 1 }}분</small>
+                </div>
+              </a>
+            </div>
+          </section>
           <aside
             v-if="activeIssue.pullQuote"
             class="pull-quote-card"
