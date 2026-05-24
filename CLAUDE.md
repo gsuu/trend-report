@@ -30,6 +30,7 @@
 npm run fetch:service        # SERVICE 후보 수집
 npm run fetch:design         # DESIGN 후보 수집
 npm run fetch:dev            # DEV 후보 수집
+npm run fetch:appstore       # 앱스토어 릴리즈 노트 (discovery 등급)
 npm run tracking:prepare     # 위 3개 합쳐 tracking-data.json + editorial-brief.md 생성
 npm run tracking:workflow    # 한 번에 전체 파이프라인 (날짜 지정: -- --date=YYYY-MM-DD)
 npm run tracking:quality     # 워크플로우 품질 게이트

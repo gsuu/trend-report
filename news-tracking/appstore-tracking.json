@@ -1,0 +1,49 @@
+{
+  "scoring": {
+    "denyWeight": -2,
+    "allowWeight": 2,
+    "threshold": -2,
+    "denyTitlePatterns": [
+      "bug\\s*fix",
+      "버그\\s*수정",
+      "안정성",
+      "기타\\s*개선"
+    ],
+    "allowTitlePatterns": [
+      "신규",
+      "추가",
+      "개선",
+      "AI",
+      "추천",
+      "개인화",
+      "멤버십",
+      "혜택",
+      "결제",
+      "리뷰",
+      "검색",
+      "장바구니",
+      "주문",
+      "픽업",
+      "재방문",
+      "리뉴얼",
+      "개편"
+    ]
+  },
+  "apps": [
+    { "name": "무신사", "appId": "562936535", "country": "kr", "area": "service", "category": "fashion_commerce" },
+    { "name": "29CM", "appId": "1188014548", "country": "kr", "area": "service", "category": "fashion_commerce" },
+    { "name": "올리브영", "appId": "1373811462", "country": "kr", "area": "service", "category": "beauty_commerce" },
+    { "name": "컬리", "appId": "1117390245", "country": "kr", "area": "service", "category": "ecommerce" },
+    { "name": "쿠팡", "appId": "454434967", "country": "kr", "area": "service", "category": "marketplace" },
+    { "name": "오늘의집", "appId": "1153096132", "country": "kr", "area": "service", "category": "lifestyle_commerce" },
+    { "name": "토스", "appId": "839333328", "country": "kr", "area": "service", "category": "fintech" },
+    { "name": "카카오톡", "appId": "362057947", "country": "kr", "area": "service", "category": "platform" },
+    { "name": "네이버", "appId": "393499958", "country": "kr", "area": "service", "category": "platform" },
+    { "name": "11번가", "appId": "376916015", "country": "kr", "area": "service", "category": "marketplace" },
+    { "name": "당근", "appId": "1018769995", "country": "kr", "area": "service", "category": "platform" },
+    { "name": "야놀자", "appId": "384995851", "country": "kr", "area": "service", "category": "travel" },
+    { "name": "배달의민족", "appId": "378084485", "country": "kr", "area": "service", "category": "o2o" },
+    { "name": "지그재그", "appId": "1090700220", "country": "kr", "area": "service", "category": "fashion_commerce" },
+    { "name": "에이블리", "appId": "1182360032", "country": "kr", "area": "service", "category": "fashion_commerce" }
+  ]
+}
