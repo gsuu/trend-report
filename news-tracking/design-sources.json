@@ -417,6 +417,50 @@
       "excludeLinkPatterns": ["#", "mailto:", "\\?category=", "/news/?category"],
       "excludeTitlePatterns": ["Newsroom & Press Center"],
       "limit": 12
+    },
+    {
+      "name": "유아이볼 (UI Bowl)",
+      "url": "https://uibowl.io/template",
+      "category": "kr_ui_pattern_archive",
+      "sourceRole": "discovery",
+      "tier": "discovery",
+      "locale": "KR",
+      "includeLinkPatterns": ["uibowl\\.io/template/"],
+      "excludeLinkPatterns": ["#", "mailto:", "/login", "/sign"],
+      "limit": 18
+    },
+    {
+      "name": "GDWEB 디자인 어워드",
+      "url": "https://www.gdweb.co.kr/sub/list.asp",
+      "category": "kr_web_award",
+      "sourceRole": "discovery",
+      "tier": "discovery",
+      "locale": "KR",
+      "includeLinkPatterns": ["gdweb\\.co\\.kr/sub/view\\.asp"],
+      "excludeLinkPatterns": ["#", "mailto:"],
+      "limit": 18
+    },
+    {
+      "name": "노트폴리오 (Notefolio) - HOT",
+      "url": "https://notefolio.net/explore?sort=hot",
+      "category": "kr_creator_portfolio",
+      "sourceRole": "discovery",
+      "tier": "discovery",
+      "locale": "KR",
+      "includeLinkPatterns": ["notefolio\\.net/(project|p)/"],
+      "excludeLinkPatterns": ["#", "mailto:", "/signin", "/signup"],
+      "limit": 18
+    },
+    {
+      "name": "디비컷 (DBcut)",
+      "url": "https://dbcut.kr/index.php",
+      "category": "kr_web_gallery",
+      "sourceRole": "discovery",
+      "tier": "discovery",
+      "locale": "KR",
+      "includeLinkPatterns": ["dbcut\\.kr/index\\.php\\?pgurl=board"],
+      "excludeLinkPatterns": ["#", "mailto:", "act=login"],
+      "limit": 18
     }
   ]
 }

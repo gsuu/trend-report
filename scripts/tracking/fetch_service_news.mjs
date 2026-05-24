@@ -50,6 +50,7 @@ function articleFields(source) {
     source: source.name,
     sourceUrl: source.url || "",
     sourceRole: source.sourceRole || "official",
+    sourceTier: source.tier || "verification",
     publishStatus: source.publishStatus || "pending",
     locale: source.locale || "KR",
     audience: "uiux",

@@ -136,6 +136,16 @@
       "topics": ["CSS", "HTML", "Frontend Techniques"]
     },
     {
+      "name": "Codrops",
+      "url": "https://tympanus.net/codrops/",
+      "rss": "https://tympanus.net/codrops/feed/",
+      "category": "interaction_inspiration",
+      "sourceRole": "discovery",
+      "tier": "discovery",
+      "locale": "global",
+      "topics": ["GSAP", "Three.js", "Lenis", "WebGL", "Frontend Interaction"]
+    },
+    {
       "name": "web.dev",
       "url": "https://web.dev/",
       "rss": "https://web.dev/feed.xml",

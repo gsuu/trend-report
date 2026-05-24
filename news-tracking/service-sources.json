@@ -410,6 +410,7 @@
       "url": "https://publy.co/",
       "category": "global_service_ux",
       "sourceRole": "discovery",
+      "tier": "discovery",
       "publishStatus": "reference_only",
       "locale": "KR",
       "topics": ["product", "planning", "growth"],
@@ -417,6 +418,19 @@
       "includeTitlePatterns": ["서비스|기획|PM|프로덕트|성장|리텐션|구독|고객|UX|커머스|전환"],
       "excludeLinkPatterns": ["#", "mailto:", "login", "signup"],
       "limit": 10
+    },
+    {
+      "name": "Disquiet 메이커로그 (PM·디자이너 커뮤니티)",
+      "url": "https://disquiet.io/products",
+      "category": "kr_maker_community",
+      "sourceRole": "discovery",
+      "tier": "discovery",
+      "publishStatus": "reference_only",
+      "locale": "KR",
+      "topics": ["product launch", "PM", "designer", "maker"],
+      "includeLinkPatterns": ["disquiet\\.io/(product|@|makerlog)"],
+      "excludeLinkPatterns": ["#", "mailto:", "/login", "/signup"],
+      "limit": 18
     }
   ]
 }

@@ -46,6 +46,7 @@ function articleFields(source) {
     source: source.name,
     sourceUrl: source.url || "",
     sourceRole: source.sourceRole || "reference",
+    sourceTier: source.tier || "verification",
     locale: source.locale || "global",
     audience: "uiux",
     area: "design",

@@ -16,6 +16,21 @@
 - 사이트 헤더·구독 모달·태그·문서에서 "Service/Design/DEV" 카테고리 라벨과 함께 직군 라벨(기획자/디자이너/퍼블리셔)을 병기한다.
 - DEV(퍼블리셔) 글은 데이터 파이프라인·서버·DB·인프라·ML 학습을 다루지 않는다. 프론트엔드라도 백엔드 중심 API 사용법은 제외, 브라우저 API·CSS·HTML·ARIA·정적 사이트 빌드(11ty/Astro/Vite/Tailwind)는 포함.
 
+## Source Tier (발견 vs 검증)
+
+`news-tracking/*-sources.json`의 각 소스는 `tier` 필드를 가진다. 명시 안 하면 `verification`.
+
+| tier | 의미 | 글 등록 가능? | 예시 |
+|---|---|---|---|
+| `verification` | 발행 가능한 공식 출처 (공식 뉴스룸·릴리즈 노트·앱스토어·기술 블로그·표준 명세) | ✅ 최종 기준 원문이 될 수 있다 | 신세계 뉴스룸, Vite Blog, WebKit Blog, 토스 테크 |
+| `discovery` | 발견용 (현업이 매일 보는 큐레이션·메이커 커뮤니티·갤러리·어워드) | ❌ 후보 단서로만 사용 | 디스콰이엇, 유아이볼, GDWeb, Notefolio, 디비컷, Codrops, PUBLY |
+
+운영 원칙:
+
+- `discovery` 등급 소스만 단서인 글은 메인 매거진 글로 발행하지 않는다. 반드시 거기서 가리키는 공식 발표·릴리즈 노트·제품 블로그를 별도로 찾아 `verification` 등급 원문으로 등록한다.
+- 글의 `sourceTier`는 `runs/YYYY-MM-DD/raw/*-articles.json`에 같이 적재된다. shortlist·writer 단계에서 이 값을 보고 발행 자격을 판단한다.
+- 새 소스를 추가할 때 RSS가 있어도 출처가 큐레이션 매체·갤러리·메이커 커뮤니티면 `tier: "discovery"`를 명시한다.
+
 ## Source Scoring (자동 수집 점수제)
 
 자동 수집(`fetch:service|design|dev`)은 기존 `includeTitlePatterns`/`excludeTitlePatterns`(완전 차단/통과) 위에 **점수제 보정**을 같이 돌린다. 노이즈 키워드만 있다고 즉시 제외하지 않고, 신호 키워드가 같이 있으면 살리는 부드러운 필터.
