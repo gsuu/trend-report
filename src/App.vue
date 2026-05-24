@@ -1502,7 +1502,7 @@ function issuePublicationDate(issue) {
                 <div class="next-to-read-body">
                   <span class="next-to-read-brand" v-text="other.brandNormalized || other.platform"></span>
                   <strong v-html="other.takeawayHtml"></strong>
-                  <small><time v-text="other.date"></time> · {{ other.readingMinutes || 1 }}분</small>
+                  <small><time v-text="other.date"></time></small>
                 </div>
               </a>
             </div>
