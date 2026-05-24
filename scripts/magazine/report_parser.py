@@ -2473,6 +2473,17 @@ def extract_code_artifacts(issue: Issue) -> list[dict[str, str]]:
     return artifacts
 
 
+def extract_reading_minutes(issue: Issue) -> int:
+    chars = 0
+    for items in issue.sections.values():
+        for item in items:
+            chars += len(re.sub(r"<[^>]+>", "", str(item)))
+    chars += len(issue.title)
+    chars += len(issue.meta.get("요약", ""))
+    minutes = max(1, round(chars / 350))
+    return minutes
+
+
 def extract_meeting_question(issue: Issue) -> str:
     explicit = (issue.meta.get("회의 질문") or "").strip()
     if explicit:
@@ -2531,6 +2542,7 @@ def report_payload(report: Report) -> dict[str, object]:
                 "flow": extract_flow_tags(issue),
                 "changeType": extract_change_types(issue),
                 "brandNormalized": extract_brand_normalized(issue),
+                "readingMinutes": extract_reading_minutes(issue),
                 "facts": facts,
                 "sourceUrl": issue.meta.get("출처 URL", ""),
                 "sourceTitle": issue_source_title(issue),

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-24T01:45:58.763619+00:00",
+  "generatedAt": "2026-05-24T02:00:24.242652+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -43,6 +43,7 @@
         ],
         "changeType": [],
         "brandNormalized": "오늘의집",
+        "readingMinutes": 5,
         "facts": [
           {
             "label": "태그",
@@ -199,6 +200,7 @@
           "리포트"
         ],
         "brandNormalized": "오픈서베이",
+        "readingMinutes": 5,
         "facts": [
           {
             "label": "발행날짜",
@@ -367,6 +369,7 @@
         "flow": [],
         "changeType": [],
         "brandNormalized": "오늘의집",
+        "readingMinutes": 5,
         "facts": [
           {
             "label": "발행날짜",
@@ -542,6 +545,7 @@
           "플로우"
         ],
         "brandNormalized": "Nielsen Norman Group",
+        "readingMinutes": 6,
         "facts": [
           {
             "label": "발행날짜",
@@ -707,6 +711,7 @@
           "기능"
         ],
         "brandNormalized": "카카오",
+        "readingMinutes": 5,
         "facts": [
           {
             "label": "발행날짜",
@@ -881,6 +886,7 @@
           "기능"
         ],
         "brandNormalized": "한국디자인진흥원 디자인DB",
+        "readingMinutes": 6,
         "facts": [
           {
             "label": "발행날짜",
@@ -1058,6 +1064,7 @@
           "기능"
         ],
         "brandNormalized": "CSS-Tricks",
+        "readingMinutes": 6,
         "facts": [
           {
             "label": "발행날짜",
@@ -1239,6 +1246,7 @@
           "리포트"
         ],
         "brandNormalized": "Anthropic",
+        "readingMinutes": 6,
         "facts": [
           {
             "label": "발행날짜",
@@ -1418,6 +1426,7 @@
         ],
         "changeType": [],
         "brandNormalized": "Chrome",
+        "readingMinutes": 6,
         "facts": [
           {
             "label": "발행날짜",
@@ -1610,6 +1619,7 @@
           "플로우"
         ],
         "brandNormalized": "CSS-Tricks",
+        "readingMinutes": 7,
         "facts": [
           {
             "label": "발행날짜",
@@ -1797,6 +1807,7 @@
           "제거"
         ],
         "brandNormalized": "Anthropic",
+        "readingMinutes": 5,
         "facts": [
           {
             "label": "발행날짜",
@@ -1964,6 +1975,7 @@
         ],
         "changeType": [],
         "brandNormalized": "CTTD 매거진 편집부",
+        "readingMinutes": 12,
         "facts": [
           {
             "label": "발행날짜",
@@ -2323,6 +2335,7 @@
         "flow": [],
         "changeType": [],
         "brandNormalized": "오늘의집",
+        "readingMinutes": 5,
         "facts": [
           {
             "label": "발행날짜",
@@ -2474,6 +2487,7 @@
           "플로우"
         ],
         "brandNormalized": "당근",
+        "readingMinutes": 6,
         "facts": [
           {
             "label": "발행날짜",
@@ -2624,6 +2638,7 @@
         ],
         "changeType": [],
         "brandNormalized": "G마켓",
+        "readingMinutes": 4,
         "facts": [
           {
             "label": "발행날짜",
@@ -2774,6 +2789,7 @@
           "기능"
         ],
         "brandNormalized": "네이버",
+        "readingMinutes": 4,
         "facts": [
           {
             "label": "발행날짜",
@@ -2927,6 +2943,7 @@
           "화면"
         ],
         "brandNormalized": "무신사",
+        "readingMinutes": 5,
         "facts": [
           {
             "label": "발행날짜",
@@ -3077,6 +3094,7 @@
         ],
         "changeType": [],
         "brandNormalized": "화해",
+        "readingMinutes": 5,
         "facts": [
           {
             "label": "발행날짜",
@@ -3225,6 +3243,7 @@
         "flow": [],
         "changeType": [],
         "brandNormalized": "당근",
+        "readingMinutes": 6,
         "facts": [
           {
             "label": "발행날짜",
@@ -3375,6 +3394,7 @@
         ],
         "changeType": [],
         "brandNormalized": "29CM",
+        "readingMinutes": 4,
         "facts": [
           {
             "label": "발행날짜",
@@ -3523,6 +3543,7 @@
         "flow": [],
         "changeType": [],
         "brandNormalized": "Spotify",
+        "readingMinutes": 5,
         "facts": [
           {
             "label": "발행날짜",
@@ -3674,6 +3695,7 @@
         ],
         "changeType": [],
         "brandNormalized": "올리브영",
+        "readingMinutes": 5,
         "facts": [
           {
             "label": "발행날짜",
@@ -3822,6 +3844,7 @@
         "flow": [],
         "changeType": [],
         "brandNormalized": "오늘의집",
+        "readingMinutes": 5,
         "facts": [
           {
             "label": "발행날짜",
@@ -4001,6 +4024,7 @@
           "플로우"
         ],
         "brandNormalized": "알바천국",
+        "readingMinutes": 4,
         "facts": [
           {
             "label": "발행날짜",
@@ -4147,6 +4171,7 @@
           "기능"
         ],
         "brandNormalized": "민음사",
+        "readingMinutes": 4,
         "facts": [
           {
             "label": "발행날짜",
@@ -4285,6 +4310,7 @@
           "플로우"
         ],
         "brandNormalized": "OpenAI",
+        "readingMinutes": 5,
         "facts": [
           {
             "label": "발행날짜",
@@ -4434,6 +4460,7 @@
           "기능"
         ],
         "brandNormalized": "Figma",
+        "readingMinutes": 5,
         "facts": [
           {
             "label": "발행날짜",
@@ -4588,6 +4615,7 @@
           "플로우"
         ],
         "brandNormalized": "Figma",
+        "readingMinutes": 6,
         "facts": [
           {
             "label": "발행날짜",
@@ -4743,6 +4771,7 @@
           "기능"
         ],
         "brandNormalized": "Figma",
+        "readingMinutes": 7,
         "facts": [
           {
             "label": "발행날짜",
@@ -4901,6 +4930,7 @@
           "제거"
         ],
         "brandNormalized": "Smashing Magazine",
+        "readingMinutes": 8,
         "facts": [
           {
             "label": "발행날짜",
@@ -5059,6 +5089,7 @@
           "플로우"
         ],
         "brandNormalized": "Figma",
+        "readingMinutes": 5,
         "facts": [
           {
             "label": "발행날짜",
@@ -5200,6 +5231,7 @@
         "flow": [],
         "changeType": [],
         "brandNormalized": "CSS-Tricks",
+        "readingMinutes": 7,
         "facts": [
           {
             "label": "발행날짜",
@@ -5396,6 +5428,7 @@
           "플로우"
         ],
         "brandNormalized": "CSS-Tricks",
+        "readingMinutes": 6,
         "facts": [
           {
             "label": "발행날짜",
@@ -5564,6 +5597,7 @@
         ],
         "changeType": [],
         "brandNormalized": "CSS-Tricks",
+        "readingMinutes": 8,
         "facts": [
           {
             "label": "발행날짜",
@@ -5771,6 +5805,7 @@
           "화면"
         ],
         "brandNormalized": "CSS-Tricks",
+        "readingMinutes": 7,
         "facts": [
           {
             "label": "발행날짜",
@@ -5954,6 +5989,7 @@
           "기능"
         ],
         "brandNormalized": "Webflow Showcase",
+        "readingMinutes": 4,
         "facts": [
           {
             "label": "발행날짜",
@@ -6114,6 +6150,7 @@
         ],
         "changeType": [],
         "brandNormalized": "It's Nice That",
+        "readingMinutes": 4,
         "facts": [
           {
             "label": "발행날짜",
@@ -6277,6 +6314,7 @@
           "리브랜딩"
         ],
         "brandNormalized": "It's Nice That",
+        "readingMinutes": 4,
         "facts": [
           {
             "label": "발행날짜",
@@ -6439,6 +6477,7 @@
           "화면"
         ],
         "brandNormalized": "The New York Times Magazine",
+        "readingMinutes": 4,
         "facts": [
           {
             "label": "발행날짜",
@@ -6606,6 +6645,7 @@
         ],
         "changeType": [],
         "brandNormalized": "Figma",
+        "readingMinutes": 3,
         "facts": [
           {
             "label": "발행날짜",
@@ -6768,6 +6808,7 @@
           "플로우"
         ],
         "brandNormalized": "Anthropic",
+        "readingMinutes": 4,
         "facts": [
           {
             "label": "발행날짜",
@@ -6933,6 +6974,7 @@
           "정책"
         ],
         "brandNormalized": "Nielsen Norman Group",
+        "readingMinutes": 4,
         "facts": [
           {
             "label": "발행날짜",
@@ -7101,6 +7143,7 @@
           "화면"
         ],
         "brandNormalized": "Ffern",
+        "readingMinutes": 3,
         "facts": [
           {
             "label": "발행날짜",

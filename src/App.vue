@@ -675,6 +675,26 @@ function splitChecklistSentences(html) {
   return parts.map((part) => part.trim()).filter(Boolean);
 }
 
+const EMPHASIZED_SUBHEADS = ["설계 관점", "점검 질문", "디자인 관점", "구현 관점"];
+function isEmphasizedSubhead(html) {
+  if (!html) return false;
+  return EMPHASIZED_SUBHEADS.some((label) => html.includes(label));
+}
+
+const SOURCE_TYPE_BADGES = {
+  release_note: { label: "공식 릴리즈", variant: "primary", description: "공식 제품 업데이트·릴리즈 노트" },
+  news: { label: "공식 뉴스", variant: "primary", description: "공식 뉴스룸·보도자료" },
+  research: { label: "리서치", variant: "secondary", description: "리서치·리포트" },
+  guide: { label: "가이드", variant: "secondary", description: "표준·방법론 가이드" },
+  reference: { label: "사례 참고", variant: "muted", description: "서비스·디자인 사례 참고 글" },
+  blog_opinion: { label: "블로그", variant: "muted", description: "관점 중심 블로그·오피니언" },
+};
+function sourceTypeBadge(issue) {
+  if (!issue) return null;
+  const key = issue.sourceType || "";
+  return SOURCE_TYPE_BADGES[key] || null;
+}
+
 function proseBlocks(blocks = []) {
   const mergedBlocks = blocks.reduce((result, block) => {
     if (block.kind !== "highlight") {
@@ -1157,6 +1177,14 @@ function issuePublicationDate(issue) {
               <time v-text="activeIssue.date"></time>
               <span aria-hidden="true">|</span>
               <span class="category-label" v-text="activeIssue.category"></span>
+              <span v-if="sourceTypeBadge(activeIssue)" aria-hidden="true">|</span>
+              <span
+                v-if="sourceTypeBadge(activeIssue)"
+                :class="['source-type-badge', 'is-' + sourceTypeBadge(activeIssue).variant]"
+                :title="sourceTypeBadge(activeIssue).description"
+              >{{ sourceTypeBadge(activeIssue).label }}</span>
+              <span v-if="activeIssue.readingMinutes" aria-hidden="true">|</span>
+              <span v-if="activeIssue.readingMinutes" class="reading-minutes">약 {{ activeIssue.readingMinutes }}분</span>
               <span v-if="activeIssue.sourceUrl" aria-hidden="true">|</span>
               <a v-if="activeIssue.sourceUrl" class="article-source-link" :href="activeIssue.sourceUrl" target="_blank" rel="noreferrer">
                 <span>원문 바로보기</span>
@@ -1236,7 +1264,12 @@ function issuePublicationDate(issue) {
             <div v-if="section.prose" class="section-prose">
               <template v-for="(block, index) in proseBlocks(section.blocks)" :key="block.kind + (block.html || block.items?.join('')) + index">
                 <p v-if="block.kind === 'quote'" class="insight-lead" v-html="block.html"></p>
-                <h3 v-else-if="block.kind === 'subhead'" v-html="block.html"></h3>
+                <h3
+                  v-else-if="block.kind === 'subhead'"
+                  :class="{ 'is-emphasized': isEmphasizedSubhead(block.html) }"
+                  :data-subhead="block.html"
+                  v-html="block.html"
+                ></h3>
                 <p v-else-if="block.kind === 'paragraph'" v-html="block.html"></p>
                 <ul v-else class="prose-list">
                   <li v-for="item in block.items" :key="item" v-html="item"></li>

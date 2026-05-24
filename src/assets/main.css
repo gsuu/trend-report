@@ -1754,6 +1754,37 @@ main {
   gap: 16px;
 }
 
+.source-type-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.source-type-badge.is-primary {
+  background: #111111;
+  color: #ffffff;
+}
+
+.source-type-badge.is-secondary {
+  background: #fff5d6;
+  color: #6a4c00;
+}
+
+.source-type-badge.is-muted {
+  background: #ececec;
+  color: #555555;
+}
+
+.reading-minutes {
+  font-weight: 600;
+  color: #111111;
+}
+
 .article-share-button {
   display: inline-flex;
   width: 36px;
@@ -2215,6 +2246,7 @@ main {
 .section-prose {
   display: grid;
   gap: 18px;
+  counter-reset: insight-subhead;
 }
 
 .section-prose p {
@@ -2231,14 +2263,62 @@ main {
 }
 
 .section-prose h3 {
+  position: relative;
   margin: 42px 0 0;
+  padding-left: 56px;
   font-size: 22px;
   font-weight: 600;
   line-height: 1.35;
+  counter-increment: insight-subhead;
+}
+
+.section-prose h3::before {
+  content: counter(insight-subhead, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 44px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.section-prose h3.is-emphasized {
+  margin-left: 0;
+  padding: 14px 18px 14px 64px;
+  border-left: 3px solid #111111;
+  background: #f4f4f0;
+  border-radius: 0 4px 4px 0;
+}
+
+.section-prose h3.is-emphasized::before {
+  left: 18px;
+  top: 18px;
+  color: #111111;
 }
 
 .section-prose h3:not(:first-of-type) {
   margin-top: 42px;
+}
+
+@media (max-width: 640px) {
+  .section-prose h3 {
+    padding-left: 44px;
+    font-size: 19px;
+  }
+  .section-prose h3::before {
+    width: 36px;
+    font-size: 12px;
+  }
+  .section-prose h3.is-emphasized {
+    padding: 12px 14px 12px 50px;
+  }
+  .section-prose h3.is-emphasized::before {
+    left: 14px;
+    top: 16px;
+  }
 }
 
 .section-prose .prose-list {
