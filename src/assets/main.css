@@ -1834,6 +1834,44 @@ main {
   text-align: center;
 }
 
+.article-gallery {
+  display: flex;
+  gap: 14px;
+  width: 100%;
+  margin: 0 0 46px;
+  padding-bottom: 8px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.article-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.article-gallery::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 4px;
+}
+
+.article-image-gallery-item {
+  flex: 0 0 78%;
+  max-width: 720px;
+  margin: 0;
+  scroll-snap-align: start;
+}
+
+.article-image-gallery-item img {
+  max-height: 560px;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .article-image-gallery-item {
+    flex: 0 0 88%;
+  }
+}
+
 .article-section {
   display: block;
   padding: 42px 0;

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-24T01:43:32.983526+00:00",
+  "generatedAt": "2026-05-24T01:45:58.763619+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -21,6 +21,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-01",
         "image": "https://ohstory.io/wp-content/uploads/2026/05/%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-%EB%B3%B4%EB%8F%84%EC%9E%90%EB%A3%8C-%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-%EC%A0%84%EA%B5%AD-%EB%A1%9C%EC%BB%AC-%EC%95%A0%EC%B0%A9%ED%85%9C-144%EC%A2%85-%EB%AA%A8%EC%9D%80-%E2%80%98%EB%A1%9C%EC%BB%AC%EC%9D%98-%EC%84%A0%ED%83%9D-%EA%B8%B0%ED%9A%8D%EC%A0%84-%EC%A7%84%ED%96%89-1024x683.png",
         "imageCaption": "오늘의집 뉴스룸 보도자료 대표 이미지 — '로컬의 선택' 기획전 홍보 배너",
+        "images": [
+          {
+            "url": "https://ohstory.io/wp-content/uploads/2026/05/%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-%EB%B3%B4%EB%8F%84%EC%9E%90%EB%A3%8C-%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-%EC%A0%84%EA%B5%AD-%EB%A1%9C%EC%BB%AC-%EC%95%A0%EC%B0%A9%ED%85%9C-144%EC%A2%85-%EB%AA%A8%EC%9D%80-%E2%80%98%EB%A1%9C%EC%BB%AC%EC%9D%98-%EC%84%A0%ED%83%9D-%EA%B8%B0%ED%9A%8D%EC%A0%84-%EC%A7%84%ED%96%89-1024x683.png",
+            "caption": "오늘의집 뉴스룸 보도자료 대표 이미지 — '로컬의 선택' 기획전 홍보 배너",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "로컬의선택",
           "늘신선",
@@ -171,6 +178,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-02",
         "image": "https://i0.wp.com/blog.opensurvey.co.kr/wp-content/uploads/2026/05/26_thumbnail_trendreport_JP_01.png?resize=700%2C700&ssl=1",
         "imageCaption": "오픈서베이 일본 Z세대 트렌드 리포트 2026 공식 썸네일",
+        "images": [
+          {
+            "url": "https://i0.wp.com/blog.opensurvey.co.kr/wp-content/uploads/2026/05/26_thumbnail_trendreport_JP_01.png?resize=700%2C700&ssl=1",
+            "caption": "오픈서베이 일본 Z세대 트렌드 리포트 2026 공식 썸네일",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "Z세대",
           "소비행태",
@@ -334,6 +348,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-03",
         "image": "https://i0.wp.com/blog.opensurvey.co.kr/wp-content/uploads/2026/05/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C7-e1778206802880.png",
         "imageCaption": "오픈서베이 청년 1인가구 트렌드 리포트 2026 — 주거 형태별 가전 구매 채널 분포 슬라이드",
+        "images": [
+          {
+            "url": "https://i0.wp.com/blog.opensurvey.co.kr/wp-content/uploads/2026/05/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C7-e1778206802880.png",
+            "caption": "오픈서베이 청년 1인가구 트렌드 리포트 2026 — 주거 형태별 가전 구매 채널 분포 슬라이드",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "오늘의집",
           "1인가구",
@@ -495,6 +516,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-04",
         "image": "https://media.nngroup.com/media/editor/2026/04/30/ai-agent-type-or-dictate.jpg",
         "imageCaption": "NN/g 원문 삽입 이미지 — Qwen 에이전트의 채팅 입력 vs. GUI 카테고리 버튼 진입점 비교 화면",
+        "images": [
+          {
+            "url": "https://media.nngroup.com/media/editor/2026/04/30/ai-agent-type-or-dictate.jpg",
+            "caption": "NN/g 원문 삽입 이미지 — Qwen 에이전트의 채팅 입력 vs. GUI 카테고리 버튼 진입점 비교 화면",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "AI에이전트",
           "Qwen",
@@ -653,6 +681,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-05",
         "image": "https://ditoday.com/wp-content/uploads/2026/05/kakao-emotion.jpg",
         "imageCaption": "디투데이 원문 og:image — 카카오톡 이모티콘·리액션 업데이트 커버",
+        "images": [
+          {
+            "url": "https://ditoday.com/wp-content/uploads/2026/05/kakao-emotion.jpg",
+            "caption": "디투데이 원문 og:image — 카카오톡 이모티콘·리액션 업데이트 커버",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "카카오톡",
           "이모티콘",
@@ -821,6 +856,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-06",
         "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260514101137460_6822.0.png",
         "imageCaption": "한국디자인진흥원 디자인DB, Gotham Variable 출시 소개 이미지",
+        "images": [
+          {
+            "url": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260514101137460_6822.0.png",
+            "caption": "한국디자인진흥원 디자인DB, Gotham Variable 출시 소개 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "Gotham Variable",
           "가변 서체",
@@ -993,6 +1035,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-07",
         "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/s_7E3C7C97B7D8D52C02F5092EAFB87771069C4AA5BAFDB9C502DA16E57E7200D2_1776091945816_gsp-sale-prices.png",
         "imageCaption": "CSS-Tricks 원문 대표 이미지 — CSS로 할인가를 계산하고 표시하는 예시 화면",
+        "images": [
+          {
+            "url": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/s_7E3C7C97B7D8D52C02F5092EAFB87771069C4AA5BAFDB9C502DA16E57E7200D2_1776091945816_gsp-sale-prices.png",
+            "caption": "CSS-Tricks 원문 대표 이미지 — CSS로 할인가를 계산하고 표시하는 예시 화면",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "CSS",
           "attr()",
@@ -1162,6 +1211,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-08",
         "image": "https://claude.com/images/code-with-claude-sf-og.jpg",
         "imageCaption": "Code with Claude San Francisco 이벤트 공식 페이지 대표 이미지",
+        "images": [
+          {
+            "url": "https://claude.com/images/code-with-claude-sf-og.jpg",
+            "caption": "Code with Claude San Francisco 이벤트 공식 페이지 대표 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "Claude Code",
           "Claude Platform",
@@ -1341,6 +1397,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-09",
         "image": "https://developer.chrome.com/static/blog/install-element-ot/image/fig1.png",
         "imageCaption": "Chrome Developers Blog 원문 본문 이미지",
+        "images": [
+          {
+            "url": "https://developer.chrome.com/static/blog/install-element-ot/image/fig1.png",
+            "caption": "Chrome Developers Blog 원문 본문 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "install element",
           "PWA",
@@ -1523,6 +1586,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-10",
         "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/s_4309AEC000A3E54B3EAE7D9665BB7D541E09DE1556E769AE721013146BE52BD2_1775704329444_6.png",
         "imageCaption": "CSS-Tricks 원문 대표 이미지, corner-shape bevel로 구현한 폴드 카드 데모",
+        "images": [
+          {
+            "url": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/s_4309AEC000A3E54B3EAE7D9665BB7D541E09DE1556E769AE721013146BE52BD2_1775704329444_6.png",
+            "caption": "CSS-Tricks 원문 대표 이미지, corner-shape bevel로 구현한 폴드 카드 데모",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "corner-shape",
           "CSS",
@@ -1708,6 +1778,7 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-15-11",
         "image": "",
         "imageCaption": "이미지 확보 메모: 원문(react.doctor) OG 이미지 없음. 공식 사이트 스크린샷 또는 CLI 실행 결과 화면으로 대체 가능.",
+        "images": [],
         "tags": [
           "React",
           "react-doctor",
@@ -1874,6 +1945,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-00",
         "image": "https://magazine.cttd.co.kr/assets/cttd-logo-email.png",
         "imageCaption": "CTTD 매거진 편집부 로고 — 이주의 요약 카드용 대표 이미지",
+        "images": [
+          {
+            "url": "https://magazine.cttd.co.kr/assets/cttd-logo-email.png",
+            "caption": "CTTD 매거진 편집부 로고 — 이주의 요약 카드용 대표 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "`이주의 요약` `편집자 노트` `2026-05-06`"
         ],
@@ -2226,6 +2304,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-01",
         "image": "https://ohstory.io/featured/15273",
         "imageCaption": "오늘의집 뉴스룸 라이브 1년 회고 본문 hero",
+        "images": [
+          {
+            "url": "https://ohstory.io/featured/15273",
+            "caption": "오늘의집 뉴스룸 라이브 1년 회고 본문 hero",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "오늘의집",
           "라이브커머스",
@@ -2367,6 +2452,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-02",
         "image": "https://about.daangn.com/company/pr/archive/중고거래-중심에서-동네-생활-전반-확장-당근페이-전국-8만여-동네-매장에서-결제된다/ og:image",
         "imageCaption": "당근페이가 페이히어 POS 매장으로 확장된다는 당근 보도자료 대표 이미지",
+        "images": [
+          {
+            "url": "https://about.daangn.com/company/pr/archive/중고거래-중심에서-동네-생활-전반-확장-당근페이-전국-8만여-동네-매장에서-결제된다/ og:image",
+            "caption": "당근페이가 페이히어 POS 매장으로 확장된다는 당근 보도자료 대표 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "당근페이",
           "동네 매장 결제",
@@ -2511,6 +2603,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-03",
         "image": "https://shinsegae-prd-data.s3.ap-northeast-2.amazonaws.com/wp-content/uploads/2026/04/%EA%BC%AD%EB%A9%A4%EB%B2%84%EC%8B%AD.png",
         "imageCaption": "신세계그룹 뉴스룸이 공개한 '꼭 멤버십' 대표 이미지",
+        "images": [
+          {
+            "url": "https://shinsegae-prd-data.s3.ap-northeast-2.amazonaws.com/wp-content/uploads/2026/04/%EA%BC%AD%EB%A9%A4%EB%B2%84%EC%8B%AD.png",
+            "caption": "신세계그룹 뉴스룸이 공개한 '꼭 멤버십' 대표 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "G마켓",
           "꼭 멤버십",
@@ -2654,6 +2753,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-04",
         "image": "https://zdnet.co.kr/search/?keyword=%EB%84%A4%EC%9D%B4%EB%B2%84%ED%94%8C%EB%9F%AC%EC%8A%A4+%EC%87%BC%ED%95%91+AI+%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8",
         "imageCaption": "ZDNet Korea 기사 캡처",
+        "images": [
+          {
+            "url": "https://zdnet.co.kr/search/?keyword=%EB%84%A4%EC%9D%B4%EB%B2%84%ED%94%8C%EB%9F%AC%EC%8A%A4+%EC%87%BC%ED%95%91+AI+%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8",
+            "caption": "ZDNet Korea 기사 캡처",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "네이버플러스스토어",
           "쇼핑AI에이전트",
@@ -2797,6 +2903,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-05",
         "image": "https://img.etnews.com/news/article/2026/05/06/news-p.v1.20260506.6dc9d25b99bb40f387756fec064193f0_T1.jpg",
         "imageCaption": "무신사 뉴스룸 / 전자신문 보도 대표 이미지",
+        "images": [
+          {
+            "url": "https://img.etnews.com/news/article/2026/05/06/news-p.v1.20260506.6dc9d25b99bb40f387756fec064193f0_T1.jpg",
+            "caption": "무신사 뉴스룸 / 전자신문 보도 대표 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "무신사",
           "멀티 스토어 홈",
@@ -2943,6 +3056,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-06",
         "image": "https://static.hwahae.co.kr/og/OG_1600.png",
         "imageCaption": "화해 공식 뉴스룸 보도자료 인용",
+        "images": [
+          {
+            "url": "https://static.hwahae.co.kr/og/OG_1600.png",
+            "caption": "화해 공식 뉴스룸 보도자료 인용",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "화해",
           "궁합 점수",
@@ -3086,6 +3206,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-07",
         "image": "https://prismic-image-proxy.krrt.io/karrot/aMDpcWGNHVfTO6If_%E1%84%8B%E1%85%A5%E1%84%87%E1%85%A1%E1%84%8B%E1%85%AE%E1%86%BA%E1%84%83%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B3%E1%86%ABOG%E1%84%80%E1%85%AD%E1%84%8E%E1%85%A6.png?auto=compress%2Cformat&rect=29%2C0%2C1143%2C600&w=1200&h=630&fit=max&q=100&fm=png",
         "imageCaption": "당근알바 금융인증서 도입 보도자료 대표 이미지",
+        "images": [
+          {
+            "url": "https://prismic-image-proxy.krrt.io/karrot/aMDpcWGNHVfTO6If_%E1%84%8B%E1%85%A5%E1%84%87%E1%85%A1%E1%84%8B%E1%85%AE%E1%86%BA%E1%84%83%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B3%E1%86%ABOG%E1%84%80%E1%85%AD%E1%84%8E%E1%85%A6.png?auto=compress%2Cformat&rect=29%2C0%2C1143%2C600&w=1200&h=630&fit=max&q=100&fm=png",
+            "caption": "당근알바 금융인증서 도입 보도자료 대표 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "당근알바",
           "금융인증서",
@@ -3227,6 +3354,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-08",
         "image": "https://cdn.prod.website-files.com/60a3629e04f26d12caff56df/69f29c73bf75b5adf8cd6ca8_%5B29CM%20%EC%82%AC%EC%A7%84%EC%9E%90%EB%A3%8C%5D%2029%20%EC%84%A0%EB%AC%BC%ED%95%98%EA%B8%B0%20%EA%B8%B0%ED%9A%8D%EC%A0%84%20%E2%80%98%EC%98%A4%EC%9B%94%20%EC%84%A0%EB%AC%BC%20%EC%83%81%EC%A0%90%E2%80%99%20%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg",
         "imageCaption": "무신사 뉴스룸이 공개한 29CM '오월 선물 상점' 기획전 포스터",
+        "images": [
+          {
+            "url": "https://cdn.prod.website-files.com/60a3629e04f26d12caff56df/69f29c73bf75b5adf8cd6ca8_%5B29CM%20%EC%82%AC%EC%A7%84%EC%9E%90%EB%A3%8C%5D%2029%20%EC%84%A0%EB%AC%BC%ED%95%98%EA%B8%B0%20%EA%B8%B0%ED%9A%8D%EC%A0%84%20%E2%80%98%EC%98%A4%EC%9B%94%20%EC%84%A0%EB%AC%BC%20%EC%83%81%EC%A0%90%E2%80%99%20%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg",
+            "caption": "무신사 뉴스룸이 공개한 29CM '오월 선물 상점' 기획전 포스터",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "29CM",
           "선물하기",
@@ -3370,6 +3504,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-09",
         "image": "https://storage.googleapis.com/pr-newsroom-wp/1/2026/04/S4A_Verified_Header_Ravyn-2892184-scaled.jpg",
         "imageCaption": "Spotify 공식 뉴스룸 발표 페이지의 대표 이미지",
+        "images": [
+          {
+            "url": "https://storage.googleapis.com/pr-newsroom-wp/1/2026/04/S4A_Verified_Header_Ravyn-2892184-scaled.jpg",
+            "caption": "Spotify 공식 뉴스룸 발표 페이지의 대표 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "Verified by Spotify",
           "인증 뱃지",
@@ -3511,6 +3652,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-12",
         "image": "https://corp.oliveyoung.com/ko/news/130",
         "imageCaption": "올리브영 보도자료 대표 이미지 (페스타 JAPAN 2026 부스 구성)",
+        "images": [
+          {
+            "url": "https://corp.oliveyoung.com/ko/news/130",
+            "caption": "올리브영 보도자료 대표 이미지 (페스타 JAPAN 2026 부스 구성)",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "올리브영",
           "K-뷰티",
@@ -3655,6 +3803,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-13",
         "image": "https://blog.opensurvey.co.kr/wp-content/uploads/2026/04/youth-soloeconomy-2026-og.png",
         "imageCaption": "오픈서베이 블로그 대표 이미지",
+        "images": [
+          {
+            "url": "https://blog.opensurvey.co.kr/wp-content/uploads/2026/04/youth-soloeconomy-2026-og.png",
+            "caption": "오픈서베이 블로그 대표 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "오픈서베이",
           "1인가구",
@@ -3821,6 +3976,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-14",
         "image": "https://ditoday.com/wp-content/uploads/2026/05/%EC%82%AC%EC%A7%84%EC%9E%90%EB%A3%8C-%EC%9D%B4%EB%A0%A5%EC%84%9C-%EC%84%9C%EB%B9%84%EC%8A%A4-UI%C2%B7UX-%EA%B0%9C%ED%8E%B8-1.jpg.webp",
         "imageCaption": "DIGITAL iNSIGHT 원문 사진자료 — 알바천국 이력서 서비스 UI·UX 개편 화면",
+        "images": [
+          {
+            "url": "https://ditoday.com/wp-content/uploads/2026/05/%EC%82%AC%EC%A7%84%EC%9E%90%EB%A3%8C-%EC%9D%B4%EB%A0%A5%EC%84%9C-%EC%84%9C%EB%B9%84%EC%8A%A4-UI%C2%B7UX-%EA%B0%9C%ED%8E%B8-1.jpg.webp",
+            "caption": "DIGITAL iNSIGHT 원문 사진자료 — 알바천국 이력서 서비스 UI·UX 개편 화면",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "알바천국",
           "초간편 이력서",
@@ -3963,6 +4125,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-15",
         "image": "https://designcompass.org/wp-content/uploads/2026/04/minumsa-01.jpg",
         "imageCaption": "민음사 세계문학전집 앱의 서가 화면을 인용한 Design Compass 기사 hero 이미지",
+        "images": [
+          {
+            "url": "https://designcompass.org/wp-content/uploads/2026/04/minumsa-01.jpg",
+            "caption": "민음사 세계문학전집 앱의 서가 화면을 인용한 Design Compass 기사 hero 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "민음사",
           "세계문학전집",
@@ -4092,6 +4261,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-16",
         "image": "https://designcompass.org/wp-content/uploads/2026/05/openai-pet-01.jpg",
         "imageCaption": "OpenAI Codex 데스크톱 앱의 펫 오버레이가 작업 화면 위에 떠 있는 장면",
+        "images": [
+          {
+            "url": "https://designcompass.org/wp-content/uploads/2026/05/openai-pet-01.jpg",
+            "caption": "OpenAI Codex 데스크톱 앱의 펫 오버레이가 작업 화면 위에 떠 있는 장면",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "OpenAI Codex",
           "진행 상태 표시",
@@ -4233,6 +4409,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-17",
         "image": "https://cdn.sanity.io/images/599r6htc/regionalized/3b967a15c2bee32ae90ca07e805c6375437a617e-1184x624.png?w=804&q=75&fit=max&auto=format&dpr=2",
         "imageCaption": "Figma 공식 블로그 본문 이미지 — Slots 기능 UI 설명 화면",
+        "images": [
+          {
+            "url": "https://cdn.sanity.io/images/599r6htc/regionalized/3b967a15c2bee32ae90ca07e805c6375437a617e-1184x624.png?w=804&q=75&fit=max&auto=format&dpr=2",
+            "caption": "Figma 공식 블로그 본문 이미지 — Slots 기능 UI 설명 화면",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "Figma",
           "Slots",
@@ -4380,6 +4563,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-19",
         "image": "https://cdn.sanity.io/images/599r6htc/regionalized/46a5482acc1f2767eb8083ce1bc06c04d14d31db-6024x2930.png",
         "imageCaption": "Figma 블로그 본문 대표 이미지 (og:image)",
+        "images": [
+          {
+            "url": "https://cdn.sanity.io/images/599r6htc/regionalized/46a5482acc1f2767eb8083ce1bc06c04d14d31db-6024x2930.png",
+            "caption": "Figma 블로그 본문 대표 이미지 (og:image)",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "디자인 시스템",
           "AI 가드레일",
@@ -4527,6 +4717,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-21",
         "image": "https://www.intodesignsystems.com/_next/image?url=%2Fblog%2Fimg%2Fdesign-teams-shipping-with-ai-cover.jpg&w=1200&q=90",
         "imageCaption": "Into Design Systems 블로그 og:image — AI Design Systems Conference 2026 발표 묶음 커버",
+        "images": [
+          {
+            "url": "https://www.intodesignsystems.com/_next/image?url=%2Fblog%2Fimg%2Fdesign-teams-shipping-with-ai-cover.jpg&w=1200&q=90",
+            "caption": "Into Design Systems 블로그 og:image — AI Design Systems Conference 2026 발표 묶음 커버",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "디자인 시스템",
           "AI 에이전트",
@@ -4675,6 +4872,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-22",
         "image": "https://files.smashing.media/articles/designing-stable-interfaces-streaming-content/designing-stable-interfaces-streaming-content.jpg",
         "imageCaption": "AI 채팅처럼 토큰이 한 글자씩 들어오는 화면에서 발생하는 스크롤·레이아웃·리렌더 문제를 다룬 본문 대표 이미지",
+        "images": [
+          {
+            "url": "https://files.smashing.media/articles/designing-stable-interfaces-streaming-content/designing-stable-interfaces-streaming-content.jpg",
+            "caption": "AI 채팅처럼 토큰이 한 글자씩 들어오는 화면에서 발생하는 스크롤·레이아웃·리렌더 문제를 다룬 본문 대표 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "스트리밍 UI",
           "AI 채팅",
@@ -4831,6 +5035,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-24",
         "image": "https://www.intodesignsystems.com/_next/image?url=%2Fblog%2Fimg%2Fclaude-code-figma-no-mcp.png&w=1200&q=90",
         "imageCaption": "Into Design Systems 본문 이미지 — Claude Code가 Figma 데스크톱 디버그 모드로 연결된 화면",
+        "images": [
+          {
+            "url": "https://www.intodesignsystems.com/_next/image?url=%2Fblog%2Fimg%2Fclaude-code-figma-no-mcp.png&w=1200&q=90",
+            "caption": "Into Design Systems 본문 이미지 — Claude Code가 Figma 데스크톱 디버그 모드로 연결된 화면",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "`Figma` `CLAUDE.md` `개인 디자인 에이전트` `디자인 시스템`"
         ],
@@ -4972,6 +5183,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-28",
         "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/03/borken-card-layout.jpg",
         "imageCaption": "카드 그리드의 고정 높이 레이아웃이 긴 텍스트로 무너진 비교 화면",
+        "images": [
+          {
+            "url": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/03/borken-card-layout.jpg",
+            "caption": "카드 그리드의 고정 높이 레이아웃이 긴 텍스트로 무너진 비교 화면",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "`CSS` `카드 컴포넌트` `반응형` `flexbox`"
         ],
@@ -5153,6 +5371,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-29",
         "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/12/default-social-css-tricks.png",
         "imageCaption": "CSS-Tricks Almanac 문서 본문 상단 hero 영역",
+        "images": [
+          {
+            "url": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/12/default-social-css-tricks.png",
+            "caption": "CSS-Tricks Almanac 문서 본문 상단 hero 영역",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "`contrast-color()`",
           "CSS Color Module Level 5",
@@ -5319,6 +5544,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-30",
         "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/wh10.jpg",
         "imageCaption": "CSS-Tricks 큐레이션 시리즈 'What's !important #10' 본문 상단 이미지",
+        "images": [
+          {
+            "url": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/wh10.jpg",
+            "caption": "CSS-Tricks 큐레이션 시리즈 'What's !important #10' 본문 상단 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "`sizes=auto` `HTML-in-Canvas` `image-set()` `Rekindle`"
         ],
@@ -5515,6 +5747,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-06-31",
         "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/xUDzcUCN.png",
         "imageCaption": "CSS-Tricks 'The Importance of Native Randomness in CSS' 본문 상단 hero 이미지",
+        "images": [
+          {
+            "url": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/xUDzcUCN.png",
+            "caption": "CSS-Tricks 'The Importance of Native Randomness in CSS' 본문 상단 hero 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "CSS",
           "random",
@@ -5690,6 +5929,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-28-01",
         "image": "https://screenshots.webflow.com/sites/68beefdc60829c24857fd3d1/20250929144316_73651d5705842b2e412a468f5898a076.png",
         "imageCaption": "Bark Studio Webflow Showcase 대표 이미지",
+        "images": [
+          {
+            "url": "https://screenshots.webflow.com/sites/68beefdc60829c24857fd3d1/20250929144316_73651d5705842b2e412a468f5898a076.png",
+            "caption": "Bark Studio Webflow Showcase 대표 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "Webflow",
           "GSAP",
@@ -5847,6 +6093,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-28-02",
         "image": "https://admin.itsnicethat.com/images/8dBpBjs-eOcxNRBxIIRpaLYkSfA=/277664/width-1440/Dinamo-Horsegiirl-Campaign-Standing.jpg",
         "imageCaption": "Dinamo Arizona b2b 캠페인 대표 이미지",
+        "images": [
+          {
+            "url": "https://admin.itsnicethat.com/images/8dBpBjs-eOcxNRBxIIRpaLYkSfA=/277664/width-1440/Dinamo-Horsegiirl-Campaign-Standing.jpg",
+            "caption": "Dinamo Arizona b2b 캠페인 대표 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "ABC Arizona",
           "OOH campaign",
@@ -6000,6 +6253,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-28-03",
         "image": "https://admin.itsnicethat.com/images/BQTL2sfvuudHTKGzli4ACfCaE_U=/277550/width-1440/13_CASI_geoglyph.jpg",
         "imageCaption": "Casi brand identity 대표 이미지",
+        "images": [
+          {
+            "url": "https://admin.itsnicethat.com/images/BQTL2sfvuudHTKGzli4ACfCaE_U=/277550/width-1440/13_CASI_geoglyph.jpg",
+            "caption": "Casi brand identity 대표 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "Casi",
           "cut-out graphics",
@@ -6156,6 +6416,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-28-04",
         "image": "https://admin.itsnicethat.com/images/wa_HwZOxPFc_kTjVcs58WxbDi78=/277071/width-1440%7Cformat-jpeg/Tiled.png",
         "imageCaption": "The New York Times Magazine redesign 대표 이미지",
+        "images": [
+          {
+            "url": "https://admin.itsnicethat.com/images/wa_HwZOxPFc_kTjVcs58WxbDi78=/277071/width-1440%7Cformat-jpeg/Tiled.png",
+            "caption": "The New York Times Magazine redesign 대표 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "The New York Times Magazine",
           "redesign",
@@ -6316,6 +6583,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-28-05",
         "image": "https://cdn.sanity.io/images/599r6htc/regionalized/c331ad024140ad9cf0ad3721bd45462480c38f59-2560x1440.png?w=1200&q=70&fit=max&auto=format",
         "imageCaption": "eBay Playbook Figma Blog 대표 이미지",
+        "images": [
+          {
+            "url": "https://cdn.sanity.io/images/599r6htc/regionalized/c331ad024140ad9cf0ad3721bd45462480c38f59-2560x1440.png?w=1200&q=70&fit=max&auto=format",
+            "caption": "eBay Playbook Figma Blog 대표 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "eBay Playbook",
           "Evo",
@@ -6471,6 +6745,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-28-06",
         "image": "https://content-management-files.canva.com/b174e5d3-2c1d-4d2e-bcc2-943af4b3c9df/ClaudeDesignXCanva.png",
         "imageCaption": "Canva in Claude Design 공식 이미지",
+        "images": [
+          {
+            "url": "https://content-management-files.canva.com/b174e5d3-2c1d-4d2e-bcc2-943af4b3c9df/ClaudeDesignXCanva.png",
+            "caption": "Canva in Claude Design 공식 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "Canva",
           "Claude Design",
@@ -6631,6 +6912,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-28-07",
         "image": "https://media.nngroup.com/media/articles/opengraph_images/10_Guidelines-Cards.png",
         "imageCaption": "Nielsen Norman Group 원문 og:image — AI 챗봇 설계 10개 가이드라인 카드",
+        "images": [
+          {
+            "url": "https://media.nngroup.com/media/articles/opengraph_images/10_Guidelines-Cards.png",
+            "caption": "Nielsen Norman Group 원문 og:image — AI 챗봇 설계 10개 가이드라인 카드",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "AI chatbots",
           "prompt suggestions",
@@ -6789,6 +7077,13 @@
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-04-28-08",
         "image": "https://admin.itsnicethat.com/images/fO6zzCMrDeifGfWi6NSF0fuoS9A=/276451/width-1440/Ffern_Summer_25_Pink_Sky_at_Night__2.jpg",
         "imageCaption": "Ffern film branding 대표 이미지",
+        "images": [
+          {
+            "url": "https://admin.itsnicethat.com/images/fO6zzCMrDeifGfWi6NSF0fuoS9A=/276451/width-1440/Ffern_Summer_25_Pink_Sky_at_Night__2.jpg",
+            "caption": "Ffern film branding 대표 이미지",
+            "role": "primary"
+          }
+        ],
         "tags": [
           "Ffern",
           "film practice",

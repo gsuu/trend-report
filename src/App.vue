@@ -1137,7 +1137,29 @@ function issuePublicationDate(issue) {
         </header>
 
         <div class="article-body">
-          <figure v-if="activeIssue.image" class="article-image">
+          <div
+            v-if="activeIssue.images && activeIssue.images.length > 1"
+            class="article-gallery"
+            role="region"
+            aria-label="스크린샷 갤러리"
+          >
+            <figure
+              v-for="(image, index) in activeIssue.images"
+              :key="image.url + index"
+              class="article-image article-image-gallery-item"
+            >
+              <img
+                :src="optimizedImageUrl(image.url, 1200)"
+                :alt="image.caption || activeIssue.platform"
+                decoding="async"
+                :fetchpriority="index === 0 ? 'high' : 'auto'"
+                :loading="index === 0 ? 'eager' : 'lazy'"
+                @error="hideBrokenImage"
+              >
+              <figcaption v-if="image.caption" v-text="image.caption"></figcaption>
+            </figure>
+          </div>
+          <figure v-else-if="activeIssue.image" class="article-image">
             <img
               :src="optimizedImageUrl(activeIssue.image, 1400)"
               :alt="activeIssue.imageCaption || activeIssue.platform"

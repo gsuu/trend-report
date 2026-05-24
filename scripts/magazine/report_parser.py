@@ -566,7 +566,11 @@ def issue_source_type_label(issue: Issue) -> str:
 
 
 def is_hidden_fact_key(key: str) -> bool:
-    return key in HIDDEN_FACT_KEYS or key.startswith(REFERENCE_LINK_PREFIXES)
+    if key in HIDDEN_FACT_KEYS or key.startswith(REFERENCE_LINK_PREFIXES):
+        return True
+    if re.match(r"^이미지\s*\d+(\s*설명)?$", key):
+        return True
+    return False
 
 
 def parse_reference_link(label: str, value: str) -> dict[str, str]:
@@ -2420,6 +2424,27 @@ def extract_change_types(issue: Issue) -> list[str]:
     return detect_change_types_from_text(f"{issue.title} {summary_text}")
 
 
+def extract_images(issue: Issue) -> list[dict[str, str]]:
+    images: list[dict[str, str]] = []
+    if issue.image:
+        images.append({
+            "url": issue.image,
+            "caption": issue.image_caption or "",
+            "role": "primary",
+        })
+    secondary = []
+    for key, value in issue.meta.items():
+        match = re.match(r"^이미지\s*(\d+)$", key)
+        if not match or not value:
+            continue
+        index = int(match.group(1))
+        caption = issue.meta.get(f"이미지 {index} 설명", "")
+        secondary.append((index, {"url": value, "caption": caption, "role": "secondary"}))
+    secondary.sort(key=lambda pair: pair[0])
+    images.extend(image for _, image in secondary)
+    return images
+
+
 def extract_brand_normalized(issue: Issue) -> str:
     explicit = (issue.meta.get("브랜드") or "").strip()
     if explicit:
@@ -2497,6 +2522,7 @@ def report_payload(report: Report) -> dict[str, object]:
                 "articleUrl": absolute_site_url(issue_href(report, issue)),
                 "image": issue.image,
                 "imageCaption": issue.image_caption,
+                "images": extract_images(issue),
                 "tags": issue.tags,
                 "takeawayHtml": clean_inline(issue_display_title(issue)),
                 "deckHtml": clean_inline(issue_display_description(issue)),
