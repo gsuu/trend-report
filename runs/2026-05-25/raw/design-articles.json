@@ -1,0 +1,200 @@
+[
+  {
+    "title": "AI 리서치 파트너, Affinity Bubble 서포터즈 1기를 모집합니다",
+    "link": "https://pxdstory.tistory.com/1898",
+    "pubDate": "Tue, 19 May 2026 07:50:02 +0900",
+    "content": "방대한 인터뷰와 설문 데이터 속에서 의미 있는 인사이트를 찾기 위해 고군분투해 오셨나요? pxd의 UX 노하우를 담아 정성 데이터 분석의 새 길을 열어가는 어피니티버블(Affinity Bubble)이 더 강력해진 v1.1 업데이트와 함께, 서비스의 완성도를 함께 높여갈 서포터즈 1기를 모집합니다. 어피니티버블은 인터뷰, 앱 리뷰, 설문 등 흩어진 정성 데이터를 AI로 분석해 어피니티 다이어그램 형태의 버블 시각화로 보여주는 도구입니다. 어피니티버블이 실무자분들에게 정말 유용한 도구로 진화할 수 있도록, 여러분의 현장감 넘치는 의견을 들려주세요. 1️⃣ 서포터즈는 어떤 활동을 하나요? 어피니티버블 서포터즈 1기의 자격 유지 및 활동 조건은 아래와 같습니다. 부담 갖기보다는 어피니티버블과 함께 즐겁게 연구하고 소통해 주시면 됩니다! 어피니티버블로 만든 분석 결과를 SNS에 공유하기 (월 2회) 어피니티버블을 쓰며 발견한 흥미로운 데이터 분석 결과를 개인 SNS 채널에 공유해 주세요. 활용 가능한 SNS: 링크드인, 브런…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "검색엔진은 우리 사이트를 어떻게 발견할까?",
+    "link": "https://pxdstory.tistory.com/1899",
+    "pubDate": "Thu, 21 May 2026 07:50:10 +0900",
+    "content": "들어가며 지난 편에서 프론트엔드 개발자가 왜 SEO를 챙겨야 하는지, 그리고 GEO라는 새로운 관점이 왜 필요해졌는지 이야기했어요. 이번 편에서는 좀 더 실전적인 이야기를 해볼게요. 검색엔진이 우리 사이트를 검색 결과에 보여주려면, 먼저 우리 사이트를 발견해야 하잖아요. 근데 이 \"발견\"이라는 과정이 생각보다 단순하지 않더라고요. SEO/GEO 분석 서비스를 만들면서 수많은 사이트를 들여다봤는데, 콘텐츠는 멀쩡한데 크롤러가 아예 접근을 못 하는 경우가 의외로 많았어요. 대기업 사이트에서도요. 이번 편에서는 검색엔진 크롤러가 우리 사이트를 발견하고 색인하는 과정을 프론트엔드 개발자 관점에서 풀어볼게요. 크롤링 → 인덱싱 → 랭킹, 이 흐름부터 잡자 검색엔진이 검색 결과를 보여주기까지는 크게 세 단계를 거쳐요. 크롤링(Crawling) — 크롤러가 웹을 돌아다니면서 페이지를 발견하고 수집하는 단계예요. 이때 크롤러는 링크를 따라가거나 sitemap을 참고해서 페이지를 찾아요. 인덱싱(Indexing) — 수집한 페이지의…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "AI가 바꾸는 디자인 업무와 팀의 역할",
+    "link": "https://designcompass.org/2026/05/22/ai-in-design-report-2026/",
+    "pubDate": "Mon, 25 May 2026 01:07:19 GMT",
+    "content": "Designer Fund와 Foundation Capital이 AI in Design Report 2026을 공개했습니다. 이 보고서는 2026년 3월, 60개국 이상에서 활동하는 디자이너 906명을 대상으로 진행한 설문을 바탕으로 합니다. 응답자의 60%는 10년 이상 경력을 가진 디자이너입니다. 다만 보고서는 AI를 적극적으로 받아들인 디자이너와 조직이…",
+    "image": "https://designcompass.org/wp-content/uploads/2026/05/ai-report-01.png",
+    "valueTags": [
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/interview/azai-studios-harji-singh-on-leading-a-small-studio-intelligent-risk-taking-and-pushing-boundaries",
+    "pubDate": "Mon, 25 May 2026 01:07:38 GMT",
+    "content": "Founded by Harji Singh, Azai Studios are a small team that aim to be as agile as a startup while delivering enterprise-level results. Their diverse creative skillsets give them a unique capacity to help organisations lead projects from end-to-end, including research, strategy, brand identity and content production. ‘Autodidacts with a polymathic attitude,’ their work spans industries ranging from real estate, consumer packaging, financial services, hospitality, fashion, automotive and luxury goods. We caught up wi…",
+    "image": "https://the-brandidentity.com/uploads/articles/2022/04/azai-studios-harji-singh-on-leading-a-small-studio-intelligent-risk-taking-and-pushing-boundaries/AzaiStudio-1.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "UX Conference August Announced (Aug 17",
+    "link": "https://www.nngroup.com/training/august/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Tue, 19 May 2026 06:52:05 +0000",
+    "content": "Take up to 5 in-depth training courses, teaching user experience best practices for successful design. Training focused on long-lasting skills for UX professionals. August 17 - August 28, 2026.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "Build a Figma Plugin with AI in 48 Hours (Cursor + Claude)",
+    "link": "https://www.intodesignsystems.com/blog/how-to-build-figma-plugin-with-ai-48-hours",
+    "pubDate": "Mon, 25 May 2026 01:07:59 GMT",
+    "content": "How 10 designers shipped Swap Wizard, a real Figma plugin, in 48 hours with Cursor, Claude and Lovable. Full vibe coding workflow, 4 Cursor modes, AI skills explained, free Figma Plugin Developer Skill.",
+    "image": "https://www.intodesignsystems.com/blog/img/hackathon-winners-figma-plugin-48-hours.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Into Design Systems",
+    "sourceUrl": "https://www.intodesignsystems.com/blog",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "The Case for Design Disposables",
+    "link": "https://www.nngroup.com/articles/design-disposables/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 22 May 2026 17:00:00 +0000",
+    "content": "Design disposables are rough artifacts you make to think, not to deliver. Learn to tell them apart from deliverables and avoid the sunk-cost trap.",
+    "image": "",
+    "valueTags": [],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "Closing the Loop: What to Do After a Design Critique Ends",
+    "link": "https://www.nngroup.com/articles/after-design-critique/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 22 May 2026 17:00:00 +0000",
+    "content": "Most designers invest in running critiques but skip the followup. That missing step is often why feedback culture breaks down.",
+    "image": "",
+    "valueTags": [],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "Four Levels Of Customer Understanding",
+    "link": "https://smashingmagazine.com/2026/05/four-levels-customer-understanding/",
+    "pubDate": "Fri, 22 May 2026 13:00:00 GMT",
+    "content": "What people say, feel, think, and do are often very different things. To understand the underlying reasons for user behavior, it helps to look beyond the surface and explore hidden motivations, root causes, and the different layers of reality that shape how people act. Brought to you by Measuring UX Impact, **friendly video course on UX** and design patterns by Vitaly.",
+    "image": "http://files.smashing.media/articles/four-levels-customer-understanding/four-levels-customer-understanding.jpg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  }
+]
