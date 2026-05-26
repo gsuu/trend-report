@@ -1,9 +1,12 @@
 name: Weekly Trend Collection
 
+# 자동 실행 비활성화 (CLAUDE.md 절대 규칙 #1 — 자동 발송 OFF).
+# 이 워크플로는 자동 newsletter 발송 단계를 포함하므로 cron trigger를 제거.
+# 수동 실행이 필요하면 workflow_dispatch로 실행. 자동 schedule 복구 전에
+# - scripts/collect/index.mjs의 p-limit 의존성 (package.json 누락)
+# - "Send newsletter" 단계가 의도된 발송 흐름인지
+# 둘 다 검토 필요.
 on:
-  schedule:
-    # 일요일 UTC 21:00 = 월요일 KST 06:00
-    - cron: '0 21 * * 0'
   workflow_dispatch:
 
 jobs:
