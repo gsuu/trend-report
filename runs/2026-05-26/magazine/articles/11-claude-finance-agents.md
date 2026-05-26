@@ -1,4 +1,4 @@
-#### 11. [Anthropic] 금융 에이전트 10종에 per-tool 권한·credential vault·audit log를 묶은 운영 모델
+#### 11. [Anthropic] 몇 시간을 도는 AI 에이전트, 권한과 감사 로그는 어떻게 끊을까
 
 - 날짜: 2026-05-26
 - 태그: AI Agents, agents_platform, Claude, 운영도구

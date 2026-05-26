@@ -1,4 +1,4 @@
-#### 13. Vercel이 WordPress에 40+ 프로바이더를 단일 키로 묶는 AI Gateway 플러그인을 붙였다
+#### 13. [Vercel] OpenAI가 다운돼도 WordPress 콘텐츠 자동화는 안 멈춘다
 
 - 날짜: 2026-05-26
 - 태그: Vercel AI Gateway, WordPress 7.0, WordPress AI Client, 멀티 프로바이더

@@ -1,4 +1,4 @@
-#### 06. [Smashing Magazine] Vitaly Friedman이 '고객 이해'를 말·생각·행동·이유 4단계로 분해했다
+#### 06. [Smashing Magazine] 설문은 1단계일 뿐 — 고객 이해의 진짜 4단계
 
 - 날짜: 2026-05-22
 - 태그: UX리서치, 사용자조사, 인터뷰, Exposure Hours

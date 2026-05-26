@@ -1,4 +1,4 @@
-#### 15. [Nuxt] Nuxt MCP Toolkit이 Vue SFC를 MCP 앱으로 묶어 Claude·ChatGPT 안에서 인라인 렌더링하게 했다
+#### 15. [Nuxt] Claude 답변창 안에 우리 Vue 컴포넌트가 그려진다
 
 - 날짜: 2026-05-19
 - 태그: Nuxt, MCP, Vue, 인라인 렌더링

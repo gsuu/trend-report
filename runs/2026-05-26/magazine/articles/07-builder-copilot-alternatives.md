@@ -1,4 +1,4 @@
-#### 07. [Builder.io] GitHub Copilot의 Opus 배수가 3x에서 27x로 뛰자 AI 코딩 도구 선택지가 다시 열렸다
+#### 07. [Builder.io] 6월 1일부터 Copilot Opus가 9배 비싸진다 — 대안 6종 비교
 
 - 날짜: 2026-05-26
 - 태그: GitHub Copilot, Cursor, Claude Code, AI 코딩 도구

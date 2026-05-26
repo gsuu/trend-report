@@ -1,4 +1,4 @@
-#### 12. Claude Design은 4개 디자인을 한 캔버스에 띄우지만 Figma 라운드트립·토큰은 아직이다
+#### 12. [Builder.io] Claude로 만든 시안은 우리 디자인 토큰을 모른다
 
 - 날짜: 2026-05-26
 - 태그: Claude Design, AI 디자인 도구, 디자인-코드 핸드오프, Tweaks

@@ -1,4 +1,4 @@
-#### 05. [pxd] pxd가 AI 시대의 robots.txt를 '학습용 봇'과 '검색용 봇'으로 갈라 다시 짰다
+#### 05. [pxd] robots.txt 한 줄이 AI 인용 정책이 되는 순간
 
 - 날짜: 2026-05-21
 - 태그: SEO, GEO, robots.txt, AI 크롤러

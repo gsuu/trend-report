@@ -1,6 +1,6 @@
 # 2026-05-26 매거진
 
-shortlist 16건 본문화 + 검수 + category-qa + 형식 보정 + 이미지 보강 완료.
+shortlist 16건 본문화 + 검수 + category-qa + 형식 보정 + 이미지 보강 + 타이틀 한국어 톤 보정 완료.
 
 산출물:
 - shortlist: `runs/2026-05-26/magazine/shortlist-20-30.md`
@@ -12,7 +12,7 @@ shortlist 16건 본문화 + 검수 + category-qa + 형식 보정 + 이미지 보
 
 ## SERVICE
 
-#### 01. 우아한형제들이 디자인시스템 안에 RAG 챗봇을 심어 컴포넌트 검색을 다시 짰다
+#### 01. 디자인시스템 문서에 챗봇이 들어왔다 — 우아한형제들이 컴포넌트를 찾는 법
 
 - 날짜: 2026-05-22
 - 태그: 디자인시스템, RAG, AWS Bedrock, Storybook
@@ -63,7 +63,7 @@ shortlist 16건 본문화 + 검수 + category-qa + 형식 보정 + 이미지 보
 
 ---
 
-#### 02. [오픈서베이] 외국인 유학생 100명이 K-푸드의 정체성 기준을 '원산지'에서 '맛·트렌드'로 옮겼다
+#### 02. [오픈서베이] 약과는 '캐러멜라이즈드 쿠키', 외국인 유학생 100명이 본 K-푸드의 진짜 정체
 
 - 날짜: 2026-05-26
 - 태그: K-푸드, 글로벌 소비자 조사, 카테고리 정체성, 길거리 음식
@@ -117,7 +117,7 @@ shortlist 16건 본문화 + 검수 + category-qa + 형식 보정 + 이미지 보
 
 ## DESIGN
 
-#### 03. [DIGITAL iNSIGHT] 이동석이 한국 UX의 다섯 영역을 '디지털 갑질'이라는 한 단어로 묶었다
+#### 03. [DIGITAL iNSIGHT] 키오스크·공동인증서·민원 사이트, 같은 함정에 빠져 있다
 
 - 날짜: 2026-05-18
 - 태그: 디지털 갑질, 저렴한 UX, 책임 전가, 키오스크, 공동인증서
@@ -168,7 +168,7 @@ shortlist 16건 본문화 + 검수 + category-qa + 형식 보정 + 이미지 보
 
 ---
 
-#### 04. [DIGITAL iNSIGHT] 와일리가 하나원큐의 IA를 '은행 업무'에서 '고객 자산 맥락'으로 옮겼다
+#### 04. [DIGITAL iNSIGHT] 하나원큐는 16개월 동안 '은행 업무'라는 메뉴를 지웠다
 
 - 날짜: 2026-05-26
 - 태그: 하나원큐, 정보구조, 금융앱리뉴얼, 디자인시스템
@@ -214,7 +214,7 @@ shortlist 16건 본문화 + 검수 + category-qa + 형식 보정 + 이미지 보
 
 ---
 
-#### 05. [pxd] pxd가 AI 시대의 robots.txt를 '학습용 봇'과 '검색용 봇'으로 갈라 다시 짰다
+#### 05. [pxd] robots.txt 한 줄이 AI 인용 정책이 되는 순간
 
 - 날짜: 2026-05-21
 - 태그: SEO, GEO, robots.txt, AI 크롤러
@@ -266,7 +266,7 @@ pxd 연재는 검색 최적화(SEO)에 생성형 엔진 최적화(GEO) 관점을
 
 ---
 
-#### 06. [Smashing Magazine] Vitaly Friedman이 '고객 이해'를 말·생각·행동·이유 4단계로 분해했다
+#### 06. [Smashing Magazine] 설문은 1단계일 뿐 — 고객 이해의 진짜 4단계
 
 - 날짜: 2026-05-22
 - 태그: UX리서치, 사용자조사, 인터뷰, Exposure Hours
@@ -319,7 +319,7 @@ UX 리서치 결과를 시안 근거로 쓸 때, 자료의 깊이가 흐려진 �
 
 ## DEV
 
-#### 07. [Builder.io] GitHub Copilot의 Opus 배수가 3x에서 27x로 뛰자 AI 코딩 도구 선택지가 다시 열렸다
+#### 07. [Builder.io] 6월 1일부터 Copilot Opus가 9배 비싸진다 — 대안 6종 비교
 
 - 날짜: 2026-05-26
 - 태그: GitHub Copilot, Cursor, Claude Code, AI 코딩 도구
@@ -370,7 +370,7 @@ Cursor와 Claude Code는 모델을 골라 쓸 수 있다는 점에서 동일선�
 
 ---
 
-#### 08. [GitHub] Issue fields가 Organization 전체 이슈에 자동 적용되는 public preview로 열렸다
+#### 08. [GitHub] Priority·Effort가 라벨이 아니라 이슈의 속성이 된다
 
 - 날짜: 2026-05-21
 - 태그: GitHub, Issue fields, Projects, REST/GraphQL API
@@ -422,7 +422,7 @@ GitHub가 라벨 운영의 한계를 정식으로 인정한 신호입니다. 라
 
 ---
 
-#### 09. [Vercel] Chat SDK가 AI SDK 도구를 흡수하며 write 액션 기본 승인 게이팅과 3프리셋 최소권한을 묶어 내놨다
+#### 09. [Vercel] AI 챗봇의 '쓰기' 호출은 기본 승인 — Chat SDK의 새 디폴트
 
 - 날짜: 2026-05-20
 - 태그: Chat SDK, AI SDK Tools, requireApproval, 권한 프리셋
@@ -473,7 +473,7 @@ LLM 에이전트가 채팅 화면에서 메시지를 읽고 답하던 단계를 
 
 ---
 
-#### 10. Anthropic이 SMB용 커넥터 7종과 15개 워크플로우·15개 스킬을 한 묶음으로 내놨다
+#### 10. [Anthropic] QuickBooks 권한 그대로 옮겨가는 Claude — 소규모팀용 자동화 묶음
 
 - 날짜: 2026-05-26
 - 태그: Claude Cowork, 커넥터, 에이전틱 워크플로우, 권한 전파
@@ -523,7 +523,7 @@ Anthropic은 이번 발표를 미국 SMB 시장 데이터(미국 GDP의 44%, 민
 
 ---
 
-#### 11. [Anthropic] 금융 에이전트 10종에 per-tool 권한·credential vault·audit log를 묶은 운영 모델
+#### 11. [Anthropic] 몇 시간을 도는 AI 에이전트, 권한과 감사 로그는 어떻게 끊을까
 
 - 날짜: 2026-05-26
 - 태그: AI Agents, agents_platform, Claude, 운영도구
@@ -575,7 +575,7 @@ Anthropic은 이번 발표를 미국 SMB 시장 데이터(미국 GDP의 44%, 민
 
 ---
 
-#### 12. Claude Design은 4개 디자인을 한 캔버스에 띄우지만 Figma 라운드트립·토큰은 아직이다
+#### 12. [Builder.io] Claude로 만든 시안은 우리 디자인 토큰을 모른다
 
 - 날짜: 2026-05-26
 - 태그: Claude Design, AI 디자인 도구, 디자인-코드 핸드오프, Tweaks
@@ -625,7 +625,7 @@ AI 디자인 도구는 “결과를 얼마나 잘 그리는가”에서 “기�
 
 ---
 
-#### 13. Vercel이 WordPress에 40+ 프로바이더를 단일 키로 묶는 AI Gateway 플러그인을 붙였다
+#### 13. [Vercel] OpenAI가 다운돼도 WordPress 콘텐츠 자동화는 안 멈춘다
 
 - 날짜: 2026-05-26
 - 태그: Vercel AI Gateway, WordPress 7.0, WordPress AI Client, 멀티 프로바이더
@@ -676,7 +676,7 @@ WordPress AI Client가 7.0에서 처음 표준화되면서 플러그인마다 �
 
 ---
 
-#### 14. [GitHub] Copilot 코드 리뷰 'Fix' 버튼에 모델 선택과 일괄 처리 다이얼로그가 붙었다
+#### 14. [GitHub] PR에 AI 패치를 한 번에 꽂던 시대는 끝났다 — Copilot 'Fix' 다이얼로그
 
 - 날짜: 2026-05-19
 - 태그: GitHub Copilot, Code Review, Pull Request, Cloud Agent
@@ -725,7 +725,7 @@ PR 리뷰 자동화 파이프라인을 운영 중이라면 점검할 지점이 �
 
 ---
 
-#### 15. [Nuxt] Nuxt MCP Toolkit이 Vue SFC를 MCP 앱으로 묶어 Claude·ChatGPT 안에서 인라인 렌더링하게 했다
+#### 15. [Nuxt] Claude 답변창 안에 우리 Vue 컴포넌트가 그려진다
 
 - 날짜: 2026-05-19
 - 태그: Nuxt, MCP, Vue, 인라인 렌더링
@@ -784,7 +784,7 @@ MCP 자체는 도구 호출과 데이터 전달 규약이라 그동안 응답은
 
 ---
 
-#### 16. Builder.io가 PR마다 브라우저로 해피 패스·엣지·리그레션을 도는 QA 에이전트를 붙였다
+#### 16. [Builder.io] PR마다 브라우저로 실제 클릭·타이핑하는 QA 에이전트
 
 - 날짜: 2026-05-26
 - 태그: PR 자동 QA, 브라우저 테스트, Builder.io, QA 에이전트
@@ -836,4 +836,4 @@ AI 에이전트가 코드 변경을 만들어내는 속도가 사람 리뷰어�
 
 ## 수집했지만 제외한 것
 
-원문 검증·타겟 분류 단계 제외 항목은 shortlist 파일 참고. magazine-review 추가 제외 없음.
+shortlist 파일 참고. magazine-review 추가 제외 없음.

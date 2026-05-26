@@ -1,4 +1,4 @@
-#### 09. [Vercel] Chat SDK가 AI SDK 도구를 흡수하며 write 액션 기본 승인 게이팅과 3프리셋 최소권한을 묶어 내놨다
+#### 09. [Vercel] AI 챗봇의 '쓰기' 호출은 기본 승인 — Chat SDK의 새 디폴트
 
 - 날짜: 2026-05-20
 - 태그: Chat SDK, AI SDK Tools, requireApproval, 권한 프리셋
