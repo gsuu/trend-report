@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-14",
+  "updatedAt": "2026-05-26",
   "policy": {
     "scoreScale": [
       -2,
@@ -47,6 +47,10 @@
       "count": 1
     },
     "newsroom.musinsa.com": {
+      "score": -2,
+      "count": 1
+    },
+    "toss.tech": {
       "score": -2,
       "count": 1
     }
@@ -101,10 +105,16 @@
     "design_dev_reference": {
       "score": -14,
       "count": 8
+    },
+    "fintech": {
+      "score": -2,
+      "count": 1
     }
   },
   "reasons": {
-    "general_appeal_low": {},
+    "general_appeal_low": {
+      "toss.tech": 1
+    },
     "audience_mismatch": {},
     "stale_topic": {},
     "promotional": {},
@@ -270,6 +280,18 @@
       "publisher": "무신사 뉴스룸 (29CM)",
       "category": "core_ecommerce",
       "note": "DESIGN 보강 supplement 추가 후 사용자 추가 지시로 오늘자 제외"
+    },
+    {
+      "date": "2026-05-26",
+      "id": "policy-fintech-soft-exclude",
+      "score": -2,
+      "reasons": [
+        "general_appeal_low"
+      ],
+      "domain": "toss.tech",
+      "publisher": "토스 테크 (정책 차원)",
+      "category": "fintech",
+      "note": "사용자 지시 — 핀테크는 CTTD 독자 관심도 낮음, 큰 화제 아니면 후보 우선순위 하위. domains.toss.tech와 categories.fintech 양쪽 -2. autoDemote=false라 정렬 가산점만 영향, 큰 화제는 그대로 P0/P1으로 올라옴."
     }
   ]
 }
