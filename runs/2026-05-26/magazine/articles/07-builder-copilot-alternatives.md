@@ -1,4 +1,4 @@
-#### 07. [Builder.io] 6월 1일부터 Copilot Opus가 9배 비싸진다 — 대안 6종 비교
+#### 07. 6 Best GitHub Copilot Alternatives in 2026
 
 - 날짜: 2026-05-26
 - 태그: GitHub Copilot, Cursor, Claude Code, AI 코딩 도구

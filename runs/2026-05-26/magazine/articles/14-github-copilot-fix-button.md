@@ -1,4 +1,4 @@
-#### 14. [GitHub] PR에 AI 패치를 한 번에 꽂던 시대는 끝났다 — Copilot 'Fix' 다이얼로그
+#### 14. Easily apply Copilot code review feedback with Copilot cloud agent
 
 - 날짜: 2026-05-19
 - 태그: GitHub Copilot, Code Review, Pull Request, Cloud Agent

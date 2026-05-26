@@ -1,4 +1,4 @@
-#### 10. [Anthropic] QuickBooks 권한 그대로 옮겨가는 Claude — 소규모팀용 자동화 묶음
+#### 10. Introducing Claude for Small Business
 
 - 날짜: 2026-05-26
 - 태그: Claude Cowork, 커넥터, 에이전틱 워크플로우, 권한 전파

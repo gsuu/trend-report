@@ -1,6 +1,6 @@
 # 2026-05-26 매거진
 
-shortlist 16건 본문화 + 검수 + category-qa + 형식 보정 + 이미지 보강 + 타이틀 한국어 톤 보정 완료.
+shortlist 16건 본문화 + 검수 + category-qa + 형식 보정 + 이미지 보강 완료. 타이틀은 원문 그대로 사용.
 
 산출물:
 - shortlist: `runs/2026-05-26/magazine/shortlist-20-30.md`
@@ -12,7 +12,7 @@ shortlist 16건 본문화 + 검수 + category-qa + 형식 보정 + 이미지 보
 
 ## SERVICE
 
-#### 01. 디자인시스템 문서에 챗봇이 들어왔다 — 우아한형제들이 컴포넌트를 찾는 법
+#### 01. 우아한공방의 새로운 동료, 시스템 맥락을 가진 챗봇서비스 개발기(feat. RAG)
 
 - 날짜: 2026-05-22
 - 태그: 디자인시스템, RAG, AWS Bedrock, Storybook
@@ -63,7 +63,7 @@ shortlist 16건 본문화 + 검수 + category-qa + 형식 보정 + 이미지 보
 
 ---
 
-#### 02. [오픈서베이] 약과는 '캐러멜라이즈드 쿠키', 외국인 유학생 100명이 본 K-푸드의 진짜 정체
+#### 02. K-푸드 글로벌 트렌드, 약과부터 라면까지 외국인 유학생 100명이 발견한 K-푸드의 '반전'
 
 - 날짜: 2026-05-26
 - 태그: K-푸드, 글로벌 소비자 조사, 카테고리 정체성, 길거리 음식
@@ -117,7 +117,7 @@ shortlist 16건 본문화 + 검수 + category-qa + 형식 보정 + 이미지 보
 
 ## DESIGN
 
-#### 03. [DIGITAL iNSIGHT] 키오스크·공동인증서·민원 사이트, 같은 함정에 빠져 있다
+#### 03. [참을 수 없는 UX의 저렴함 ①] 무책임한 설계 속 '디지털 갑질'
 
 - 날짜: 2026-05-18
 - 태그: 디지털 갑질, 저렴한 UX, 책임 전가, 키오스크, 공동인증서
@@ -168,7 +168,7 @@ shortlist 16건 본문화 + 검수 + category-qa + 형식 보정 + 이미지 보
 
 ---
 
-#### 04. [DIGITAL iNSIGHT] 하나원큐는 16개월 동안 '은행 업무'라는 메뉴를 지웠다
+#### 04. "어제처럼 자연스럽지만, 어제보다 편하게" 와일리의 하나원큐 UI·UX 리뉴얼
 
 - 날짜: 2026-05-26
 - 태그: 하나원큐, 정보구조, 금융앱리뉴얼, 디자인시스템
@@ -214,7 +214,7 @@ shortlist 16건 본문화 + 검수 + category-qa + 형식 보정 + 이미지 보
 
 ---
 
-#### 05. [pxd] robots.txt 한 줄이 AI 인용 정책이 되는 순간
+#### 05. 검색엔진은 우리 사이트를 어떻게 발견할까?
 
 - 날짜: 2026-05-21
 - 태그: SEO, GEO, robots.txt, AI 크롤러
@@ -266,7 +266,7 @@ pxd 연재는 검색 최적화(SEO)에 생성형 엔진 최적화(GEO) 관점을
 
 ---
 
-#### 06. [Smashing Magazine] 설문은 1단계일 뿐 — 고객 이해의 진짜 4단계
+#### 06. Four Levels Of Customer Understanding
 
 - 날짜: 2026-05-22
 - 태그: UX리서치, 사용자조사, 인터뷰, Exposure Hours
@@ -319,7 +319,7 @@ UX 리서치 결과를 시안 근거로 쓸 때, 자료의 깊이가 흐려진 �
 
 ## DEV
 
-#### 07. [Builder.io] 6월 1일부터 Copilot Opus가 9배 비싸진다 — 대안 6종 비교
+#### 07. 6 Best GitHub Copilot Alternatives in 2026
 
 - 날짜: 2026-05-26
 - 태그: GitHub Copilot, Cursor, Claude Code, AI 코딩 도구
@@ -370,7 +370,7 @@ Cursor와 Claude Code는 모델을 골라 쓸 수 있다는 점에서 동일선�
 
 ---
 
-#### 08. [GitHub] Priority·Effort가 라벨이 아니라 이슈의 속성이 된다
+#### 08. Issue fields are now in public preview for all organizations
 
 - 날짜: 2026-05-21
 - 태그: GitHub, Issue fields, Projects, REST/GraphQL API
@@ -422,7 +422,7 @@ GitHub가 라벨 운영의 한계를 정식으로 인정한 신호입니다. 라
 
 ---
 
-#### 09. [Vercel] AI 챗봇의 '쓰기' 호출은 기본 승인 — Chat SDK의 새 디폴트
+#### 09. Chat SDK now includes AI SDK tools
 
 - 날짜: 2026-05-20
 - 태그: Chat SDK, AI SDK Tools, requireApproval, 권한 프리셋
@@ -473,7 +473,7 @@ LLM 에이전트가 채팅 화면에서 메시지를 읽고 답하던 단계를 
 
 ---
 
-#### 10. [Anthropic] QuickBooks 권한 그대로 옮겨가는 Claude — 소규모팀용 자동화 묶음
+#### 10. Introducing Claude for Small Business
 
 - 날짜: 2026-05-26
 - 태그: Claude Cowork, 커넥터, 에이전틱 워크플로우, 권한 전파
@@ -523,7 +523,7 @@ Anthropic은 이번 발표를 미국 SMB 시장 데이터(미국 GDP의 44%, 민
 
 ---
 
-#### 11. [Anthropic] 몇 시간을 도는 AI 에이전트, 권한과 감사 로그는 어떻게 끊을까
+#### 11. Agents for financial services
 
 - 날짜: 2026-05-26
 - 태그: AI Agents, agents_platform, Claude, 운영도구
@@ -575,7 +575,7 @@ Anthropic은 이번 발표를 미국 SMB 시장 데이터(미국 GDP의 44%, 민
 
 ---
 
-#### 12. [Builder.io] Claude로 만든 시안은 우리 디자인 토큰을 모른다
+#### 12. Claude Design Review: An Innovative Way to Brainstorm with AI
 
 - 날짜: 2026-05-26
 - 태그: Claude Design, AI 디자인 도구, 디자인-코드 핸드오프, Tweaks
@@ -625,7 +625,7 @@ AI 디자인 도구는 “결과를 얼마나 잘 그리는가”에서 “기�
 
 ---
 
-#### 13. [Vercel] OpenAI가 다운돼도 WordPress 콘텐츠 자동화는 안 멈춘다
+#### 13. Vercel AI Gateway plugin for WordPress
 
 - 날짜: 2026-05-26
 - 태그: Vercel AI Gateway, WordPress 7.0, WordPress AI Client, 멀티 프로바이더
@@ -676,7 +676,7 @@ WordPress AI Client가 7.0에서 처음 표준화되면서 플러그인마다 �
 
 ---
 
-#### 14. [GitHub] PR에 AI 패치를 한 번에 꽂던 시대는 끝났다 — Copilot 'Fix' 다이얼로그
+#### 14. Easily apply Copilot code review feedback with Copilot cloud agent
 
 - 날짜: 2026-05-19
 - 태그: GitHub Copilot, Code Review, Pull Request, Cloud Agent
@@ -725,7 +725,7 @@ PR 리뷰 자동화 파이프라인을 운영 중이라면 점검할 지점이 �
 
 ---
 
-#### 15. [Nuxt] Claude 답변창 안에 우리 Vue 컴포넌트가 그려진다
+#### 15. Nuxt MCP Toolkit now supports MCP apps
 
 - 날짜: 2026-05-19
 - 태그: Nuxt, MCP, Vue, 인라인 렌더링
@@ -784,7 +784,7 @@ MCP 자체는 도구 호출과 데이터 전달 규약이라 그동안 응답은
 
 ---
 
-#### 16. [Builder.io] PR마다 브라우저로 실제 클릭·타이핑하는 QA 에이전트
+#### 16. Announcing Quality Review Agent: Agentic QA on Every PR
 
 - 날짜: 2026-05-26
 - 태그: PR 자동 QA, 브라우저 테스트, Builder.io, QA 에이전트

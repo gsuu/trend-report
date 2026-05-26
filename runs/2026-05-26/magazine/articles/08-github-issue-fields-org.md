@@ -1,4 +1,4 @@
-#### 08. [GitHub] Priority·Effort가 라벨이 아니라 이슈의 속성이 된다
+#### 08. Issue fields are now in public preview for all organizations
 
 - 날짜: 2026-05-21
 - 태그: GitHub, Issue fields, Projects, REST/GraphQL API

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T11:15:51.253588+00:00",
+  "generatedAt": "2026-05-26T23:57:39.701734+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -7,7 +7,7 @@
     "issues": [
       {
         "number": "01",
-        "platform": "디자인시스템",
+        "platform": "우아한공방의",
         "areaKey": "service",
         "area": "Service",
         "categoryKey": "ecommerce",
@@ -26,7 +26,7 @@
           "RAG",
           "AWS Bedrock"
         ],
-        "takeawayHtml": "디자인시스템 문서에 챗봇이 들어왔다 — 우아한형제들이 컴포넌트를 찾는 법",
+        "takeawayHtml": "우아한공방의 새로운 동료, 시스템 맥락을 가진 챗봇서비스 개발기(feat. RAG)",
         "deckHtml": "우아한형제들 디자인시스템플랫폼팀이 사내 디자인시스템 우아한공방의 컴포넌트·정책 검색을 슬랙 서포트 채널에서 떼어내, AWS Bedrock Knowledge Bases 기반 RAG 챗봇을 Storybook 문서 위에 직접 띄우는 구조로 옮겼습니다. 메타데이터 구분자와 Guardrail 두 정책으로 답변 범위를 좁혀, 디자인시스템 문서를 보는 동선 안에서 그대로 질문을 끝낼 수 있게 만들었습니다.",
         "facts": [
           {
@@ -183,7 +183,7 @@
       },
       {
         "number": "02",
-        "platform": "오픈서베이",
+        "platform": "K-푸드",
         "areaKey": "service",
         "area": "Service",
         "categoryKey": "ecommerce",
@@ -202,7 +202,7 @@
           "글로벌 소비자 조사",
           "카테고리 정체성"
         ],
-        "takeawayHtml": "약과는 &#x27;캐러멜라이즈드 쿠키&#x27;, 외국인 유학생 100명이 본 K-푸드의 진짜 정체",
+        "takeawayHtml": "K-푸드 글로벌 트렌드, 약과부터 라면까지 외국인 유학생 100명이 발견한 K-푸드의 &#x27;반전&#x27;",
         "deckHtml": "오픈서베이가 서울 거주 외국인 대학(원)생 100명을 조사한 결과, K-푸드를 정의하는 1순위 기준이 &#x27;한국 원산지&#x27;가 아니라 &#x27;한국적 맛과 풍미&#x27;(65%)와 &#x27;유행하는 길거리 음식&#x27;(74%)으로 옮겨가고 있음을 확인했습니다. 글로벌 채널의 카테고리 라벨과 상품명을 다시 점검할 시점이라는 신호입니다.",
         "facts": [
           {
@@ -364,7 +364,7 @@
       },
       {
         "number": "03",
-        "platform": "DIGITAL iNSIGHT",
+        "platform": "참을 수 없는 UX의 저렴함 ①",
         "areaKey": "design",
         "area": "Design",
         "categoryKey": "insight",
@@ -383,7 +383,7 @@
           "저렴한 UX",
           "책임 전가"
         ],
-        "takeawayHtml": "키오스크·공동인증서·민원 사이트, 같은 함정에 빠져 있다",
+        "takeawayHtml": "무책임한 설계 속 &#x27;디지털 갑질&#x27;",
         "deckHtml": "레인메이커DNC 대표 이동석이 정부 민원·은행 앱·병원 예약·보험 청구·업무 시스템 다섯 영역을 한데 묶어 &quot;디지털 갑질&quot;로 규정하고, 키오스크 앞 어르신·보안 PDF 캡처 30분·공동인증서 학습 같은 장면을 같은 구조의 책임 전가 사례로 분석합니다.",
         "facts": [
           {
@@ -540,7 +540,7 @@
       },
       {
         "number": "04",
-        "platform": "DIGITAL iNSIGHT",
+        "platform": "\"어제처럼",
         "areaKey": "design",
         "area": "Design",
         "categoryKey": "insight",
@@ -559,7 +559,7 @@
           "정보구조",
           "금융앱리뉴얼"
         ],
-        "takeawayHtml": "하나원큐는 16개월 동안 &#x27;은행 업무&#x27;라는 메뉴를 지웠다",
+        "takeawayHtml": "&quot;어제처럼 자연스럽지만, 어제보다 편하게&quot; 와일리의 하나원큐 UI·UX 리뉴얼",
         "deckHtml": "와일리가 16개월간 진행한 하나은행 &#x27;FIRST 하나원큐&#x27; 리뉴얼이 2026년 2월 19일 오픈했다. 핵심은 메뉴를 예금·대출 같은 은행 업무 분류에서 고객의 자산 맥락 중심으로 다시 짠 것.",
         "facts": [
           {
@@ -701,7 +701,7 @@
       },
       {
         "number": "05",
-        "platform": "pxd",
+        "platform": "검색엔진은",
         "areaKey": "design",
         "area": "Design",
         "categoryKey": "insight",
@@ -720,7 +720,7 @@
           "GEO",
           "robots.txt"
         ],
-        "takeawayHtml": "robots.txt 한 줄이 AI 인용 정책이 되는 순간",
+        "takeawayHtml": "검색엔진은 우리 사이트를 어떻게 발견할까?",
         "deckHtml": "pxd UX Engineer 연재가 크롤링·인덱싱·랭킹 3단계 흐름에 맞춰 robots.txt·sitemap·canonical·내부 링크·리다이렉트 다섯 항목을 다시 짜고, GPTBot 같은 학습용 봇과 OAI-SearchBot 같은 검색 노출용 봇을 robots.txt에서 따로 통제하는 AI 시대 정책을 예시 코드와 함께 제안합니다.",
         "facts": [
           {
@@ -882,7 +882,7 @@
       },
       {
         "number": "06",
-        "platform": "Smashing Magazine",
+        "platform": "Four",
         "areaKey": "design",
         "area": "Design",
         "categoryKey": "insight",
@@ -901,7 +901,7 @@
           "사용자조사",
           "인터뷰"
         ],
-        "takeawayHtml": "설문은 1단계일 뿐 — 고객 이해의 진짜 4단계",
+        "takeawayHtml": "Four Levels Of Customer Understanding",
         "deckHtml": "Vitaly Friedman이 고객 이해를 &#x27;말하는 것·생각하는 것·실제 행동·행동의 이유&#x27; 4단계로 나누고, 각 단계마다 신뢰도가 다르므로 설문·인터뷰·관찰·심화 대화를 따로 매칭해야 한다고 정리했습니다. 조직 전체가 단계를 끌어올리는 장치로 6~12주마다 직원이 고객과 2시간을 보내는 &#x27;Exposure Hours&#x27;를 제시합니다.",
         "facts": [
           {
@@ -1058,7 +1058,7 @@
       },
       {
         "number": "07",
-        "platform": "Builder.io",
+        "platform": "6",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "ai",
@@ -1077,7 +1077,7 @@
           "Cursor",
           "Claude Code"
         ],
-        "takeawayHtml": "6월 1일부터 Copilot Opus가 9배 비싸진다 — 대안 6종 비교",
+        "takeawayHtml": "6 Best GitHub Copilot Alternatives in 2026",
         "deckHtml": "GitHub Copilot이 2026년 6월 1일부터 사용량 기반 과금으로 전환하면서 Sonnet 4.6 요청 배수가 1x에서 9x로, Opus 4.6은 3x에서 27x로 올라가, 같은 작업을 Cursor·Claude Code·Codex·Zed로 옮길 때 월 비용이 얼마나 달라지는지 다시 계산해봐야 하는 시점이 됐습니다.",
         "facts": [
           {
@@ -1234,7 +1234,7 @@
       },
       {
         "number": "08",
-        "platform": "GitHub",
+        "platform": "Issue",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "tool",
@@ -1253,7 +1253,7 @@
           "Issue fields",
           "Projects"
         ],
-        "takeawayHtml": "Priority·Effort가 라벨이 아니라 이슈의 속성이 된다",
+        "takeawayHtml": "Issue fields are now in public preview for all organizations",
         "deckHtml": "GitHub가 Priority·Effort 같은 메타데이터를 Organization 레벨에서 정의하고 모든 리포지토리의 모든 이슈에 자동으로 꽂아넣는 Issue fields를 public preview로 열었습니다. 라벨이나 프로젝트 필드에 흩어져 있던 우선순위·공수 정보를 이슈 자체의 속성으로 끌어올리는 변화입니다.",
         "facts": [
           {
@@ -1415,7 +1415,7 @@
       },
       {
         "number": "09",
-        "platform": "Vercel",
+        "platform": "Chat",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "ai",
@@ -1434,7 +1434,7 @@
           "AI SDK Tools",
           "requireApproval"
         ],
-        "takeawayHtml": "AI 챗봇의 &#x27;쓰기&#x27; 호출은 기본 승인 — Chat SDK의 새 디폴트",
+        "takeawayHtml": "Chat SDK now includes AI SDK tools",
         "deckHtml": "Vercel이 Chat SDK 안에 AI SDK 도구 어댑터를 새 서브패스로 넣고, write 액션을 기본 승인 게이팅으로 묶었다. reader·messenger·moderator 3개 프리셋이 도구 노출 범위를 정하고, 선택된 프리셋이 허용한 도구만 실제로 만들어진다.",
         "facts": [
           {
@@ -1591,7 +1591,7 @@
       },
       {
         "number": "10",
-        "platform": "Anthropic",
+        "platform": "Introducing",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "ai",
@@ -1610,7 +1610,7 @@
           "커넥터",
           "에이전틱 워크플로우"
         ],
-        "takeawayHtml": "QuickBooks 권한 그대로 옮겨가는 Claude — 소규모팀용 자동화 묶음",
+        "takeawayHtml": "Introducing Claude for Small Business",
         "deckHtml": "Anthropic이 Claude Cowork 위에 PayPal·QuickBooks·HubSpot·Canva·Docusign·Google Workspace·Microsoft 365 커넥터 7종과 재무·운영·세일즈·마케팅·HR·CS 영역의 15개 에이전틱 워크플로우, 그리고 반복 작업용 15개 스킬을 묶은 Claude for Small Business를 공개했습니다. 기존 도구의 사용자 권한이 그대로 Claude로 전파되고, 실행 전 계획을 사람이 승인하거나 end-to-end로 위임하는 두 가지 모드를 제공합니다.",
         "facts": [
           {
@@ -1762,7 +1762,7 @@
       },
       {
         "number": "11",
-        "platform": "Anthropic",
+        "platform": "Agents",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "ai",
@@ -1781,7 +1781,7 @@
           "agents_platform",
           "Claude"
         ],
-        "takeawayHtml": "몇 시간을 도는 AI 에이전트, 권한과 감사 로그는 어떻게 끊을까",
+        "takeawayHtml": "Agents for financial services",
         "deckHtml": "Anthropic이 금융 업무 10종을 자동화하는 Claude 에이전트 템플릿과 함께, 멀티 시간 단위 long-running session을 per-tool 권한·관리형 credential vault·전체 audit log로 묶은 Managed Agents 운영 모델을 공개했습니다. 사내 자율 에이전트의 권한·자격증명·감사 로그를 분리해서 점검하는 reference로 활용할 수 있습니다.",
         "facts": [
           {
@@ -1943,7 +1943,7 @@
       },
       {
         "number": "12",
-        "platform": "Builder.io",
+        "platform": "Claude",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "ai",
@@ -1962,7 +1962,7 @@
           "AI 디자인 도구",
           "디자인-코드 핸드오프"
         ],
-        "takeawayHtml": "Claude로 만든 시안은 우리 디자인 토큰을 모른다",
+        "takeawayHtml": "Claude Design Review: An Innovative Way to Brainstorm with AI",
         "deckHtml": "Builder.io는 Anthropic의 Claude Design이 한 캔버스에 4개 디자인을 띄우고 Tweaks 슬라이더로 비파괴 편집까지 지원하는 점은 인정하지만, Figma 라운드트립·디자인 토큰·코드 컴포넌트가 빠져 엔지니어가 처음부터 다시 만들어야 한다고 짚었습니다.",
         "facts": [
           {
@@ -2133,7 +2133,7 @@
           "WordPress 7.0",
           "WordPress AI Client"
         ],
-        "takeawayHtml": "OpenAI가 다운돼도 WordPress 콘텐츠 자동화는 안 멈춘다",
+        "takeawayHtml": "Vercel AI Gateway plugin for WordPress",
         "deckHtml": "Vercel이 WordPress 7.0과 함께 공개된 WordPress AI Client에 붙이는 AI Gateway 커넥터 플러그인을 내놓아, 40개 이상 프로바이더와 수백 개 모델을 단일 API 키로 호출하고 프로바이더 장애 시 자동 폴백으로 콘텐츠 자동화 흐름을 유지하도록 했습니다.",
         "facts": [
           {
@@ -2290,7 +2290,7 @@
       },
       {
         "number": "14",
-        "platform": "GitHub",
+        "platform": "Easily",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "ai",
@@ -2309,7 +2309,7 @@
           "Code Review",
           "Pull Request"
         ],
-        "takeawayHtml": "PR에 AI 패치를 한 번에 꽂던 시대는 끝났다 — Copilot &#x27;Fix&#x27; 다이얼로그",
+        "takeawayHtml": "Easily apply Copilot code review feedback with Copilot cloud agent",
         "deckHtml": "GitHub이 Copilot 코드 리뷰의 &quot;Implement suggestion&quot; 버튼을 &quot;Fix with Copilot&quot;으로 바꾸고, 클릭하면 적용 위치(현재 PR vs 새 PR)·모델·추가 지시를 고를 수 있는 다이얼로그를 띄우도록 바꿨습니다. &quot;Implement all suggestions&quot;는 &quot;Fix batch with Copilot&quot;이 되어 여러 리뷰 코멘트를 클라우드 에이전트로 한 번에 처리합니다.",
         "facts": [
           {
@@ -2475,7 +2475,7 @@
           "MCP",
           "Vue"
         ],
-        "takeawayHtml": "Claude 답변창 안에 우리 Vue 컴포넌트가 그려진다",
+        "takeawayHtml": "Nuxt MCP Toolkit now supports MCP apps",
         "deckHtml": "Nuxt MCP Toolkit이 Vue SFC를 빌드 타임에 self-contained HTML로 번들링해 MCP 엔드포인트에서 서빙하도록 바뀌었고, Claude와 ChatGPT 같은 MCP 클라이언트가 그 결과를 텍스트 응답 대신 인터랙티브 UI로 인라인 렌더링한다.",
         "facts": [
           {
@@ -2657,7 +2657,7 @@
       },
       {
         "number": "16",
-        "platform": "Builder.io",
+        "platform": "Announcing",
         "areaKey": "dev",
         "area": "DEV",
         "categoryKey": "tool",
@@ -2676,7 +2676,7 @@
           "브라우저 테스트",
           "Builder.io"
         ],
-        "takeawayHtml": "PR마다 브라우저로 실제 클릭·타이핑하는 QA 에이전트",
+        "takeawayHtml": "Announcing Quality Review Agent: Agentic QA on Every PR",
         "deckHtml": "Builder.io가 모든 PR에 대해 실제 브라우저로 제품을 띄우고 클릭·타이핑·플로우를 직접 수행하는 Quality Review Agent를 공개했습니다. 해피 패스·엣지 케이스·리그레션 세 레이어를 한 번에 돌고, 발견한 버그마다 같은 PR로 수정을 되돌려보내는 Fix in Builder 버튼을 붙였습니다.",
         "facts": [
           {

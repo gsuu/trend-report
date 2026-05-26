@@ -1,4 +1,4 @@
-#### 11. [Anthropic] 몇 시간을 도는 AI 에이전트, 권한과 감사 로그는 어떻게 끊을까
+#### 11. Agents for financial services
 
 - 날짜: 2026-05-26
 - 태그: AI Agents, agents_platform, Claude, 운영도구
