@@ -1,6 +1,255 @@
 {
   "date": "2026-05-26",
   "sourceFile": "news-tracking/dev-sources.json",
-  "totalArticles": 0,
-  "sourceResults": []
+  "totalArticles": 103,
+  "sourceResults": [
+    {
+      "name": "GeekNews",
+      "type": "feed",
+      "url": "https://news.hada.io/rss/news",
+      "status": "ok",
+      "count": 29,
+      "error": ""
+    },
+    {
+      "name": "Frontend Focus",
+      "type": "feed",
+      "url": "https://frontendfoc.us/rss",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    },
+    {
+      "name": "CSS Weekly",
+      "type": "feed",
+      "url": "https://css-weekly.com/feed/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "JavaScript Weekly",
+      "type": "feed",
+      "url": "https://javascriptweekly.com/rss",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Smashing Magazine",
+      "type": "feed",
+      "url": "https://www.smashingmagazine.com/feed/",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    },
+    {
+      "name": "CSS-Tricks",
+      "type": "feed",
+      "url": "https://css-tricks.com/feed/",
+      "status": "ok",
+      "count": 3,
+      "error": ""
+    },
+    {
+      "name": "web.dev",
+      "type": "feed",
+      "url": "https://web.dev/feed.xml",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "WebKit Blog",
+      "type": "feed",
+      "url": "https://webkit.org/feed/",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    },
+    {
+      "name": "MDN Blog",
+      "type": "feed",
+      "url": "https://developer.mozilla.org/en-US/blog/rss.xml",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Vercel Blog",
+      "type": "feed",
+      "url": "https://vercel.com/atom",
+      "status": "ok",
+      "count": 10,
+      "error": ""
+    },
+    {
+      "name": "Astro Blog",
+      "type": "feed",
+      "url": "https://astro.build/rss.xml",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "React Blog",
+      "type": "feed",
+      "url": "https://react.dev/rss.xml",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Svelte Blog",
+      "type": "feed",
+      "url": "https://svelte.dev/blog/rss.xml",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "GitHub Changelog",
+      "type": "feed",
+      "url": "https://github.blog/changelog/feed/",
+      "status": "ok",
+      "count": 9,
+      "error": ""
+    },
+    {
+      "name": "Storybook Blog",
+      "type": "feed",
+      "url": "https://storybook.js.org/blog/rss",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "shadcn/ui Releases",
+      "type": "feed",
+      "url": "https://github.com/shadcn-ui/ui/releases.atom",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    },
+    {
+      "name": "Sara Soueidan",
+      "type": "feed",
+      "url": "https://www.sarasoueidan.com/blog/index.xml",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Adrian Roselli",
+      "type": "feed",
+      "url": "https://adrianroselli.com/feed",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    },
+    {
+      "name": "Scott O'Hara",
+      "type": "feed",
+      "url": "https://www.scottohara.me/feed.xml",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "The A11y Project",
+      "type": "feed",
+      "url": "https://www.a11yproject.com/feed/feed.xml",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Deque Blog",
+      "type": "feed",
+      "url": "https://www.deque.com/blog/feed/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Naver D2",
+      "type": "feed",
+      "url": "https://d2.naver.com/d2.atom",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "KakaoEnt Tech",
+      "type": "feed",
+      "url": "https://tech.kakaoent.com/rss.xml",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Line Engineering KR",
+      "type": "feed",
+      "url": "https://engineering.linecorp.com/ko/feed/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Chrome for Developers",
+      "type": "page",
+      "url": "https://developer.chrome.com/blog",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Anthropic News",
+      "type": "page",
+      "url": "https://www.anthropic.com/news",
+      "status": "ok",
+      "count": 8,
+      "error": ""
+    },
+    {
+      "name": "OpenAI Blog",
+      "type": "page",
+      "url": "https://openai.com/blog/",
+      "status": "ok",
+      "count": 10,
+      "error": ""
+    },
+    {
+      "name": "Cursor Changelog",
+      "type": "page",
+      "url": "https://cursor.com/changelog",
+      "status": "ok",
+      "count": 6,
+      "error": ""
+    },
+    {
+      "name": "v0 by Vercel Changelog",
+      "type": "page",
+      "url": "https://v0.dev/changelog",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Builder.io Blog",
+      "type": "page",
+      "url": "https://www.builder.io/blog",
+      "status": "ok",
+      "count": 12,
+      "error": ""
+    },
+    {
+      "name": "Frontend Masters Blog",
+      "type": "page",
+      "url": "https://frontendmasters.com/blog/",
+      "status": "ok",
+      "count": 11,
+      "error": ""
+    }
+  ]
 }
