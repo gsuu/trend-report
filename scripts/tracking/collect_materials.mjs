@@ -244,6 +244,24 @@ function roleTags(article) {
   return [...tags];
 }
 
+// Phase A — newsroom 도메인의 보도자료/브랜드 라벨/행사 포스트는 사전 제외.
+// 현재 evidenceTags 키워드 매처가 commerce_core를 잡아 P0로 분류하지만,
+// 실제로는 광고·이벤트성이라 verifier가 봐도 "원문 부족"이 된다.
+// 도메인 + 제목 패턴 양쪽이 모두 일치할 때만 자동 제외.
+function isNewsroomPromo(article) {
+  const title = article.title || "";
+  const domain = linkDomain(article.link || "").toLowerCase();
+  const newsroomDomain = /^newsroom\.|^news\.coupang\.com$|^press\./i.test(domain);
+  if (!newsroomDomain) return false;
+  // [보도자료] prefix — Coupang 등이 사용
+  if (/\[\s*보도자료\s*\]/.test(title)) return true;
+  // [브랜드 Only], [굿 센스], [XX 픽] 같은 브랜드 라벨 prefix — Kurly, Musinsa 등이 사용
+  if (/^\s*\[[^\]]{1,20}(Only|센스|스토리|픽|초이스|레터|이슈|딜|클럽)\s*\]/i.test(title)) return true;
+  // 행사·캠페인·이벤트 키워드 (개최/낙점/촬영/광고제/페스티벌 등)
+  if (/(기획전|개최|낙점|광고제|페스티벌|팬미팅|콘서트|런칭 이벤트|콘퍼런스|컨퍼런스|행사|시상식|체험관 오픈|팝업스토어 오픈)/.test(title)) return true;
+  return false;
+}
+
 function sourceType(article) {
   const role = normalize(article.sourceRole);
   if (role === "official") return "official";
@@ -367,8 +385,16 @@ function targetFit(article) {
 
 function collectedArticle(article) {
   const image = usableImageUrl(article.image || article.imageUrl || article.ogImage || "", article.link);
-  const fit = targetFit(article);
-  const machineStatus = fit.label === "exclude" ? "auto_excluded" : "candidate";
+  let fit = targetFit(article);
+  // Phase A — newsroom 도메인의 보도자료/브랜드 라벨/행사 포스트는 사전 제외
+  if (isNewsroomPromo(article)) {
+    fit = {
+      label: "weak_promo",
+      priority: "자동 제외",
+      reason: "newsroom 도메인의 [보도자료]·브랜드 라벨·행사 포스트로 분류됐습니다. 화면·플로우·정책 변화가 없는 광고/이벤트성으로 자동 제외합니다.",
+    };
+  }
+  const machineStatus = (fit.label === "exclude" || fit.priority === "자동 제외") ? "auto_excluded" : "candidate";
   return {
     title: cleanDisplayText(article.title),
     link: article.link,

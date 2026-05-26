@@ -1,0 +1,332 @@
+[
+  {
+    "link": "https://techblog.woowahan.com/26319/",
+    "title": "우아한공방의 새로운 동료, 시스템 맥락을 가진 챗봇서비스 개발기(feat. RAG)",
+    "area": "Service",
+    "targetFit": "core_ecommerce",
+    "priority": "P0",
+    "reason": "국내 이커머스 플랫폼(우아한형제들)의 내부 디자인시스템 챗봇 구현기 — RAG 아키텍처·Guardrail·Storybook 통합까지 화면·시스템 증거가 풍부해 웹기획자·UIUX·웹DEV 모두에게 직접적인 적용 포인트가 있다.",
+    "facts": [
+      "API 서버에서 AWS Bedrock Knowledge Bases 기반 RAG 체인을 수행하고 DynamoDB로 채팅 히스토리를 관리하며, 벡터 스토어로 Amazon OpenSearch Serverless를 채택했다.",
+      "사용자 질문에서 컴포넌트 정보를 먼저 추출해 '|FilledButton|' 형식 구분자로 메타데이터 필터를 구성하고, 질문 유형에 따라 topK 값을 동적으로 조정해 Retrieval 정확도를 높였다.",
+      "Guardrail에 'person-related queries'와 'non-design-system queries' 두 가지 추가 정책을 적용해 디자인시스템 범위 밖 답변을 차단했다.",
+      "Storybook의 preview.tsx에 전역 챗봇 UI를 주입해 모든 디자인시스템 문서에서 일관되게 챗봇을 호출할 수 있게 했다."
+    ],
+    "finalSourceUrl": "https://techblog.woowahan.com/26319/",
+    "headline": "우아한형제들이 디자인시스템 안에 RAG 챗봇을 심어 컴포넌트 검색을 다시 짰다",
+    "application_point": "우리 디자인시스템 문서가 컴포넌트 이름·사용처를 묻는 질문에 답할 수 있도록 구성돼 있는가, 답변 범위를 어디까지 가드레일로 잠글 것인가?",
+    "screen": "운영도구"
+  },
+  {
+    "link": "https://blog.opensurvey.co.kr/article/k-food-2026-2/",
+    "title": "K-푸드 글로벌 트렌드, 약과부터 라면까지 외국인 유학생 100명이 발견한 K-푸드의 '반전'",
+    "area": "Service",
+    "targetFit": "commerce_adjacent",
+    "priority": "P2",
+    "reason": "오픈서베이 100명 표본 리서치로 K-푸드 인식 변화·정체성 기준이 데이터로 잡혀 있다 — 글로벌 카테고리 진입·다국어 상품명·CRM 메시지 톤 의사결정에 매핑 가능. 화면 증거는 없으나 표본·기간·수치가 명시되어 carry-over로 통과.",
+    "facts": [
+      "서울 거주 외국인 대학(원)생 100명(46개국)을 대상으로 조사했고, 한국 도착 전 60명이 K-푸드를 '맵고 빨간 음식'으로 인식했으나 거주 후 52명이 '생각보다 훨씬 다양함'으로 평가했다.",
+      "약과는 '캐러멜라이징된 쿠키', 초코파이는 '마시멜로와 초콜릿 결합 디저트' 등 현지 언어로 재해석되며 자국 식문화 맥락에 편입된다.",
+      "응답자의 74%가 유행하는 길거리 음식도 K-푸드로 인정했고, 65%가 '한국적 맛과 풍미'를 핵심 요소로 지목해 원산지보다 맛·트렌드를 우선시하는 정체성 기준 변화가 확인된다."
+    ],
+    "finalSourceUrl": "https://blog.opensurvey.co.kr/article/k-food-2026-2/",
+    "headline": "외국인 유학생 100명이 K-푸드의 정체성 기준을 '원산지'에서 '맛·트렌드'로 옮겼다",
+    "application_point": "글로벌 채널의 상품 카드·검색어·카테고리 라벨이 현지 언어 재해석(약과=캐러멜라이즈드 쿠키)을 반영하고 있는가?",
+    "screen": "검색"
+  },
+  {
+    "link": "https://ditoday.com/%ec%b0%b8%ec%9d%84-%ec%88%98-%ec%97%86%eb%8a%94-ux%ec%9d%98-%ec%a0%80%eb%a0%b4%ed%95%a8-%e2%91%a0-%eb%ac%b4%ec%b1%85%ec%9e%84%ed%95%9c-%ec%84%a4%ea%b3%84-%ec%86%8d-%eb%94%94%ec%a7%80%ed%84%b8/",
+    "title": "[참을 수 없는 UX의 저렴함 ①] 무책임한 설계 속 '디지털 갑질'",
+    "area": "Design",
+    "targetFit": "design_dev_reference",
+    "priority": "P0",
+    "reason": "한국 UX의 구체적 실패 사례(패스트푸드 키오스크·은행 앱 인증서 용어·공공 사이트 파일 형식)를 묶어 '시스템이 사용자에게 떠넘긴 복잡성'으로 정의 — 우리 화면 카피·플로우 점검에 즉시 옮길 수 있는 가드레일이 풍부.",
+    "facts": [
+      "필자 이동석(레인메이커DNC 대표)이 정부 민원·은행 앱·병원 예약·보험 청구·업무 시스템 다섯 영역의 '저렴한 UX'를 묶어 비판한다",
+      "패스트푸드 키오스크 난해, 공공 사이트 파일 형식 미지원, 은행 앱의 '공동인증서' vs '금융인증서' 같은 비친화 용어, 보안 제약으로 인한 수동 문서 재가공을 구체 사례로 제시한다",
+      "'디지털 갑질'을 '시스템이 처리했어야 할 복잡성을 사용자가 대신 치우는 현상'으로 정의하고 다음 회차에서 원인 분석 예고",
+      "발행일 2026-05-18, DIGITAL iNSIGHT 연재 1편"
+    ],
+    "finalSourceUrl": "https://ditoday.com/%ec%b0%b8%ec%9d%84-%ec%88%98-%ec%97%86%eb%8a%94-ux%ec%9d%98-%ec%a0%80%eb%a0%b4%ed%95%a8-%e2%91%a0-%eb%ac%b4%ec%b1%85%ec%9e%84%ed%95%9c-%ec%84%a4%ea%b3%84-%ec%86%8d-%eb%94%94%ec%a7%80%ed%84%b8/",
+    "headline": "이동석이 한국 UX의 다섯 영역을 '디지털 갑질'이라는 한 단어로 묶었다",
+    "application_point": "우리 결제·인증·문서 업로드 플로우 중 사용자가 '시스템이 했어야 할 일'을 대신 떠안는 지점이 어디인가?",
+    "screen": "결제"
+  },
+  {
+    "link": "https://ditoday.com/%ec%96%b4%ec%a0%9c%ec%b2%98%eb%9f%bc-%ec%9e%90%ec%97%b0%ec%8a%a4%eb%9f%bd%ec%a7%80%eb%a7%8c-%ec%96%b4%ec%a0%9c%eb%b3%b4%eb%8b%a4-%ed%8e%b8%ed%95%98%ea%b2%8c-%ec%99%80%ec%9d%bc%eb%a6%ac%ec%9d%98/",
+    "title": "\"어제처럼 자연스럽지만, 어제보다 편하게\" 와일리의 하나원큐 UI·UX 리뉴얼",
+    "area": "Design",
+    "targetFit": "design_dev_reference",
+    "priority": "P0",
+    "reason": "국내 금융 앱 16개월 리뉴얼 케이스 — IA 전환(은행업무→고객맥락)·5개 도메인 통합·맞춤형 홈·공통 UI 컴포넌트 라이브러리 구축·성과 수치까지 디자인 시스템 결정에 직결되는 실제 사례.",
+    "facts": [
+      "와일리가 진행한 하나은행 'FIRST 하나원큐' 리뉴얼은 16개월 프로젝트로 2026년 2월 19일 오픈했다",
+      "정보 구조를 기존 '은행 업무 분류 체계'에서 '통합자산 관리 중심의 고객 맥락 중심 구조'로 전환하고, 여신·수신·투자·퇴직연금·마이데이터 5개 도메인의 UX 플로우를 통합했다",
+      "개인 맞춤형 홈 화면을 도입해 고객이 자주 쓰는 기능을 직접 골라 화면을 구성할 수 있게 했고, 공통 UI 컴포넌트 라이브러리를 구축했다",
+      "리뉴얼 후 사용자 수가 약 1,500% 이상 증가했다고 명시"
+    ],
+    "finalSourceUrl": "https://ditoday.com/%ec%96%b4%ec%a0%9c%ec%b2%98%eb%9f%bc-%ec%9e%90%ec%97%b0%ec%8a%a4%eb%9f%bd%ec%a7%80%eb%a7%8c-%ec%96%b4%ec%a0%9c%eb%b3%b4%eb%8b%a4-%ed%8e%b8%ed%95%98%ea%b2%8c-%ec%99%80%ec%9d%bc%eb%a6%ac%ec%9d%98/",
+    "headline": "와일리가 하나원큐의 IA를 '은행 업무'에서 '고객 자산 맥락'으로 옮겼다",
+    "application_point": "우리 서비스 메인 IA가 내부 업무 분류를 따르고 있나, 고객이 처음 열었을 때 보는 맥락을 따르고 있나?",
+    "screen": "홈"
+  },
+  {
+    "link": "https://smashingmagazine.com/2026/05/four-levels-customer-understanding/",
+    "title": "Four Levels Of Customer Understanding",
+    "area": "Design",
+    "targetFit": "design_dev_reference",
+    "priority": "P1",
+    "reason": "Vitaly Friedman이 고객 이해를 4단계로 나누고 단계별 방법(설문/인터뷰/태스크 분석/관찰)을 매핑 — UX 리서치 표준 reference로 쓸 만하나 국내 사례·화면 증거는 없어 P1.",
+    "facts": [
+      "Vitaly Friedman이 고객 이해를 4단계(말하는 것·생각·실제 행동·행동의 이유)로 구분하고 각 단계 신뢰도와 적합한 리서치 방법을 매핑",
+      "Level별 방법론: 1단계 설문·CRM(비권장), 2단계 사용자 인터뷰, 3단계 태스크 분석·애널리틱스, 4단계 관찰 기반 조사·심화 인터뷰",
+      "조직 전사 참여 도구로 'Exposure Hours'(직원이 6~12주마다 고객과 2시간 상호작용), 3~6개월 주기 헬프데스크 인사이트 수집, 라이브 UX 테스팅 참관을 제시",
+      "Hannah Shamji·Erika Hall·Geoffrey Roberts(Emotion Wheel)·David Travis 등 출처 인용, 발행일 2026-05-22"
+    ],
+    "finalSourceUrl": "https://smashingmagazine.com/2026/05/four-levels-customer-understanding/",
+    "headline": "Vitaly Friedman이 '고객 이해'를 말·생각·행동·이유 4단계로 분해했다",
+    "application_point": "우리 리서치는 어느 단계에 머물러 있나, 행동·이유까지 들여다보는 방법이 한 사이클 안에 들어 있는가?",
+    "screen": "없음"
+  },
+  {
+    "link": "https://pxdstory.tistory.com/1899",
+    "title": "검색엔진은 우리 사이트를 어떻게 발견할까?",
+    "area": "Design",
+    "targetFit": "design_dev_reference",
+    "priority": "P0",
+    "reason": "pxd UX Engineer의 SEO+GEO 통합 가이드 — robots.txt·sitemap·canonical·리다이렉트 5개 항목별 실무 체크와 학습용/검색용 봇 분리 제어 코드까지 들어있어 기획자·디자이너·DEV 공통 reference로 통과.",
+    "facts": [
+      "pxd UX Engineer 연재로 크롤링·인덱싱·랭킹 3단계 흐름과 robots.txt·sitemap·canonical·내부 링크·리다이렉트 5개 항목별 실무 체크 포인트 제시",
+      "Next.js robots.ts 코드, sitemap URL당 50,000개 제한, 리다이렉트 체인 3~5회 제한, 삭제 페이지 410 응답 등 구체 가이드 다수",
+      "학습용 봇(GPTBot·ClaudeBot)과 검색 노출용 봇(OAI-SearchBot·Claude-SearchBot)을 robots.txt로 분리 제어하는 GEO 관점 예시 코드 포함",
+      "ChatGPT(Bing)·Gemini(Google)·Perplexity(자체 크롤+복수 엔진) 등 AI 서비스별 검색 인덱스 출처 비교, Google Search Console·네이버 서치어드바이저 모니터링 권장"
+    ],
+    "finalSourceUrl": "https://pxdstory.tistory.com/1899",
+    "headline": "pxd가 AI 시대의 robots.txt를 '학습용 봇'과 '검색용 봇'으로 갈라 다시 짰다",
+    "application_point": "우리 robots.txt가 GPTBot·ClaudeBot은 차단하면서 OAI-SearchBot·Claude-SearchBot은 허용하도록 분리되어 있는가?",
+    "screen": "없음"
+  },
+  {
+    "link": "https://www.anthropic.com/news/claude-for-small-business",
+    "title": "Introducing Claude for Small Business",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "priority": "P1",
+    "reason": "PayPal·QuickBooks·HubSpot 등 커넥터와 15개 ready-to-run 에이전틱 워크플로우 — 권한 모델(도구 권한 전파)·학습 옵트아웃 디테일이 명시. 다만 SMB 타깃 패키지라 CTTD 웹DEV 독자에게는 직결도가 중간이라 P1.",
+    "facts": [
+      "PayPal·Intuit QuickBooks·HubSpot·Canva·Docusign·Google Workspace·Microsoft 365 커넥터를 Claude Cowork 플랫폼에 통합",
+      "재무·운영·세일즈·마케팅·HR·고객서비스 영역의 15개 ready-to-run 에이전틱 워크플로우 제공",
+      "급여 계획·월말 마감·인보이스 추심·캠페인 분석·계약 검토 자동화 15개 내장 스킬 포함",
+      "Team·Enterprise Plan은 기본적으로 사용자 데이터 학습 안 함, 기존 도구 권한(QuickBooks·Drive)이 Claude로 전파"
+    ],
+    "finalSourceUrl": "https://www.anthropic.com/news/claude-for-small-business",
+    "headline": "Anthropic이 SMB용 커넥터 7종과 15개 에이전틱 워크플로우를 한 묶음으로 내놨다",
+    "application_point": "사내 운영 시스템에 외부 AI 에이전트를 붙일 때, 기존 도구 권한이 그대로 전파되는 모델을 우리는 어떻게 게이팅할 것인가?",
+    "screen": "운영도구"
+  },
+  {
+    "link": "https://www.anthropic.com/news/finance-agents",
+    "title": "Agents for financial services",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "priority": "P1",
+    "reason": "10개 금융 특화 에이전트 템플릿·Excel/PowerPoint 애드인 GA·8개 데이터 커넥터·credential vault·audit log 등 long-running 세션 운영 디테일이 풍부 — 다만 금융 도메인 특화라 CTTD 독자 일반 적용 가능성은 P1.",
+    "facts": [
+      "Pitch builder·Meeting preparer·Earnings reviewer·Model builder·Market researcher·Valuation reviewer·General ledger reconciler·Month-end closer·Statement auditor·KYC screener 10개 에이전트 템플릿 출시",
+      "Excel·PowerPoint·Word 애드인 GA, Outlook 통합 예정 (앱 간 컨텍스트 자동 전달)",
+      "Dun & Bradstreet·Fiscal AI·Financial Modeling Prep·Guidepoint·IBISWorld·SS&C Intralinks·Third Bridge·Verisk 등 8개 커넥터 추가",
+      "Moody's MCP 앱으로 6억+ 기업의 신용등급·데이터 제공",
+      "Claude Opus 4.7이 Vals AI Finance Agent 벤치마크에서 64.37% 기록, Managed Agents는 long-running session·per-tool 권한·credential vault·audit log 지원"
+    ],
+    "finalSourceUrl": "https://www.anthropic.com/news/finance-agents",
+    "headline": "Anthropic이 금융 에이전트 10종에 per-tool 권한·credential vault·audit log를 묶었다",
+    "application_point": "장시간 작동하는 사내 에이전트의 도구별 권한·자격증명 저장소·감사 로그를 우리는 어디까지 분리해 두었나?",
+    "screen": "운영도구"
+  },
+  {
+    "link": "https://www.builder.io/blog/best-github-copilot-alternatives",
+    "title": "6 Best GitHub Copilot Alternatives in 2026",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "priority": "P0",
+    "reason": "GitHub Copilot이 2026년 6월 1일부터 사용량 기반 과금으로 전환되고 Opus 모델 배수가 3x→27x로 뛴다는 명확한 정책 변화 — 우리 팀의 AI 코딩 도구 비용 의사결정에 즉시 필요. Builder.io 자사 마케팅 색채는 있으나 가격·기능 비교 수치가 풍부해 reference로 통과.",
+    "facts": [
+      "GitHub Copilot이 2026년 6월 1일 사용량 기반 과금으로 전환, Sonnet 4.6 배수 1x→9x, Opus 4.6 배수 3x→27x",
+      "Cursor SWE-Bench 51.7% 해결률, Pro $20/월·Pro+ $60/월·Ultra $200/월",
+      "Claude Code는 Sonnet 4.6과 Opus 4.7 모델 지원, VS Code·JetBrains·웹·데스크탑 표면, GitHub Actions 통합",
+      "Codex는 macOS GUI 작업용 Computer Use 지원, 로컬·worktree·클라우드 모드 제공",
+      "Zed는 Rust 네이티브 GPU 가속, Edit Prediction(Zeta2 open-weights), Agent Client Protocol(ACP)로 Gemini·Claude·Codex·Cursor 지원"
+    ],
+    "finalSourceUrl": "https://www.builder.io/blog/best-github-copilot-alternatives",
+    "headline": "GitHub Copilot의 Opus 배수가 3x에서 27x로 뛰자 AI 코딩 도구 선택지가 다시 열렸다",
+    "application_point": "6월 1일 Copilot 사용량 과금 전환 후 우리 팀의 모델 호출 단가가 어떻게 바뀌는지 시뮬레이션해 봤는가?",
+    "screen": "운영도구"
+  },
+  {
+    "link": "https://www.builder.io/blog/claude-design",
+    "title": "Claude Design Review: An Innovative Way to Brainstorm with AI",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "priority": "P1",
+    "reason": "Claude Design의 클래리파이 질문·Tweaks 슬라이더·4-디자인 비교·Figma 라운드트립 미지원 같은 한계까지 명시 — 디자인-코드 핸드오프 관점에서 DEV 독자에게 reference로 쓸 만하나 Builder.io 시각 위주라 P1.",
+    "facts": [
+      "Claude Design은 단순 프롬프트 후 클래리파이 질문을 캔버스에 표시하는 인터페이스",
+      "Tweaks 패널의 슬라이더·토글로 비파괴 편집 가능",
+      "한 캔버스에서 4개의 서로 다른 디자인 옵션을 동시 비교",
+      "스크래치패드 스케치·요소별 코멘트로 어노테이션 가능",
+      "Figma 라운드트립·디자인 토큰·코드 컴포넌트 미지원으로 엔지니어링 핸드오프는 수동 재작업 필요"
+    ],
+    "finalSourceUrl": "https://www.builder.io/blog/claude-design",
+    "headline": "Claude Design은 4개 디자인을 한 캔버스에 띄우지만 Figma 라운드트립·토큰은 아직이다",
+    "application_point": "AI로 만든 시안을 우리 디자인 토큰·컴포넌트에 어떻게 다시 묶을 것인가, 핸드오프의 수동 재작업 비용은 누가 진다?",
+    "screen": "운영도구"
+  },
+  {
+    "link": "https://github.blog/changelog/2026-05-21-issue-fields-are-now-in-public-preview-for-all-organizations",
+    "title": "Issue fields are now in public preview for all organizations",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "priority": "P0",
+    "reason": "GitHub Organization 레벨 Issue fields 공식 출시 — Priority·Effort 필드가 모든 리포 모든 이슈에 자동 적용되고 REST/GraphQL/webhook 자동화 가능. 우리 이슈 트래커·기획 워크플로우 결정에 직결되는 표준 변경.",
+    "facts": [
+      "GitHub Organization 레벨에 Priority·Effort 등 타입 메타데이터 정의, 모든 리포지토리의 모든 이슈에 자동 적용",
+      "single select·text·number·date 4개 필드 타입 지원",
+      "github.com과 data residency 적용된 GitHub Enterprise Cloud의 모든 조직 대상, 3월 프리뷰 이후 1,000개 이상 조직 도입",
+      "REST·GraphQL API 및 webhook 이벤트로 자동화 가능, 프로젝트 뷰에서 검색·필터·컬럼 트래킹",
+      "Settings > Planning > Issue fields에서 관리, 4개 기본 필드 자동 포함"
+    ],
+    "finalSourceUrl": "https://github.blog/changelog/2026-05-21-issue-fields-are-now-in-public-preview-for-all-organizations",
+    "headline": "GitHub이 Organization 레벨에서 Priority·Effort 필드를 모든 이슈에 자동 꽂아넣었다",
+    "application_point": "우리 조직 이슈 메타데이터 표준이 리포마다 다른 라벨로 흩어져 있지 않은가, Org 레벨로 통일할 때 자동화 스크립트는 어디서 끊기나?",
+    "screen": "운영도구"
+  },
+  {
+    "link": "https://vercel.com/changelog/qwen-3-7-max-now-available-on-vercel-ai-gateway",
+    "title": "Qwen 3.7 Max now available on Vercel AI Gateway",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "priority": "P2",
+    "reason": "모델 ID·SDK 통합 디테일은 있으나 단일 모델 추가 changelog로 두께가 얕음 — P2 reference로 묶어 두는 정도.",
+    "facts": [
+      "모델 ID는 alibaba/qwen-3.7-max로 AI SDK에서 지정",
+      "코딩·오피스 워크플로우 자동화·장기 자율 실행에 강점, 프론트엔드 프로토타이핑·멀티파일 엔지니어링 개선",
+      "long-horizon tool-calling 세션에서 일관된 추론 유지",
+      "streamText 함수와 AI SDK로 스트리밍 사용, AI Gateway가 BYOK·옵저버빌리티·자동 재시도 제공"
+    ],
+    "finalSourceUrl": "https://vercel.com/changelog/qwen-3-7-max-now-available-on-vercel-ai-gateway",
+    "headline": "Vercel AI Gateway가 Qwen 3.7 Max를 long-horizon 도구 호출 옵션으로 추가했다",
+    "application_point": "프론트엔드 프로토타이핑 단계에서 모델 후보를 게이트웨이로 추상화해 두면 우리 빌드 흐름은 어떻게 단순해지나?",
+    "screen": "없음"
+  },
+  {
+    "link": "https://vercel.com/changelog/grok-build-0-1-now-available-on-vercel-ai-gateway",
+    "title": "Grok Build 0.1 now available on Vercel AI Gateway",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "priority": "P2",
+    "reason": "베타 코딩 모델 추가 changelog로 reasoning 미지원 같은 제한이 명시되나, 단독 발행하기엔 사실 폭이 좁아 P2.",
+    "facts": [
+      "모델 ID는 xai/grok-build-0.1로 AI SDK에서 지정",
+      "Grok Build CLI 앱을 구동하는 베타 에이전틱 코딩 모델, 얼리 액세스 단계",
+      "reasoning effort 설정 불가, non-reasoning 모드 없음",
+      "AI SDK의 streamText 호출로 리팩토링·테스트 생성 등 코딩 태스크 처리"
+    ],
+    "finalSourceUrl": "https://vercel.com/changelog/grok-build-0-1-now-available-on-vercel-ai-gateway",
+    "headline": "Vercel이 xAI의 Grok Build 0.1을 코딩 전용 베타로 게이트웨이에 올렸다",
+    "application_point": "reasoning effort 조절이 안 되는 코딩 모델을 우리 파이프라인에 끼울 때 어디서 폴백을 잡아야 하나?",
+    "screen": "없음"
+  },
+  {
+    "link": "https://vercel.com/changelog/chat-sdk-now-includes-ai-sdk-tools",
+    "title": "Chat SDK now includes AI SDK tools",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "priority": "P0",
+    "reason": "Chat SDK가 chat/ai 서브패스로 AI 도구 노출, requireApproval 기본 게이팅·reader/messenger/moderator 3프리셋 최소권한·deprecated 경로까지 마이그레이션 디테일이 명시 — 챗 인터페이스 구축하는 웹DEV에 직결.",
+    "facts": [
+      "새로운 chat/ai 서브패스로 AI SDK 도구 노출, createChatTools(chat) 한 줄로 read/write 액션을 에이전트에 연결",
+      "write 작업은 requireApproval 옵션으로 기본 승인 게이팅",
+      "reader·messenger·moderator 3개 프리셋으로 최소권한 원칙 적용, 선택된 프리셋에 따라 도구 lazy 생성",
+      "toAiMessages 함수와 관련 타입이 chat에서 chat/ai로 이전, 기존 export는 deprecated"
+    ],
+    "finalSourceUrl": "https://vercel.com/changelog/chat-sdk-now-includes-ai-sdk-tools",
+    "headline": "Vercel Chat SDK가 write 액션 기본 승인 게이팅과 3프리셋 최소권한을 묶어 들고나왔다",
+    "application_point": "우리 챗 인터페이스의 도구 호출이 read와 write를 같은 권한으로 굴리고 있지 않은가, write에 승인 게이팅이 기본인가?",
+    "screen": "운영도구"
+  },
+  {
+    "link": "https://vercel.com/changelog/vercel-ai-gateway-plugin-for-wordpress",
+    "title": "Vercel AI Gateway plugin for WordPress",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "priority": "P1",
+    "reason": "WordPress용 AI Gateway 플러그인 — 40+ 프로바이더 단일 키 통합·자동 폴백·관리 경로 명시. CMS 운영 DEV에 reference로 통과하나 코어 개발 변경은 아니라 P1.",
+    "facts": [
+      "Anthropic·Google·OpenAI·xAI·DeepSeek·MiniMax·Moonshot AI 등 40+ 프로바이더, 수백 개 모델에 단일 API 키로 접근",
+      "WordPress AI Client 커넥터로 동작하며 WordPress 7.0 이상 필요",
+      "Settings > Connectors에서 단일 AI Gateway 자격증명 관리",
+      "텍스트·구조화 JSON·이미지·비디오 멀티모달 생성 지원, 프로바이더 장애 시 자동 폴백"
+    ],
+    "finalSourceUrl": "https://vercel.com/changelog/vercel-ai-gateway-plugin-for-wordpress",
+    "headline": "Vercel이 WordPress에 40+ 프로바이더를 단일 키로 묶는 AI Gateway 플러그인을 붙였다",
+    "application_point": "CMS 운영팀의 콘텐츠 자동화에서 프로바이더 장애 폴백이 단일 키 안에서 처리되는가?",
+    "screen": "운영도구"
+  },
+  {
+    "link": "https://github.blog/changelog/2026-05-19-easily-apply-copilot-code-review-feedback-with-copilot-cloud-agent",
+    "title": "Easily apply Copilot code review feedback with Copilot cloud agent",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "priority": "P1",
+    "reason": "Copilot 코드 리뷰 'Fix with Copilot' UI 변경과 일괄 처리 버튼 추가 — 화면 변화와 다이얼로그 플로우가 명시되나 단일 기능 업데이트 규모라 P1.",
+    "facts": [
+      "Copilot 코드 리뷰의 'Implement suggestion' 버튼이 'Fix with Copilot'으로 리네이밍",
+      "Fix with Copilot 클릭 시 직접 적용 또는 새 PR 생성 선택 다이얼로그 노출",
+      "다이얼로그에서 사용할 모델 선택 및 선택적 추가 지시 입력 가능",
+      "'Fix batch with Copilot' 버튼이 'Implement all suggestions'를 대체, 여러 리뷰 코멘트 일괄 처리",
+      "Copilot 클라우드 에이전트와 통합되어 피드백 처리 효율화"
+    ],
+    "finalSourceUrl": "https://github.blog/changelog/2026-05-19-easily-apply-copilot-code-review-feedback-with-copilot-cloud-agent",
+    "headline": "GitHub이 Copilot 코드리뷰의 'Fix' 버튼에 모델 선택과 일괄 처리 다이얼로그를 붙였다",
+    "application_point": "우리 PR 리뷰 흐름에서 AI 제안을 일괄 적용할 때, 어떤 모델로 어떤 추가 지시를 줄지 누가 게이팅하는가?",
+    "screen": "운영도구"
+  },
+  {
+    "link": "https://vercel.com/changelog/nuxt-mcp-toolkit-mcp-apps",
+    "title": "Nuxt MCP Toolkit now supports MCP apps",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "priority": "P1",
+    "reason": "defineMcpApp 매크로·useMcpApp 컴포저블·Vue SFC를 self-contained HTML로 번들링하는 빌드 메커니즘이 구체적 — Nuxt/Vue 진영 DEV에 reference로 통과. CTTD 독자층 범위는 좁아 P1.",
+    "facts": [
+      "defineMcpApp 매크로로 name·description·inputSchema·handler를 지정해 MCP 앱 정의",
+      "useMcpApp 컴포저블로 pre-hydrated 데이터 읽기·후속 프롬프트 트리거·다른 툴 호출 가능",
+      "Claude·ChatGPT 등 MCP 클라이언트가 인터랙티브 HTML 응답을 인라인 렌더링",
+      "Vue SFC를 빌드 타임에 self-contained HTML로 번들링해 MCP 엔드포인트에서 서빙",
+      "핸들러가 structuredContent를 반환해 풍부한 인터랙티브 데이터 전달"
+    ],
+    "finalSourceUrl": "https://vercel.com/changelog/nuxt-mcp-toolkit-mcp-apps",
+    "headline": "Nuxt가 Vue SFC를 MCP 앱으로 묶어 Claude·ChatGPT 안에서 인라인 렌더링하게 했다",
+    "application_point": "MCP 클라이언트 안에서 우리 컴포넌트가 인라인 HTML로 렌더링된다면, 우리 디자인 토큰·접근성 규칙은 어디서 강제되나?",
+    "screen": "운영도구"
+  },
+  {
+    "link": "https://www.builder.io/blog/announcing-quality-review-agent",
+    "title": "Announcing Quality Review Agent: Agentic QA on Every PR",
+    "area": "DEV",
+    "targetFit": "design_dev_reference",
+    "priority": "P1",
+    "reason": "Builder.io Quality Review Agent의 3-레이어 QA(해피 패스·엣지 케이스·리그레션)와 비디오 리플레이·콘솔/네트워크 패널 동기화가 명시 — 자사 제품이지만 PR QA 자동화의 실제 동작 사실이 풍부해 P1.",
+    "facts": [
+      "에이전트가 실제 브라우저에서 제품을 로드해 클릭·타이핑·플로우 워크 수행",
+      "해피 패스·엣지 케이스(빈 상태·잘못된 입력·에러)·리그레션 3개 레이어 커버",
+      "지적된 버그마다 'Fix in Builder' 버튼 제공, 평문 영어 설명 후 동일 PR에 재반영",
+      "현재 GitHub PR 지원, GitLab·Bitbucket·Azure DevOps 지원 예정",
+      "에이전트 추론·네트워크 호출·콘솔 출력 3개 패널이 타임라인 동기화된 비디오로 제공"
+    ],
+    "finalSourceUrl": "https://www.builder.io/blog/announcing-quality-review-agent",
+    "headline": "Builder.io가 PR마다 브라우저로 해피 패스·엣지·리그레션을 도는 QA 에이전트를 붙였다",
+    "application_point": "PR 단계에서 자동 QA가 엣지 케이스(빈 상태·잘못된 입력·에러)까지 커버한다면, 우리 QA 인력의 검수 포인트는 어디로 옮겨가야 하나?",
+    "screen": "운영도구"
+  }
+]

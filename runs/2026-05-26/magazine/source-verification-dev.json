@@ -1,0 +1,321 @@
+[
+  {
+    "link": "https://www.anthropic.com/news/claude-is-a-space-to-think",
+    "title": "Claude is a space to think",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "Claude는 광고 없는(ad-free) 정책을 명시적으로 약속",
+      "Figma·Asana·Canva 등 third-party 통합을 확장 중이며 향후 추가 예정",
+      "에이전트 커머스 시 모든 third-party 인터랙션은 사용자가 직접 시작(user-initiated)해야 함"
+    ],
+    "reason": "정책 선언 중심의 의견글로 개발자 활용 가능한 API/SDK/MCP 변경이나 구체 구현 사실이 없음.",
+    "finalSourceUrl": "https://www.anthropic.com/news/claude-is-a-space-to-think"
+  },
+  {
+    "link": "https://www.anthropic.com/news/anthropic-kpmg",
+    "title": "KPMG integrates Claude across its core business and workforce of more than 276,000 in strategic alliance",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "KPMG Digital Gateway에 Claude Cowork·Managed Agents 임베드",
+      "Microsoft Azure 기반으로 276,000명 임직원에 배포",
+      "KPMG Blaze 포트폴리오에 Claude Code 활용"
+    ],
+    "reason": "엔터프라이즈 파트너십 PR로 개발자가 활용할 API·SDK·구현 디테일이 없음. CTTD 독자에 무관.",
+    "finalSourceUrl": "https://www.anthropic.com/news/anthropic-kpmg"
+  },
+  {
+    "link": "https://www.anthropic.com/news/pwc-expanded-partnership",
+    "title": "PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "PwC 엔지니어링 팀이 Claude Code로 프로덕션 소프트웨어 배포",
+      "Claude Cowork이 MCP를 통해 엔터프라이즈 데이터에 연결",
+      "Amazon Bedrock·Google Cloud Vertex AI·Microsoft Azure에서 사용 가능"
+    ],
+    "reason": "엔터프라이즈 컨설팅 파트너십 PR로 구체적인 개발자 활용 사실이 없음.",
+    "finalSourceUrl": "https://www.anthropic.com/news/pwc-expanded-partnership"
+  },
+  {
+    "link": "https://www.anthropic.com/news/claude-for-small-business",
+    "title": "Introducing Claude for Small Business",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "PayPal·Intuit QuickBooks·HubSpot·Canva·Docusign·Google Workspace·Microsoft 365 커넥터를 Claude Cowork 플랫폼에 통합",
+      "재무·운영·세일즈·마케팅·HR·고객서비스 영역의 15개 ready-to-run 에이전틱 워크플로우 제공",
+      "급여 계획·월말 마감·인보이스 추심·캠페인 분석·계약 검토 자동화 15개 내장 스킬 포함",
+      "Team·Enterprise Plan은 기본적으로 사용자 데이터 학습 안 함, 기존 도구 권한(QuickBooks·Drive)이 Claude로 전파"
+    ],
+    "reason": "구체 커넥터·워크플로우 수치·권한 모델 등 발행 가능한 사실 4개 이상 확보.",
+    "finalSourceUrl": "https://www.anthropic.com/news/claude-for-small-business"
+  },
+  {
+    "link": "https://www.anthropic.com/news/finance-agents",
+    "title": "Agents for financial services",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "Pitch builder·Meeting preparer·Earnings reviewer·Model builder·Market researcher·Valuation reviewer·General ledger reconciler·Month-end closer·Statement auditor·KYC screener 10개 에이전트 템플릿 출시",
+      "Excel·PowerPoint·Word 애드인 GA, Outlook 통합 예정 (앱 간 컨텍스트 자동 전달)",
+      "Dun & Bradstreet·Fiscal AI·Financial Modeling Prep·Guidepoint·IBISWorld·SS&C Intralinks·Third Bridge·Verisk 등 8개 커넥터 추가",
+      "Moody's MCP 앱으로 6억+ 기업의 신용등급·데이터 제공",
+      "Claude Opus 4.7이 Vals AI Finance Agent 벤치마크에서 64.37% 기록, Managed Agents는 long-running session·per-tool 권한·credential vault·audit log 지원"
+    ],
+    "reason": "구체 에이전트 이름·커넥터·MCP 앱·벤치마크 수치 등 풍부한 개발자 활용 사실.",
+    "finalSourceUrl": "https://www.anthropic.com/news/finance-agents"
+  },
+  {
+    "link": "https://www.builder.io/blog/do-you-know-your-governance-rate",
+    "title": "You Know Your AI Adoption Rate. Do You Know Your Governance Rate?",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "Cursor·Copilot·Builder.io Fusion/Publish 언급",
+      "디자인 시스템 엔포스먼트는 코드 생성 시점에 일어나야 한다는 주장",
+      "PR 볼륨이 리뷰 용량을 자릿수 단위로 초과한다는 주장"
+    ],
+    "reason": "출처·통계 없는 의견·마케팅 글로 발행 가능한 구체 사실이 부족.",
+    "finalSourceUrl": "https://www.builder.io/blog/do-you-know-your-governance-rate"
+  },
+  {
+    "link": "https://www.builder.io/blog/developers-drowning-in-ai-prs",
+    "title": "I Didn't Become a Developer to Review AI Slop",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "Stack Overflow 2025 Developer Survey 인용 (AI 출력의 '거의 맞지만 아닌' 결과)",
+      "Sonar 2026 State of Code: 개발자 96%가 AI 코드 완전히 신뢰하지 않음, 38%는 리뷰 부담 증가",
+      "Builder.io Quality Review Agent를 솔루션으로 포지셔닝하는 마케팅 글"
+    ],
+    "reason": "주관적 의견 위주에 자사 제품 홍보. 발행에 쓸 만한 독립 사실 부족.",
+    "finalSourceUrl": "https://www.builder.io/blog/developers-drowning-in-ai-prs"
+  },
+  {
+    "link": "https://www.builder.io/blog/ai-agent-vs-chatbot",
+    "title": "AI Agent vs Chatbot: Key Differences and Examples",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "에이전트-네이티브 설계 5원칙 (UI parity·shared action model·unified state·protocol-ready·governed execution) 제시",
+      "Builder.io Fusion·Publish 자사 제품 언급",
+      "agent-native.com 외부 템플릿 사이트 안내"
+    ],
+    "reason": "일반론적 개념 비교에 코드 예시·구체 구현 가이드 없음. 마케팅 컨셉 글.",
+    "finalSourceUrl": "https://www.builder.io/blog/ai-agent-vs-chatbot"
+  },
+  {
+    "link": "https://www.builder.io/blog/agent-native-architecture",
+    "title": "Agent-Native: The Next Architecture for Software",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "defineAction을 활용한 shared action model TypeScript 코드 예시 1개",
+      "UI·agent tools·HTTP·CLI·MCP를 한 액션 모델로 노출하는 패턴 제시",
+      "MCP·Claude Code·Codex·Cursor와의 호환성 주장"
+    ],
+    "reason": "코드 예시는 1개 단편적이고 DB 스키마·API 명세·인증 등 구현 디테일 부재. 컨셉 옹호 글.",
+    "finalSourceUrl": "https://www.builder.io/blog/agent-native-architecture"
+  },
+  {
+    "link": "https://www.builder.io/blog/agent-productivity-is-creating-a-quality-debt",
+    "title": "Agent Productivity Is Creating a Quality Debt",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "Builder.io Quality Review Agent 출시 언급",
+      "에이전트가 실제 브라우저에서 제품 흐름 점검·비디오 리플레이·콘솔 로그 제공",
+      "Frete 70% 프론트엔드 빌드 시간 단축 주장 (출처 미명시)"
+    ],
+    "reason": "의견 중심 마케팅으로 발행에 쓸 독립적 사실 부족. 동일 제품의 별도 발표 글이 따로 있음.",
+    "finalSourceUrl": "https://www.builder.io/blog/agent-productivity-is-creating-a-quality-debt"
+  },
+  {
+    "link": "https://www.builder.io/blog/how-to-create-on-brand-linkedin-carousels-for-free",
+    "title": "How to Create Free, On-Brand LinkedIn Carousels",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "slides.agent-native.com 호스팅 템플릿 접근",
+      "Builder.io 또는 Anthropic API로 인증",
+      "LinkedIn용 1:1/4:5 비율 지원"
+    ],
+    "reason": "LinkedIn 콘텐츠 제작 튜토리얼 형식의 자사 제품 홍보. 웹DEV 독자와 적합성 낮음.",
+    "finalSourceUrl": "https://www.builder.io/blog/how-to-create-on-brand-linkedin-carousels-for-free"
+  },
+  {
+    "link": "https://www.builder.io/blog/the-future-of-saas-is-cloneable",
+    "title": "The Future of SaaS Is Cloneable",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "Builder.io의 Mail·Calendar·Content·Slides·Video·Analytics·Clips·Design·Forms 에이전트-네이티브 템플릿 언급",
+      "A2A 프로토콜(app-to-app 통신) 컨셉 제시",
+      "Claude Code 통합 가능"
+    ],
+    "reason": "비전·옵션 중심의 마케팅 글로 코드·API·구현 디테일 부재.",
+    "finalSourceUrl": "https://www.builder.io/blog/the-future-of-saas-is-cloneable"
+  },
+  {
+    "link": "https://www.builder.io/blog/best-github-copilot-alternatives",
+    "title": "6 Best GitHub Copilot Alternatives in 2026",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "GitHub Copilot이 2026년 6월 1일 사용량 기반 과금으로 전환, Sonnet 4.6 배수 1x→9x, Opus 4.6 배수 3x→27x",
+      "Cursor SWE-Bench 51.7% 해결률, Pro $20/월·Pro+ $60/월·Ultra $200/월",
+      "Claude Code는 Sonnet 4.6과 Opus 4.7 모델 지원, VS Code·JetBrains·웹·데스크탑 표면, GitHub Actions 통합",
+      "Codex는 macOS GUI 작업용 Computer Use 지원, 로컬·worktree·클라우드 모드 제공",
+      "Zed는 Rust 네이티브 GPU 가속, Edit Prediction(Zeta2 open-weights), Agent Client Protocol(ACP)로 Gemini·Claude·Codex·Cursor 지원"
+    ],
+    "reason": "GitHub Copilot 가격 변경 수치 및 6개 도구의 구체 가격·기능 비교가 풍부.",
+    "finalSourceUrl": "https://www.builder.io/blog/best-github-copilot-alternatives"
+  },
+  {
+    "link": "https://www.builder.io/blog/when-agents-work-for-the-whole-team",
+    "title": "When Agents Work for the Whole Team",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "Builder.io Figma 플러그인 통합 언급",
+      "컴포넌트·토큰·아키텍처 패턴 지원 주장",
+      "디자인 시스템 통합 가능"
+    ],
+    "reason": "조직 워크플로우 컨셉 에세이로 코드·API·구체 구현 단계 부재.",
+    "finalSourceUrl": "https://www.builder.io/blog/when-agents-work-for-the-whole-team"
+  },
+  {
+    "link": "https://www.builder.io/blog/claude-design",
+    "title": "Claude Design Review: An Innovative Way to Brainstorm with AI",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "Claude Design은 단순 프롬프트 후 클래리파이 질문을 캔버스에 표시하는 인터페이스",
+      "Tweaks 패널의 슬라이더·토글로 비파괴 편집 가능",
+      "한 캔버스에서 4개의 서로 다른 디자인 옵션을 동시 비교",
+      "스크래치패드 스케치·요소별 코멘트로 어노테이션 가능",
+      "Figma 라운드트립·디자인 토큰·코드 컴포넌트 미지원으로 엔지니어링 핸드오프는 수동 재작업 필요"
+    ],
+    "reason": "Claude Design의 구체 UI 동작·기능·한계가 본문에 명시되어 발행 가능. 디자인-코드 연동 관점에서 DEV 독자에도 적합.",
+    "finalSourceUrl": "https://www.builder.io/blog/claude-design"
+  },
+  {
+    "link": "https://github.blog/changelog/2026-05-21-issue-fields-are-now-in-public-preview-for-all-organizations",
+    "title": "Issue fields are now in public preview for all organizations",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "GitHub Organization 레벨에 Priority·Effort 등 타입 메타데이터 정의, 모든 리포지토리의 모든 이슈에 자동 적용",
+      "single select·text·number·date 4개 필드 타입 지원",
+      "github.com과 data residency 적용된 GitHub Enterprise Cloud의 모든 조직 대상, 3월 프리뷰 이후 1,000개 이상 조직 도입",
+      "REST·GraphQL API 및 webhook 이벤트로 자동화 가능, 프로젝트 뷰에서 검색·필터·컬럼 트래킹",
+      "Settings > Planning > Issue fields에서 관리, 4개 기본 필드 자동 포함"
+    ],
+    "reason": "공식 GitHub Changelog로 기능명·필드 타입·범위·API 통합·관리 경로 등 구체 사실 다수.",
+    "finalSourceUrl": "https://github.blog/changelog/2026-05-21-issue-fields-are-now-in-public-preview-for-all-organizations"
+  },
+  {
+    "link": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.0",
+    "title": "shadcn@4.8.0",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "shadcn registry validate 명령 추가 (#10715)",
+      "registry.json에 include 속성 추가 (#10708)",
+      "버전 도출 실패 테스트 픽스 (#10567)"
+    ],
+    "reason": "릴리즈 노트는 공식이나 패치 규모가 작고 마이너 변경 2건·패치 1건뿐이라 단독 발행에는 두께가 얕음. 사실 자체는 정확하므로 패스 가능하나 P1 단독 기사로는 박약.",
+    "finalSourceUrl": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.0"
+  },
+  {
+    "link": "https://vercel.com/changelog/qwen-3-7-max-now-available-on-vercel-ai-gateway",
+    "title": "Qwen 3.7 Max now available on Vercel AI Gateway",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "모델 ID는 alibaba/qwen-3.7-max로 AI SDK에서 지정",
+      "코딩·오피스 워크플로우 자동화·장기 자율 실행에 강점, 프론트엔드 프로토타이핑·멀티파일 엔지니어링 개선",
+      "long-horizon tool-calling 세션에서 일관된 추론 유지",
+      "streamText 함수와 AI SDK로 스트리밍 사용, AI Gateway가 BYOK·옵저버빌리티·자동 재시도 제공"
+    ],
+    "reason": "Vercel 공식 changelog로 모델 ID·통합 방식·게이트웨이 기능 등 발행 가능 사실 확보.",
+    "finalSourceUrl": "https://vercel.com/changelog/qwen-3-7-max-now-available-on-vercel-ai-gateway"
+  },
+  {
+    "link": "https://vercel.com/changelog/grok-build-0-1-now-available-on-vercel-ai-gateway",
+    "title": "Grok Build 0.1 now available on Vercel AI Gateway",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "모델 ID는 xai/grok-build-0.1로 AI SDK에서 지정",
+      "Grok Build CLI 앱을 구동하는 베타 에이전틱 코딩 모델, 얼리 액세스 단계",
+      "reasoning effort 설정 불가, non-reasoning 모드 없음",
+      "AI SDK의 streamText 호출로 리팩토링·테스트 생성 등 코딩 태스크 처리"
+    ],
+    "reason": "Vercel 공식 changelog로 모델 ID·제한사항·SDK 통합 등 구체 사실 4개 확보.",
+    "finalSourceUrl": "https://vercel.com/changelog/grok-build-0-1-now-available-on-vercel-ai-gateway"
+  },
+  {
+    "link": "https://vercel.com/changelog/chat-sdk-now-includes-ai-sdk-tools",
+    "title": "Chat SDK now includes AI SDK tools",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "새로운 chat/ai 서브패스로 AI SDK 도구 노출, createChatTools(chat) 한 줄로 read/write 액션을 에이전트에 연결",
+      "write 작업은 requireApproval 옵션으로 기본 승인 게이팅",
+      "reader·messenger·moderator 3개 프리셋으로 최소권한 원칙 적용, 선택된 프리셋에 따라 도구 lazy 생성",
+      "toAiMessages 함수와 관련 타입이 chat에서 chat/ai로 이전, 기존 export는 deprecated"
+    ],
+    "reason": "Vercel 공식 changelog로 서브패스·함수 시그니처·프리셋·마이그레이션 디테일 등 발행 가능 사실 다수.",
+    "finalSourceUrl": "https://vercel.com/changelog/chat-sdk-now-includes-ai-sdk-tools"
+  },
+  {
+    "link": "https://vercel.com/changelog/vercel-ai-gateway-plugin-for-wordpress",
+    "title": "Vercel AI Gateway plugin for WordPress",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "Anthropic·Google·OpenAI·xAI·DeepSeek·MiniMax·Moonshot AI 등 40+ 프로바이더, 수백 개 모델에 단일 API 키로 접근",
+      "WordPress AI Client 커넥터로 동작하며 WordPress 7.0 이상 필요",
+      "Settings > Connectors에서 단일 AI Gateway 자격증명 관리",
+      "텍스트·구조화 JSON·이미지·비디오 멀티모달 생성 지원, 프로바이더 장애 시 자동 폴백"
+    ],
+    "reason": "Vercel 공식 changelog로 통합 디테일·요구 버전·관리 경로 등 구체 사실 확보.",
+    "finalSourceUrl": "https://vercel.com/changelog/vercel-ai-gateway-plugin-for-wordpress"
+  },
+  {
+    "link": "https://github.blog/changelog/2026-05-19-easily-apply-copilot-code-review-feedback-with-copilot-cloud-agent",
+    "title": "Easily apply Copilot code review feedback with Copilot cloud agent",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "Copilot 코드 리뷰의 'Implement suggestion' 버튼이 'Fix with Copilot'으로 리네이밍",
+      "Fix with Copilot 클릭 시 직접 적용 또는 새 PR 생성 선택 다이얼로그 노출",
+      "다이얼로그에서 사용할 모델 선택 및 선택적 추가 지시 입력 가능",
+      "'Fix batch with Copilot' 버튼이 'Implement all suggestions'를 대체, 여러 리뷰 코멘트 일괄 처리",
+      "Copilot 클라우드 에이전트와 통합되어 피드백 처리 효율화"
+    ],
+    "reason": "공식 GitHub Changelog로 UI 변화·플로우·모델 선택 등 구체 사실 다수.",
+    "finalSourceUrl": "https://github.blog/changelog/2026-05-19-easily-apply-copilot-code-review-feedback-with-copilot-cloud-agent"
+  },
+  {
+    "link": "https://vercel.com/changelog/nuxt-mcp-toolkit-mcp-apps",
+    "title": "Nuxt MCP Toolkit now supports MCP apps",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "defineMcpApp 매크로로 name·description·inputSchema·handler를 지정해 MCP 앱 정의",
+      "useMcpApp 컴포저블로 pre-hydrated 데이터 읽기·후속 프롬프트 트리거·다른 툴 호출 가능",
+      "Claude·ChatGPT 등 MCP 클라이언트가 인터랙티브 HTML 응답을 인라인 렌더링",
+      "Vue SFC를 빌드 타임에 self-contained HTML로 번들링해 MCP 엔드포인트에서 서빙",
+      "핸들러가 structuredContent를 반환해 풍부한 인터랙티브 데이터 전달"
+    ],
+    "reason": "Vercel 공식 changelog로 매크로명·컴포저블·빌드 메커니즘·반환 포맷 등 구체 구현 사실 다수.",
+    "finalSourceUrl": "https://vercel.com/changelog/nuxt-mcp-toolkit-mcp-apps"
+  },
+  {
+    "link": "https://www.builder.io/blog/code-is-the-canvas",
+    "title": "Code is the Canvas: Bring the Whole Team to It",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "Builder Fusion·Publish·QA Agent·Code Review Agent 자사 제품 언급",
+      "Figma·Jira·Slack·Chrome extension 통합 주장, SOC 2 Type 2 컴플라이언스",
+      "VS Code·Cursor와 IDE 싱크, MCP로 Claude Code·Cursor 통합"
+    ],
+    "reason": "비전 옹호·마케팅 위주로 코드 예시·API·구체 아키텍처 부재.",
+    "finalSourceUrl": "https://www.builder.io/blog/code-is-the-canvas"
+  },
+  {
+    "link": "https://www.builder.io/blog/announcing-quality-review-agent",
+    "title": "Announcing Quality Review Agent: Agentic QA on Every PR",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "에이전트가 실제 브라우저에서 제품을 로드해 클릭·타이핑·플로우 워크 수행",
+      "해피 패스·엣지 케이스(빈 상태·잘못된 입력·에러)·리그레션 3개 레이어 커버",
+      "지적된 버그마다 'Fix in Builder' 버튼 제공, 평문 영어 설명 후 동일 PR에 재반영",
+      "현재 GitHub PR 지원, GitLab·Bitbucket·Azure DevOps 지원 예정",
+      "에이전트 추론·네트워크 호출·콘솔 출력 3개 패널이 타임라인 동기화된 비디오로 제공"
+    ],
+    "reason": "신제품 출시 공식 발표로 기능·동작·범위·디버그 출력 등 구체 사실 다수. AI 코딩 도구의 개발자 활용 사례.",
+    "finalSourceUrl": "https://www.builder.io/blog/announcing-quality-review-agent"
+  }
+]

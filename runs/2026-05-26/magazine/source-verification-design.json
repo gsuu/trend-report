@@ -1,0 +1,90 @@
+[
+  {
+    "link": "https://ditoday.com/%ec%b0%b8%ec%9d%84-%ec%88%98-%ec%97%86%eb%8a%94-ux%ec%9d%98-%ec%a0%80%eb%a0%b4%ed%95%a8-%e2%91%a0-%eb%ac%b4%ec%b1%85%ec%9e%84%ed%95%9c-%ec%84%a4%ea%b3%84-%ec%86%8d-%eb%94%94%ec%a7%80%ed%84%b8/",
+    "title": "[참을 수 없는 UX의 저렴함 ①] 무책임한 설계 속 '디지털 갑질'",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "필자 이동석(레인메이커DNC 대표)이 정부 민원·은행 앱·병원 예약·보험 청구·업무 시스템 다섯 영역의 '저렴한 UX'를 묶어 비판한다",
+      "패스트푸드 키오스크 난해, 공공 사이트 파일 형식 미지원, 은행 앱의 '공동인증서' vs '금융인증서' 같은 비친화 용어, 보안 제약으로 인한 수동 문서 재가공을 구체 사례로 제시한다",
+      "'디지털 갑질'을 '시스템이 처리했어야 할 복잡성을 사용자가 대신 치우는 현상'으로 정의하고 다음 회차에서 원인 분석 예고",
+      "발행일 2026-05-18, DIGITAL iNSIGHT 연재 1편"
+    ],
+    "reason": "한국 UX 시리즈 칼럼 1편으로 영역별 구체 사례 4개 이상이 본문에 명시되어 발행 근거로 사용 가능",
+    "finalSourceUrl": "https://ditoday.com/%ec%b0%b8%ec%9d%84-%ec%88%98-%ec%97%86%eb%8a%94-ux%ec%9d%98-%ec%a0%80%eb%a0%b4%ed%95%a8-%e2%91%a0-%eb%ac%b4%ec%b1%85%ec%9e%84%ed%95%9c-%ec%84%a4%ea%b3%84-%ec%86%8d-%eb%94%94%ec%a7%80%ed%84%b8/"
+  },
+  {
+    "link": "https://ditoday.com/%ec%96%b4%ec%a0%9c%ec%b2%98%eb%9f%bc-%ec%9e%90%ec%97%b0%ec%8a%a4%eb%9f%bd%ec%a7%80%eb%a7%8c-%ec%96%b4%ec%a0%9c%eb%b3%b4%eb%8b%a4-%ed%8e%b8%ed%95%98%ea%b2%8c-%ec%99%80%ec%9d%bc%eb%a6%ac%ec%9d%98/",
+    "title": "\"어제처럼 자연스럽지만, 어제보다 편하게\" 와일리의 하나원큐 UI·UX 리뉴얼",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "와일리가 진행한 하나은행 'FIRST 하나원큐' 리뉴얼은 16개월 프로젝트로 2026년 2월 19일 오픈했다",
+      "정보 구조를 기존 '은행 업무 분류 체계'에서 '통합자산 관리 중심의 고객 맥락 중심 구조'로 전환하고, 여신·수신·투자·퇴직연금·마이데이터 5개 도메인의 UX 플로우를 통합했다",
+      "개인 맞춤형 홈 화면을 도입해 고객이 자주 쓰는 기능을 직접 골라 화면을 구성할 수 있게 했고, 공통 UI 컴포넌트 라이브러리를 구축했다",
+      "리뉴얼 후 사용자 수가 약 1,500% 이상 증가했다고 명시"
+    ],
+    "reason": "한국 금융 앱 리뉴얼 케이스로 IA 전환·맞춤형 홈·5개 도메인 통합·기간·성과 수치까지 구체 사실이 4개 이상",
+    "finalSourceUrl": "https://ditoday.com/%ec%96%b4%ec%a0%9c%ec%b2%98%eb%9f%bc-%ec%9e%90%ec%97%b0%ec%8a%a4%eb%9f%bd%ec%a7%80%eb%a7%8c-%ec%96%b4%ec%a0%9c%eb%b3%b4%eb%8b%a4-%ed%8e%b8%ed%95%98%ea%b2%8c-%ec%99%80%ec%9d%bc%eb%a6%ac%ec%9d%98/"
+  },
+  {
+    "link": "https://ditoday.com/%ed%8e%9c%ed%83%80%ed%81%b4-ai-%eb%a7%88%ec%bc%80%ed%8c%85-%ed%94%8c%eb%9e%ab%ed%8f%bc-%ec%a0%81%ec%9a%a9-%eb%b3%b8%ea%b2%a9%ed%99%94/",
+    "title": "펜타클, AI 마케팅 플랫폼 본격 적용",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "ACP AI·GEO 레이더·VOC AI 인사이트 3개 플랫폼 라인업 보유",
+      "삼양식품 '탱글' 브랜드에 관심사 숏폼 마케팅 적용 사례",
+      "리스닝마인드 인텐트 데이터 활용"
+    ],
+    "reason": "보도자료성 마케팅 플랫폼 소개 글로 디자인·UI/UX·화면·플로우 증거 전무, 디자인 카테고리 발행 기준 미충족",
+    "finalSourceUrl": "https://ditoday.com/%ed%8e%9c%ed%83%80%ed%81%b4-ai-%eb%a7%88%ec%bc%80%ed%8c%85-%ed%94%8c%eb%9e%ab%ed%8f%bc-%ec%a0%81%ec%9a%a9-%eb%b3%b8%ea%b2%a9%ed%99%94/"
+  },
+  {
+    "link": "https://smashingmagazine.com/2026/05/four-levels-customer-understanding/",
+    "title": "Four Levels Of Customer Understanding",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "Vitaly Friedman이 고객 이해를 4단계(말하는 것·생각·실제 행동·행동의 이유)로 구분하고 각 단계 신뢰도와 적합한 리서치 방법을 매핑",
+      "Level별 방법론: 1단계 설문·CRM(비권장), 2단계 사용자 인터뷰, 3단계 태스크 분석·애널리틱스, 4단계 관찰 기반 조사·심화 인터뷰",
+      "조직 전사 참여 도구로 'Exposure Hours'(직원이 6~12주마다 고객과 2시간 상호작용), 3~6개월 주기 헬프데스크 인사이트 수집, 라이브 UX 테스팅 참관을 제시",
+      "Hannah Shamji·Erika Hall·Geoffrey Roberts(Emotion Wheel)·David Travis 등 출처 인용, 발행일 2026-05-22"
+    ],
+    "reason": "Smashing 정규 가이드로 레벨별 방법론·구체 도구·인용 출처 모두 본문에서 추출 가능한 reference 표준",
+    "finalSourceUrl": "https://smashingmagazine.com/2026/05/four-levels-customer-understanding/"
+  },
+  {
+    "link": "https://ditoday.com/ai%ea%b0%80-%ec%9d%bd%eb%8a%94-%ea%b3%a0%ea%b0%9d-%ec%96%b8%ec%96%b4-%ec%bd%98%ed%85%90%ec%b8%a0-%ec%84%a4%ea%b3%84%ed%95%98%ea%b8%b0/",
+    "title": "AI가 읽는 '고객 언어 콘텐츠' 설계하기",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "AS-IS '제품 특징 중심' → TO-BE '고객 경험·사용 상황·리뷰 기반' 콘텐츠 전환 원칙",
+      "JSON-LD 구조화 데이터 적용 언급",
+      "비즈스프링 GEO 컨설팅 4단계 프로세스(리뷰 수집·질문 패턴 분석·구조 설계·구조화 데이터 자동화) 제시"
+    ],
+    "reason": "비즈스프링 자사 GEO 컨설팅 홍보성 기고로 디자인·UI/UX 적용 사례·구체 코드·화면 없음, 본문 70%가 일반론",
+    "finalSourceUrl": "https://ditoday.com/ai%ea%b0%80-%ec%9d%bd%eb%8a%94-%ea%b3%a0%ea%b0%9d-%ec%96%b8%ec%96%b4-%ec%bd%98%ed%85%90%ec%b8%a0-%ec%84%a4%ea%b3%84%ed%95%98%ea%b8%b0/"
+  },
+  {
+    "link": "https://pxdstory.tistory.com/1899",
+    "title": "검색엔진은 우리 사이트를 어떻게 발견할까?",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "pxd UX Engineer 연재로 크롤링·인덱싱·랭킹 3단계 흐름과 robots.txt·sitemap·canonical·내부 링크·리다이렉트 5개 항목별 실무 체크 포인트 제시",
+      "Next.js robots.ts 코드, sitemap URL당 50,000개 제한, 리다이렉트 체인 3~5회 제한, 삭제 페이지 410 응답 등 구체 가이드 다수",
+      "학습용 봇(GPTBot·ClaudeBot)과 검색 노출용 봇(OAI-SearchBot·Claude-SearchBot)을 robots.txt로 분리 제어하는 GEO 관점 예시 코드 포함",
+      "ChatGPT(Bing)·Gemini(Google)·Perplexity(자체 크롤+복수 엔진) 등 AI 서비스별 검색 인덱스 출처 비교, Google Search Console·네이버 서치어드바이저 모니터링 권장"
+    ],
+    "reason": "한국 UX/프론트엔드 reference로 SEO+GEO를 디자이너·기획자 시사점까지 연결한 구체 가이드, 코드와 수치까지 명시",
+    "finalSourceUrl": "https://pxdstory.tistory.com/1899"
+  },
+  {
+    "link": "https://www.nngroup.com/training/august/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "title": "UX Conference August Announced (Aug 17",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "NN/g UX Conference 2026년 8월 17~28일 온라인 개최",
+      "AI·Interaction·Management·Research 4개 카테고리 26개 코스",
+      "코스당 $1,200~$1,300, 시험비 $95"
+    ],
+    "reason": "행사 등록 안내 페이지로 UX 리서치 인사이트·방법론 콘텐츠 전무, 단순 일정·가격 정보로 디자인 발행 근거 부족",
+    "finalSourceUrl": "https://www.nngroup.com/training/august/"
+  }
+]

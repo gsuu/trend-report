@@ -1,0 +1,87 @@
+[
+  {
+    "link": "https://techblog.woowahan.com/26319/",
+    "title": "우아한공방의 새로운 동료, 시스템 맥락을 가진 챗봇서비스 개발기(feat. RAG)",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "API 서버에서 AWS Bedrock Knowledge Bases 기반 RAG 체인을 수행하고 DynamoDB로 채팅 히스토리를 관리하며, 벡터 스토어로 Amazon OpenSearch Serverless를 채택했다.",
+      "사용자 질문에서 컴포넌트 정보를 먼저 추출해 '|FilledButton|' 형식 구분자로 메타데이터 필터를 구성하고, 질문 유형에 따라 topK 값을 동적으로 조정해 Retrieval 정확도를 높였다.",
+      "Guardrail에 'person-related queries'와 'non-design-system queries' 두 가지 추가 정책을 적용해 디자인시스템 범위 밖 답변을 차단했다.",
+      "Storybook의 preview.tsx에 전역 챗봇 UI를 주입해 모든 디자인시스템 문서에서 일관되게 챗봇을 호출할 수 있게 했다."
+    ],
+    "reason": "우아한형제들 공식 기술블로그로 RAG 아키텍처·Guardrail·Storybook 통합 등 구현 단위 사실 4건이 본문에 명시된다.",
+    "finalSourceUrl": "https://techblog.woowahan.com/26319/"
+  },
+  {
+    "link": "https://newsroom.kurlycorp.com/k-salad/?utm_source=rss&utm_medium=rss&utm_campaign=k-salad",
+    "title": "[Kurly Only] 샐러드를 일상으로 불러 온 '샐러드판다'",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "샐러드판다는 2017년 김성학 대표가 여의도 등 오피스 빌딩 3곳에 자판기를 설치하며 시작했다.",
+      "첫 컬리 발주는 닭가슴살·버섯·파스타·모짜렐라·리코타 치즈 병 샐러드 5종을 각 20개씩 총 100개였다.",
+      "현재 병 샐러드 12종과 샌드위치·랩·채소스틱·스프레드 샐러드, 두유면·쉬라즈 신상품을 판매한다."
+    ],
+    "reason": "셀러 스토리텔링 형식의 브랜드 콘텐츠 마케팅으로, 서비스 기능·UX·정책 변화가 없어 발행 기준에 미달한다.",
+    "finalSourceUrl": "https://newsroom.kurlycorp.com/k-salad/"
+  },
+  {
+    "link": "https://news.coupang.com/archives/62674/",
+    "title": "[보도자료] 쿠팡, 헤어·바디 상품 기획전 \"산뜻한 여름 준비하세요\"",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "써머 퍼스널 케어 기획전을 5월 22일부터 24일까지 진행하며 약 3500개 상품을 노출한다.",
+      "쿤달, 밀크바오밥, 아로마티카 등 130여 브랜드가 참여한다.",
+      "마더케이 '허긴 프레쉬 키즈 샴푸' 등 아이·청소년 전용 라인업을 별도 구성했다."
+    ],
+    "reason": "보도자료 prefix가 붙은 단기 기획전 홍보로 화면·플로우·정책 증거가 없어 광고성으로 판단한다.",
+    "finalSourceUrl": "https://news.coupang.com/archives/62674/"
+  },
+  {
+    "link": "https://newsroom.kurlycorp.com/k-goodsense/?utm_source=rss&utm_medium=rss&utm_campaign=k-goodsense",
+    "title": "[굿 센스] 상품 좀 팔아본 회사가 '좋은 것'을 고집하는 이유",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "PB 만두 개발에서 테스트 만두를 1만 8,000개 제작했다고 언급한다.",
+      "은퇴위원회는 출시 후 6개월 경과 시 월평균 매출 100만원 미만이면 은퇴 후보로 진입시킨다.",
+      "신선도가 중요한 상품은 유통기한 잔여 여부와 무관하게 품질이 가장 좋은 단 하루만 판매하는 '하루살이 상품' 원칙을 적용한다."
+    ],
+    "reason": "신간 도서 《굿 센스》 출간 연계 브랜드 스토리텔링으로, 실제 서비스 화면·정책 변화가 아닌 사후 회고형 홍보 콘텐츠다.",
+    "finalSourceUrl": "https://newsroom.kurlycorp.com/k-goodsense/"
+  },
+  {
+    "link": "https://newsroom.musinsa.com/newsroom-menu/2026-0513",
+    "title": "무신사 메가스토어 성수, '엑스더리그' 촬영 무대 낙점··· 4억 팬덤을 보유한 인플루언서 40인 집결",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "9개국 톱 셀러 40인이 무신사 메가스토어 성수를 방문해 '엑스더리그(X THE LEAGUE)' 촬영을 진행했다.",
+      "해당 촬영분은 8월 ENA와 글로벌 OTT 플랫폼을 통해 방영 예정이다.",
+      "기존 다국어 서비스와 택스리펀 시스템을 함께 홍보했다."
+    ],
+    "reason": "글로벌 인플루언서·방송 촬영 협업 발표로 서비스/UX/정책 변화는 없고 기존 기능 재언급뿐이다.",
+    "finalSourceUrl": "https://newsroom.musinsa.com/newsroom-menu/2026-0513"
+  },
+  {
+    "link": "https://newsroom.musinsa.com/newsroom-menu/2026-0515",
+    "title": "무신사, 무진장 5주년 맞이 '무진장 AI 광고제' 개최··· \"고객의 상상이 무진장 광고가 된다\"",
+    "verificationStatus": "원문 부족",
+    "facts": [
+      "만 14세 이상 대한민국 국민이 개인 또는 3인 이하 팀으로 5~30초 AI 영상 콘텐츠를 제작해 참여한다.",
+      "예선 접수는 5월 15일 11시부터 6월 5일 23시 59분까지 진행되며 개인 SNS 업로드 후 무신사 앱으로 접수한다.",
+      "총상금 약 2,000만 원, 1등은 상금 800만 원과 무신사머니 200만 원으로 총 1,000만 원을 수여한다."
+    ],
+    "reason": "고객 참여형 광고제 캠페인 공지로, 실제 무신사 플랫폼 기능·정책·화면 변화가 아닌 마케팅 이벤트다.",
+    "finalSourceUrl": "https://newsroom.musinsa.com/newsroom-menu/2026-0515"
+  },
+  {
+    "link": "https://blog.opensurvey.co.kr/article/k-food-2026-2/",
+    "title": "K-푸드 글로벌 트렌드, 약과부터 라면까지 외국인 유학생 100명이 발견한 K-푸드의 '반전'",
+    "verificationStatus": "검증 통과",
+    "facts": [
+      "서울 거주 외국인 대학(원)생 100명(46개국)을 대상으로 조사했고, 한국 도착 전 60명이 K-푸드를 '맵고 빨간 음식'으로 인식했으나 거주 후 52명이 '생각보다 훨씬 다양함'으로 평가했다.",
+      "약과는 '캐러멜라이징된 쿠키', 초코파이는 '마시멜로와 초콜릿 결합 디저트' 등 현지 언어로 재해석되며 자국 식문화 맥락에 편입된다.",
+      "응답자의 74%가 유행하는 길거리 음식도 K-푸드로 인정했고, 65%가 '한국적 맛과 풍미'를 핵심 요소로 지목해 원산지보다 맛·트렌드를 우선시하는 정체성 기준 변화가 확인된다."
+    ],
+    "reason": "오픈서베이 자체 100명 표본 리서치 보고서로 응답 수치·권역별 비교·인식 변화 등 발행 가능한 구체 데이터가 충분하다.",
+    "finalSourceUrl": "https://blog.opensurvey.co.kr/article/k-food-2026-2/"
+  }
+]
