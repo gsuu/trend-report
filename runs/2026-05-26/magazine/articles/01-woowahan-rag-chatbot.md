@@ -1,11 +1,11 @@
 #### 01. 우아한공방의 새로운 동료, 시스템 맥락을 가진 챗봇서비스 개발기(feat. RAG)
 
-- 날짜: 2026-05-22
+- 날짜: 2026-05-26
 - 태그: 디자인시스템, RAG, AWS Bedrock, Storybook
-- 국가: KR
-- 카테고리: ecommerce
-- 직무 태그: 웹서비스기획·웹디자인·웹DEV
-- 출처 유형: blog_opinion
+- 국가: 한국
+- 카테고리: Service / commerce
+- 직무 태그: 웹서비스기획, 웹디자인, 웹DEV
+- 출처 유형: 기술블로그
 - 출처: 우아한형제들 기술블로그
 - 출처 URL: https://techblog.woowahan.com/26319/
 - 이미지: https://techblog.woowahan.com/wp-content/uploads/2025/07/우아한테크-기술블로그-배너.png

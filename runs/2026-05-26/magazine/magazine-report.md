@@ -1,13 +1,12 @@
 # 2026-05-26 매거진
 
-shortlist 16건 → 발행 12건 + 제외 4건. 사용자 피드백 반영: 핀테크 적합도·자사 마케팅·독자 흥미 부족 사유로 4건 제외, pxd robots.txt는 DEV로 카테고리 재배치.
+shortlist 16건 → 발행 12건 + 제외 4건. 슬랙 매니저 검토 반영: 핀테크 적합도·자사 마케팅·독자 흥미 부족 사유로 4건 제외, pxd robots.txt 가이드는 DESIGN → DEV 로 카테고리 이동.
 
 산출물:
 - shortlist: `runs/2026-05-26/magazine/shortlist-20-30.md`
 - 원문 검증: `runs/2026-05-26/magazine/source-verification-{service,design,dev}.json`
 - 타겟 분류: `runs/2026-05-26/magazine/target-classification.json`
 - 항목별 본문: `runs/2026-05-26/magazine/articles/{NN}-{slug}.md`
-- 제외 본문: `runs/2026-05-26/magazine/articles/excluded/`
 
 ---
 
@@ -17,10 +16,10 @@ shortlist 16건 → 발행 12건 + 제외 4건. 사용자 피드백 반영: 핀�
 
 - 날짜: 2026-05-22
 - 태그: 디자인시스템, RAG, AWS Bedrock, Storybook
-- 국가: KR
-- 카테고리: ecommerce
-- 직무 태그: 웹서비스기획·웹디자인·웹DEV
-- 출처 유형: blog_opinion
+- 국가: 한국
+- 카테고리: ai
+- 직무 태그: 웹서비스기획, 웹디자인, 웹DEV
+- 출처 유형: 기술블로그
 - 출처: 우아한형제들 기술블로그
 - 출처 URL: https://techblog.woowahan.com/26319/
 - 이미지: https://techblog.woowahan.com/wp-content/uploads/2025/07/우아한테크-기술블로그-배너.png
@@ -62,11 +61,9 @@ shortlist 16건 → 발행 12건 + 제외 4건. 사용자 피드백 반영: 핀�
 - 검색 결과가 비슷한 이름의 컴포넌트끼리 섞이거나, 정책·히스토리 질문에 충분한 맥락을 보여주지 못하는 구간이 있는가. 메타데이터 구분자나 질문 유형별 검색 범위를 다르게 둘 여지는 있는가.
 - 운영도구 챗봇·AI 응답이 다뤄도 되는 범위와 거절해야 하는 범위가 사용자에게 같은 문구로 일관되게 안내되고 있는가. 개인 정보·범위 밖 질문에 대한 거절 정책이 운영자 합의로 정리돼 있는가.
 
----
-
 #### 02. K-푸드 글로벌 트렌드, 약과부터 라면까지 외국인 유학생 100명이 발견한 K-푸드의 '반전'
 
-- 날짜: 2026-05-26
+- 날짜: 2026-05-25
 - 태그: K-푸드, 글로벌 소비자 조사, 카테고리 정체성, 길거리 음식
 - 국가: KR
 - 카테고리: commerce_adjacent
@@ -114,6 +111,7 @@ shortlist 16건 → 발행 12건 + 제외 4건. 사용자 피드백 반영: 핀�
 - 권역별 맛 민감도(서구권 쓴맛·단맛, 아시아권 매운맛, 신흥권 발효 향)를 필터·추천 근거·상세 정보에서 사용자가 직접 판단할 수 있게 노출하는가?
 - 길거리 음식·트렌드 메뉴를 한식 카테고리와 분리해 별도 진입점으로 두고 있는가? 74%가 K-푸드로 인정하는 영역인데 우리는 어디에 둬뒀는가?
 
+
 ---
 
 ## DESIGN
@@ -124,7 +122,7 @@ shortlist 16건 → 발행 12건 + 제외 4건. 사용자 피드백 반영: 핀�
 - 태그: 디지털 갑질, 저렴한 UX, 책임 전가, 키오스크, 공동인증서
 - 국가: KR
 - 카테고리: insight
-- 직무 태그: 웹기획자·UIUX
+- 직무 태그: 웹서비스기획, 웹디자인
 - 출처 유형: blog_opinion
 - 출처: DIGITAL iNSIGHT
 - 출처 URL: https://ditoday.com/참을-수-없는-ux의-저렴함-①-무책임한-설계-속-디지털/
@@ -139,8 +137,8 @@ shortlist 16건 → 발행 12건 + 제외 4건. 사용자 피드백 반영: 핀�
 - 강사 등록 서류를 위해 보안 걸린 PDF를 캡처하고 재가공하느라 버려지는 "서글픈 30분"을 공공 사이트의 대표 사례로 듭니다. 사용자가 시스템의 보안 제약을 수동 작업으로 메우고 있다는 지적입니다.
 - 은행 앱이 내부 용어를 고객 언어로 바꾸지 못하면 사용자가 "공동인증서"와 "금융인증서"의 차이를 공부해야 한다고 짚습니다. 같은 인증인데 라벨이 다르다는 사실 자체가 학습 부담으로 떠넘겨집니다.
 - 업무 시스템에 대해서는 "매번 같은 정보를 입력하게 하고, 매번 같은 오류를 피하게 하며, 매번 같은 불안을 감수하게 한다"고 정리합니다.
-- 글의 핵심 진단은 "시스템이 해결했어야 할 복잡성이라는 쓰레기를 사용자가 대신 치우고 있다"는 한 문장으로 압축됩니다. 결론은 "저렴한 UX는 싸게 만든 것이 아니라, 사용자의 가치와 노동을 싸게 취급한 결과"입니다.
-- 다음 회차에서는 이 문제가 왜 반복되는지, UX를 저렴하게 보는 의사결정 구조가 조직 비효율과 AX 실패로 이어지는 경로를 다룰 예정입니다.
+- 글의 핵심 진단은 "시스템이 처리했어야 할 복잡성을 사용자가 대신 치우고 있는 사례들"이라는 한 문장으로 압축됩니다. 결론은 "저렴한 UX는 싸게 만든 것이 아니라, 사용자의 가치와 노동을 싸게 취급한 결과"입니다.
+- 다음 회차에서는 이 문제가 왜 반복되는지, UX를 저렴하게 보는 의사결정 구조가 조직 비효율로 이어지는 경로를 다룹니다. 저자는 기존 설계 문제를 정리하지 않고 AI(AX)를 도입하면 "디지털 갑질의 증폭기"가 될 수 있다고도 경고합니다.
 
 ##### 디자인 인사이트
 
@@ -167,15 +165,13 @@ shortlist 16건 → 발행 12건 + 제외 4건. 사용자 피드백 반영: 핀�
 - 회원가입·청구·예약 흐름에서 사용자가 이미 입력한 정보를 다시 묻는 단계가 몇 번 등장하는가?
 - 우리 화면을 처음 보는 사용자가 "이걸 하려면 무엇을 먼저 공부해야 하지"라고 느낄 지점이 있는가?
 
----
-
 #### 04. "어제처럼 자연스럽지만, 어제보다 편하게" 와일리의 하나원큐 UI·UX 리뉴얼
 
 - 날짜: 2026-05-26
 - 태그: 하나원큐, 정보구조, 금융앱리뉴얼, 디자인시스템
 - 국가: KR
 - 카테고리: insight
-- 직무 태그: UIUX·웹기획자·웹디자인
+- 직무 태그: 웹디자인, 웹서비스기획
 - 출처 유형: 디자인 매체 케이스 스터디
 - 출처: 디아이투데이(DI Today)
 - 출처 URL: https://ditoday.com/어제처럼-자연스럽지만-어제보다-편하게-와일리의/
@@ -187,10 +183,10 @@ shortlist 16건 → 발행 12건 + 제외 4건. 사용자 피드백 반영: 핀�
 
 - 와일리가 진행한 하나은행 'FIRST 하나원큐' 리뉴얼이 16개월 작업 끝에 2026년 2월 19일 오픈했다.
 - 기존에는 "예금, 대출, 카드 등의 은행 업무 분류 체계"로 메뉴가 나열돼 고객이 은행 용어를 먼저 알아야 진입할 수 있었다. 리뉴얼본은 이를 "통합자산 관리 중심의 고객 맥락 중심 구조"로 재편했다.
-- 여신(대출)·수신(예금·적금)·투자·퇴직연금·마이데이터 5개 금융 도메인의 UX 플로우를 한 앱 안에서 통합했다. 여신은 심사를 통과하는 '안정감', 수신은 '가입까지의 속도'처럼 도메인별 고객 심리와 비즈니스 로직이 달랐는데 이걸 한 흐름으로 묶었다.
-- 홈은 "고객이 앱을 열었을 때 '무엇을 하러 왔는가'"를 기준으로 잡고, 투자·자산관리처럼 자주 쓰는 기능을 사용자가 직접 골라 화면을 구성하는 개인 맞춤형 홈을 넣었다.
-- 공통 UI 컴포넌트 라이브러리를 따로 만들어 디자인-개발 협업과 이후 운영 단계에서의 일관성 자산으로 남겼다.
-- 리뉴얼 이후 사용자 수가 약 1,500% 이상 증가했다고 명시했다.
+- 여신(대출)·수신(예금·적금)·투자·퇴직연금·마이데이터 5개 금융 도메인의 UX 플로우를 한 앱 안에서 통합했다. 규제 요소(약관 고지, 투자 위험 안내 등)를 빠짐없이 담으면서도 사용자 플로우는 간결하게 유지하는 것이 핵심 과제였다고 밝혔다.
+- 홈은 고객 사용 패턴에 맞춰 투자·자산관리 등 자주 쓰는 기능을 사용자가 직접 골라 화면을 구성하는 개인 맞춤형 구조로 바꿨다.
+- 공통 UI 컴포넌트 라이브러리를 따로 만들어 디자인-개발 협업과 이후 하나은행이 자체 운영하는 단계에서의 일관성 자산으로 남겼다. 기획·디자인·퍼블리싱을 한 팀으로 묶어 의사결정 지연을 줄였다.
+- 박재하 본부장은 인터뷰에서 "리뉴얼 프로젝트에서의 UX 성공 기준은 '얼마나 새로워졌는가'가 아니라 '얼마나 자연스럽게 전환되었는가'"라고 말했다. 리뉴얼 이후 사용자 수가 약 1,500% 이상 증가했다고 명시했다.
 
 ##### 디자인 인사이트
 
@@ -204,7 +200,7 @@ shortlist 16건 → 발행 12건 + 제외 4건. 사용자 피드백 반영: 핀�
 
 ###### 디자인 관점
 
-개인 맞춤형 홈을 단순히 "위젯을 직접 배치" 수준이 아니라 "목적까지의 최단 거리"라는 설계 원칙으로 잡은 점이 핵심이다. 자유도가 높은 홈은 빈 화면 문제와 학습 비용이 함께 따라오는데, 와일리는 그 자유도를 '자주 쓰는 기능을 사용자가 골라낸다'는 한 방향으로 좁혔다. 공통 UI 컴포넌트 라이브러리를 별도 자산으로 남긴 부분도, 리뉴얼을 한 번에 끝낼 게 아니라 이후 하나은행이 자체 운영 단계에서 같은 품질로 확장하도록 설계했다는 점에서 디자인 시스템의 인수인계 모델로 볼 수 있다.
+자유도가 높은 홈은 빈 화면 문제와 학습 비용이 함께 따라온다. 와일리는 그 자유도를 '자주 쓰는 기능을 사용자가 골라낸다'는 한 방향으로 좁혔다. 공통 UI 컴포넌트 라이브러리를 별도 자산으로 남긴 부분도, 리뉴얼을 한 번에 끝낼 게 아니라 이후 하나은행이 자체 운영 단계에서 같은 품질로 확장하도록 설계했다는 점에서 디자인 시스템의 인수인계 모델로 볼 수 있다. 박재하 본부장이 말한 "얼마나 자연스럽게 전환되었는가"라는 기준은, 리뉴얼을 화면 전후 비교가 아니라 기존 사용자가 새 IA로 갈아타는 데 드는 비용 관점에서 본다는 뜻이기도 하다.
 
 ###### 점검 질문
 
@@ -212,8 +208,6 @@ shortlist 16건 → 발행 12건 + 제외 4건. 사용자 피드백 반영: 핀�
 - 우리 화면에서 사용자가 "무엇을 하러 왔는가"를 가장 먼저 묻는 진입점은 어디인가? 그 진입점에서 목적까지 몇 단계가 걸리는가?
 - 도메인이 다른 플로우(예: 신규 가입 / 기존 사용 / 해지)를 한 앱에 묶을 때, 도메인별 톤과 속도 차이를 어떻게 설계에 반영했는가?
 - 우리가 만든 컴포넌트 라이브러리는 프로젝트 종료 후에도 내부 팀이 같은 품질로 확장할 수 있는 형태인가, 만든 디자이너가 떠나면 깨지는가?
-
----
 
 #### 05. Four Levels Of Customer Understanding
 
@@ -225,7 +219,7 @@ shortlist 16건 → 발행 12건 + 제외 4건. 사용자 피드백 반영: 핀�
 - 출처 유형: guide
 - 출처: Smashing Magazine
 - 출처 URL: https://smashingmagazine.com/2026/05/four-levels-customer-understanding/
-- 이미지: http://files.smashing.media/articles/four-levels-customer-understanding/four-levels-customer-understanding.jpg
+- 이미지: https://files.smashing.media/articles/four-levels-customer-understanding/four-levels-customer-understanding.jpg
 - 이미지 설명: Smashing Magazine 원문 대표 이미지 (Four Levels of Customer Understanding)
 - 요약: Vitaly Friedman이 고객 이해를 '말하는 것·생각하는 것·실제 행동·행동의 이유' 4단계로 나누고, 각 단계마다 신뢰도가 다르므로 설문·인터뷰·관찰·심화 대화를 따로 매칭해야 한다고 정리했습니다. 조직 전체가 단계를 끌어올리는 장치로 6~12주마다 직원이 고객과 2시간을 보내는 'Exposure Hours'를 제시합니다.
 
@@ -264,167 +258,148 @@ UX 리서치 결과를 시안 근거로 쓸 때, 자료의 깊이가 흐려진 �
 - 디자이너·기획자 외 PM·CS·마케터가 6~12주에 2시간씩 고객을 직접 만나는 통로가 있는가. 없다면 가장 가볍게 시작할 첫 1회는 무엇인가.
 - 헬프데스크 빈출 불만 표가 디자인 우선순위 회의 안건으로 들어오는가, 운영팀 폴더에만 머무는가.
 
+
 ---
 
 ## DEV
 
-#### 06. 6 Best GitHub Copilot Alternatives in 2026
+#### 06. 검색엔진은 우리 사이트를 어떻게 발견할까?
 
-- 날짜: 2026-05-26
-- 태그: GitHub Copilot, Cursor, Claude Code, AI 코딩 도구
-- 국가: GLOBAL
+- 날짜: 2026-05-21
+- 태그: SEO, GEO, robots.txt, AI 크롤러
+- 국가: KR
+- 카테고리: seo_geo
+- 직무 태그: 웹디자인, 웹서비스기획, 웹DEV
+- 출처 유형: guide
+- 출처: pxd story
+- 출처 URL: https://pxdstory.tistory.com/1899
+- 이미지: ""
+- 이미지 설명: pxd story 본문 다이어그램 — 크롤링·인덱싱·랭킹 3단계 흐름도
+- 요약: pxd UX Engineer 시리즈가 검색엔진의 크롤링→인덱싱→랭킹 흐름을 짚으면서, `robots.txt`·`sitemap`·`canonical`·내부 링크·리다이렉트 5개 항목을 실무 체크 포인트로 정리하고, GPTBot 같은 학습용 봇과 OAI-SearchBot 같은 검색노출용 봇을 `robots.txt`에서 분리 제어하는 GEO 관점 예시까지 다뤘습니다.
+
+##### 요약
+
+- pxd UX Engineer 연재 2편은 "크롤링이 안 되면 인덱싱도 불가능하고, 인덱싱이 안 되면 검색 결과에 절대 나타나지 않는다"는 전제를 두고, 크롤링→인덱싱→랭킹 3단계 중 프론트엔드가 직접 손댈 수 있는 크롤링·인덱싱 구간을 5개 체크 항목으로 분해합니다.
+- `robots.txt`는 파일 누락, 개발 환경의 `Disallow: /`를 운영에 그대로 배포, `/product/`·`/service/` 같은 핵심 디렉터리 차단이 흔한 실수로 꼽혔고, Next.js에서는 `app/robots.ts`에 `MetadataRoute.Robots`를 반환해 `allow: '/'`와 `disallow: ['/admin/', '/api/', '/private/']`, `sitemap` 경로를 함께 선언하는 코드 예시가 제시됐습니다.
+- 사이트맵은 단일 파일당 최대 50,000개 URL 제한이 있고 초과 시 sitemap index로 묶어야 하며, 모든 URL의 `lastmod`를 배포 스크립트가 현재 날짜로 자동 갱신하는 패턴은 크롤러가 실제 변경 페이지를 판단하지 못하게 만든다고 지적합니다.
+- 리다이렉트는 Googlebot이 최대 10홉까지 따라가지만 실무에서는 3~5회 이하 유지 권장, 삭제 페이지는 대체가 있으면 301, 없으면 `410 Gone`을 돌려 크롤 예산을 절약하라고 안내합니다.
+- `<link rel="canonical">`은 페이지가 하나뿐이어도 자기 자신을 가리키는 self-canonical로 두어 필터·정렬·세션 ID 같은 쿼리 파라미터가 만드는 중복 URL을 흡수하도록 권장합니다.
+- 내부 링크는 `<a href>`나 프레임워크의 `Link` 컴포넌트 기반이어야 하고, `<div onClick={() => router.push(...)}>` 식의 JS 이벤트 네비게이션은 크롤러가 따라가지 못한다고 명시했습니다.
+- GEO 관점에서는 OpenAI의 GPTBot(학습)과 OAI-SearchBot(검색 노출), Anthropic의 ClaudeBot(학습)과 Claude-SearchBot(검색 노출)을 분리 제어하는 예시가 등장합니다 — `User-agent: GPTBot / Disallow: /` 와 `User-agent: OAI-SearchBot / Allow: /` 를 함께 두는 식입니다.
+- 인용 기반 인덱스도 정리됐습니다. ChatGPT의 실시간 검색은 Bing, Gemini는 Google, Perplexity는 자체 크롤러+복수 엔진을 씁니다. ChatGPT 인용을 노린다면 Google Search Console만이 아니라 Bing Webmaster Tools도 같이 봐야 하고, 국내 트래픽은 네이버 서치어드바이저에서 `User-agent: Yeti` 허용 여부를 확인해야 합니다.
+- AI 학습 봇(GPTBot·ClaudeBot·PerplexityBot)은 약 5.7억 건 요청을 분석한 결과 JavaScript 실행 흔적이 0건이라, CSR로만 노출되는 콘텐츠는 AI 인용에 잡히지 않습니다. Next.js SSR/SSG로 HTML에 본문을 직접 포함시키는 방식이 권장됩니다.
+
+##### 매거진 인사이트
+
+> SEO 체크리스트가 GEO 체크리스트로 확장됐고, 그 분기점은 `robots.txt` 한 파일에서 시작됩니다.
+
+검색엔진이 우리 사이트를 발견하는 경로는 그대로인데, 인용해 가는 쪽이 Google·네이버뿐 아니라 ChatGPT·Gemini·Perplexity·Claude로 늘었습니다. pxd 연재는 그 변화를 새 SEO 도구를 추가하는 식이 아니라, 기존 5개 항목(`robots.txt`·sitemap·canonical·내부 링크·리다이렉트)을 점검할 때 학습용 봇과 검색노출용 봇을 따로 다룬다는 한 줄을 더해 풀어냅니다.
+
+###### 왜 지금 이 업데이트인가
+
+ChatGPT·Gemini·Perplexity가 실시간 답변에 출처를 붙이기 시작하면서, "내 사이트가 AI 답변에 인용되는가"가 새 KPI로 들어왔습니다. 그런데 학습 데이터에 쓰이는 것과 검색 결과에 인용되는 것은 OpenAI·Anthropic이 봇을 분리해 두면서 다른 결정이 됐고, 이 결정을 표현하는 자리가 결국 `robots.txt` 한 파일입니다. 연재가 SEO/GEO를 한 묶음으로 묶은 이유도 여기에 있습니다 — 새 파일이 늘어난 게 아니라, 기존 파일이 의미하는 범위가 달라졌습니다.
+
+###### 구현 관점
+
+가장 먼저 손볼 곳은 `robots.txt`의 User-agent 블록 구성입니다. GPTBot·ClaudeBot은 학습 차단으로 두되 OAI-SearchBot·Claude-SearchBot은 허용하는 분리 설정이 필요한지, 아니면 전사 정책상 모두 차단할지를 결정해야 합니다. Next.js라면 이 결정이 `app/robots.ts`의 `rules` 배열에 그대로 드러납니다.
+
+sitemap은 50,000개 URL 제한과 `lastmod` 자동 갱신을 먼저 점검합니다. 배포 스크립트가 모든 URL의 `lastmod`를 빌드 시각으로 일괄 갱신하고 있다면, 실제 콘텐츠 수정 시각을 CMS·DB에서 끌어와 채우도록 바꿔야 합니다. 삭제된 상세 페이지가 sitemap에 남아 있거나, 반대로 살아 있는 페이지가 빠져 있는 케이스도 같이 봅니다.
+
+리다이렉트 체인은 운영 중에 점진적으로 길어지는 항목입니다. 도메인 이전, www 통일, HTTPS 강제, 카테고리 URL 개편이 누적되면 3~5홉을 쉽게 넘깁니다. 삭제 페이지에 무조건 메인으로 301을 거는 관행도 다시 봅니다 — 대체가 없는 페이지는 `410 Gone`이 크롤 예산 관점에서 더 정확합니다.
+
+내부 링크는 디자인 시스템 단위에서 검수합니다. 네비게이션·푸터·카드 컴포넌트가 `<a href>`나 `Link`로 렌더되는지, `onClick`으로 라우터를 부르는 자리에 `href`가 함께 붙어 있는지를 컴포넌트 props 단계에서 강제하는 편이 안전합니다. CSR로만 본문이 채워지는 상세 페이지가 있다면, AI 학습 봇의 JS 미실행 특성을 감안해 SSR/SSG 우선으로 옮기는 결정을 빠르게 가져갑니다.
+
+###### 실무에 어떻게 적용할 수 있을까
+
+- `/robots.txt` 200 응답 확인, 핵심 디렉터리 비차단 확인, 학습/검색 봇 분리 정책 명시 여부
+- `/sitemap.xml` 50,000개 이하·sitemap index 분할·`lastmod`가 실제 수정 시각인지 점검
+- 모든 페이지 self-canonical 적용, 쿼리 파라미터 페이지가 원본 canonical을 가리키는지 점검
+- 주요 URL 리다이렉트 체인 3홉 이하, 삭제 상품/콘텐츠는 410 응답 정책 적용
+- Google Search Console + Bing Webmaster Tools + 네이버 서치어드바이저 등록, 색인 상태 주간 모니터링
+- 커머스·콘텐츠 사이트에서 ChatGPT 인용 노출을 KPI로 본다면 Bing Webmaster Tools 등록을 별도 작업으로 챙긴다 — Google에만 등록해 둔 채 ChatGPT 인용이 안 잡힌다고 진단하는 사례가 흔하다
+
+###### 같이 보면 좋은 기술
+
+- Next.js `app/robots.ts` / `app/sitemap.ts` Metadata API: 정적·동적 사이트 모두에서 코드로 두 파일을 관리할 수 있어 환경별 분기(개발 차단/운영 허용)를 명시적으로 둘 수 있습니다.
+- Google Search Console `URL 검사`: 특정 URL이 실제 색인됐는지, 어떤 canonical로 정규화됐는지 즉시 확인하는 가장 빠른 도구입니다.
+- Bing Webmaster Tools `Site Explorer`: ChatGPT 인용 노출에 직접 연결되는 인덱스 상태를 보는 자리입니다.
+
+###### 점검 질문
+
+- 우리 `robots.txt`가 GPTBot·ClaudeBot은 차단하면서 OAI-SearchBot·Claude-SearchBot은 허용하도록 분리되어 있는가, 아니면 한 줄짜리 와일드카드로 끝나 있는가?
+- 우리 sitemap의 `lastmod`가 빌드 시각으로 일괄 갱신되고 있지는 않은가? CMS의 실제 수정 시각으로 바꿀 수 있는가?
+- 카드·네비게이션 컴포넌트의 클릭 동작이 `<a href>` 없이 JS 라우터 호출로만 처리된 곳이 남아 있는가?
+- 삭제된 상세 페이지에 일괄 301을 걸고 있는가, 아니면 대체가 없는 경우 410을 돌리고 있는가?
+- ChatGPT 인용을 KPI로 본다면, Bing Webmaster Tools와 Google Search Console을 동시에 모니터링하고 있는가?
+
+#### 07. 6 Best GitHub Copilot Alternatives in 2026
+
+- 날짜: 2026-05-05
+- 태그: AI 코딩 도구, GitHub Copilot, 사용량 과금, 에이전트 IDE
+- 국가: 미국
 - 카테고리: ai
 - 직무 태그: 웹DEV
-- 출처 유형: blog_opinion
+- 출처 유형: 제품 블로그
 - 출처: Builder.io Blog
 - 출처 URL: https://www.builder.io/blog/best-github-copilot-alternatives
 - 이미지: https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F7bcca99c01484e3780be3cf3d7b429a2?width=1200
-- 이미지 설명: Builder.io 블로그가 정리한 GitHub Copilot 대안 도구 비교 썸네일
-- 요약: GitHub Copilot이 2026년 6월 1일부터 사용량 기반 과금으로 전환하면서 Sonnet 4.6 요청 배수가 1x에서 9x로, Opus 4.6은 3x에서 27x로 올라가, 같은 작업을 Cursor·Claude Code·Codex·Zed로 옮길 때 월 비용이 얼마나 달라지는지 다시 계산해봐야 하는 시점이 됐습니다.
+- 이미지 설명: 6개 Copilot 대체 도구를 한 화면에 모은 비교 썸네일
+- 요약: GitHub Copilot이 2026년 6월 1일 사용량 기반 과금으로 전환하면서 Sonnet 4.6 배수가 1x에서 9x로, Opus 4.6 배수가 3x에서 27x로 뛴다. Builder.io가 Cursor·Claude Code·Codex·Windsurf·Zed 등 대체 도구 6종을 가격·모델·표면 기준으로 정리했다.
+
+**개발 변화 요약**
+
+- Copilot은 6월 1일부터 에이전트 기능을 토큰 단위로 미터링한다. 기본 가격과 무료 코드 컴플리션은 유지되지만 Sonnet 4.6 호출은 1x→9x, Opus 4.6 호출은 3x→27x로 비용 배수가 한 자릿수에서 두 자릿수로 옮겨간다.
+- Cursor는 SWE-Bench 51.7% 해결률(Copilot 56.0% 대비)로 따라붙고, Pro `$20`/월, Pro+ `$60`/월, Ultra `$200`/월 구간을 갖는다. Composer 2 에이전트 모드와 Cloud Agents, 코드베이스 인덱싱이 핵심이다.
+- Claude Code는 Sonnet 4.6과 Opus 4.7을 직접 호출하며 터미널 CLI를 출발점으로 VS Code·JetBrains·데스크탑·웹 표면을 모두 덮는다. MCP와 GitHub Actions 통합이 묶여 있고, Claude.ai Pro `$20`/월 또는 Max `$100`/월 이상에 번들된다.
+- Codex는 macOS·Windows 네이티브 데스크탑 앱으로 병렬 프로젝트 스레드를 띄우고, 로컬·worktree·클라우드 세 가지 실행 모드와 Git 자동화를 한 화면에서 묶는다. Plus `$20`/월, Pro `$100`+/월 구간.
+- Windsurf는 Cascade 에이전트와 Supercomplete 의도 예측, 자체 SWE-1.5 모델을 묶어 Cursor 대비 저가 라인을 만든다. Pro `$20`/월, Max `$200`/월.
+- Zed는 Rust 네이티브 GPU 가속 에디터 위에 Edit Prediction(Zeta2 open-weights)과 Agent Client Protocol(ACP)을 얹어 Gemini CLI를 네이티브로, Claude Agent·Codex·Cursor는 어댑터로 붙인다. Pro `$10`/월에 트라이얼 크레딧 `$20`이 포함된다.
+
+**개발 인사이트**
+
+Copilot의 6월 1일 전환은 단순한 요금제 변경이 아니라 "에이전트 호출당 비용"을 협상의 전면에 끌어올린 사건이다. Sonnet 4.6이 1x에서 9x로 옮겨가는 순간 같은 모델을 같은 빈도로 호출해도 청구서가 9배가 된다. 이 시점부터 팀의 선택지는 세 갈래로 갈린다. 첫째, Claude Code·Codex처럼 모델 제공사가 직접 운영하는 도구로 옮겨 중간 마진을 빼는 길. 둘째, Cursor·Windsurf처럼 모델 라우팅을 자체적으로 최적화하는 IDE로 옮기는 길. 셋째, Zed처럼 ACP 어댑터로 모델을 갈아끼울 수 있는 환경에서 모델·도구 결정을 분리하는 길이다. Builder.io의 리스트는 이 세 갈래를 가격표 한 줄로 비교 가능하게 만든다는 점에서 의미가 있다. 특히 Zed의 ACP는 "에이전트 IDE 전쟁"이 모델 종속에서 프로토콜 계층으로 옮겨가는 신호로 읽힌다. 도구 하나에 묶이는 대신 어떤 모델을 어떤 작업에 붙일지 팀이 결정한다.
+
+**점검 질문**
+
+- 6월 1일 Copilot 사용량 과금 전환 후 우리 팀의 월간 모델 호출 단가가 어떻게 바뀌는지 Sonnet 4.6·Opus 4.6 호출량 기준으로 시뮬레이션해 봤는가?
+- Cursor·Claude Code·Codex·Zed 중 우리 팀의 작업 패턴(터미널 중심인지, 디자인-투-코드인지, 다중 에이전트 감독인지)에 맞는 표면이 무엇인지 정의했는가?
+- Zed의 Agent Client Protocol처럼 모델 종속을 풀어주는 계층을 미리 깔아둘 가치가 있는가, 아니면 단일 도구로 묶어 운영을 단순화하는 편이 나은가?
+
+#### 08. Issue fields are now in public preview for all organizations
+
+- **날짜**: 2026-05-21
+- **태그**: GitHub Issues, Organization 설정, 메타데이터 표준화, 프로젝트 관리
+- **국가**: 글로벌
+- **카테고리**: github_workflow
+- **직무 태그**: 웹DEV, 웹서비스기획
+- **출처 유형**: 공식 changelog
+- **출처**: GitHub Changelog
+- **출처 URL**: https://github.blog/changelog/2026-05-21-issue-fields-are-now-in-public-preview-for-all-organizations
+- **이미지**: https://github.blog/wp-content/uploads/2026/05/issue-fields-og.png
+- **이미지 설명**: GitHub Organization Settings의 Issue fields 관리 화면
+- **요약**: GitHub가 Organization 레벨에서 정의한 이슈 메타데이터를 모든 리포지토리·모든 이슈에 자동 적용하는 Issue fields를 퍼블릭 프리뷰로 풀었다. 리포마다 흩어져 있던 라벨 관리 방식이 조직 단위 표준으로 옮겨갈 수 있게 됐다.
 
 ##### 요약
+- Organization Settings > Planning > Issue fields에서 single select, text, number, date 네 가지 타입의 필드를 정의하면, 그 조직의 모든 리포지토리의 모든 이슈에 자동으로 붙는다.
+- 조직마다 기본 필드 네 개가 자동으로 제공되고, 관리자는 이슈 타입별로 어떤 필드를 노출할지 따로 설정할 수 있다.
+- 검색·필터링은 물론 프로젝트 뷰에서 컬럼으로 추가할 수 있고, REST·GraphQL API와 webhook 이벤트로도 자동화가 가능하다.
+- github.com과 data residency가 적용된 GitHub Enterprise Cloud의 모든 조직이 대상이며, 3월 초기 프리뷰 이후 1,000개 이상 조직이 이미 도입했다.
 
-- GitHub Copilot은 2026년 6월 1일부터 정액제에서 사용량 기반 과금으로 바꿉니다. 기본 구독료와 코드 자동완성 무료 정책은 유지하되, 에이전트 요청은 모델별 배수로 토큰 단위 과금합니다. Sonnet 4.6은 요청당 1x에서 9x로, Opus 4.6은 3x에서 27x로 올라가 같은 작업을 돌릴 때 차감되는 요청 수가 최대 9배 늘어납니다.
-- Cursor는 자체 SWE-Bench 해결률 51.7%를 공개했고(Copilot은 56.0%), 요금제는 Pro $20/월, Pro+ $60/월, Ultra $200/월로 나눠 Composer 2 멀티파일 에이전트와 클라우드 에이전트를 단계별로 풉니다. Claude·GPT-5.5·Gemini·Grok을 같은 인터페이스에서 바꿔 쓸 수 있는 점이 차별점입니다.
-- Claude Code는 Sonnet 4.6과 Opus 4.7을 지원하고, 터미널 CLI·VS Code·JetBrains 확장·데스크탑 앱·웹 클라이언트 다섯 표면에서 동일한 세션을 이어갑니다. GitHub Actions 통합으로 CI에서도 에이전트를 돌릴 수 있어, 단일 개발자가 깊은 에이전트 작업을 끌고 갈 때 유리합니다. 가격은 Claude.ai Pro $20/월 또는 Max $100+/월 번들과 토큰 단위 사용 옵션이 함께 있습니다.
-- OpenAI Codex는 macOS GUI 작업을 직접 조작하는 Computer Use를 붙였고, 로컬·worktree·클라우드 세 가지 실행 모드로 여러 에이전트를 병렬 감독할 수 있게 했습니다. 데스크탑 앱에 Git diff 리뷰, automations, skills, 통합 터미널이 들어가 있어 에이전트 오케스트레이션 시나리오에 맞춥니다.
-- Zed는 Rust 네이티브·GPU 가속 에디터로, Edit Prediction에 open-weights 모델 Zeta2를 쓰고 Agent Client Protocol(ACP)로 Gemini CLI를 기본 지원하면서 Claude Agent·Codex·Cursor 어댑터를 공식 제공합니다. 무료 2,000 prediction/월, Pro $10/월(무제한 prediction과 토큰 크레딧 $5), 학생 12개월 Pro 무료 정책으로 진입 장벽이 낮습니다.
+##### 개발 인사이트
+이번 변화의 본질은 "필드 정의 위치가 리포에서 Organization으로 올라갔다"는 데에 있다. 그동안 GitHub Issues에서 우선순위·작업량 같은 메타데이터를 표준화하려면 리포지토리마다 라벨을 일일이 만들거나, 프로젝트 보드의 커스텀 필드를 따로 관리해야 했다. 결과적으로 같은 조직 안에서도 리포마다 `priority: high`와 `P0`이 섞이고, 자동화 스크립트는 라벨 문자열 매칭에 의존하다 깨지기 일쑤였다.
 
-##### 매거진 인사이트
+조직 레벨 Issue fields는 이 정의 위치를 한 단계 위로 끌어올린다. 한 번 정의하면 모든 리포·모든 이슈에 동일한 스키마가 강제되므로, 사내 이슈 보고 양식이나 분기별 우선순위 집계, 작업량 추정 같은 운영 지표를 조직 단위로 일관되게 다룰 토대가 생긴다. 특히 single select·number·date 타입이 함께 제공된다는 점은 라벨 기반에서는 불가능했던 정량 집계(예: effort 합산, 마감일 범위 필터)를 표준으로 끌어들였다는 의미다.
 
-> 같은 모델을 누구의 청구서에서 돌릴 것인지가 6월 1일 이후 실무 비용을 가른다.
+운영 관점에서 주목할 부분은 두 가지다. 하나는 REST·GraphQL·webhook이 동시에 열렸다는 점으로, 기존 라벨 webhook에 묶여 있던 자동화는 새 필드 이벤트로 마이그레이션 경로를 따져봐야 한다. 다른 하나는 이슈 타입별 노출 필드를 따로 조정할 수 있다는 점인데, 버그·기능 요청·운영 이슈처럼 성격이 다른 이슈에 같은 메타데이터를 강요하지 않고 유연하게 적용할 여지를 남겼다.
 
-GitHub Copilot이 정액에서 토큰 미터링으로 넘어가면 그동안 "월 $19 한 장으로 끝났던" 사용 패턴이 깨집니다. Sonnet 4.6 9x, Opus 4.6 27x라는 배수는 정량 비교를 강제하고, Cursor·Claude Code·Codex·Zed가 같은 모델을 다른 청구 구조로 제공하기 때문에 우리 팀이 어떤 작업에 어떤 모델을 얼마나 쓰는지를 먼저 측정한 뒤 도구를 골라야 합니다.
-
-###### 왜 지금 이 업데이트인가
-
-6월 1일을 기점으로 Copilot의 "정액 무제한 에이전트"가 사실상 끝납니다. Opus 4.6 배수가 27x로 책정됐다는 건 한 번의 에이전트 실행이 평균 요청 27회를 차감한다는 뜻이고, 같은 모델을 Claude Code에서 Max $100/월 번들로 돌리거나 토큰 단위로 직접 사면 비용 곡선이 달라집니다. Cursor는 Pro $20/월에서 Pro+ $60/월·Ultra $200/월까지 단계가 있고, Zed는 무료 2,000 prediction에 $10/월 Pro까지 폭이 넓어, "Copilot 한 줄"에 묶여 있던 선택이 청구 구조 비교로 바뀌었습니다.
-
-###### 구현 관점
-
-Cursor와 Claude Code는 모델을 골라 쓸 수 있다는 점에서 동일선상이지만 실행 표면이 다릅니다. Cursor는 자체 에디터 안에서 Composer 2·클라우드 에이전트·codebase indexing을 묶고, Claude Code는 VS Code·JetBrains·웹·데스크탑·터미널 CLI 다섯 표면에서 같은 세션을 이어가며 GitHub Actions로 CI 흐름까지 끌어옵니다. Codex는 macOS Computer Use가 붙어 있어 브라우저·디자인 도구를 직접 조작해야 하는 작업에 맞고, Zed는 Rust 네이티브 GPU 가속과 ACP로 여러 에이전트 백엔드를 한 에디터에서 바꿔 끼우는 구조입니다. 우리 팀이 작업을 "에디터 안에서 끝내는지", "CI에서도 돌리는지", "GUI 자동화까지 필요한지"부터 정리해야 도구 비교가 의미를 가집니다.
-
-###### 실무에 어떻게 적용할 수 있을까
-
-- 6월 1일 전에 한 주 분량의 Copilot 사용 로그를 뽑아 모델별 요청 수를 정리하고, 같은 작업을 Cursor Pro($20)·Claude Code Pro($20)·Zed Pro($10)로 옮겼을 때 월 청구액을 계산해본다.
-- Opus 4.6을 자주 호출하는 리팩터링·아키텍처 작업이 많다면 Copilot 27x 배수보다 Claude Code Max 번들이나 토큰 단위 청구가 유리할 가능성을 따로 시뮬레이션한다.
-- 자동완성과 가벼운 멀티파일 편집이 대부분이면 Zed의 무료 2,000 prediction과 Pro $10/월로 커버되는지 한 주 무료 사용으로 확인한다.
-- 디자인 도구·브라우저 GUI까지 자동화해야 하는 시나리오만 Codex를 따로 검토하고, 멀티 모델 비교가 일상이라면 Cursor의 Claude/GPT-5.5/Gemini/Grok 스위치를 기준점으로 둔다.
-- 도구를 한 번에 바꾸기보다 작업 유형별로 두세 개를 병행하고 한 달 뒤 청구서를 다시 보는 사이클을 잡는다.
-
-###### 같이 보면 좋은 기술
-
-- Agent Client Protocol(ACP): Zed가 공개한 에이전트 백엔드 연결 규약. Gemini·Claude·Codex·Cursor를 같은 에디터에서 교차 사용할 때의 표준.
-- SWE-Bench Verified: Cursor 51.7%·Copilot 56.0% 비교에 쓰인 코드 수정 벤치마크. 도구 평가 시 모델·하네스 조건을 함께 확인해야 한다.
-
----
-
-#### 07. Issue fields are now in public preview for all organizations
-
-- 날짜: 2026-05-21
-- 태그: GitHub, Issue fields, Projects, REST/GraphQL API
-- 국가: GLOBAL
-- 카테고리: tool
-- 직무 태그: 웹DEV, 웹서비스기획
-- 출처 유형: release_note
-- 출처: GitHub Changelog
-- 출처 URL: https://github.blog/changelog/2026-05-21-issue-fields-are-now-in-public-preview-for-all-organizations
-- 이미지: https://github.blog/wp-content/uploads/2026/05/595238068-1fdd58a3-7808-4031-9968-4daca3ce6481.jpg
-- 이미지 설명: GitHub Changelog 본문 OG 이미지. Organization Settings의 Issue fields 관리 화면.
-- 요약: GitHub가 Priority·Effort 같은 메타데이터를 Organization 레벨에서 정의하고 모든 리포지토리의 모든 이슈에 자동으로 꽂아넣는 Issue fields를 public preview로 열었습니다. 라벨이나 프로젝트 필드에 흩어져 있던 우선순위·공수 정보를 이슈 자체의 속성으로 끌어올리는 변화입니다.
-
-##### 요약
-
-- GitHub가 Issue fields를 모든 Organization에 public preview로 열어, Priority·Effort 같은 메타데이터를 Organization 레벨에서 한 번 정의하면 모든 리포지토리의 모든 이슈에 자동으로 붙는 구조로 바꿨습니다.
-- 필드 타입은 single select, text, number, date 4종이고, 4개의 기본 필드(Priority, Effort 포함)가 새 Organization에 자동으로 들어옵니다. 관리는 `Settings > Planning > Issue fields`에서 합니다.
-- 적용 범위는 github.com과 data residency가 적용된 GitHub Enterprise Cloud의 모든 조직입니다. 3월 프리뷰 이후 1,000개 이상 조직이 도입했고 이번에 모든 조직으로 열렸습니다.
-- 프로젝트 뷰에서 필드 값으로 검색·필터하고 컬럼으로 추가하며, 타임라인에서 변경 이력을 추적할 수 있습니다.
-- REST·GraphQL API와 webhook 이벤트로 자동화 가능합니다. 봇, GitHub Actions, 통합 도구로 이슈 생성 시점부터 필드 값을 강제할 수 있습니다.
-- 이번 회차에서 추가된 개선은 공개 리포지토리 가시성 제어, REST API의 이슈 생성 시 필드 지정 지원, Copilot skill 기반으로 라벨이나 프로젝트 필드 값을 일괄 복사하는 마이그레이션 도구입니다.
-
-##### 매거진 인사이트
-
-> 우선순위와 공수는 라벨이 아니라 이슈의 속성이어야 한다는 GitHub의 답입니다.
-
-이슈 트래커에서 우선순위·공수·담당 영역 같은 정보는 그동안 리포지토리마다 다른 라벨 규칙이나 별도 Projects 필드로 흩어져 있었습니다. Issue fields는 이걸 조직 단위 스키마로 끌어올려, 같은 조직의 모든 리포지토리가 같은 메타데이터를 공유하게 만듭니다.
-
-###### 왜 지금 이 업데이트인가
-
-GitHub가 라벨 운영의 한계를 정식으로 인정한 신호입니다. 라벨은 문자열일 뿐이라 리포지토리마다 표기가 흩어지고, Projects 필드는 보드에 들어간 이슈에만 붙기 때문에 검색·자동화 기준으로 쓰기 어려웠습니다. Issue fields는 single select·text·number·date 4종 타입을 가진 구조화된 속성으로 이걸 대체하고, Organization 레벨에서 정의되기 때문에 새로 만든 리포지토리에도 같은 Priority·Effort가 자동으로 따라붙습니다. 3월 프리뷰부터 1,000개 이상 조직이 이미 운영 중이라는 점에서 실험이 아니라 표준화 단계로 보는 게 맞습니다.
-
-###### 구현 관점
-
-설정 진입점은 `Settings > Planning > Issue fields`로 고정됐고, 기본 4개 필드는 자동 포함됩니다. 자동화는 REST·GraphQL API와 webhook 이벤트로 들어옵니다. 이번에 REST API 이슈 생성 엔드포인트에서도 필드 값을 같이 넣을 수 있게 되면서, 외부 트리거에서 이슈를 만들 때부터 Priority·Effort를 비어 있지 않게 강제할 수 있습니다. Projects 뷰에서는 필드를 컬럼으로 꺼내고 값으로 필터링되며, 변경 이력이 타임라인에 남기 때문에 회고나 감사 추적 기준으로도 사용할 수 있습니다. 마이그레이션은 Copilot skill로 제공되는 일괄 복사 도구가 라벨이나 기존 Projects 필드 값을 새 Issue fields로 옮겨줍니다.
-
-###### 실무에 어떻게 적용할 수 있을까
-
-- 우리 조직의 이슈 메타데이터가 리포지토리마다 다른 라벨로 흩어져 있는지, Projects 보드에 들어가야만 보이는 구조인지를 먼저 점검합니다. 흩어져 있다면 Priority·Effort 같은 공통 속성부터 Organization 필드로 끌어올리는 것이 출발점입니다.
-- Organization 레벨 필드를 정의한 뒤에는 GitHub Actions나 이슈 템플릿에서 필수 값으로 강제하는 흐름을 잡습니다. 이슈 생성 시점부터 Priority·Effort가 비어 있지 않게 막아야 메타데이터가 운영 중에 다시 깨지지 않습니다.
-- webhook `issues` 이벤트로 Priority가 비어 있는 이슈를 알림 채널에 흘리거나, 특정 Priority 값에서 Slack·Linear 같은 외부 도구로 미러링하는 자동화를 같은 길에서 만듭니다. 필드 값이 트리거 조건이 되면 라벨 문자열보다 훨씬 안정적인 자동화가 됩니다.
-- data residency가 적용된 GitHub Enterprise Cloud 조직도 이번에 같이 열렸으므로, 규제 환경 때문에 미뤘던 팀도 도입 검토에 들어갈 수 있습니다. 기존 라벨·Projects 필드 값은 Copilot skill 기반 마이그레이션 도구로 일괄 복사할 수 있습니다.
-
-###### 같이 보면 좋은 기술
-
-- GitHub Projects 필드·뷰: Issue fields와 어떻게 분담되는지
-- GitHub Actions 필수 필드 검증 워크플로: 이슈 생성 시점에 Priority·Effort를 강제하는 패턴
-- GitHub REST/GraphQL API와 webhook `issues` 이벤트: 외부 트리거에서 이슈 생성·수정과 필드 변경 자동화를 거는 진입점
-
----
-
-#### 08. Chat SDK now includes AI SDK tools
-
-- 날짜: 2026-05-20
-- 태그: Chat SDK, AI SDK Tools, requireApproval, 권한 프리셋
-- 국가: GLOBAL
-- 카테고리: ai
-- 직무 태그: 웹DEV
-- 출처 유형: release_note
-- 출처: Vercel Changelog
-- 출처 URL: https://vercel.com/changelog/chat-sdk-now-includes-ai-sdk-tools
-- 이미지: https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6SYkHUpvwR1PZFj5laaKBW/b3aafdaf4463f1410dbbf9d80c6a6092/image.png
-- 이미지 설명: Vercel Changelog 본문 캡처
-- 요약: Vercel이 Chat SDK 안에 AI SDK 도구 어댑터를 새 서브패스로 넣고, write 액션을 기본 승인 게이팅으로 묶었다. reader·messenger·moderator 3개 프리셋이 도구 노출 범위를 정하고, 선택된 프리셋이 허용한 도구만 실제로 만들어진다.
-
-##### 요약
-
-- Vercel Chat SDK(채팅 인터페이스를 붙이는 SDK)에 `chat/ai` 서브패스가 추가되어, `createChatTools(chat, { preset: "messenger" })` 한 줄이면 AI SDK의 `ToolLoopAgent` 같은 에이전트에 read·write 도구를 그대로 꽂을 수 있다.
-- write 도구는 `requireApproval` 옵션으로 기본 승인 게이팅이 걸린다. 메시지 전송·수정처럼 외부에 영향이 나가는 호출은 사람이 한 번 통과시켜야 실행되는 모드가 디폴트가 됐다.
-- 프리셋은 `reader`, `messenger`, `moderator` 3개로 나뉜다. 프리셋이 허용하지 않는 도구는 아예 만들어지지 않아서, 에이전트가 모르는 사이 권한을 들고 있는 상태를 피한다.
-- `toAiMessages` 함수와 관련 타입이 `chat`에서 `chat/ai`로 옮겨졌고, 기존 `chat` 재노출은 `@deprecated`로 표시됐다. import 경로를 새 서브패스로 옮기는 마이그레이션이 필요하다.
-- 2026년 5월 20일 자 changelog로 공개됐고, 작성자는 Ben Sabic·Josh Singh이다.
-
-##### 매거진 인사이트
-
-> 챗 인터페이스에 도구를 붙이는 코드 한 줄에 권한 모델이 같이 들어왔다.
-
-LLM 에이전트가 채팅 화면에서 메시지를 읽고 답하던 단계를 넘어, 직접 메시지를 보내고 모더레이션 액션까지 하기 시작하면 권한 설계가 곧 제품 안전성이 된다. Vercel은 그 경계를 SDK 한 레이어 안으로 들고 들어왔다.
-
-###### 왜 지금 이 업데이트인가
-
-채팅에 에이전트를 붙이면 가장 먼저 부딪히는 문제는 "이 봇이 어디까지 자율로 움직일 수 있는가"다. 지금까지는 도구 정의 옆에 직접 if 분기를 둬서 막거나, 프롬프트로 자제시키는 식이었다. `requireApproval`을 기본값으로 둔다는 건, write 호출은 게이팅을 거치는 게 표준 동작이라고 SDK가 선언한 것이다. 동시에 `reader`·`messenger`·`moderator` 3프리셋으로 "이 봇은 읽기만", "응답까지", "신고·차단까지"를 한 단어로 끊을 수 있게 만들어, 권한 결정 지점을 코드 한 줄로 옮겼다.
-
-###### 구현 관점
-
-`createChatTools(chat, { preset: "..." })`는 프리셋이 허용한 도구만 인스턴스로 만든다고 명시돼 있다. 이건 단순 노출 차단이 아니라 lazy 생성 정책이어서, 에이전트가 메모리에 들고 있는 도구 목록 자체가 좁아진다. write 도구는 거기에 더해 `requireApproval`이 걸려서, 호출 시점에 별도 승인 단계로 빠진다. 마이그레이션 측면에서는 `toAiMessages`와 관련 타입의 import를 `chat`에서 `chat/ai`로 옮겨야 한다. 기존 경로는 deprecated 표시만 붙은 단계라 아직 동작하지만, 다음 메이저 전에 정리해두지 않으면 빌드 경고가 누적된다.
-
-###### 실무에 어떻게 적용할 수 있을까
-
-- 챗 인터페이스에 LLM을 붙이는 프로덕트라면, 운영 중인 도구 목록을 reader/messenger/moderator 세 칸에 다시 배치해본다.
-- 메시지 조회·요약은 reader, 자동 응답·답신은 messenger, 신고 처리·삭제·차단은 moderator로 끊고, 각 단계에서 사람 승인이 필요한 액션이 무엇인지 정리한다.
-- 운영자 화면에 "승인 대기 중인 봇 액션" 큐를 만들어 `requireApproval`이 만들어내는 게이팅 이벤트를 그대로 받아낸다.
-- 기존 코드에서 `toAiMessages`를 쓰고 있다면 import 경로를 `chat`에서 `chat/ai`로 옮기는 작업을 같은 PR에 묶어 처리한다.
-- 다음 메이저 버전 전에 deprecated 경로를 모두 정리해, 빌드 경고가 누적되지 않도록 한다.
-
-###### 같이 보면 좋은 기술
-
-- AI SDK `ToolLoopAgent`: Chat SDK에서 넘긴 도구가 실제 호출되는 에이전트 루프 쪽 구조를 같이 봐야 권한 설계가 끝까지 이어진다.
-- Human-in-the-loop 패턴: `requireApproval`처럼 도구 호출 사이에 사람 승인 단계를 끼우는 일반적인 설계 형태로, 게이팅 큐 UX 설계의 출발점이 된다.
-
----
+##### 점검 질문
+- 우리 조직의 이슈 메타데이터(우선순위·작업량·담당팀)는 지금 리포마다 다른 라벨·다른 프로젝트 필드로 흩어져 있지 않은가?
+- 조직 레벨 Issue fields로 통일할 경우, 기존 라벨 기반 자동화 스크립트(예: 라벨 webhook 트리거, 라벨 문자열 매칭 봇)는 어디서 끊기고 어떻게 새 필드 API로 옮길 것인가?
+- 버그·기능 요청·운영 이슈 등 이슈 타입별로 필요한 필드가 다른데, 어느 필드를 공통으로 두고 어느 필드를 타입별로 한정할지 기준이 있는가?
 
 #### 09. Introducing Claude for Small Business
 
-- 날짜: 2026-05-26
+- 날짜: 2026-05-13
 - 태그: Claude Cowork, 커넥터, 에이전틱 워크플로우, 권한 전파
 - 국가: GLOBAL
 - 카테고리: ai
@@ -470,170 +445,126 @@ Anthropic은 이번 발표를 미국 SMB 시장 데이터(미국 GDP의 44%, 민
 - Microsoft 365 Copilot Connectors: 같은 SaaS 7종에 접근하는 경쟁 모델의 권한 위임·승인 흐름과 비교해 사내 도입 기준을 잡을 수 있습니다.
 - Google Workspace Gemini Connectors: Drive·Gmail 권한 전파 방식이 Claude와 어떻게 다른지 비교해 도입 시 권한 범위 설계의 기준점을 잡을 수 있습니다.
 
----
+#### 10. Agents for financial services
 
-#### 10. Claude Design Review: An Innovative Way to Brainstorm with AI
-
-- 날짜: 2026-05-26
-- 태그: Claude Design, AI 디자인 도구, 디자인-코드 핸드오프, Tweaks
+- 날짜: 2026-05-05
+- 태그: Claude, 금융 에이전트, MCP, Microsoft 365
 - 국가: GLOBAL
-- 카테고리: ai
-- 직무 태그: UIUX·웹DEV
-- 출처 유형: blog_opinion
-- 출처: Builder.io Blog
-- 출처 URL: https://www.builder.io/blog/claude-design
-- 이미지: https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/dfc058ab42b241b2b9f1e8c1a471a079?width=1200
-- 이미지 설명: Builder.io 블로그가 공개한 Claude Design 캔버스 화면 (출처: Builder.io)
-- 요약: Builder.io는 Anthropic의 Claude Design이 한 캔버스에 4개 디자인을 띄우고 Tweaks 슬라이더로 비파괴 편집까지 지원하는 점은 인정하지만, Figma 라운드트립·디자인 토큰·코드 컴포넌트가 빠져 엔지니어가 처음부터 다시 만들어야 한다고 짚었습니다.
-
-##### 요약
-
-- Claude Design(Anthropic이 공개한 시각 브레인스토밍용 AI 디자인 캔버스)은 프로토타입, 제품 컨셉, 덱, 원페이저, 마케팅 자산을 위한 도구로 포지셔닝됐고, 채팅 대신 캔버스 위에 명확화 질문을 띄우는 디자이너 친화적 인터페이스가 핵심입니다.
-- Tweaks 패널은 슬라이더와 토글로 디자인을 미세 조정해 매번 전체 결과를 다시 생성하지 않게 만들었고, 글쓴이는 “대부분의 AI 도구에서 모든 수정이 대화형”이라는 통점을 실제로 해결한 상호작용 모델로 평가했습니다.
-- 한 캔버스에서 4개 옵션을 동시에 비교하고, 스크래치패드 스케치와 요소별 코멘트로 어노테이션할 수 있어 탐색 단계 작업에는 잘 맞습니다.
-- 한계로는 Figma 라운드트립 export가 없고, 생성 코드가 팀의 실제 디자인 토큰이나 컴포넌트를 쓰지 않으며, 디자인 시스템 import도 기존 구현 대비 “50%–75%” 충실도에 그친다고 지적했습니다.
-- Edit 모드는 요소 직접 조작이 제한적이라 큰 레이아웃 변경은 다시 AI에게 말로 설명해야 하는 “AI telephone” 상태가 되고, 라이브 앱과 지속 연결이 없어 코드베이스가 진화하면 프로젝트는 그대로 낡습니다.
-- 핸드오프 시점에는 엔지니어가 “구현을 처음부터 다시 만들어야”(`recreate your implementation from scratch`) 하고, 버전 히스토리와 브랜치 기능이 없어 팀 워크플로에 끼우기 어렵다는 결론입니다.
-
-##### 매거진 인사이트
-
-> 결과물이 매끄러워 보일수록, 핸드오프에서 수동 재작업 비용을 누가 지는지 먼저 정해야 합니다.
-
-Claude Design은 디자이너가 만질 만한 AI 캔버스에 가장 가깝게 도달한 도구입니다. 다만 Builder.io가 자사 제품 시점에서 쓴 글이라는 점을 감안하더라도, 라운드트립·토큰·컴포넌트가 빠진 자리에서 발생하는 작업이 결국 엔지니어 책상으로 떨어진다는 지적은 따로 봐야 합니다. 탐색용 캔버스의 매끈함과 운영 가능한 산출물 사이의 거리를 팀이 사전에 합의하지 않으면, AI가 줄인 시간보다 다시 만들어야 하는 시간이 더 커집니다.
-
-###### 왜 지금 이 업데이트인가
-
-AI 디자인 도구는 “결과를 얼마나 잘 그리는가”에서 “기존 디자인 시스템과 코드베이스에 얼마나 붙는가”로 평가 축이 옮겨가는 중입니다. Claude Design은 Tweaks 슬라이더, 4분할 비교, 스크래치패드 어노테이션 같은 캔버스 인터랙션에서 한 발 나갔지만, Figma export가 빠지고 디자인 시스템 import가 50%–75% 수준이라 “좋은 아이디어 보드”와 “실제 제품 화면” 사이를 잇지는 못합니다. 지금 이 글을 봐야 하는 이유는 비교 기준 자체가 인터랙션이 아니라 핸드오프 파이프라인으로 이동했다는 신호이기 때문입니다.
-
-###### 구현 관점
-
-수동 재작업이 어디서 발생하는지 구체적으로 짚어야 합니다. 생성된 코드가 팀의 토큰을 쓰지 않으면, 색상·간격·타이포 변수를 일괄 치환해야 하고, 코드 컴포넌트가 연결되지 않으면 Button·Modal·Form 같은 기본 컴포넌트도 새로 매핑해야 합니다. Edit 모드 제한 때문에 큰 레이아웃 변경이 다시 자연어 지시로 돌아가면, 코드 PR이 아니라 프롬프트 히스토리로 변경 이력이 남아 코드 리뷰가 불가능해집니다. 라이브 앱과의 연결이 없어 코드베이스가 1~2 스프린트만 진행돼도 캔버스의 결과물은 화면 기준이 어긋난 시안으로 낡습니다.
-
-###### 실무에 어떻게 적용할 수 있을까
-
-- 사용 단계를 명확히 끊습니다. 컨셉 탐색, 마케팅 페이지 시안, 내부 덱처럼 결과가 코드로 살아남지 않아도 되는 작업에는 Tweaks와 4분할 비교가 시간을 줄입니다.
-- 디자인 시스템에 들어가는 컴포넌트, 운영 중인 화면 개선, 접근성 QA가 필요한 흐름은 캔버스 결과를 그대로 핸드오프하지 말고, Figma나 코드 저장소에서 다시 시작하는 것을 기본 규칙으로 둡니다.
-- 도입 전 점검할 질문은 다음과 같습니다. 우리 팀의 디자인 토큰·컴포넌트 라이브러리를 이 도구가 어디까지 인식하는지, 50%–75% 충실도 안에서 어떤 토큰이 빠지는지 시안 1건으로 측정했는가? AI 캔버스에서 만든 시안을 코드로 옮길 때, 엔지니어의 재작업 시간을 측정하고 시안 단가에 포함시키는 규칙이 있는가? 큰 레이아웃 변경이 프롬프트 히스토리로만 남는 “AI telephone” 상태를 어떤 시점에 끊고 Figma·코드로 옮기는지 팀 합의가 있는가?
-
-###### 같이 보면 좋은 기술
-
-- Figma Dev Mode와 디자인 토큰 export 파이프라인 (Variables → CSS/JSON): Claude Design 캔버스 결과를 팀 토큰으로 환원할 때 거쳐야 하는 표준 경로라, 충실도 50%–75% 갭을 메우는 기준선이 됩니다.
-- Builder.io·Locofy·Anima 같은 디자인-코드 매핑 도구: 코드 컴포넌트 매핑을 전제로 설계됐기 때문에, Claude Design처럼 토큰·컴포넌트가 빠진 도구의 핸드오프 한계를 비교 평가하는 레퍼런스로 같이 봅니다.
-
----
-
-#### 11. Easily apply Copilot code review feedback with Copilot cloud agent
-
-- 날짜: 2026-05-19
-- 태그: GitHub Copilot, Code Review, Pull Request, Cloud Agent
-- 국가: GLOBAL
-- 카테고리: ai
+- 카테고리: agents_platform
 - 직무 태그: 웹DEV
 - 출처 유형: release_note
-- 출처: GitHub Changelog
-- 출처 URL: https://github.blog/changelog/2026-05-19-easily-apply-copilot-code-review-feedback-with-copilot-cloud-agent
-- 이미지: https://github.blog/wp-content/uploads/2026/05/CopilotCodeReview_Improvement_Unfurl_TextOnly.jpg
-- 이미지 설명: GitHub Changelog 본문 대표 이미지, "Fix with Copilot" 다이얼로그 캡처
-- 요약: GitHub이 Copilot 코드 리뷰의 "Implement suggestion" 버튼을 "Fix with Copilot"으로 바꾸고, 클릭하면 적용 위치(현재 PR vs 새 PR)·모델·추가 지시를 고를 수 있는 다이얼로그를 띄우도록 바꿨습니다. "Implement all suggestions"는 "Fix batch with Copilot"이 되어 여러 리뷰 코멘트를 클라우드 에이전트로 한 번에 처리합니다.
+- 출처: Anthropic
+- 출처 URL: https://www.anthropic.com/news/finance-agents
+- 이미지: https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Ffinance-agents-og.png&w=3840&q=75
+- 이미지 설명: Anthropic 발표 페이지 OG 이미지
+- 요약: Anthropic이 금융 실무 10종을 그대로 옮긴 에이전트 템플릿과 Excel·PowerPoint·Word 애드인, Moody's MCP를 포함한 외부 커넥터 묶음을 한 번에 풀었습니다. Managed Agents는 long-running 세션·도구별 권한·credential vault·audit log를 기본으로 제공해, 사내에서 에이전트를 실제 운영 자산으로 다루는 방식을 구체화했습니다.
 
 ##### 요약
 
-- Copilot 코드 리뷰의 "Implement suggestion" 버튼이 "Fix with Copilot"으로 리네이밍되면서 즉시 코드 패치를 적용하던 흐름이 다이얼로그 게이트로 바뀌었습니다.
-- 다이얼로그에서는 변경을 현재 PR에 직접 적용할지, 같은 브랜치를 타깃으로 새 PR을 열지 선택할 수 있습니다.
-- 같은 다이얼로그에서 Copilot이 사용할 모델을 고르고, 선택적으로 추가 지시(additional instructions)를 적어 패치 방향을 조정할 수 있습니다.
-- PR Overview 코멘트에 노출되던 "Implement all suggestions"는 "Fix batch with Copilot"으로 바뀌어, 여러 코드 리뷰 코멘트를 한 번에 선택하고 Copilot 클라우드 에이전트가 함께 처리합니다.
-- 일괄 처리 시 어떤 코멘트를 포함할지 사용자가 선택할 수 있어, 모든 제안을 무조건 적용하던 기존 흐름과 분리됐습니다.
+- Anthropic이 금융 서비스용 에이전트 패키지를 공개하면서 템플릿, Microsoft 365 통합, 데이터 커넥터, Managed Agents 운영 기능을 같은 발표에 묶었습니다.
+- 10개 템플릿은 리서치·고객 커버리지(Pitch builder·Meeting preparer·Earnings reviewer·Model builder·Market researcher)와 재무·운영(Valuation reviewer·General ledger reconciler·Month-end closer·Statement auditor·KYC screener)으로 나뉘며, Claude Cowork/Code 플러그인 또는 Managed Agents 쿡북 형태로 GitHub 마켓플레이스에 배포됩니다.
+- Excel·PowerPoint·Word 애드인이 GA로 풀렸고 Outlook 지원이 예정되어 있으며, 애드인 사이에서 컨텍스트가 자동으로 이어집니다.
+- 새 데이터 커넥터 8종(Dun & Bradstreet, Fiscal AI, Financial Modeling Prep, Guidepoint, IBISWorld, SS&C Intralinks, Third Bridge, Verisk)이 추가됐고, Moody's가 6억+ 기업의 신용·기업 데이터를 제공하는 MCP 앱을 별도로 출시했습니다.
+- Claude Opus 4.7이 Vals AI Finance Agent 벤치마크에서 64.37%로 "state-of-the-art on financial tasks"를 기록했습니다.
+- Managed Agents는 멀티시간 단위 long-running session, per-tool 권한, 관리형 credential vault, 컴플라이언스용 audit log를 기본 제공해 규제 환경에서 에이전트를 운영하기 위한 발판을 깔았습니다.
+- Citadel·FIS·BNY·Carlyle·Mizuho·Travelers·Walleye Capital·Hg 등이 이미 Claude를 업무에 결합해 도입 사례로 공개됐습니다.
 
 ##### 매거진 인사이트
 
-> AI가 짠 패치를 PR에 바로 꽂던 흐름에 모델·범위·지시문이라는 세 개의 게이트가 들어갔다.
+> 에이전트가 데모를 넘어 사내 운영 자산이 되려면, 모델 성능보다 권한·자격증명·로그를 어떻게 쪼개 둘지가 먼저 결정된다.
 
-기존 "Implement suggestion" 버튼은 리뷰 코멘트의 제안을 클릭 한 번으로 현재 PR에 커밋해버리는 구조였습니다. 이번 업데이트는 그 한 번을 다이얼로그로 끊고, 적용 위치·모델·지시를 선택한 뒤 실행하게 만듭니다. 일괄 처리 버튼은 "전부 적용" 대신 "어떤 것을 포함할지 고르는" 단계를 끼웠습니다.
+이번 발표의 무게중심은 새 모델이 아니라 그 모델을 둘러싼 운영 표면에 있습니다. 10개 템플릿이 곧바로 실무 직무명을 흉내내고, Microsoft 365 애드인이 GA로 풀리고, 외부 데이터가 MCP·커넥터로 들어오는 구조가 동시에 도착하면서, 에이전트를 "한 번 돌려보는 도구"가 아니라 "장시간 작동하는 사내 동료"로 다루는 모델이 제시됩니다.
 
 ###### 왜 지금 이 업데이트인가
 
-코드 리뷰 자동 패치는 모델 출력 품질이 PR 히스토리에 그대로 남는다는 문제를 안고 있습니다. 사용 모델·지시문을 고를 수 없으면 같은 제안이라도 결과가 흔들리고, "다 적용"이 한 번의 클릭이면 잘못된 제안 한 줄까지 묶여서 들어옵니다. GitHub은 즉시 적용을 다이얼로그 뒤로 옮기고, 새 PR로 빼는 옵션을 같이 제공해 리뷰 단계에서 분리 검토할 여지를 만들었습니다. Copilot 클라우드 에이전트가 일괄 처리를 맡는다는 점은, 리뷰 코멘트 적용이 더 이상 즉시 동기 동작이 아니라 비동기 에이전트 작업으로 옮겨갔다는 신호이기도 합니다.
+금융처럼 규제·감사가 강한 도메인에서 에이전트가 멈추던 지점은 보통 모델 능력이 아니라 권한·자격증명·로그였습니다. Managed Agents가 long-running session, per-tool 권한, credential vault, audit log를 한 묶음으로 내놓은 것은 그 병목을 정면에서 푸는 신호입니다. 동시에 Excel·PowerPoint·Word 애드인 GA와 Moody's MCP, 8개 데이터 커넥터가 함께 떨어지면서, "어디서 일하고 어떤 데이터를 본다"는 질문에도 같은 발표 안에서 답이 나옵니다. 64.37%의 Vals AI Finance Agent 점수는 그 운영 위에 얹히는 부수 결과로 읽히는 구성입니다.
 
 ###### 구현 관점
 
-PR 리뷰 자동화 파이프라인을 운영 중이라면 점검할 지점이 분명합니다. 첫째, "Fix with Copilot" 결과를 현재 PR에 직접 커밋하도록 둘지 새 PR로 분리할지의 팀 규칙을 정해야 합니다. 새 PR 옵션은 CI 비용을 늘리지만, 머지 전 별도 리뷰 트랙을 만들 수 있습니다. 둘째, 모델 선택을 누가·언제 바꾸는지의 기준이 필요합니다. 리뷰어가 코멘트마다 모델을 바꿔 적용하면 같은 PR 안에서도 패치 톤이 섞입니다. 셋째, "Fix batch with Copilot"은 어떤 코멘트를 포함할지 선택하는 UI가 추가됐기 때문에, 기존에 "Implement all suggestions"를 매크로처럼 누르던 운영 흐름은 그대로 옮길 수 없습니다. 일괄 처리 결과가 한 커밋·한 브랜치로 묶일 때 충돌·테스트 실패가 어디서 났는지 추적할 로그를 미리 마련해 두는 편이 안전합니다.
+웹 프론트엔드 관점에서 흥미로운 지점은 두 가지입니다. 첫째, Excel·PowerPoint·Word 애드인 사이에서 컨텍스트가 자동으로 넘어간다는 점은, 여러 화면·앱을 오가는 에이전트 UI를 직접 짜야 할 때 "세션 상태를 어디에 두고 어떤 단위로 권한을 끊을지"의 레퍼런스가 됩니다. 둘째, 도구별(per-tool) 권한과 credential vault가 별도 레이어로 잡혀 있다는 것은, 사내 어드민 화면에서 사용자가 보는 권한 모델이 "에이전트 단위"가 아니라 "에이전트 × 도구 × 자격증명" 매트릭스로 바뀐다는 의미입니다. 멀티시간 단위 세션을 다루는 UI는 진행 상태·중단·재개·감사 로그 열람을 일급 기능으로 다뤄야 합니다.
 
 ###### 실무에 어떻게 적용할 수 있을까
 
-- 접근성 속성 추가 제안은 "Fix with Copilot"의 새 PR 옵션으로 빼두면, 스크린 리더 QA를 본 PR과 분리된 트랙에서 돌릴 수 있어 머지 전 검토가 깔끔해집니다.
-- 추가 지시 입력란은 "토큰 이름은 디자인 시스템 prefix를 유지하라"처럼 코드 리뷰 코멘트만으로는 부족한 컨벤션을 한 번 더 주입하는 자리로 활용합니다. 모델이 같아도 출력 톤이 흔들리는 지점을 잡아낼 수 있습니다.
-- "Fix batch with Copilot"은 동일한 prop 이름 정정처럼 같은 종류의 제안이 여러 곳에 흩어졌을 때 묶기 좋습니다. 단, 서로 다른 의도가 섞인 코멘트를 함께 체크해 던지면 한 커밋에 무관한 변경이 들어오므로 코멘트 선택 단계에서 거르는 운영 규칙을 둬야 합니다.
+- 10개 템플릿 중 "어떤 직무가 우리 워크플로우 진입점인가"를 먼저 정한다. 그 직무 한 건이 쓰는 도구·데이터 소스·산출물을 per-tool 권한 단위로 쪼개 보면 credential vault와 audit log의 분리 범위가 자연스럽게 드러난다.
+- 외부 데이터 활용은 8개 커넥터·Moody's MCP의 라이선스·governed access 조건을 먼저 확인하고, 사내 데이터는 MCP 서버화 범위를 정한다.
+- Vals AI 점수는 모델 선택 참고값으로 쓸 수 있지만 도입 근거 자체가 되지는 않는다. 규제·컴플라이언스 요건을 먼저 정리한 뒤 모델 선택을 그 위에 올린다.
 
 ###### 같이 보면 좋은 기술
 
-- Copilot 클라우드 에이전트: "Fix batch with Copilot"이 비동기로 처리될 때 작업 큐와 PR 생성 권한이 어떻게 묶이는지 같이 봐야 운영 흐름이 맞춰집니다.
-- GitHub branch protection: 다이얼로그에서 "현재 PR에 직접 적용"을 고를 때 required reviewers·status check를 우회하지 않는지 확인해야 AI 자동 커밋 허용 범위가 정해집니다.
-
----
-
-#### 12. 검색엔진은 우리 사이트를 어떻게 발견할까?
-
-- 날짜: 2026-05-21
-- 태그: SEO, GEO, robots.txt, AI 크롤러
-- 국가: KR
-- 카테고리: web
-- 직무 태그: 웹DEV, 웹기획자, 웹디자인
-- 출처 유형: guide
-- 출처: pxd story
-- 출처 URL: https://pxdstory.tistory.com/1899
-- 이미지: https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2F8f8TG%2FdJMcaf0Vsby%2FAAAAAAAAAAAAAAAAAAAAAO2JVdNtIgTScG-SBx4oKsEZFSPPF7eys_EXUe7hM8x9%2Fimg.webp%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1780239599%26allow_ip%3D%26allow_referer%3D%26signature%3DZ41aYTRVjgjnB%252BfI880bHw%252BVTfw%253D
-- 이미지 설명: pxd story 본문 다이어그램, 크롤링·인덱싱·랭킹 3단계 흐름과 robots.txt 예시 코드
-- 요약: pxd UX Engineer 연재가 크롤링·인덱싱·랭킹 3단계 흐름에 맞춰 robots.txt·sitemap·canonical·내부 링크·리다이렉트 다섯 항목을 다시 짜고, GPTBot 같은 학습용 봇과 OAI-SearchBot 같은 검색 노출용 봇을 robots.txt에서 따로 통제하는 AI 시대 정책을 예시 코드와 함께 제안합니다.
-
-##### 요약
-
-- pxd는 검색 노출 작업을 크롤링·인덱싱·랭킹 3단계로 끊고, 크롤링이 막히면 뒤 단계가 모두 무력해진다는 전제로 robots.txt·sitemap·canonical·내부 링크·리다이렉트 다섯 항목에 대한 실무 체크 포인트를 정리했습니다.
-- robots.txt는 파일이 없으면 기본 허용이 되지만 sitemap 위치를 명시할 수 없고, 개발 환경의 `Disallow: /*`를 운영에 올리는 사고가 잦으므로 배포 직후 `https://도메인/robots.txt`에 직접 접속해 응답을 확인하라고 권합니다.
-- sitemap은 URL당 50,000개를 넘기면 sitemap index로 쪼개고, `lastmod`는 빌드 날짜가 아닌 실제 콘텐츠 수정일을 넣어야 하며, Next.js에서는 `sitemap.ts`로 게시물 목록을 받아 동적으로 생성하는 코드 예시를 함께 제시합니다.
-- 내부 링크는 `<a href>`·`<Link href>`처럼 마크업 단계에서 URL이 드러나야 안정적으로 잡히고, `<div onClick={() => router.push(...)}>` 형태는 AI 크롤러처럼 JavaScript를 실행하지 않는 봇이 따라가지 못한다고 짚습니다.
-- canonical은 중복 URL 정리뿐 아니라 자기 자신을 가리키는 self-canonical도 권장하고, 리다이렉트는 HTTP→HTTPS 301과 www 통일을 기본으로 두되 체인 홉은 3~5회 안쪽으로 제한하며, 삭제 페이지는 410이나 대체 경로로 향하는 301로 분리해 응답하라고 정리합니다.
-- AI 시대의 핵심은 학습용 봇과 검색 노출용 봇을 분리 통제하는 것이고, GPTBot·ClaudeBot은 막더라도 OAI-SearchBot·Claude-SearchBot은 열어 두는 robots.txt 예시 코드로 정책 분리를 보여 줍니다.
-- ChatGPT 인용은 Bing 색인을 따라가고 Gemini는 Google 검색에 직접 의존하며 Perplexity는 자체 크롤러와 복수 엔진을 함께 쓰는 식으로 AI 서비스별 검색 인덱스 출처가 다르므로, Google Search Console·Bing Webmaster Tools·네이버 서치어드바이저를 동시에 등록해 색인 상태를 확인하라고 마무리합니다.
-
-##### 디자인 인사이트
-
-> AI 봇이 학습과 인용을 같이 가져가는 시점에는, robots.txt 한 줄이 브랜드 노출 정책이 된다.
-
-pxd 연재는 검색 최적화(SEO)에 생성형 엔진 최적화(GEO) 관점을 얹은 가이드입니다. 같은 robots.txt 안에서 학습용 봇과 검색 노출용 봇을 따로 다루도록 정리해, SEO 점검 항목이 곧 AI 인용 정책이라는 사실을 한 화면 안에서 보여 줍니다.
-
-###### 왜 참고할 만한가
-
-학습용 봇을 막느냐 마느냐는 그동안 법무·홍보 영역에서 따로 다뤄지던 결정이었는데, 이번 글은 그 결정을 robots.txt 몇 줄의 작성 규칙으로 끌어내려 정리합니다. GPTBot은 막고 OAI-SearchBot은 여는 식의 정책 분리가 가능하다는 점이 예시 코드로 드러나 있어, SEO 점검 회의 자리에서 AI 인용 정책까지 같이 결정할 수 있는 기준이 됩니다. 크롤링·인덱싱·랭킹 3단계 흐름을 SEO 가이드의 머리에 두는 구성도 익숙한 항목들을 새로 묶어 보게 만듭니다.
-
-###### 어디에 적용할 수 있을까
-
-브랜드 사이트·커머스·기획전 페이지처럼 검색 유입과 AI 인용 노출을 함께 챙겨야 하는 화면 전반에 바로 대입할 수 있습니다. 신규 도메인을 띄울 때 점검하는 SEO 체크리스트에 학습 봇·검색 봇 분리 정책 한 줄을 추가하고, 사이트맵 자동 생성 스크립트에 `lastmod`가 빌드 날짜로 채워지지 않는지 확인하는 과정을 끼워 둘 수 있습니다. CMS 운영팀에는 삭제 콘텐츠의 410 응답 규칙과 리다이렉트 체인 한도를 운영 문서에 명문화해 두면 좋습니다.
-
-###### 디자인 관점
-
-내부 링크가 `<a href>`로 잡혀야 한다는 점은 디자인 단계에서 `<div onClick>`으로 만든 의사 링크 컴포넌트를 검수 대상에 올려야 한다는 뜻입니다. 캠페인 페이지의 카드형 CTA를 마크업으로 어떻게 떨어뜨릴지, 모달이나 라우터 푸시에 의존하는 패턴이 검색·AI 봇 노출 화면에 들어가도 괜찮은지 컴포넌트 단계에서 미리 결정해야 합니다. canonical과 리다이렉트 정책은 페이지 IA 문서와 URL 명명 규칙에 함께 적어 두고, 같은 콘텐츠를 다른 경로로 노출하는 룩북·기획전 변형이 self-canonical로 묶이는지 확인합니다.
+- Model Context Protocol(MCP) 서버·앱 구조와 권한 모델: Claude Cowork 커넥터 추상화가 외부 시스템과 권한을 교환하는 방식을 확인할 수 있습니다.
+- Microsoft 365 add-in의 cross-app context propagation 방식: 경쟁 모델의 권한 위임·승인 흐름과 비교해 사내 도입 기준을 잡을 수 있습니다.
+- 사내 에이전트 운영을 위한 audit log·credential vault 설계 패턴: long-running 세션의 중단·재개·감사 로그 UI를 설계할 때 레퍼런스가 됩니다.
 
 ###### 점검 질문
 
-- 우리 robots.txt는 GPTBot·ClaudeBot 같은 학습용 봇과 OAI-SearchBot·Claude-SearchBot 같은 검색 노출용 봇을 분리해서 통제하고 있는가, 아니면 `User-agent: *` 한 줄로 모두 같은 정책을 받고 있는가?
-- 우리 사이트의 sitemap은 URL 50,000개 한도와 sitemap index 분리 기준을 운영 문서에 적어 두었고, `lastmod`가 빌드 날짜가 아닌 실제 콘텐츠 수정일로 채워지는가?
-- 캠페인·기획전 페이지의 카드형 CTA는 `<a href>`·`<Link href>`로 떨어지는가, 아니면 `<div onClick>` 같은 JavaScript 의사 링크에 기대고 있어 AI 크롤러가 따라가지 못하는가?
-- 삭제 페이지·구버전 URL을 410(Gone)과 대체 경로 301로 나눠 응답하고 있는가, 그리고 현재 리다이렉트 체인이 3~5회 한도 안쪽에 들어오는가?
-- ChatGPT(Bing)·Gemini(Google)·Perplexity(자체) 인용 흐름을 모두 챙기기 위해 Google Search Console·Bing Webmaster Tools·네이버 서치어드바이저에 우리 도메인이 모두 등록돼 있는가?
+- 우리 사내 에이전트는 도구·자격증명·로그가 한 덩어리로 묶여 있나, 아니면 per-tool 단위로 분리되어 있나
+- 멀티시간 단위로 도는 long-running 작업이 중단·재개·승인을 거칠 때, 사용자에게 보이는 UI가 그 흐름을 정확히 반영하고 있나
+- 외부 데이터 커넥터를 늘릴 때, 라이선스·접근 권한·감사 로그가 같은 화면에서 점검 가능한가
 
----
+#### 11. Claude Design Review: An Innovative Way to Brainstorm with AI
 
-## 수집했지만 제외한 것
+- **날짜**: 2026-04-29
+- **태그**: Claude Design, AI 디자인 툴, Tweaks 패널, 디자인 핸드오프
+- **국가**: 미국
+- **카테고리**: ai
+- **직무 태그**: 웹디자인, 웹DEV
+- **출처 유형**: 제품 리뷰 / 디자인 툴링 분석
+- **출처**: Builder.io Blog
+- **출처 URL**: https://www.builder.io/blog/claude-design
+- **이미지**: https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/dfc058ab42b241b2b9f1e8c1a471a079?width=1200
+- **이미지 설명**: Claude Design 캔버스에서 클래리파이 질문과 Tweaks 슬라이더가 노출된 화면.
+- **요약**: Anthropic Labs의 브라우저 기반 디자인 툴 Claude Design을 Builder.io가 직접 사용하며 인터랙션 모델의 강점과 핸드오프 한계를 정리했다.
 
-magazine-review 단계에서 사용자 피드백으로 추가 제외된 항목:
+**요약**
 
-| 출처 | 제목 | 사유 |
-|---|---|---|
-| Anthropic News | Agents for financial services | 핀테크/금융 도메인은 CTTD 독자(이커머스 중심) 적합도 낮음 — 큰 화제(정책 표준 변경·신규 GA 등)가 아니라 운영 모델 reference 수준. 사용자 결정으로 제외. |
-| Vercel Changelog | Vercel AI Gateway plugin for WordPress | WordPress 운영팀 중심 변화로 CTTD 독자 흥미 부족. 사용자 결정으로 제외. |
-| Vercel Changelog | Nuxt MCP Toolkit now supports MCP apps | Nuxt 진영 좁은 적용 범위로 CTTD 독자 흥미 부족. 사용자 결정으로 제외. |
-| Builder.io Blog | Announcing Quality Review Agent: Agentic QA on Every PR | Builder.io 자사 제품 발표로 광고성 색채. 사용자 결정으로 제외. |
+- 첫 프롬프트 이후 클래리파이 질문을 확장된 캔버스에 펼쳐, 텍스트로 설명하는 대신 시각적으로 선택해 답하도록 설계했다.
+- Tweaks 패널이 디자인에 맞춰 슬라이더·토글·파라미터를 자동 생성해, 전체 재생성 없이 비파괴 편집이 가능하다(단 일부 컨트롤은 서로 배타적이거나 반응이 불안정).
+- 한 프롬프트 턴에 여러 옵션을 생성해 같은 캔버스에 나란히 비교하는 멀티 옵션 뷰를 제공하지만, 캔버스가 패닝 모드로 전환돼 인터랙션이 막히는 이슈가 있다.
+- 디자인 시스템을 임포트해도 실제 코드 컴포넌트와 연결되지 않아 충실도는 "기껏해야 50~75%" 수준이라고 평가했다.
+- Figma 라운드트립 미지원, 디자인 토큰·코드 컴포넌트 미보존으로 엔지니어가 결과물을 수동 재작성해야 하는 전통적 핸드오프 문제가 그대로 남는다.
 
-본문은 `runs/2026-05-26/magazine/articles/excluded/`에 보존.
+**개발 인사이트**
 
-원문 검증·타겟 분류 단계 제외 항목은 shortlist 파일의 "수집했지만 제외한 것" 섹션 참고.
+- AI 디자인 툴의 경쟁축이 "프롬프트로 더 잘 그리기"에서 "디자이너의 손동작에 가까운 인터랙션 모델"로 이동하고 있다. Tweaks 슬라이더와 캔버스 위 클래리파이 질문은 텍스트로 다시 묘사하지 않아도 의도를 조정할 수 있는 통로다.
+- 그러나 결과물이 실제 코드 컴포넌트·디자인 토큰과 분리돼 있다면, 화면 안에서 빠르게 옵션을 비교하는 가치는 핸드오프 직전에서 절반 이상 소실된다. 충실도 50~75%는 "디자이너가 만든 뒤 엔지니어가 다시 만든다"는 기존 구조를 그대로 답습한다는 신호다.
+- 실무에서 이런 툴을 도입할 때 결정해야 할 지점은 명확하다. 발상·합의 단계에서 캔버스 비교를 쓰고, 토큰·컴포넌트로 다시 묶는 작업은 별도 파이프라인(예: 사내 디자인 시스템 빌더, MCP, 코드젠)에 위임하는 분업이다. 그렇지 않으면 멀티 옵션 생성 속도가 오히려 핸드오프 재작업 부채를 키운다.
+- 멀티 옵션 캔버스의 인터랙션 버그처럼 "보기엔 좋은데 실제로 만지면 막힌다"는 패턴은 사내 AI 툴을 만들 때도 흔하다. 생성 능력보다 편집·비교 단계의 일상 동작이 자연스러운지를 더 자주 검증해야 한다.
+
+**점검 질문**
+
+- AI가 생성한 시안을 우리 디자인 토큰·코드 컴포넌트로 다시 묶는 책임은 어느 단계, 누가 진다? 그 비용이 멀티 옵션 생성으로 얻는 속도보다 작다고 자신할 수 있는가.
+- 클래리파이 질문·Tweaks 슬라이더 같은 "프롬프트 아닌 조작"을 우리 사내 AI 도구에 도입한다면, 어떤 파라미터를 노출할 때 디자이너의 의사결정이 가장 짧아지는가.
+- Figma 라운드트립이 없는 툴을 도입할 때, 결과물을 사내 자산으로 회수하는 경로(스크린샷·코드 export·MCP 연동 등) 중 무엇을 표준으로 정할 것인가.
+
+#### 12. Easily apply Copilot code review feedback with Copilot cloud agent
+
+- **날짜**: 2026-05-19
+- **태그**: Copilot, 코드리뷰, PR자동화, 클라우드에이전트
+- **국가**: 미국
+- **카테고리**: github_workflow
+- **직무 태그**: 웹DEV
+- **출처 유형**: 공식 changelog
+- **출처**: GitHub Changelog
+- **출처 URL**: https://github.blog/changelog/2026-05-19-easily-apply-copilot-code-review-feedback-with-copilot-cloud-agent
+- **이미지**: (썸네일 없음)
+- **이미지 설명**: -
+- **요약**: GitHub이 Copilot 코드 리뷰의 "Implement suggestion" 버튼을 "Fix with Copilot"으로 바꾸면서, 적용 방식·모델·추가 지시를 고르는 다이얼로그를 끼워 넣었다. 일괄 처리 버튼도 같이 정비됐다.
+
+**핵심 사실**
+
+- Copilot 코드 리뷰의 단일 제안 적용 버튼이 `Implement suggestion`에서 `Fix with Copilot`으로 리네이밍됐다.
+- `Fix with Copilot`을 누르면 다이얼로그가 뜬다. 현재 PR에 바로 적용할지 새 PR을 만들지 고르고, Copilot이 사용할 모델을 선택한 다음, 필요하면 변경 방향을 안내하는 추가 지시(optional additional instructions)를 적어 보낼 수 있다.
+- 일괄 처리 버튼 `Implement all suggestions`는 `Fix batch with Copilot`으로 바뀌었다. PR 개요 코멘트에 붙어 있고, 여러 리뷰 코멘트를 한 번에 Copilot 클라우드 에이전트로 넘기되 어떤 코멘트를 적용할지 사용자가 골라 보낼 수 있다.
+- 기존에는 코멘트에서 `@Copilot`을 자동으로 태깅해 처리가 시작됐지만, 이번 변경으로 명시적인 핸드오프 단계가 끼면서 어떤 모델로 어떤 지시를 함께 보낼지 매번 정해 누르게 됐다.
+
+**개발 인사이트**
+
+리뷰 코멘트를 코드로 옮기는 마지막 한 클릭이 그동안은 "그냥 적용"이었다. 이번 변경은 그 한 클릭을 다이얼로그로 한 번 끊는다. 모델을 고르고 추가 지시를 넣는 자리가 생긴다는 건, 같은 제안이라도 어떤 모델·어떤 톤으로 풀어낼지 PR 작성자가 매번 정해야 한다는 뜻이다. 자동 `@Copilot` 태깅에서 명시적 핸드오프로 바뀐 흐름은, 리뷰 코멘트→자동 수정 파이프라인을 한 번 더 사람 손으로 게이팅한다.
+
+`Fix batch with Copilot`은 더 무겁다. 리뷰 코멘트 여러 개를 한 번에 클라우드 에이전트로 보내는 동작은 편하지만, 어떤 코멘트를 묶어 보내고 어떤 건 빼는지 고르는 단계가 함께 있다. 일괄로 보낼수록 모델·추가 지시·적용 위치를 누가 결정하는지가 팀 룰로 자리 잡아야 한다. 신입이 그냥 모두 체크해서 보내고 결과 PR을 받는 흐름이 되면, 리뷰 코멘트의 의도가 코드까지 따라오지 않을 가능성이 커진다.
+
+**점검 질문**
+
+- 우리 PR 리뷰 흐름에서 `Fix with Copilot` 다이얼로그의 모델 선택·추가 지시 입력을 누가 책임지고 게이팅하는가? 작성자에게 일임할지, 리뷰어가 코멘트에 모델·지시 가이드를 함께 남길지 룰이 있는가?
+- `Fix batch with Copilot`로 여러 코멘트를 묶어 보낼 때 어떤 코멘트는 빼야 하는지(예: 설계 변경을 동반하는 제안) 판단 기준이 팀에 명문화돼 있는가, 아니면 매번 PR 작성자 감각에 맡기고 있는가?
+
