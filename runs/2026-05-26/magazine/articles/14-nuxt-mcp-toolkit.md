@@ -1,4 +1,4 @@
-#### 15. Nuxt MCP Toolkit now supports MCP apps
+#### 14. Nuxt MCP Toolkit now supports MCP apps
 
 - 날짜: 2026-05-19
 - 태그: Nuxt, MCP, Vue, 인라인 렌더링

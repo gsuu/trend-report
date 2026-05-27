@@ -1,4 +1,4 @@
-#### 09. Chat SDK now includes AI SDK tools
+#### 08. Chat SDK now includes AI SDK tools
 
 - 날짜: 2026-05-20
 - 태그: Chat SDK, AI SDK Tools, requireApproval, 권한 프리셋

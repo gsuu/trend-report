@@ -1,4 +1,4 @@
-#### 13. Vercel AI Gateway plugin for WordPress
+#### 12. Vercel AI Gateway plugin for WordPress
 
 - 날짜: 2026-05-26
 - 태그: Vercel AI Gateway, WordPress 7.0, WordPress AI Client, 멀티 프로바이더

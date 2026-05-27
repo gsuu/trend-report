@@ -1,4 +1,4 @@
-#### 10. Introducing Claude for Small Business
+#### 09. Introducing Claude for Small Business
 
 - 날짜: 2026-05-26
 - 태그: Claude Cowork, 커넥터, 에이전틱 워크플로우, 권한 전파

@@ -1,4 +1,4 @@
-#### 08. Issue fields are now in public preview for all organizations
+#### 07. Issue fields are now in public preview for all organizations
 
 - 날짜: 2026-05-21
 - 태그: GitHub, Issue fields, Projects, REST/GraphQL API

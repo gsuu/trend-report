@@ -1,4 +1,4 @@
-#### 06. Four Levels Of Customer Understanding
+#### 05. Four Levels Of Customer Understanding
 
 - 날짜: 2026-05-22
 - 태그: UX리서치, 사용자조사, 인터뷰, Exposure Hours

@@ -1,4 +1,4 @@
-#### 16. Announcing Quality Review Agent: Agentic QA on Every PR
+#### 15. Announcing Quality Review Agent: Agentic QA on Every PR
 
 - 날짜: 2026-05-26
 - 태그: PR 자동 QA, 브라우저 테스트, Builder.io, QA 에이전트

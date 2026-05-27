@@ -1,4 +1,4 @@
-#### 07. 6 Best GitHub Copilot Alternatives in 2026
+#### 06. 6 Best GitHub Copilot Alternatives in 2026
 
 - 날짜: 2026-05-26
 - 태그: GitHub Copilot, Cursor, Claude Code, AI 코딩 도구

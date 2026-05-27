@@ -1,4 +1,4 @@
-#### 11. Agents for financial services
+#### 10. Agents for financial services
 
 - 날짜: 2026-05-26
 - 태그: AI Agents, agents_platform, Claude, 운영도구
