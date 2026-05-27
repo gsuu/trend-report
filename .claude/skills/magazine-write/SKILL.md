@@ -39,19 +39,19 @@ magazine-writer는 [docs/magazine-writing-standard.md](../../../docs/magazine-wr
 
 article 번호는 1부터 연속해서 부여한다. 카테고리 헤더(`## SERVICE`, `## DESIGN`, `## DEV`)를 둔다.
 
-magazine-writer가 `제외 권고`로 보고한 항목은 본문에 넣지 않고 `## 수집했지만 제외한 것` 섹션에 사유와 함께 옮긴다.
+발행 여부는 슬랙 매니저 검토(weekly-shortlist-slack 흐름)에서 이미 결정됨. 이 스킬은 shortlist 의 active 항목을 그대로 본문으로 옮기는 작업만 한다. magazine-writer 가 `문제 보고`(원문 접근 자체가 불가하거나 본문 회수 실패) 한 항목이 있으면 사용자에게 알리고 어떻게 처리할지 묻는다 — 자동으로 제외하지 않는다.
 
 ## Phase 4: 사용자 보고
 
 마무리에 한 메시지로:
 
 - 작성 완료 항목 수 (카테고리별)
-- magazine-writer가 `제외 권고`한 항목 수와 사유 요약
+- magazine-writer 가 `문제 보고`한 항목이 있으면 사유와 함께 별도 표시 (있는 경우만)
 - 다음 단계: `리뷰로 진행하려면 /magazine-review YYYY-MM-DD`
 
 ## 하지 않을 일
 
 - 원문 검증을 새로 하지 않는다 (digest-collect Phase 3에서 끝난 일).
-- shortlist 항목을 평가해 추가 제외하지 않는다 — magazine-writer가 `제외 권고`로 올린 것만 반영.
+- shortlist 항목을 평가해 제외하지 않는다 — 발행 여부는 슬랙 매니저 검토에서 이미 결정됨.
 - `public/data/magazine.json`을 갱신하지 않는다 — magazine-review 통과 후 별도 단계에서.
 - Notion 업로드하지 않는다 ([CLAUDE.md](../../../CLAUDE.md) 절대 규칙 2).
