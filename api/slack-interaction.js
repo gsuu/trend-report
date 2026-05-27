@@ -207,9 +207,17 @@ async function handleConfirm(payload) {
     }
   }
 
-  const repo = process.env.GITHUB_ARCHIVE_REPOSITORY;
+  const repo = process.env.GITHUB_DISPATCH_REPO || process.env.GITHUB_ARCHIVE_REPOSITORY;
+  const repoSource = process.env.GITHUB_DISPATCH_REPO ? 'GITHUB_DISPATCH_REPO' : 'GITHUB_ARCHIVE_REPOSITORY';
   const token = process.env.GITHUB_DISPATCH_TOKEN || process.env.GITHUB_ARCHIVE_TOKEN;
   const tokenSource = process.env.GITHUB_DISPATCH_TOKEN ? 'GITHUB_DISPATCH_TOKEN' : 'GITHUB_ARCHIVE_TOKEN';
+
+  if (!repo) {
+    console.error('[slack-interaction] dispatch aborted: repo env var is missing');
+  }
+  if (!token) {
+    console.error('[slack-interaction] dispatch aborted: token env var is missing');
+  }
   const dispatchUrl = `https://api.github.com/repos/${repo}/actions/workflows/slack-shortlist-update.yml/dispatches`;
 
   console.log(`[slack-interaction] dispatch → ${dispatchUrl} (token=${tokenSource}, repo=${repo})`);
@@ -244,7 +252,7 @@ async function handleConfirm(payload) {
   const statusText = ok
     ? `✅ *확정 완료* | 제외 *${excluded.length}건* | 이동 *${moved.length}건* | 추가 요청 *${added.length}건*\n반영 중입니다 — 잠시 후 shortlist가 업데이트됩니다.`
     : `⚠️ 확정 요청은 받았지만 워크플로 트리거에 실패했습니다 (HTTP ${dispatchRes.status}).\n` +
-      `\`\`\`\nrepo:  ${repo || '(미설정)'}\ntoken: ${tokenSource}\n${errBody || '(응답 본문 없음)'}\n\`\`\`\n` +
+      `\`\`\`\nrepo (${repoSource}):  ${repo || '(미설정)'}\ntoken (${tokenSource}): ${token ? '설정됨' : '(미설정)'}\n${errBody || '(응답 본문 없음)'}\n\`\`\`\n` +
       `수동으로 \`slack-shortlist-update.yml\`을 실행하세요.`;
 
   const finalBlocks = [
