@@ -19,7 +19,7 @@
 
 ## SERVICE (2건)
 
-### 1. [Service / commerce / 웹기획자·UIUX·웹DEV] 우아한형제들이 디자인시스템 안에 RAG 챗봇을 심어 컴포넌트 검색을 다시 짰다
+### 1. [Service / commerce / 웹기획자·UIUX·웹DEV] 우아한공방의 새로운 동료, 시스템 맥락을 가진 챗봇서비스 개발기(feat. RAG)
 - **우선순위**: P0 · core_ecommerce
 - **최종 기준 원문**: <https://techblog.woowahan.com/26319/>
 - **소분류**: 운영도구 (디자인시스템 챗봇)
@@ -31,7 +31,7 @@
   4. Storybook의 `preview.tsx`에 전역 챗봇 UI를 주입해 모든 디자인시스템 문서에서 일관되게 챗봇을 호출할 수 있게 했다.
 - **점검 질문**: 우리 디자인시스템 문서가 컴포넌트 이름·사용처를 묻는 질문에 답할 수 있도록 구성돼 있는가, 답변 범위를 어디까지 가드레일로 잠글 것인가?
 
-### 2. [Service / commerce_adjacent / 웹기획자] 외국인 유학생 100명이 K-푸드의 정체성 기준을 '원산지'에서 '맛·트렌드'로 옮겼다
+### 2. [Service / commerce_adjacent / 웹기획자] K-푸드 글로벌 트렌드, 약과부터 라면까지 외국인 유학생 100명이 발견한 K-푸드의 '반전'
 - **우선순위**: P2 · commerce_adjacent
 - **최종 기준 원문**: <https://blog.opensurvey.co.kr/article/k-food-2026-2/>
 - **소분류**: 검색 (글로벌 카테고리·상품명 의사결정 데이터)
@@ -46,7 +46,7 @@
 
 ## DESIGN (4건)
 
-### 3. [Design / ux_critique / 웹기획자·UIUX] 이동석이 한국 UX의 다섯 영역을 '디지털 갑질'이라는 한 단어로 묶었다
+### 3. [Design / ux_critique / 웹기획자·UIUX] [참을 수 없는 UX의 저렴함 ①] 무책임한 설계 속 '디지털 갑질'
 - **우선순위**: P0 · design_dev_reference
 - **최종 기준 원문**: <https://ditoday.com/참을-수-없는-ux의-저렴함-①-무책임한-설계-속-디지털/>
 - **소분류**: 결제 (인증·문서·플로우 비판 사례 모음)
@@ -58,7 +58,7 @@
   4. 발행일 2026-05-18, DIGITAL iNSIGHT 연재 1편.
 - **점검 질문**: 우리 결제·인증·문서 업로드 플로우 중 사용자가 "시스템이 했어야 할 일"을 대신 떠안는 지점이 어디인가?
 
-### 4. [Design / uiux_renewal / UIUX·웹기획자] 와일리가 하나원큐의 IA를 '은행 업무'에서 '고객 자산 맥락'으로 옮겼다
+### 4. [Design / uiux_renewal / UIUX·웹기획자] "어제처럼 자연스럽지만, 어제보다 편하게" 와일리의 하나원큐 UI·UX 리뉴얼
 - **우선순위**: P0 · design_dev_reference
 - **최종 기준 원문**: <https://ditoday.com/어제처럼-자연스럽지만-어제보다-편하게-와일리의/>
 - **소분류**: 홈 (금융 앱 IA 리뉴얼 케이스)
@@ -70,7 +70,7 @@
   4. 리뉴얼 후 사용자 수가 약 1,500% 이상 증가했다고 명시.
 - **점검 질문**: 우리 서비스 메인 IA가 내부 업무 분류를 따르고 있나, 고객이 처음 열었을 때 보는 맥락을 따르고 있나?
 
-### 5. [Design / seo_geo / UIUX·웹기획자·웹DEV] pxd가 AI 시대의 robots.txt를 '학습용 봇'과 '검색용 봇'으로 갈라 다시 짰다
+### 5. [Design / seo_geo / UIUX·웹기획자·웹DEV] 검색엔진은 우리 사이트를 어떻게 발견할까?
 - **우선순위**: P0 · design_dev_reference
 - **최종 기준 원문**: <https://pxdstory.tistory.com/1899>
 - **소분류**: 없음 (SEO+GEO 통합 가이드)
@@ -82,7 +82,7 @@
   4. ChatGPT(Bing)·Gemini(Google)·Perplexity(자체 크롤+복수 엔진) 등 AI 서비스별 검색 인덱스 출처 비교, Google Search Console·네이버 서치어드바이저 모니터링 권장.
 - **점검 질문**: 우리 `robots.txt`가 GPTBot·ClaudeBot은 차단하면서 OAI-SearchBot·Claude-SearchBot은 허용하도록 분리되어 있는가?
 
-### 6. [Design / ux_research / UIUX·웹기획자] Vitaly Friedman이 '고객 이해'를 말·생각·행동·이유 4단계로 분해했다
+### 6. [Design / ux_research / UIUX·웹기획자] Four Levels Of Customer Understanding
 - **우선순위**: P1 · design_dev_reference
 - **최종 기준 원문**: <https://smashingmagazine.com/2026/05/four-levels-customer-understanding/>
 - **소분류**: 없음 (UX 리서치 방법론)
@@ -98,7 +98,7 @@
 
 ## DEV (10건)
 
-### 7. [DEV / ai_coding / 웹DEV] GitHub Copilot의 Opus 배수가 3x에서 27x로 뛰자 AI 코딩 도구 선택지가 다시 열렸다
+### 7. [DEV / ai_coding / 웹DEV] 6 Best GitHub Copilot Alternatives in 2026
 - **우선순위**: P0 · design_dev_reference
 - **최종 기준 원문**: <https://www.builder.io/blog/best-github-copilot-alternatives>
 - **소분류**: 운영도구 (AI 코딩 도구 비용·기능 비교)
@@ -111,7 +111,7 @@
   5. Zed는 Rust 네이티브 GPU 가속, Edit Prediction(Zeta2 open-weights), Agent Client Protocol(ACP)로 Gemini·Claude·Codex·Cursor 지원.
 - **점검 질문**: 6월 1일 Copilot 사용량 과금 전환 후 우리 팀의 모델 호출 단가가 어떻게 바뀌는지 시뮬레이션해 봤는가?
 
-### 8. [DEV / github_workflow / 웹DEV·웹기획자] GitHub이 Organization 레벨에서 Priority·Effort 필드를 모든 이슈에 자동 꽂아넣었다
+### 8. [DEV / github_workflow / 웹DEV·웹기획자] Issue fields are now in public preview for all organizations
 - **우선순위**: P0 · design_dev_reference
 - **최종 기준 원문**: <https://github.blog/changelog/2026-05-21-issue-fields-are-now-in-public-preview-for-all-organizations>
 - **소분류**: 운영도구 (이슈 트래커 표준화)
@@ -124,7 +124,7 @@
   5. Settings > Planning > Issue fields에서 관리, 4개 기본 필드 자동 포함.
 - **점검 질문**: 우리 조직 이슈 메타데이터 표준이 리포마다 다른 라벨로 흩어져 있지 않은가, Org 레벨로 통일할 때 자동화 스크립트는 어디서 끊기나?
 
-### 9. [DEV / ai_sdk / 웹DEV] Vercel Chat SDK가 write 액션 기본 승인 게이팅과 3프리셋 최소권한을 묶어 들고나왔다
+### 9. [DEV / ai_sdk / 웹DEV] Chat SDK now includes AI SDK tools
 - **우선순위**: P0 · design_dev_reference
 - **최종 기준 원문**: <https://vercel.com/changelog/chat-sdk-now-includes-ai-sdk-tools>
 - **소분류**: 운영도구 (챗 인터페이스 도구 권한 모델)
@@ -136,7 +136,7 @@
   4. `toAiMessages` 함수와 관련 타입이 `chat`에서 `chat/ai`로 이전, 기존 export는 deprecated.
 - **점검 질문**: 우리 챗 인터페이스의 도구 호출이 read와 write를 같은 권한으로 굴리고 있지 않은가, write에 승인 게이팅이 기본인가?
 
-### 10. [DEV / agents_platform / 웹DEV] Anthropic이 SMB용 커넥터 7종과 15개 에이전틱 워크플로우를 한 묶음으로 내놨다
+### 10. [DEV / agents_platform / 웹DEV] Introducing Claude for Small Business
 - **우선순위**: P1 · design_dev_reference
 - **최종 기준 원문**: <https://www.anthropic.com/news/claude-for-small-business>
 - **소분류**: 운영도구 (사내 자동화 커넥터 패키지)
@@ -148,7 +148,7 @@
   4. Team·Enterprise Plan은 기본적으로 사용자 데이터 학습 안 함, 기존 도구 권한(QuickBooks·Drive)이 Claude로 전파.
 - **점검 질문**: 사내 운영 시스템에 외부 AI 에이전트를 붙일 때, 기존 도구 권한이 그대로 전파되는 모델을 우리는 어떻게 게이팅할 것인가?
 
-### 11. [DEV / agents_platform / 웹DEV] Anthropic이 금융 에이전트 10종에 per-tool 권한·credential vault·audit log를 묶었다
+### 11. [DEV / agents_platform / 웹DEV] Agents for financial services
 - **우선순위**: P1 · design_dev_reference
 - **최종 기준 원문**: <https://www.anthropic.com/news/finance-agents>
 - **소분류**: 운영도구 (long-running 에이전트 운영 모델)
@@ -161,7 +161,7 @@
   5. Claude Opus 4.7이 Vals AI Finance Agent 벤치마크에서 64.37% 기록, Managed Agents는 long-running session·per-tool 권한·credential vault·audit log 지원.
 - **점검 질문**: 장시간 작동하는 사내 에이전트의 도구별 권한·자격증명 저장소·감사 로그를 우리는 어디까지 분리해 두었나?
 
-### 12. [DEV / design_code / UIUX·웹DEV] Claude Design은 4개 디자인을 한 캔버스에 띄우지만 Figma 라운드트립·토큰은 아직이다
+### 12. [DEV / design_code / UIUX·웹DEV] Claude Design Review: An Innovative Way to Brainstorm with AI
 - **우선순위**: P1 · design_dev_reference
 - **최종 기준 원문**: <https://www.builder.io/blog/claude-design>
 - **소분류**: 운영도구 (AI 디자인-코드 핸드오프)
@@ -174,7 +174,7 @@
   5. Figma 라운드트립·디자인 토큰·코드 컴포넌트 미지원으로 엔지니어링 핸드오프는 수동 재작업 필요.
 - **점검 질문**: AI로 만든 시안을 우리 디자인 토큰·컴포넌트에 어떻게 다시 묶을 것인가, 핸드오프의 수동 재작업 비용은 누가 진다?
 
-### 13. [DEV / ai_sdk / 웹DEV] Vercel이 WordPress에 40+ 프로바이더를 단일 키로 묶는 AI Gateway 플러그인을 붙였다
+### 13. [DEV / ai_sdk / 웹DEV] Vercel AI Gateway plugin for WordPress
 - **우선순위**: P1 · design_dev_reference
 - **최종 기준 원문**: <https://vercel.com/changelog/vercel-ai-gateway-plugin-for-wordpress>
 - **소분류**: 운영도구 (CMS AI 통합)
@@ -186,7 +186,7 @@
   4. 텍스트·구조화 JSON·이미지·비디오 멀티모달 생성 지원, 프로바이더 장애 시 자동 폴백.
 - **점검 질문**: CMS 운영팀의 콘텐츠 자동화에서 프로바이더 장애 폴백이 단일 키 안에서 처리되는가?
 
-### 14. [DEV / github_workflow / 웹DEV] GitHub이 Copilot 코드리뷰의 'Fix' 버튼에 모델 선택과 일괄 처리 다이얼로그를 붙였다
+### 14. [DEV / github_workflow / 웹DEV] Easily apply Copilot code review feedback with Copilot cloud agent
 - **우선순위**: P1 · design_dev_reference
 - **최종 기준 원문**: <https://github.blog/changelog/2026-05-19-easily-apply-copilot-code-review-feedback-with-copilot-cloud-agent>
 - **소분류**: 운영도구 (PR 리뷰 자동화)
@@ -199,7 +199,7 @@
   5. Copilot 클라우드 에이전트와 통합되어 피드백 처리 효율화.
 - **점검 질문**: 우리 PR 리뷰 흐름에서 AI 제안을 일괄 적용할 때, 어떤 모델로 어떤 추가 지시를 줄지 누가 게이팅하는가?
 
-### 15. [DEV / mcp / 웹DEV] Nuxt가 Vue SFC를 MCP 앱으로 묶어 Claude·ChatGPT 안에서 인라인 렌더링하게 했다
+### 15. [DEV / mcp / 웹DEV] Nuxt MCP Toolkit now supports MCP apps
 - **우선순위**: P1 · design_dev_reference
 - **최종 기준 원문**: <https://vercel.com/changelog/nuxt-mcp-toolkit-mcp-apps>
 - **소분류**: 운영도구 (MCP 앱 빌드)
@@ -212,7 +212,7 @@
   5. 핸들러가 `structuredContent`를 반환해 풍부한 인터랙티브 데이터 전달.
 - **점검 질문**: MCP 클라이언트 안에서 우리 컴포넌트가 인라인 HTML로 렌더링된다면, 우리 디자인 토큰·접근성 규칙은 어디서 강제되나?
 
-### 16. [DEV / qa_automation / 웹DEV·UIUX] Builder.io가 PR마다 브라우저로 해피 패스·엣지·리그레션을 도는 QA 에이전트를 붙였다
+### 16. [DEV / qa_automation / 웹DEV·UIUX] Announcing Quality Review Agent: Agentic QA on Every PR
 - **우선순위**: P1 · design_dev_reference
 - **최종 기준 원문**: <https://www.builder.io/blog/announcing-quality-review-agent>
 - **소분류**: 운영도구 (PR 자동 QA)

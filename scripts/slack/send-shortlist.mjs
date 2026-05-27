@@ -82,7 +82,11 @@ function normalizeUrl(url) {
 }
 
 // source-verification-{service,design,dev}.json 을 모두 읽어
-// URL → 원문 title 매핑을 만든다. 매니저는 매거진 편집 전 원문 제목으로 판단.
+// URL → 원문 title 매핑을 만든다.
+//
+// shortlist 자체가 원문 제목을 유지하는 게 원칙(digest-collect SKILL.md Phase 5,
+// docs/magazine-writing-standard.md "타이틀 작성 원칙"). 이 매핑은 그 룰을
+// 어긴 옛 shortlist 가 들어왔을 때를 위한 안전장치.
 async function loadOriginalTitleMap(dateDir) {
   const map = new Map();
   for (const cat of ['service', 'design', 'dev']) {

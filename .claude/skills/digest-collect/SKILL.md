@@ -58,6 +58,7 @@ source-verifier는 각 후보의 최종 기준 원문을 직접 열어 구체 �
 - 통과 후보가 5개 미만인 카테고리는 있는 것만 담고 강제로 채우지 않는다.
 - 같은 점수면 [docs/data-collection-strategy.md](../../../docs/data-collection-strategy.md) 우선순위를 따른다.
 - 각 항목에는 카테고리(Service/Design/DEV) + 소분류 + 직무 태그(`웹디자인`/`웹서비스기획`/`웹DEV`) + 최종 기준 원문 URL + 핵심 사실 3개 + 이미지 URL을 포함한다.
+- **항목 제목(`### N. [...] 제목` 의 제목 부분)은 `source-verification-{service,design,dev}.json` 의 `title`(=원문 제목)을 그대로 사용한다.** 매거진 톤으로 다시 쓰거나 한국어로 번역·각색·요약하지 않는다. 영어 원문은 영어로, 한국어 원문은 한국어로. (룰 근거: [docs/magazine-writing-standard.md](../../../docs/magazine-writing-standard.md) "타이틀 작성 원칙" — 9c544b6 에서 결정. 매거진 본문과 shortlist 모두 동일 룰. 매니저가 슬랙 검토 시 매거진 편집본이 아닌 원문으로 판단할 수 있어야 한다.)
 - 하단에 `## 수집했지만 제외한 것` 섹션을 두고 `weak_promo`·`exclude`·`원문 부족` 항목을 브랜드/출처/대분류/제외 사유/다시 볼 조건과 함께 남긴다.
 
 shortlist는 글쓰기 단계에서 다시 줄이지 않는다는 점을 첫 줄에 명시한다.
