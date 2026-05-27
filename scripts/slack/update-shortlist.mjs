@@ -142,29 +142,70 @@ function moveToExcluded(content, excludedNums) {
     result = result.slice(0, section.start).trimEnd() + '\n\n' + result.slice(section.end);
   }
 
-  for (const [cat, rows] of Object.entries(rowsByCategory)) {
-    if (rows.length === 0) continue;
-    const tableHeader =
-      `### ${cat} (${rows.length}건)\n| 출처 | 제목 | 사유 | 다시 볼 조건 |\n|---|---|---|---|\n`;
-    const newSection = '\n\n' + tableHeader + rows.join('\n');
+  for (const [cat, newRows] of Object.entries(rowsByCategory)) {
+    if (newRows.length === 0) continue;
 
     if (hasCutSection) {
+      const cutIdx = result.indexOf(cutMarker);
       const catMarker = `### ${cat}`;
-      const catIdx = result.indexOf(catMarker, result.indexOf(cutMarker));
+      const catIdx = result.indexOf(catMarker, cutIdx);
+
       if (catIdx >= 0) {
-        const tableBodyStart = result.indexOf('\n|---|', catIdx);
-        if (tableBodyStart >= 0) {
-          const nextSection = result.indexOf('\n### ', tableBodyStart + 1);
-          const insertAt = nextSection >= 0 ? nextSection : result.indexOf('\n---', tableBodyStart);
-          const pos = insertAt >= 0 ? insertAt : result.length;
-          result = result.slice(0, pos) + '\n' + rows.join('\n') + result.slice(pos);
+        // 기존 표가 있다 — 컬럼 수에 맞춰 새 row 를 변환하고, 헤더의 건수도 갱신
+        const headerLine = result.slice(catIdx, result.indexOf('\n', catIdx));
+        const cntM = headerLine.match(/^### (\S+)\s*\((\d+)건([^)]*)\)/);
+        const existingCount = cntM ? parseInt(cntM[2], 10) : 0;
+        const headerSuffix = cntM ? (cntM[3] ?? '') : '';
+
+        // 컬럼 수 감지 — 구분선 |---|---|---| 또는 |---|---|---|---| 등을 카운트
+        const sepLineStart = result.indexOf('\n|---', catIdx);
+        const sepLineEnd = sepLineStart >= 0 ? result.indexOf('\n', sepLineStart + 1) : -1;
+        const sepLine = sepLineStart >= 0 && sepLineEnd >= 0
+          ? result.slice(sepLineStart + 1, sepLineEnd)
+          : '';
+        const colCount = sepLine ? (sepLine.match(/\|/g)?.length ?? 0) - 1 : 4;
+
+        // 새 row 를 기존 컬럼 수에 맞게 변환 (출처/제목/사유[/다시 볼 조건])
+        const conformedRows = newRows.map(row => {
+          const cells = row.split('|').map(s => s.trim()).filter((_, i, a) => i > 0 && i < a.length - 1);
+          // cells = [출처, 제목, 사유, 다시 볼 조건]
+          const trimmed = cells.slice(0, colCount);
+          while (trimmed.length < colCount) trimmed.push('—');
+          return `| ${trimmed.join(' | ')} |`;
+        });
+
+        // 표의 마지막 row 다음, 다음 섹션 직전에 삽입
+        const tableEndCandidates = [
+          result.indexOf('\n\n', sepLineEnd >= 0 ? sepLineEnd : catIdx),
+          result.indexOf('\n### ', sepLineEnd >= 0 ? sepLineEnd : catIdx),
+          result.indexOf('\n---', sepLineEnd >= 0 ? sepLineEnd : catIdx),
+        ].filter(p => p > 0);
+        const insertAt = tableEndCandidates.length ? Math.min(...tableEndCandidates) : result.length;
+
+        result =
+          result.slice(0, insertAt) +
+          '\n' + conformedRows.join('\n') +
+          result.slice(insertAt);
+
+        // 헤더의 (N건) → (N+newRows.length건)
+        if (cntM) {
+          const newHeader = `### ${cntM[1]} (${existingCount + newRows.length}건${headerSuffix})`;
+          result = result.slice(0, catIdx) + newHeader + result.slice(catIdx + headerLine.length);
         }
       } else {
-        const cutPos = result.indexOf(cutMarker) + cutMarker.length;
+        // cut 섹션은 있지만 해당 카테고리 표가 없다 — 표 새로 생성
+        const tableHeader =
+          `### ${cat} (${newRows.length}건)\n| 출처 | 제목 | 사유 | 다시 볼 조건 |\n|---|---|---|---|\n`;
+        const newSection = '\n\n' + tableHeader + newRows.join('\n');
+        const cutPos = cutIdx + cutMarker.length;
         result = result.slice(0, cutPos) + '\n' + newSection + result.slice(cutPos);
       }
     } else {
-      result = result.trimEnd() + '\n\n---\n\n## 수집했지만 제외한 것\n' + newSection;
+      // cut 섹션 자체가 없다 — 통째로 생성
+      const tableHeader =
+        `### ${cat} (${newRows.length}건)\n| 출처 | 제목 | 사유 | 다시 볼 조건 |\n|---|---|---|---|\n`;
+      result =
+        result.trimEnd() + '\n\n---\n\n## 수집했지만 제외한 것\n\n' + tableHeader + newRows.join('\n') + '\n';
     }
   }
 

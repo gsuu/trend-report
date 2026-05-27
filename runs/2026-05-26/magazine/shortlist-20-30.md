@@ -193,7 +193,7 @@
 | ditoday.com | AI가 읽는 '고객 언어 콘텐츠' 설계하기 | 비즈스프링 자사 GEO 컨설팅 홍보 — 적용 사례·코드·화면 없음 | 같은 필자의 후속 케이스 분석이 나오면 |
 | nngroup.com | UX Conference August Announced | 행사 등록 안내 — 리서치 인사이트 부재 | 컨퍼런스 발표 후 정리 자료가 공개되면 |
 
-### DEV (13건)
+### DEV (17건)
 | 출처 | 제목 | 사유 |
 |---|---|---|
 | anthropic.com | Claude is a space to think | 정책 선언 의견글 — API/SDK/MCP 변경 없음 |
@@ -209,11 +209,11 @@
 | builder.io | When Agents Work for the Whole Team | 컨셉 에세이 — 코드·API·구현 단계 부재 |
 | builder.io | Code is the Canvas: Bring the Whole Team to It | 비전 옹호 — 코드·API·구체 아키텍처 부재 |
 | github.com/shadcn-ui | shadcn@4.8.0 | 공식 릴리즈이나 패치 규모 얕음(마이너 2건·패치 1건) — 단독 발행에 두께 박약 |
+| builder.io | Announcing Quality Review Agent: Agentic QA on Every PR | 매니저 검토 제외 |
+| vercel.com | Nuxt MCP Toolkit now supports MCP apps | 매니저 검토 제외 |
+| vercel.com | Vercel AI Gateway plugin for WordPress | 매니저 검토 제외 |
+| vercel.com | Chat SDK now includes AI SDK tools | 매니저 검토 제외 |
 
-| builder.io | Announcing Quality Review Agent: Agentic QA on Every PR | 매니저 검토 제외 | — |
-| vercel.com | Nuxt MCP Toolkit now supports MCP apps | 매니저 검토 제외 | — |
-| vercel.com | Vercel AI Gateway plugin for WordPress | 매니저 검토 제외 | — |
-| vercel.com | Chat SDK now includes AI SDK tools | 매니저 검토 제외 | — |
 ### DEV (P2 보류, 2건)
 | 출처 | 제목 | 사유 | 다시 볼 조건 |
 |---|---|---|---|
