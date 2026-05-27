@@ -28,7 +28,31 @@ const SHORTLIST_PATH = path.join(
 );
 
 async function main() {
-  let content = await fs.readFile(SHORTLIST_PATH, 'utf8');
+  let content;
+  try {
+    content = await fs.readFile(SHORTLIST_PATH, 'utf8');
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      const runsDir = path.join(process.cwd(), 'runs');
+      let available = [];
+      try {
+        const entries = await fs.readdir(runsDir);
+        for (const dir of entries.sort().reverse()) {
+          if (!/^\d{4}-\d{2}-\d{2}$/.test(dir)) continue;
+          try {
+            await fs.access(path.join(runsDir, dir, 'magazine', 'shortlist-20-30.md'));
+            available.push(dir);
+            if (available.length >= 5) break;
+          } catch {}
+        }
+      } catch {}
+      console.error(`shortlist 파일을 찾을 수 없습니다: ${SHORTLIST_PATH}`);
+      console.error(`최근 shortlist 가 있는 날짜: ${available.join(', ') || '(없음)'}`);
+      console.error(`수동 실행 시 위 날짜 중 하나를 'date' 입력값으로 사용하세요.`);
+      process.exit(1);
+    }
+    throw err;
+  }
 
   const excludedNums = EXCLUDED_ITEMS
     ? EXCLUDED_ITEMS.split(',').map(s => parseInt(s.trim(), 10)).filter(n => !isNaN(n))
