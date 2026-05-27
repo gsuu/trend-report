@@ -1,0 +1,53 @@
+name: Update Shortlist from Slack
+
+# api/slack-interaction.js (Vercel 함수) 가 매니저의 "확정" 버튼 클릭 시 트리거.
+# 수동 실행도 가능 (GitHub Actions UI 에서 직접 입력).
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'shortlist 날짜 (YYYY-MM-DD)'
+        required: true
+      excluded_items:
+        description: '제외할 항목 번호 (쉼표 구분, 예: 2,5,8)'
+        required: false
+        default: ''
+      added_items:
+        description: '추가 항목 JSON 배열 (예: [{"url":"...","title":"...","category":"SERVICE"}])'
+        required: false
+        default: '[]'
+
+jobs:
+  update-shortlist:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Apply manager review
+        env:
+          DATE: ${{ inputs.date }}
+          EXCLUDED_ITEMS: ${{ inputs.excluded_items }}
+          ADDED_ITEMS: ${{ inputs.added_items }}
+        run: node scripts/slack/update-shortlist.mjs
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add runs/
+          if git diff --cached --quiet; then
+            echo "변경 사항 없음 — 커밋 스킵"
+          else
+            git commit -m "chore: 슬랙 매니저 검토 반영 (${{ inputs.date }})"
+            git push
+          fi
