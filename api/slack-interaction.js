@@ -178,12 +178,32 @@ async function handleConfirm(payload) {
 
   for (const block of payload.message.blocks) {
     if (block.type === 'section' && block.accessory?.action_id === 'toggle_item') {
-      const [num, state] = block.accessory.value.split(':');
+      const value = block.accessory.value ?? '';
+      const [rawNum, state] = value.split(':');
       const text = block.text?.text ?? '';
       const isManagerAdded = text.includes('➕ 매니저 추가');
+      const isCandidate = rawNum.startsWith('c'); // 'C후보' 블록 (다시 볼 만한 제외 항목)
 
+      // 1) 애매 후보 — ✅ 복원만 처리 (added 로 합산), ❌ 유지면 무시
+      if (isCandidate) {
+        if (state === 'include') {
+          // 후보 블록 텍스트 포맷: `*C\d+\.* [CAT] 제목\n<url|원문 보기>\n_조건: ..._`
+          const titleM = text.match(/\*C\d+\.\*\s*\[([A-Z]+)\]\s*([^\n]+)/);
+          const urlM = text.match(/<(https?[^|>]+)\|/);
+          if (titleM) {
+            added.push({
+              url: urlM?.[1] ?? '',
+              category: titleM[1],
+              title: titleM[2].trim(),
+            });
+          }
+        }
+        continue;
+      }
+
+      // 2) 메인 항목
       if (state === 'exclude') {
-        if (!isManagerAdded) excluded.push(num);
+        if (!isManagerAdded) excluded.push(rawNum);
       } else if (isManagerAdded) {
         const urlM = text.match(/<(https?[^|>]+)/);
         const catM = text.match(/\[([A-Z]+)\]/);
@@ -198,7 +218,7 @@ async function handleConfirm(payload) {
       // 카테고리 이동 표식 `[→ DEV]` 가 있으면 수집 (제외되지 않은 항목만)
       if (state !== 'exclude' && !isManagerAdded) {
         const moveM = text.match(/\[→\s*(SERVICE|DESIGN|DEV)\]/);
-        if (moveM) moved.push({ num: parseInt(num, 10), to: moveM[1] });
+        if (moveM) moved.push({ num: parseInt(rawNum, 10), to: moveM[1] });
       }
     }
     if (block.type === 'context') {

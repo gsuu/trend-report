@@ -72,6 +72,45 @@ function parseShortlistItems(content) {
   return items;
 }
 
+// 후보 발굴 — '수집했지만 제외한 것' 섹션의 4컬럼 표(다시 볼 조건 컬럼 포함)에서
+// 조건이 명시된 항목만 추출. 매니저가 슬랙에서 ✅ 복원으로 다시 살릴 수 있다.
+// 3컬럼 표(다시 볼 조건 없음)와 조건이 '—'·빈 값인 row 는 확실 제외로 보고 스킵.
+function parseAmbiguousCandidates(content) {
+  const cutIdx = content.indexOf('\n## 수집했지만 제외한 것');
+  if (cutIdx < 0) return [];
+  const lines = content.slice(cutIdx).split('\n');
+
+  const candidates = [];
+  let cnum = 0;
+  let currentCat = null;
+  let colCount = 0;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const catM = line.match(/^### (SERVICE|DESIGN|DEV)\b/);
+    if (catM) {
+      currentCat = catM[1];
+      colCount = 0;
+      if (i + 2 < lines.length && lines[i + 2].startsWith('|---')) {
+        colCount = (lines[i + 2].match(/\|/g)?.length ?? 0) - 1;
+      }
+      continue;
+    }
+    if (!currentCat || colCount < 4) continue;
+    if (!line.startsWith('|') || line.startsWith('|---') || line.startsWith('| 출처')) continue;
+
+    const cells = line.split('|').slice(1, -1).map(s => s.trim());
+    if (cells.length < 4) continue;
+    const [source, title, reason, cond] = cells;
+    if (!cond || cond === '—' || cond === '-' || cond === '') continue;
+    if (reason === '매니저 검토 제외') continue; // 매니저가 직접 제외한 건 자동 후보로 다시 넣지 않음
+
+    cnum++;
+    candidates.push({ cnum, category: currentCat, title, source, condition: cond });
+  }
+  return candidates;
+}
+
 // URL 정규화: shortlist 와 source-verification 의 인코딩 차이를 흡수
 function normalizeUrl(url) {
   if (!url) return '';
@@ -82,13 +121,15 @@ function normalizeUrl(url) {
 }
 
 // source-verification-{service,design,dev}.json 을 모두 읽어
-// URL → 원문 title 매핑을 만든다.
+// URL → 원문 title 매핑과 title → URL 역방향 매핑을 함께 만든다.
 //
-// shortlist 자체가 원문 제목을 유지하는 게 원칙(digest-collect SKILL.md Phase 5,
-// docs/magazine-writing-standard.md "타이틀 작성 원칙"). 이 매핑은 그 룰을
-// 어긴 옛 shortlist 가 들어왔을 때를 위한 안전장치.
-async function loadOriginalTitleMap(dateDir) {
-  const map = new Map();
+// URL → title: shortlist 자체가 원문 제목을 유지하는 게 원칙(digest-collect SKILL.md
+//   Phase 5). 이 매핑은 그 룰을 어긴 옛 shortlist 가 들어왔을 때를 위한 안전장치.
+// title → URL: '수집했지만 제외한 것' 섹션 후보를 슬랙에 표시할 때 원문 링크를
+//   붙이기 위함.
+async function loadVerificationMaps(dateDir) {
+  const urlToTitle = new Map();
+  const titleToUrl = new Map();
   for (const cat of ['service', 'design', 'dev']) {
     const filePath = path.join(RUNS_DIR, dateDir, 'magazine', `source-verification-${cat}.json`);
     try {
@@ -97,20 +138,66 @@ async function loadOriginalTitleMap(dateDir) {
       if (!Array.isArray(arr)) continue;
       for (const entry of arr) {
         if (!entry?.title) continue;
-        if (entry.link) map.set(normalizeUrl(entry.link), entry.title);
-        if (entry.finalSourceUrl) map.set(normalizeUrl(entry.finalSourceUrl), entry.title);
+        const preferredUrl = entry.finalSourceUrl || entry.link;
+        if (entry.link) urlToTitle.set(normalizeUrl(entry.link), entry.title);
+        if (entry.finalSourceUrl) urlToTitle.set(normalizeUrl(entry.finalSourceUrl), entry.title);
+        if (preferredUrl) titleToUrl.set(entry.title.trim(), preferredUrl);
       }
     } catch {
       // 파일 없거나 파싱 실패 — 매핑 없이 진행
     }
   }
-  return map;
+  return { urlToTitle, titleToUrl };
 }
 
 function priorityEmoji(priority) {
   if (priority.startsWith('P0')) return '🔴';
   if (priority.startsWith('P1')) return '🟡';
   return '🟢';
+}
+
+function buildCandidateBlocks(candidates, titleToUrl) {
+  if (candidates.length === 0) return [];
+  const blocks = [
+    { type: 'divider' },
+    {
+      type: 'section',
+      text: {
+        type: 'mrkdwn',
+        text:
+          '*— 후보 (다시 볼 만한 제외 항목) —*\n' +
+          '기본 ❌ 제외 상태. 살릴 항목만 토글하세요. (확실한 제외건은 표시 안 됨)',
+      },
+    },
+  ];
+
+  let currentCategory = '';
+  for (const c of candidates) {
+    if (c.category !== currentCategory) {
+      currentCategory = c.category;
+      blocks.push({
+        type: 'section',
+        text: { type: 'mrkdwn', text: `*${currentCategory} 후보*` },
+      });
+    }
+    const url = titleToUrl.get(c.title.trim());
+    const urlPart = url ? `\n<${url}|원문 보기>` : '';
+    blocks.push({
+      type: 'section',
+      text: {
+        type: 'mrkdwn',
+        text: `*C${c.cnum}.* [${c.category}] ${c.title}${urlPart}\n_조건: ${c.condition}_`,
+      },
+      accessory: {
+        type: 'button',
+        text: { type: 'plain_text', text: '❌ 제외' },
+        style: 'danger',
+        action_id: 'toggle_item',
+        value: `c${c.cnum}:exclude`,
+      },
+    });
+  }
+  return blocks;
 }
 
 function buildBlocks(date, items) {
@@ -216,23 +303,42 @@ async function main() {
     process.exit(1);
   }
 
-  // 원문 제목 매핑 적용 — 매니저는 매거진 편집 전 원문 제목으로 판단
-  const titleMap = await loadOriginalTitleMap(latest.date);
+  // source-verification 매핑 로드
+  const { urlToTitle, titleToUrl } = await loadVerificationMaps(latest.date);
+
+  // 메인 항목의 제목을 원문 제목으로 보정 (안전장치)
   let mappedCount = 0;
   for (const item of items) {
-    const original = item.url && titleMap.get(normalizeUrl(item.url));
+    const original = item.url && urlToTitle.get(normalizeUrl(item.url));
     if (original) {
       item.title = original;
       mappedCount++;
     }
   }
-  console.log(`총 ${items.length}건 파싱 완료 (원문 제목 매핑: ${mappedCount}/${items.length}건)`);
 
-  const blocks = buildBlocks(latest.date, items);
+  // 애매한 후보 추출 (수집했지만 제외한 것 중 다시 볼 조건이 있는 행)
+  const candidates = parseAmbiguousCandidates(content);
+  console.log(
+    `메인 ${items.length}건 (원문 매핑 ${mappedCount}/${items.length}) + 애매 후보 ${candidates.length}건`,
+  );
+
+  const mainBlocks = buildBlocks(latest.date, items);
+  const candidateBlocks = buildCandidateBlocks(candidates, titleToUrl);
+
+  // 액션 블록을 후보 블록 뒤로 옮긴다
+  const actionsBlockIdx = mainBlocks.findIndex(b => b.type === 'actions');
+  const blocks = actionsBlockIdx >= 0
+    ? [
+        ...mainBlocks.slice(0, actionsBlockIdx),
+        ...candidateBlocks,
+        ...mainBlocks.slice(actionsBlockIdx),
+      ]
+    : [...mainBlocks, ...candidateBlocks];
+
   const result = await slackPost({
     channel: SLACK_MANAGER_CHANNEL,
     blocks,
-    text: `📋 매거진 후보 shortlist — ${latest.date} (${items.length}건)`,
+    text: `📋 매거진 후보 shortlist — ${latest.date} (메인 ${items.length}건 + 후보 ${candidates.length}건)`,
   });
 
   console.log(`Slack 메시지 전송 완료: ${result.ts}`);
