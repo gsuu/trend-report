@@ -208,32 +208,44 @@ async function handleConfirm(payload) {
   }
 
   const repo = process.env.GITHUB_ARCHIVE_REPOSITORY;
-  const token = process.env.GITHUB_ARCHIVE_TOKEN;
-  const dispatchRes = await fetch(
-    `https://api.github.com/repos/${repo}/actions/workflows/slack-shortlist-update.yml/dispatches`,
-    {
-      method: 'POST',
-      headers: {
-        Authorization: `token ${token}`,
-        Accept: 'application/vnd.github+json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        ref: 'main',
-        inputs: {
-          date,
-          excluded_items: excluded.join(','),
-          added_items: added.length > 0 ? JSON.stringify(added) : '[]',
-          moved_items: moved.length > 0 ? JSON.stringify(moved) : '[]',
-        },
-      }),
+  const token = process.env.GITHUB_DISPATCH_TOKEN || process.env.GITHUB_ARCHIVE_TOKEN;
+  const tokenSource = process.env.GITHUB_DISPATCH_TOKEN ? 'GITHUB_DISPATCH_TOKEN' : 'GITHUB_ARCHIVE_TOKEN';
+  const dispatchUrl = `https://api.github.com/repos/${repo}/actions/workflows/slack-shortlist-update.yml/dispatches`;
+
+  console.log(`[slack-interaction] dispatch → ${dispatchUrl} (token=${tokenSource}, repo=${repo})`);
+
+  const dispatchRes = await fetch(dispatchUrl, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      'Content-Type': 'application/json',
+      'User-Agent': 'cttd-magazine-slack-bot',
     },
-  );
+    body: JSON.stringify({
+      ref: 'main',
+      inputs: {
+        date,
+        excluded_items: excluded.join(','),
+        added_items: added.length > 0 ? JSON.stringify(added) : '[]',
+        moved_items: moved.length > 0 ? JSON.stringify(moved) : '[]',
+      },
+    }),
+  });
 
   const ok = dispatchRes.status === 204;
+  let errBody = '';
+  if (!ok) {
+    try { errBody = await dispatchRes.text(); } catch {}
+    console.error(`[slack-interaction] dispatch failed: HTTP ${dispatchRes.status}\n${errBody}`);
+  }
+
   const statusText = ok
     ? `✅ *확정 완료* | 제외 *${excluded.length}건* | 이동 *${moved.length}건* | 추가 요청 *${added.length}건*\n반영 중입니다 — 잠시 후 shortlist가 업데이트됩니다.`
-    : `⚠️ 확정 요청은 받았지만 워크플로 트리거에 실패했습니다 (HTTP ${dispatchRes.status}).\n수동으로 \`slack-shortlist-update.yml\`을 실행하세요.`;
+    : `⚠️ 확정 요청은 받았지만 워크플로 트리거에 실패했습니다 (HTTP ${dispatchRes.status}).\n` +
+      `\`\`\`\nrepo:  ${repo || '(미설정)'}\ntoken: ${tokenSource}\n${errBody || '(응답 본문 없음)'}\n\`\`\`\n` +
+      `수동으로 \`slack-shortlist-update.yml\`을 실행하세요.`;
 
   const finalBlocks = [
     ...payload.message.blocks.filter(b => b.type !== 'actions'),
