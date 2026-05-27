@@ -7,6 +7,10 @@ on:
     - cron: '0 1 * * 1'
   workflow_dispatch:
 
+env:
+  # GitHub Actions JS 런타임을 Node.js 24로 강제 (2026-06 이후 deprecated 대비)
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   send-shortlist:
     runs-on: ubuntu-latest
