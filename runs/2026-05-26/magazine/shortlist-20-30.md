@@ -70,7 +70,7 @@
   4. 리뉴얼 후 사용자 수가 약 1,500% 이상 증가했다고 명시.
 - **점검 질문**: 우리 서비스 메인 IA가 내부 업무 분류를 따르고 있나, 고객이 처음 열었을 때 보는 맥락을 따르고 있나?
 
-### 5. [Design / seo_geo / UIUX·웹기획자·웹DEV] 검색엔진은 우리 사이트를 어떻게 발견할까?
+### 5. [DEV / seo_geo / UIUX·웹기획자·웹DEV] 검색엔진은 우리 사이트를 어떻게 발견할까?
 - **우선순위**: P0 · design_dev_reference
 - **최종 기준 원문**: <https://pxdstory.tistory.com/1899>
 - **소분류**: 없음 (SEO+GEO 통합 가이드)
@@ -124,18 +124,6 @@
   5. Settings > Planning > Issue fields에서 관리, 4개 기본 필드 자동 포함.
 - **점검 질문**: 우리 조직 이슈 메타데이터 표준이 리포마다 다른 라벨로 흩어져 있지 않은가, Org 레벨로 통일할 때 자동화 스크립트는 어디서 끊기나?
 
-### 9. [DEV / ai_sdk / 웹DEV] Chat SDK now includes AI SDK tools
-- **우선순위**: P0 · design_dev_reference
-- **최종 기준 원문**: <https://vercel.com/changelog/chat-sdk-now-includes-ai-sdk-tools>
-- **소분류**: 운영도구 (챗 인터페이스 도구 권한 모델)
-- **이미지**: (썸네일 없음 — 글쓰기 단계에서 Vercel OG 이미지)
-- **핵심 사실**
-  1. 새로운 `chat/ai` 서브패스로 AI SDK 도구 노출, `createChatTools(chat)` 한 줄로 read/write 액션을 에이전트에 연결.
-  2. write 작업은 `requireApproval` 옵션으로 기본 승인 게이팅.
-  3. reader·messenger·moderator 3개 프리셋으로 최소권한 원칙 적용, 선택된 프리셋에 따라 도구 lazy 생성.
-  4. `toAiMessages` 함수와 관련 타입이 `chat`에서 `chat/ai`로 이전, 기존 export는 deprecated.
-- **점검 질문**: 우리 챗 인터페이스의 도구 호출이 read와 write를 같은 권한으로 굴리고 있지 않은가, write에 승인 게이팅이 기본인가?
-
 ### 10. [DEV / agents_platform / 웹DEV] Introducing Claude for Small Business
 - **우선순위**: P1 · design_dev_reference
 - **최종 기준 원문**: <https://www.anthropic.com/news/claude-for-small-business>
@@ -174,18 +162,6 @@
   5. Figma 라운드트립·디자인 토큰·코드 컴포넌트 미지원으로 엔지니어링 핸드오프는 수동 재작업 필요.
 - **점검 질문**: AI로 만든 시안을 우리 디자인 토큰·컴포넌트에 어떻게 다시 묶을 것인가, 핸드오프의 수동 재작업 비용은 누가 진다?
 
-### 13. [DEV / ai_sdk / 웹DEV] Vercel AI Gateway plugin for WordPress
-- **우선순위**: P1 · design_dev_reference
-- **최종 기준 원문**: <https://vercel.com/changelog/vercel-ai-gateway-plugin-for-wordpress>
-- **소분류**: 운영도구 (CMS AI 통합)
-- **이미지**: (썸네일 없음)
-- **핵심 사실**
-  1. Anthropic·Google·OpenAI·xAI·DeepSeek·MiniMax·Moonshot AI 등 40+ 프로바이더, 수백 개 모델에 단일 API 키로 접근.
-  2. WordPress AI Client 커넥터로 동작하며 WordPress 7.0 이상 필요.
-  3. Settings > Connectors에서 단일 AI Gateway 자격증명 관리.
-  4. 텍스트·구조화 JSON·이미지·비디오 멀티모달 생성 지원, 프로바이더 장애 시 자동 폴백.
-- **점검 질문**: CMS 운영팀의 콘텐츠 자동화에서 프로바이더 장애 폴백이 단일 키 안에서 처리되는가?
-
 ### 14. [DEV / github_workflow / 웹DEV] Easily apply Copilot code review feedback with Copilot cloud agent
 - **우선순위**: P1 · design_dev_reference
 - **최종 기준 원문**: <https://github.blog/changelog/2026-05-19-easily-apply-copilot-code-review-feedback-with-copilot-cloud-agent>
@@ -198,34 +174,6 @@
   4. "Fix batch with Copilot" 버튼이 "Implement all suggestions"를 대체, 여러 리뷰 코멘트 일괄 처리.
   5. Copilot 클라우드 에이전트와 통합되어 피드백 처리 효율화.
 - **점검 질문**: 우리 PR 리뷰 흐름에서 AI 제안을 일괄 적용할 때, 어떤 모델로 어떤 추가 지시를 줄지 누가 게이팅하는가?
-
-### 15. [DEV / mcp / 웹DEV] Nuxt MCP Toolkit now supports MCP apps
-- **우선순위**: P1 · design_dev_reference
-- **최종 기준 원문**: <https://vercel.com/changelog/nuxt-mcp-toolkit-mcp-apps>
-- **소분류**: 운영도구 (MCP 앱 빌드)
-- **이미지**: (썸네일 없음)
-- **핵심 사실**
-  1. `defineMcpApp` 매크로로 name·description·inputSchema·handler를 지정해 MCP 앱 정의.
-  2. `useMcpApp` 컴포저블로 pre-hydrated 데이터 읽기·후속 프롬프트 트리거·다른 툴 호출 가능.
-  3. Claude·ChatGPT 등 MCP 클라이언트가 인터랙티브 HTML 응답을 인라인 렌더링.
-  4. Vue SFC를 빌드 타임에 self-contained HTML로 번들링해 MCP 엔드포인트에서 서빙.
-  5. 핸들러가 `structuredContent`를 반환해 풍부한 인터랙티브 데이터 전달.
-- **점검 질문**: MCP 클라이언트 안에서 우리 컴포넌트가 인라인 HTML로 렌더링된다면, 우리 디자인 토큰·접근성 규칙은 어디서 강제되나?
-
-### 16. [DEV / qa_automation / 웹DEV·UIUX] Announcing Quality Review Agent: Agentic QA on Every PR
-- **우선순위**: P1 · design_dev_reference
-- **최종 기준 원문**: <https://www.builder.io/blog/announcing-quality-review-agent>
-- **소분류**: 운영도구 (PR 자동 QA)
-- **이미지**: https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fe42e8676bf51402a8c72b41b666ed492?width=1200
-- **핵심 사실**
-  1. 에이전트가 실제 브라우저에서 제품을 로드해 클릭·타이핑·플로우 워크 수행.
-  2. 해피 패스·엣지 케이스(빈 상태·잘못된 입력·에러)·리그레션 3개 레이어 커버.
-  3. 지적된 버그마다 "Fix in Builder" 버튼 제공, 평문 영어 설명 후 동일 PR에 재반영.
-  4. 현재 GitHub PR 지원, GitLab·Bitbucket·Azure DevOps 지원 예정.
-  5. 에이전트 추론·네트워크 호출·콘솔 출력 3개 패널이 타임라인 동기화된 비디오로 제공.
-- **점검 질문**: PR 단계에서 자동 QA가 엣지 케이스(빈 상태·잘못된 입력·에러)까지 커버한다면, 우리 QA 인력의 검수 포인트는 어디로 옮겨가야 하나?
-
----
 
 ## 수집했지만 제외한 것
 
@@ -262,6 +210,10 @@
 | builder.io | Code is the Canvas: Bring the Whole Team to It | 비전 옹호 — 코드·API·구체 아키텍처 부재 |
 | github.com/shadcn-ui | shadcn@4.8.0 | 공식 릴리즈이나 패치 규모 얕음(마이너 2건·패치 1건) — 단독 발행에 두께 박약 |
 
+| builder.io | Announcing Quality Review Agent: Agentic QA on Every PR | 매니저 검토 제외 | — |
+| vercel.com | Nuxt MCP Toolkit now supports MCP apps | 매니저 검토 제외 | — |
+| vercel.com | Vercel AI Gateway plugin for WordPress | 매니저 검토 제외 | — |
+| vercel.com | Chat SDK now includes AI SDK tools | 매니저 검토 제외 | — |
 ### DEV (P2 보류, 2건)
 | 출처 | 제목 | 사유 | 다시 볼 조건 |
 |---|---|---|---|
