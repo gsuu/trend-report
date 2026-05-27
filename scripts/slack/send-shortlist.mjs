@@ -176,10 +176,15 @@ function buildBlocks(date, items) {
         action_id: 'confirm_shortlist',
         confirm: {
           title: { type: 'plain_text', text: '확정하시겠습니까?' },
-          text: { type: 'mrkdwn', text: '현재 ❌로 표시된 항목이 제외되고 shortlist 파일이 갱신됩니다.' },
+          text: { type: 'mrkdwn', text: '제외/이동/추가 표시가 모두 shortlist 파일에 반영됩니다.' },
           confirm: { type: 'plain_text', text: '확정' },
           deny: { type: 'plain_text', text: '취소' },
         },
+      },
+      {
+        type: 'button',
+        text: { type: 'plain_text', text: '📂 카테고리 이동' },
+        action_id: 'move_category',
       },
       {
         type: 'button',

@@ -6,6 +6,7 @@
  *   DATE            - 대상 날짜 (YYYY-MM-DD)
  *   EXCLUDED_ITEMS  - 제외할 항목 번호, 쉼표 구분 (예: "2,5")
  *   ADDED_ITEMS     - 추가 항목 JSON 배열 (예: '[{"url":"...","title":"...","category":"SERVICE"}]')
+ *   MOVED_ITEMS     - 카테고리 이동 JSON 배열 (예: '[{"num":5,"to":"DEV"}]')
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -13,6 +14,7 @@ import path from 'node:path';
 const DATE = process.env.DATE;
 const EXCLUDED_ITEMS = process.env.EXCLUDED_ITEMS || '';
 const ADDED_ITEMS_RAW = process.env.ADDED_ITEMS || '[]';
+const MOVED_ITEMS_RAW = process.env.MOVED_ITEMS || '[]';
 
 if (!DATE) {
   console.error('DATE 환경변수가 필요합니다.');
@@ -65,7 +67,14 @@ async function main() {
     console.warn('ADDED_ITEMS 파싱 실패, 추가 항목 없음');
   }
 
-  if (excludedNums.length === 0 && addedItems.length === 0) {
+  let movedItems = [];
+  try {
+    movedItems = JSON.parse(MOVED_ITEMS_RAW);
+  } catch {
+    console.warn('MOVED_ITEMS 파싱 실패, 이동 항목 없음');
+  }
+
+  if (excludedNums.length === 0 && addedItems.length === 0 && movedItems.length === 0) {
     console.log('변경 사항 없음.');
     return;
   }
@@ -73,6 +82,11 @@ async function main() {
   if (excludedNums.length > 0) {
     content = moveToExcluded(content, excludedNums);
     console.log(`제외 처리: ${excludedNums.join(', ')}번 항목`);
+  }
+
+  if (movedItems.length > 0) {
+    content = applyCategoryMoves(content, movedItems);
+    console.log(`카테고리 이동: ${movedItems.length}건`);
   }
 
   if (addedItems.length > 0) {
@@ -155,6 +169,41 @@ function moveToExcluded(content, excludedNums) {
   }
 
   return result;
+}
+
+// 카테고리 이동: 헤더의 [Category / ...] 첫 토큰만 새 카테고리로 교체.
+// 항목 자체의 마크다운 위치는 유지(번호도 그대로) — 슬랙 메시지의 순서와도
+// 정합성 유지. 단지 메타 라벨이 바뀌고 글쓰기 단계에서 새 카테고리 룰을 따른다.
+function applyCategoryMoves(content, movedItems) {
+  let result = content;
+  for (const { num, to } of movedItems) {
+    const target = String(to).trim().toUpperCase();
+    if (!['SERVICE', 'DESIGN', 'DEV'].includes(target)) {
+      console.warn(`이동 대상 카테고리 무효: ${to}, ${num}번 스킵`);
+      continue;
+    }
+    // 헤더: ### N. [CategoryName / sub / tags] Title
+    //  prefix = "### N. ["
+    //  oldCat = "Service" (혹은 "Design", "DEV")
+    //  rest   = " / sub / tags] " (선행 공백·슬래시·닫는 괄호 포함)
+    //  title  = "..."
+    const headerRe = new RegExp(`^(### ${num}\\. \\[)([A-Za-z]+)(\\s*\\/[^\\]]+\\] )(.+)$`, 'm');
+    const m = headerRe.exec(result);
+    if (!m) {
+      console.warn(`${num}번 항목 헤더를 찾을 수 없습니다.`);
+      continue;
+    }
+    const [whole, prefix, , rest, title] = m;
+    const newHeader = `${prefix}${capitalize(target)}${rest}${title}`;
+    result = result.slice(0, m.index) + newHeader + result.slice(m.index + whole.length);
+  }
+  return result;
+}
+
+function capitalize(s) {
+  // SERVICE → Service, DESIGN → Design, DEV → DEV (DEV는 대문자 유지)
+  if (s === 'DEV') return 'DEV';
+  return s.charAt(0) + s.slice(1).toLowerCase();
 }
 
 function appendManagerAdded(content, addedItems) {

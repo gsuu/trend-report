@@ -116,6 +116,8 @@ export default async function handler(req, res) {
         await handleConfirm(payload);
       } else if (action.action_id === 'add_item') {
         await handleOpenAddModal(payload);
+      } else if (action.action_id === 'move_category') {
+        await handleOpenMoveModal(payload);
       }
     } catch (err) {
       console.error(`[slack-interaction] handler ${action.action_id} failed:`, err);
@@ -125,6 +127,11 @@ export default async function handler(req, res) {
 
   if (payload.type === 'view_submission' && payload.view?.callback_id === 'add_item_modal') {
     await handleAddSubmission(payload);
+    return res.status(200).json({ response_action: 'clear' });
+  }
+
+  if (payload.type === 'view_submission' && payload.view?.callback_id === 'move_category_modal') {
+    await handleMoveSubmission(payload);
     return res.status(200).json({ response_action: 'clear' });
   }
 
@@ -166,6 +173,7 @@ async function handleToggle(payload, action) {
 async function handleConfirm(payload) {
   const excluded = [];
   const added = [];
+  const moved = [];
   let date = '';
 
   for (const block of payload.message.blocks) {
@@ -185,6 +193,12 @@ async function handleConfirm(payload) {
           category: catM?.[1] ?? '',
           title: titleM?.[1] ?? '',
         });
+      }
+
+      // 카테고리 이동 표식 `[→ DEV]` 가 있으면 수집 (제외되지 않은 항목만)
+      if (state !== 'exclude' && !isManagerAdded) {
+        const moveM = text.match(/\[→\s*(SERVICE|DESIGN|DEV)\]/);
+        if (moveM) moved.push({ num: parseInt(num, 10), to: moveM[1] });
       }
     }
     if (block.type === 'context') {
@@ -210,6 +224,7 @@ async function handleConfirm(payload) {
           date,
           excluded_items: excluded.join(','),
           added_items: added.length > 0 ? JSON.stringify(added) : '[]',
+          moved_items: moved.length > 0 ? JSON.stringify(moved) : '[]',
         },
       }),
     },
@@ -217,7 +232,7 @@ async function handleConfirm(payload) {
 
   const ok = dispatchRes.status === 204;
   const statusText = ok
-    ? `✅ *확정 완료* | 제외 *${excluded.length}건* | 추가 요청 *${added.length}건*\n반영 중입니다 — 잠시 후 shortlist가 업데이트됩니다.`
+    ? `✅ *확정 완료* | 제외 *${excluded.length}건* | 이동 *${moved.length}건* | 추가 요청 *${added.length}건*\n반영 중입니다 — 잠시 후 shortlist가 업데이트됩니다.`
     : `⚠️ 확정 요청은 받았지만 워크플로 트리거에 실패했습니다 (HTTP ${dispatchRes.status}).\n수동으로 \`slack-shortlist-update.yml\`을 실행하세요.`;
 
   const finalBlocks = [
@@ -293,6 +308,104 @@ async function handleOpenAddModal(payload) {
       ],
     },
   });
+}
+
+async function handleOpenMoveModal(payload) {
+  await slackApi('views.open', {
+    trigger_id: payload.trigger_id,
+    view: {
+      type: 'modal',
+      callback_id: 'move_category_modal',
+      private_metadata: JSON.stringify({
+        channel: payload.container.channel_id,
+        message_ts: payload.message.ts,
+      }),
+      title: { type: 'plain_text', text: '카테고리 이동' },
+      submit: { type: 'plain_text', text: '이동' },
+      close: { type: 'plain_text', text: '취소' },
+      blocks: [
+        {
+          type: 'input',
+          block_id: 'nums_block',
+          label: { type: 'plain_text', text: '이동할 항목 번호 (쉼표 구분)' },
+          element: {
+            type: 'plain_text_input',
+            action_id: 'nums',
+            placeholder: { type: 'plain_text', text: '예: 5, 8' },
+          },
+        },
+        {
+          type: 'input',
+          block_id: 'target_block',
+          label: { type: 'plain_text', text: '이동할 카테고리' },
+          element: {
+            type: 'static_select',
+            action_id: 'target',
+            placeholder: { type: 'plain_text', text: '선택' },
+            options: [
+              { text: { type: 'plain_text', text: 'SERVICE' }, value: 'SERVICE' },
+              { text: { type: 'plain_text', text: 'DESIGN' }, value: 'DESIGN' },
+              { text: { type: 'plain_text', text: 'DEV' }, value: 'DEV' },
+            ],
+          },
+        },
+        {
+          type: 'context',
+          elements: [{
+            type: 'mrkdwn',
+            text: '여러 항목을 한 번에 이동 가능. 같은 카테고리로 다시 이동하면 표식이 제거됩니다.',
+          }],
+        },
+      ],
+    },
+  });
+}
+
+async function handleMoveSubmission(payload) {
+  const vals = payload.view.state.values;
+  const numsRaw = vals.nums_block?.nums?.value ?? '';
+  const target = vals.target_block?.target?.selected_option?.value ?? '';
+  const { channel, message_ts } = JSON.parse(payload.view.private_metadata);
+
+  const nums = numsRaw
+    .split(/[,\s]+/)
+    .map(s => parseInt(s.replace(/[^\d]/g, ''), 10))
+    .filter(n => !isNaN(n));
+  if (nums.length === 0 || !target) return;
+  const numSet = new Set(nums.map(String));
+
+  // 현재 메시지 블록 조회 (channels:history 스코프 필요)
+  const histRes = await fetch(
+    `https://slack.com/api/conversations.history?channel=${channel}&latest=${message_ts}&limit=1&inclusive=true`,
+    { headers: { Authorization: `Bearer ${process.env.SLACK_BOT_TOKEN}` } },
+  );
+  const histData = await histRes.json();
+  const currentBlocks = histData.messages?.[0]?.blocks ?? [];
+
+  const updatedBlocks = currentBlocks.map(block => {
+    if (block.type !== 'section' || block.accessory?.action_id !== 'toggle_item') return block;
+    const [num] = (block.accessory.value ?? '').split(':');
+    if (!numSet.has(num)) return block;
+
+    // 텍스트에서 기존 `[→ X]` 토큰 제거
+    let text = (block.text?.text ?? '').replace(/\s*\[→\s*(?:SERVICE|DESIGN|DEV)\]/g, '');
+
+    // 현재 항목이 이미 target 카테고리에 있는지 확인 — 있다면 표식만 제거하고 끝
+    // (블록의 상위 컨텍스트에서 카테고리를 알 수 없으므로, 같은 target으로 두 번 누르면
+    //  표식이 토글되도록 구현)
+    const wasInTarget = (block.text?.text ?? '').includes(`[→ ${target}]`);
+    if (!wasInTarget) {
+      // 제목 뒤 (원문 보기 줄 앞)에 토큰 삽입
+      const newlineIdx = text.indexOf('\n');
+      text = newlineIdx >= 0
+        ? `${text.slice(0, newlineIdx)} \`[→ ${target}]\`${text.slice(newlineIdx)}`
+        : `${text} \`[→ ${target}]\``;
+    }
+
+    return { ...block, text: { ...block.text, text } };
+  });
+
+  await slackApi('chat.update', { channel, ts: message_ts, blocks: updatedBlocks });
 }
 
 async function handleAddSubmission(payload) {

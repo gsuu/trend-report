@@ -16,6 +16,10 @@ on:
         description: '추가 항목 JSON 배열 (예: [{"url":"...","title":"...","category":"SERVICE"}])'
         required: false
         default: '[]'
+      moved_items:
+        description: '카테고리 이동 JSON 배열 (예: [{"num":5,"to":"DEV"}])'
+        required: false
+        default: '[]'
 
 env:
   # GitHub Actions JS 런타임을 Node.js 24로 강제 (2026-06 이후 deprecated 대비)
@@ -42,6 +46,7 @@ jobs:
           DATE: ${{ inputs.date }}
           EXCLUDED_ITEMS: ${{ inputs.excluded_items }}
           ADDED_ITEMS: ${{ inputs.added_items }}
+          MOVED_ITEMS: ${{ inputs.moved_items }}
         run: node scripts/slack/update-shortlist.mjs
 
       - name: Commit changes
