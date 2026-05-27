@@ -32,18 +32,23 @@ async function getRawBody(req) {
 }
 
 function verifySignature(secret, timestamp, body, sig) {
-  if (!secret || !timestamp || !sig) return false;
+  if (!secret) return { ok: false, reason: 'SLACK_SIGNING_SECRET env var is missing on Vercel' };
+  if (!timestamp) return { ok: false, reason: 'missing x-slack-request-timestamp header' };
+  if (!sig) return { ok: false, reason: 'missing x-slack-signature header' };
   const ageSec = Math.floor(Date.now() / 1000) - Number(timestamp);
-  if (ageSec > 300) return false;
+  if (ageSec > 300) return { ok: false, reason: `request timestamp too old (${ageSec}s)` };
   const hmac = crypto
     .createHmac('sha256', secret)
     .update(`v0:${timestamp}:${body}`)
     .digest('hex');
   const expected = `v0=${hmac}`;
   try {
-    return crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(expected));
+    const match = crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(expected));
+    return match
+      ? { ok: true }
+      : { ok: false, reason: 'signature mismatch — check SLACK_SIGNING_SECRET value (whitespace / quotes / wrong app)' };
   } catch {
-    return false;
+    return { ok: false, reason: 'signature buffer length mismatch' };
   }
 }
 
@@ -81,8 +86,10 @@ export default async function handler(req, res) {
   // Slack signature verification
   const ts = req.headers['x-slack-request-timestamp'];
   const sig = req.headers['x-slack-signature'];
-  if (!verifySignature(process.env.SLACK_SIGNING_SECRET, ts, rawBody, sig)) {
-    return res.status(401).end('Unauthorized');
+  const verification = verifySignature(process.env.SLACK_SIGNING_SECRET, ts, rawBody, sig);
+  if (!verification.ok) {
+    console.error('[slack-interaction] signature verification failed:', verification.reason);
+    return res.status(401).end(`Unauthorized: ${verification.reason}`);
   }
 
   // Slack interactions: URL-encoded with "payload" key
@@ -101,12 +108,17 @@ export default async function handler(req, res) {
     const action = payload.actions?.[0];
     if (!action) return res.status(200).end();
 
-    if (action.action_id === 'toggle_item') {
-      await handleToggle(payload, action);
-    } else if (action.action_id === 'confirm_shortlist') {
-      await handleConfirm(payload);
-    } else if (action.action_id === 'add_item') {
-      await handleOpenAddModal(payload);
+    console.log(`[slack-interaction] block_actions: ${action.action_id}, value=${action.value ?? '-'}`);
+    try {
+      if (action.action_id === 'toggle_item') {
+        await handleToggle(payload, action);
+      } else if (action.action_id === 'confirm_shortlist') {
+        await handleConfirm(payload);
+      } else if (action.action_id === 'add_item') {
+        await handleOpenAddModal(payload);
+      }
+    } catch (err) {
+      console.error(`[slack-interaction] handler ${action.action_id} failed:`, err);
     }
     return res.status(200).end();
   }
