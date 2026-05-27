@@ -1,0 +1,1857 @@
+[
+  {
+    "title": "유휴 Inference GPU Pool을 이용한 GPU Job 스케줄링",
+    "link": "https://news.hada.io/topic?id=29904",
+    "pubDate": "2026-05-26T23:37:43.000Z",
+    "content": "유휴 Inference GPU Pool을 이용한 GPU job 스케줄링: LG AI연구원의 인프라 효율화 사례 LG AI연구원 Platform&Infra Team이 공개한 이번 글은 대규모 언어 모델(LLM) 서비스 운영 과정에서 발생하는 유휴 GPU 자원을 어떻게 연구·실험 작업에 재활용했는지를 다룹니다. AI 서비스 운영 기업은 보통 트...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "사용자가 눈에 띄게 짜증을 내고 있다.",
+    "link": "https://news.hada.io/topic?id=29902",
+    "pubDate": "2026-05-26T21:51:01.000Z",
+    "content": "코딩 에이전트의 실패는 단순한 도구 오류보다 더 짜증스럽게 느껴지며, 이는 대화형 UX가 사람과 일하는 듯한 감각을 만들기 때문임 에이전트는 감정 없는 AI 비서라고 답하지만, 친근한 말투와 칭찬, 부드러운 반박으로 동료 같은 인상...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "React를 좋아하는 사람이 실제로 있긴 한가요?",
+    "link": "https://news.hada.io/topic?id=29900",
+    "pubDate": "2026-05-26T21:45:14.000Z",
+    "content": "React 및 React 계열 도구에 대한 비판 글을 모아 큐레이션한 자료 모음으로, 다양한 개발자·블로거의 글을 인용 형식으로 정리 성능 저하, 복잡도 증가, 하이드레이션 문제 등 React가 가진 구조적 한계를 지적하는 글이 다수 포함 React 중심의...",
+    "image": "",
+    "valueTags": [
+      "frontend_framework"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "노르웨이의 2페타바이트 Huawei 플래시 스토리지와 LLM 학습",
+    "link": "https://news.hada.io/topic?id=29899",
+    "pubDate": "2026-05-26T18:36:39.000Z",
+    "content": "노르웨이 국립도서관은 노르웨이어를 이해하는 주권(Sovereign) LLM 구축을 위해 2PB Huawei OceanStor Dorado 플래시 스토리지를 AI 학습 파이프라인에 투입함 상용 LLM 제공업체가 노르웨이어 로컬 모델을 만들지 않는 상황에서, 영어 중심 LLM은 지역 언어로 기록된 역사...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Uber COO, tokenmaxxing에 쓰는 돈을 정당화하기가 점점 어려워지고 있다고 말해",
+    "link": "https://news.hada.io/topic?id=29897",
+    "pubDate": "2026-05-26T16:14:07.000Z",
+    "content": "Uber의 COO는 AI 지출이 투입 비용만큼 성과를 내는지 정당화하기가 점점 어려워졌다고 봄 Uber의 CTO가 2026년 Claude Code 예산을 이미 다 썼다고 밝힌 뒤 내부 논의가 커짐 더 많은 토큰 사용량이 유용한 소비자 기능 증가로 비례해 이어진다는 연결고리는 아직 확인되지...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Show GN: Appbun",
+    "link": "https://news.hada.io/topic?id=29896",
+    "pubDate": "2026-05-26T16:03:30.000Z",
+    "content": "안녕하세요. 웹사이트를 데스크톱 앱처럼 감싸주는 작은 CLI 도구 Appbun을 만들었습니다. 평소 자주 쓰는 웹앱을 브라우저 탭 말고 별도 앱처럼 띄워두고 싶을 때가 있었어요. 비슷한 도구들도 있지만, 결과물이 블랙박스처럼 느껴지면 나중에 조금 고치고 싶을 때 불편하더라고요. 그래서 Appbun은 U",
+    "image": "",
+    "valueTags": [
+      "javascript_ts"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Ferrari Luce",
+    "link": "https://news.hada.io/topic?id=29894",
+    "pubDate": "2026-05-26T12:36:33.000Z",
+    "content": "Ferrari Luce는 Maranello에서 설계·개발·제조된 4도어 5인승 Ferrari로, 성능·몰입감·넓은 공간을 함께 목표로 함 전기 동력원, Ferrari 설계 엔진, 고급 구동계를 결합한 새 아키텍처가 사륜구동과 넓은 실내 공간을 제공함 LoveFrom의...",
+    "image": "",
+    "valueTags": [],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "[데브콘 + 하이파이브 발표자료 합본] AI 시대, 리더가 원하는 개발자란?",
+    "link": "https://news.hada.io/topic?id=29892",
+    "pubDate": "2026-05-26T11:34:28.000Z",
+    "content": "최근 컨퍼런스 두 곳에서 길지 않은 발표를 했습니다. 4월 23일: [잡코리아 데브콘] 5월 13일: [원티드 하이파이브] (우아한형제들 임동준님과 함께 발표) 두 컨퍼런스에서 비슷",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Show GN: M Note",
+    "link": "https://news.hada.io/topic?id=29891",
+    "pubDate": "2026-05-26T10:11:00.000Z",
+    "content": "제가 쓰려고 만든 맥용 데스크톱 마크다운 뷰어 겸 에디터입니다. Electron 베이스이고 Tiptap 컴포넌트를 React를 이용해 만들었습니다. 매일 쓰면서 계속 기능을 추가하고 있습니다. 계정도 필요없고, 그냥 다운받아 로클에서 사용하실 수 있습니다.",
+    "image": "",
+    "valueTags": [
+      "frontend_framework",
+      "design_system"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Ask GN: 최근 상용 AI 모델 중 어떤 모델을 메인으로 사용하시나요 ?",
+    "link": "https://news.hada.io/topic?id=29883",
+    "pubDate": "2026-05-26T02:08:22.000Z",
+    "content": "카카오에서 29,000원에 판매했던 GPT Pro의 만료가 대략 6주정도 남아서요 사용량은 엔트리 요금제보단 확실히 더 쓰는거 같은데 어떤 모델의 어떤 요금제를 구매할지 고민이 되네요 이전에는 엔트리 요금제로 여러 모델을 구매해 장단 비교가 잘 되었는데 최근에 GPT Pro에 빠져 다른 모델은 쳐",
+    "image": "",
+    "valueTags": [
+      "ai_coding",
+      "korean_dev"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "중국 딥시크, V4-Pro API 75% 영구 가격 인하 단행",
+    "link": "https://news.hada.io/topic?id=29882",
+    "pubDate": "2026-05-26T02:02:03.000Z",
+    "content": "중국 AI 스타트업 딥시크가 주력 AI 모델인 'V4-Pro'의 이용 가격을 75% 영구 인하하면서 글로벌 AI 가격 전쟁과 시장 변화를 예고하고 있습니다. 전문 번역 중국의 AI 스타트업 딥시크(DeepSeek)가 지금까지의 인공지능 경쟁 중 가장 대담한 가격 책정 조치를 단",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "나를 뒤처지게 두라",
+    "link": "https://news.hada.io/topic?id=29881",
+    "pubDate": "2026-05-26T01:44:50.000Z",
+    "content": "Android 개발은 2014년 Java 수업에서 알게 된 무료 강의와 첫 할 일 앱에서 시작됐고, 손안의 소프트웨어가 현실에 닿는 경험이 동력이 됨 10년의 커리어는 데이트 앱, 약물 접근성, 여행 지원처럼 사용자에게 실제 이익이 있는 앱을 유지보수하며 기술의 목적을 확인한 시간이었음...",
+    "image": "",
+    "valueTags": [
+      "accessibility"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "교황 Leo XIV, AI는 소수 권력자가 아니라 인류를 섬겨야 한다고 말하다",
+    "link": "https://news.hada.io/topic?id=29880",
+    "pubDate": "2026-05-26T01:41:50.000Z",
+    "content": "Magnifica Humanitas는 AI를 새로운 산업혁명으로 보며, 불평등 확대와 민주주의 약화, 인간다움 훼손 위험을 경고함 AI의 무장 해제는 군사뿐 아니라 경제적·인지적 경쟁 논리에서 벗어나, 기술이 인간을 지배하지 못하게 하는 방향을 뜻함 AI는 이미",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "영원한 Sloptember",
+    "link": "https://news.hada.io/topic?id=29879",
+    "pubDate": "2026-05-26T01:38:50.000Z",
+    "content": "AI 에이전트는 프로그래밍을 수행하기보다 프로그래밍의 분포를 흉내 내며, 깨진 출력은 점점 더 알아보기 어려워짐 tinygrad 일부 작성과 USB PCIe 칩 리버스에 써봤지만, 직접 했을 때 더 낫고 빨랐을 수 있다는 의심이 남음 에이전트는 초반...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "구글이 더 이상 예전 Google이 아닌 지금, 시도해 볼만한 대체 검색엔진들",
+    "link": "https://news.hada.io/topic?id=29878",
+    "pubDate": "2026-05-26T01:35:50.000Z",
+    "content": "Google 검색은 Google I/O 2026에서 대화형 AI 중심으로 재편됐고, AI mode와 AI Overview가 기본 검색 경험의 전면에 들어옴 AI Overview의 부정확한 답변 논란과 검색 독점 판결이 겹치며, 일부 사용자가 대체 검색엔진을 찾을 이유가 커짐 Kag...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "캘리포니아, 반발 이후 연령 확인법에서 Linux를 면제하는 방향으로 이동",
+    "link": "https://news.hada.io/topic?id=29877",
+    "pubDate": "2026-05-26T01:32:50.000Z",
+    "content": "California의 AB 1856은 Digital Age Assurance Act의 운영체제 연령 확인 의무에서 대부분의 오픈소스 운영체제를 제외하려는 개정안임 개정안은 사용자가 소프트웨어를 복사·재배포·수정할 수 있는 라이선스로 배포되는 운영체제와 앱을 적용 대상에서 빼도록 함...",
+    "image": "",
+    "valueTags": [],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "교황 레오 14세 성하의 회칙 Magnifica Humanitas",
+    "link": "https://news.hada.io/topic?id=29876",
+    "pubDate": "2026-05-26T01:32:22.000Z",
+    "content": "Magnifica Humanitas는 AI·디지털화·로보틱스가 인간 존엄과 공동선을 흔드는 전환기에서 바벨탑이 아니라 예루살렘을 재건하는 선택을 요구함 교회 사회교리는 Rerum Novarum 135주년을 계기로 노동, 공정 임금, 보조성, 연대, 재화의 보편적 목적을 오늘의 기술 ...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "한글 점자 변환 도구 braillify, 2024 개정 한국 점자 규정 100% 준수",
+    "link": "https://news.hada.io/topic?id=29875",
+    "pubDate": "2026-05-26T01:32:02.000Z",
+    "content": "braillify가 드디어 전체 테스트 100% 통과 물론 아직 완벽하다고 말하기는 어렵습니다 현실에는 언제나 edge case가 있고, 규정 예제 자체가 애매하거나 수정이 필",
+    "image": "",
+    "valueTags": [
+      "korean_dev"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Magnifica Humanitas",
+    "link": "https://news.hada.io/topic?id=29874",
+    "pubDate": "2026-05-26T01:29:50.000Z",
+    "content": "AI 시대의 핵심 선택은 기술 찬반이 아니라 바벨처럼 획일성과 지배를 세울지, 예루살렘처럼 공동 책임과 다양성 위에 재건할지에 달려 있음 교회의 사회교리는 고정된 원리집이 아니라 인간 존엄, 공동선, 보조성, 연대, 사회정의를 통해 디지털 전환과 인공지능을...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "CodeGraph",
+    "link": "https://news.hada.io/topic?id=29873",
+    "pubDate": "2026-05-26T00:31:02.000Z",
+    "content": "사전 인덱싱된 시맨틱 코드 지식 그래프로 Claude Code, Codex, Cursor 등의 코드 탐색을 가속화 평균 35% 저렴하고, 토큰을 59% 적게 사용하며, 49% 빠르고, 도구 호출을 70% 적게 함 기존 방식에서...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "병목은 \"조직\"에 있다",
+    "link": "https://news.hada.io/topic?id=29872",
+    "pubDate": "2026-05-26T00:23:02.000Z",
+    "content": "AI 코딩 도구 도입으로 코드 작성 속도는 빨라졌지만, 조직이 실제로 가치를 더 빠르게 전달하는지는 분명하지 않음 마이크로서비스 성공을 위한 기반인 엔지니어링 인에이블먼트, 가드레일, 자동화 테스트, 적극적 오너십, 가벼운 거버넌스가 AI...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "nb-cli",
+    "link": "https://news.hada.io/topic?id=29871",
+    "pubDate": "2026-05-26T00:20:01.000Z",
+    "content": "AI 코딩 에이전트가 Jupyter 노트북을 아티팩트로 다룰 수 있도록 설계된 실험적 오픈소스 CLI 도구로, Rust 기반으로 구현되어 빠르고 안정적인 노트북 조작을 지원 .ipynb JSON 구조가 자동화·LLM 처리에 적합하지 않다는 문제를 해결하기 위해, nbformat 사...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "AI를 사용해 더 나은 코드를 더 천천히 작성하기",
+    "link": "https://news.hada.io/topic?id=29870",
+    "pubDate": "2026-05-26T00:15:42.000Z",
+    "content": "AI 코딩은 저품질 코드를 빠르게 대량 생성하는 방식뿐 아니라, PR을 깊게 검토해 고품질 코드를 천천히 만드는 데도 활용 가능함 LLM 에이전트는 코드베이스에서 버그 탐지에 강하지만, 실제 난점은 발견한 항목의 우선순위 지정과 검증에 있음 여러 모델...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "글쓰기의 사회적 계약",
+    "link": "https://news.hada.io/topic?id=29868",
+    "pubDate": "2026-05-26T00:09:42.000Z",
+    "content": "LLM 글쓰기는 블로그, 소셜 미디어, 신문, 책, 맞춤법 검사와 초안 작성까지 퍼졌고, 반복되는 문체가 글을 균질한 슬롭처럼 보이게 만듦 독자는 글을 읽는 데 시간을 들이는 만큼 필자도 지적 노고를 들였다고 기대하며, LLM 사용은 결과물의 품질과 별개로 이 기...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Flatpak은 systemd에 의존하게 될 예정",
+    "link": "https://news.hada.io/topic?id=29864",
+    "pubDate": "2026-05-25T15:26:19.000Z",
+    "content": "Flatpak은 “모든 배포판용 앱 빌드”를 장점으로 내세워 왔지만, 다음 주요 버전에서 systemd 의존성이 생길 가능성이 커짐 Flatpak Next 또는 Flatpak 2.0은 기존 1.x의 수십 년 된 설계 한계를 넘기 위한 재작성에 가까우며, 아직 계획 단계에...",
+    "image": "",
+    "valueTags": [],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Claude는 당신의 아키텍트가 아니다. 그런 척하게 두지 말라",
+    "link": "https://news.hada.io/topic?id=29862",
+    "pubDate": "2026-05-25T14:51:51.000Z",
+    "content": "AI 에이전트의 아키텍처 제안은 유창하고 그럴듯하지만, 실제 판단이라기보다 훈련 데이터의 패턴을 조합한 응답에 가까움 Claude는 아이디어를 쉽게 긍정하고 설계를 확장하지만, 좋은 아키텍트에게 필요한 “아니오”와 “왜?”를 충분히 수행하지 못함",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Constraint Decay: 백엔드 코드 생성에서 LLM 에이전트의 취약성",
+    "link": "https://news.hada.io/topic?id=29861",
+    "pubDate": "2026-05-25T14:48:50.000Z",
+    "content": "LLM 에이전트는 느슨한 명세의 코드 생성에는 강하지만, 운영급 백엔드가 요구하는 API 계약·아키텍처·DB·ORM 제약 준수에는 아직 취약함 동일한 OpenAPI 명세로 기능 요구를 고정하고, 8개 웹 프레임워크의 80개 그린필드 과제와 20개 기능 구현 과제에 같은 동작...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Show GN: Ueditor",
+    "link": "https://news.hada.io/topic?id=29857",
+    "pubDate": "2026-05-25T12:23:54.000Z",
+    "content": "Windows용 텍스트 에디터 Ueditor를 만들고 있습니다. WinUI 3로 네이티브 UI를 만들고, 편집 영역은 WebView2 기반 커스텀 코어로 구현했습니다. 목표는 notepad++ 처럼 강력하지만 보다 단순하고 최근 트렌드에 맞게 git과 마크다운, AI기능을 탑재한 Windows용 작업 에디터입니다. 현재는 20",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "JS Crossword",
+    "link": "https://news.hada.io/topic?id=29856",
+    "pubDate": "2026-05-25T11:01:53.000Z",
+    "content": "JS Crossword는 답을 eval()로 실행한 결과가 단서가 되는 퍼즐로, 7은 3+4, [object Object]는 []+{}로 풀 수 있음 퍼즐은 잘 알려지지 않았거나 난해한 JavaScript 기능을 활용해, JavaScript...",
+    "image": "",
+    "valueTags": [
+      "javascript_ts"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "‘AI 워싱’: 기업들이 기술 중심으로 리브랜딩하려고 분주함",
+    "link": "https://news.hada.io/topic?id=29854",
+    "pubDate": "2026-05-25T08:55:04.000Z",
+    "content": "영국 기업들은 기술 유행에 올라타기 위해 평범한 자동화나 저기술 사업까지 인공지능 전문 기업처럼 포장하려 함 생성형 AI를 쓰지 않는 기업도 언론에서 AI 기업으로 보이길 원하며, 약한 연결에도 AI 라벨을 붙이려는 압력이 커짐 AI 워싱",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Show HN: Audiomass",
+    "link": "https://news.hada.io/topic?id=29851",
+    "pubDate": "2026-05-25T06:38:24.000Z",
+    "content": "AudioMass는 백엔드와 플러그인 없이 브라우저에서 실행되는 무료 오픈소스 오디오·파형 편집기임 브라우저 지원 오디오 파일을 불러와 자르기, 트리밍, 볼륨 변경, 페이드, 여러 효과 적용을 할 수 있음 컴퓨터·샘플·URL·새 녹음에서 파일을 가져오고, 로...",
+    "image": "",
+    "valueTags": [],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Greg Brockman 인터뷰: AI가 곧 폭발적으로 성장할 것! 앞으로 어떤 일이 벌어질까?",
+    "link": "https://news.hada.io/topic?id=29850",
+    "pubDate": "2026-05-25T01:43:33.000Z",
+    "content": "Greg Brockman은 OpenAI가 AGI 미션을 달성하려면 비영리 한계를 넘어 영리 법인과 대규모 컴퓨트를 확보해야 했다고 봄 OpenAI의 기술 전환점은 Dota의 PPO 확장, 언어 모델의 의미 학습, GPT-4 이후 AGI 기준 재검토로 이어짐 AI 개발은 이미 AI로 가속...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Flue",
+    "link": "https://news.hada.io/topic?id=29849",
+    "pubDate": "2026-05-25T01:01:02.000Z",
+    "content": "TypeScript 기반 에이전트 하네스 프레임워크로, Claude Code·Codex 같은 코딩 에이전트의 사용 경험을 100% 헤드리스·프로그래머블 방식으로 재구성 사용자가 구축한 에이전트가 클로드 코드를 사용하는 것처럼 자율적으로 문제를 해결하고 작업 완료",
+    "image": "",
+    "valueTags": [
+      "javascript_ts",
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Designing Generative UI in an Agent-Native World",
+    "link": "https://www.builder.io/blog/designing-generative-ui-in-an-agent-native-world",
+    "pubDate": "Wed, 27 May 2026 01:07:43 GMT",
+    "content": "Learn how to design generative UI for agent-native apps using elastic primitives, machine-readable design rules, and efficient code-first workflows today.",
+    "image": "https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/c53f6561dd5c4d6dac949cb6c553345b?width=1200",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "scraped": true,
+    "source": "Builder.io Blog",
+    "sourceUrl": "https://www.builder.io/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "Figma to Code",
+      "Visual Editor",
+      "AI"
+    ]
+  },
+  {
+    "title": "v0 Alternatives for 2026 — Builder.io",
+    "link": "https://www.builder.io/blog/v0-alternatives",
+    "pubDate": "Wed, 27 May 2026 01:07:43 GMT",
+    "content": "Explore the best v0 alternatives for 2026, from Bolt and Lovable to Builder, Cursor, and Claude Code, for prototyping and real-world repo workflows today.",
+    "image": "https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/49c1441053e6468e96e60dec9cf9bf96?width=1200",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "scraped": true,
+    "source": "Builder.io Blog",
+    "sourceUrl": "https://www.builder.io/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "Figma to Code",
+      "Visual Editor",
+      "AI"
+    ]
+  },
+  {
+    "title": "Setting Up a New Claude Code Project: The Complete Guide",
+    "link": "https://www.builder.io/blog/setting-up-claude-code-project",
+    "pubDate": "Wed, 27 May 2026 01:07:43 GMT",
+    "content": "Set up Claude Code the right way in 15 minutes. Covers installation, CLAUDE.md, MCP servers, skills and best practices from daily use.",
+    "image": "https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/a0d5183e11a44163ad6aa6d219f3bce1?width=1200",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "scraped": true,
+    "source": "Builder.io Blog",
+    "sourceUrl": "https://www.builder.io/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "Figma to Code",
+      "Visual Editor",
+      "AI"
+    ]
+  },
+  {
+    "title": "How 270 Developers, Designers, and PMs Went from PRD to Working App in 60 Minutes",
+    "link": "https://www.builder.io/blog/from-prd-to-working-app-in-60-minutes",
+    "pubDate": "Wed, 27 May 2026 01:07:43 GMT",
+    "content": "270 developers, designers, and PMs built a working app from a PRD in 60 minutes. Watch the recording or download the guide to see the full workflow.",
+    "image": "https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/a0c1c5e07e7948ae8b0c98562c951c55?width=1200",
+    "valueTags": [],
+    "scraped": true,
+    "source": "Builder.io Blog",
+    "sourceUrl": "https://www.builder.io/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "Figma to Code",
+      "Visual Editor",
+      "AI"
+    ]
+  },
+  {
+    "title": "AI Agent Authentication: Why OAuth Isn't Enough",
+    "link": "https://www.builder.io/blog/why-is-agent-auth-so-hard",
+    "pubDate": "Wed, 27 May 2026 01:07:43 GMT",
+    "content": "Why is AI agent authentication so hard? Learn where OAuth breaks for agents, and how token exchange, secure delegation, and audit trails help secure access.",
+    "image": "https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/8e159a888f2349d7b9d0308d44ae1875?width=1200",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "scraped": true,
+    "source": "Builder.io Blog",
+    "sourceUrl": "https://www.builder.io/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "Figma to Code",
+      "Visual Editor",
+      "AI"
+    ]
+  },
+  {
+    "title": "10 Best Windsurf Alternatives in 2026",
+    "link": "https://www.builder.io/blog/windsurf-alternatives",
+    "pubDate": "Wed, 27 May 2026 01:07:43 GMT",
+    "content": "Compare the 10 best Windsurf alternatives in 2026, including Cursor, Claude Code, Cline, and Builder 2.0, with pricing, MCP support, and key use cases.",
+    "image": "https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/e2c76148f4b245a58b59066c7caf2acf?width=1200",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "scraped": true,
+    "source": "Builder.io Blog",
+    "sourceUrl": "https://www.builder.io/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "Figma to Code",
+      "Visual Editor",
+      "AI"
+    ]
+  },
+  {
+    "title": "Claude Code Subagents: How to Create, Use, and Debug Them",
+    "link": "https://www.builder.io/blog/claude-code-subagents",
+    "pubDate": "Wed, 27 May 2026 01:07:43 GMT",
+    "content": "Learn how to create, use, and debug Claude Code subagents to isolate noisy tasks, reduce context bloat, and build reusable AI workflows more efficiently.",
+    "image": "https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/8fe72b8720ce4c548c8c2dae723ed8ba?width=1200",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "scraped": true,
+    "source": "Builder.io Blog",
+    "sourceUrl": "https://www.builder.io/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "Figma to Code",
+      "Visual Editor",
+      "AI"
+    ]
+  },
+  {
+    "title": "The Backlog Problem AI Didn't Solve",
+    "link": "https://www.builder.io/blog/the-backlog-problem-ai-didnt-solve",
+    "pubDate": "Wed, 27 May 2026 01:07:43 GMT",
+    "content": "AI sped up every step. The backlog didn't shrink. Here's the structural problem most teams are missing, and what actually fixes it.",
+    "image": "https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/ed60b8cc8e2b4a35bf87ccaa400830d6?width=1200",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "scraped": true,
+    "source": "Builder.io Blog",
+    "sourceUrl": "https://www.builder.io/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "Figma to Code",
+      "Visual Editor",
+      "AI"
+    ]
+  },
+  {
+    "title": "Claude Code Routines Tutorial: Schedule, API, and GitHub Triggers Explained",
+    "link": "https://www.builder.io/blog/claude-code-routines",
+    "pubDate": "Wed, 27 May 2026 01:07:43 GMT",
+    "content": "Claude Code Routines run Claude on autopilot using Anthropic's cloud. Learn to set up schedule, API, and GitHub triggers with copy-paste prompt templates.",
+    "image": "https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/274d758c42514607a2847d630e1bdb0b?width=1200",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "scraped": true,
+    "source": "Builder.io Blog",
+    "sourceUrl": "https://www.builder.io/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "Figma to Code",
+      "Visual Editor",
+      "AI"
+    ]
+  },
+  {
+    "title": "The New Path from Prototype to Production",
+    "link": "https://www.builder.io/blog/new-path-from-prototype-to-production",
+    "pubDate": "Wed, 27 May 2026 01:07:43 GMT",
+    "content": "A new workflow for product teams that moves work beyond engineering, with faster iteration, earlier validation, and collaboration from prototype to production.",
+    "image": "https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/cf83cf76faaa485f9d23c021a3f2f5c0?width=1200",
+    "valueTags": [],
+    "scraped": true,
+    "source": "Builder.io Blog",
+    "sourceUrl": "https://www.builder.io/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "Figma to Code",
+      "Visual Editor",
+      "AI"
+    ]
+  },
+  {
+    "title": "Claude Advisor API: Use Opus for 80% Less Money",
+    "link": "https://www.builder.io/blog/the-claude-advisor-pattern",
+    "pubDate": "Wed, 27 May 2026 01:07:43 GMT",
+    "content": "Learn how Claude Advisor API intelligently pairs Sonnet or Haiku with Opus in one call, boosting quality on hard tasks while cutting costs by up to 80%.",
+    "image": "https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/b9aa7fc89bff40eeaf0a220028327fc2?width=1200",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "scraped": true,
+    "source": "Builder.io Blog",
+    "sourceUrl": "https://www.builder.io/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "Figma to Code",
+      "Visual Editor",
+      "AI"
+    ]
+  },
+  {
+    "title": "Announcing Builder 2.0: Collaborative Coding with Claude and Codex",
+    "link": "https://www.builder.io/blog/builder-2-0",
+    "pubDate": "Wed, 27 May 2026 01:07:43 GMT",
+    "content": "AI coding tools are single-player. Builder 2.0 is the first collaborative AI platform where entire teams build with agents on production code.",
+    "image": "https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fbc65fc7e53d64a1d93b9988608cc93dc?width=1200",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "scraped": true,
+    "source": "Builder.io Blog",
+    "sourceUrl": "https://www.builder.io/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "Figma to Code",
+      "Visual Editor",
+      "AI"
+    ]
+  },
+  {
+    "title": "Copilot Memory has more controls for deletion, scope, and the Copilot CLI",
+    "link": "https://github.blog/changelog/2026-05-26-copilot-memory-has-more-controls-for-deletion-scope-and-the-copilot-cli",
+    "pubDate": "Tue, 26 May 2026 21:05:28 +0000",
+    "content": "Copilot Memory now includes improved memory deletion, adds a repository-level off switch, and brings further memory controls into the Copilot CLI. Copilot Memory is in public preview and available to… The post Copilot Memory has more controls for deletion, scope, and the Copilot CLI appeared first on The GitHub Blog.",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "ai_coding",
+    "topics": [
+      "GitHub",
+      "Copilot",
+      "Actions"
+    ]
+  },
+  {
+    "title": "GitHub Code Quality: Repository Enablement API",
+    "link": "https://github.blog/changelog/2026-05-26-github-code-quality-repository-enablement-api",
+    "pubDate": "Tue, 26 May 2026 20:35:06 +0000",
+    "content": "You can now programmatically enable and configure GitHub Code Quality on individual repositories using the new Repository Enablement API, available today in public preview. Two new endpoints are now available:… The post GitHub Code Quality: Repository Enablement API appeared first on The GitHub Blog.",
+    "image": "",
+    "valueTags": [],
+    "source": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "ai_coding",
+    "topics": [
+      "GitHub",
+      "Copilot",
+      "Actions"
+    ]
+  },
+  {
+    "title": "Target Copilot models to organizations with model rules",
+    "link": "https://github.blog/changelog/2026-05-26-target-copilot-models-to-organizations-with-model-rules",
+    "pubDate": "Tue, 26 May 2026 19:47:22 +0000",
+    "content": "Enterprise owners now have granular control over which GitHub Copilot models are available to each organization. With targeted model rules, you can allow specific models for specific organizations instead of… The post Target Copilot models to organizations with model rules appeared first on The GitHub Blog.",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "ai_coding",
+    "topics": [
+      "GitHub",
+      "Copilot",
+      "Actions"
+    ]
+  },
+  {
+    "title": "Dependabot version updates now support the sbt ecosystem",
+    "link": "https://github.blog/changelog/2026-05-26-dependabot-version-updates-now-support-the-sbt-ecosystem",
+    "pubDate": "Tue, 26 May 2026 16:10:46 +0000",
+    "content": "Dependabot now supports sbt. Add sbt as a package ecosystem in your dependabot.yml file. Dependabot will then monitor your build.sbt inputs and open pull requests when newer commits are available… The post Dependabot version updates now support the sbt ecosystem appeared first on The GitHub Blog.",
+    "image": "",
+    "valueTags": [
+      "performance"
+    ],
+    "source": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "ai_coding",
+    "topics": [
+      "GitHub",
+      "Copilot",
+      "Actions"
+    ]
+  },
+  {
+    "title": "Filter secret scanning approval requests by sort order and bypass status",
+    "link": "https://github.blog/changelog/2026-05-26-filter-secret-scanning-approval-requests-by-sort-order-and-bypass-status",
+    "pubDate": "Tue, 26 May 2026 16:01:21 +0000",
+    "content": "This week, we’re rolling out two improvements to our delegated workflows for secret scanning. What’s changing Sort bypass and dismissal requests in the UI: You can now choose between ascending… The post Filter secret scanning approval requests by sort order and bypass status appeared first on The GitHub Blog.",
+    "image": "",
+    "valueTags": [],
+    "source": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "ai_coding",
+    "topics": [
+      "GitHub",
+      "Copilot",
+      "Actions"
+    ]
+  },
+  {
+    "title": "GitHub Classroom sign-ups are no longer available",
+    "link": "https://github.blog/changelog/2026-05-26-github-classroom-sign-ups-are-no-longer-available",
+    "pubDate": "Tue, 26 May 2026 15:44:08 +0000",
+    "content": "Starting today, new sign-ups for GitHub Classroom are no longer available as we transition to partner solutions. If you already have a GitHub Classroom account or existing classrooms, you can… The post GitHub Classroom sign-ups are no longer available appeared first on The GitHub Blog.",
+    "image": "",
+    "valueTags": [],
+    "source": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "ai_coding",
+    "topics": [
+      "GitHub",
+      "Copilot",
+      "Actions"
+    ]
+  },
+  {
+    "title": "Code coverage on pull requests is now in public preview",
+    "link": "https://github.blog/changelog/2026-05-26-code-coverage-in-pull-requests-is-now-in-public-preview",
+    "pubDate": "Tue, 26 May 2026 08:51:59 +0000",
+    "content": "Code coverage metrics are now in public preview for all GitHub Code Quality users on github.com. You can now see an aggregate percent of code covered directly on pull requests,… The post Code coverage on pull requests is now in public preview appeared first on The GitHub Blog.",
+    "image": "",
+    "valueTags": [],
+    "source": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "ai_coding",
+    "topics": [
+      "GitHub",
+      "Copilot",
+      "Actions"
+    ]
+  },
+  {
+    "title": "GitHub Copilot for Eclipse is open source",
+    "link": "https://github.blog/changelog/2026-05-21-github-copilot-for-eclipse-is-open-source",
+    "pubDate": "Thu, 21 May 2026 23:50:38 +0000",
+    "content": "Following our previous updates, GitHub Copilot for Eclipse is open source, with the code available on GitHub under the MIT license. This marks an important milestone for GitHub Copilot in… The post GitHub Copilot for Eclipse is open source appeared first on The GitHub Blog.",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "ai_coding",
+    "topics": [
+      "GitHub",
+      "Copilot",
+      "Actions"
+    ]
+  },
+  {
+    "title": "Release Notes for Safari Technology Preview 244",
+    "link": "https://webkit.org/blog/17962/release-notes-for-safari-technology-preview-244/",
+    "pubDate": "Thu, 21 May 2026 23:00:26 +0000",
+    "content": "Safari Technology Preview Release 244 is now available for download for macOS Tahoe and macOS Sequoia.",
+    "image": "",
+    "valueTags": [
+      "web_platform"
+    ],
+    "source": "WebKit Blog",
+    "sourceUrl": "https://webkit.org/blog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "browser_release",
+    "topics": [
+      "Safari",
+      "WebKit",
+      "Web Standards",
+      "Browser Updates"
+    ]
+  },
+  {
+    "title": "Issue fields are now in public preview for all organizations",
+    "link": "https://github.blog/changelog/2026-05-21-issue-fields-are-now-in-public-preview-for-all-organizations",
+    "pubDate": "Thu, 21 May 2026 14:30:03 +0000",
+    "content": "Issue fields are now available in public preview to all GitHub organizations on github.com and GitHub Enterprise Cloud with data residency. When you define typed metadata like Priority, Effort, or… The post Issue fields are now in public preview for all organizations appeared first on The GitHub Blog.",
+    "image": "",
+    "valueTags": [],
+    "source": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "ai_coding",
+    "topics": [
+      "GitHub",
+      "Copilot",
+      "Actions"
+    ]
+  },
+  {
+    "title": "Staged publishing and new install-time controls for npm",
+    "link": "https://github.blog/changelog/2026-05-22-staged-publishing-and-new-install-time-controls-for-npm",
+    "pubDate": "Fri, 22 May 2026 18:27:12 +0000",
+    "content": "Today we’re shipping two updates focused on supply-chain security for npm: Staged publishing is generally available. New --allow-* install source flags (--allow-file, --allow-remote, --allow-directory) complement the existing --allow-git flag. Both… The post Staged publishing and new install-time controls for npm appeared first on The GitHub Blog.",
+    "image": "",
+    "valueTags": [],
+    "source": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "ai_coding",
+    "topics": [
+      "GitHub",
+      "Copilot",
+      "Actions"
+    ]
+  },
+  {
+    "title": "shadcn@4.8.1",
+    "link": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.1",
+    "pubDate": "2026-05-26T18:59:35.000Z",
+    "content": "Patch Changes #10779 df1752dfe092957f84aa467d2270436139e3ecc7 Thanks @shadcn! - add style rhea",
+    "image": "",
+    "valueTags": [],
+    "source": "shadcn/ui Releases",
+    "sourceUrl": "https://github.com/shadcn-ui/ui/releases",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "shadcn/ui",
+      "Component Library",
+      "AI Components"
+    ]
+  },
+  {
+    "title": "Sandbox persistence is now GA",
+    "link": "https://vercel.com/changelog/sandbox-persistence-is-now-ga",
+    "pubDate": "2026-05-26T00:01:00.000Z",
+    "content": "now automatically save and restore filesystem state between sessions. Persistence is on by default, meaning no snapshots to manage or state to track manually.Vercel Sandboxes Each sandbox has a durable, that acts as a unique reference in your project. You can create, retrieve, or resume a sandbox by name. Vercel spins sessions up and down automatically, without interrupting your workflow.customizable name When you call , persistence is enabled by default:Sandbox.create() Each automatic snapshot consumes , which is…",
+    "image": "",
+    "valueTags": [],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Vercel Domains now supports price sorting and availability filtering",
+    "link": "https://vercel.com/changelog/vercel-domains-now-supports-price-sorting-and-availability-filtering",
+    "pubDate": "2026-05-26T00:00:00.000Z",
+    "content": "Vercel Domains now supports price sorting and availability filtering. Price sorting shows lower cost domains first, so you can quickly find a domain that fits your budget. Availability filtering moves unavailable domains to the bottom of the search results, so you can focus on domains that you can actually purchase. Try it at .vercel.com/domains Read more",
+    "image": "",
+    "valueTags": [],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Firecrawl joins the Vercel Marketplace",
+    "link": "https://vercel.com/changelog/firecrawl-joins-the-vercel-marketplace",
+    "pubDate": "2026-05-26T00:00:00.000Z",
+    "content": "is now available on the , allowing Vercel teams to power AI agents and applications with structured web data without managing crawling infrastructure.FirecrawlVercel Marketplace This integration helps developers scrape websites into LLM-ready formats, search and retrieve full page content, and interact with dynamic pages for retrieval and agent workflows. Key capabilities include: Get started with on the Vercel Marketplace.Firecrawl Read more Scrape pages into markdown, HTML, structured data, or screenshots Search…",
+    "image": "",
+    "valueTags": [
+      "css_html",
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Microfrontends routing now applies to vc alias and branch domains",
+    "link": "https://vercel.com/changelog/microfrontends-routing-now-applies-to-vc-alias-and-branch-domains",
+    "pubDate": "2026-05-26T00:00:00.000Z",
+    "content": "This week we are gradually rolling out an update to routing for aliases and branch-assigned domains.Vercel Microfrontends Aliasing a Microfrontends URL with now preserves the full routing config from the source deployment. Previously, the new alias only inherited the . Update to the latest to pick up the change.Aliases inherit Microfrontends routing vc aliasVercel CLImicrofrontendsdeploymentId A now routes to that branch in every project in the Microfrontend that shares the branch name. Previously, the domain only…",
+    "image": "",
+    "valueTags": [],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "shadcn@4.8.0",
+    "link": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.0",
+    "pubDate": "2026-05-21T13:58:22.000Z",
+    "content": "Minor Changes #10715 51e3cfaf32faeff2589e5c74d81ffd109f509e93 Thanks @shadcn! - add shadcn registry validate command #10708 c8ab3801ecf97c0350ac0234a25e61f19ccaba62 Thanks @shadcn! - add include to registry.json Patch Changes #10567 1c4a53a37adeba36dbd5c07980c5bb6d295cea9e Thanks @shadcn! - fix failing version derivation test",
+    "image": "",
+    "valueTags": [],
+    "source": "shadcn/ui Releases",
+    "sourceUrl": "https://github.com/shadcn-ui/ui/releases",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "shadcn/ui",
+      "Component Library",
+      "AI Components"
+    ]
+  },
+  {
+    "title": "Pull anomaly alert details using the Vercel CLI",
+    "link": "https://vercel.com/changelog/pull-anomaly-alert-details-using-the-vercel-cli",
+    "pubDate": "2026-05-21T09:00:00.000Z",
+    "content": "You can now access anomaly alerts and their details directly through the .Vercel CLI With the command, you can list all alerts for a team or given project. For each alert, you can view the start time, the type of alert, and whether or not the alert is still active.vercel alerts With the option, the AI investigation results appear alongside each alert. You and your agent can act on alerts without leaving the terminal.--ai Available on .Observability Plus Learn more about in the .vercel alertsCLI documentation Read…",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Qwen 3.7 Max now available on Vercel AI Gateway",
+    "link": "https://vercel.com/changelog/qwen-3-7-max-now-available-on-vercel-ai-gateway",
+    "pubDate": "2026-05-21T07:00:00.000Z",
+    "content": "Qwen 3.7 Max from Alibaba is now available on . The model is designed as an agent foundation, with capabilities spanning coding, office workflow automation, and long-horizon autonomous execution.Vercel AI Gateway Qwen 3.7 Max shows improvements in frontend prototyping and complex multi-file engineering. The model supports office and productivity tasks through multi-agent orchestration and sustains coherent reasoning across long-horizon tool-calling sessions. To use Qwen 3.7 Max, set model to in the .alibaba/qwen-3…",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Configure weighted traffic splits for Vercel Flags from the Vercel CLI",
+    "link": "https://vercel.com/changelog/configure-weighted-traffic-splits-for-vercel-flags-from-the-vercel-cli",
+    "pubDate": "2026-05-21T00:00:00.000Z",
+    "content": "You can now configure weighted traffic splits for with the new command in the Vercel CLI. This allows you to send a percentage of traffic to one variant and the rest to another.Vercel Flagsvercel flags split Run the command interactively, or pass the environment, bucketing attribute, and variant weights as flags: Update to the latest version of the and read the to get started.Vercel CLIdocumentation Read more",
+    "image": "",
+    "valueTags": [
+      "accessibility"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Grok Build 0.1 now available on Vercel AI Gateway",
+    "link": "https://vercel.com/changelog/grok-build-0-1-now-available-on-vercel-ai-gateway",
+    "pubDate": "2026-05-20T07:00:00.000Z",
+    "content": "Grok Build 0.1 is now available on .Vercel AI Gateway This is a beta coding model trained for agentic coding, currently in early access, and powers the Grok Build CLI app. Reasoning effort is not configurable, and there is no non-reasoning mode. To use Grok Build 0.1, set model to in the .xai/grok-build-0.1AI SDK AI Gateway provides a unified API for calling models, tracking usage and cost, and configuring retries, failover, and performance optimizations for higher-than-provider uptime. It includes built-in , , su…",
+    "image": "",
+    "valueTags": [
+      "performance",
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "CSS vs. JavaScript • Josh W. Comeau",
+    "link": "https://www.joshwcomeau.com/animation/css-vs-javascript/",
+    "pubDate": "Wed, 27 May 2026 01:07:45 GMT",
+    "content": "There are a bunch of JavaScript animation libraries out there, and you might have wondered whether there’s a performance cost compared to traditional CSS transitions and keyframe animations. In this blog post, we’ll compare the same animation across several different strategies and see the differences firsthand. There’s some interesting nuance here!",
+    "image": "https://www.joshwcomeau.com/images/og-css-vs-javascript.png",
+    "valueTags": [
+      "css_html",
+      "javascript_ts",
+      "performance"
+    ],
+    "scraped": true,
+    "source": "Josh W. Comeau",
+    "sourceUrl": "https://www.joshwcomeau.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "React",
+      "CSS",
+      "Animation",
+      "Interaction",
+      "Frontend"
+    ]
+  },
+  {
+    "title": "Scroll-Driven Animations • Josh W. Comeau",
+    "link": "https://www.joshwcomeau.com/animation/scroll-driven-animations/",
+    "pubDate": "Wed, 27 May 2026 01:07:45 GMT",
+    "content": "The new Animation Timeline API allows us to create dynamic scroll animations without any JavaScript! It’s honestly a very lovely API, and in this blog post, we’ll explore some of the super cool things we can do with it.",
+    "image": "https://www.joshwcomeau.com/images/og-scroll-driven-animations.png",
+    "valueTags": [
+      "javascript_ts"
+    ],
+    "scraped": true,
+    "source": "Josh W. Comeau",
+    "sourceUrl": "https://www.joshwcomeau.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "React",
+      "CSS",
+      "Animation",
+      "Interaction",
+      "Frontend"
+    ]
+  },
+  {
+    "title": "Brand New Layouts with CSS Subgrid • Josh W. Comeau",
+    "link": "https://www.joshwcomeau.com/css/subgrid/",
+    "pubDate": "Wed, 27 May 2026 01:07:45 GMT",
+    "content": "Subgrid allows us to extend a grid template down through the DOM tree, so that deeply-nested elements can participate in the same grid layout. At first glance, I thought this would be a helpful convenience, but it turns out that it’s so much more. Subgrid unlocks exciting new layout possibilities, stuff we couldn’t do until now. ✨",
+    "image": "https://www.joshwcomeau.com/images/og-subgrid.jpg",
+    "valueTags": [
+      "css_html"
+    ],
+    "scraped": true,
+    "source": "Josh W. Comeau",
+    "sourceUrl": "https://www.joshwcomeau.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "React",
+      "CSS",
+      "Animation",
+      "Interaction",
+      "Frontend"
+    ]
+  },
+  {
+    "title": "Springs and Bounces in Native CSS • Josh W. Comeau",
+    "link": "https://www.joshwcomeau.com/animation/linear-timing-function/",
+    "pubDate": "Wed, 27 May 2026 01:07:45 GMT",
+    "content": "The “linear()” timing function is a game-changer; it allows us to model physics-based motion right in vanilla CSS! That said, there are some limitations and quirks to be aware of. I’ve been experimenting with this API for a while now, and in this post, I’ll share all of the tips and tricks I’ve learned for using it effectively. ✨",
+    "image": "https://www.joshwcomeau.com/images/og-linear-timing-function.png",
+    "valueTags": [
+      "css_html"
+    ],
+    "scraped": true,
+    "source": "Josh W. Comeau",
+    "sourceUrl": "https://www.joshwcomeau.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "React",
+      "CSS",
+      "Animation",
+      "Interaction",
+      "Frontend"
+    ]
+  },
+  {
+    "title": "Color Shifting in CSS • Josh W. Comeau",
+    "link": "https://www.joshwcomeau.com/animation/color-shifting/",
+    "pubDate": "Wed, 27 May 2026 01:07:45 GMT",
+    "content": "A little while ago, I was trying to animate an element’s background color, so that it cycled through the rainbow. Seems easy, but it turns out, browsers have a surprisingly big limitation when it comes to color processing! In this tutorial, we’ll dig into the issue, and I’ll share a couple of strategies you can use to work around this limitation.",
+    "image": "https://www.joshwcomeau.com/images/og-color-shifting.jpg",
+    "valueTags": [
+      "web_platform",
+      "css_html"
+    ],
+    "scraped": true,
+    "source": "Josh W. Comeau",
+    "sourceUrl": "https://www.joshwcomeau.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "React",
+      "CSS",
+      "Animation",
+      "Interaction",
+      "Frontend"
+    ]
+  },
+  {
+    "title": "CSS articles • Josh W. Comeau",
+    "link": "https://www.joshwcomeau.com/css/",
+    "pubDate": "Wed, 27 May 2026 01:07:45 GMT",
+    "content": "Friendly articles and tutorials for front-end web developers. ❤️",
+    "image": "https://www.joshwcomeau.com/opengraph-image.png?cac0cc658da9fd03",
+    "valueTags": [
+      "css_html"
+    ],
+    "scraped": true,
+    "source": "Josh W. Comeau",
+    "sourceUrl": "https://www.joshwcomeau.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "React",
+      "CSS",
+      "Animation",
+      "Interaction",
+      "Frontend"
+    ]
+  },
+  {
+    "title": "React articles • Josh W. Comeau",
+    "link": "https://www.joshwcomeau.com/react/",
+    "pubDate": "Wed, 27 May 2026 01:07:45 GMT",
+    "content": "Friendly articles and tutorials for front-end web developers. ❤️",
+    "image": "https://www.joshwcomeau.com/opengraph-image.png?cac0cc658da9fd03",
+    "valueTags": [
+      "frontend_framework"
+    ],
+    "scraped": true,
+    "source": "Josh W. Comeau",
+    "sourceUrl": "https://www.joshwcomeau.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "React",
+      "CSS",
+      "Animation",
+      "Interaction",
+      "Frontend"
+    ]
+  },
+  {
+    "title": "Animation articles • Josh W. Comeau",
+    "link": "https://www.joshwcomeau.com/animation/",
+    "pubDate": "Wed, 27 May 2026 01:07:45 GMT",
+    "content": "Friendly articles and tutorials for front-end web developers. ❤️",
+    "image": "https://www.joshwcomeau.com/opengraph-image.png?cac0cc658da9fd03",
+    "valueTags": [],
+    "scraped": true,
+    "source": "Josh W. Comeau",
+    "sourceUrl": "https://www.joshwcomeau.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "React",
+      "CSS",
+      "Animation",
+      "Interaction",
+      "Frontend"
+    ]
+  },
+  {
+    "title": "Stack Overflow: When We Stop Asking",
+    "link": "https://css-tricks.com/stack-overflow-when-we-stop-asking/",
+    "pubDate": "Wed, 20 May 2026 13:51:34 +0000",
+    "content": "It still hits like a ton of bricks to see the steep decline in Stack Overflow questions. What does that mean about learning in our industry? Stack Overflow: When We Stop Asking originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well.",
+    "image": "",
+    "valueTags": [
+      "css_html"
+    ],
+    "source": "CSS-Tricks",
+    "sourceUrl": "https://css-tricks.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "CSS",
+      "HTML",
+      "Frontend Techniques"
+    ]
+  },
+  {
+    "title": "Technical Writing in the AI Age",
+    "link": "https://css-tricks.com/technical-writing-in-the-ai-age/",
+    "pubDate": "Tue, 26 May 2026 13:49:28 +0000",
+    "content": "This isn’t totally about AI. It’s about technical writing in the age of AI. I have some thoughts on this and I hope it’s helpful to you humans reading. Technical Writing in the AI Age originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well.",
+    "image": "",
+    "valueTags": [
+      "css_html",
+      "ai_coding"
+    ],
+    "source": "CSS-Tricks",
+    "sourceUrl": "https://css-tricks.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "CSS",
+      "HTML",
+      "Frontend Techniques"
+    ]
+  },
+  {
+    "title": "npm and pnpm introduce staged publishing",
+    "link": "https://javascriptweekly.com/issues/787",
+    "pubDate": "Tue, 26 May 2026 00:00:00 +0000",
+    "content": "#​787 — May 26, 2026 Read on the Web JavaScript Weekly JS Crossword: All the Answers are JavaScript — This hand-crafted puzzle will seriously stretch your JavaScript knowledge. I’ve seen so many people on social media either cheering having finished it or cursing being stuck… Lyra Rebane 💡 I've put some (educational!) tips at the end of this issue. Expo UI Hits Stable: Native iOS & Android from One Import — From a single import, @expo/ui ships SwiftUI on iOS and Jetpack Compose on Android with the real platform c…",
+    "image": "",
+    "valueTags": [
+      "javascript_ts"
+    ],
+    "source": "JavaScript Weekly",
+    "sourceUrl": "https://javascriptweekly.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "newsletter_curation",
+    "topics": [
+      "JavaScript",
+      "Frontend Frameworks"
+    ]
+  },
+  {
+    "title": "Advanced Tree Counting: Mathematical Layouts With `sibling-index()` And `sibling-count()`",
+    "link": "https://smashingmagazine.com/2026/05/mathematical-layouts-sibling-index-sibling-count/",
+    "pubDate": "Thu, 21 May 2026 08:00:00 GMT",
+    "content": "Meet `sibling-index()` and `sibling-count()`. Staggered cascade effect in one line of CSS without `:nth-child()` rules or JS workarounds. Works for 5 items or 5,000.",
+    "image": "http://files.smashing.media/articles/mathematical-layouts-sibling-index-sibling-count/mathematical-layouts-sibling-index-sibling-count.jpg",
+    "valueTags": [
+      "css_html"
+    ],
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "Web Design",
+      "Frontend",
+      "UX",
+      "Accessibility"
+    ]
+  },
+  {
+    "title": "Maybe Don’t Rely on Google’s “Modern Web Guidance”",
+    "link": "https://adrianroselli.com/2026/05/maybe-dont-rely-on-googles-modern-web-guidance.html",
+    "pubDate": "Mon, 25 May 2026 14:08:02 +0000",
+    "content": "Just in time for Google I/O, the Chrome for Developers site announced Modern Web Guidance (MWG): Modern Web Guidance is a set of evergreen and expert-vetted skills that guide your AI coding agents across many common use cases to build modern web experiences that are accessible, performant, and secure. Build…",
+    "image": "",
+    "valueTags": [
+      "web_platform",
+      "ai_coding"
+    ],
+    "source": "Adrian Roselli",
+    "sourceUrl": "https://adrianroselli.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "accessibility",
+    "topics": [
+      "Accessibility",
+      "ARIA",
+      "WCAG"
+    ]
+  },
+  {
+    "title": "Cross-Document View Transitions: Scaling Across Hundreds of Elements",
+    "link": "https://css-tricks.com/cross-document-view-transitions-part-2/",
+    "pubDate": "Mon, 25 May 2026 13:46:54 +0000",
+    "content": "Every view-transition-name on a page must be unique. The problem is that every pseudo-element selector in your CSS targets a specific name, so your animation styles explode into an unmanageable wall of selectors. Cross-Document View Transitions: Scaling Across Hundreds of Elements originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well.",
+    "image": "",
+    "valueTags": [
+      "css_html"
+    ],
+    "source": "CSS-Tricks",
+    "sourceUrl": "https://css-tricks.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "CSS",
+      "HTML",
+      "Frontend Techniques"
+    ]
+  },
+  {
+    "title": "Your Prototype Is Not Being Honest With Your Users (And Here’s How To Fix It)",
+    "link": "https://smashingmagazine.com/2026/05/prototype-users-fix-protopie/",
+    "pubDate": "Mon, 25 May 2026 12:00:00 GMT",
+    "content": "There’s a moment in almost every usability session where a participant pauses at the login screen, types something, and glances up: checking whether they’re “doing it right.” That pause is a clear sign. They’ve already clocked that this isn’t a real app, and every data point collected after that moment is filtered through that awareness.",
+    "image": "http://files.smashing.media/articles/prototype-users-fix-protopie/prototype-users-fix-protopie.jpg",
+    "valueTags": [],
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "Web Design",
+      "Frontend",
+      "UX",
+      "Accessibility"
+    ]
+  },
+  {
+    "title": "The State of CSS Centering in 2026",
+    "link": "https://css-tricks.com/the-state-of-css-centering-in-2026/",
+    "pubDate": "Fri, 22 May 2026 13:44:40 +0000",
+    "content": "Despite the countless number of online resources, it’s easy to get confused when trying to center an element. There are documented solutions, but do you really understand why the code you picked works? Let's look at the current state of centering options today in 2026. The State of CSS Centering in 2026 originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well.",
+    "image": "",
+    "valueTags": [
+      "css_html"
+    ],
+    "source": "CSS-Tricks",
+    "sourceUrl": "https://css-tricks.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "CSS",
+      "HTML",
+      "Frontend Techniques"
+    ]
+  }
+]

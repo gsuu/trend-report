@@ -1,0 +1,174 @@
+[
+  {
+    "title": "삼성, One UI 9 베타 공개",
+    "link": "https://designcompass.org/2026/05/27/samsung-one-ui-9-beta-galaxy-s26/",
+    "pubDate": "Wed, 27 May 2026 01:06:32 GMT",
+    "content": "삼성이 갤럭시 S26 시리즈 사용자를 대상으로 One UI 9 베타 프로그램을 시작했습니다. 이번 베타는 Android 17 기반입니다. 대상 국가는 한국, 독일, 인도, 폴란드, 영국, 미국입니다. 사용자는 Samsung Members 앱에서 베타 프로그램에 신청할 수 있습니다. 이번 업데이트는 대형 디자인 개편보다 사용자가 자주 쓰는 기능을 조정하는 데…",
+    "image": "https://designcompass.org/wp-content/uploads/2026/05/oneui9beta-0301.jpg",
+    "valueTags": [
+      "korean_reference",
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "검색엔진은 우리 사이트를 어떻게 발견할까?",
+    "link": "https://pxdstory.tistory.com/1899",
+    "pubDate": "Thu, 21 May 2026 07:50:10 +0900",
+    "content": "들어가며 지난 편에서 프론트엔드 개발자가 왜 SEO를 챙겨야 하는지, 그리고 GEO라는 새로운 관점이 왜 필요해졌는지 이야기했어요. 이번 편에서는 좀 더 실전적인 이야기를 해볼게요. 검색엔진이 우리 사이트를 검색 결과에 보여주려면, 먼저 우리 사이트를 발견해야 하잖아요. 근데 이 \"발견\"이라는 과정이 생각보다 단순하지 않더라고요. SEO/GEO 분석 서비스를 만들면서 수많은 사이트를 들여다봤는데, 콘텐츠는 멀쩡한데 크롤러가 아예 접근을 못 하는 경우가 의외로 많았어요. 대기업 사이트에서도요. 이번 편에서는 검색엔진 크롤러가 우리 사이트를 발견하고 색인하는 과정을 프론트엔드 개발자 관점에서 풀어볼게요. 크롤링 → 인덱싱 → 랭킹, 이 흐름부터 잡자 검색엔진이 검색 결과를 보여주기까지는 크게 세 단계를 거쳐요. 크롤링(Crawling) — 크롤러가 웹을 돌아다니면서 페이지를 발견하고 수집하는 단계예요. 이때 크롤러는 링크를 따라가거나 sitemap을 참고해서 페이지를 찾아요. 인덱싱(Indexing) — 수집한 페이지의…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "The revolution will not be optimised: on frictionmaxxing and the creative virtues of inconvenience",
+    "link": "https://www.itsnicethat.com/articles/pov-friction-breeds-creativity-creative-industry-260526",
+    "pubDate": "Wed, 27 May 2026 01:07:12 GMT",
+    "content": "In a culture obsessed with seamlessness and instant fulfilment, inconvenience is starting to feel strangely radical again.",
+    "image": "https://admin.itsnicethat.com/images/xuLtgAxZ9hswgZlCDi7M0V1o4gw=/278509/width-1440%7Cformat-jpeg/39_POV_META.png",
+    "valueTags": [
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/interview/hype-type-studio-reflects-on-25-years-of-making-work-for-good-people",
+    "pubDate": "Wed, 27 May 2026 01:06:47 GMT",
+    "content": "Twenty-five years in, Hype Type Studio has a simple way of describing what it does: make good work for good people. Led by Founder Paul Hutchison and Design Director Ross Burwell, the Los Angeles-based practice has built a client list that includes NASA, Sonos, Patagonia and Vans – all while staying deliberately small. Their new website marks a moment to reset, presenting a clearer snapshot of where the studio stands after years of heads-down client work. In our conversation, Hutchison and Burwell told us what ‘sy…",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/05/hype-type-studio-reflects-on-25-years-of-making-work-for-good-people/Hype-Type-Studio-new-website-Hype-Type-Studio-13.png",
+    "valueTags": [
+      "web_reference",
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Your Prototype Is Not Being Honest With Your Users (And Here’s How To Fix It)",
+    "link": "https://smashingmagazine.com/2026/05/prototype-users-fix-protopie/",
+    "pubDate": "Mon, 25 May 2026 12:00:00 GMT",
+    "content": "There’s a moment in almost every usability session where a participant pauses at the login screen, types something, and glances up: checking whether they’re “doing it right.” That pause is a clear sign. They’ve already clocked that this isn’t a real app, and every data point collected after that moment is filtered through that awareness.",
+    "image": "http://files.smashing.media/articles/prototype-users-fix-protopie/prototype-users-fix-protopie.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "prototyping",
+      "ux_method"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "The Case for Design Disposables",
+    "link": "https://www.nngroup.com/articles/design-disposables/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 22 May 2026 17:00:00 +0000",
+    "content": "Design disposables are rough artifacts you make to think, not to deliver. Learn to tell them apart from deliverables and avoid the sunk-cost trap.",
+    "image": "",
+    "valueTags": [],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "Closing the Loop: What to Do After a Design Critique Ends",
+    "link": "https://www.nngroup.com/articles/after-design-critique/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 22 May 2026 17:00:00 +0000",
+    "content": "Most designers invest in running critiques but skip the followup. That missing step is often why feedback culture breaks down.",
+    "image": "",
+    "valueTags": [],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "Four Levels Of Customer Understanding",
+    "link": "https://smashingmagazine.com/2026/05/four-levels-customer-understanding/",
+    "pubDate": "Fri, 22 May 2026 13:00:00 GMT",
+    "content": "What people say, feel, think, and do are often very different things. To understand the underlying reasons for user behavior, it helps to look beyond the surface and explore hidden motivations, root causes, and the different layers of reality that shape how people act. Brought to you by Measuring UX Impact, **friendly video course on UX** and design patterns by Vitaly.",
+    "image": "http://files.smashing.media/articles/four-levels-customer-understanding/four-levels-customer-understanding.jpg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  }
+]
