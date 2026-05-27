@@ -1,4 +1,4 @@
-#### 13. Easily apply Copilot code review feedback with Copilot cloud agent
+#### 11. Easily apply Copilot code review feedback with Copilot cloud agent
 
 - 날짜: 2026-05-19
 - 태그: GitHub Copilot, Code Review, Pull Request, Cloud Agent

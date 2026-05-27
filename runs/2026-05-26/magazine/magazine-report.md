@@ -1,12 +1,13 @@
 # 2026-05-26 매거진
 
-shortlist 16건 본문화 + 검수 + category-qa + 형식 보정 + 이미지 보강 + 카테고리 재배치(pxd → DEV) 완료. 타이틀은 원문 그대로.
+shortlist 16건 → 발행 12건 + 제외 4건. 사용자 피드백 반영: 핀테크 적합도·자사 마케팅·독자 흥미 부족 사유로 4건 제외, pxd robots.txt는 DEV로 카테고리 재배치.
 
 산출물:
 - shortlist: `runs/2026-05-26/magazine/shortlist-20-30.md`
 - 원문 검증: `runs/2026-05-26/magazine/source-verification-{service,design,dev}.json`
 - 타겟 분류: `runs/2026-05-26/magazine/target-classification.json`
 - 항목별 본문: `runs/2026-05-26/magazine/articles/{NN}-{slug}.md`
+- 제외 본문: `runs/2026-05-26/magazine/articles/excluded/`
 
 ---
 
@@ -471,59 +472,7 @@ Anthropic은 이번 발표를 미국 SMB 시장 데이터(미국 GDP의 44%, 민
 
 ---
 
-#### 10. Agents for financial services
-
-- 날짜: 2026-05-26
-- 태그: AI Agents, agents_platform, Claude, 운영도구
-- 국가: GLOBAL
-- 카테고리: ai
-- 직무 태그: 웹DEV
-- 출처 유형: release_note
-- 출처: Anthropic News
-- 출처 URL: https://www.anthropic.com/news/finance-agents
-- 이미지: https://www.anthropic.com/api/opengraph-illustration?name=Node-GraphChart&backgroundColor=clay
-- 이미지 설명: Anthropic 발표 페이지 대표 이미지
-- 요약: Anthropic이 금융 업무 10종을 자동화하는 Claude 에이전트 템플릿과 함께, 멀티 시간 단위 long-running session을 per-tool 권한·관리형 credential vault·전체 audit log로 묶은 Managed Agents 운영 모델을 공개했습니다. 사내 자율 에이전트의 권한·자격증명·감사 로그를 분리해서 점검하는 reference로 활용할 수 있습니다.
-
-##### 요약
-
-- Anthropic이 Pitch builder·Meeting preparer·Earnings reviewer·Model builder·Market researcher 같은 리서치/커버리지 에이전트 5종과 Valuation reviewer·General ledger reconciler·Month-end closer·Statement auditor·KYC screener 같은 운영/회계 에이전트 5종, 총 10개의 금융 에이전트 템플릿을 발표했습니다.
-- 이 에이전트들은 Claude Platform 위에서 자율로 도는 Managed Agents 형태로 운영되며, "multi-hour deal close"처럼 멀티 시간 단위로 끊기지 않고 도는 long-running session, per-tool 권한, 관리형 credential vault, 그리고 Claude Console에서 모든 tool call과 의사결정을 검사할 수 있는 audit log를 기본 구성으로 묶었습니다.
-- Excel·PowerPoint·Word 애드인이 GA로 풀렸고 Outlook 통합이 예고됐는데, 핵심은 "context carries automatically between applications"로 모델에서 시작한 작업이 다시 설명 없이 덱으로 끝나는 cross-app 컨텍스트 전달입니다.
-- 커넥터에는 Dun & Bradstreet, Fiscal AI, Financial Modeling Prep, Guidepoint, IBISWorld, SS&C Intralinks, Third Bridge, Verisk 8종이 추가됐고, Moody's MCP 앱은 6억+ 공·사기업 신용등급과 데이터를 컴플라이언스·신용분석·비즈니스 개발용으로 노출합니다.
-- Claude Opus 4.7은 Vals AI Finance Agent 벤치마크에서 64.37%로 업계 1위를 기록했지만, Anthropic은 동시에 "users stay firmly in the loop"를 운영 원칙으로 명시해 클라이언트 전달·파일링·실행 전에 사람 승인이 들어가는 흐름을 강조했습니다.
-
-##### 매거진 인사이트
-
-> 자율 에이전트는 결국 권한·자격증명·감사 로그를 따로 잠그는 운영 모델 위에서만 굴러간다.
-
-이번 발표의 무게중심은 금융 도메인 자체가 아니라, 자율 에이전트를 "어떻게 운영하느냐"에 대한 reference 모델에 있습니다. CTTD 환경에서 당장 10종 에이전트를 그대로 가져다 쓰는 일은 없지만, 사내·클라이언트 프로젝트에 에이전트를 붙일 때 무엇을 따로 잠가야 하는지를 점검하는 기준선으로 읽을 만합니다.
-
-###### 왜 지금 이 업데이트인가
-
-작년부터 풀린 에이전트 SDK·MCP·도구 호출 표준이 "한 번 답하고 끝나는 챗봇"에서 "수 시간 도는 워크플로 러너"로 무게를 옮기는 흐름인데, 여기서 막히는 지점은 모델 성능보다 권한·자격증명·감사 로그 분리입니다. Anthropic은 금융이라는 가장 규제가 빡빡한 도메인에 10개 템플릿을 묶어 내면서, long-running session을 per-tool 권한과 credential vault로 감싸고 Console에서 tool call 단위로 사후 감사할 수 있게 만든 구성을 같이 풀었습니다. 동시에 Vals AI 벤치마크 64.37%, 사람 승인 유지 원칙을 함께 명시하면서 "성능은 올렸지만 사람을 빼지 않는다"를 마케팅 라인으로 잡았다는 점도 같은 맥락에서 봐야 합니다.
-
-###### 구현 관점
-
-웹 퍼블리셔/프론트엔드 입장에서 직접 만져야 할 영역은 아니지만, 사내 에이전트를 붙일 때의 검수 체크리스트로 옮길 수 있는 항목이 분명합니다. 첫째, 도구 권한은 "에이전트가 접근 가능한 도구 전체"가 아니라 도구 단위로 끊겨야 합니다. 같은 에이전트가 자료실 검색은 되지만 결제·파일링·외부 메일은 별도 승인이 필요한 구조여야 한다는 뜻입니다. 둘째, 자격증명은 코드/프롬프트에 박지 않고 별도 vault에서 런타임에 주입되는 형태여야 하고, 폐기·교체 흐름이 vault 쪽 권한 모델에 묶여야 합니다. 셋째, audit log는 단순 응답 로그가 아니라 "어떤 tool을 어떤 입력으로 호출했고 어떤 결정을 내렸는지"가 tool call 단위로 남아야, 사고 시 책임 경로를 역추적할 수 있습니다. Microsoft 365 애드인 쪽에서 끌어올 만한 시사점은 "앱 간 컨텍스트 자동 전달"로, 디자인 도구·문서 도구·이슈 트래커 사이에서 같은 작업 맥락을 다시 설명하지 않게 만드는 워크플로 설계 패턴입니다.
-
-###### 실무에 어떻게 적용할 수 있을까
-
-- 도구 권한 매트릭스: 어떤 에이전트가 어떤 저장소·도구·외부 API에 닿을 수 있는지를 사람·역할 단위가 아니라 에이전트·도구 단위로 정의했는지 점검한다.
-- 자격증명 저장 위치: 토큰·API 키가 레포·프롬프트·환경 변수에 박혀 있는지, 아니면 vault 같은 별도 저장소에서 런타임 주입되는 구조인지 확인한다.
-- 감사 로그 보존 범위와 기간: tool call·결정 근거를 어디까지 남기고 누가 열람할 수 있는지를 운영 정책으로 명문화한다.
-- 사람 승인 단계 배치: 클라이언트 전달 직전·배포 직전·파일 변경 직전 중 어느 지점에 사람 승인을 둘지 워크플로 차원에서 합의해둔다.
-- Anthropic이 묶어 보여준 long-running session + per-tool 권한 + credential vault + audit log 4종 세트를 자체 구축·외부 도구 활용 모두의 운영 모델 출발점으로 끌어쓴다.
-
-###### 같이 보면 좋은 기술
-
-- Claude Code Skills/MCP 서버 권한 모델: 도구 단위 접근 제어와 외부 데이터 소스 연결 패턴
-- OpenAI Agents SDK·Cursor Background Agents: long-running 에이전트 세션 운영 사례
-- Model Context Protocol 명세: tool 권한·인증·로깅을 표준화하는 프로토콜 레퍼런스
-
----
-
-#### 11. Claude Design Review: An Innovative Way to Brainstorm with AI
+#### 10. Claude Design Review: An Innovative Way to Brainstorm with AI
 
 - 날짜: 2026-05-26
 - 태그: Claude Design, AI 디자인 도구, 디자인-코드 핸드오프, Tweaks
@@ -573,58 +522,7 @@ AI 디자인 도구는 “결과를 얼마나 잘 그리는가”에서 “기�
 
 ---
 
-#### 12. Vercel AI Gateway plugin for WordPress
-
-- 날짜: 2026-05-26
-- 태그: Vercel AI Gateway, WordPress 7.0, WordPress AI Client, 멀티 프로바이더
-- 국가: GLOBAL
-- 카테고리: ai
-- 직무 태그: 웹DEV
-- 출처 유형: release_note
-- 출처: Vercel Changelog
-- 출처 URL: https://vercel.com/changelog/vercel-ai-gateway-plugin-for-wordpress
-- 이미지: https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6V5dkbAeHhATBKECw7Hcll/e13a97682e733d33df77b1673512af07/414.png
-- 이미지 설명: Vercel Changelog 대표 이미지
-- 요약: Vercel이 WordPress 7.0과 함께 공개된 WordPress AI Client에 붙이는 AI Gateway 커넥터 플러그인을 내놓아, 40개 이상 프로바이더와 수백 개 모델을 단일 API 키로 호출하고 프로바이더 장애 시 자동 폴백으로 콘텐츠 자동화 흐름을 유지하도록 했습니다.
-
-##### 요약
-
-- Vercel AI Gateway 플러그인은 WordPress AI Client의 커넥터로 동작하며, 이 클라이언트 위에 만들어진 어떤 AI 플러그인이든 별도 프로바이더 연동 없이 그대로 모델을 호출하게 만듭니다.
-- Anthropic·Google·OpenAI·xAI·DeepSeek·MiniMax·Moonshot AI 등 40개 이상 프로바이더와 수백 개 모델을 단일 `AI Gateway` API 키 하나로 접근합니다.
-- 설치 후 설정은 `Settings > Connectors`에서 AI Gateway 자격증명만 등록하면 끝나고, 동일 자격증명이 사이트 안의 모든 AI 플러그인에 공유됩니다.
-- 같은 프롬프트 빌더에서 텍스트, 구조화된 JSON, 이미지 생성·편집, 비디오까지 멀티모달 출력이 가능하다고 명시했습니다.
-- 프로바이더 장애가 발생해도 다른 프로바이더로 자동 폴백되어 AI 기능이 끊기지 않도록 설계됐고, 청구는 통합 빌링·관측 화면에서 보되 단가는 각 프로바이더의 표준 단가를 그대로 따릅니다(`provider prices`).
-- 사전 조건은 WordPress 7.0 이상이며, WordPress 7.0은 같은 날 함께 릴리즈됐습니다.
-
-##### 매거진 인사이트
-
-> CMS 안의 AI 기능은 이제 모델을 고르는 일이 아니라, 어떤 게이트웨이를 한 번 꽂아둘지 정하는 일에 가까워졌습니다.
-
-WordPress 7.0이 도입한 AI Client는 플러그인이 직접 OpenAI나 Anthropic SDK를 부르지 않고 사이트 차원의 커넥터를 거치도록 추상화한 계층입니다. Vercel이 이 커넥터 자리에 AI Gateway를 끼워 넣었습니다. 사이트 운영자는 키 하나만 등록하면, 그 사이트에서 돌아가는 모든 AI 플러그인이 동일한 모델 풀과 폴백 정책을 공유하게 됩니다.
-
-###### 왜 지금 이 업데이트인가
-
-WordPress AI Client가 7.0에서 처음 표준화되면서 플러그인마다 프로바이더 키를 따로 받아 저장하던 구조가 깨졌습니다. 운영팀 입장에서 가장 큰 문제는 키 관리가 아니라 한 프로바이더가 다운됐을 때 발행·요약·이미지 생성 같은 콘텐츠 자동화가 한꺼번에 멈춘다는 점이었습니다. AI Gateway 플러그인은 40+ 프로바이더를 하나의 라우팅 레이어 뒤에 두고 장애 시 다른 프로바이더로 넘기는 폴백을 표준 동작으로 가져왔습니다. CMS 안의 AI 호출이 단일 장애점에 묶이지 않게 만드는 첫 공식 커넥터라는 점이 이번 릴리즈의 무게입니다.
-
-###### 구현 관점
-
-플러그인 자체 설정은 `Settings > Connectors` 한 화면에 모이고, 자격증명은 사이트 단위 시크릿으로 저장됩니다. 개별 AI 플러그인은 더 이상 자기 옵션 페이지에서 `OPENAI_API_KEY` 같은 키를 받지 않고, AI Client가 노출하는 모델 호출 인터페이스만 호출하면 됩니다. 출력 타입은 텍스트·구조화 JSON·이미지(생성/편집)·비디오까지 같은 프롬프트 빌더에서 분기하므로, 블록 에디터 쪽 구현은 모달 안에서 어떤 출력 타입을 요청할지 노출하는 UI 결정에 집중하게 됩니다. 폴백은 게이트웨이 측에서 처리되므로 플러그인 코드에는 프로바이더별 retry 로직을 둘 필요가 없고, 빌링과 사용량 관측도 게이트웨이 대시보드 한 곳으로 모입니다(`unified billing and observability`).
-
-###### 실무에 어떻게 적용할 수 있을까
-
-- WordPress 기반 매거진·커머스·브랜드 사이트에서 콘텐츠 발행 자동화·상품 설명 생성·이미지 변환·메타 데이터 보조 작성 같은 AI 기능을 운영 중이라면 7.0으로 올린 뒤 AI Client + AI Gateway 조합을 검토 대상으로 둔다. 도입 이득은 비용 절감이 아니라 키 관리 일원화와 장애 대응 시간 단축이라는 점을 운영팀에 분명히 한다.
-- 현재 사이트의 AI 호출이 어떤 플러그인에 흩어져 있는지, 각자 어떤 키를 들고 있는지부터 정리합니다.
-- 그 호출들이 AI Client 인터페이스로 옮겨질 수 있는지(플러그인 측 지원 여부)를 확인합니다.
-- 게이트웨이 폴백이 우리 운영의 콘텐츠 SLA를 어디까지 보장해주는지를 테스트 시나리오로 잡습니다.
-
-###### 같이 보면 좋은 기술
-
-- WordPress AI Client: 커넥터가 노출해야 할 인터페이스 범위를 확인할 수 있는 7.0 릴리즈 노트의 명세
-- Vercel AI Gateway: WordPress 외 환경에서 같은 게이트웨이를 쓸 때 라우팅·관측 화면을 비교할 수 있는 본체 문서
-
----
-
-#### 13. Easily apply Copilot code review feedback with Copilot cloud agent
+#### 11. Easily apply Copilot code review feedback with Copilot cloud agent
 
 - 날짜: 2026-05-19
 - 태그: GitHub Copilot, Code Review, Pull Request, Cloud Agent
@@ -673,116 +571,7 @@ PR 리뷰 자동화 파이프라인을 운영 중이라면 점검할 지점이 �
 
 ---
 
-#### 14. Nuxt MCP Toolkit now supports MCP apps
-
-- 날짜: 2026-05-19
-- 태그: Nuxt, MCP, Vue, 인라인 렌더링
-- 국가: GLOBAL
-- 카테고리: ai
-- 직무 태그: 웹DEV
-- 출처 유형: release_note
-- 출처: Vercel Changelog
-- 출처 URL: https://vercel.com/changelog/nuxt-mcp-toolkit-mcp-apps
-- 이미지: https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1vFnL08x8rVHSCyxhGdgty/597b173c421e7b64e85b117f810a565c/nuxt-x-mcp-dark.png
-- 이미지 설명: Vercel Changelog 대표 이미지
-- 요약: Nuxt MCP Toolkit이 Vue SFC를 빌드 타임에 self-contained HTML로 번들링해 MCP 엔드포인트에서 서빙하도록 바뀌었고, Claude와 ChatGPT 같은 MCP 클라이언트가 그 결과를 텍스트 응답 대신 인터랙티브 UI로 인라인 렌더링한다.
-
-##### 요약
-
-- Nuxt MCP Toolkit(Nuxt 팀이 만든 MCP 서버 빌더)이 2026년 5월 19일 업데이트에서 `defineMcpApp` 매크로와 `useMcpApp` 컴포저블을 추가해, Vue 싱글 파일 컴포넌트를 MCP(Model Context Protocol) 앱으로 묶어 발행할 수 있게 했다.
-- `defineMcpApp`에는 `name`, `description`, Zod 기반 `inputSchema`, 그리고 `structuredContent`를 반환하는 비동기 `handler`를 지정한다. 핸들러가 돌려준 데이터가 클라이언트로 pre-hydrate되어 컴포넌트 초기 렌더링에 그대로 들어간다.
-- 컴포넌트 안에서는 `useMcpApp`으로 pre-hydrated `data`를 읽고, `callTool()`을 호출해 같은 서버의 다른 툴을 부르거나 후속 프롬프트를 트리거할 수 있다.
-- 빌드 단계에서 Vue SFC를 self-contained HTML 파일로 번들링해 MCP 엔드포인트에서 서빙한다. Claude와 ChatGPT처럼 인터랙티브 HTML 응답을 지원하는 MCP 클라이언트는 그 HTML을 대화 안에 인라인 렌더링한다.
-- 공식 예제는 도시명을 입력받아 날씨 카드를 인터랙티브하게 그려 보여주는 weather 툴이다. 텍스트로 "맑음, 22도" 같은 답을 돌려주는 대신 카드 UI 자체가 대화창 안에서 렌더링된다.
-
-##### 매거진 인사이트
-
-> MCP 응답이 텍스트에서 컴포넌트로 넘어가는 순간, 디자인 시스템과 접근성의 책임이 챗봇 응답 영역으로 같이 넘어온다.
-
-Nuxt MCP Toolkit의 이번 변화는 단순히 "Vue로 MCP 서버를 만든다"가 아니다. AI 챗 클라이언트의 응답 영역이 텍스트 박스에서 컴포넌트 슬롯으로 바뀌고, 그 안에 우리가 만든 UI가 그대로 들어간다는 뜻이다. 결국 웹 화면을 만들던 사람이 챗 안의 응답 UI도 같이 책임지게 된다.
-
-###### 왜 지금 이 업데이트인가
-
-MCP 자체는 도구 호출과 데이터 전달 규약이라 그동안 응답은 사실상 텍스트나 JSON이었다. Claude와 ChatGPT가 인터랙티브 HTML 응답 렌더링을 받아들이기 시작하면서, 서버 쪽에서도 "이 도구는 이런 컴포넌트로 답한다"를 선언할 수 있는 빌드 도구가 필요해졌다. `defineMcpApp`은 그 선언 지점을 잡아준 매크로다. 핸들러가 돌려준 `structuredContent`가 컴포넌트로 pre-hydrate되는 흐름은 SSR + 하이드레이션을 그대로 MCP 응답에 옮긴 모양이다.
-
-###### 구현 관점
-
-체크할 지점은 세 군데다.
-
-첫째는 번들 격리다. 각 Vue SFC가 self-contained HTML로 묶여 MCP 엔드포인트에서 서빙되기 때문에, 전역 CSS나 디자인 시스템 토큰을 어떻게 끌고 들어갈지 결정해야 한다. 디자인 시스템 패키지의 CSS 변수, 폰트, 아이콘 스프라이트가 번들 안에 들어가야 챗 안에서도 본 사이트와 같은 톤으로 렌더링된다. 반대로 외부 자원 의존이 남아 있으면 클라이언트 환경에서 깨진다.
-
-둘째는 `useMcpApp`의 `callTool()` 동선이다. 컴포넌트 안에서 다른 툴을 부르거나 후속 프롬프트를 트리거할 수 있다는 건, UI에서 발생한 사용자 액션이 다시 LLM 컨텍스트로 흘러간다는 뜻이다. 버튼 하나가 새 프롬프트를 만든다면 그 버튼이 무엇을 하는지, 어떤 입력이 모델로 다시 가는지 사용자에게 보여야 한다.
-
-셋째는 접근성이다. 챗창 안에 들어가는 컴포넌트는 부모 문서의 포커스 흐름·랜드마크·라이브 리전과 충돌할 수 있다. iframe·shadow DOM·인라인 HTML 중 어떤 방식으로 들어가는지에 따라 키보드 트랩, 스크린 리더 읽기 순서, `aria-live` 알림 타이밍이 달라진다. 원문은 접근성 규칙을 따로 언급하지 않으니, 우리가 도입한다면 클라이언트별 렌더링 방식부터 실제로 열어 확인해야 한다.
-
-###### 실무에 어떻게 적용할 수 있을까
-
-- 적용 케이스: 사내 도구를 MCP로 노출할 때 답변을 표·카드·폼으로 보여주고 싶었던 케이스에 바로 들어맞는다. 디자인 검색, 컴포넌트 카탈로그 조회, 운영 대시보드 미니뷰처럼 "텍스트로 풀면 길어지는" 응답을 컴포넌트로 발행할 수 있다.
-- 디자인 토큰 주입 방식: 본 사이트 디자인 시스템의 CSS 변수와 폰트가 self-contained 번들에 포함되는지, 빠진 토큰이 fallback으로 무엇이 되는지 확인한다.
-- 입력 스키마 가드: `inputSchema`는 Zod로 선언되니 모델이 보낼 수 있는 모든 케이스(빈 값, 한글, 긴 문자열, 잘못된 타입)를 핸들러 진입 전에 막는다.
-- `callTool` 트리거의 사용자 가시성: 컴포넌트 안에서 호출되는 후속 툴이 어떤 컨텍스트를 모델에 다시 넘기는지 화면에 명시한다.
-- 클라이언트 호환성: Claude와 ChatGPT 외 다른 MCP 클라이언트에서 같은 응답을 받았을 때 텍스트 fallback이 어떻게 보이는지 미리 확인한다.
-- 접근성 기준선: 키보드만으로 조작 가능, 스크린 리더가 컴포넌트 진입을 인지, 색상 의존 정보 없음 — 본 사이트 QA 체크리스트를 그대로 가져온다.
-
-###### 같이 보면 좋은 기술
-
-- MCP(Model Context Protocol) 명세: 인터랙티브 HTML 응답이 클라이언트별로 어떻게 렌더링되는지 규약 차원에서 확인.
-- Nuxt MCP Toolkit 공식 문서(https://mcp-toolkit.nuxt.dev/apps/overview): `defineMcpApp`·`useMcpApp` API 레퍼런스와 예제.
-- Vue SFC `<style>` scoping과 디자인 토큰 번들링: self-contained HTML로 묶일 때 스타일 격리 전략 참고.
-
----
-
-#### 15. Announcing Quality Review Agent: Agentic QA on Every PR
-
-- 날짜: 2026-05-26
-- 태그: PR 자동 QA, 브라우저 테스트, Builder.io, QA 에이전트
-- 국가: GLOBAL
-- 카테고리: tool
-- 직무 태그: 웹DEV·UIUX
-- 출처 유형: release_note
-- 출처: Builder.io Blog
-- 출처 URL: https://www.builder.io/blog/announcing-quality-review-agent
-- 이미지: https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fe42e8676bf51402a8c72b41b666ed492?width=1200
-- 이미지 설명: Builder.io 공식 블로그의 Quality Review Agent 발표 대표 이미지
-- 요약: Builder.io가 모든 PR에 대해 실제 브라우저로 제품을 띄우고 클릭·타이핑·플로우를 직접 수행하는 Quality Review Agent를 공개했습니다. 해피 패스·엣지 케이스·리그레션 세 레이어를 한 번에 돌고, 발견한 버그마다 같은 PR로 수정을 되돌려보내는 Fix in Builder 버튼을 붙였습니다.
-
-##### 요약
-
-- Builder.io의 Quality Review Agent는 PR(Pull Request)이 올라올 때마다 실제 브라우저에서 제품을 띄워 사용자처럼 클릭·타이핑·페이지 이동을 직접 수행하며 변경 사항을 검증합니다.
-- 검증 범위는 세 레이어로 나뉩니다. 변경 자체의 해피 패스, 빈 상태·잘못된 입력·rate limit·에러 경로 같은 엣지 케이스, 그리고 변경이 주변 기능을 깨뜨리지 않았는지 확인하는 리그레션입니다.
-- 지적된 버그마다 "Fix in Builder" 버튼이 붙고, 평문 영어로 수정 지시를 적거나 에이전트에게 자동 해결을 맡길 수 있습니다. 수정 결과는 동일 PR로 다시 푸시되어 같은 에이전트가 재실행합니다.
-- 리플레이 화면은 에이전트의 단계별 추론, 그 시점에 발생한 네트워크 호출, 콘솔 로그·에러를 세 패널로 타임라인 동기화해 보여주고, 프레임 단위 스크럽과 8배속 재생을 지원합니다.
-- 현재 GitHub PR에서 동작하고, GitLab·Bitbucket·Azure DevOps 지원이 예고됐습니다. 무료 체험과 엔터프라이즈 트라이얼이 별도 안내됐고 구체 가격은 공개되지 않았습니다.
-
-##### 매거진 인사이트
-
-> PR에 붙는 QA가 체크리스트 자동화에서 실제 브라우저 조작으로 옮겨가고 있다.
-
-PR 단계의 자동 QA는 그동안 단위 테스트와 e2e 스크립트, 그리고 스토리북 스냅샷 정도에 머물러 있었습니다. Builder.io는 여기에 "사람처럼 제품을 써본다"는 레이어를 한 칸 더 끼워 넣었습니다. 리뷰 대기열에 있던 변경 사항이 실제로 화면 위에서 작동하는지를, 머지 전 단계에서 영상으로 남기는 흐름이 만들어졌습니다.
-
-###### 왜 지금 이 업데이트인가
-
-AI 에이전트가 코드 변경을 만들어내는 속도가 사람 리뷰어가 따라가는 속도를 넘어선 시점입니다. Cursor·Claude Code·Copilot이 만든 PR이 하루에 수십 건씩 쌓이면, 머지 전 검증을 사람 한 명이 직접 클릭해 확인하는 모델은 깨집니다. 해피 패스만 통과하는 단위 테스트로는 빈 상태·rate limit·잘못된 입력 같은 엣지 경로가 그대로 프로덕션으로 흘러갑니다. Builder.io는 이 공백을 "브라우저에서 직접 눌러보는 에이전트"로 메우려 합니다.
-
-###### 구현 관점
-
-세 레이어 분리 자체가 QA 설계의 좋은 청사진입니다. 해피 패스는 변경된 기능 자체를 따라가고, 엣지 케이스는 입력값과 상태값을, 리그레션은 변경 주변의 기존 흐름을 봅니다. 각 레이어는 디자인-코드 파이프라인에서 서로 다른 시점에 깨지기 쉬운 영역입니다. 리플레이 화면이 에이전트 추론·네트워크·콘솔을 한 타임라인으로 묶었다는 점도 주목할 만합니다. 버그 재현 시 어느 클릭에서 어떤 요청이 떨어졌고 어떤 에러가 찍혔는지를 한 화면에서 매칭할 수 있으면, 사람 QA가 같은 상황을 다시 만들기 위해 들이는 시간이 짧아집니다. "Fix in Builder" 버튼이 평문 지시를 같은 PR로 되돌려보낸다는 점은 QA-수정-재검증 루프가 PR 하나 안에서 닫힌다는 의미입니다.
-
-###### 실무에 어떻게 적용할 수 있을까
-
-- 해피 패스 클릭 확인은 에이전트 쪽으로 넘기는 방향을 전제로 두고, QA 인력의 검수 포인트를 어디로 옮길지 미리 정리해 둡니다. 당장 이 도구를 도입하지 않더라도 검수 분담 지도부터 다시 그릴 필요가 있습니다.
-- 사람이 남겨두어야 할 영역은 "맞게 동작했는가"가 아니라 "원래 의도대로 보이는가"를 묻는 항목들입니다. 화면 위계와 카피의 의도, 디자인 시스템 토큰 일관성, 접근성 키보드 흐름과 스크린 리더 라벨, 브랜드 톤이 그 자리에 들어갑니다.
-- 자동 QA 영상이 PR마다 쌓이기 시작하면, 영상 안에서 어떤 신호를 보고 머지를 막을지에 대한 팀 합의가 새 검수 항목으로 올라옵니다. 리플레이를 어디까지 보고 통과시킬지에 대한 기준을 미리 문서화해 두는 편이 좋습니다.
-
-###### 점검 질문
-
-- 우리 PR 머지 전 단계에서 해피 패스·엣지·리그레션 중 가장 자주 누락되는 레이어는 어디인가.
-- QA 인력의 시간이 클릭 확인에서 화면 위계·접근성·브랜드 일관성 검수로 옮겨갈 수 있는 구조인가.
-- 에이전트가 만든 수정안을 같은 PR로 되돌려받았을 때, 사람 리뷰어는 그 변경을 어떤 기준으로 다시 읽을 것인가.
-
----
-
-#### 16. 검색엔진은 우리 사이트를 어떻게 발견할까?
+#### 12. 검색엔진은 우리 사이트를 어떻게 발견할까?
 
 - 날짜: 2026-05-21
 - 태그: SEO, GEO, robots.txt, AI 크롤러
@@ -836,4 +625,15 @@ pxd 연재는 검색 최적화(SEO)에 생성형 엔진 최적화(GEO) 관점을
 
 ## 수집했지만 제외한 것
 
-shortlist 파일 참고. magazine-review 추가 제외 없음.
+magazine-review 단계에서 사용자 피드백으로 추가 제외된 항목:
+
+| 출처 | 제목 | 사유 |
+|---|---|---|
+| Anthropic News | Agents for financial services | 핀테크/금융 도메인은 CTTD 독자(이커머스 중심) 적합도 낮음 — 큰 화제(정책 표준 변경·신규 GA 등)가 아니라 운영 모델 reference 수준. 사용자 결정으로 제외. |
+| Vercel Changelog | Vercel AI Gateway plugin for WordPress | WordPress 운영팀 중심 변화로 CTTD 독자 흥미 부족. 사용자 결정으로 제외. |
+| Vercel Changelog | Nuxt MCP Toolkit now supports MCP apps | Nuxt 진영 좁은 적용 범위로 CTTD 독자 흥미 부족. 사용자 결정으로 제외. |
+| Builder.io Blog | Announcing Quality Review Agent: Agentic QA on Every PR | Builder.io 자사 제품 발표로 광고성 색채. 사용자 결정으로 제외. |
+
+본문은 `runs/2026-05-26/magazine/articles/excluded/`에 보존.
+
+원문 검증·타겟 분류 단계 제외 항목은 shortlist 파일의 "수집했지만 제외한 것" 섹션 참고.

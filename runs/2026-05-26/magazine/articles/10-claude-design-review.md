@@ -1,4 +1,4 @@
-#### 11. Claude Design Review: An Innovative Way to Brainstorm with AI
+#### 10. Claude Design Review: An Innovative Way to Brainstorm with AI
 
 - 날짜: 2026-05-26
 - 태그: Claude Design, AI 디자인 도구, 디자인-코드 핸드오프, Tweaks

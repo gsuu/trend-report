@@ -1064,7 +1064,11 @@ def split_issue_title(raw: str) -> tuple[str, str, str, list[str]]:
         platform = platform_match.group("platform")
         rest = platform_match.group("rest").strip()
     else:
-        platform = body.split()[0]
+        # 2026-05-26 사용자 결정 — 제목 앞 [브랜드] prefix가 없으면 platform은
+        # 비워 둔다. (이전엔 제목 첫 단어를 platform으로 폴백했으나 "Four",
+        # "검색엔진은" 같은 잘못된 노출이 발생.) JSON 출력 단계에서 sourceTitle
+        # 로 폴백한다.
+        platform = ""
         rest = body
 
     raw_tags = re.findall(r"#([^\s#]+)", rest)
@@ -2291,7 +2295,7 @@ def report_payload(report: Report) -> dict[str, object]:
         issues.append(
             {
                 "number": issue.number.zfill(2),
-                "platform": issue.platform,
+                "platform": issue.platform or issue_source_title(issue),
                 "areaKey": issue_area_key(issue),
                 "area": issue_area_label(issue),
                 "categoryKey": issue_category_key(issue),

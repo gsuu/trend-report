@@ -7,7 +7,12 @@
       "category": "kr_dev_curation",
       "sourceRole": "reference",
       "locale": "KR",
-      "topics": ["Frontend", "AI", "Web Platform", "Tooling"],
+      "topics": [
+        "Frontend",
+        "AI",
+        "Web Platform",
+        "Tooling"
+      ],
       "includeTitlePatterns": [
         "프론트엔드|frontend|UI|UX|CSS|HTML|JavaScript|TypeScript|React|Next|Svelte|Vue|Astro|Tailwind|shadcn|Radix|디자인 시스템|design system|접근성|accessibility|a11y|브라우저|browser|Chrome|Safari|WebKit|Firefox|web platform|웹 표준|성능|performance|Core Web Vitals|lighthouse|AI|LLM|copilot|cursor|claude|chatgpt|figma|storybook|component|컴포넌트|디자인-코드|design-to-code|prototype|프로토타입"
       ],
@@ -22,7 +27,11 @@
       "category": "newsletter_curation",
       "sourceRole": "reference",
       "locale": "global",
-      "topics": ["HTML", "CSS", "Web Platform"]
+      "topics": [
+        "HTML",
+        "CSS",
+        "Web Platform"
+      ]
     },
     {
       "name": "CSS Weekly",
@@ -31,7 +40,10 @@
       "category": "newsletter_curation",
       "sourceRole": "reference",
       "locale": "global",
-      "topics": ["CSS", "Design Systems"]
+      "topics": [
+        "CSS",
+        "Design Systems"
+      ]
     },
     {
       "name": "JavaScript Weekly",
@@ -40,7 +52,10 @@
       "category": "newsletter_curation",
       "sourceRole": "reference",
       "locale": "global",
-      "topics": ["JavaScript", "Frontend Frameworks"]
+      "topics": [
+        "JavaScript",
+        "Frontend Frameworks"
+      ]
     },
     {
       "name": "Smashing Magazine",
@@ -49,7 +64,12 @@
       "category": "frontend_practice",
       "sourceRole": "reference",
       "locale": "global",
-      "topics": ["Web Design", "Frontend", "UX", "Accessibility"],
+      "topics": [
+        "Web Design",
+        "Frontend",
+        "UX",
+        "Accessibility"
+      ],
       "includeTitlePatterns": [
         "CSS|HTML|JavaScript|TypeScript|React|Next|Vue|Svelte|Astro|component|design system|accessibility|a11y|WCAG|ARIA|performance|Core Web Vitals|browser|Chrome|Safari|Firefox|Web Component|frontend|UI|interaction|animation|motion|prototype|figma|AI|LLM|copilot|cursor"
       ],
@@ -64,7 +84,11 @@
       "category": "frontend_practice",
       "sourceRole": "reference",
       "locale": "global",
-      "topics": ["CSS", "HTML", "Frontend Techniques"]
+      "topics": [
+        "CSS",
+        "HTML",
+        "Frontend Techniques"
+      ]
     },
     {
       "name": "web.dev",
@@ -73,7 +97,12 @@
       "category": "browser_standards",
       "sourceRole": "official",
       "locale": "global",
-      "topics": ["Web Performance", "Best Practices", "Accessibility", "Web Platform"]
+      "topics": [
+        "Web Performance",
+        "Best Practices",
+        "Accessibility",
+        "Web Platform"
+      ]
     },
     {
       "name": "WebKit Blog",
@@ -82,7 +111,12 @@
       "category": "browser_release",
       "sourceRole": "official",
       "locale": "global",
-      "topics": ["Safari", "WebKit", "Web Standards", "Browser Updates"]
+      "topics": [
+        "Safari",
+        "WebKit",
+        "Web Standards",
+        "Browser Updates"
+      ]
     },
     {
       "name": "MDN Blog",
@@ -91,7 +125,11 @@
       "category": "browser_standards",
       "sourceRole": "official",
       "locale": "global",
-      "topics": ["Web Standards", "MDN", "Web Platform"]
+      "topics": [
+        "Web Standards",
+        "MDN",
+        "Web Platform"
+      ]
     },
     {
       "name": "Vercel Blog",
@@ -100,7 +138,12 @@
       "category": "frontend_framework",
       "sourceRole": "official",
       "locale": "global",
-      "topics": ["Next.js", "Vercel", "v0", "AI SDK"]
+      "topics": [
+        "Next.js",
+        "Vercel",
+        "v0",
+        "AI SDK"
+      ]
     },
     {
       "name": "Astro Blog",
@@ -109,7 +152,11 @@
       "category": "frontend_framework",
       "sourceRole": "official",
       "locale": "global",
-      "topics": ["Astro", "Islands", "Content Sites"]
+      "topics": [
+        "Astro",
+        "Islands",
+        "Content Sites"
+      ]
     },
     {
       "name": "React Blog",
@@ -118,7 +165,10 @@
       "category": "frontend_framework",
       "sourceRole": "official",
       "locale": "global",
-      "topics": ["React", "React Server Components"]
+      "topics": [
+        "React",
+        "React Server Components"
+      ]
     },
     {
       "name": "Svelte Blog",
@@ -127,7 +177,10 @@
       "category": "frontend_framework",
       "sourceRole": "official",
       "locale": "global",
-      "topics": ["Svelte", "SvelteKit"]
+      "topics": [
+        "Svelte",
+        "SvelteKit"
+      ]
     },
     {
       "name": "GitHub Changelog",
@@ -136,7 +189,11 @@
       "category": "ai_coding",
       "sourceRole": "official",
       "locale": "global",
-      "topics": ["GitHub", "Copilot", "Actions"],
+      "topics": [
+        "GitHub",
+        "Copilot",
+        "Actions"
+      ],
       "includeTitlePatterns": [
         "Copilot|AI|code review|pull request|workflow|action"
       ]
@@ -148,7 +205,11 @@
       "category": "design_system_automation",
       "sourceRole": "official",
       "locale": "global",
-      "topics": ["Storybook", "Component Documentation", "Design Systems"]
+      "topics": [
+        "Storybook",
+        "Component Documentation",
+        "Design Systems"
+      ]
     },
     {
       "name": "shadcn/ui Releases",
@@ -157,7 +218,11 @@
       "category": "design_system_automation",
       "sourceRole": "official",
       "locale": "global",
-      "topics": ["shadcn/ui", "Component Library", "AI Components"]
+      "topics": [
+        "shadcn/ui",
+        "Component Library",
+        "AI Components"
+      ]
     },
     {
       "name": "Sara Soueidan",
@@ -166,7 +231,12 @@
       "category": "accessibility",
       "sourceRole": "reference",
       "locale": "global",
-      "topics": ["Accessibility", "ARIA", "HTML", "CSS"]
+      "topics": [
+        "Accessibility",
+        "ARIA",
+        "HTML",
+        "CSS"
+      ]
     },
     {
       "name": "Adrian Roselli",
@@ -175,7 +245,11 @@
       "category": "accessibility",
       "sourceRole": "reference",
       "locale": "global",
-      "topics": ["Accessibility", "ARIA", "WCAG"]
+      "topics": [
+        "Accessibility",
+        "ARIA",
+        "WCAG"
+      ]
     },
     {
       "name": "Scott O'Hara",
@@ -184,7 +258,11 @@
       "category": "accessibility",
       "sourceRole": "reference",
       "locale": "global",
-      "topics": ["Accessibility", "ARIA", "Inclusive Components"]
+      "topics": [
+        "Accessibility",
+        "ARIA",
+        "Inclusive Components"
+      ]
     },
     {
       "name": "The A11y Project",
@@ -193,7 +271,11 @@
       "category": "accessibility",
       "sourceRole": "reference",
       "locale": "global",
-      "topics": ["Accessibility", "Patterns", "Checklist"]
+      "topics": [
+        "Accessibility",
+        "Patterns",
+        "Checklist"
+      ]
     },
     {
       "name": "Deque Blog",
@@ -202,7 +284,11 @@
       "category": "accessibility",
       "sourceRole": "reference",
       "locale": "global",
-      "topics": ["Accessibility", "axe", "WCAG"]
+      "topics": [
+        "Accessibility",
+        "axe",
+        "WCAG"
+      ]
     },
     {
       "name": "Naver D2",
@@ -211,7 +297,11 @@
       "category": "kr_frontend_blog",
       "sourceRole": "official",
       "locale": "KR",
-      "topics": ["Frontend", "Naver", "Web Platform"],
+      "topics": [
+        "Frontend",
+        "Naver",
+        "Web Platform"
+      ],
       "includeTitlePatterns": [
         "프론트엔드|frontend|웹|web|브라우저|browser|JavaScript|TypeScript|React|Vue|Svelte|CSS|HTML|디자인 시스템|design system|컴포넌트|component|접근성|accessibility|a11y|성능|performance|UI|UX|Core Web Vitals"
       ],
@@ -226,7 +316,11 @@
       "category": "kr_frontend_blog",
       "sourceRole": "official",
       "locale": "KR",
-      "topics": ["Frontend", "Kakao", "Web Platform"],
+      "topics": [
+        "Frontend",
+        "Kakao",
+        "Web Platform"
+      ],
       "includeTitlePatterns": [
         "프론트엔드|frontend|웹|web|브라우저|browser|JavaScript|TypeScript|React|Vue|Svelte|CSS|HTML|디자인 시스템|design system|컴포넌트|component|접근성|accessibility|a11y|성능|performance|UI|UX|FE"
       ],
@@ -241,7 +335,11 @@
       "category": "kr_frontend_blog",
       "sourceRole": "official",
       "locale": "KR",
-      "topics": ["Frontend", "Line", "Web Platform"],
+      "topics": [
+        "Frontend",
+        "Line",
+        "Web Platform"
+      ],
       "includeTitlePatterns": [
         "프론트엔드|frontend|웹|web|브라우저|browser|JavaScript|TypeScript|React|Vue|Svelte|CSS|HTML|디자인 시스템|design system|컴포넌트|component|접근성|accessibility|a11y|성능|performance|UI|UX"
       ],
@@ -257,12 +355,24 @@
       "category": "browser_release",
       "sourceRole": "official",
       "locale": "global",
-      "topics": ["Chrome", "Web Platform", "Browser Updates", "Web APIs"],
-      "includeLinkPatterns": ["developer\\.chrome\\.com/blog/"],
+      "topics": [
+        "Chrome",
+        "Web Platform",
+        "Browser Updates",
+        "Web APIs"
+      ],
+      "includeLinkPatterns": [
+        "developer\\.chrome\\.com/blog/"
+      ],
       "includeTitlePatterns": [
         "Chrome|browser|web platform|API|CSS|HTML|JavaScript|TypeScript|performance|accessibility|a11y|new in|update|release|Baseline|interop|web vitals"
       ],
-      "excludeLinkPatterns": ["#", "mailto:", "/tags/", "/authors/"],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "/tags/",
+        "/authors/"
+      ],
       "limit": 16
     },
     {
@@ -271,12 +381,23 @@
       "category": "ai_coding",
       "sourceRole": "official",
       "locale": "global",
-      "topics": ["Claude", "Claude Code", "MCP"],
-      "includeLinkPatterns": ["anthropic\\.com/news/"],
+      "topics": [
+        "Claude",
+        "Claude Code",
+        "MCP"
+      ],
+      "includeLinkPatterns": [
+        "anthropic\\.com/news/"
+      ],
       "includeTitlePatterns": [
         "Claude|Claude Code|MCP|Artifacts|tool use|coding|developer|skill|agent|computer use"
       ],
-      "excludeLinkPatterns": ["#", "mailto:", "/research/", "/policy/"],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "/research/",
+        "/policy/"
+      ],
       "limit": 12
     },
     {
@@ -285,12 +406,25 @@
       "category": "ai_coding",
       "sourceRole": "official",
       "locale": "global",
-      "topics": ["OpenAI", "ChatGPT", "Codex", "Apps"],
-      "includeLinkPatterns": ["openai\\.com/(?:index|blog)/"],
+      "topics": [
+        "OpenAI",
+        "ChatGPT",
+        "Codex",
+        "Apps"
+      ],
+      "includeLinkPatterns": [
+        "openai\\.com/(?:index|blog)/"
+      ],
       "includeTitlePatterns": [
         "Codex|GPT|ChatGPT|developer|API|coding|app|agent|canvas|operator|images|sora|MCP"
       ],
-      "excludeLinkPatterns": ["#", "mailto:", "/research/", "/safety/", "/policies/"],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "/research/",
+        "/safety/",
+        "/policies/"
+      ],
       "limit": 12
     },
     {
@@ -299,12 +433,24 @@
       "category": "ai_coding",
       "sourceRole": "official",
       "locale": "global",
-      "topics": ["Cursor", "AI Coding"],
-      "includeLinkPatterns": ["cursor\\.com/(?:changelog|blog)/"],
+      "topics": [
+        "Cursor",
+        "AI Coding"
+      ],
+      "includeLinkPatterns": [
+        "cursor\\.com/(?:changelog|blog)/"
+      ],
       "includeTitlePatterns": [
         "Cursor|composer|chat|inline|agent|MCP|model|ide|editor|review|tab|complete"
       ],
-      "excludeLinkPatterns": ["#", "mailto:", "/pricing", "/login", "/sign", "/jobs"],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "/pricing",
+        "/login",
+        "/sign",
+        "/jobs"
+      ],
       "limit": 12
     },
     {
@@ -313,12 +459,24 @@
       "category": "design_system_automation",
       "sourceRole": "official",
       "locale": "global",
-      "topics": ["v0", "AI UI Generation", "design-to-code"],
-      "includeLinkPatterns": ["v0\\.dev/(?:changelog|blog)/"],
+      "topics": [
+        "v0",
+        "AI UI Generation",
+        "design-to-code"
+      ],
+      "includeLinkPatterns": [
+        "v0\\.dev/(?:changelog|blog)/"
+      ],
       "includeTitlePatterns": [
         "v0|generate|ui|component|design|figma|deploy|integration|model|chat"
       ],
-      "excludeLinkPatterns": ["#", "mailto:", "/pricing", "/login", "/sign"],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "/pricing",
+        "/login",
+        "/sign"
+      ],
       "limit": 12
     },
     {
@@ -327,12 +485,24 @@
       "category": "design_system_automation",
       "sourceRole": "official",
       "locale": "global",
-      "topics": ["Figma to Code", "Visual Editor", "AI"],
-      "includeLinkPatterns": ["builder\\.io/blog/"],
+      "topics": [
+        "Figma to Code",
+        "Visual Editor",
+        "AI"
+      ],
+      "includeLinkPatterns": [
+        "builder\\.io/blog/"
+      ],
       "includeTitlePatterns": [
         "figma|design|component|visual|code|AI|LLM|workflow|design system|token|export|handoff|Mitosis|Qwik"
       ],
-      "excludeLinkPatterns": ["#", "mailto:", "/login", "/sign", "/pricing"],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "/login",
+        "/sign",
+        "/pricing"
+      ],
       "limit": 12
     },
     {
@@ -341,13 +511,81 @@
       "category": "frontend_practice",
       "sourceRole": "reference",
       "locale": "global",
-      "topics": ["Frontend", "Education", "Practice"],
-      "includeLinkPatterns": ["frontendmasters\\.com/blog/"],
+      "topics": [
+        "Frontend",
+        "Education",
+        "Practice"
+      ],
+      "includeLinkPatterns": [
+        "frontendmasters\\.com/blog/"
+      ],
       "includeTitlePatterns": [
         "CSS|HTML|JavaScript|TypeScript|React|Vue|Svelte|Next|Astro|Tailwind|component|accessibility|performance|design system|frontend|browser|API"
       ],
-      "excludeLinkPatterns": ["#", "mailto:", "/courses/", "/learn/", "/teachers/"],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "/courses/",
+        "/learn/",
+        "/teachers/"
+      ],
       "limit": 12
+    },
+    {
+      "name": "Josh W. Comeau",
+      "url": "https://www.joshwcomeau.com/",
+      "category": "frontend_practice",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": [
+        "React",
+        "CSS",
+        "Animation",
+        "Interaction",
+        "Frontend"
+      ],
+      "includeLinkPatterns": [
+        "joshwcomeau\\.com/(?!tutorials/?$|courses/?$)"
+      ],
+      "includeTitlePatterns": [
+        "React|CSS|animation|interaction|frontend|component|hook|TypeScript|JavaScript|Next|layout|color|gradient|accessibility|motion|design system|디자인|컴포넌트|애니메이션"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "/newsletter",
+        "/courses/checkout",
+        "/tutorials/$"
+      ],
+      "limit": 8
+    },
+    {
+      "name": "Josh W. Comeau",
+      "url": "https://www.joshwcomeau.com/",
+      "category": "frontend_practice",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": [
+        "React",
+        "CSS",
+        "Animation",
+        "Interaction",
+        "Frontend"
+      ],
+      "includeLinkPatterns": [
+        "joshwcomeau\\.com/(?!tutorials/?$|courses/?$)"
+      ],
+      "includeTitlePatterns": [
+        "React|CSS|animation|interaction|frontend|component|hook|TypeScript|JavaScript|Next|layout|color|gradient|accessibility|motion|design system|디자인|컴포넌트|애니메이션"
+      ],
+      "excludeLinkPatterns": [
+        "#",
+        "mailto:",
+        "/newsletter",
+        "/courses/checkout",
+        "/tutorials/$"
+      ],
+      "limit": 8
     }
   ]
 }

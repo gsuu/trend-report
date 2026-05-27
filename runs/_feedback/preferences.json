@@ -108,16 +108,21 @@
     },
     "fintech": {
       "score": -2,
-      "count": 1
+      "count": 2
     }
   },
   "reasons": {
     "general_appeal_low": {
-      "toss.tech": 1
+      "toss.tech": 1,
+      "vercel.com": 2
     },
-    "audience_mismatch": {},
+    "audience_mismatch": {
+      "anthropic.com": 1
+    },
     "stale_topic": {},
-    "promotional": {},
+    "promotional": {
+      "builder.io": 1
+    },
     "weak_evidence": {},
     "weak_source": {},
     "other": {
@@ -292,6 +297,54 @@
       "publisher": "토스 테크 (정책 차원)",
       "category": "fintech",
       "note": "사용자 지시 — 핀테크는 CTTD 독자 관심도 낮음, 큰 화제 아니면 후보 우선순위 하위. domains.toss.tech와 categories.fintech 양쪽 -2. autoDemote=false라 정렬 가산점만 영향, 큰 화제는 그대로 P0/P1으로 올라옴."
+    },
+    {
+      "date": "2026-05-26",
+      "id": "2026-05-26-10-claude-finance-agents",
+      "score": -2,
+      "reasons": [
+        "audience_mismatch"
+      ],
+      "domain": "anthropic.com",
+      "publisher": "Anthropic News",
+      "category": "fintech",
+      "note": "사용자 결정 — Agents for financial services. 핀테크/금융 도메인은 CTTD 이커머스 독자에게 적합도 낮음. 큰 화제 아닌 운영 모델 reference."
+    },
+    {
+      "date": "2026-05-26",
+      "id": "2026-05-26-12-vercel-wordpress-ai-gateway",
+      "score": -2,
+      "reasons": [
+        "general_appeal_low"
+      ],
+      "domain": "vercel.com",
+      "publisher": "Vercel Changelog",
+      "category": "ai",
+      "note": "사용자 결정 — Vercel AI Gateway plugin for WordPress. WordPress 운영팀 중심 변화로 독자 흥미 부족."
+    },
+    {
+      "date": "2026-05-26",
+      "id": "2026-05-26-14-nuxt-mcp-toolkit",
+      "score": -2,
+      "reasons": [
+        "general_appeal_low"
+      ],
+      "domain": "vercel.com",
+      "publisher": "Vercel Changelog",
+      "category": "ai",
+      "note": "사용자 결정 — Nuxt MCP Toolkit. Nuxt 진영 좁은 적용 범위로 독자 흥미 부족."
+    },
+    {
+      "date": "2026-05-26",
+      "id": "2026-05-26-15-builder-quality-review-agent",
+      "score": -2,
+      "reasons": [
+        "promotional"
+      ],
+      "domain": "builder.io",
+      "publisher": "Builder.io Blog",
+      "category": "tool",
+      "note": "사용자 결정 — Announcing Quality Review Agent. Builder.io 자사 제품 발표 광고성."
     }
   ]
 }
