@@ -258,6 +258,9 @@ async function handleConfirm(payload) {
         excluded_items: excluded.join(','),
         added_items: added.length > 0 ? JSON.stringify(added) : '[]',
         moved_items: moved.length > 0 ? JSON.stringify(moved) : '[]',
+        // GHA 완료 후 같은 스레드에 후속 알림을 달기 위한 식별자
+        slack_channel: payload.container.channel_id,
+        slack_message_ts: payload.message.ts,
       },
     }),
   });

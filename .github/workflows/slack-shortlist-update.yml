@@ -20,6 +20,14 @@ on:
         description: '카테고리 이동 JSON 배열 (예: [{"num":5,"to":"DEV"}])'
         required: false
         default: '[]'
+      slack_channel:
+        description: '완료 후 후속 알림을 보낼 Slack 채널 ID (비우면 알림 안 함)'
+        required: false
+        default: ''
+      slack_message_ts:
+        description: '후속 알림을 달 원본 메시지 ts (비우면 알림 안 함)'
+        required: false
+        default: ''
 
 env:
   # GitHub Actions JS 런타임을 Node.js 24로 강제 (2026-06 이후 deprecated 대비)
@@ -50,13 +58,30 @@ jobs:
         run: node scripts/slack/update-shortlist.mjs
 
       - name: Commit changes
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add runs/
           if git diff --cached --quiet; then
             echo "변경 사항 없음 — 커밋 스킵"
+            echo "committed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "chore: 슬랙 매니저 검토 반영 (${{ inputs.date }})"
             git push
+            echo "committed=true" >> "$GITHUB_OUTPUT"
+            echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Notify Slack thread
+        if: ${{ inputs.slack_channel != '' && inputs.slack_message_ts != '' }}
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL: ${{ inputs.slack_channel }}
+          SLACK_TS: ${{ inputs.slack_message_ts }}
+          COMMITTED: ${{ steps.commit.outputs.committed }}
+          SHA: ${{ steps.commit.outputs.sha }}
+          REPO: ${{ github.repository }}
+          DATE: ${{ inputs.date }}
+          RUN_ID: ${{ github.run_id }}
+        run: node scripts/slack/notify-update-result.mjs
