@@ -72,6 +72,37 @@ function parseShortlistItems(content) {
   return items;
 }
 
+// URL 정규화: shortlist 와 source-verification 의 인코딩 차이를 흡수
+function normalizeUrl(url) {
+  if (!url) return '';
+  let s = url.trim();
+  try { s = decodeURI(s); } catch {}
+  s = s.replace(/\/+$/, ''); // trailing slash 제거
+  return s.toLowerCase();
+}
+
+// source-verification-{service,design,dev}.json 을 모두 읽어
+// URL → 원문 title 매핑을 만든다. 매니저는 매거진 편집 전 원문 제목으로 판단.
+async function loadOriginalTitleMap(dateDir) {
+  const map = new Map();
+  for (const cat of ['service', 'design', 'dev']) {
+    const filePath = path.join(RUNS_DIR, dateDir, 'magazine', `source-verification-${cat}.json`);
+    try {
+      const raw = await fs.readFile(filePath, 'utf8');
+      const arr = JSON.parse(raw);
+      if (!Array.isArray(arr)) continue;
+      for (const entry of arr) {
+        if (!entry?.title) continue;
+        if (entry.link) map.set(normalizeUrl(entry.link), entry.title);
+        if (entry.finalSourceUrl) map.set(normalizeUrl(entry.finalSourceUrl), entry.title);
+      }
+    } catch {
+      // 파일 없거나 파싱 실패 — 매핑 없이 진행
+    }
+  }
+  return map;
+}
+
 function priorityEmoji(priority) {
   if (priority.startsWith('P0')) return '🔴';
   if (priority.startsWith('P1')) return '🟡';
@@ -176,7 +207,18 @@ async function main() {
     process.exit(1);
   }
 
-  console.log(`총 ${items.length}건 파싱 완료`);
+  // 원문 제목 매핑 적용 — 매니저는 매거진 편집 전 원문 제목으로 판단
+  const titleMap = await loadOriginalTitleMap(latest.date);
+  let mappedCount = 0;
+  for (const item of items) {
+    const original = item.url && titleMap.get(normalizeUrl(item.url));
+    if (original) {
+      item.title = original;
+      mappedCount++;
+    }
+  }
+  console.log(`총 ${items.length}건 파싱 완료 (원문 제목 매핑: ${mappedCount}/${items.length}건)`);
+
   const blocks = buildBlocks(latest.date, items);
   const result = await slackPost({
     channel: SLACK_MANAGER_CHANNEL,
