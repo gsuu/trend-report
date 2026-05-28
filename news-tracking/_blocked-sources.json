@@ -1,0 +1,52 @@
+{
+  "_doc": "수집 단계에서 영구·임시 제외할 채널·도메인·키워드 목록. council 2026-05-27 끝판왕 결정 #4 후속. 2주 연속 0건 채널은 candidate_for_block 섹션으로 옮기고, 4주 연속 0건이면 permanent_block으로 승격.",
+  "permanent_block": {
+    "_doc": "사람 결정으로 영구 제외. 사유 명시.",
+    "domains": [],
+    "url_patterns": [],
+    "title_patterns": [],
+    "history": []
+  },
+  "candidate_for_block": {
+    "_doc": "2주 이상 0건 후보. 다음 회차 fetch에서 다시 확인 후 4주 연속이면 permanent로 승격.",
+    "items": []
+  },
+  "auto_exclude_keywords": {
+    "_doc": "fetch 단계에서 제목/본문 키워드로 자동 제외. dev-digest-agent-prompt.md 자동 제외 룰 #6과 정합.",
+    "dev": [
+      "Best GitHub Copilot Alternatives",
+      "Cursor vs Windsurf",
+      "GPT vs Claude vs Gemini",
+      "MMLU benchmark"
+    ],
+    "service": [
+      "리포트 다운로드",
+      "보고서 발간",
+      "트렌드 리포트",
+      "N% 매출",
+      "사상 최대",
+      "기획전 오픈",
+      "기획전 런칭",
+      "단독 오픈"
+    ],
+    "design": [
+      "mood board",
+      "moodboard",
+      "inspiration round-up",
+      "weekly inspiration",
+      "best of",
+      "logos of the week"
+    ]
+  },
+  "rotation_rules": {
+    "_doc": "채널 활성도 점검 규칙. fetch_*_news.mjs에서 0건 카운트 누적.",
+    "two_weeks_zero": "candidate_for_block.items에 추가 + 사용자 알림",
+    "four_weeks_zero": "permanent_block.history에 자동 이동 + 사용자 명시 승인 필요 (이동 자체는 자동, 권장은 사용자 결정)",
+    "review_period": "월 1회 council/시니어 미팅에서 _blocked-sources.json 검토"
+  },
+  "meta": {
+    "created": "2026-05-27",
+    "created_by": "council 끝판왕 결정 #4",
+    "last_reviewed": "2026-05-27"
+  }
+}

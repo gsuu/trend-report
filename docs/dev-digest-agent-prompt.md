@@ -28,6 +28,12 @@ DEV 4축 스코프 (분포는 강제하지 않음, 호당 수량 할당 없음):
 - 접근성, 성능, 시맨틱 마크업, 브라우저 기능, UI 구현, 디자인 시스템, 개발 도구, AI 개발 워크플로우와 관련된 내용을 우선합니다. 접근성은 DEV의 핵심 축이므로 약한 시그널이라도 검토합니다.
 - 광고·홍보성 글은 제외합니다. 특정 제품·서비스 가입, 세일즈 랜딩, 스폰서 콘텐츠, 단순 출시 홍보, 이벤트/채용/교육 모집 글은 DEV 항목으로 쓰지 마세요.
 - 다음 글은 본문 검토 전에 자동 제외합니다: (1) AI 회사 자체의 가격·SMB/Enterprise plan·도메인 에이전트 패키지(Financial Services/Healthcare 등)·행사 announcement, (2) 백엔드/인프라/DB/AI 모델 학습 중심 글, (3) 본문 또는 src URL이 비어있는 후보, (4) "Introducing X" / "Announcing X" 같은 표지 글 중 본문에서 코드·속성·패턴·수치·체크리스트 중 하나도 추출되지 않는 후보, (5) GitHub Issue field/Project 같은 조직·거버넌스 공지.
+- **(council 2026-05-27 끝판왕 결정 #6) DEV 라우팅 4패턴 자동 제외 — 명시**:
+  1. **AI 코드 에디터 비교·리스티클** (예: "Best GitHub Copilot Alternatives N선", Cursor vs Windsurf 비교)
+  2. **SaaS 릴리즈 노트 그대로 옮긴 글** (제품 changelog만 있고 적용 패턴·코드 위치 없음)
+  3. **관리 도구·조직 거버넌스 공지** (GitHub Issue field·Organization 설정·관리자 권한 변경)
+  4. **AI 모델 비교·벤치마크** (GPT vs Claude vs Gemini, MMLU 점수 등 모델 자체 평가)
+  → 다만 *AI 도구 비교는 SERVICE 카테고리로 재라우팅 가능*. 디자이너·기획자 관점에서 *제안 자료에 인용할 만한 도구 선택 안건*이면 SERVICE 후보로 살림.
 - 한국어 원문 또는 국내 회사 사례는 같은 품질일 때 우선합니다(가산점 +1). 양 할당은 두지 않습니다.
 - "다음 주 마크업·스타일·접근성·핸드오프 작업에 쓸 코드/속성/패턴이 한 개라도 있나" 자체 체크를 통과하지 못하면 P1 이하로 강등합니다.
 - **vanilla 웹 표준 신기능을 프레임워크 릴리즈보다 우선합니다.** CSS·HTML·JavaScript(ES/Web Platform API)의 새 문법·속성·함수·API를 다루는 글이 P0 우선 후보입니다. React/Vue/Svelte/Next/Astro/Tailwind 등 프레임워크 릴리즈는 그 글이 **새 웹 표준 기능을 어떻게 활용하는지, 또는 디자이너-개발 핸드오프·접근성·성능을 실측한 케이스**가 아닌 단순 "새 버전 출시·새 옵션 추가" 알림이면 P1 이하로 강등합니다. 같은 CSS-Tricks 같은 단일 매체에 의존하지 않도록 vanilla 신문법 글은 V8 Blog/Ahmad Shadeed/Stefan Judis/Patrick Brosset/Bramus/Una Kravets/Chrome for Developers/web.dev/WebKit/MDN 등 여러 출처에서 고루 가져오세요.
