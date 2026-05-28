@@ -9,7 +9,13 @@
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
-      "Bash(rm \"D:/_GitHub/trend-report/.git/index.lock\")"
+      "Bash(rm \"D:/_GitHub/trend-report/.git/index.lock\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\({k: d[k] for k in ['dependencies','devDependencies','scripts'] if k in d}, indent=2\\)\\)\")",
+      "Bash(git -C /Users/gsuu/Documents/github/trend-report status --short)",
+      "Bash(git -C /Users/gsuu/Documents/github/trend-report add public/data/magazine.json runs/2026-05-26/magazine/magazine-report.md runs/2026-05-26/magazine/articles/01-woowahan-rag-chatbot.md runs/2026-05-26/magazine/articles/04-wiley-hanaonequ.md runs/2026-05-26/magazine/articles/06-pxd-robots-ai-era.md runs/2026-05-26/magazine/articles/07-builder-copilot-alternatives.md runs/2026-05-26/magazine/articles/08-github-issue-fields-org.md runs/2026-05-26/magazine/articles/10-claude-finance-agents.md runs/2026-05-26/magazine/articles/11-claude-design-review.md runs/2026-05-26/magazine/articles/12-github-copilot-fix-button.md)",
+      "Bash(git -C /Users/gsuu/Documents/github/trend-report commit -m ' *)",
+      "Bash(hermes:*)",
+      "Bash(/Users/gsuu/.local/bin/hermes:*)"
     ]
   }
 }
