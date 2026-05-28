@@ -1,0 +1,64 @@
+{
+  "publisher": {
+    "wish_history": [
+      {
+        "round": "2026-05-27",
+        "items": [
+          "한국어 IME 처리 라이브 케이스 (토스·카카오·네이버 검색 입력창 composition event)",
+          "iOS Safari container queries 폴백 패턴 (한국 모바일 iOS 절반 환경 분기)",
+          "Figma Variables → Style Dictionary → CSS 변수 배포 운영기 (한국 회사 토스·당근·쿠팡 우선)",
+          "패션 커머스 특유 컴포넌트(사이즈 차트 툴팁·컬러 스왓치) 키보드 접근 라이브 케이스",
+          "한국 회사 접근성 실측 케이스 (웹접근성연구소·NULI·토스 a11y 블로그, 한국어 스크린리더 이슈)"
+        ]
+      }
+    ],
+    "strong_rejects": [
+      {
+        "pattern": "AI 코딩 도구 비교 N선 리스티클 (Copilot/Cursor/Claude Code Best of N)",
+        "since": "2026-05-27",
+        "count": 1,
+        "example": "매거진 #07 Builder.io '6 Best GitHub Copilot Alternatives in 2026'"
+      },
+      {
+        "pattern": "AI/SaaS 출시 announcement (Anthropic·OpenAI 신제품 발표 그대로 옮긴 글)",
+        "since": "2026-05-27",
+        "count": 1,
+        "example": "매거진 #09 Claude for Small Business, #10 Agents for financial services"
+      },
+      {
+        "pattern": "GitHub/Anthropic 관리 도구 릴리즈 노트 (퍼블리셔 직무 무관)",
+        "since": "2026-05-27",
+        "count": 1,
+        "example": "매거진 #08 GitHub Issue fields public preview, #12 Copilot cloud agent code review"
+      }
+    ],
+    "discovered_patterns": [
+      {
+        "pattern": "CSS sibling-index() / sibling-count() — DOM 위치를 CSS가 직접 계산 (nth-child 지옥 종료)",
+        "first_seen": "2026-05-27",
+        "example": "references/dev.md #1 Smashing CodePen, iOS Safari 26.2 stable, 패션 커머스 사이즈 옵션 탭 균등 분배 응용"
+      },
+      {
+        "pattern": "CSS Gap Decorations (column-rule / row-rule) — 빈 divider div 제거",
+        "first_seen": "2026-05-27",
+        "example": "references/dev.md #2 Microsoft Edge demos, Chrome/Edge 149+ stable, iOS Safari 미지원 @supports 폴백 필수"
+      },
+      {
+        "pattern": "HTML-in-Canvas drawElement API — Canvas 안 DOM 노드 텍스트 selectable·접근성 유지",
+        "first_seen": "2026-05-27",
+        "example": "references/dev.md #3 chrome.dev 책 데모, origin trial 단계, iOS Safari 0% — 캠페인·랜딩 한정"
+      },
+      {
+        "pattern": "Virtuoso Data Table — Radix + Tailwind 베이스 행·열 듀얼 가상화 + Intl.NumberFormat 한국 원화 즉시 호환",
+        "first_seen": "2026-05-27",
+        "example": "references/dev.md #5 virtuoso.dev/data-table, 토스증권 호가창·쿠팡 셀러 어드민 응용"
+      },
+      {
+        "pattern": "매거진 dev 카테고리 = AI 뉴스 / references/dev = 진짜 dev 라이브 데모 — 두 갈래 단절",
+        "first_seen": "2026-05-27",
+        "example": "매거진 dev 7건 중 5건이 AI 도구·SaaS announcement, 같은 날 references/dev.md는 ★5·코드 위치 10/10"
+      }
+    ],
+    "last_round_summary": "매거진 dev 7건 중 5건이 퍼블리셔 직무와 무관한 AI 도구 비교·SaaS announcement·관리 도구 릴리즈 노트. 같은 날 references/dev.md는 코드 위치 10/10·★5·iOS Safari/한글 폰트 명시 100%로 정반대 품질 — 매거진 dev 라우팅이 references 풀과 완전히 단절. shortlist→글쓰기 단계에서 references/dev의 ★ 후보를 매거진 dev에 우선 승격하는 흐름 필요."
+  }
+}
