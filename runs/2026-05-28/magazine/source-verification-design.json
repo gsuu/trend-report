@@ -1,0 +1,446 @@
+{
+  "date": "2026-05-28",
+  "area": "design",
+  "verifier": "source-verifier",
+  "input": "runs/2026-05-28/magazine/tracking-data.json (area=Design, 27건)",
+  "summary": {
+    "total": 27,
+    "pass": 13,
+    "insufficient": 8,
+    "unconfirmed": 6
+  },
+  "notes": [
+    "uxdesign.cc(Medium) 6건은 모두 Medium global-identity 인증 게이트에 막혀 본문을 읽지 못함 → 원문 미확인.",
+    "The Brand Identity는 Cloudflare로 403 차단. RSS는 2026-05-28 신착이나 이미지 경로가 /uploads/articles/2024/08/... 이라 원문은 2024년 8월 글이 재노출된 가능성이 큼. 본문 확인 불가 → 원문 부족.",
+    "DesignDB의 앤트로픽 서울 사무소 보도는 Anthropic 공식 발표(https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea, 2026-05-26)를 최종 기준 원문으로 채택.",
+    "designcompass의 Neural Expressive 글은 Google The Keyword 공식 발표(https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/, 2026-05-19)를 최종 기준 원문으로 채택.",
+    "당근 지방선거 정보 서비스는 ditoday 매거진 기사가 출처. 당근 공식 보도자료/공식 블로그를 찾지 못함 → 원문 부족(시안과 화면 흐름은 ditoday 본문에 묘사되어 있으나, 공식 1차 출처가 아니므로 보수적으로 부족 처리).",
+    "DNI(디엔아이) X-CORE 글은 ditoday 명시 '브랜디드 콘텐츠'. 자기 자랑성 광고 → 원문 부족.",
+    "NN/g UX Conference August는 강좌 마케팅 페이지 → 원문 부족.",
+    "Toss money-policies-62는 금융 정책 안내 글로 UX·디자인 논제 거의 없음 → 원문 부족.",
+    "Smashing 'Prototype Users Fix ProtoPie'는 ProtoPie 후원/홍보성 튜토리얼이지만 본문에 10단계 실습/구체 코드가 있음. 평가 기준상 '홍보성 튜토리얼'에 해당하므로 원문 부족.",
+    "ditoday '2026 콘텐츠 엔지니어링' 행사 공지는 행사 안내 위주 → 원문 부족.",
+    "BI/BX 결정 근거가 가장 강한 통과 후보는 toss.im 'booknic'(Face/Inspiration/On the Road/Picnic 4 키워드 큐레이션·91권·플로리스트 콜라보·FacePay 결제 흐름까지 명시)."
+  ],
+  "results": [
+    {
+      "id": "design-01-uxdesign-empathy",
+      "title": "We haven't lost the battle for Empathy. Have we?",
+      "discovery_source": "UX Design (Medium) RSS",
+      "final_source_url": "https://uxdesign.cc/we-havent-lost-the-battle-for-empathy-have-we-af31d1226da2",
+      "publisher": "UX Collective (Medium)",
+      "published_at": "2026-05-27",
+      "concrete_facts": [],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 미확인",
+      "exclusion_reason": "Medium global-identity 인증 게이트로 본문 접근 불가. RSS 발췌도 비어 있음. WebFetch·우회 프록시 모두 차단됨."
+    },
+    {
+      "id": "design-02-uxdesign-trust-gap-ai",
+      "title": "The trust gap between AI and humans",
+      "discovery_source": "UX Design (Medium) RSS",
+      "final_source_url": "https://uxdesign.cc/the-trust-gap-between-ai-and-humans-ccea4c503702",
+      "publisher": "UX Collective (Medium)",
+      "published_at": "2026-05-27",
+      "concrete_facts": [],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 미확인",
+      "exclusion_reason": "Medium global-identity 인증 게이트로 본문 접근 불가. 본문 읽기 전에는 사실을 만들지 않음."
+    },
+    {
+      "id": "design-03-uxdesign-book-cover",
+      "title": "The book cover as a relational object",
+      "discovery_source": "UX Design (Medium) RSS",
+      "final_source_url": "https://uxdesign.cc/the-book-cover-as-a-relational-object-288fb15deff1",
+      "publisher": "UX Collective (Medium)",
+      "published_at": "2026-05-26",
+      "concrete_facts": [],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 미확인",
+      "exclusion_reason": "Medium global-identity 인증 게이트로 본문 접근 불가."
+    },
+    {
+      "id": "design-04-uxdesign-product-discovery",
+      "title": "Product discovery's quietest, most consequential decision",
+      "discovery_source": "UX Design (Medium) RSS",
+      "final_source_url": "https://uxdesign.cc/product-discoverys-quietest-most-consequential-decision-ea697471cf6f",
+      "publisher": "UX Collective (Medium)",
+      "published_at": "2026-05-26",
+      "concrete_facts": [],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 미확인",
+      "exclusion_reason": "Medium global-identity 인증 게이트로 본문 접근 불가."
+    },
+    {
+      "id": "design-05-designcompass-neural-expressive",
+      "title": "Neural Expressive, 구글의 새 디자인 언어",
+      "discovery_source": "Design Compass (https://designcompass.org/2026/05/28/neural-expressive/)",
+      "final_source_url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/",
+      "publisher": "Google The Keyword (Josh Woodward, VP, Google Labs)",
+      "published_at": "2026-05-19",
+      "concrete_facts": [
+        "구글이 Gemini 앱에 적용하는 새 디자인 언어를 'Neural Expressive'로 공식 명명. 본문 헤드라인에서 'introducing a stunning new design language we call Neural Expressive' 표현 그대로 사용.",
+        "Neural Expressive의 구성 요소를 'fluid animations, vibrant colors, new typography and haptic feedback' 4가지로 정의.",
+        "같은 발표에서 Gemini 3.5 Flash(빠른 신모델)와 Gemini Omni(텍스트·이미지·비디오를 입력받아 영상 생성), 그리고 Workspace와 연동되는 Gemini Spark Agent를 함께 공개. Gemini 앱 입력 영역은 더 큰 pill 형태로 바뀌고 Gemini Live가 메인 UI에 통합됨(designcompass 보강 사실)."
+      ],
+      "image_url": "https://designcompass.org/wp-content/uploads/2026/05/Neuralexpressiveavail-1.99.jpg",
+      "image_source": "Design Compass 본문 대표 이미지 (Neural Expressive 키 비주얼)",
+      "verdict": "검증 통과"
+    },
+    {
+      "id": "design-06-designdb-anthropic-seoul",
+      "title": "앤트로픽, 서울 사무소 연다… 한국 시장 진출 '베이스캠프'",
+      "discovery_source": "DesignDB - Design News (https://www.designdb.com/?menuno=792&bbsno=40612)",
+      "final_source_url": "https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea",
+      "publisher": "Anthropic Newsroom",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "Anthropic이 서울 사무소 개소에 앞서 KiYoung Choi(최기영)를 Representative Director of Korea로 임명. 그는 Snowflake Korea GM, Google Cloud, Adobe, Autodesk, Microsoft에서 한국·APAC 리더를 거친 30년 경력자.",
+        "최기영의 역할 범위를 'go-to-market 전략, 로컬 팀 구축, 엔터프라이즈·스타트업 파트너십, 정부·연구기관과의 협력, 개발자 커뮤니티 지원'으로 명시.",
+        "한국 사용자의 Claude 이용 비중이 인구 대비 약 3.5배 수준이라고 공식 언급. 파트너 사례로 Law&Company(AI 리걸 어시스턴트), SK Telecom(Claude 기반 커스텀 CS 모델)을 명시. Anthropic 시니어 리더십이 '몇 주 내(in the coming weeks)' 서울을 방문해 공식 개소 예정."
+      ],
+      "image_url": "https://www-cdn.anthropic.com/images/4zrzovbb/website/ffc0d7957a232518519f13c0d64896921ea215e2-1000x1000.svg",
+      "image_source": "Anthropic 공식 발표 페이지 og:image",
+      "verdict": "검증 통과"
+    },
+    {
+      "id": "design-07-ditoday-daangn-election",
+      "title": "내 투표소는 어디? 당근, '제9회 전국동시지방선거' 정보 서비스 오픈",
+      "discovery_source": "DIGITAL iNSIGHT (https://ditoday.com/내-투표소는-어디-당근-제9회-전국동시지방선거/)",
+      "final_source_url": "https://ditoday.com/내-투표소는-어디-당근-제9회-전국동시지방선거/",
+      "publisher": "DIGITAL iNSIGHT (김동욱)",
+      "published_at": "2026-05-28",
+      "concrete_facts": [
+        "당근 앱이 광역단체장·교육감·시도의원 등 선거 유형별 후보·공약을 보여주고, 중앙선관위 데이터를 AI가 '장바구니 물가, 주거, 교육·돌봄' 등 주제별로 자동 정리.",
+        "사전투표 기간에는 동네 지도 위에서 가까운 사전투표소를 보여주고, 본투표일에는 중앙선관위 공식 투표소 조회 페이지로 연결.",
+        "개표 시작 이후 동별 실시간 투표율과 전국 순위, 실시간 결과 업데이트를 노출."
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "ditoday 본문은 '당근 측의 설명'으로 인용했을 뿐, 당근 공식 보도자료/공식 블로그 게시물을 링크하지 않음. 공식 1차 출처를 별도로 확인할 수 없어 보수적으로 부족 처리. 본문의 화면·플로우 묘사는 풍부하나 큐레이션 글의 해석을 사실로 옮기지 않음."
+    },
+    {
+      "id": "design-08-brandidentity-newkid-standard-equipment",
+      "title": "Newkid, Standard Equipment 브랜드 아이덴티티 (precise, technical, but also darn witty)",
+      "discovery_source": "The Brand Identity (https://the-brandidentity.com/project/precise-technical-but-also-darn-witty-newkid-creates-a-brand-of-contrasts-for-standard-equipment)",
+      "final_source_url": "https://the-brandidentity.com/project/precise-technical-but-also-darn-witty-newkid-creates-a-brand-of-contrasts-for-standard-equipment",
+      "publisher": "The Brand Identity",
+      "published_at": "2024-08 (추정)",
+      "concrete_facts": [],
+      "image_url": "https://the-brandidentity.com/uploads/articles/2024/08/precise-technical-but-also-darn-witty-newkid-creates-a-brand-of-contrasts-for-standard-equipment/StandardEquipment-newkid-2.jpg",
+      "image_source": "The Brand Identity 본문 대표 이미지 (RSS 피드 첨부 이미지)",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Cloudflare 403으로 본문 접근 불가. 이미지 경로(/uploads/articles/2024/08/...)로 보아 2024년 8월 공개된 프로젝트가 RSS에 재노출된 정황. 본문을 직접 확인하지 못해 BI/BX 결정 근거(타이포·컬러 시스템·로고 컨셉)를 추출할 수 없음."
+    },
+    {
+      "id": "design-09-ditoday-teamsparta-rebrand",
+      "title": "팀스파르타, 브랜드 개편… 'AI 네이티브' 조직 발돋움",
+      "discovery_source": "DIGITAL iNSIGHT (https://ditoday.com/팀스파르타-브랜드-전면-개편-ai-네이티브-조직-발돋움/)",
+      "final_source_url": "https://ditoday.com/팀스파르타-브랜드-전면-개편-ai-네이티브-조직-발돋움/",
+      "publisher": "DIGITAL iNSIGHT (최석영)",
+      "published_at": "2026-05-27",
+      "concrete_facts": [
+        "팀스파르타가 'AI 네이티브 조직' 선언과 함께 다섯 개 서브 브랜드로 사업을 재정렬. (Sparta AI Corporate Training, Sparta Builders(AX 솔루션), Sparta Club(B2G 교육), Sparta Games, Sparta Japan)",
+        "조직 내부에 Claude Code + n8n 워크플로우 자동화 교육을 도입한 지 2개월 만에 Claude Code 토큰 사용량이 약 3,400% 증가.",
+        "비개발 직군이 AI로 자체 도구를 제작 — 교육팀의 자동 리마인더(수강 완료율 97% 달성), 인사팀의 채용 대시보드, 영업팀의 AI 커리어 매핑 웹서비스."
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "검증 통과",
+      "exclusion_reason": "단, 로고/타이포/컬러 같은 시각 아이덴티티 결정 근거는 본문에 없고 사업 구조·AX 전환 서사 중심임. BI/BX 깊이가 필요한 글이라면 보강 취재 필요."
+    },
+    {
+      "id": "design-10-ditoday-content-engineering",
+      "title": "AI가 바꾸는 콘텐츠 산업… 2026 콘텐츠 엔지니어링 개최",
+      "discovery_source": "DIGITAL iNSIGHT (https://ditoday.com/ai가-바꾸는-콘텐츠-산업-2026-콘텐츠-엔지니어링-개최/)",
+      "final_source_url": "https://ditoday.com/ai가-바꾸는-콘텐츠-산업-2026-콘텐츠-엔지니어링-개최/",
+      "publisher": "DIGITAL iNSIGHT (장준영)",
+      "published_at": "2026-05-27",
+      "concrete_facts": [
+        "2026 PROM Conference: Content Engineering이 2026-06-11 서울 대학로 예술가의 집에서 개최. PROM은 '국내 최초 AI 스토리텔링 랩' 명명.",
+        "기조 발제: EBS 김유열 사장 ('AI를 통한 방송 가치 혁신'). 그 외 최은경 감독, AICRON 이수영 CEO, MONF 이한규 CEO, SOAK 김병민 등 참여.",
+        "6시간 프로그램을 담론·실전·커넥팅 3개 섹션 + 네트워킹 디너로 구성. 'Heuristic Prompting', 'Chain of Story' 등 메소돌로지 언급은 있으나 본문 설명은 매우 얇음."
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "행사 일정·연사 명단 위주의 안내 글. 발행에 쓸 UX·디자인·BI/BX 인사이트가 없음."
+    },
+    {
+      "id": "design-11-ditoday-dni-xcore",
+      "title": "\"조직 내 격차 해소\" 디엔아이, UX 거버넌스 플랫폼 구축",
+      "discovery_source": "DIGITAL iNSIGHT (https://ditoday.com/조직-내-격차-해소-디엔아이-ux-거버넌스-플랫폼-구축/)",
+      "final_source_url": "https://ditoday.com/조직-내-격차-해소-디엔아이-ux-거버넌스-플랫폼-구축/",
+      "publisher": "DIGITAL iNSIGHT (김동욱)",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "DNI(디엔아이) 자체 개발 UX 거버넌스 플랫폼 'X-CORE'를 2026-02-27 공개. 기획·디자인·개발 산출물을 단일 환경에 통합.",
+        "기능: Discovery Sprint(1~2주 인텐시브 워크숍), SSOT 환경, AI 기반 VOC 분석·시뮬레이션, Lo-Fi 컴포넌트 라이브러리, 시맨틱 버전 관리, AI 클러스터링 뷰, 비즈니스 메트릭 연계, 자동 QA.",
+        "도입 효과로 'UI 일관성 40%+ 향상, 개발 시간 최대 50% 단축' 자체 측정치를 제시. 대형 증권사·금융그룹 대상 파일럿 진행 단계."
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "ditoday 본문에 '브랜디드 콘텐츠' 표기. DNI의 광고 협찬 글로, 자기 평가 수치(40%·50%)에 외부 검증이 없음. 평가 기준상 홍보성 콘텐츠는 부족 처리."
+    },
+    {
+      "id": "design-12-uxdesign-design-work-really-for",
+      "title": "How to find out what your design work was really for",
+      "discovery_source": "UX Design (Medium) RSS",
+      "final_source_url": "https://uxdesign.cc/how-to-find-out-what-your-design-work-was-really-for-3f948d3900a5",
+      "publisher": "UX Collective (Medium)",
+      "published_at": "2026-05-26",
+      "concrete_facts": [],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 미확인",
+      "exclusion_reason": "Medium global-identity 인증 게이트로 본문 접근 불가."
+    },
+    {
+      "id": "design-13-smashing-protopie",
+      "title": "Your Prototype Is Not Being Honest With Your Users (And Here's How To Fix It)",
+      "discovery_source": "Smashing Magazine - UX Design (https://smashingmagazine.com/2026/05/prototype-users-fix-protopie/)",
+      "final_source_url": "https://smashingmagazine.com/2026/05/prototype-users-fix-protopie/",
+      "publisher": "Smashing Magazine (Eric Joseph L., ProtoPie 후원)",
+      "published_at": "2026-05-25",
+      "concrete_facts": [
+        "ProtoPie Studio(무료 플랜으로 튜토리얼 전 기능 사용 가능)를 사용해 프로토타입에 실제 로그인·검증을 넣는 10단계 가이드.",
+        "Input Layer가 실제 키보드 입력을 받고 Text Password 타입이 자동 마스킹. 필드를 변수에 바인딩하는 수식 예: input(\"Input Username\").text. Pie Bank 데모 로그인은 alex.c@gmail.com / ABC123.",
+        "Face ID 애니메이션은 Lottie 파일을 0s/0s/0.5s/1s 지연으로 stagger 처리해 iOS 네이티브 흐름을 재현."
+      ],
+      "image_url": "http://files.smashing.media/articles/prototype-users-fix-protopie/prototype-users-fix-protopie.jpg",
+      "image_source": "Smashing Magazine 본문 헤더 이미지",
+      "verdict": "원문 부족",
+      "exclusion_reason": "본문에 ProtoPie 후원 명시. 평가 기준 §원문 부족의 '홍보성 튜토리얼·스폰서 콘텐츠'에 해당."
+    },
+    {
+      "id": "design-14-uxdesign-humans-or-machines",
+      "title": "Should I design for humans or machines?",
+      "discovery_source": "UX Design (Medium) RSS",
+      "final_source_url": "https://uxdesign.cc/should-i-design-for-humans-or-machines-3b8d3addd006",
+      "publisher": "UX Collective (Medium)",
+      "published_at": "2026-05-25",
+      "concrete_facts": [],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 미확인",
+      "exclusion_reason": "Medium global-identity 인증 게이트로 본문 접근 불가."
+    },
+    {
+      "id": "design-15-toss-booknic",
+      "title": "결제는 가볍게, 영감은 가득히 (Toss × Booknic)",
+      "discovery_source": "Toss Blog (https://toss.im/tossfeed/article/booknic)",
+      "final_source_url": "https://toss.im/tossfeed/article/booknic",
+      "publisher": "Toss Blog (윤동해)",
+      "published_at": "2026-05-23",
+      "concrete_facts": [
+        "토스가 영풍문고와 함께 2026-05-22~05-31 서울숲에서 'Booknic' 이벤트 진행. 토스 FacePay로 결제하면 최대 2시간 동안 피크닉 키트(박스·매트·미러·책)를 대여.",
+        "FacePay 결제 흐름: 'Toss Front 단말을 응시하기만 하면 결제 완료 — 지갑을 꺼내거나 폰을 열거나 카드를 고를 필요가 없다'고 명시. 무손/무기기 결제 컨셉.",
+        "큐레이션 책 91권을 'Face / Inspiration / On the Road / Picnic' 4가지 키워드로 토스·영풍문고가 공동 선정. 사진가 옥토 리(Okto Lee)의 플로럴 북마크를 사은품으로 동봉."
+      ],
+      "image_url": "",
+      "image_source": "본문 og:image 미노출 (Toss 자체 이미지 사용)",
+      "verdict": "검증 통과"
+    },
+    {
+      "id": "design-16-nngroup-design-disposables",
+      "title": "The Case for Design Disposables",
+      "discovery_source": "Nielsen Norman Group (https://www.nngroup.com/articles/design-disposables/)",
+      "final_source_url": "https://www.nngroup.com/articles/design-disposables/",
+      "publisher": "Nielsen Norman Group (Laura Klein)",
+      "published_at": "2026-05-22",
+      "concrete_facts": [
+        "'Design Disposables'를 '이해관계자에게 전달하기 위한 산출물이 아닌, 내 사고를 돕기 위한 거친 산출물'로 정의. 초기 스케치, 화이트보드 포스트잇이 대표 예시.",
+        "디스포저블이 매끈하게 다듬어질수록 '매몰비용 편향'이 생겨 탐색을 멈추게 된다고 지적. '탐색은 싸야 한다(exploration is supposed to be cheap)' 원칙.",
+        "AI가 산출물 생성 시간을 줄여 주지만, '결과만 받고 만드는 과정을 건너뛰면 학습이 사라진다'는 양면성을 경고."
+      ],
+      "image_url": "",
+      "image_source": "NN/g 본문 og:image 미노출",
+      "verdict": "검증 통과"
+    },
+    {
+      "id": "design-17-nngroup-after-critique",
+      "title": "Closing the Loop: What to Do After a Design Critique Ends",
+      "discovery_source": "Nielsen Norman Group (https://www.nngroup.com/articles/after-design-critique/)",
+      "final_source_url": "https://www.nngroup.com/articles/after-design-critique/",
+      "publisher": "Nielsen Norman Group (Rachel Krause)",
+      "published_at": "2026-05-22",
+      "concrete_facts": [
+        "크리틱 직후의 후속 커뮤니케이션을 두 가지로 분리: (1) Slack/Teams로 즉시 보내는 세션 요약, (2) before/after 비교와 귀속(attribution)을 담은 심층 팔로업.",
+        "수용하지 않은 피드백에 대한 4단계 응답 템플릿: 피드백 명명 → 결정 진술 → 이유 제공 → 다음 단계 안내. 화면 카테고리 재구성, 체크아웃 확인 단계 등 시나리오 예시 포함.",
+        "후속 트리거 3가지를 명시: 큰 디자인 변경 후, 개발 핸드오프 직전, 피드백이 방향성을 바꾼 경우. ''This changed because you said that'가 루프를 닫는다' 원칙 인용."
+      ],
+      "image_url": "",
+      "image_source": "NN/g 본문 og:image 미노출",
+      "verdict": "검증 통과"
+    },
+    {
+      "id": "design-18-smashing-four-levels-customer",
+      "title": "Four Levels Of Customer Understanding",
+      "discovery_source": "Smashing Magazine - UX Design (https://smashingmagazine.com/2026/05/four-levels-customer-understanding/)",
+      "final_source_url": "https://smashingmagazine.com/2026/05/four-levels-customer-understanding/",
+      "publisher": "Smashing Magazine (Vitaly Friedman)",
+      "published_at": "2026-05-22",
+      "concrete_facts": [
+        "고객 이해를 4단계 프레임으로 정의: Level 1 'what they say'(의견·신뢰도 낮음), Level 2 'what they think and feel'(기억의 영향), Level 3 'what they do'(분석 기반 행동), Level 4 'why they do it'(동기·근본 원인).",
+        "Think-aloud 프로토콜의 방해 효과를 지적하며, '사용자가 어디를 탭/호버/스크롤하고 어디서 망설이는지 침묵 속에 관찰한 뒤 후속 질문' 방식을 권장.",
+        "네덜란드어 확률 부사 연구 인용 — 'possible / maybe / likely'의 해석 폭이 매우 넓어 단어 선택만으로 의도를 파악하기 어렵다는 데이터."
+      ],
+      "image_url": "http://files.smashing.media/articles/four-levels-customer-understanding/four-levels-customer-understanding.jpg",
+      "image_source": "Smashing Magazine 본문 헤더 이미지",
+      "verdict": "검증 통과"
+    },
+    {
+      "id": "design-19-toss-money-policies-62",
+      "title": "반도체·AI에 투자하는 국민참여형 국민성장펀드, 손실 20%까지 정부가 부담해요",
+      "discovery_source": "Toss Blog (https://toss.im/tossfeed/article/money-policies-62)",
+      "final_source_url": "https://toss.im/tossfeed/article/money-policies-62",
+      "publisher": "Toss Blog",
+      "published_at": "2026-05-21",
+      "concrete_facts": [
+        "정부가 5년간 150조 원을 반도체·AI·바이오에 투자하는 국민성장펀드를 2026-05-22부터 일반 시민에게 직접 판매 시작.",
+        "손실의 최대 20%를 정부가 우선 부담. 최대 1,800만 원 소득공제(투자 구간별 40%→10%).",
+        "2026-05-22 ~ 06-11 모집 기간, 은행 10곳·증권사 15곳에서 가입 가능."
+      ],
+      "image_url": "https://resources-fe.toss.im/image-optimize/width=3840,quality=95/https%3A%2F%2Fstatic.toss.im%2Fillusts%2Fimg-money-policy-62.jpg",
+      "image_source": "Toss 자체 일러스트 (img-money-policy-62)",
+      "verdict": "원문 부족",
+      "exclusion_reason": "금융 정책 안내성 콘텐츠로 UX·디자인 의제 부재. CTTD 매거진 발행에 쓸 화면·플로우·정책 변화의 디자인 근거가 없음."
+    },
+    {
+      "id": "design-20-pxdstory-search-engine-discovery",
+      "title": "검색엔진은 우리 사이트를 어떻게 발견할까?",
+      "discovery_source": "pxd story (https://pxdstory.tistory.com/1899)",
+      "final_source_url": "https://pxdstory.tistory.com/1899",
+      "publisher": "pxd story (shushushu)",
+      "published_at": "2026-05-21",
+      "concrete_facts": [
+        "검색엔진 노출을 크롤링→인덱싱→랭킹 3단계로 정의하고, 1단계에서 막히는 사이트가 많다고 지적.",
+        "robots.txt의 'Disallow: /*' 하나로 전 사이트 색인 차단된 대형 사이트 실제 사례. 사이트맵 URL이 200을 반환해야 하며, 잘못된 URL은 크롤 버짓을 낭비.",
+        "URL 파라미터 폭증(?sort=price&color=red&size=M) 시 크롤 버짓 고갈 위험. Next.js 구현 예시 — app/robots.ts 동적 생성, lastModified 포함 sitemap, canonical 태그, framework Link 컴포넌트 사용."
+      ],
+      "image_url": "",
+      "image_source": "pxd 자체 이미지(본문 내, og 미노출)",
+      "verdict": "검증 통과"
+    },
+    {
+      "id": "design-21-nngroup-uxconf-august",
+      "title": "UX Conference August Announced (Aug 17–28, 2026)",
+      "discovery_source": "Nielsen Norman Group (https://www.nngroup.com/training/august/)",
+      "final_source_url": "https://www.nngroup.com/training/august/",
+      "publisher": "Nielsen Norman Group",
+      "published_at": "2026-05-19",
+      "concrete_facts": [
+        "2026-08-17 ~ 08-28 라이브 가상 컨퍼런스. 2일 단위 페어 세션(세션당 3.5시간 라이브).",
+        "단일 강좌 $1,200 (얼리버드, ~07-24까지). 5강좌 패키지 20% 할인($4,800).",
+        "26개 강좌 중 최대 5개 수강 가능. AI, Interaction Design, Research, Management 카테고리."
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "수강 등록 마케팅 페이지로 독자에게 줄 인사이트 없음. 행사 정보 단순 안내."
+    },
+    {
+      "id": "design-22-pxdstory-affinity-bubble",
+      "title": "AI 리서치 파트너, Affinity Bubble 서포터즈 1기를 모집합니다",
+      "discovery_source": "pxd story (https://pxdstory.tistory.com/1898)",
+      "final_source_url": "https://pxdstory.tistory.com/1898",
+      "publisher": "pxd story (장예원)",
+      "published_at": "2026-05-19",
+      "concrete_facts": [
+        "pxd가 Affinity Bubble v1.1 서포터즈 1기를 2026-05-19~05-31 모집(결과 발표 06-08). 인터뷰·앱 리뷰·서베이 데이터를 AI로 분석해 어피니티 다이어그램 형태 버블 시각화로 보여주는 도구.",
+        "혜택: 비즈니스 플랜(월 ₩59,800 상당) 무료 + 매월 동료에게 나눠줄 Standard 플랜 쿠폰 3장.",
+        "서포터즈 의무: 매월 SNS 공유, 동료 추천, 피드백 설문 참여."
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "pxd 자체 제품의 서포터즈 모집 공지. 실제 사용 사례·화면 결정·플로우 변화가 없음. 본문은 모집 안내 위주여서 발행 글로 쓸 사실 부족."
+    },
+    {
+      "id": "design-23-pxdstory-color-tokens",
+      "title": "컬러 토큰 설계 3가지 방식 (스케일 / 시멘틱 / 하이브리드)",
+      "discovery_source": "pxd story (https://pxdstory.tistory.com/1888)",
+      "final_source_url": "https://pxdstory.tistory.com/1888",
+      "publisher": "pxd story (워킹맘 루나)",
+      "published_at": "2026-05-18",
+      "concrete_facts": [
+        "컬러 토큰 설계를 Scale / Semantic / Hybrid 3가지로 분류. Scale은 $blue-500 같은 기초값, Semantic은 $fill/brand/primary 같이 의미 기반.",
+        "Semantic 토큰은 다중 테마·다크모드 적응이 쉽고, 사전 합의 비용이 크지만 커뮤니케이션 비용을 줄임.",
+        "Hybrid 구조는 Scale을 Semantic에 매핑해 유연성과 일관성 균형. 실제 사례로 당근(Carrot)과 토스가 APCA 알고리즘으로 디바이스 모드별 대비를 자동 조정한다고 언급."
+      ],
+      "image_url": "https://blog.kakaocdn.net/dna/beDcN4/dJMcaibsR6n/AAAAAAAAAAAAAAAAAAAAAGDHkzWwSzivmHXVygzYNOgQZSaTEv3-cJbjgKepRGWr/img.png",
+      "image_source": "pxd 본문 og:image (kakaocdn 호스팅)",
+      "verdict": "검증 통과"
+    },
+    {
+      "id": "design-24-nngroup-lean-design-system",
+      "title": "Small by Design: The Strength of Lean Design-System Teams",
+      "discovery_source": "Nielsen Norman Group (https://www.nngroup.com/articles/lean-design-system-teams/)",
+      "final_source_url": "https://www.nngroup.com/articles/lean-design-system-teams/",
+      "publisher": "Nielsen Norman Group (Huei-Hsin Wang)",
+      "published_at": "2026-05-15",
+      "concrete_facts": [
+        "Zeroheight 5년치 연례 보고서 인용 — 대부분의 디자인 시스템 팀은 2~5명. 5,000명+ 조직도 평균 9~11명에 불과, 어떤 규모라도 20~25명을 넘는 경우는 드묾.",
+        "린 팀의 효율성: '컨텍스트가 팀 안에 보이고 공유되어 있으므로 핸드오프가 필요 없음 — 컴포넌트를 스코프한 사람이 구현·지원까지 함'.",
+        "확장 전략: '챔피언·기여자·협력자'를 조직 전반에서 키워 headcount를 늘리지 않고 영향력 확장. 내재적 동기 기반의 채택을 유도."
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "검증 통과"
+    },
+    {
+      "id": "design-25-nngroup-designers-product-teams",
+      "title": "What Designers Actually Struggle with on Product Teams",
+      "discovery_source": "Nielsen Norman Group (https://www.nngroup.com/articles/designers-product-teams/)",
+      "final_source_url": "https://www.nngroup.com/articles/designers-product-teams/",
+      "publisher": "Nielsen Norman Group (Laura Klein)",
+      "published_at": "2026-05-15",
+      "concrete_facts": [
+        "NN/g 강좌 수강생 약 150명 설문 — 절반 정도가 디자인 품질·리서치 방법이 아닌 '얼라인먼트(alignment)'를 최대 난점으로 꼽음.",
+        "구체 어려움: '리서치를 실행으로 이어가는 제품팀의 buy-in 확보', 'UX가 누락되지 않도록 챙기기', PM과의 권한 경계 혼란.",
+        "한 디자이너 인용: 'getting involved early enough to provide the right collaboration model and educating about all the different types of ways we contribute.'"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "검증 통과"
+    },
+    {
+      "id": "design-26-smashing-ux-roi",
+      "title": "Ten Data-Backed Truths Of User Experience ROI",
+      "discovery_source": "Smashing Magazine - UX Design (https://smashingmagazine.com/2026/05/data-backed-truths-user-experience-roi/)",
+      "final_source_url": "https://smashingmagazine.com/2026/05/data-backed-truths-user-experience-roi/",
+      "publisher": "Smashing Magazine (Carrie Webster)",
+      "published_at": "2026-05-15",
+      "concrete_facts": [
+        "IBM Systems Institute / Sugue Technologies 인용 — 설계 단계 결함 수정 비용이 출시 후의 1/100 수준.",
+        "성능 영향: '47%의 사용자가 2초 이내 로딩을 기대'하며, 1초 지연이 컨버전을 20% 떨어뜨림.",
+        "ROI 인용: 'UX에 투자한 $1이 평균 $100을 돌려준다(9,900% ROI)', 최적화 디자인이 컨버전을 최대 400% 향상시킨다는 수치. NN/g, McKinsey, Forrester, Hick's Law, Goal Gradient Effect 등 출처 명시."
+      ],
+      "image_url": "http://files.smashing.media/articles/data-backed-truths-user-experience-roi/data-backed-truths-user-experience-roi.jpg",
+      "image_source": "Smashing Magazine 본문 헤더 이미지",
+      "verdict": "검증 통과"
+    },
+    {
+      "id": "design-27-pxdstory-seoul-voices",
+      "title": "서울 시민의 목소리를 시각화하기",
+      "discovery_source": "pxd story (https://pxdstory.tistory.com/1897)",
+      "final_source_url": "https://pxdstory.tistory.com/1897",
+      "publisher": "pxd story (無異)",
+      "published_at": "2026-05-14",
+      "concrete_facts": [
+        "서울시장 후보 정원오의 '서울의목소리' 플랫폼을 위한 시민 응답 데이터 시각화 프로젝트. 3개 개방형 질문 — 서울 살이의 어려움, 다음 시장에게 기대, 서울을 떠올리는 키워드.",
+        "시각화 기법: 카테고리별 마커 지도, 연령대별 차이를 보여주는 alluvial diagram, Affinity Bubble 의미 클러스터링, 400+ 키워드의 위계적 워드맵, 공간 분석용 choropleth.",
+        "디자인 결정: 무작위 워드클라우드 대신 force-directed simulation으로 의미적으로 가까운 키워드를 모으되 개별 목소리를 가시화. 발견 예 — 20대 여성의 71%가 안전·범죄를 최우선 우려로 응답(남성 응답군은 주거비 우선)."
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "검증 통과"
+    }
+  ]
+}

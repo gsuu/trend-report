@@ -1,0 +1,1343 @@
+{
+  "meta": {
+    "date": "2026-05-28",
+    "area": "dev",
+    "total": 77,
+    "verified": 77,
+    "verifier_note": "DEV 차등 인용 표준(council #3): 합성 데모 + 공식 사양 + 프로덕션 사례 3종이 갖춰져야 P0 가능. 사전 검증 단계에서 이 신호를 facts/note에 미리 기록.",
+    "korea_axis_definition": "한국 환경 4축 = iOS Safari 호환·한글 타이포·모바일 우선·접근성(WCAG)"
+  },
+  "results": [
+    {
+      "id": "001",
+      "title": "Building self-improving tax agents with Codex",
+      "discovery_source": "openai.com",
+      "final_source_url": "https://openai.com/index/building-self-improving-tax-agents-with-codex/",
+      "publisher": "OpenAI",
+      "published_at": "2026-05-28",
+      "concrete_facts": [],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 미확인",
+      "exclusion_reason": "WebFetch HTTP 403 Forbidden — openai.com이 봇 차단. 본문 직접 확인 불가. 별도 채널(브라우저 직접 열람·Wayback) 필요."
+    },
+    {
+      "id": "002",
+      "title": "JavaScript articles • Josh W. Comeau",
+      "discovery_source": "joshwcomeau.com",
+      "final_source_url": "https://www.joshwcomeau.com/javascript/",
+      "publisher": "Josh W. Comeau",
+      "published_at": "2026-05-28",
+      "concrete_facts": [],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "카테고리 인덱스/리스팅 페이지(5개 글 목록만 표시). 단일 글이 아니므로 매거진 원고 근거가 될 수 없음. 발견 출처 RSS의 잘못된 인덱싱."
+    },
+    {
+      "id": "003",
+      "title": "A Modern CSS Reset",
+      "discovery_source": "joshwcomeau.com RSS",
+      "final_source_url": "https://www.joshwcomeau.com/css/custom-css-reset/",
+      "publisher": "Josh W. Comeau",
+      "published_at": "2026-05-21",
+      "concrete_facts": [
+        "box-sizing: border-box를 *, *::before, *::after에 적용해 padding·border가 width 계산에 포함되도록 함",
+        "line-height: 1.5 본문 적용 — WCAG 가독성 권고(난독증 사용자 포함)에 부합",
+        "text-wrap: pretty(본문)·text-wrap: balance(헤딩)로 줄바꿈 품질 보정",
+        "input·button·textarea·select에 font: inherit 적용 — 모바일 브라우저 자동 줌 방지",
+        "img·video·svg에 display: block + max-width: 100% — inline 간격 이슈와 오버플로 차단"
+      ],
+      "image_url": "",
+      "image_source": "원문에 og:image 명시 없음(빌드 시점 자동 생성 가능성)",
+      "verdict": "검증 통과",
+      "note": "DEV 인용 3종 부분 충족: 합성 데모(인터랙티브 코드 플레이그라운드 다수) + 공식 사양(WCAG·border-box 모델) — 프로덕션 사례는 본인 사이트. 한국 환경 4축 중 모바일(font: inherit 자동 줌)·접근성(WCAG line-height)·iOS Safari(form 컨트롤) 3축 명시. 마지막 업데이트 2026-05-21로 최신성 확보."
+    },
+    {
+      "id": "004",
+      "title": "An Interactive Guide to CSS Transitions",
+      "discovery_source": "joshwcomeau.com RSS",
+      "final_source_url": "https://www.joshwcomeau.com/animation/css-transitions/",
+      "publisher": "Josh W. Comeau",
+      "published_at": "2026-05-05",
+      "concrete_facts": [
+        "transition 속성 최소 구성: 속성명 + duration (예: transition: transform 250ms)",
+        "내장 타이밍 함수: linear, ease-out, ease-in, ease-in-out, 기본값 ease",
+        "will-change: transform — 브라우저에 GPU 합성·서브픽셀 렌더링 힌트",
+        "transform·opacity는 합성 단계 속성으로 저비용, height·width는 레이아웃 재계산 유발",
+        "@media (prefers-reduced-motion: reduce)로 모션 민감 사용자 대응"
+      ],
+      "image_url": "",
+      "image_source": "원문에 og:image 명시 없음",
+      "verdict": "검증 통과",
+      "note": "DEV 인용 3종 부분 충족: 합성 데모(인터랙티브 타임라인) + 공식 사양(CSS Transitions spec) — 프로덕션 사례 약함. 접근성 1축(prefers-reduced-motion) 명시. 원작 2021년이지만 마지막 업데이트 2026-05-05."
+    },
+    {
+      "id": "005",
+      "title": "An Interactive Guide to CSS Grid",
+      "discovery_source": "joshwcomeau.com RSS",
+      "final_source_url": "https://www.joshwcomeau.com/css/interactive-guide-to-grid/",
+      "publisher": "Josh W. Comeau",
+      "published_at": "2026-05-18",
+      "concrete_facts": [
+        "fr 단위는 콘텐츠 최소 사이즈 이하로 줄어들지 않음 — 퍼센트와의 핵심 차이",
+        "grid-template-areas로 영역 이름 부여 + 자식 요소 grid-area로 매핑",
+        "gap 속성(구 grid-gap) — fr 분배 전에 차감되는 고정 간격",
+        "repeat() 함수·grid-column: span X·place-content: center 단축",
+        "드래그-투-플레이스, perspective 토글, calendar 레이아웃 등 인터랙티브 데모 다수"
+      ],
+      "image_url": "",
+      "image_source": "원문에 og:image 명시 없음",
+      "verdict": "검증 통과",
+      "note": "합성 데모(인터랙티브 그리드 시각화) + 공식 사양(CSS Grid Level 1·2) 충족. 한국 환경 4축 직접 언급 없음. 2026-05-18 업데이트로 최신성 확보."
+    },
+    {
+      "id": "006",
+      "title": "Designing Beautiful Shadows in CSS",
+      "discovery_source": "joshwcomeau.com RSS",
+      "final_source_url": "https://www.joshwcomeau.com/css/designing-shadows/",
+      "publisher": "Josh W. Comeau",
+      "published_at": "2026-04-27",
+      "concrete_facts": [
+        "단일 box-shadow 대신 여러 레이어를 스택해 깊이감 표현 (offset·blur 차등)",
+        "순수 검정 대신 배경 색조에 맞는 hsl() 사용해 채도 보존 (예: hsl(220deg 60% 50%))",
+        "페이지 전체 일관성을 위해 vertical offset ≈ horizontal offset × 2 비율 유지",
+        "filter: drop-shadow()는 box-shadow와 달리 투명 영역을 포함한 요소 외곽선 따라감"
+      ],
+      "image_url": "",
+      "image_source": "원문에 og:image 명시 없음",
+      "verdict": "검증 통과",
+      "note": "합성 데모 + CSS 사양 충족. 디자인 시스템 측면이 강해 DEV보다 DESIGN 카테고리 더 적합 가능성. 한국 환경 4축 없음."
+    },
+    {
+      "id": "007",
+      "title": "Making Sense of React Server Components",
+      "discovery_source": "joshwcomeau.com RSS",
+      "final_source_url": "https://www.joshwcomeau.com/react/server-components/",
+      "publisher": "Josh W. Comeau",
+      "published_at": "2025-05-09",
+      "concrete_facts": [
+        "RSC 패러다임에서 모든 컴포넌트는 기본적으로 Server Component, 'use client' 디렉티브로 옵트인",
+        "'use client'는 파일/모듈 단위 — 임포트되는 모듈도 Client Component로 처리",
+        "Server Component는 직렬화된 JS 객체를 script 태그로 인라인 전달 (Next.js 패턴: self.__next['$...'])",
+        "Client Component는 다른 Client Component만 import 가능 — 상태/효과 사용 시 자식 트리 전체가 클라이언트 경계로 전환",
+        "async Server Component는 별도 데이터 페칭 레이어 없이 DB 쿼리를 렌더 함수에서 직접 호출"
+      ],
+      "image_url": "",
+      "image_source": "원문에 og:image 명시 없음",
+      "verdict": "검증 통과",
+      "note": "RSC 합성 데모 + React 공식 패턴. 원작 2023-09, 업데이트 2025-05 — 2026-05 발행일은 RSS 재노출 가능성 있음(편집 검토 필요). 한국 환경 4축 직접 언급 없음."
+    },
+    {
+      "id": "008",
+      "title": "AI Skill Store",
+      "discovery_source": "news.hada.io/topic?id=29925",
+      "final_source_url": "https://aiskillstore.io/",
+      "publisher": "AI Skill Store (1인 프로젝트)",
+      "published_at": "2026-05-27",
+      "concrete_facts": [
+        "MCP 프로토콜 기반 — Claude·GPT·Gemini 등 7개 플랫폼 에이전트가 도구로 직접 접근",
+        "Universal Skill Key(USK) — 단일 인증으로 여러 플랫폼에서 동일 스킬 사용",
+        "AI 에이전트가 직접 스킬을 리뷰·평가하는 커뮤니티 검증",
+        "초기 트래픽: Smithery.ai 경유 주간 1,900+ 툴 호출"
+      ],
+      "image_url": "",
+      "image_source": "GeekNews 토픽 페이지에서는 OG 이미지 확인 불가, 원사이트 직접 검증 필요",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Show GN 1인 프로젝트 자기소개 — 공식 뉴스룸·릴리즈 노트 수준 사양 문서 부재. CTTD 독자(웹퍼블리셔·프론트엔드) 와 거리. 합성 데모도 약함."
+    },
+    {
+      "id": "009",
+      "title": "Revealing Text With CSS letter-spacing",
+      "discovery_source": "css-tricks.com RSS",
+      "final_source_url": "https://css-tricks.com/revealing-text-with-css-letter-spacing/",
+      "publisher": "CSS-Tricks (Preethi)",
+      "published_at": "2026-05-27",
+      "concrete_facts": [
+        "letter-spacing 음수값은 글리프 박스 폭을 축소해 겹침 효과 생성",
+        "ch 단위는 '0' 글리프 폭 — letter-spacing 정밀 계산에 활용",
+        "negative letter-spacing(-1ch) + color: transparent로 텍스트 초기 숨김 후 0ch + 보이는 색으로 트랜지션",
+        "::first-letter 의사요소로 첫 글자 별도 스타일링",
+        "transition 지연(0.3s)으로 동시 사라짐/등장 스태거 효과"
+      ],
+      "image_url": "",
+      "image_source": "원문에 og:image 명시 없음",
+      "verdict": "검증 통과",
+      "note": "합성 데모 + CSS 사양. 디자인 인터랙션 측면. 한국 환경(한글 letter-spacing 특수성) 직접 언급 없음 — 한글 적용 시 별도 검증 필요."
+    },
+    {
+      "id": "010",
+      "title": "What's still missing from CSS (Frontend Focus #743)",
+      "discovery_source": "frontendfoc.us/issues/743",
+      "final_source_url": "https://frontendfoc.us/issues/743",
+      "publisher": "Frontend Focus (Cooper Press)",
+      "published_at": "2026-05-27",
+      "concrete_facts": [],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "뉴스레터 큐레이션 인덱스 — 각 항목은 다른 원문(예: CSS Centering·Patrick Brosset 글)을 가리킴. 큐레이션 글의 요약을 사실로 옮기지 않는다는 원칙. 개별 원문(#025·#035)을 별도 검증."
+    },
+    {
+      "id": "011",
+      "title": "readable.css",
+      "discovery_source": "news.hada.io/topic?id=29922",
+      "final_source_url": "https://readable-css.freedomtowrite.org/",
+      "publisher": "readable-css project",
+      "published_at": "2026-05-27",
+      "concrete_facts": [
+        "시맨틱 HTML에 기본 스타일을 부여하는 CSS 프레임워크 — 디자인 시스템이 아닌 기본값 강화",
+        "지원: 라이트/다크 모드, 반응형, 수직 리듬, header·footer·nav·table·button·form 스타일링",
+        "의도적 제외: 화려한 애니메이션, 커스텀 폰트, 유틸리티 클래스, 브라우저 설정 오버라이드",
+        "브라우저 지원: Firefox 84+, Chromium 88+, Edge 88+, Safari 10+",
+        "라이선스: 0BSD — 어떤 용도로도 attribution 없이 사용 가능"
+      ],
+      "image_url": "",
+      "image_source": "GeekNews 토픽 페이지 — 원사이트 OG 별도 검증 필요",
+      "verdict": "검증 통과",
+      "note": "공식 사양(접근성·기본 스타일링 철학) + 브라우저 지원 명시. iOS Safari 10+ 명시(한국 환경 1축). 합성 데모는 사이트 자체가 데모. 프로덕션 사례 약함. classless CSS 트렌드 맥락에서 디자인-퍼블리싱 접점 글감."
+    },
+    {
+      "id": "012",
+      "title": "Motorola 폰이 Amazon 앱을 가로채 제휴 코드를 삽입하기 시작함",
+      "discovery_source": "news.hada.io/topic?id=29910",
+      "final_source_url": "https://9to5google.com/2026/05/25/motorola-amazon-app-hijacking-behavior/",
+      "publisher": "9to5Google",
+      "published_at": "2026-05-25",
+      "concrete_facts": [
+        "앱 드로어에서 Amazon 실행 시에만 발생, 홈스크린 단축 아이콘에서는 정상 — Chrome이 잠깐 표시된 뒤 제휴 코드 삽입",
+        "재현 환경: Razr Fold + Smart Feed v2.03.0070 — Smart Feed 비활성화 시 현상 사라짐",
+        "리디렉트 경로: kira-abboud.com / 제휴 코드 sramz-kff-008-20 — 참조된 인플루언서의 공개 코드와 불일치"
+      ],
+      "image_url": "",
+      "image_source": "9to5Google 원문 별도 확인 필요",
+      "verdict": "원문 부족",
+      "exclusion_reason": "OEM(Motorola)의 사용자 동의 없는 트래픽 가로채기 이슈 — 흥미롭지만 CTTD 독자(웹기획자·UIUX·퍼블리셔) 작업 의사결정에 직결되지 않음. 웹 제작 표준·서비스 동향과 거리. 이커머스 다크패턴 맥락이라면 SERVICE에서 다룰 수도 있으나 모바일 OS 영역."
+    },
+    {
+      "id": "013",
+      "title": "shadcn@4.8.2",
+      "discovery_source": "github.com/shadcn-ui/ui/releases",
+      "final_source_url": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.2",
+      "publisher": "shadcn-ui (GitHub)",
+      "published_at": "2026-05-27",
+      "concrete_facts": [
+        "Update template handling (PR #10786) — 템플릿 처리 로직 수정"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "패치 릴리즈 — 변경 내용 단 1줄. 매거진 발행 가능한 구체 사실 3개 미달. 4.8.0(#026)에 통합 정리 권장."
+    },
+    {
+      "id": "014",
+      "title": "Redesigned Deployments List",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/redesigned-deployments-list",
+      "publisher": "Vercel",
+      "published_at": "2026-05-27",
+      "concrete_facts": [
+        "더 조밀한 레이아웃 — 한 화면에서 더 많은 deployment 확인 가능",
+        "environment별 그룹화 + 상태 함께 표시",
+        "브랜치·커밋 스캔 용이성 개선, 특히 모바일 환경"
+      ],
+      "image_url": "",
+      "image_source": "원문에 og:image 별도 명시 없음 — Vercel changelog 시각 자료 별도 검증 필요",
+      "verdict": "검증 통과",
+      "note": "Vercel 공식 changelog — UI 리디자인. 화면 변화 명시(밀도·그룹화·모바일 개선) — DESIGN/UIUX 접점도 있음. 그러나 스크린샷 본문 직접 확보 필요. 한국 환경 모바일 1축 언급."
+    },
+    {
+      "id": "015",
+      "title": "사용자가 눈에 띄게 짜증을 내고 있다 (AI agent UX critique)",
+      "discovery_source": "news.hada.io/topic?id=29902",
+      "final_source_url": "https://pscanf.com/",
+      "publisher": "pscanf.com (개인 블로그)",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "대화형 인터페이스가 '동료처럼 느껴지게 만드는' 환상 — 확률적 모델 한계와 충돌",
+        "사용자가 사람 동료에게 억누르는 좌절감을 AI에게 표출 — 오히려 좌절 증폭",
+        "AI를 chat 인터페이스가 아닌 목적별 버튼·단축키로 재설계하자는 제안"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "에세이/의견 글 — 구체 화면·플로우·정책 증거 부재. AI UX 비평으로는 흥미롭지만 DEV가 아닌 SERVICE/DESIGN 영역. 매거진 발행 근거로 부족."
+    },
+    {
+      "id": "016",
+      "title": "Vercel Domains now supports price sorting and availability filtering",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/vercel-domains-now-supports-price-sorting-and-availability-filtering",
+      "publisher": "Vercel",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "가격순 정렬 — 낮은 가격 우선 표시",
+        "이용 가능 도메인 우선 정렬 — 구매 불가 도메인은 뒤로",
+        "vercel.com/domains에서 사용"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Vercel Domains 마이너 정렬·필터 추가 — 화면 변화 약함. DEV 독자 작업 의사결정에 영향 없음."
+    },
+    {
+      "id": "017",
+      "title": "Firecrawl joins the Vercel Marketplace",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/firecrawl-joins-the-vercel-marketplace",
+      "publisher": "Vercel",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "Firecrawl은 웹사이트를 LLM-ready 포맷으로 스크래핑",
+        "출력: markdown·HTML·structured data·screenshot",
+        "단일 API 호출로 웹 검색 + 페이지 전체 내용 조회"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Marketplace 입점 공지 — 마케팅 보도자료 성격. 자체 화면·플로우·정책 증거 부재. 차등 인용 3종 미충족."
+    },
+    {
+      "id": "018",
+      "title": "Single Prompt to Fully Functional Websites Using Mobirise AI",
+      "discovery_source": "feedpress.me (CSS Weekly)",
+      "final_source_url": "https://css-weekly.com/videos/single-prompt-to-fully-functional-websites-using-mobirise-ai",
+      "publisher": "CSS Weekly",
+      "published_at": "2026-05-26",
+      "concrete_facts": [],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Mobirise AI 스폰서/프로모션 비디오 — 'Try Mobirise AI Today' CTA + 트래킹 파라미터. 독립 분석 아님. 명세 §원문 부족(스폰서 콘텐츠) 룰 적용."
+    },
+    {
+      "id": "019",
+      "title": "Technical Writing in the AI Age",
+      "discovery_source": "css-tricks.com RSS",
+      "final_source_url": "https://css-tricks.com/technical-writing-in-the-ai-age/",
+      "publisher": "CSS-Tricks (Geoff Graham)",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "AI 시대 기술 블로깅 철학 — 'CSS-Tricks는 커피 테이블 너머 동료처럼 설명하는 공간'",
+        "AI가 생성하는 Stack Overflow 대체 답변보다 실제 문제·시행착오 공유가 더 의미 있음",
+        "블로깅의 본질은 상호 인용·링크 — 'we build off each other'"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "에세이성 글 — 매거진 발행 가능한 기술 사실(API·속성·릴리즈) 부재. 흥미는 있으나 CTTD 퍼블리셔 작업 직결성 약함."
+    },
+    {
+      "id": "020",
+      "title": "npm and pnpm introduce staged publishing (JS Weekly #787)",
+      "discovery_source": "javascriptweekly.com/issues/787",
+      "final_source_url": "https://javascriptweekly.com/issues/787",
+      "publisher": "JavaScript Weekly (Cooper Press)",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "npm 11.15.0 / pnpm 11.3에서 staged publishing 지원 — 레지스트리 게시 전 검토·승인 단계 추가",
+        "Expo UI stable — iOS·Android 네이티브 컴포넌트 단일 import",
+        "Deno 2.8 — Node.js 호환성 42% → 76.4% 상승",
+        "Firefox 151 Web Serial API 지원 — 마이크로컨트롤러 연결 가능",
+        "Chrome 선언적 부분 업데이트 — <template for> + 동적 HTML 삽입 API"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "뉴스레터 큐레이션 — 각 항목은 별도 공식 원문(npm 블로그·Deno 블로그·Expo 블로그) 필요. 큐레이션 요약을 사실로 옮기지 않는다는 원칙. staged publishing은 npm 공식 블로그 원문 별도 보강 권장."
+    },
+    {
+      "id": "021",
+      "title": "shadcn@4.8.1",
+      "discovery_source": "github.com/shadcn-ui/ui/releases",
+      "final_source_url": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.1",
+      "publisher": "shadcn-ui (GitHub)",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "add style rhea (PR #10779) — 신규 스타일 변형 추가"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "패치 릴리즈 — 변경 1건. 4.8.0(#026)에 통합 권장."
+    },
+    {
+      "id": "022",
+      "title": "Sandbox persistence is now GA",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/sandbox-persistence-is-now-ga",
+      "publisher": "Vercel",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "Persistence 기본 ON — 스냅샷·state 수동 관리 불필요, filesystem 변경 자동 캡처",
+        "각 sandbox에 커스텀 영구 name — 이름으로 생성·조회·재개",
+        "비용 제어: persistent: false 옵션 또는 --non-persistent CLI 플래그로 스토리지 비용 최소화",
+        "정지된 sandbox에 runCommand()·writeFiles() 호출 시 최신 스냅샷에서 자동 재시작",
+        "신규 API: Sandbox.fork(), Sandbox.getOrCreate(), 라이프사이클 훅 onCreate·onResume"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "검증 통과",
+      "note": "Vercel 공식 changelog GA 발표 — API·CLI·옵션 명시. 합성 데모(API 시그니처) + 공식 사양 충족. 프로덕션 사례 약함. 한국 환경 4축 없음. 백엔드/인프라 글이라 CTTD 퍼블리셔 우선순위 낮음 — 그러나 sandbox 사용 흐름은 관심사."
+    },
+    {
+      "id": "023",
+      "title": "Maybe Don't Rely on Google's \"Modern Web Guidance\"",
+      "discovery_source": "adrianroselli.com",
+      "final_source_url": "https://adrianroselli.com/2026/05/maybe-dont-rely-on-googles-modern-web-guidance.html",
+      "publisher": "Adrian Roselli",
+      "published_at": "2026-05-25",
+      "concrete_facts": [
+        "MWG에는 toast 등 일부 패턴별 접근성 가이드가 누락 — 'no general toast guidance'",
+        "MWG 쇼케이스 예제(accordion)가 Antigravity 생성 시 WCAG 위반 — 즉시 발견 가능한 결함",
+        "LLM은 비결정적 — 도메인 전문가 컨설턴트가 '어떤 가이드라인도 적용 보장 없음' 인정",
+        "Web Platform Baseline이 접근성 기능의 브라우저 지원 추적 안 함 — MWG 기반 신뢰성 약화"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "검증 통과",
+      "note": "권위 있는 접근성 전문가의 비판 — Google MWG(I/O 2026 발표) 검증. 접근성 1축 명확히. 합성 데모(accordion 결함 예제) + 공식 사양(WCAG) 충족. 프로덕션 사례는 MWG 자체 쇼케이스. CTTD 퍼블리셔·디자이너 필독. 한국 환경 접근성 1축."
+    },
+    {
+      "id": "024",
+      "title": "Cross-Document View Transitions: Scaling Across Hundreds of Elements",
+      "discovery_source": "css-tricks.com RSS",
+      "final_source_url": "https://css-tricks.com/cross-document-view-transitions-part-2/",
+      "publisher": "CSS-Tricks (Durgesh Rajubhai Pawar)",
+      "published_at": "2026-05-25",
+      "concrete_facts": [
+        "모든 view-transition-name은 페이지 내 유일해야 함 — 중복 시 전체 트랜지션 무효화",
+        "view-transition-name(identity, 매칭용) vs view-transition-class(styling hook, 다중 매칭용) 구분",
+        "pageswap·pagereveal 이벤트로 navigation 시점에 just-in-time 네이밍 — 성능 낭비 방지",
+        "::view-transition-group(*.card) 와일드카드 — 단일 CSS로 수백 개 트랜지션 스타일링",
+        "@media (prefers-reduced-motion: no-preference)로 vestibular 장애 사용자 대응 필수"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "검증 통과",
+      "note": "Cross-Document View Transitions 심화 (Part 2) — 합성 데모(코드 패턴) + 공식 사양(CSS View Transitions Module Level 2) + 스케일링 프로덕션 패턴. 접근성 1축(prefers-reduced-motion) 명시. iOS Safari 1축은 Part 1(#043)에서 다룸. CTTD 퍼블리셔 핵심 글감."
+    },
+    {
+      "id": "025",
+      "title": "The State of CSS Centering in 2026",
+      "discovery_source": "css-tricks.com RSS",
+      "final_source_url": "https://css-tricks.com/the-state-of-css-centering-in-2026/",
+      "publisher": "CSS-Tricks (Temani Afif)",
+      "published_at": "2026-05-22",
+      "concrete_facts": [
+        "Grid 단축: display: grid; place-content: center (place-content = align-content + justify-content)",
+        "text-box 속성으로 font metric 불균형 보정 — 예: text-box: cap alphabetic;",
+        "anchor-center 키워드 — 앵커 위치 기반 중앙 정렬 (툴팁 패턴)",
+        "place-content: safe center — overflow 시 가시성 우선",
+        "absolute 위치 중앙 정렬 모던 패턴: inset: 0; place-self: center (legacy left:50%/transform 대체)"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "검증 통과",
+      "note": "2026 시점 CSS 중앙 정렬 정리 — 합성 데모(코드 예제) + 공식 사양(Box Alignment·Anchor Positioning). 한국 환경 4축 직접 언급 없으나 anchor-center는 iOS Safari 26+ 한정이라 호환성 주의. CTTD 퍼블리셔 즉시 활용 가능."
+    },
+    {
+      "id": "026",
+      "title": "shadcn@4.8.0",
+      "discovery_source": "github.com/shadcn-ui/ui/releases",
+      "final_source_url": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.0",
+      "publisher": "shadcn-ui (GitHub)",
+      "published_at": "2026-05-21",
+      "concrete_facts": [
+        "shadcn registry validate 커맨드 신규 추가 — 레지스트리 설정 검증",
+        "registry.json에 include 필드 추가 — 설정 유연성 확대",
+        "version derivation 테스트 실패 수정"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "minor 릴리즈 — 2 feature + 1 fix. 매거진 단독 글감으로는 약함. shadcn registry 워크플로 변화는 그 자체로 더 큰 컨텍스트(4.x 흐름) 필요. 4.8.0~4.8.2 합산도 단독 매거진 글로는 약함."
+    },
+    {
+      "id": "027",
+      "title": "Qwen 3.7 Max now available on Vercel AI Gateway",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/qwen-3-7-max-now-available-on-vercel-ai-gateway",
+      "publisher": "Vercel",
+      "published_at": "2026-05-21",
+      "concrete_facts": [
+        "AI SDK에서 모델 식별자 alibaba/qwen-3.7-max로 호출",
+        "에이전트 파운데이션 — 코딩·오피스 워크플로 자동화·장기 자율 실행",
+        "Vercel AI Gateway 통합 — custom reporting, intelligent routing, auto retry"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "AI 모델 라인업 추가 공지 — 모델 API·가격 등 구체 사양 부재. blocked-sources auto_exclude 룰(SaaS 릴리즈)와 인접. Council #3 차등 인용 3종 미충족."
+    },
+    {
+      "id": "028",
+      "title": "Advanced Tree Counting: Mathematical Layouts With sibling-index() And sibling-count()",
+      "discovery_source": "smashingmagazine.com",
+      "final_source_url": "https://smashingmagazine.com/2026/05/mathematical-layouts-sibling-index-sibling-count/",
+      "publisher": "Smashing Magazine (Durgesh Pawar)",
+      "published_at": "2026-05-21",
+      "concrete_facts": [
+        "sibling-index()는 형제 중 1-based 위치 반환, sibling-count()는 형제 총 수 반환 — JS의 parentElement.children.length 등가",
+        "브라우저 지원: Chrome/Edge 138·Safari 26.2 stable, Firefox 진행 중 — @supports 진보적 향상 권장",
+        "활용 사례: animation-delay: calc(sibling-index() * 100ms)로 스태거 애니메이션, 자동 균등 폭 탭, z-index 카드 부채꼴",
+        "주의점: display: none 요소도 인덱스에 포함, Shadow DOM scoping으로 light DOM 미인지, pseudo-element는 sibling이 아님"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "검증 통과",
+      "note": "신규 CSS 함수 — 합성 데모(스태거·탭·카드 부채꼴) + 공식 사양(CSS Values 5) + 브라우저 지원 명시. iOS Safari 26.2(한국 환경 1축) 명시. CTTD 퍼블리셔 즉시 활용 가능 — calc/JS 의존도 감소 효과."
+    },
+    {
+      "id": "029",
+      "title": "Release Notes for Safari Technology Preview 244",
+      "discovery_source": "webkit.org/blog",
+      "final_source_url": "https://webkit.org/blog/17962/release-notes-for-safari-technology-preview-244/",
+      "publisher": "WebKit (Apple)",
+      "published_at": "2026-05-21",
+      "concrete_facts": [
+        "CSS Anchor Positioning — position-anchor에 normal·none 값 지원 추가, transform-aware 앵커 포지셔닝",
+        "MathML 다문자 연산자 지원 — 수식 렌더링 확장",
+        "macOS genlock 동기화 비디오 재생 지원 — 프로 비디오 동기화",
+        "Shared Worker 내부에 Dedicated Worker 생성 가능 (HTML Standard 준수)",
+        "Web Extension: sendMessage()·connect()·postMessage()·executeScript()에서 user gesture 전파",
+        "VoiceOver 커서 위치·SVG 요소 네이밍 접근성 개선"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "검증 통과",
+      "note": "WebKit 공식 릴리즈 노트 — Safari = iOS Safari 1축 직결. 접근성(VoiceOver) 1축. 합성 데모는 STP 자체로 검증 가능, 공식 사양 명시, 프로덕션 사례는 STP 자체. CTTD 퍼블리셔 필독 — iOS Safari 호환성 추적."
+    },
+    {
+      "id": "030",
+      "title": "Grok Build 0.1 now available on Vercel AI Gateway",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/grok-build-0-1-now-available-on-vercel-ai-gateway",
+      "publisher": "Vercel",
+      "published_at": "2026-05-20",
+      "concrete_facts": [
+        "Grok Build 0.1 — agentic coding 베타 모델, Grok Build CLI 구동",
+        "Reasoning effort 설정 불가, non-reasoning 모드 없음",
+        "AI SDK에서 xai/grok-build-0.1로 호출"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "모델 라인업 추가 — blocked-sources auto_exclude 룰(AI 코드 에디터·SaaS 릴리즈)과 인접. DEV 매거진 글감으로 부족."
+    },
+    {
+      "id": "031",
+      "title": "Chat SDK now includes AI SDK tools",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/chat-sdk-now-includes-ai-sdk-tools",
+      "publisher": "Vercel",
+      "published_at": "2026-05-20",
+      "concrete_facts": [
+        "chat/ai 서브패스에 createChatTools(chat) — Chat SDK read/write 액션을 에이전트에 와이어링",
+        "requireApproval 옵션 — write 작업 기본 게이팅",
+        "프리셋: reader·messenger·moderator",
+        "lazy loading — 사용 시점에만 도구 인스턴스화",
+        "toAiMessages 등 chat/ai 네임스페이스로 이동, chat re-export는 deprecated"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Vercel Chat SDK 내부 API 변경 — 사용 진영 좁음. CTTD 독자 직결성 약함."
+    },
+    {
+      "id": "032",
+      "title": "Vercel AI Gateway plugin for WordPress",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/vercel-ai-gateway-plugin-for-wordpress",
+      "publisher": "Vercel",
+      "published_at": "2026-05-20",
+      "concrete_facts": [
+        "단일 API 키로 40+ 프로바이더의 수백 모델 접근 (Anthropic·Google·OpenAI 등)",
+        "WordPress 7.0의 신규 AI Client framework 커넥터 — 해당 framework 기반 플러그인이 별도 통합 없이 활용",
+        "텍스트·structured JSON·이미지·비디오 멀티모달 지원"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "WordPress 플러그인 — CTTD 독자(웹기획자·UIUX·퍼블리셔, 패션 이커머스) 사용 진영과 거리. WordPress 7.0 AI Client framework 자체가 새로운 표준 가능성은 있음 — 별도 검증 필요시 WordPress 공식 원문 확인."
+    },
+    {
+      "id": "033",
+      "title": "Stack Overflow: When We Stop Asking",
+      "discovery_source": "css-tricks.com RSS",
+      "final_source_url": "https://css-tricks.com/stack-overflow-when-we-stop-asking/",
+      "publisher": "CSS-Tricks (Sunkanmi Fafowora)",
+      "published_at": "2026-05-20",
+      "concrete_facts": [
+        "Stack Overflow 정점: 2014년 월 200,000+ 질문",
+        "2026년 월 3,000건 미만 — 정점 대비 98.5% 감소",
+        "AI 등장 이전부터의 적극적 question closure/deletion 모더레이션 정책이 1차 원인",
+        "VeraCode 연구: AI 생성 코드의 45%가 보안 결함 (100개 모델 검증)"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "검증 통과",
+      "note": "Stack Overflow 쇠퇴 + AI 코드 품질 데이터 — 합성 데모 약함, 공식 사양 아님(에세이). 그러나 외부 데이터(VeraCode) 인용 + Stack Overflow 통계로 매거진 기획거리는 됨. CTTD 독자 일반 흥미 강함. 차등 인용 3종은 미충족 — P1보다는 사이드 토픽."
+    },
+    {
+      "id": "034",
+      "title": "Google I/O and the 'era of the agentic web' (Frontend Focus #742)",
+      "discovery_source": "frontendfoc.us/issues/742",
+      "final_source_url": "https://frontendfoc.us/issues/742",
+      "publisher": "Frontend Focus (Cooper Press)",
+      "published_at": "2026-05-20",
+      "concrete_facts": [],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "뉴스레터 큐레이션 — 각 항목(Google I/O·WebMCP·HTML-in-Canvas·Modern Web Guidance·Firefox 151)은 별도 원문 필요. 특히 Google MWG는 #023(adrianroselli 비판)와 묶어 다룰 수 있음."
+    },
+    {
+      "id": "035",
+      "title": "What's missing in CSS layout",
+      "discovery_source": "patrickbrosset.com",
+      "final_source_url": "https://patrickbrosset.com/articles/2026-05-20-whats-missing-in-css-layout/",
+      "publisher": "Patrick Brosset (Microsoft Edge dev)",
+      "published_at": "2026-05-20",
+      "concrete_facts": [
+        "Overflow/wrap 감지 부재 — 네이티브로 콘텐츠 오버플로/줄바꿈 감지 불가, JS 없이 nav 접기·'+3' 뱃지 구현 불가",
+        "CSS Regions/Content Flow 부재 — InDesign linked text frames처럼 텍스트가 박스 간 흐를 수 없음",
+        "DOM 변경 없는 재배치 불가 — 사이드바 ToC를 모바일에서 콘텐츠 상단으로 이동 등 반응형 재정렬 제한"
+      ],
+      "image_url": "https://patrickbrosset.com/assets/missing-css.png",
+      "image_source": "원문 og:image",
+      "verdict": "검증 통과",
+      "note": "Microsoft Edge 개발자의 CSS 레이아웃 한계 정리 — 합성 데모 약함(개념 글), 공식 사양은 부재(미존재 기능). 그러나 권위 있는 출처(Edge dev) + 모바일 반응형 1축 직접 언급. CTTD 퍼블리셔 글감으로 좋음 — '왜 JS가 여전히 필요한가' 맥락."
+    },
+    {
+      "id": "036",
+      "title": "Chat SDK now supports callback URLs on buttons and modals",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/chat-sdk-now-supports-callback-urls-on-buttons-and-modals",
+      "publisher": "Vercel",
+      "published_at": "2026-05-20",
+      "concrete_facts": [
+        "Chat SDK 카드에서 Workflow 일시정지·재개 — 버튼 클릭·폼 제출 시점에",
+        "workflow webhook URL을 <Card> 내 button의 callbackUrl prop으로 전달",
+        "버튼은 다수 플랫폼 어댑터 지원, modal callback은 Slack·Teams 한정"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Vercel Chat SDK 내부 API — 사용 진영 좁음."
+    },
+    {
+      "id": "037",
+      "title": "Nuxt MCP Toolkit now supports MCP apps",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/nuxt-mcp-toolkit-mcp-apps",
+      "publisher": "Vercel",
+      "published_at": "2026-05-19",
+      "concrete_facts": [
+        "에이전트 도구가 인터랙티브 HTML 응답 반환 — Claude·ChatGPT 같은 MCP 클라이언트가 inline 렌더링",
+        "defineMcpApp 매크로 + useMcpApp composable로 도구 정의",
+        "Vue SFC를 빌드 시 자체완결 HTML로 번들 + MCP 엔드포인트 서빙",
+        "앱에서 pre-populated 데이터 읽기, 추가 prompt 트리거, 다른 도구 호출 가능"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Nuxt + MCP 매우 좁은 사용 진영. CTTD 독자(주로 React/Astro 진영) 직결성 약함."
+    },
+    {
+      "id": "038",
+      "title": "Flat Rate CDN in Limited Beta",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/flat-rate-cdn-in-limited-beta",
+      "publisher": "Vercel",
+      "published_at": "2026-05-19",
+      "concrete_facts": [
+        "Pro 팀 한정 Limited Beta",
+        "월 정액 — 트래픽·사용량 무관 고정 요금",
+        "Edge Requests·Fast Data Transfer 등 더 이상 미터링하지 않음 — 단일 요금 통합"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Vercel 가격 정책 — 인프라 결정 글감. CTTD 퍼블리셔 작업 의사결정 직결 약함. SaaS 가격은 blocked-sources 인접."
+    },
+    {
+      "id": "039",
+      "title": "Dr. Axel's blog is gone (for now) (JS Weekly #786)",
+      "discovery_source": "javascriptweekly.com/issues/786",
+      "final_source_url": "https://javascriptweekly.com/issues/786",
+      "publisher": "JavaScript Weekly (Cooper Press)",
+      "published_at": "2026-05-19",
+      "concrete_facts": [
+        "npm install scripts opt-in 제안 RFC",
+        "300+ 악성 npm 패키지 발견 — antv·timeago.js 등 'Shai-Hulud' 공격 패턴 지속",
+        "Bun 런타임 Rust 재작성 main 머지 — AI 포팅 코드 품질 논란",
+        "Angular 22 RC — signal-based forms",
+        "Deno 2.8, TypeScript 6.0.3 지원"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "뉴스레터 큐레이션 — 각 항목 별도 공식 원문 필요. npm 보안·Bun Rust 재작성은 흥미롭지만 원문 직접 검증 필요."
+    },
+    {
+      "id": "040",
+      "title": "Storybook 10.4 — Automatic setup with agents, review filters, TanStack React",
+      "discovery_source": "storybook.js.org/blog",
+      "final_source_url": "https://storybook.js.org/blog/storybook-10-4/",
+      "publisher": "Storybook (Michael Shilman)",
+      "published_at": "2026-05-18",
+      "concrete_facts": [
+        "AI 자동 셋업 — 에이전트가 프로젝트 분석·config 생성·MSW 같은 mock 작성·최대 10개 컴포넌트 스토리 자동 작성",
+        "Change Detection 사이드바 필터 — 신규/수정/관련 변경 스토리 필터링",
+        "Quick Sharing — 단일 클릭으로 클라우드 공개 (커밋·PR·CI 없이 팀 공유)",
+        "@storybook/tanstack-react — TanStack 프레임워크 first-class 지원, 타입세이프 라우팅·서버 함수 zero-config",
+        "react-component-meta — MCP용 차세대 docgen 분석기, 기존 react-docgen 대비 빠르고 고품질"
+      ],
+      "image_url": "https://storage.ghost.io/c/f9/d7/f9d78a80-56f8-4adc-8ba1-0e2d6ee72b16/content/images/2026/05/10.4.jpg",
+      "image_source": "원문 본문 첫 이미지",
+      "verdict": "검증 통과",
+      "note": "Storybook 공식 릴리즈 노트 — DEV·DESIGN 양측 의미. 합성 데모 + 공식 사양 + 프로덕션 사례(TanStack 통합) 차등 인용 3종 충족 가능. CTTD 퍼블리셔 핵심(Storybook = 메모리상 시니어 페르소나 집중 영역). 한국 환경 4축 직접 언급 없으나 컴포넌트 워크플로 핵심. P0 후보 강력."
+    },
+    {
+      "id": "041",
+      "title": "Consolidated Commit Status now available on GitHub",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/consolidated-commit-status-now-available-for-github",
+      "publisher": "Vercel",
+      "published_at": "2026-05-18",
+      "concrete_facts": [
+        "monorepo에서 프로젝트별 commit status 대신 통합 status 표시",
+        "GitHub branch protection을 한 번만 설정 — 프로젝트마다 반복 불필요",
+        "프로젝트별 settings에서 'merge에 필요한 Vercel projects' 관리"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "monorepo 운영 편의 — DEV 매거진 단독 글감 부족."
+    },
+    {
+      "id": "042",
+      "title": "Firewall-mitigated traffic is free on Vercel",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/web-application-firewall-mitigated-traffic-is-free-on-vercel",
+      "publisher": "Vercel",
+      "published_at": "2026-05-18",
+      "concrete_facts": [
+        "WAF deny·challenge·rate-limit 트래픽의 CDN Requests·Fast Data Transfer 무료화",
+        "WAF은 CDN 가격에 포함 (custom rules·managed rules·rate limiting)",
+        "Vercel Firewall 사용 모든 프로젝트에 자동 적용, 설정 불필요"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Vercel 가격 정책 — DEV 매거진 글감 약함."
+    },
+    {
+      "id": "043",
+      "title": "Cross-Document View Transitions: The Gotchas Nobody Mentions",
+      "discovery_source": "css-tricks.com RSS",
+      "final_source_url": "https://css-tricks.com/cross-document-view-transitions-part-1/",
+      "publisher": "CSS-Tricks (Durgesh Rajubhai Pawar)",
+      "published_at": "2026-05-18",
+      "concrete_facts": [
+        "<meta name=\"view-transition\" content=\"same-origin\"> 더 이상 작동 안 함 — Chrome 126 이후 CSS 기반으로 대체, console 경고 없이 silent failure",
+        "Cross-document view transition은 4초 하드 타임아웃 — 느린 서버·렌더링 블로킹 이미지·웹폰트로 silent 실패",
+        "이미지 aspect ratio 변경 시 distortion — 브라우저가 비트맵 스냅샷, object-fit 보존 안 됨. ::view-transition-old()·::view-transition-new()에 object-fit: cover로 해결",
+        "브라우저 지원: Chromium·Safari 18.2+, Firefox 진행 중",
+        "pageswap·pagereveal 이벤트 — 출발/도착 페이지 coordination 훅"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "검증 통과",
+      "note": "Cross-Document View Transitions 함정 (Part 1, Part 2(#024)와 한 쌍) — 합성 데모(메타태그 deprecated·object-fit 픽스 코드) + 공식 사양 + iOS Safari 18.2+(한국 환경 1축) 명시. CTTD 퍼블리셔 핵심 글감 — 실제 적용 시 마주칠 함정. P0 후보."
+    },
+    {
+      "id": "044",
+      "title": "Better fluid sizing with round()",
+      "discovery_source": "ishadeed.com",
+      "final_source_url": "https://ishadeed.com/article/css-round/",
+      "publisher": "Ahmad Shadeed",
+      "published_at": "2026-05-17",
+      "concrete_facts": [
+        "round() 시그니처: round(mode, value, interval) — mode = up·down·nearest·to-zero",
+        "예: round(down, 15px, 2px) — 2px 단위 내림",
+        "clamp() + round() — 유동 사이즈를 예측 가능한 step으로 스냅, 타이포·간격·레이아웃 리듬",
+        "활용: 일관된 type scale, container query 카드 사이징, baseline grid 스냅"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "검증 통과",
+      "note": "Ahmad Shadeed의 신뢰성 있는 CSS 글 — 합성 데모(코드 예제) + 공식 사양(CSS Values 4 round()). 한국 환경 4축 직접 언급 없음, 한글 타이포 적용 가능성은 있음. CTTD 퍼블리셔 즉시 활용 — 디자인 시스템 일관성. P1 강력."
+    },
+    {
+      "id": "045",
+      "title": "Web Weekly #192",
+      "discovery_source": "stefanjudis.com",
+      "final_source_url": "https://webweekly.email/archive/web-weekly-192",
+      "publisher": "Stefan Judis",
+      "published_at": "2026-05-18",
+      "concrete_facts": [],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "뉴스레터 큐레이션 — 각 항목은 별도 원문. safe-area-inset(모바일 1축)·<install> element·constructable stylesheets·AbortSignal.timeout 등은 개별 원문 보강 필요."
+    },
+    {
+      "id": "046",
+      "title": "Stop Using :invalid and :valid Pseudo-Classes. Use THIS Instead!",
+      "discovery_source": "feedpress.me (CSS Weekly)",
+      "final_source_url": "https://css-weekly.com/videos/stop-using-invalid-and-valid-pseudo-classes-use-this-instead",
+      "publisher": "CSS Weekly",
+      "published_at": "2026-05-15",
+      "concrete_facts": [
+        ":invalid·:valid 대신 :user-invalid·:user-valid 사용 권장",
+        ":user-invalid은 사용자가 입력 후에만 활성화 — 즉시 트리거 X",
+        "input:not(:placeholder-shown):invalid 같은 우회 패턴 불필요"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "CSS Weekly 짧은 비디오 팁 — 본문이 짧고 비디오 위주. 같은 주제 더 깊은 공식 원문(MDN·webkit blog) 직접 검증 권장. 폼 UX 글로는 유용한 핵심 정보."
+    },
+    {
+      "id": "047",
+      "title": "What's !important #11: 3D Voxel Scenes, Flying Focus, CSS Syntaxes",
+      "discovery_source": "css-tricks.com RSS",
+      "final_source_url": "https://css-tricks.com/whats-important-11/",
+      "publisher": "CSS-Tricks (Daniel Schwarz)",
+      "published_at": "2026-05-15",
+      "concrete_facts": [
+        "Heerich.js — 3D voxel scene을 SVG로 렌더링, CSS 변수로 스타일링",
+        "Flying Focus 애니메이션 — Chris Coyier의 view transitions 활용, Kilian Valkhof의 anchor positioning CSS-only 기법",
+        "of <selector> 문법 — div:nth-child(2 of .intro), CSS nesting과 결합",
+        "Range Syntax — 미디어/컨테이너 쿼리에 >, <, >=, <= 비교 연산자",
+        "Chrome 148·Safari 26.5 — name-only container queries, :open pseudo-class, revert-rule 키워드"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "CSS-Tricks 자체 큐레이션 — 5개 토픽 묶음, 각 항목 깊이 얕음. iOS Safari 26.5 언급되나 통합 원문보다 개별 원문(특히 Flying Focus는 Chris Coyier 글) 직접 보강 권장."
+    },
+    {
+      "id": "048",
+      "title": "Computing and Displaying Discounted Prices in CSS",
+      "discovery_source": "css-tricks.com RSS",
+      "final_source_url": "https://css-tricks.com/computing-and-displaying-discounted-prices-in-css/",
+      "publisher": "CSS-Tricks (Preethi)",
+      "published_at": "2026-05-14",
+      "concrete_facts": [
+        "attr(data-price number)·attr(data-discount number) — HTML data attribute를 숫자로 파싱",
+        "calc(attr(data-price number) * (1 - attr(data-discount number))) — JS 없이 할인가 계산",
+        "calc(round(down, var(--n))) + calc(mod(var(--n), 1) * 100) — 정수/소수 분리 후 counter()로 포맷",
+        ".ott:has(.is-ott-discounted:checked) — :has() 셀렉터로 체크박스 상태별 조건 스타일링·계산 트리거"
+      ],
+      "image_url": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/s_7E3C7C97B7D8D52C02F5092EAFB87771069C4AA5BAFDB9C502DA16E57E7200D2_1776091945816_gsp-sale-prices.png",
+      "image_source": "원문 본문 첫 이미지(CSS-Tricks WP CDN)",
+      "verdict": "검증 통과",
+      "note": "CTTD = 패션 이커머스 에이전시 — 가격/할인 표시는 직접 도메인. 합성 데모(코드+이미지) + 공식 사양(attr() Level 5·:has()·calc()) 충족. iOS Safari·한글 4축 직접 언급 없으나 가격 컴포넌트는 정렬·렌더링에서 한글 환경 별도 검증 필요. P0 강력 — 도메인 직결."
+    },
+    {
+      "id": "049",
+      "title": "AI와 대화하는 데 지쳤다",
+      "discovery_source": "news.hada.io/topic?id=29940",
+      "final_source_url": "https://orchidfiles.com/im-tired-of-ai-generated-answers/",
+      "publisher": "orchidfiles.com (개인 블로그)",
+      "published_at": "2026-05-28",
+      "concrete_facts": [
+        "사람들이 질문 답변을 AI 출력으로 대체 — GitHub 토론·직장·Reddit 사례",
+        "신뢰 붕괴·업무 효율 저하·동료 관계 손상",
+        "AI 생성 명세가 개발 과정 복잡화"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "개인 에세이 — DEV 매거진 글감 부족. SERVICE 카테고리 어울리나 그쪽도 원문 약함."
+    },
+    {
+      "id": "050",
+      "title": "좋아하는 개발자 도구는 무엇인가요?",
+      "discovery_source": "news.hada.io/topic?id=29937",
+      "final_source_url": "https://lobste.rs/s/2jdvxa/what_are_some_your_favourite_developer",
+      "publisher": "Lobsters 토론 스레드",
+      "published_at": "2026-05-27",
+      "concrete_facts": [
+        "에디터: Helix·Emacs·Neovim·Sublime·Zed·JetBrains — Helix가 '좋은 기본값' 평가",
+        "버전 관리: Jujutsu(jj)가 올해 최다 언급 — 'git CLI 불필요'",
+        "Shell: Fish가 '최소 설정으로 bash/zsh 작업 처리', 터미널 WezTerm·Ghostty·kitty",
+        "환경: Nix/NixOS '정확한 버전 핀'",
+        "철학: '좋은 기본값 도구가 끝없는 튜닝보다 낫다'"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Lobsters 커뮤니티 토론 — 큐레이션 성격. 공식 원문 아님. 단일 도구 심층 글이 아니라 나열식."
+    },
+    {
+      "id": "051",
+      "title": "Next.js articles • Josh W. Comeau",
+      "discovery_source": "joshwcomeau.com RSS",
+      "final_source_url": "https://www.joshwcomeau.com/nextjs/",
+      "publisher": "Josh W. Comeau",
+      "published_at": "2026-05-28",
+      "concrete_facts": [],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "카테고리 인덱스 페이지(1개 글 'Refreshing Server-Side Props' 목록만). 단일 글 아님."
+    },
+    {
+      "id": "052",
+      "title": "Why React Re-Renders",
+      "discovery_source": "joshwcomeau.com RSS",
+      "final_source_url": "https://www.joshwcomeau.com/react/why-react-re-renders/",
+      "publisher": "Josh W. Comeau",
+      "published_at": "2025-12-03",
+      "concrete_facts": [
+        "모든 re-render는 state 변경에서 시작 — 'props는 re-render와 무관'",
+        "state 소유 컴포넌트와 그 하위 트리 전체가 re-render — 카스케이드는 항상 아래로",
+        "React.memo로 pure 컴포넌트 래핑 시 props 미변경 re-render 스킵",
+        "useContext 사용 컴포넌트는 context 변경 시 props처럼 re-render"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "검증 통과",
+      "note": "원작 2022-08, 업데이트 2025-12-03 — 2026-05-28 발행은 RSS 재노출. 합성 데모(CodeSandbox 플레이그라운드) + React 공식 패턴. 한국 환경 4축 없음. P2로 처리된 이유는 신규성 부족 — 매거진은 신선한 글 우선."
+    },
+    {
+      "id": "053",
+      "title": "외주 인력 + LocalAI 조합이 곧 프론티어 랩보다 경제적이 될 것",
+      "discovery_source": "news.hada.io/topic?id=29936",
+      "final_source_url": "https://signalbloom.ai/",
+      "publisher": "signalbloom.ai",
+      "published_at": "2026-05-27",
+      "concrete_facts": [
+        "프론티어 모델(Anthropic·OpenAI) ~$2.80/M 토큰, DeepSeek $0.094/M — 약 30배 가격차",
+        "GPT-5.5는 8개월 전 GPT-5보다 3배 비쌈, Gemini 3.5 Flash 가격 3배",
+        "교차 시점: 외주 엔지니어 + DeepSeek 조합이 11개월 시점에 프론티어 비용 초과 (~$1,116.61/월)"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "에세이/분석 — CTTD 퍼블리셔 작업 의사결정 직결 약함. 데이터 자체는 흥미롭지만 출처(signalbloom.ai) 권위 불명. blocked-sources 인접."
+    },
+    {
+      "id": "054",
+      "title": "Show GN: 노트북 덮어도 안 죽는 Claude CLI 멀티세션 웹 터미널",
+      "discovery_source": "news.hada.io/topic?id=29926",
+      "final_source_url": "https://github.com/kimtaeyeong1229/claude-web-terminal",
+      "publisher": "kimtaeyeong1229 (GitHub)",
+      "published_at": "2026-05-27",
+      "concrete_facts": [
+        "다중 Claude CLI 세션을 탭/사이드바 UI로 관리",
+        "서버/PC 재시작 후 세션 자동 복원, 200KB 스크롤백 버퍼 복구",
+        "스택: Python 3.10+ aiohttp PTY WebSocket / Vanilla HTML+XTerm.js 5.5",
+        "Docker 컨테이너 내부 Claude 실행 통합",
+        "단일 사용자 도구 (인증 X, localhost 바인딩 권장)"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Show GN 1인 프로젝트 — 매거진 단독 글감 약함. blocked-sources(AI 코드 에디터) 인접."
+    },
+    {
+      "id": "055",
+      "title": "알리바바 클라우드 Qwen 컨퍼런스 2026 싱가포르 키노트 요약",
+      "discovery_source": "news.hada.io/topic?id=29921",
+      "final_source_url": "https://www.youtube.com/watch?v=r99c3sfgkmc",
+      "publisher": "YouTube (Alibaba Cloud)",
+      "published_at": "2026-05-27",
+      "concrete_facts": [
+        "Qwen 3.7 Max — 코딩·MCP·멀티모달·장기 자율 실행",
+        "Qwen Cloud platform(qwencloud.com) — 200+ 모델, 토큰 가격 $30/월 시작",
+        "에이전트 네이티브 인프라 — MicroVM 기반 밀리세컨드 부팅",
+        "싱가포르 정부 파트너십 — 1,000+ 기업·개발자·학생 AI 교육"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "YouTube 키노트 요약 — 1차 원문은 영상. blocked-sources(SaaS 릴리즈·AI 모델) 룰 인접. CTTD 독자 직결성 약함."
+    },
+    {
+      "id": "056",
+      "title": "Show GN: 구직을 AI에게 외주 주는 시대: Harper",
+      "discovery_source": "news.hada.io/topic?id=29914",
+      "final_source_url": "https://matchharper.com/",
+      "publisher": "Harper (matchharper.com)",
+      "published_at": "2026-05-27",
+      "concrete_facts": [
+        "10분 AI 대화로 이력서 대체 — 컨텍스트·숨은 가치 추출",
+        "실리콘밸리 스타트업(Sequoia 등 VC 백킹)과 매칭",
+        "구직자 무료 — B2B 매칭 비용으로 수익",
+        "검증: 3일 만에 미국 탑티어 AI 스타트업 창업자 매칭, 인터뷰 셋업 완료"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Show GN 스타트업 자기소개 — 화면·플로우 증거 부재. CTTD 매거진 카테고리 어디에도 안 맞음."
+    },
+    {
+      "id": "057",
+      "title": "React Doctor — AI 생성 React 코드 정적 분석 진단 도구",
+      "discovery_source": "news.hada.io/topic?id=29920",
+      "final_source_url": "https://github.com/millionco/react-doctor",
+      "publisher": "millionco (GitHub)",
+      "published_at": "2026-05-27",
+      "concrete_facts": [
+        "npx react-doctor@latest로 프로젝트 스캔 — 0-100점 평가",
+        "상태 관리·부수 효과·성능·보안·접근성·아키텍처 6개 카테고리, 100+ 룰",
+        "oxlint 기반 커스텀 플러그인 — 별도 ESLint 런타임 불필요",
+        "Claude Code·Cursor·Codex·OpenCode 통합 (react-doctor install)",
+        "GitHub Actions inline annotation, @react-doctor/api로 프로그래매틱 호출, MIT, v0.2.8"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "검증 통과",
+      "note": "AI 생성 React 코드 품질 검증 — million.dev 팀 도구로 신뢰성 있음. 합성 데모(CLI·점수) + 공식 사양(oxlint·룰 100+) + 프로덕션 통합(GitHub Actions·AI 에디터) 차등 인용 3종 충족 가능. CTTD 퍼블리셔/프론트엔드 직결 — 'AI 코드 검증 워크플로'. 접근성 1축 명시. P0 후보."
+    },
+    {
+      "id": "058",
+      "title": "OpenHuman",
+      "discovery_source": "news.hada.io/topic?id=29907",
+      "final_source_url": "https://github.com/tinyhumansai/openhuman",
+      "publisher": "tinyhumansai (GitHub)",
+      "published_at": "2026-05-27",
+      "concrete_facts": [
+        "데스크톱 마스코트 캐릭터 + Google Meet 참여형 에이전트",
+        "Memory Tree + Obsidian Wiki — local-first SQLite 지식베이스",
+        "TokenJuice 압축 — 비용·지연 최대 80% 절감",
+        "118+ 3rd party 서비스 OAuth 원클릭 (Gmail·Notion·GitHub·Slack)",
+        "GPL-3.0, 로컬 AI(Ollama) 지원"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "OSS 개인 에이전트 — CTTD 독자 작업 의사결정 직결 약함."
+    },
+    {
+      "id": "059",
+      "title": "Figma 디자인 에이전트 공개",
+      "discovery_source": "news.hada.io/topic?id=29906",
+      "final_source_url": "https://www.figma.com/",
+      "publisher": "Figma",
+      "published_at": "2026-05-27",
+      "concrete_facts": [
+        "Figma 캔버스 통합 네이티브 AI 에이전트 — 도구 전환 없이 AI 협업·직접 조작",
+        "디자인 시스템 지식(컴포넌트·토큰·베스트 프랙티스)으로 fine-tuned",
+        "병렬 프롬프팅 — 다중 아이디어 동시 탐색",
+        "@ 노티션으로 토큰·변수·컴포넌트 멘션",
+        "베타: Full seat (Professional·Organization·Enterprise) 한정, 베타 동안 크레딧 미소비"
+      ],
+      "image_url": "",
+      "image_source": "Figma 공식 사이트 별도 OG 검증 필요",
+      "verdict": "검증 통과",
+      "note": "Figma 공식 발표 — DESIGN 카테고리 더 적합(DEV로 분류된 건 분류 실수 가능성). UIUX 디자이너 핵심 글감. 합성 데모(가능) + 공식 사양(시트 자격·@ 멘션) + 프로덕션 사례(베타 사용자). 한국 환경 4축 없음. DESIGN 측 검증으로 이관 권장."
+    },
+    {
+      "id": "060",
+      "title": "유휴 Inference GPU Pool을 이용한 GPU Job 스케줄링",
+      "discovery_source": "news.hada.io/topic?id=29904",
+      "final_source_url": "https://www.lgresearch.ai/",
+      "publisher": "LG AI Research",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "야간(8PM-8AM) 52 GPU 유휴 — vLLM 메트릭 기반 autoscaling + best-effort 일시정지로 활용",
+        "Argo Workflows + Docker — 전처리·학습·파인튜닝·RL·평가 순차/병렬",
+        "2025-11~2026-01 결과: 85 job, 95,000 GPU시간, 1월 사용량 11월 대비 +70%, 비용 절감 ~₩185M (3개월), GPU 55대 추가 효과"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "LG AI Research 기술 블로그 — 인프라/MLOps 영역, CTTD 웹기획·UIUX·퍼블리셔 직결 약함."
+    },
+    {
+      "id": "061",
+      "title": "노르웨이의 2페타바이트 Huawei 플래시 스토리지와 LLM 학습",
+      "discovery_source": "news.hada.io/topic?id=29899",
+      "final_source_url": "https://blocksandfiles.com/",
+      "publisher": "Blocks and Files",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "노르웨이 국립도서관 — 노르웨이어 sovereign LLM, 2PB Huawei OceanStor Dorado 플래시",
+        "2005년 이후 누적 20PB 디지털화 콘텐츠, 3-2-1 백업으로 총 60PB",
+        "Nvidia DGX H200 + 384-core CPU, Sigma2 Olivia 슈퍼컴퓨터(HPE Cray, 448 GPU, 64,512 CPU 코어)"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "스토리지/인프라 — CTTD 직결 약함."
+    },
+    {
+      "id": "062",
+      "title": "[데브콘 + 하이파이브 발표자료 합본] AI 시대, 리더가 원하는 개발자란?",
+      "discovery_source": "news.hada.io/topic?id=29892",
+      "final_source_url": "https://www.stdy.blog/what-kind-of-devs-do-leaders-want-in-ai-era/",
+      "publisher": "Corca AX Team blog",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "코딩은 명세 명확·테스트 충분하면 '거의 해결된 문제'",
+        "4개 영역으로 도전 이동: 정보 수집/기획, 구현 효율, 운영/수익화, 아이디에이션 — 아이디에이션 최우선",
+        "5대 핵심 역량: 좋은 코드 작성, 근거 기반 의사결정, 동료 의사결정 지원, 현재 업무 가치 극대화, 지속 학습"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "발표 정리 — 매거진 발행 가능한 구체 사실(API·릴리즈·화면) 부재. 컬쳐/커리어 글로는 좋지만 CTTD DEV 매거진 형식과 불일치."
+    },
+    {
+      "id": "063",
+      "title": "Microfrontends routing now applies to vc alias and branch domains",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/microfrontends-routing-now-applies-to-vc-alias-and-branch-domains",
+      "publisher": "Vercel",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "vc alias로 Microfrontends URL 별칭 시 source deployment의 routing config 보존",
+        "git 브랜치 연결 도메인이 동일 브랜치 가진 모든 Microfrontend 프로젝트로 라우팅",
+        "이전 제약(도메인 소유 프로젝트 내 브랜치만 라우팅) 해소"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Vercel Microfrontends 내부 — 사용 진영 좁음."
+    },
+    {
+      "id": "064",
+      "title": "React를 좋아하는 사람이 실제로 있긴 한가요?",
+      "discovery_source": "news.hada.io/topic?id=29900",
+      "final_source_url": "https://jsx.lol/",
+      "publisher": "jsx.lol",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "성능 저하·API 디자인 혼란 비판 큐레이션",
+        "CVE-2025-55182 (CVSS 10.0 unauthenticated RCE) 언급",
+        "Next.js + Vercel governance lock-in 우려",
+        "React 채택은 기술 적합성보다 관성·네트워크 효과"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "큐레이션 비판 사이트 — 공식 원문 아님. 흥미는 있으나 매거진 발행 형식 불일치."
+    },
+    {
+      "id": "065",
+      "title": "Uber COO, tokenmaxxing에 쓰는 돈을 정당화하기가 점점 어려워지고 있다",
+      "discovery_source": "news.hada.io/topic?id=29897",
+      "final_source_url": "https://www.businessinsider.com/",
+      "publisher": "Business Insider",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "Uber CTO: 2026년 Claude Code 예산을 4개월 만에 소진",
+        "COO: 토큰 소비 증가와 소비자 기능 가치 사이 연결 부재",
+        "Meta·Google·JPMorgan은 AI 사용을 인사평가/보상에 반영, Duolingo는 직원 반발로 철회"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "비즈니스 동향 — CTTD DEV 매거진 형식과 불일치. SERVICE 영역 가능성."
+    },
+    {
+      "id": "066",
+      "title": "Show GN: Appbun — URL 하나로 데스크톱 앱",
+      "discovery_source": "news.hada.io/topic?id=29896",
+      "final_source_url": "https://github.com/bigmacfive/appbun",
+      "publisher": "bigmacfive (GitHub)",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "npx appbun <URL>로 웹 URL을 데스크톱 앱 프로젝트로 변환",
+        "사이트 메타데이터(앱 이름·아이콘·테마 컬러) 자동 추출",
+        "macOS·Windows·Linux 크로스플랫폼, Electrobun 기반 수정 가능한 프로젝트 출력"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Show GN 1인 도구 — 매거진 단독 글감 약함."
+    },
+    {
+      "id": "067",
+      "title": "Ferrari Luce",
+      "discovery_source": "news.hada.io/topic?id=29894",
+      "final_source_url": "https://www.ferrari.com/",
+      "publisher": "Ferrari",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "4도어 5인승 전기차 — Maranello 디자인·개발·제조",
+        "Sir Jony Ive·Marc Newson(LoveFrom)이 외장·내장·인터페이스 통합 디자인",
+        "active air shutter + 10mm 차고 감소로 Ferrari 최저 항력 계수",
+        "Ferrari Luce 앱 — 공조·충전·차량 상태 제어"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "자동차 발표 — CTTD DEV 매거진과 완전 무관. 분류 오류 가능성. Jony Ive 디자인 관점이면 DESIGN/SERVICE 측에서도 약함."
+    },
+    {
+      "id": "068",
+      "title": "Show GN: M Note",
+      "discovery_source": "news.hada.io/topic?id=29891",
+      "final_source_url": "https://github.com/younghoandrewchaa/m-note/releases",
+      "publisher": "andrewchaa (GitHub)",
+      "published_at": "2026-05-26",
+      "concrete_facts": [
+        "macOS 데스크톱 마크다운 뷰어/에디터 — Electron + Tiptap + React",
+        "계정 불필요, 로컬 동작",
+        "개인 도구 → 오픈소스 공개"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Show GN 1인 도구 — 매거진 단독 글감 약함."
+    },
+    {
+      "id": "069",
+      "title": "Web Weekly #193",
+      "discovery_source": "stefanjudis.com",
+      "final_source_url": "https://webweekly.email/archive/web-weekly-193",
+      "publisher": "Stefan Judis",
+      "published_at": "2026-05-22",
+      "concrete_facts": [],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "뉴스레터 큐레이션 — 각 항목 별도 원문 필요. Temporal stable·:open pseudo-class·User Activation API baseline 등은 개별 원문 직접 검증."
+    },
+    {
+      "id": "070",
+      "title": "GitHub Copilot for Eclipse is open source",
+      "discovery_source": "github.blog/changelog",
+      "final_source_url": "https://github.blog/changelog/2026-05-21-github-copilot-for-eclipse-is-open-source",
+      "publisher": "GitHub",
+      "published_at": "2026-05-21",
+      "concrete_facts": [
+        "MIT 라이선스 — github.com/microsoft/copilot-for-eclipse",
+        "inline 코드 보완·Next Edit Suggestions·chat·agent mode·BYOK 통합",
+        "@iloveeclipse·@travkin79·@rsd-darshan 등 외부 기여 진행"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Eclipse 사용자는 CTTD 독자 진영(웹퍼블리셔·프론트엔드)과 거리 멂. blocked-sources(AI 코드 에디터·SaaS 릴리즈) 인접."
+    },
+    {
+      "id": "071",
+      "title": "Pull anomaly alert details using the Vercel CLI",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/pull-anomaly-alert-details-using-the-vercel-cli",
+      "publisher": "Vercel",
+      "published_at": "2026-05-21",
+      "concrete_facts": [
+        "vercel alerts — 팀/프로젝트의 모든 alert 목록 (시작 시간·유형·활성)",
+        "--ai 플래그 — AI 조사 결과 동반 표시",
+        "Observability Plus 티어 전용"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Vercel CLI 마이너 추가 — 매거진 단독 글감 약함."
+    },
+    {
+      "id": "072",
+      "title": "Configure weighted traffic splits for Vercel Flags from the Vercel CLI",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/configure-weighted-traffic-splits-for-vercel-flags-from-the-vercel-cli",
+      "publisher": "Vercel",
+      "published_at": "2026-05-21",
+      "concrete_facts": [
+        "vercel flags split — 변형에 트래픽 퍼센티지 분배",
+        "환경·bucketing 속성(user.id 등)·variant weight를 인터랙티브/플래그로 지정",
+        "예: 95% off / 5% on A/B 테스트 비대칭 분배"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Vercel CLI/Flags — 마이너 추가. 매거진 단독 글감 약함."
+    },
+    {
+      "id": "073",
+      "title": "Chat SDK adds message subjects and direct SDK access",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/chat-sdk-adds-message-subjects-and-direct-sdk-access",
+      "publisher": "Vercel",
+      "published_at": "2026-05-20",
+      "concrete_facts": [
+        "message.subject — Linear issue·GitHub PR 같은 부모 리소스 접근 (title·status·URL·payload)",
+        "메시지당 캐싱 — 반복 접근 시 API 단 1회",
+        "octokit·linearClient·webClient 등 플랫폼 SDK 직접 노출",
+        "Slack 등 부모 없는 플랫폼에서 null로 우아하게 degrade",
+        ".client getter는 deprecated alias로 유지"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Vercel Chat SDK — 사용 진영 좁음."
+    },
+    {
+      "id": "074",
+      "title": "Gemini 3.5 Flash on AI Gateway",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/gemini-3-5-flash-on-ai-gateway",
+      "publisher": "Vercel",
+      "published_at": "2026-05-19",
+      "concrete_facts": [
+        "이전 Flash 대비 코딩·병렬 에이전트 실행·reasoning 강화",
+        "기본 medium thinking level — 품질·속도·비용 균형",
+        "AI SDK에서 google/gemini-3.5-flash로 호출"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "모델 라인업 추가 — blocked-sources(AI 모델·SaaS 릴리즈) 인접."
+    },
+    {
+      "id": "075",
+      "title": "Run Claude Managed Agents with Vercel Sandbox",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/run-claude-managed-agents-with-vercel-sandbox",
+      "publisher": "Vercel",
+      "published_at": "2026-05-18",
+      "concrete_facts": [
+        "각 에이전트 세션은 Firecracker microVM에서 격리, ms 부팅",
+        "Deny-by-default egress + 도메인 allowlist, firewall 자격증명 brokering",
+        "Anthropic은 model·harness·tools·session state를 관리, Vercel은 sandbox 실행 환경 제공"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "AI 에이전트 인프라 통합 — CTTD 퍼블리셔/프론트엔드 직결 약함."
+    },
+    {
+      "id": "076",
+      "title": "Use native curl syntax with Vercel CLI",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/use-native-curl-syntax-with-vercel-cli",
+      "publisher": "Vercel",
+      "published_at": "2026-05-15",
+      "concrete_facts": [
+        "vercel curl — full URL·bare hostname·--url 플래그 형식",
+        "Vercel 자격증명으로 자동 인증 — Deployment Protection 우회",
+        "프로젝트 로컬 링크 시 path만으로 요청 (/api/hello)"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "Vercel CLI 마이너 추가 — 매거진 단독 글감 약함."
+    },
+    {
+      "id": "077",
+      "title": "Sort providers by cost, latency, or throughput on AI Gateway",
+      "discovery_source": "vercel.com/changelog",
+      "final_source_url": "https://vercel.com/changelog/sort-providers-by-cost-latency-or-throughput-on-ai-gateway",
+      "publisher": "Vercel",
+      "published_at": "2026-05-15",
+      "concrete_facts": [
+        "정렬 옵션: 'cost'(최저가), 'ttft'(최저 지연), 'tps'(최고 throughput) — 요청 시점 계산",
+        "Zero Data Retention(ZDR) 등 다른 라우팅 옵션과 합성 가능, order 파라미터와 결합",
+        "응답 메타데이터에 평가 프로바이더·메트릭·시도 순서·deprioritized 항목 포함"
+      ],
+      "image_url": "",
+      "image_source": "",
+      "verdict": "원문 부족",
+      "exclusion_reason": "AI Gateway 라우팅 옵션 — blocked-sources(AI 모델·SaaS 릴리즈) 인접."
+    }
+  ]
+}

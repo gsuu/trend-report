@@ -1,0 +1,3693 @@
+# 2026-05-28 수집/분류 브리프
+
+이 파일은 자동 수집 결과입니다. 여기서는 채택/보류/제외, 제목 보정, 매거진 인사이트 작성을 하지 않습니다.
+
+## AI 편집 기준
+
+- [scripts/tracking/new_collection.py](scripts/tracking/new_collection.py)
+- [docs/data-collection-strategy.md](docs/data-collection-strategy.md)
+- [docs/service-digest-agent-prompt.md](docs/service-digest-agent-prompt.md)
+- [docs/design-digest-agent-prompt.md](docs/design-digest-agent-prompt.md)
+- [docs/dev-digest-agent-prompt.md](docs/dev-digest-agent-prompt.md)
+- [docs/target-fit-classifier-agent.md](docs/target-fit-classifier-agent.md)
+- [docs/editorial-style-guide.md](docs/editorial-style-guide.md)
+- [docs/magazine-writing-standard.md](docs/magazine-writing-standard.md)
+
+AI 편집 단계에서 할 일:
+
+- `scripts/tracking/new_collection.py`의 카테고리별 관찰 포인트와 DEV 필수 수집 원칙을 읽습니다.
+- `docs/data-collection-strategy.md` 기준으로 후보 발견 출처와 최종 기준 원문을 분리합니다.
+- `docs/target-fit-classifier-agent.md` 기준으로 후보를 `core_ecommerce / commerce_adjacent / design_dev_reference / weak_promo / exclude`로 먼저 분류합니다.
+- `docs/editorial-style-guide.md` 기준으로 타겟이 궁금해할 정보만 남깁니다.
+- 각 후보를 `채택 / 보류 / 제외`로 판단하고 사유를 남깁니다.
+- 최종 원고 작성 기준 후보는 이커머스 core 후보를 최우선으로 20~30개 사이 `shortlist-20-30.md`에 정리합니다.
+- `shortlist-20-30.md`는 다시 4~7개로 줄이는 예비 목록이 아니라, 원문 검증 후 그대로 `magazine-report.md`로 작성할 기준 목록입니다.
+- 카드 제휴, 쿠폰/e쿠폰, 콘텐츠 제휴, 외부 AI 연동, 멤버십 프로모션은 원문에서 화면·플로우·정책 변화가 확인될 때만 채택합니다.
+- Service 후보는 `왜 웹서비스 전문가가 주목해야 하는지`와 `우리 서비스에 적용할 때 고려할 화면·정책·플로우 조건`이 둘 다 보일 때만 채택합니다.
+- `혜택 조건을 쉽게`, `결제 후 다음 거래`, `추천을 안전하게 연결`처럼 어느 서비스에도 붙는 일반론만 남는 후보는 제외합니다.
+- 같은 브랜드 후보가 많을 때는 AI 편집 단계에서 독자 가치가 큰 항목 최대 2개만 채택합니다.
+- shortlist 항목 중 원문 부족, 광고성, 화면·서비스·구현 변화 미확인 항목만 제외 메모로 옮기고, 통과 항목은 `magazine-report.md`로 작성한 뒤 Notion 업로드를 진행합니다.
+
+## 수집 요약
+
+- 전체 수집: 151
+- AI 검토 후보: 130
+- 자동 제외: 21
+
+### 원자료 파일
+
+- runs/2026-05-28/raw/service-articles.json
+- runs/2026-05-28/raw/design-articles.json
+- runs/2026-05-28/raw/dev-articles.json
+
+### 수집 리포트 파일
+
+- runs/2026-05-28/raw/service-fetch-report.json
+- runs/2026-05-28/raw/design-fetch-report.json
+- runs/2026-05-28/raw/dev-fetch-report.json
+
+### 대분류별 수집 수
+
+- Design: 27
+- DEV: 77
+- Service: 47
+
+### 타겟 판정별 수
+
+- commerce_adjacent: 12
+- core_ecommerce: 3
+- design_dev_reference: 104
+- exclude: 14
+- weak_promo: 18
+
+## Service
+
+### 01. [신세계그룹 뉴스룸] 주문하면 5시간 안에 갑니다… 신세계라이브쇼핑, 서울 전역에 ‘지금 퀵’ 서비스 도입해
+
+- 날짜: 2026-05-28
+- 대분류: Service
+- 카테고리: ecommerce
+- 타겟 적합성: core_ecommerce
+- shortlist 우선순위: P0
+- 적합성 메모: 상품 탐색, 구매, 결제, 멤버십, 리뷰, 추천 등 이커머스 여정에 직접 연결되는 후보입니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: 신세계그룹 뉴스룸
+- 후보 발견 URL: https://www.shinsegaegroupnewsroom.com/shinsegae-live-shopping-introduces-quick-now-service-in-seoul-3/
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: commerce_core, payment_checkout
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://shinsegae-prd-data.s3.ap-northeast-2.amazonaws.com/wp-content/uploads/2026/05/%EC%A7%80%EA%B8%88%ED%80%B5-%EB%A1%9C%EA%B3%A0.jpg
+
+주문하면 5시간 안에 갑니다… 신세계라이브쇼핑, 서울 전역에 ‘지금 퀵’ 서비스 도입해
+
+### 02. [우아한형제들 기술블로그] 우아한공방의 새로운 동료, 시스템 맥락을 가진 챗봇서비스 개발기(feat. RAG)
+
+- 날짜: 2026-05-22
+- 대분류: Service
+- 카테고리: ecommerce
+- 타겟 적합성: core_ecommerce
+- shortlist 우선순위: P0
+- 적합성 메모: 상품 탐색, 구매, 결제, 멤버십, 리뷰, 추천 등 이커머스 여정에 직접 연결되는 후보입니다.
+- 직무 태그: 웹서비스기획, 웹디자인
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: 우아한형제들 기술블로그
+- 후보 발견 URL: https://techblog.woowahan.com/26319/
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: review_trust, service_ai
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://techblog.woowahan.com/wp-content/uploads/2025/07/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC-%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%B0%B0%EB%84%88.png
+
+왼쪽 예시처럼 디자인시스템과 무관한 질문을 하거나, 오른쪽 예시처럼 특정 인물에 대한 평가를 요청하는 질의들이 들어오기 시작했습니다. 문제는 이러한 응답이 단순한 재미 요소를 넘어, 우아한공방 챗봇이 의도한 서비스 범주 밖의 답변까지 생성하고 있었다는 점입니다. 서비스의 역할과 무관한 응답이 계속 생성될 경우 사용자 경험과 응답 신뢰도에도 영향을 줄 수 있었기 때문에, 답변 범위를 명확히 제한할 필요가 있었습니다.
+
+### 03. [오늘의집 뉴스룸] “여름 침구 미리 산다” 오늘의집, 여름 맞이 ‘냉감 패브릭’ 검색량 급증
+
+- 날짜: 2026-05-27
+- 대분류: Service
+- 카테고리: lifestyle_commerce
+- 타겟 적합성: core_ecommerce
+- shortlist 우선순위: P0
+- 적합성 메모: 상품 탐색, 구매, 결제, 멤버십, 리뷰, 추천 등 이커머스 여정에 직접 연결되는 후보입니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: 오늘의집 뉴스룸
+- 후보 발견 URL: https://ohstory.io/press/pressrelease/15350
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: commerce_core, search_discovery
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://ohstory.io/wp-content/uploads/2026/05/%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%9E%90%EB%A3%8C-%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-layer%EC%9D%98-%EB%83%89%EA%B0%90%EC%9D%B4%EB%B6%88%EC%84%B8%ED%8A%B8.jpg
+
+초여름 더위가 예년보다 빠르게 찾아오면서 시원한 숙면을 위한 냉감 패브릭 상품을 찾는 소비자들이 늘고 있다. 실제로 최근 기상청은 브리핑을 통해 올해 6월~8월 기온이 평년보다 높을 확률이 약 50~60% 수준이라고 전망했다.
+
+### 04. [CJ News Room] 美 ‘더CJ컵’ 찾은 이재현 회장, “K라이프스타일 플랫폼 통해 글로벌 사업 확대 가속” &#8211; CJ 뉴스룸
+
+- 날짜: 2026-05-25
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: commerce_adjacent
+- shortlist 우선순위: P1
+- 적합성 메모: 이커머스가 아니어도 신뢰, 결제, 추천, 운영 UX처럼 고객 여정에 대입 가능한 후보입니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: CJ News Room
+- 후보 발견 URL: https://cjnews.cj.net/%e7%be%8e-%eb%8d%94cj%ec%bb%b5-%ec%b0%be%ec%9d%80-%ec%9d%b4%ec%9e%ac%ed%98%84-%ed%9a%8c%ec%9e%a5-k%eb%9d%bc%ec%9d%b4%ed%94%84%ec%8a%a4%ed%83%80%ec%9d%bc-%ed%94%8c%eb%9e%ab/?utm_source=rss&utm_medium=rss&utm_campaign=%25e7%25be%258e-%25eb%258d%2594cj%25ec%25bb%25b5-%25ec%25b0%25be%25ec%259d%2580-%25ec%259d%25b4%25ec%259e%25ac%25ed%2598%2584-%25ed%259a%258c%25ec%259e%25a5-k%25eb%259d%25bc%25ec%259d%25b4%25ed%2594%2584%25ec%258a%25a4%25ed%2583%2580%25ec%259d%25bc-%25ed%2594%258c%25eb%259e%25ab
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: payment_checkout, o2o_flow
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJNEWSROOM_thumbnail_0525.jpg
+
+이재현 CJ그룹 회장이 미국 텍사스주 맥키니에서 열린 ‘더 CJ컵 바이런 넬슨(THE CJ CUP Byron Nelson)’ 현장을 방문해 K라이프스타일 플랫폼의 글로벌 확장 가능성을 직접 점검하고, 그룹 차원의 글로벌 사업 가속화를 주문했다. 이 회장이 미국에서 개최된 더 CJ컵 현장
+
+### 05. [CJ News Room] CJ제일제당, 냉동김밥 전 공정 자동화로 글로벌 표준을 만들다 &#8211; CJ 뉴스룸
+
+- 날짜: 2026-05-22
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: commerce_adjacent
+- shortlist 우선순위: P1
+- 적합성 메모: 이커머스가 아니어도 신뢰, 결제, 추천, 운영 UX처럼 고객 여정에 대입 가능한 후보입니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: CJ News Room
+- 후보 발견 URL: https://cjnews.cj.net/cj%ec%a0%9c%ec%9d%bc%ec%a0%9c%eb%8b%b9-%eb%83%89%eb%8f%99%ea%b9%80%eb%b0%a5-%ec%a0%84-%ea%b3%b5%ec%a0%95-%ec%9e%90%eb%8f%99%ed%99%94%eb%a1%9c-%ea%b8%80%eb%a1%9c%eb%b2%8c-%ed%91%9c%ec%a4%80%ec%9d%84/?utm_source=rss&utm_medium=rss&utm_campaign=cj%25ec%25a0%259c%25ec%259d%25bc%25ec%25a0%259c%25eb%258b%25b9-%25eb%2583%2589%25eb%258f%2599%25ea%25b9%2580%25eb%25b0%25a5-%25ec%25a0%2584-%25ea%25b3%25b5%25ec%25a0%2595-%25ec%259e%2590%25eb%258f%2599%25ed%2599%2594%25eb%25a1%259c-%25ea%25b8%2580%25eb%25a1%259c%25eb%25b2%258c-%25ed%2591%259c%25ec%25a4%2580%25ec%259d%2584
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: service_ai
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJSTORY_cheiljedang_20260522_thumbnail.jpg
+
+미국 마트 냉동식품 코너에서 품절 사태를 만든 한국 음식이 있다. 바로 냉동김밥이다. K콘텐츠를 통해 자연스럽게 알려진 김밥은 간편하면서도 균형 잡힌 한 끼로 주목받으며 북미와 일본을 중심으로 빠르게 시장을 확대하고 있다. 이제 냉동김밥은 단순한 유행을 넘어 K푸드의 새로운 글로벌 카테
+
+### 06. [Glossy] Unpacked: How loyalty programs power lifecycle marketing strategies
+
+- 날짜: 2026-05-22
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: commerce_adjacent
+- shortlist 우선순위: P1
+- 적합성 메모: 이커머스가 아니어도 신뢰, 결제, 추천, 운영 UX처럼 고객 여정에 대입 가능한 후보입니다.
+- 직무 태그: 웹서비스기획, 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Glossy
+- 후보 발견 URL: https://www.glossy.co/sponsored/unpacked-how-loyalty-programs-power-lifecycle-marketing-strategies/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: review_trust
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.glossy.co/wp-content/uploads/sites/4/2026/05/Glossy-SheerID-banner.png
+
+Discover how loyalty programs and lifecycle marketing drive growth, using verified data to personalize experiences and build lasting customer trust.
+
+### 07. [CJ News Room] 올리브영 미국 패서디나점 완벽 가이드: 매장·브랜드·온라인몰·멤버십 총정리 &#8211; CJ 뉴스룸
+
+- 날짜: 2026-05-21
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: commerce_adjacent
+- shortlist 우선순위: P1
+- 적합성 메모: 이커머스가 아니어도 신뢰, 결제, 추천, 운영 UX처럼 고객 여정에 대입 가능한 후보입니다.
+- 직무 태그: 웹서비스기획, 웹디자인
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: CJ News Room
+- 후보 발견 URL: https://cjnews.cj.net/%ec%98%ac%eb%a6%ac%eb%b8%8c%ec%98%81-%eb%af%b8%ea%b5%ad-%ed%8c%a8%ec%84%9c%eb%94%94%eb%82%98%ec%a0%90-%ec%99%84%eb%b2%bd-%ea%b0%80%ec%9d%b4%eb%93%9c-%eb%a7%a4%ec%9e%a5%c2%b7%eb%b8%8c%eb%9e%9c/?utm_source=rss&utm_medium=rss&utm_campaign=%25ec%2598%25ac%25eb%25a6%25ac%25eb%25b8%258c%25ec%2598%2581-%25eb%25af%25b8%25ea%25b5%25ad-%25ed%258c%25a8%25ec%2584%259c%25eb%2594%2594%25eb%2582%2598%25ec%25a0%2590-%25ec%2599%2584%25eb%25b2%25bd-%25ea%25b0%2580%25ec%259d%25b4%25eb%2593%259c-%25eb%25a7%25a4%25ec%259e%25a5%25c2%25b7%25eb%25b8%258c%25eb%259e%259c
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: commerce_core, membership_retention, o2o_flow
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJ%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81_thumbnail-2.jpg
+
+LA&nbsp;동북부&nbsp;핵심&nbsp;프리미엄&nbsp;상권&nbsp;조준&nbsp;‘올리브영&nbsp;패서디나점’ 올리브영의 첫 미국 매장이 들어서는&nbsp;패서디나의&nbsp;콜로라도대로(Colorado&nbsp;Blvd.) 일대는 로스앤젤레스(LA) 동북부를 관통하는 상징
+
+### 08. [CJ News Room] CJ푸드빌 뚜레쥬르, 美 ‘더 CJ컵’서 북미 입맛 홀린다… K베이커리 열풍 확산 주도 &#8211; CJ 뉴스룸
+
+- 날짜: 2026-05-21
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: commerce_adjacent
+- shortlist 우선순위: P1
+- 적합성 메모: 이커머스가 아니어도 신뢰, 결제, 추천, 운영 UX처럼 고객 여정에 대입 가능한 후보입니다.
+- 직무 태그: 웹서비스기획, 웹디자인
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: CJ News Room
+- 후보 발견 URL: https://cjnews.cj.net/cj%ed%91%b8%eb%93%9c%eb%b9%8c-%eb%9a%9c%eb%a0%88%ec%a5%ac%eb%a5%b4-%e7%be%8e-%eb%8d%94-cj%ec%bb%b5%ec%84%9c-%eb%b6%81%eb%af%b8-%ec%9e%85%eb%a7%9b-%ed%99%80%eb%a6%b0%eb%8b%a4/?utm_source=rss&utm_medium=rss&utm_campaign=cj%25ed%2591%25b8%25eb%2593%259c%25eb%25b9%258c-%25eb%259a%259c%25eb%25a0%2588%25ec%25a5%25ac%25eb%25a5%25b4-%25e7%25be%258e-%25eb%258d%2594-cj%25ec%25bb%25b5%25ec%2584%259c-%25eb%25b6%2581%25eb%25af%25b8-%25ec%259e%2585%25eb%25a7%259b-%25ed%2599%2580%25eb%25a6%25b0%25eb%258b%25a4
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: seller_operation
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJ%ED%91%B8%EB%93%9C%EB%B9%8C_thumbnail-1-2.jpg
+
+CJ푸드빌이 운영하는 뚜레쥬르가 현지 시간 5월 21일부터 25일까지 미국 텍사스주에서 열리는 ‘더 CJ컵 바이런 넬슨(영문명 THE CJ CUP Byron Nelson, 이하 더 CJ컵)’ 현장에서 전 세계 골프팬들을 대상으로 차별화된 K베이커리 체험 기회를 제공하며 브랜드 가치 전파
+
+### 09. [CJ News Room] ‘제로베이스원 컴백기념’ CJ ONE 리미티드 멤버십 카드 출시
+
+- 날짜: 2026-05-21
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: commerce_adjacent
+- shortlist 우선순위: P1
+- 적합성 메모: 이커머스가 아니어도 신뢰, 결제, 추천, 운영 UX처럼 고객 여정에 대입 가능한 후보입니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: CJ News Room
+- 후보 발견 URL: https://cjnews.cj.net/%ec%a0%9c%eb%a1%9c%eb%b2%a0%ec%9d%b4%ec%8a%a4%ec%9b%90-%ec%bb%b4%eb%b0%b1%ea%b8%b0%eb%85%90-cj-one-%eb%a6%ac%eb%af%b8%ed%8b%b0%eb%93%9c-%eb%a9%a4%eb%b2%84%ec%8b%ad-%ec%b9%b4%eb%93%9c/?utm_source=rss&utm_medium=rss&utm_campaign=%25ec%25a0%259c%25eb%25a1%259c%25eb%25b2%25a0%25ec%259d%25b4%25ec%258a%25a4%25ec%259b%2590-%25ec%25bb%25b4%25eb%25b0%25b1%25ea%25b8%25b0%25eb%2585%2590-cj-one-%25eb%25a6%25ac%25eb%25af%25b8%25ed%258b%25b0%25eb%2593%259c-%25eb%25a9%25a4%25eb%25b2%2584%25ec%258b%25ad-%25ec%25b9%25b4%25eb%2593%259c
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: membership_retention, seller_operation
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJ-ONE_thumbnail.jpg
+
+CJ ONE이 글로벌 아티스트 제로베이스원(ZEROBASEONE)의 컴백을 기념하여 리미티드 멤버십 카드를 발행한다.&nbsp; CJ올리브네트웍스(대표이사 유인상)가 운영하는 라이프스타일 멤버십 CJ ONE이 오늘(21일) 하루 동안 제로베이스원을 테마로 한 멤버십 카드를 발급한다. 제
+
+### 10. [CJ News Room] CJ온스타일, ‘월리런’ 라방 흥행∙∙∙ 2030이 이끈 ‘펀런’ 열풍 &#8211; CJ 뉴스룸
+
+- 날짜: 2026-05-20
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: commerce_adjacent
+- shortlist 우선순위: P1
+- 적합성 메모: 이커머스가 아니어도 신뢰, 결제, 추천, 운영 UX처럼 고객 여정에 대입 가능한 후보입니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: CJ News Room
+- 후보 발견 URL: https://cjnews.cj.net/cj%ec%98%a8%ec%8a%a4%ed%83%80%ec%9d%bc-%ec%9b%94%eb%a6%ac%eb%9f%b0-%eb%9d%bc%eb%b0%a9-%ed%9d%a5%ed%96%89%e2%88%99%e2%88%99%e2%88%99-2030%ec%9d%b4-%ec%9d%b4%eb%81%88/?utm_source=rss&utm_medium=rss&utm_campaign=cj%25ec%2598%25a8%25ec%258a%25a4%25ed%2583%2580%25ec%259d%25bc-%25ec%259b%2594%25eb%25a6%25ac%25eb%259f%25b0-%25eb%259d%25bc%25eb%25b0%25a9-%25ed%259d%25a5%25ed%2596%2589%25e2%2588%2599%25e2%2588%2599%25e2%2588%2599-2030%25ec%259d%25b4-%25ec%259d%25b4%25eb%2581%2588
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: commerce_core
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJ%EC%98%A8%EC%8A%A4%ED%83%80%EC%9D%BC_thumbnail-1.jpg
+
+CJ온스타일이 마라톤 대회 ‘월리를 찾아라! Run with 신한카드(이하 월리런)’ 참가권을 소개한 모바일 라이브 커머스(이하 라방)에서 고객 1인당 평균 1.7건의 참가권을 구매한 것으로 집계됐다고 20일 밝혔다. 이제는 개인 기록 경쟁 중심의 러닝보다 친구·가족과 함께 즐기는 새로
+
+### 11. [Glossy] Sephora Strategies: With its launch at Sephora US, Fugazzi wants to bring luxury fragrance to the masses
+
+- 날짜: 2026-05-18
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: commerce_adjacent
+- shortlist 우선순위: P1
+- 적합성 메모: 이커머스가 아니어도 신뢰, 결제, 추천, 운영 UX처럼 고객 여정에 대입 가능한 후보입니다.
+- 직무 태그: 웹서비스기획, 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Glossy
+- 후보 발견 URL: https://www.glossy.co/beauty/sephora-strategies-with-its-launch-at-sephora-us-fugazzi-wants-to-bring-luxury-fragrance-to-the-masses/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: o2o_flow
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.glossy.co/wp-content/uploads/sites/4/2026/05/sephora-strategies-fugazzi.jpg
+
+Fugazzi was already on the upswing before launching at 100 U.S. Sephora stores in March. But founder Bram Niessink wants Fugazzi to make the kind of scents that you stop and recognize on the street. And for that, there’s no better platform than Sephora.
+
+### 12. [Stripe Sessions] Expanding Stripe Radar to protect more of your business
+
+- 날짜: 2026-05-27
+- 대분류: Service
+- 카테고리: ai
+- 타겟 적합성: commerce_adjacent
+- shortlist 우선순위: P1
+- 적합성 메모: 이커머스가 아니어도 신뢰, 결제, 추천, 운영 UX처럼 고객 여정에 대입 가능한 후보입니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Stripe Sessions
+- 후보 발견 URL: https://stripe.com/blog/expanding-stripe-radar-to-protect-more-of-your-business
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: payment_checkout
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://images.stripeassets.com/fzn2n1nzq965/59d4stabEiviH63RKMAsKM/8864fdaf66ba05b17596ea4aecc07776/Radar-social.jpg?q=80
+
+Radar now blocks high-risk transactions across all supported payment methods; defends against new fraud types; and gives platforms new tools to evaluate and mitigate merchant risk on and off Stripe.
+
+### 13. [Retail Dive] Lowe’s courts DIY shoppers as AI tools boost online conversions
+
+- 날짜: 2026-05-26
+- 대분류: Service
+- 카테고리: ai
+- 타겟 적합성: commerce_adjacent
+- shortlist 우선순위: P1
+- 적합성 메모: 이커머스가 아니어도 신뢰, 결제, 추천, 운영 UX처럼 고객 여정에 대입 가능한 후보입니다.
+- 직무 태그: 웹서비스기획, 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Retail Dive
+- 후보 발견 URL: https://www.retaildive.com/news/lowes-diy-shoppers-ai-tools-online-conversions/821019/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: service_ai
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://imgproxy.divecdn.com/P4x1oYneUoeJKw9fIoorK5qAyfkSMfgQiwhMliyWplU/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xNDkyNjcyMzA0LmpwZw==.webp
+
+The retailer is aiming to build relationships with its DIY customers through AI-enhanced omnichannel shopping, associate-led services and loyalty program options.
+
+### 14. [Glossy] Simkhai is building an AI storefront for shoppers who don’t know what to search
+
+- 날짜: 2026-05-18
+- 대분류: Service
+- 카테고리: ai
+- 타겟 적합성: commerce_adjacent
+- shortlist 우선순위: P1
+- 적합성 메모: 이커머스가 아니어도 신뢰, 결제, 추천, 운영 UX처럼 고객 여정에 대입 가능한 후보입니다.
+- 직무 태그: 웹서비스기획, 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Glossy
+- 후보 발견 URL: https://www.glossy.co/fashion/luxury/simkhai-is-building-an-ai-storefront-for-shoppers-who-dont-know-what-to-search/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: search_discovery, o2o_flow, service_ai
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.glossy.co/wp-content/uploads/sites/4/2026/05/Screenshot-2026-05-15-at-4.20.49-PM.png
+
+Simkhai is preparing to launch a separate AI-powered digital "storefront" designed to bring more of its in-store styling experience online.
+
+### 15. [오픈서베이 블로그] K-푸드 글로벌 트렌드, 약과부터 라면까지 외국인 유학생 100명이 발견한 K-푸드의 &#039;반전&#039;
+
+- 날짜: 2026-05-25
+- 대분류: Service
+- 카테고리: research
+- 타겟 적합성: commerce_adjacent
+- shortlist 우선순위: P1
+- 적합성 메모: 이커머스가 아니어도 신뢰, 결제, 추천, 운영 UX처럼 고객 여정에 대입 가능한 후보입니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: 오픈서베이 블로그
+- 후보 발견 URL: https://blog.opensurvey.co.kr/article/k-food-2026-2/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: search_discovery, research_signal
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: https://i0.wp.com/blog.opensurvey.co.kr/wp-content/uploads/2026/05/26_thumbnail_article_09.png?fit=1400%2C1400&ssl=1
+
+K 잘알 외국인 유학생 100명이 직접 경험한 K-푸드 글로벌 트렌드를 데이터로 확인하세요. 한국 거주 전후 K-푸드 이미지 변화, 약과·초코파이의 재해석, 서구와 아시아의 각 대륙별 선호하는 맛의 차이까지 K-푸드 해외 마케팅 전략에 필요한 인사이트를 담았습니다.
+
+### 16. [신세계그룹 뉴스룸] “여배우 가방 속 그 미스트 어디 거?” 자주(JAJU), 셀럽 추천템 ‘쌀 고보습 크림 미스트’ 매출 급증
+
+- 날짜: 2026-05-28
+- 대분류: Service
+- 카테고리: ecommerce
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 제외 검토
+- 적합성 메모: 수집 단계에서 제휴, 오프라인, 실적, 채용/ESG 등 위험 단서가 감지됐습니다. 화면·플로우 근거가 없으면 shortlist에서 제외합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: 신세계그룹 뉴스룸
+- 후보 발견 URL: https://www.shinsegaegroupnewsroom.com/jajus-rice-and-moisture-cream-mist-sales-surge-4/
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: search_discovery
+- 위험 단서 태그: business_only
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://shinsegae-prd-data.s3.ap-northeast-2.amazonaws.com/wp-content/uploads/2026/05/%EC%82%AC%EC%A7%843-%EC%8B%A0%EC%84%B8%EA%B3%84%EA%B9%8C%EC%82%AC-%EC%9E%90%EC%A3%BCJAJU-%EC%8C%80-%EA%B3%A0%EB%B3%B4%EC%8A%B5-%ED%81%AC%EB%A6%BC-%EB%AF%B8%EC%8A%A4%ED%8A%B8-%EC%97%AC%EB%B0%B0%EC%9A%B0-%EC%8B%A4%EC%82%AC%EC%9A%A9%ED%85%9C%EC%9C%BC%EB%A1%9C-%ED%99%94%EC%A0%9C.jpg
+
+“여배우 가방 속 그 미스트 어디 거?” 자주(JAJU), 셀럽 추천템 ‘쌀 고보습 크림 미스트’ 매출 급증
+
+### 17. [신세계그룹 뉴스룸] 때이른 더위에 티셔츠 매출 급증 할리데이비슨 컬렉션스, 여름 시장 공략 속도
+
+- 날짜: 2026-05-28
+- 대분류: Service
+- 카테고리: ecommerce
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 제외 검토
+- 적합성 메모: 수집 단계에서 제휴, 오프라인, 실적, 채용/ESG 등 위험 단서가 감지됐습니다. 화면·플로우 근거가 없으면 shortlist에서 제외합니다.
+- 직무 태그: 웹서비스기획, 웹디자인
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: 신세계그룹 뉴스룸
+- 후보 발견 URL: https://www.shinsegaegroupnewsroom.com/harley-davidson-collection-surges-t-shirt-sales-in-early-heat/
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: business_only
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://shinsegae-prd-data.s3.ap-northeast-2.amazonaws.com/wp-content/uploads/2026/05/NR_Press_List-116.png
+
+5월부터 한낮 기온이 30도에 육박하는 이른 더위가 이어지면서 패션업계 여름 마케팅 경쟁도 한층 치열해지고 있다. 무더위로 여름 옷을 찾는 소비자가 급증하면서 패션 브랜드들은 관련 신제품을 전면에 내세우며 본격적인 여름 특수 노리기에 나섰다. 신세계인터내셔날의 패션 브랜드 할리데이비슨 컬렉션스는 올해(1/1~5/26) 브랜드 매출이
+
+### 18. [Glossy] iFit and NordicTrack bet on connected pilates with $10k at-home reformer
+
+- 날짜: 2026-05-27
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 제외 검토
+- 적합성 메모: 수집 단계에서 제휴, 오프라인, 실적, 채용/ESG 등 위험 단서가 감지됐습니다. 화면·플로우 근거가 없으면 shortlist에서 제외합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Glossy
+- 후보 발견 URL: https://www.glossy.co/beauty/wellness/ifit-bets-on-connected-pilates-with-10k-at-home-nordictrack-reformer-launch-plus-news/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: business_only
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.glossy.co/wp-content/uploads/sites/4/2026/05/Screenshot-2026-05-22-at-10.27.25-AM.png?w=2676
+
+Glossy sat down with Yvette McGaffin, director of pilates product marketing for iFIT, parent company to NordicTrack, to learn about the company’s first consumer reformer machine launch.
+
+### 19. [Glossy] Beauty Briefing: What the Estée Lauder-Jo Malone lawsuit means for eponymous brands
+
+- 날짜: 2026-05-26
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 제외 검토
+- 적합성 메모: 수집 단계에서 제휴, 오프라인, 실적, 채용/ESG 등 위험 단서가 감지됐습니다. 화면·플로우 근거가 없으면 shortlist에서 제외합니다.
+- 직무 태그: 웹서비스기획, 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Glossy
+- 후보 발견 URL: https://www.glossy.co/beauty/what-the-estee-lauder-jo-malone-lawsuit-means-for-eponymous-brands/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: partnership_only
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.glossy.co/wp-content/uploads/sites/4/2025/08/exclusive-how-jo-malone-london-is.jpg
+
+Glossy checked in on the ongoing lawsuit between Estée Lauder and Jo Malone, her Jo Loves brand and Zara.
+
+### 20. [CJ News Room] CJ올리브영, 미국 첫 오프라인 매장 개점&#8230;K뷰티 &#8216;글로벌 게이트웨이&#8217; 본격 가동 &#8211; CJ 뉴스룸
+
+- 날짜: 2026-05-21
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 제외 검토
+- 적합성 메모: 수집 단계에서 제휴, 오프라인, 실적, 채용/ESG 등 위험 단서가 감지됐습니다. 화면·플로우 근거가 없으면 shortlist에서 제외합니다.
+- 직무 태그: 웹서비스기획, 웹디자인
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: CJ News Room
+- 후보 발견 URL: https://cjnews.cj.net/cj%ec%98%ac%eb%a6%ac%eb%b8%8c%ec%98%81-%eb%af%b8%ea%b5%ad-%ec%b2%ab-%ec%98%a4%ed%94%84%eb%9d%bc%ec%9d%b8-%eb%a7%a4%ec%9e%a5-%ea%b0%9c%ec%a0%90-k%eb%b7%b0%ed%8b%b0-%ea%b8%80%eb%a1%9c%eb%b2%8c/?utm_source=rss&utm_medium=rss&utm_campaign=cj%25ec%2598%25ac%25eb%25a6%25ac%25eb%25b8%258c%25ec%2598%2581-%25eb%25af%25b8%25ea%25b5%25ad-%25ec%25b2%25ab-%25ec%2598%25a4%25ed%2594%2584%25eb%259d%25bc%25ec%259d%25b8-%25eb%25a7%25a4%25ec%259e%25a5-%25ea%25b0%259c%25ec%25a0%2590-k%25eb%25b7%25b0%25ed%258b%25b0-%25ea%25b8%2580%25eb%25a1%259c%25eb%25b2%258c
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: search_discovery, o2o_flow, seller_operation
+- 위험 단서 태그: offline_only
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJ%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81_thumbnail-2.jpg
+
+올리브영이 미국 본토에 첫 오프라인 매장을 열고 세계 최대 뷰티 시장 공략에 본격적으로 나선다. 27년간 뷰티 전문 리테일로 축적해 온 독보적인 큐레이션 역량과 온오프라인 플랫폼 운영 노하우를 미국 현지에 이식해, K뷰티와 K웰니스 브랜드의 글로벌 성장을 지원하는 전진기지로 키운다는 구
+
+### 21. [Glossy] E.l.f. Beauty is lowering prices in response to unit sales decline, offloading Keys Soulcare brand
+
+- 날짜: 2026-05-21
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 제외 검토
+- 적합성 메모: 수집 단계에서 제휴, 오프라인, 실적, 채용/ESG 등 위험 단서가 감지됐습니다. 화면·플로우 근거가 없으면 shortlist에서 제외합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Glossy
+- 후보 발견 URL: https://www.glossy.co/beauty/e-l-f-beauty-is-lowering-prices-to-respond-to-unit-sales-decline-offloading-keys-soulcare-brand/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: weak_promo
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.glossy.co/wp-content/uploads/sites/4/2026/05/Screenshot-2026-05-20-at-1.35.00-PM.png?w=2530
+
+In August, E.l.f. Beauty took a $1 price increase across all E.l.f. SKUs as a response to tariffs and inflation. Announced today, this caused unit sales to drop dramatically, and CEO Tarang Amin is now testing price cuts.
+
+### 22. [Glossy] Marc Jacobs looks to the Daisy fragrance empire in the relaunch of his makeup line
+
+- 날짜: 2026-05-25
+- 대분류: Service
+- 카테고리: ai
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 제외 검토
+- 적합성 메모: 수집 단계에서 제휴, 오프라인, 실적, 채용/ESG 등 위험 단서가 감지됐습니다. 화면·플로우 근거가 없으면 shortlist에서 제외합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Glossy
+- 후보 발견 URL: https://www.glossy.co/beauty/marc-jacobs-looks-to-the-daisy-fragrance-empire-in-the-relaunch-of-his-makeup-line/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: business_only
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.glossy.co/wp-content/uploads/sites/4/2026/05/MJBeauty_products_16x9-12.jpg
+
+Marc Jacobs is back. Front and center in the new iteration of Marc Jacobs Beauty is a familiar favorite: the Daisy fragrance.
+
+### 23. [Glossy] From TJ Palma to Cher: How Garnier is reinventing mass beauty marketing
+
+- 날짜: 2026-05-22
+- 대분류: Service
+- 카테고리: ai
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 제외 검토
+- 적합성 메모: 수집 단계에서 제휴, 오프라인, 실적, 채용/ESG 등 위험 단서가 감지됐습니다. 화면·플로우 근거가 없으면 shortlist에서 제외합니다.
+- 직무 태그: 웹서비스기획, 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Glossy
+- 후보 발견 URL: https://www.glossy.co/beauty/glossy-pop-newsletter-from-tj-palma-to-cher-how-garnier-is-reinventing-mass-beauty-marketing/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: weak_promo, business_only
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.glossy.co/wp-content/uploads/sites/4/2026/05/garnier-mousse.jpg
+
+Over the past year and a half, Garnier has increasingly embraced a culture-first marketing strategy aimed at "Gen Zennials." That has included building campaigns around internet humor, fandoms, reality television, dating culture and culturally-specific storytelling.
+
+### 24. [Glossy] Everlane’s reported Shein sale raises a new question: What is transparency worth now?
+
+- 날짜: 2026-05-22
+- 대분류: Service
+- 카테고리: ai
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 제외 검토
+- 적합성 메모: 수집 단계에서 제휴, 오프라인, 실적, 채용/ESG 등 위험 단서가 감지됐습니다. 화면·플로우 근거가 없으면 shortlist에서 제외합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Glossy
+- 후보 발견 URL: https://www.glossy.co/podcasts/everlanes-reported-shein-sale-raises-a-new-question-what-is-transparency-worth-now/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: weak_promo, hiring_or_esg
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.glossy.co/wp-content/uploads/sites/4/2026/05/Portrait-glossy-brand-1140x520-0520.jpg
+
+Earlier this week, Glossy wrote about Everlane’s reported sale to Shein, a deal that will put one of the defining sustainability-adjacent DTC brands of the 2010s inside the world’s most scrutinized ultra-fast-fashion machine.
+
+### 25. [Glossy] Fashion Briefing: Fashion resale is finally ready for primetime
+
+- 날짜: 2026-05-21
+- 대분류: Service
+- 카테고리: ai
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 제외 검토
+- 적합성 메모: 수집 단계에서 제휴, 오프라인, 실적, 채용/ESG 등 위험 단서가 감지됐습니다. 화면·플로우 근거가 없으면 shortlist에서 제외합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Glossy
+- 후보 발견 URL: https://www.glossy.co/fashion/fashion-briefing-fashion-resale-is-finally-ready-for-primetime/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: weak_promo
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.glossy.co/wp-content/uploads/sites/4/2026/05/Shot_01_Fashionphile_CardiB_Stills_151.jpg?w=10000
+
+Secondhand fashion has gone from a niche way to save money to a legitimate, mainstream phenomenon.
+
+### 26. [Glossy] Everlane’s sale to Shein shows the limits of sustainability-led fashion brands
+
+- 날짜: 2026-05-18
+- 대분류: Service
+- 카테고리: ai
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 제외 검토
+- 적합성 메모: 수집 단계에서 제휴, 오프라인, 실적, 채용/ESG 등 위험 단서가 감지됐습니다. 화면·플로우 근거가 없으면 shortlist에서 제외합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Glossy
+- 후보 발견 URL: https://www.glossy.co/fashion/everlanes-sale-to-shein-shows-the-limits-of-sustainability-led-fashion-brands/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: weak_promo, business_only, hiring_or_esg
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.glossy.co/wp-content/uploads/sites/4/2026/05/Screenshot-2026-05-18-at-21.57.14.png?w=2936
+
+Everlane’s reported sale to Shein shows how sustainability-led DTC brands are struggling to compete in today&#039;s retail environment.
+
+## Design
+
+### 01. [UX Design (Medium)] We haven’t lost the battle for Empathy. Have we?
+
+- 날짜: 2026-05-27
+- 대분류: Design
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: UX Design (Medium)
+- 후보 발견 URL: https://uxdesign.cc/we-havent-lost-the-battle-for-empathy-have-we-af31d1226da2?source=rss----138adf9c44c---4
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_uiux_case, design_ai_workflow
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+A meditation on presence, AI, and the uncomfortable work of understanding people before we design for them. Continue reading on UX Collective »
+
+### 02. [UX Design (Medium)] The trust gap between AI and humans
+
+- 날짜: 2026-05-27
+- 대분류: Design
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: UX Design (Medium)
+- 후보 발견 URL: https://uxdesign.cc/the-trust-gap-between-ai-and-humans-ccea4c503702?source=rss----138adf9c44c---4
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_uiux_case, design_ai_workflow
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+How designers can save brilliant AI from dying in onboarding — before it’s too late. Continue reading on UX Collective »
+
+### 03. [UX Design (Medium)] The book cover as a relational object
+
+- 날짜: 2026-05-26
+- 대분류: Design
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: UX Design (Medium)
+- 후보 발견 URL: https://uxdesign.cc/the-book-cover-as-a-relational-object-288fb15deff1?source=rss----138adf9c44c---4
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_uiux_case, design_ai_workflow
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+Designing a book cover isn’t about aesthetics. It’s about anticipating the reader’s behavior throughout the entire lifecycle of the book. Writing this piece is quite a challenge because, on the one hand, I want to explain my approach to design, and on the other — I really don’t want to ruin the experience of reading the books I mention by giving too much of…
+
+### 04. [UX Design (Medium)] Product discovery’s quietest, most consequential decision
+
+- 날짜: 2026-05-26
+- 대분류: Design
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: UX Design (Medium)
+- 후보 발견 URL: https://uxdesign.cc/product-discoverys-quietest-most-consequential-decision-ea697471cf6f?source=rss----138adf9c44c---4
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_uiux_case, design_ai_workflow
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+Validating a problem, an idea, or a solution is where most people begin discovery. The skipped judgment is whether to begin it at all. Generated with AI by Author “Customers keep asking us to add more dashboard widgets.” Someone raises it in a product roadmap planning meeting, and it sounds less like feedback and more like an instruction. Twenty-three of th…
+
+### 05. [Design Compass] Neural Expressive, 구글의 새 디자인 언어
+
+- 날짜: 2026-05-28
+- 대분류: Design
+- 카테고리: kr_design_media
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Design Compass
+- 후보 발견 URL: https://designcompass.org/2026/05/28/neural-expressive/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: motion_interaction, korean_uiux_case, prototyping
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://designcompass.org/wp-content/uploads/2026/05/Neuralexpressiveavail-1.99.jpg
+
+Google이 Gemini 앱에 새로운 디자인 언어인 ‘Neural Expressive’를 적용했습니다. 이번 변화는 Google I/O 2026에서 공개됐습니다. Neural Expressive는 Gemini의 인터페이스와 상호작용 방식을 바꾸는 디자인 업데이트입니다. 구글은 새로운 애니메이션, 동적인 응답 UI, 강화된 모션 효과…
+
+### 06. [DesignDB - Design News] 앤트로픽, 서울 사무소 연다… 한국 시장 진출 ‘베이스캠프’
+
+- 날짜: 2026-05-28
+- 대분류: Design
+- 카테고리: kr_design_media
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: DesignDB - Design News
+- 후보 발견 URL: https://www.designdb.com/?menuno=792&bbsno=40612&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_reference, design_ai_workflow
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260528092643276_1997.0.jpg
+
+한국 대표에 최기영 전 스노우플레이크 총괄 선임 (자료=앤트로픽) 앤트로픽이 서울 사무소를 열고 한국 대표로 최기영 전 스노우플레이크 한국 총괄을 선임했다. 자체 개발한 생성형 AI 클로드(Claude)...
+
+### 07. [DIGITAL iNSIGHT] 내 투표소는 어디? 당근, ‘제9회 전국동시지방선거’ 정보 서비스 오픈
+
+- 날짜: 2026-05-28
+- 대분류: Design
+- 카테고리: kr_uiux_media
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: DIGITAL iNSIGHT
+- 후보 발견 URL: https://ditoday.com/%eb%82%b4-%ed%88%ac%ed%91%9c%ec%86%8c%eb%8a%94-%ec%96%b4%eb%94%94-%eb%8b%b9%ea%b7%bc-%ec%a0%9c9%ed%9a%8c-%ec%a0%84%ea%b5%ad%eb%8f%99%ec%8b%9c%ec%a7%80%eb%b0%a9%ec%84%a0%ea%b1%b0/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_uiux_case
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: 없음
+
+전체 선거 과정을 더욱 편리하게 경험할 수 있도록 지원 The post 내 투표소는 어디? 당근, ‘제9회 전국동시지방선거’ 정보 서비스 오픈 appeared first on DIGITAL iNSIGHT 디지털 인사이트.
+
+### 08. [The Brand Identity] The Brand Identity – Home of the Greatest in Graphic & Brand Design
+
+- 날짜: 2026-05-28
+- 대분류: Design
+- 카테고리: web_accessibility
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: inspiration
+- 후보 발견 출처: The Brand Identity
+- 후보 발견 URL: https://the-brandidentity.com/project/precise-technical-but-also-darn-witty-newkid-creates-a-brand-of-contrasts-for-standard-equipment
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: look_and_feel, brand_expression, korean_uiux_case, visual_reference
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://the-brandidentity.com/uploads/articles/2024/08/precise-technical-but-also-darn-witty-newkid-creates-a-brand-of-contrasts-for-standard-equipment/StandardEquipment-newkid-2.jpg
+
+At first look, Standard Equipment’s range of furniture and home goods stands out for its utilitarian beauty and industrial precision. You’d expect a brand so technical to sound all business and serious, but not when newkid is the one building the brand world. “As algorithms have driven an increasing standardisation of taste and lifestyle, we saw an opportun…
+
+### 09. [DIGITAL iNSIGHT] 팀스파르타, 브랜드 개편… ‘AI 네이티브’ 조직 발돋움
+
+- 날짜: 2026-05-27
+- 대분류: Design
+- 카테고리: kr_uiux_media
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: DIGITAL iNSIGHT
+- 후보 발견 URL: https://ditoday.com/%ed%8c%80%ec%8a%a4%ed%8c%8c%eb%a5%b4%ed%83%80-%eb%b8%8c%eb%9e%9c%eb%93%9c-%ec%a0%84%eb%a9%b4-%ea%b0%9c%ed%8e%b8-ai-%eb%84%a4%ec%9d%b4%ed%8b%b0%eb%b8%8c-%ec%a1%b0%ec%a7%81-%eb%b0%9c%eb%8f%8b/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: brand_expression, korean_uiux_case, visual_reference, design_ai_workflow
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: 없음
+
+산하 브랜드 재정비... AX 엔드투엔드 파트너 역할 강화 The post 팀스파르타, 브랜드 개편… ‘AI 네이티브’ 조직 발돋움 appeared first on DIGITAL iNSIGHT 디지털 인사이트.
+
+### 10. [DIGITAL iNSIGHT] AI가 바꾸는 콘텐츠 산업… 2026 콘텐츠 엔지니어링 개최
+
+- 날짜: 2026-05-27
+- 대분류: Design
+- 카테고리: kr_uiux_media
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: DIGITAL iNSIGHT
+- 후보 발견 URL: https://ditoday.com/ai%ea%b0%80-%eb%b0%94%ea%be%b8%eb%8a%94-%ec%bd%98%ed%85%90%ec%b8%a0-%ec%82%b0%ec%97%85-2026-%ec%bd%98%ed%85%90%ec%b8%a0-%ec%97%94%ec%a7%80%eb%8b%88%ec%96%b4%eb%a7%81-%ea%b0%9c%ec%b5%9c/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_uiux_case, design_ai_workflow
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: 없음
+
+EBS 김유열 사장 등 방송·VFX·광고 등 6인 전문가 발표 The post AI가 바꾸는 콘텐츠 산업… 2026 콘텐츠 엔지니어링 개최 appeared first on DIGITAL iNSIGHT 디지털 인사이트.
+
+### 11. [DIGITAL iNSIGHT] “조직 내 격차 해소” 디엔아이, UX 거버넌스 플랫폼 구축
+
+- 날짜: 2026-05-26
+- 대분류: Design
+- 카테고리: kr_uiux_media
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: DIGITAL iNSIGHT
+- 후보 발견 URL: https://ditoday.com/%ec%a1%b0%ec%a7%81-%eb%82%b4-%ea%b2%a9%ec%b0%a8-%ed%95%b4%ec%86%8c-%eb%94%94%ec%97%94%ec%95%84%ec%9d%b4-ux-%ea%b1%b0%eb%b2%84%eb%84%8c%ec%8a%a4-%ed%94%8c%eb%9e%ab%ed%8f%bc-%ea%b5%ac%ec%b6%95/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_uiux_case
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: 없음
+
+'X-CORE' 도입으로 AX 시대 생산성 극대화 The post “조직 내 격차 해소” 디엔아이, UX 거버넌스 플랫폼 구축 appeared first on DIGITAL iNSIGHT 디지털 인사이트.
+
+### 12. [UX Design (Medium)] How to find out what your design work was really for
+
+- 날짜: 2026-05-26
+- 대분류: Design
+- 카테고리: tool
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: UX Design (Medium)
+- 후보 발견 URL: https://uxdesign.cc/how-to-find-out-what-your-design-work-was-really-for-3f948d3900a5?source=rss----138adf9c44c---4
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_uiux_case
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+Missing the business context means underselling your own work Continue reading on UX Collective »
+
+### 13. [Smashing Magazine - UX Design] Your Prototype Is Not Being Honest With Your Users (And Here’s How To Fix It)
+
+- 날짜: 2026-05-25
+- 대분류: Design
+- 카테고리: ux_practice
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: Smashing Magazine - UX Design
+- 후보 발견 URL: https://smashingmagazine.com/2026/05/prototype-users-fix-protopie/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_uiux_case, prototyping, ux_method
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: http://files.smashing.media/articles/prototype-users-fix-protopie/prototype-users-fix-protopie.jpg
+
+There’s a moment in almost every usability session where a participant pauses at the login screen, types something, and glances up: checking whether they’re “doing it right.” That pause is a clear sign. They’ve already clocked that this isn’t a real app, and every data point collected after that moment is filtered through that awareness.
+
+### 14. [UX Design (Medium)] Should I design for humans or machines?
+
+- 날짜: 2026-05-25
+- 대분류: Design
+- 카테고리: design_system
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: UX Design (Medium)
+- 후보 발견 URL: https://uxdesign.cc/should-i-design-for-humans-or-machines-3b8d3addd006?source=rss----138adf9c44c---4
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: look_and_feel, korean_uiux_case, design_system, visual_reference
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+Rethinking UX as we start designing for agents and automation “User” has traditionally meant one thing: a person. The user is someone who navigates an interface, scans text/visuals, and makes decisions. UX/UI has always been about “reducing friction” between humans and the products they use. But UX and the design process are heavily evolving. In Design syst…
+
+### 15. [Toss Blog] 결제는 가볍게, 영감은 가득히
+
+- 날짜: 2026-05-23
+- 대분류: Design
+- 카테고리: kr_uiux_case
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Toss Blog
+- 후보 발견 URL: https://toss.im/tossfeed/article/booknic
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_reference, ux_method
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+토스 FacePay와 영풍문고가 제안하는 ‘가벼운 영감’의 여정
+
+### 16. [Nielsen Norman Group] The Case for Design Disposables
+
+- 날짜: 2026-05-22
+- 대분류: Design
+- 카테고리: ux_research
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Nielsen Norman Group
+- 후보 발견 URL: https://www.nngroup.com/articles/design-disposables/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+Design disposables are rough artifacts you make to think, not to deliver. Learn to tell them apart from deliverables and avoid the sunk-cost trap.
+
+### 17. [Nielsen Norman Group] Closing the Loop: What to Do After a Design Critique Ends
+
+- 날짜: 2026-05-22
+- 대분류: Design
+- 카테고리: ux_research
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Nielsen Norman Group
+- 후보 발견 URL: https://www.nngroup.com/articles/after-design-critique/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+Most designers invest in running critiques but skip the followup. That missing step is often why feedback culture breaks down.
+
+### 18. [Smashing Magazine - UX Design] Four Levels Of Customer Understanding
+
+- 날짜: 2026-05-22
+- 대분류: Design
+- 카테고리: ux_practice
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: Smashing Magazine - UX Design
+- 후보 발견 URL: https://smashingmagazine.com/2026/05/four-levels-customer-understanding/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_uiux_case
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: http://files.smashing.media/articles/four-levels-customer-understanding/four-levels-customer-understanding.jpg
+
+What people say, feel, think, and do are often very different things. To understand the underlying reasons for user behavior, it helps to look beyond the surface and explore hidden motivations, root causes, and the different layers of reality that shape how people act. Brought to you by Measuring UX Impact, **friendly video course on UX** and design pattern…
+
+### 19. [Toss Blog] 반도체·AI에 투자하는 국민참여형 국민성장펀드, 손실 20%까지 정부가 부담해요
+
+- 날짜: 2026-05-21
+- 대분류: Design
+- 카테고리: kr_uiux_case
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Toss Blog
+- 후보 발견 URL: https://toss.im/tossfeed/article/money-policies-62
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: promotion_event_design, design_ai_workflow
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+소득공제 혜택까지 받아보세요
+
+### 20. [pxd story] 검색엔진은 우리 사이트를 어떻게 발견할까?
+
+- 날짜: 2026-05-20
+- 대분류: Design
+- 카테고리: kr_uiux_media
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: pxd story
+- 후보 발견 URL: https://pxdstory.tistory.com/1899
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_uiux_case
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+들어가며 지난 편에서 프론트엔드 개발자가 왜 SEO를 챙겨야 하는지, 그리고 GEO라는 새로운 관점이 왜 필요해졌는지 이야기했어요. 이번 편에서는 좀 더 실전적인 이야기를 해볼게요. 검색엔진이 우리 사이트를 검색 결과에 보여주려면, 먼저 우리 사이트를 발견해야 하잖아요. 근데 이 "발견"이라는 과정이 생각보다 단순하지 않더라고요. SEO/GEO 분석 서비스를 만들면서 수많은 사이트를 들여다봤는데, 콘텐츠는 멀쩡한데 크롤러가 아예 접근을 못 하는 경우가 의외로 많았어요. 대기업 사이트에서도요. 이번 편에서는 검색엔진 크롤러가 우리 사이트를 발견하고 색인하는 과정을 프론트엔드 개발자 관점에서 풀어볼게요. 크롤링 → 인덱싱 → 랭킹, 이 흐…
+
+### 21. [Nielsen Norman Group] UX Conference August Announced (Aug 17
+
+- 날짜: 2026-05-19
+- 대분류: Design
+- 카테고리: ux_research
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Nielsen Norman Group
+- 후보 발견 URL: https://www.nngroup.com/training/august/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_uiux_case, design_ai_workflow
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+Take up to 5 in-depth training courses, teaching user experience best practices for successful design. Training focused on long-lasting skills for UX professionals. August 17 - August 28, 2026.
+
+### 22. [pxd story] AI 리서치 파트너, Affinity Bubble 서포터즈 1기를 모집합니다
+
+- 날짜: 2026-05-18
+- 대분류: Design
+- 카테고리: kr_uiux_media
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: pxd story
+- 후보 발견 URL: https://pxdstory.tistory.com/1898
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_uiux_case, design_ai_workflow, ux_method
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+방대한 인터뷰와 설문 데이터 속에서 의미 있는 인사이트를 찾기 위해 고군분투해 오셨나요? pxd의 UX 노하우를 담아 정성 데이터 분석의 새 길을 열어가는 어피니티버블(Affinity Bubble)이 더 강력해진 v1.1 업데이트와 함께, 서비스의 완성도를 함께 높여갈 서포터즈 1기를 모집합니다. 어피니티버블은 인터뷰, 앱 리뷰, 설문 등 흩어진 정성 데이터를 AI로 분석해 어피니티 다이어그램 형태의 버블 시각화로 보여주는 도구입니다. 어피니티버블이 실무자분들에게 정말 유용한 도구로 진화할 수 있도록, 여러분의 현장감 넘치는 의견을 들려주세요. 1️⃣ 서포터즈는 어떤 활동을 하나요? 어피니티버블 서포터즈 1기의 자격 유지 및 활동 조건…
+
+### 23. [pxd story] 컬러 토큰 설계 3가지 방식 (스케일 / 시멘틱 / 하이브리드)
+
+- 날짜: 2026-05-17
+- 대분류: Design
+- 카테고리: kr_uiux_media
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: pxd story
+- 후보 발견 URL: https://pxdstory.tistory.com/1888
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: look_and_feel, korean_uiux_case, design_system, design_ai_workflow
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+AI의 등장과 디자인 자동화가 본격화되면서, 이제는 작업 속도 자체보다 그 속도 안에서도 서비스의 일관성을 끝까지 유지할 수 있는지가 더 중요해졌습니다. 한 때는 정말 픽셀 하나, 간격 하나에 목숨 걸며 그 정교함이 디자인의 실력을 가늠하는 기준처럼 여겨지던 시절도 있었는데요. 이제는 손으로 어떻게 만들었는지보다, 어떤 기준을 세워 그 결과가 나오도록 만들었는지가 더 중요해졌다는 것이죠. 이러한 변화 속에서 디자인 시스템은 서비스를 안정적으로 운용하기 위한 핵심 인프라로 자리 잡았으며, 이를 전담 조직으로 운영하는 기업 역시 빠르게 늘어나고 있습니다. 그렇다면 디자인 시스템 중에서도 가장 기초이면서도, 동시에 가장 큰 영향을 미치는 컬…
+
+### 24. [Nielsen Norman Group] Small by Design: The Strength of Lean Design-System Teams
+
+- 날짜: 2026-05-15
+- 대분류: Design
+- 카테고리: ux_research
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Nielsen Norman Group
+- 후보 발견 URL: https://www.nngroup.com/articles/lean-design-system-teams/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+Lean design-system teams, when strategically planned, can move faster, prioritize sharply, and scale impact beyond their size.
+
+### 25. [Nielsen Norman Group] What Designers Actually Struggle with on Product Teams
+
+- 날짜: 2026-05-15
+- 대분류: Design
+- 카테고리: ux_research
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Nielsen Norman Group
+- 후보 발견 URL: https://www.nngroup.com/articles/designers-product-teams/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+Designers' top struggles aren't about design skills. They're about alignment, influence, and navigating org complexity — the work no one taught them to do.
+
+### 26. [Smashing Magazine - UX Design] Ten Data-Backed Truths Of User Experience ROI
+
+- 날짜: 2026-05-15
+- 대분류: Design
+- 카테고리: ux_practice
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: Smashing Magazine - UX Design
+- 후보 발견 URL: https://smashingmagazine.com/2026/05/data-backed-truths-user-experience-roi/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_uiux_case
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: http://files.smashing.media/articles/data-backed-truths-user-experience-roi/data-backed-truths-user-experience-roi.jpg
+
+Every extra second of friction has a measurable business cost. Carrie Webster shares ten data-backed UX facts that link user experience directly to revenue, retention, and long-term growth.
+
+### 27. [pxd story] 서울 시민의 목소리를 시각화하기
+
+- 날짜: 2026-05-14
+- 대분류: Design
+- 카테고리: kr_uiux_media
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹디자인
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: pxd story
+- 후보 발견 URL: https://pxdstory.tistory.com/1897
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: korean_reference, korean_uiux_case
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+시민의 목소리를 데이터로 UI 디자인을 할 때 늘 부딪히는 문제가 있습니다. 다양한 의견을 가진 사용자의 목소리를 어떻게 정리하고 전달할까. 개개인의 목소리에 집중하면 맥락과 목표가 저마다 다른 모두를 만족시키기 어렵고, 그렇다고 평균을 내면 누구도 대표하지 못해 모두가 만족하지 못하는 디자인이 됩니다. 그래서 보통 퍼소나로 사용자를 몇 가지 유형으로 나눠 접근하게 됩니다. 정원오 서울시장 후보가 만든 '서울의 목소리'는 비슷한 문제를 도시 단위로 마주하고 있습니다. 서울 시민의 불편과 고충을 수집해 데이터 기반 해법을 찾고, 그 데이터를 공공데이터로 모두에게 공개하고 있습니다. 수천명의 시민 목소리를 어떻게 정리해 보여주고 있는지,…
+
+## DEV
+
+### 01. [GeekNews] AI와 대화하는 데 지쳤다
+
+- 날짜: 2026-05-28
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29940
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+GitHub 악성코드 저장소 대응을 AI에 물었지만 유용한 답을 얻지 못했고, GitHub 토론에서도 사람이 같은 AI 답변을 남김 AI가 준 문장과 같다고 지적하자 댓글이 삭제됐고, 이후 다른 사람이 다시 동일한 AI 답변을 남기는 일이 반복됨 회사 업무 질문을...
+
+### 02. [GeekNews] 좋아하는 개발자 도구는 무엇인가요?
+
+- 날짜: 2026-05-28
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29937
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+에디터 영역에서는 Helix, Emacs, Neovim, Sublime Text, Zed, JetBrains IDE가 반복적으로 언급되며, 각자의 trade-off가 명확히 드러남 버전 관리 분야에서 jujutsu(jj)가 git CLI를 대체하는 흐름이 두드러지고, Magit·lazygit·Sublime Merge 같은...
+
+### 03. [OpenAI Blog] Building self-improving tax agents with Codex
+
+- 날짜: 2026-05-28
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: OpenAI Blog
+- 후보 발견 URL: https://openai.com/index/building-self-improving-tax-agents-with-codex/
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://images.ctfassets.net/kftzwdyauwt9/3upo248JfOrgp0fahNLrkt/10f9e23a8be06e38fb21d29faf5e320d/SEO.png?w=1600&h=900&fit=fill
+
+See how OpenAI, Thrive, and Crete built a self-improving tax agent with Codex, automating filings, improving accuracy, and accelerating workflows.
+
+### 04. [GeekNews] 외주 인력 + LocalAI 조합이 곧 프론티어 랩보다 경제적이 될 것
+
+- 날짜: 2026-05-27
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29936
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+미국 프론티어 랩들의 API 가격이 지속 인상되는 가운데, 저비용 국가 엔지니어와 DeepSeek 같은 오픈소스 모델 조합이 경제적 대안으로 부상 중 GPT-5.5, Gemini 3.5 Flash, Opus-4.7 등 최신 프론티어 모델들이 2~3배 가격 인상 또는 토큰 소비...
+
+### 05. [GeekNews] Show GN: 노트북 덮어도 안 죽는 Claude CLI 멀티세션 웹 터미널
+
+- 날짜: 2026-05-27
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29926
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+브라우저 탭으로 여러 Claude CLI 세션을 한 번에 굴리는 웹 터미널을 만들었습니다. 세션은 서버에 PTY 로 떠 있고 브라우저는 그 화면을 보여줄 뿐이라서, 브라우저를 닫아도 노트북을 덮어도 작업이 계속됩니다. PC 를 끄고 켜도 자동 --resume 으로 세션이 복원됩니다.
+
+### 06. [GeekNews] Show GN: AI Skill Store
+
+- 날짜: 2026-05-27
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29925
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+AI 에이전트가 사람 대신 직접 스킬을 검색하고 설치할 수 있는 마켓플레이스를 만들고 있습니다. 기존 AI 도구 마켓은 사람이 웹에서 검색하고 수동으로 설정하는 구조인데, 에이전트가 자율적으로 작업하려면 스킬을 스스로 찾고 쓸 수 있어야 한다고 생각했습니다. 주요 특징: MCP 프로
+
+### 07. [GeekNews] 알리바바 클라우드 Qwen 컨퍼런스 2026 싱가포르 키노트 요약
+
+- 날짜: 2026-05-27
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29921
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+싱가포르에서 처음 열린 Qwen 컨퍼런스 키노트는 알리바바 클라우드가 '에이전틱 AI 시대'로의 전환을 공식화하는 자리였습니다. 싱가포르 정부, 알리바바 클라우드 경영진, Nous Research, Fireworks AI, NVIDIA, PicsArt 등 파트너사 인사들이 무대에 올라 모델, 인프라, 도구, 생태계 전반에 걸친 변화를 발표했습...
+
+### 08. [GeekNews] Show GN: 구직을 AI에게 외주 주는 시대: 10분 대화로 실리콘밸리 꽂아주는 Harper
+
+- 날짜: 2026-05-27
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29914
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+안녕하세요, 긱뉴스 여러분. AI 탤런트 에이전트 Harper 입니다. "스포츠 선수들은 최고의 구단을 찾아주는 전담 에이전트가 있는데, 왜 탑티어 메이커들은 이직할 때마다 직접 이력서를 깎고 잡보드를 뒤져야 할까요?" 저는 지난 10여 년간 마켓플레이스 도메인에서 프로덕트를 만들어오며
+
+### 09. [GeekNews] 유휴 Inference GPU Pool을 이용한 GPU Job 스케줄링
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29904
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+유휴 Inference GPU Pool을 이용한 GPU job 스케줄링: LG AI연구원의 인프라 효율화 사례 LG AI연구원 Platform&Infra Team이 공개한 이번 글은 대규모 언어 모델(LLM) 서비스 운영 과정에서 발생하는 유휴 GPU 자원을 어떻게 연구·실험 작업에 재활용했는지를 다룹니다. AI 서비스 운영 기업은 보통 트...
+
+### 10. [GeekNews] 사용자가 눈에 띄게 짜증을 내고 있다.
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29902
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+코딩 에이전트의 실패는 단순한 도구 오류보다 더 짜증스럽게 느껴지며, 이는 대화형 UX가 사람과 일하는 듯한 감각을 만들기 때문임 에이전트는 감정 없는 AI 비서라고 답하지만, 친근한 말투와 칭찬, 부드러운 반박으로 동료 같은 인상...
+
+### 11. [GeekNews] 노르웨이의 2페타바이트 Huawei 플래시 스토리지와 LLM 학습
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29899
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+노르웨이 국립도서관은 노르웨이어를 이해하는 주권(Sovereign) LLM 구축을 위해 2PB Huawei OceanStor Dorado 플래시 스토리지를 AI 학습 파이프라인에 투입함 상용 LLM 제공업체가 노르웨이어 로컬 모델을 만들지 않는 상황에서, 영어 중심 LLM은 지역 언어로 기록된 역사...
+
+### 12. [GeekNews] [데브콘 + 하이파이브 발표자료 합본] AI 시대, 리더가 원하는 개발자란?
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29892
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+최근 컨퍼런스 두 곳에서 길지 않은 발표를 했습니다. 4월 23일: [잡코리아 데브콘] 5월 13일: [원티드 하이파이브] (우아한형제들 임동준님과 함께 발표) 두 컨퍼런스에서 비슷
+
+### 13. [Vercel Blog] Vercel Domains now supports price sorting and availability filtering
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/vercel-domains-now-supports-price-sorting-and-availability-filtering
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+Vercel Domains now supports price sorting and availability filtering. Price sorting shows lower cost domains first, so you can quickly find a domain that fits your budget. Availability filtering moves unavailable domains to the bottom of the search results, so you can focus on domains that you can actually purchase. Try it at .vercel.com/domains Read more
+
+### 14. [Vercel Blog] Firecrawl joins the Vercel Marketplace
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/firecrawl-joins-the-vercel-marketplace
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html, ai_coding
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+is now available on the , allowing Vercel teams to power AI agents and applications with structured web data without managing crawling infrastructure.FirecrawlVercel Marketplace This integration helps developers scrape websites into LLM-ready formats, search and retrieve full page content, and interact with dynamic pages for retrieval and agent workflows. K…
+
+### 15. [Vercel Blog] Microfrontends routing now applies to vc alias and branch domains
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/microfrontends-routing-now-applies-to-vc-alias-and-branch-domains
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+This week we are gradually rolling out an update to routing for aliases and branch-assigned domains.Vercel Microfrontends Aliasing a Microfrontends URL with now preserves the full routing config from the source deployment. Previously, the new alias only inherited the . Update to the latest to pick up the change.Aliases inherit Microfrontends routing vc alia…
+
+### 16. [GitHub Changelog] GitHub Copilot for Eclipse is open source
+
+- 날짜: 2026-05-21
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: GitHub Changelog
+- 후보 발견 URL: https://github.blog/changelog/2026-05-21-github-copilot-for-eclipse-is-open-source
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+Following our previous updates, GitHub Copilot for Eclipse is open source, with the code available on GitHub under the MIT license. This marks an important milestone for GitHub Copilot in… The post GitHub Copilot for Eclipse is open source appeared first on The GitHub Blog.
+
+### 17. [shadcn/ui Releases] shadcn@4.8.0
+
+- 날짜: 2026-05-21
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: shadcn/ui Releases
+- 후보 발견 URL: https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.0
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+Minor Changes #10715 51e3cfaf32faeff2589e5c74d81ffd109f509e93 Thanks @shadcn! - add shadcn registry validate command #10708 c8ab3801ecf97c0350ac0234a25e61f19ccaba62 Thanks @shadcn! - add include to registry.json Patch Changes #10567 1c4a53a37adeba36dbd5c07980c5bb6d295cea9e Thanks @shadcn! - fix failing version derivation test
+
+### 18. [Vercel Blog] Pull anomaly alert details using the Vercel CLI
+
+- 날짜: 2026-05-21
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/pull-anomaly-alert-details-using-the-vercel-cli
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+You can now access anomaly alerts and their details directly through the .Vercel CLI With the command, you can list all alerts for a team or given project. For each alert, you can view the start time, the type of alert, and whether or not the alert is still active.vercel alerts With the option, the AI investigation results appear alongside each alert. You a…
+
+### 19. [Vercel Blog] Qwen 3.7 Max now available on Vercel AI Gateway
+
+- 날짜: 2026-05-21
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/qwen-3-7-max-now-available-on-vercel-ai-gateway
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+Qwen 3.7 Max from Alibaba is now available on . The model is designed as an agent foundation, with capabilities spanning coding, office workflow automation, and long-horizon autonomous execution.Vercel AI Gateway Qwen 3.7 Max shows improvements in frontend prototyping and complex multi-file engineering. The model supports office and productivity tasks throu…
+
+### 20. [Vercel Blog] Grok Build 0.1 now available on Vercel AI Gateway
+
+- 날짜: 2026-05-20
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/grok-build-0-1-now-available-on-vercel-ai-gateway
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: performance, ai_coding
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+Grok Build 0.1 is now available on .Vercel AI Gateway This is a beta coding model trained for agentic coding, currently in early access, and powers the Grok Build CLI app. Reasoning effort is not configurable, and there is no non-reasoning mode. To use Grok Build 0.1, set model to in the .xai/grok-build-0.1AI SDK AI Gateway provides a unified API for callin…
+
+### 21. [Vercel Blog] Chat SDK now includes AI SDK tools
+
+- 날짜: 2026-05-20
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/chat-sdk-now-includes-ai-sdk-tools
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+Chat SDK now ships a built-in toolset through the new subpath. One call wires Chat SDK's read and write actions into your agent.AI SDKchat/aicreateChatTools(chat) and its supporting types have moved to . The previous re-exports are flagged .toAiMessageschat/aichat@deprecated Read the to get started, or try one of our .documentationtemplates Read more write…
+
+### 22. [Vercel Blog] Vercel AI Gateway plugin for WordPress
+
+- 날짜: 2026-05-20
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/vercel-ai-gateway-plugin-for-wordpress
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+The gives any WordPress site access to hundreds of models from 40+ providers through a single API key. Providers include Anthropic, Google, OpenAI, xAI, DeepSeek, MiniMax, Moonshot AI, and more.Vercel AI Gateway plugin The plugin is implemented as a connector for the new , which requires WordPress 7.0, released today.WordPress AI Client To call AI Gateway d…
+
+### 23. [Vercel Blog] Nuxt MCP Toolkit now supports MCP apps
+
+- 날짜: 2026-05-19
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/nuxt-mcp-toolkit-mcp-apps
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: frontend_framework, css_html, javascript_ts, performance, ai_coding
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+The now supports . Your agent tools can return interactive HTML responses that MCP clients like Claude and ChatGPT render inline, rather than plain-text responses.Nuxt MCP ToolkitMCP apps Declare a tool with the macro, then read pre-hydrated data, trigger follow-up prompts, or call other tools from inside the UI with the composable. The toolkit bundles each…
+
+### 24. [Vercel Blog] Gemini 3.5 Flash on AI Gateway
+
+- 날짜: 2026-05-19
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/gemini-3-5-flash-on-ai-gateway
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: performance, ai_coding
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+Gemini 3.5 Flash is now available on .Vercel AI Gateway This model has improved coding proficiency and parallel agentic execution loops versus previous Flash versions. It also brings improvements to core reasoning, instruction following, and multi-turn coherence, with stronger performance on complex tasks and higher-quality reasoning traces in thinking mode…
+
+### 25. [Vercel Blog] Flat Rate CDN in Limited Beta
+
+- 날짜: 2026-05-19
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/flat-rate-cdn-in-limited-beta
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+Flat Rate CDN is now available in Limited Beta for Pro teams. It replaces usage-based CDN pricing with a fixed monthly fee. Viral posts, unfiltered bots, or misconfigured routes can turn a normal month into a surprise bill. Flat Rate CDN makes your cost predictable. Flat Rate CDN is a good fit for teams with unpredictable CDN bills, individual builders who…
+
+### 26. [Storybook Blog] Storybook 10.4
+
+- 날짜: 2026-05-18
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Storybook Blog
+- 후보 발견 URL: https://storybook.js.org/blog/storybook-10-4/
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: frontend_framework, ai_coding, design_system
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+Automatic setup with agents, review filters, TanStack React, and more
+
+### 27. [Vercel Blog] Run Claude Managed Agents with Vercel Sandbox
+
+- 날짜: 2026-05-18
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/run-claude-managed-agents-with-vercel-sandbox
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: performance, ai_coding
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+You can now run with .Claude Managed AgentsVercel Sandbox Claude Managed Agents handles the model, harness, tools, and session state. Self-hosting lets you bring the execution environment, so an agent's tool calls run on your existing Vercel infrastructure with your private APIs, internal services, and customer data. Each agent session runs in its own isola…
+
+### 28. [Vercel Blog] Consolidated Commit Status now available on GitHub
+
+- 날짜: 2026-05-18
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/consolidated-commit-status-now-available-for-github
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: frontend_framework
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+Monorepos can now opt in to a single, consolidated commit status on pull requests instead of one commit status per project. For repos with many projects, teams can configure GitHub branch protection once, then manage which Vercel projects are required for merge in each project’s settings. Read more about and and enable Consolidated Commit Status from your .…
+
+### 29. [Vercel Blog] Firewall‑mitigated traffic is free on Vercel
+
+- 날짜: 2026-05-18
+- 대분류: DEV
+- 카테고리: ai
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/web-application-firewall-mitigated-traffic-is-free-on-vercel
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+Vercel Firewall now waives CDN Requests and Fast Data Transfer for any traffic denied, challenged, or rate‑limited by Web Application Firewall (WAF). Vercel has always provided unlimited DDoS mitigation at no cost. Vercel WAF, included in CDN cost, gives you custom rules, managed rules, and rate limiting for bad traffic that isn't DDoS. With this change, yo…
+
+### 30. [Josh W. Comeau] JavaScript articles • Josh W. Comeau
+
+- 날짜: 2026-05-28
+- 대분류: DEV
+- 카테고리: javascript
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Josh W. Comeau
+- 후보 발견 URL: https://www.joshwcomeau.com/javascript/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: javascript_ts
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.joshwcomeau.com/opengraph-image.png?cac0cc658da9fd03
+
+Friendly articles and tutorials for front-end web developers. ❤️
+
+### 31. [Josh W. Comeau] Next.js articles • Josh W. Comeau
+
+- 날짜: 2026-05-28
+- 대분류: DEV
+- 카테고리: tool
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Josh W. Comeau
+- 후보 발견 URL: https://www.joshwcomeau.com/nextjs/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: frontend_framework
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.joshwcomeau.com/opengraph-image.png?cac0cc658da9fd03
+
+Friendly articles and tutorials for front-end web developers. ❤️
+
+### 32. [Josh W. Comeau] A Modern CSS Reset • Josh W. Comeau
+
+- 날짜: 2026-05-28
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Josh W. Comeau
+- 후보 발견 URL: https://www.joshwcomeau.com/css/custom-css-reset/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: web_platform, css_html
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.joshwcomeau.com/images/og-custom-css-reset.png
+
+I have a set of baseline CSS styles that come with me from project to project. In the past, I'd use a typical CSS reset, but times have changed, and I believe I have a better set of global styles!
+
+### 33. [Josh W. Comeau] An Interactive Guide to CSS Transitions • Josh W. Comeau
+
+- 날짜: 2026-05-28
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Josh W. Comeau
+- 후보 발견 URL: https://www.joshwcomeau.com/animation/css-transitions/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.joshwcomeau.com/images/og-css-transitions.png
+
+This comprehensive guide shows how to use CSS transitions! A back-to-basics look at the fundamental building blocks we need to create microinteractions and other animations.
+
+### 34. [Josh W. Comeau] An Interactive Guide to CSS Grid • Josh W. Comeau
+
+- 날짜: 2026-05-28
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Josh W. Comeau
+- 후보 발견 URL: https://www.joshwcomeau.com/css/interactive-guide-to-grid/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.joshwcomeau.com/images/og-interactive-guide-to-grid.png
+
+CSS Grid is an incredibly powerful tool for building layouts on the web, but like all powerful tools, there's a significant learning curve. In this tutorial, we'll build a mental model for how CSS Grid works and how we can use it effectively. I'll share the biggest 💡 lightbulb moments I've had in my own learning journey.
+
+### 35. [Josh W. Comeau] Designing Beautiful Shadows in CSS • Josh W. Comeau
+
+- 날짜: 2026-05-28
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Josh W. Comeau
+- 후보 발견 URL: https://www.joshwcomeau.com/css/designing-shadows/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.joshwcomeau.com/images/og-designing-shadows.png
+
+When I look around the web, most of the shadows I see are fuzzy grey boxes. It doesn't have to be this way, though! CSS gives us the tools to create rich, lush, lifelike shadows. In this tutorial, I'll show you how.
+
+### 36. [Josh W. Comeau] Making Sense of React Server Components • Josh W. Comeau
+
+- 날짜: 2026-05-28
+- 대분류: DEV
+- 카테고리: design_system
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Josh W. Comeau
+- 후보 발견 URL: https://www.joshwcomeau.com/react/server-components/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: frontend_framework
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.joshwcomeau.com/images/og-server-components.jpg
+
+This year, the React team unveiled something they've been quietly researching for years: an official way to run React components exclusively on the server. This is a significant paradigm shift, and it's caused a whole lot of confusion in the React community. In this tutorial, we'll explore this new world, and build an intuition for how it works, and how we…
+
+### 37. [Josh W. Comeau] Why React Re-Renders • Josh W. Comeau
+
+- 날짜: 2026-05-28
+- 대분류: DEV
+- 카테고리: tool
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Josh W. Comeau
+- 후보 발견 URL: https://www.joshwcomeau.com/react/why-react-re-renders/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: frontend_framework, performance
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.joshwcomeau.com/images/og-why-react-re-renders.png
+
+In React, we don't update the DOM directly, we tell React what we want the DOM to look like, and React tackles the rest. But how exactly does it do this? In this tutorial, we'll unpack exactly when and why React re-renders, and how we can use this information to optimize the performance of our React apps.
+
+### 38. [CSS-Tricks] Revealing Text With CSS letter-spacing
+
+- 날짜: 2026-05-27
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: CSS-Tricks
+- 후보 발견 URL: https://css-tricks.com/revealing-text-with-css-letter-spacing/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: 없음
+
+Until we get something like ::nth-letter, there are still some really cool text effects we can make from existing CSS features, like letter-spacing, ::first-word and ::first-line. Revealing Text With CSS letter-spacing originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well.
+
+### 39. [Frontend Focus] What's still missing from CSS
+
+- 날짜: 2026-05-27
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: newsletter
+- 출처 역할: reference
+- 후보 발견 출처: Frontend Focus
+- 후보 발견 URL: https://frontendfoc.us/issues/743
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html
+- 출처 확인 메모: 후보 발견 출처입니다. 뉴스레터 안의 원문 링크를 따라 최종 기준 원문을 분리하세요.
+- 이미지 후보: 없음
+
+🚀 Frontend Focus #​743 — May 27, 2026 | Read on the web The State of CSS Centering in 2026 — Temani offers up a fresh exploration of a perennially popular CSS topic, promising some hidden tricks and modern features you may not be aware of, especially now that things like place-content and CSS anchor positioning are in play. Temani Afif See Every Auth Event…
+
+### 40. [GeekNews] readable.css
+
+- 날짜: 2026-05-27
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29922
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html, design_system
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+readable.css는 사이트 전체 디자인 시스템이 아니라, 시맨틱 HTML에 합리적이고 보기 좋은 기본 스타일을 더하는 CSS 프레임워크임 핵심 원칙은 일관성이며 색상, 글꼴 스타일, 테두리 두께, 줄 높이가 사이트 전반에 맞춰 적용됨 라이트/다크 모...
+
+### 41. [GeekNews] React Doctor — AI가 생성한 React 코드를 정적 분석으로 검증하는 진단 도구
+
+- 날짜: 2026-05-27
+- 대분류: DEV
+- 카테고리: web_accessibility
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29920
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: frontend_framework, accessibility, ai_coding
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+AI 코딩 에이전트가 쓴 React 코드가 정말 올바른지, 누가 검토하고 있을까요. React Doctor는 바로 이 물음에서 출발한 도구입니다. npx react-doctor@latest 한 줄로 프로젝트를 스캔하면 상태 관리·부수 효과·성능·보안·접근성·아키텍처 전반에 걸친 진단 결과가 0~100점 점수와 함께 터미널에 출력...
+
+### 42. [GeekNews] Motorola 폰이 Amazon 앱을 가로채 제휴 코드를 삽입하기 시작함
+
+- 날짜: 2026-05-27
+- 대분류: DEV
+- 카테고리: tool
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29910
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+일부 Motorola 스마트폰에서 앱 서랍의 Amazon 아이콘을 누르면 앱이 바로 열리지 않고 브라우저 리디렉션을 거쳐 제휴 코드가 삽입됨 이 동작은 앱 서랍 실행에서만 발생했고, 홈 화면 아이콘으로 Amazon 앱을 열 때는 나타나지 않아 런처 경로와 연결돼 보임
+
+### 43. [GeekNews] OpenHuman
+
+- 날짜: 2026-05-27
+- 대분류: DEV
+- 카테고리: tool
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29907
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+일상생활에 자연스럽게 통합되도록 설계된 오픈 소스 에이전트형 비서 설치 후 몇 번의 클릭만으로 동작하는 데스크톱 경험 제공 데스크톱 마스코트가 말하고 주변에 반응하며, Google Meets에 실제 참여자로 합류 가능 사용자...
+
+### 44. [GeekNews] Figma 디자인 에이전트 공개
+
+- 날짜: 2026-05-27
+- 대분류: DEV
+- 카테고리: design_system
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29906
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding, design_system
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+캔버스 위에서 바로 동작하는 Figma 전용 디자인 에이전트가 출시되어, 디자이너가 도구 전환 없이 AI 협업과 직접 조작을 오갈 수 있는 환경 제공 컴포넌트, 토큰, 표준, 베스트 프랙티스 등 디자인 시스템 컨텍스트를 깊이 이해하도록 파인튜닝되어, Figma 파일 ...
+
+### 45. [shadcn/ui Releases] shadcn@4.8.2
+
+- 날짜: 2026-05-27
+- 대분류: DEV
+- 카테고리: tool
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: shadcn/ui Releases
+- 후보 발견 URL: https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.2
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+Patch Changes #10786 55ea86f2525e63c2d0373754314f0e31212572d2 Thanks @shadcn! - Update template handling.
+
+### 46. [Vercel Blog] Redesigned Deployments List
+
+- 날짜: 2026-05-27
+- 대분류: DEV
+- 카테고리: tool
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/redesigned-deployments-list
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+The deployments list has been redesigned with a denser layout, so you can see more deployments at once. Environments are now grouped with statuses, and the updated layout makes branches and commits easier to scan. The mobile experience has also been improved, making it easier to scan deployment activity on busy projects. to see the updated design.Open your…
+
+### 47. [CSS Weekly] Single Prompt to Fully Functional Websites Using Mobirise AI
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: newsletter
+- 출처 역할: reference
+- 후보 발견 출처: CSS Weekly
+- 후보 발견 URL: https://feedpress.me/link/24028/17349320/single-prompt-to-fully-functional-websites-using-mobirise-ai
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 후보 발견 출처입니다. 뉴스레터 안의 원문 링크를 따라 최종 기준 원문을 분리하세요.
+- 이미지 후보: https://css-weekly.com/videos/single-prompt-to-fully-functional-websites-using-mobirise-ai/images/single-prompt-to-fully-functional-websites-using-mobirise-ai.jpg
+
+Find out how to use Mobirise AI to get 4 different, unique websites from a single prompt.
+
+### 48. [CSS-Tricks] Technical Writing in the AI Age
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: CSS-Tricks
+- 후보 발견 URL: https://css-tricks.com/technical-writing-in-the-ai-age/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html, ai_coding
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: 없음
+
+This isn’t totally about AI. It’s about technical writing in the age of AI. I have some thoughts on this and I hope it’s helpful to you humans reading. Technical Writing in the AI Age originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well.
+
+### 49. [GeekNews] React를 좋아하는 사람이 실제로 있긴 한가요?
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: tool
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29900
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: frontend_framework
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+React 및 React 계열 도구에 대한 비판 글을 모아 큐레이션한 자료 모음으로, 다양한 개발자·블로거의 글을 인용 형식으로 정리 성능 저하, 복잡도 증가, 하이드레이션 문제 등 React가 가진 구조적 한계를 지적하는 글이 다수 포함 React 중심의...
+
+### 50. [GeekNews] Uber COO, tokenmaxxing에 쓰는 돈을 정당화하기가 점점 어려워지고 있다고 말해
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: design_system
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29897
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: ai_coding
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+Uber의 COO는 AI 지출이 투입 비용만큼 성과를 내는지 정당화하기가 점점 어려워졌다고 봄 Uber의 CTO가 2026년 Claude Code 예산을 이미 다 썼다고 밝힌 뒤 내부 논의가 커짐 더 많은 토큰 사용량이 유용한 소비자 기능 증가로 비례해 이어진다는 연결고리는 아직 확인되지...
+
+### 51. [GeekNews] Show GN: Appbun
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: tool
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29896
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: javascript_ts
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+안녕하세요. 웹사이트를 데스크톱 앱처럼 감싸주는 작은 CLI 도구 Appbun을 만들었습니다. 평소 자주 쓰는 웹앱을 브라우저 탭 말고 별도 앱처럼 띄워두고 싶을 때가 있었어요. 비슷한 도구들도 있지만, 결과물이 블랙박스처럼 느껴지면 나중에 조금 고치고 싶을 때 불편하더라고요. 그래서 Appbun은 U
+
+### 52. [GeekNews] Ferrari Luce
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: tool
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29894
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+Ferrari Luce는 Maranello에서 설계·개발·제조된 4도어 5인승 Ferrari로, 성능·몰입감·넓은 공간을 함께 목표로 함 전기 동력원, Ferrari 설계 엔진, 고급 구동계를 결합한 새 아키텍처가 사륜구동과 넓은 실내 공간을 제공함 LoveFrom의...
+
+### 53. [GeekNews] Show GN: M Note
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: tool
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: GeekNews
+- 후보 발견 URL: https://news.hada.io/topic?id=29891
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: frontend_framework, design_system
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+제가 쓰려고 만든 맥용 데스크톱 마크다운 뷰어 겸 에디터입니다. Electron 베이스이고 Tiptap 컴포넌트를 React를 이용해 만들었습니다. 매일 쓰면서 계속 기능을 추가하고 있습니다. 계정도 필요없고, 그냥 다운받아 로클에서 사용하실 수 있습니다.
+
+### 54. [JavaScript Weekly] npm and pnpm introduce staged publishing
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: javascript
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: newsletter
+- 출처 역할: reference
+- 후보 발견 출처: JavaScript Weekly
+- 후보 발견 URL: https://javascriptweekly.com/issues/787
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: javascript_ts
+- 출처 확인 메모: 후보 발견 출처입니다. 뉴스레터 안의 원문 링크를 따라 최종 기준 원문을 분리하세요.
+- 이미지 후보: 없음
+
+#​787 — May 26, 2026 Read on the Web JavaScript Weekly JS Crossword: All the Answers are JavaScript — This hand-crafted puzzle will seriously stretch your JavaScript knowledge. I’ve seen so many people on social media either cheering having finished it or cursing being stuck… Lyra Rebane 💡 I've put some (educational!) tips at the end of this issue. Expo UI…
+
+### 55. [shadcn/ui Releases] shadcn@4.8.1
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: tool
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: shadcn/ui Releases
+- 후보 발견 URL: https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.1
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+Patch Changes #10779 df1752dfe092957f84aa467d2270436139e3ecc7 Thanks @shadcn! - add style rhea
+
+### 56. [Vercel Blog] Sandbox persistence is now GA
+
+- 날짜: 2026-05-26
+- 대분류: DEV
+- 카테고리: tool
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/sandbox-persistence-is-now-ga
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+now automatically save and restore filesystem state between sessions. Persistence is on by default, meaning no snapshots to manage or state to track manually.Vercel Sandboxes Each sandbox has a durable, that acts as a unique reference in your project. You can create, retrieve, or resume a sandbox by name. Vercel spins sessions up and down automatically, wit…
+
+### 57. [Adrian Roselli] Maybe Don’t Rely on Google’s “Modern Web Guidance”
+
+- 날짜: 2026-05-25
+- 대분류: DEV
+- 카테고리: html
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Adrian Roselli
+- 후보 발견 URL: https://adrianroselli.com/2026/05/maybe-dont-rely-on-googles-modern-web-guidance.html
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: web_platform, ai_coding
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+Just in time for Google I/O, the Chrome for Developers site announced Modern Web Guidance (MWG): Modern Web Guidance is a set of evergreen and expert-vetted skills that guide your AI coding agents across many common use cases to build modern web experiences that are accessible, performant, and secure. Build…
+
+### 58. [CSS-Tricks] Cross-Document View Transitions: Scaling Across Hundreds of Elements
+
+- 날짜: 2026-05-25
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: CSS-Tricks
+- 후보 발견 URL: https://css-tricks.com/cross-document-view-transitions-part-2/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: 없음
+
+Every view-transition-name on a page must be unique. The problem is that every pseudo-element selector in your CSS targets a specific name, so your animation styles explode into an unmanageable wall of selectors. Cross-Document View Transitions: Scaling Across Hundreds of Elements originally handwritten and published with love on CSS-Tricks. You should real…
+
+### 59. [CSS-Tricks] The State of CSS Centering in 2026
+
+- 날짜: 2026-05-22
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: CSS-Tricks
+- 후보 발견 URL: https://css-tricks.com/the-state-of-css-centering-in-2026/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: 없음
+
+Despite the countless number of online resources, it’s easy to get confused when trying to center an element. There are documented solutions, but do you really understand why the code you picked works? Let's look at the current state of centering options today in 2026. The State of CSS Centering in 2026 originally handwritten and published with love on CSS-…
+
+### 60. [Stefan Judis] Web Weekly #193 (#blogPost)
+
+- 날짜: 2026-05-22
+- 대분류: DEV
+- 카테고리: web_accessibility
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Stefan Judis
+- 후보 발견 URL: https://www.stefanjudis.com/blog/web-weekly-193/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: accessibility
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+Guten Tag! Guten Tag! 👋 Have you heard of BEMoji? Do you know what a CloseWatcher is for? And how confidently do you use aria-label? Turn on the Web Weekly tune and find some answers below. Enjoy! ::: song by="Mike" title="Dandy Livingstone - Suzanne Beware of the Devil" youtube="Z1oKcitiKKU" I've been on a big Jamaican ska kick lately and I can't get enou…
+
+### 61. [Smashing Magazine] Advanced Tree Counting: Mathematical Layouts With `sibling-index()` And `sibling-count()`
+
+- 날짜: 2026-05-21
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: Smashing Magazine
+- 후보 발견 URL: https://smashingmagazine.com/2026/05/mathematical-layouts-sibling-index-sibling-count/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: http://files.smashing.media/articles/mathematical-layouts-sibling-index-sibling-count/mathematical-layouts-sibling-index-sibling-count.jpg
+
+Meet `sibling-index()` and `sibling-count()`. Staggered cascade effect in one line of CSS without `:nth-child()` rules or JS workarounds. Works for 5 items or 5,000.
+
+### 62. [Vercel Blog] Configure weighted traffic splits for Vercel Flags from the Vercel CLI
+
+- 날짜: 2026-05-21
+- 대분류: DEV
+- 카테고리: web_accessibility
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/configure-weighted-traffic-splits-for-vercel-flags-from-the-vercel-cli
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: accessibility
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+You can now configure weighted traffic splits for with the new command in the Vercel CLI. This allows you to send a percentage of traffic to one variant and the rest to another.Vercel Flagsvercel flags split Run the command interactively, or pass the environment, bucketing attribute, and variant weights as flags: Update to the latest version of the and read…
+
+### 63. [WebKit Blog] Release Notes for Safari Technology Preview 244
+
+- 날짜: 2026-05-21
+- 대분류: DEV
+- 카테고리: html
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: WebKit Blog
+- 후보 발견 URL: https://webkit.org/blog/17962/release-notes-for-safari-technology-preview-244/
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: web_platform
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+Safari Technology Preview Release 244 is now available for download for macOS Tahoe and macOS Sequoia.
+
+### 64. [CSS-Tricks] Stack Overflow: When We Stop Asking
+
+- 날짜: 2026-05-20
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: CSS-Tricks
+- 후보 발견 URL: https://css-tricks.com/stack-overflow-when-we-stop-asking/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: 없음
+
+It still hits like a ton of bricks to see the steep decline in Stack Overflow questions. What does that mean about learning in our industry? Stack Overflow: When We Stop Asking originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well.
+
+### 65. [Frontend Focus] Google I/O and the 'era of the agentic web'.
+
+- 날짜: 2026-05-20
+- 대분류: DEV
+- 카테고리: javascript
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: newsletter
+- 출처 역할: reference
+- 후보 발견 출처: Frontend Focus
+- 후보 발견 URL: https://frontendfoc.us/issues/742
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: web_platform, css_html, ai_coding
+- 출처 확인 메모: 후보 발견 출처입니다. 뉴스레터 안의 원문 링크를 따라 최종 기준 원문을 분리하세요.
+- 이미지 후보: 없음
+
+🚀 Frontend Focus #​742 — May 20, 2026 | Read on the web 15 Updates from Google I/O 2026 — Google’s I/O conference began yesterday, with the keynote focusing on “the era of the agentic web”. This post runs through the notable announcements for developers, including the proposed WebMCP standard, automated debugging in DevTools, the HTML-in-Canvas API, the in…
+
+### 66. [Patrick Brosset] What's missing in CSS layout
+
+- 날짜: 2026-05-20
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Patrick Brosset
+- 후보 발견 URL: https://patrickbrosset.com/articles/2026-05-20-whats-missing-in-css-layout/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+I recently spent time asking for and reviewing feedback about CSS layout. I'm interested in learning more about pain points which developers face with layout in CSS, and what they're missing. For the first part, pain points, I went over the results of the 2025 State of CSS survey, and focused specifically on grid and flexbox, which are the topmost responses…
+
+### 67. [Vercel Blog] Chat SDK adds message subjects and direct SDK access
+
+- 날짜: 2026-05-20
+- 대분류: DEV
+- 카테고리: tool
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/chat-sdk-adds-message-subjects-and-direct-sdk-access
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+You can now read the parent issue or pull request when your bot is mentioned in a Linear or GitHub comment. resolves to that parent with title, status, URL, and the full typed payload.message.subject is cached per message, so repeated access only hits the API once. It resolves to on Slack and other chat platforms, where there's no parent resource.message.su…
+
+### 68. [Vercel Blog] Chat SDK now supports callback URLs on buttons and modals
+
+- 날짜: 2026-05-20
+- 대분류: DEV
+- 카테고리: design_system
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/chat-sdk-now-supports-callback-urls-on-buttons-and-modals
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+You can now pause a run on a Chat SDK card and resume it when someone clicks a button. The same flow works for form submissions. Buttons and modals accept a new prop, and the event payload is sent to that endpoint.WorkflowcallbackUrl To build a card like this, create a and pass its URL to each button's prop inside your component:workflow webhookcallbackUrl…
+
+### 69. [JavaScript Weekly] Dr. Axel's blog is gone (for now)
+
+- 날짜: 2026-05-19
+- 대분류: DEV
+- 카테고리: javascript
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: newsletter
+- 출처 역할: reference
+- 후보 발견 출처: JavaScript Weekly
+- 후보 발견 URL: https://javascriptweekly.com/issues/786
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: javascript_ts
+- 출처 확인 메모: 후보 발견 출처입니다. 뉴스레터 안의 원문 링크를 따라 최종 기준 원문을 분리하세요.
+- 이미지 후보: 없음
+
+#​786 — May 19, 2026 Read on the Web JavaScript Weekly RFC: It’s Time for npm to Make Install Scripts Opt-In — npm is the only major package manager that runs dependency install scripts (e.g. postinstall) by default, and they’ve become too much of a security weakness, says Jamie, who works for GitHub (maintainers of npm). This RFC features further discussio…
+
+### 70. [CSS-Tricks] Cross-Document View Transitions: The Gotchas Nobody Mentions
+
+- 날짜: 2026-05-18
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: CSS-Tricks
+- 후보 발견 URL: https://css-tricks.com/cross-document-view-transitions-part-1/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: 없음
+
+This is Part 1 of a two-part series about cross-document view transitions, going over all the gotchas, from ditching the deprecated way to opt into them to a little-known 4-second timeout. Cross-Document View Transitions: The Gotchas Nobody Mentions originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well.
+
+### 71. [Ahmad Shadeed] Better fluid sizing with round()
+
+- 날짜: 2026-05-17
+- 대분류: DEV
+- 카테고리: tool
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Ahmad Shadeed
+- 후보 발견 URL: https://ishadeed.com/article/css-round/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+Better fluid sizing with round()
+
+### 72. [Stefan Judis] Web Weekly #192 (#blogPost)
+
+- 날짜: 2026-05-17
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Stefan Judis
+- 후보 발견 URL: https://www.stefanjudis.com/blog/web-weekly-192/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: 없음
+
+Guten Tag! Guten Tag! 👋 Have you heard of the new HTML element? Do you use round() in your CSS? And do you cancel requests with AbortSignal.timeout? Turn on the Web Weekly tune and find some answers below. Enjoy! ::: song by="Steven" title="Humanity's Last Breath - Godhood" youtube="4QEA3FpqKUE" Truly heavy music doesn't need high BPM, blast beats and mill…
+
+### 73. [CSS Weekly] Stop Using :invalid and :valid Pseudo-Classes. Use THIS Instead!
+
+- 날짜: 2026-05-15
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: newsletter
+- 출처 역할: reference
+- 후보 발견 출처: CSS Weekly
+- 후보 발견 URL: https://feedpress.me/link/24028/17343986/stop-using-invalid-and-valid-pseudo-classes-use-this-instead
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html, performance
+- 출처 확인 메모: 후보 발견 출처입니다. 뉴스레터 안의 원문 링크를 따라 최종 기준 원문을 분리하세요.
+- 이미지 후보: https://css-weekly.com/videos/stop-using-invalid-and-valid-pseudo-classes-use-this-instead/images/stop-using-invalid-and-valid-pseudo-classes-use-this-instead-v6.jpg
+
+A quick tip showcasing why you should use :invalid and :valid CSS pseudo-classes on your input fields.
+
+### 74. [CSS-Tricks] What’s !important #11: 3D Voxel Scenes, Flying Focus, CSS Syntaxes, and More
+
+- 날짜: 2026-05-15
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: CSS-Tricks
+- 후보 발견 URL: https://css-tricks.com/whats-important-11/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: 없음
+
+If 3D voxel scenes (that you can style), flying focus animations, or new CSS syntaxes sound like your kinda thing, then this issue of What’s !important is definitely for you. What’s !important #11: 3D Voxel Scenes, Flying Focus, CSS Syntaxes, and More originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well.
+
+### 75. [Vercel Blog] Use native curl syntax with Vercel CLI
+
+- 날짜: 2026-05-15
+- 대분류: DEV
+- 카테고리: tool
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/use-native-curl-syntax-with-vercel-cli
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+You can now use native syntax with the Vercel CLI. The command accepts full URLs, bare hostnames, and the flag, and uses your Vercel auth to bypass .curl--urlvercel curlDeployment Protection If you've linked a project, you can also pass just a path: Update to the latest Vercel CLI version and run to get started. Learn more in the .vercel curlVercel CLI docu…
+
+### 76. [Vercel Blog] Sort providers by cost, latency, or throughput on AI Gateway
+
+- 날짜: 2026-05-15
+- 대분류: DEV
+- 카테고리: web_accessibility
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P2
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: Vercel Blog
+- 후보 발견 URL: https://vercel.com/changelog/sort-providers-by-cost-latency-or-throughput-on-ai-gateway
+- 최종 기준 원문 필요: no
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: accessibility, ai_coding
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: 없음
+
+You can now sort the providers behind a model by cost, time to first token (TTFT), or throughput (TPS) in .AI Gateway The default provider order blends provider reliability, quality of model output, cost, and speed of response. You can now use for explicit control over ranking criteria.sort For models with many providers and noticeable cost or speed variati…
+
+### 77. [CSS-Tricks] Computing and Displaying Discounted Prices in CSS
+
+- 날짜: 2026-05-14
+- 대분류: DEV
+- 카테고리: css
+- 타겟 적합성: design_dev_reference
+- shortlist 우선순위: P1
+- 적합성 메모: 디자인/개발 제작 실무 연결 후보입니다. 디자인 시스템, 구현, 접근성 QA, 브라우저 영향이 원문에 있는지 확인합니다.
+- 직무 태그: 웹DEV
+- 출처 유형: magazine_or_blog
+- 출처 역할: reference
+- 후보 발견 출처: CSS-Tricks
+- 후보 발견 URL: https://css-tricks.com/computing-and-displaying-discounted-prices-in-css/
+- 최종 기준 원문 필요: yes
+- 기계 상태: candidate
+- 기계 메모: AI 편집 단계에서 원문 확인 후 채택/보류/제외를 판단합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: css_html
+- 출처 확인 메모: 해석/맥락 보강 출처입니다. 공식 발표, 제품 문서, 릴리즈 노트로 역추적하세요.
+- 이미지 후보: 없음
+
+A clever use of CSS to calculate and display a discounted product price by providing a base price and discount amount, featuring modern CSS features like attr(), mod(), and round(). Computing and Displaying Discounted Prices in CSS originally handwritten and published with love on CSS-Tricks. You should really get the newsletter as well.
+
+## 자동 제외된 항목
+
+### 01. [쿠팡 뉴스룸] [보도자료] 쿠팡이츠서비스, 서울고용노동청 등과 합동 안전 캠페인…무상 점검 등 배달파트너 현장 안전 지원
+
+- 날짜: 2026-05-28
+- 대분류: Service
+- 카테고리: ecommerce
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: newsroom 도메인의 [보도자료]·브랜드 라벨·행사 포스트로 분류됐습니다. 화면·플로우·정책 변화가 없는 광고/이벤트성으로 자동 제외합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: 쿠팡 뉴스룸
+- 후보 발견 URL: https://news.coupang.com/archives/62832/
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: newsroom 도메인의 [보도자료]·브랜드 라벨·행사 포스트로 분류됐습니다. 화면·플로우·정책 변화가 없는 광고/이벤트성으로 자동 제외합니다.
+- 수집 단서 태그: seller_operation
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://news.coupang.com/wp-content/uploads/2026/05/coupang-seoul-employment-and-labor-office-joint-safety-campaign-260528.jpg
+
+쿠팡이츠서비스(CES)가 서울지방고용노동청 등과 손잡고 다가올 장마철과 혹서기를 대비해 배달파트너의 안전한 운행 환경을 조성하기 위한 합동 캠페인에 나섰다. 쿠팡이츠서비스는 이륜차 안전사고 예방을 위한 다양한 프로그램을 진행했다.
+
+### 02. [컬리 뉴스룸] “초여름 먹거리 미리 준비하세요”…컬리, ‘알뜰미식특가’ 기획전
+
+- 날짜: 2026-05-27
+- 대분류: Service
+- 카테고리: ecommerce
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: newsroom 도메인의 [보도자료]·브랜드 라벨·행사 포스트로 분류됐습니다. 화면·플로우·정책 변화가 없는 광고/이벤트성으로 자동 제외합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: 컬리 뉴스룸
+- 후보 발견 URL: https://newsroom.kurlycorp.com/kurly-early-summer-event-2026/?utm_source=rss&utm_medium=rss&utm_campaign=kurly-early-summer-event-2026
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: newsroom 도메인의 [보도자료]·브랜드 라벨·행사 포스트로 분류됐습니다. 화면·플로우·정책 변화가 없는 광고/이벤트성으로 자동 제외합니다.
+- 수집 단서 태그: commerce_core, membership_retention, review_trust
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img-newsroom.kurlycorp.com/wp-content/uploads/2026/05/%EC%82%AC%EC%A7%841-%EC%B4%88%EC%97%AC%EB%A6%84-%EB%A8%B9%EA%B1%B0%EB%A6%AC-%EB%AF%B8%EB%A6%AC-%EC%A4%80%EB%B9%84%ED%95%98%EC%84%B8%EC%9A%94%E2%80%A6%EC%BB%AC%EB%A6%AC-%E2%80%98%EC%95%8C%EB%9C%B0%EB%AF%B8%EC%8B%9D%ED%8A%B9%EA%B0%80-%EA%B8%B0%ED%9A%8D%EC%A0%84.jpg
+
+리테일 테크 기업 컬리는 이른 여름을 맞아 다음 달 8일까지 ‘알뜰미식특가’ 기획전을 진행한다고 28일 밝혔다. 알뜰미식특가 기획전에서는 최다 재구매 상품 중 하나인 ‘차려낸 대파 풍미를 더한 새우볶음밥’부터 8만여 개 후기를 자랑하는 ‘샐러드판다 샐러드 샌드위치’까지 다양한 밀키트와
+
+### 03. [쿠팡 뉴스룸] [보도자료] 쿠팡, ‘덕후들의 놀이터’ 콜라보클럽 론칭…홍대 팝업스토어에서 캐릭터 상품 선착순 제공
+
+- 날짜: 2026-05-27
+- 대분류: Service
+- 카테고리: ecommerce
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: newsroom 도메인의 [보도자료]·브랜드 라벨·행사 포스트로 분류됐습니다. 화면·플로우·정책 변화가 없는 광고/이벤트성으로 자동 제외합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: 쿠팡 뉴스룸
+- 후보 발견 URL: https://news.coupang.com/archives/62826/
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: newsroom 도메인의 [보도자료]·브랜드 라벨·행사 포스트로 분류됐습니다. 화면·플로우·정책 변화가 없는 광고/이벤트성으로 자동 제외합니다.
+- 수집 단서 태그: commerce_core
+- 위험 단서 태그: offline_only
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://news.coupang.com/wp-content/uploads/2026/05/coupang-goods-character-collabo-club-hongdae-pop-up-store-260527.png
+
+쿠팡이 특정 분야 마니아를 뜻하는 ‘덕후’ 고객들을 위한 쇼핑 경험 확장에 나선다. 쿠팡은 K-굿즈부터 글로벌 인기 캐릭터 상품까지 한 눈에 볼 수 있는 협업 상품 전문관 ‘쿠팡콜라보클럽’을 오는 28일 론칭한다고 27일 밝혔다.
+
+### 04. [쿠팡 뉴스룸] [보도자료] 쿠팡 장애인 e스포츠팀, ‘2026 경기e스포츠 페스티벌’ 전 종목 우승
+
+- 날짜: 2026-05-26
+- 대분류: Service
+- 카테고리: ecommerce
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: newsroom 도메인의 [보도자료]·브랜드 라벨·행사 포스트로 분류됐습니다. 화면·플로우·정책 변화가 없는 광고/이벤트성으로 자동 제외합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: 쿠팡 뉴스룸
+- 후보 발견 URL: https://news.coupang.com/archives/62821/
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: newsroom 도메인의 [보도자료]·브랜드 라벨·행사 포스트로 분류됐습니다. 화면·플로우·정책 변화가 없는 광고/이벤트성으로 자동 제외합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: offline_only
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://news.coupang.com/wp-content/uploads/2026/05/coupang-disabled-2026-gyeonggi-esports-festival-championship-260526-01.jpg
+
+쿠팡은 자사 장애인 e스포츠팀 선수들이 지난 21일 일산 킨텍스 제1전시장 특설경기장에서 열린 ‘2026 경기e스포츠 페스티벌’ 결승전에 출전해 모든 종목서 우승을 차지했다고 26일 밝혔다.
+
+### 05. [컬리 뉴스룸] [Kurly Only] 샐러드를 일상으로 불러 온 &#039;샐러드판다&#039;
+
+- 날짜: 2026-05-22
+- 대분류: Service
+- 카테고리: ecommerce
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: newsroom 도메인의 [보도자료]·브랜드 라벨·행사 포스트로 분류됐습니다. 화면·플로우·정책 변화가 없는 광고/이벤트성으로 자동 제외합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: 컬리 뉴스룸
+- 후보 발견 URL: https://newsroom.kurlycorp.com/k-salad/?utm_source=rss&utm_medium=rss&utm_campaign=k-salad
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: newsroom 도메인의 [보도자료]·브랜드 라벨·행사 포스트로 분류됐습니다. 화면·플로우·정책 변화가 없는 광고/이벤트성으로 자동 제외합니다.
+- 수집 단서 태그: commerce_core
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img-newsroom.kurlycorp.com/wp-content/uploads/2026/05/Kurly-Only_MO_salad.jpg
+
+[샐러드판다] 병 샐러드 투명한 용기에 속재료가 층층이 담긴 병 샐러드. 종류만 12가지인 샐러드판다의 대표 상품입니다. 여기에 샌드위치와 랩, 채소스틱과 스프레드 샐러드까지. 가벼운 식사를 원하는 분이라면 누구든 한번쯤 보셨을 상품들이죠. 그런데 샐러드는 사실 샐러드판다의 메인 상품이
+
+### 06. [컬리 뉴스룸] [굿 센스] 상품 좀 팔아본 회사가 &#039;좋은 것&#039;을 고집하는 이유
+
+- 날짜: 2026-05-21
+- 대분류: Service
+- 카테고리: ecommerce
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: newsroom 도메인의 [보도자료]·브랜드 라벨·행사 포스트로 분류됐습니다. 화면·플로우·정책 변화가 없는 광고/이벤트성으로 자동 제외합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: 컬리 뉴스룸
+- 후보 발견 URL: https://newsroom.kurlycorp.com/k-goodsense/?utm_source=rss&utm_medium=rss&utm_campaign=k-goodsense
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: newsroom 도메인의 [보도자료]·브랜드 라벨·행사 포스트로 분류됐습니다. 화면·플로우·정책 변화가 없는 광고/이벤트성으로 자동 제외합니다.
+- 수집 단서 태그: commerce_core
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img-newsroom.kurlycorp.com/wp-content/uploads/2026/05/Good-sense_MO_0519.jpg
+
+오늘 소개해 드릴 이야기는, 사과 하나도 다르다고 하는 사람들에 대한 것입니다. 이들에게 좋은 것은 고정된 절댓값이 아닙니다. 그 기준이 매일 더 나은 쪽으로 움직여야 한다고 믿기에, 어제 제일 맛있었던 사과가 오늘은 아쉬운 사과라고 생각하기도 하죠. 이들은 2천 원짜리 대파 한 단을
+
+### 07. [컬리 뉴스룸] 컬리, 11주년 ‘벌쓰 위크’ 개최…최대 60% 할인
+
+- 날짜: 2026-05-18
+- 대분류: Service
+- 카테고리: ecommerce
+- 타겟 적합성: weak_promo
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: newsroom 도메인의 [보도자료]·브랜드 라벨·행사 포스트로 분류됐습니다. 화면·플로우·정책 변화가 없는 광고/이벤트성으로 자동 제외합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: 컬리 뉴스룸
+- 후보 발견 URL: https://newsroom.kurlycorp.com/%ec%bb%ac%eb%a6%ac-11%ec%a3%bc%eb%85%84-%eb%b2%8c%ec%93%b0-%ec%9c%84%ed%81%ac-%ea%b0%9c%ec%b5%9c%ec%b5%9c%eb%8c%80-60-%ed%95%a0%ec%9d%b8%ec%97%90-%ea%b8%b0%eb%85%90/?utm_source=rss&utm_medium=rss&utm_campaign=%25ec%25bb%25ac%25eb%25a6%25ac-11%25ec%25a3%25bc%25eb%2585%2584-%25eb%25b2%258c%25ec%2593%25b0-%25ec%259c%2584%25ed%2581%25ac-%25ea%25b0%259c%25ec%25b5%259c%25ec%25b5%259c%25eb%258c%2580-60-%25ed%2595%25a0%25ec%259d%25b8%25ec%2597%2590-%25ea%25b8%25b0%25eb%2585%2590
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: newsroom 도메인의 [보도자료]·브랜드 라벨·행사 포스트로 분류됐습니다. 화면·플로우·정책 변화가 없는 광고/이벤트성으로 자동 제외합니다.
+- 수집 단서 태그: commerce_core
+- 위험 단서 태그: weak_promo, offline_only, business_only
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img-newsroom.kurlycorp.com/wp-content/uploads/2026/05/260518_11%EC%A3%BC%EB%85%84_%EB%B2%8C%EC%93%B0%EC%9C%84%ED%81%AC_%EB%B3%B8%ED%94%84KV_main_mo.png
+
+리테일 테크 기업 컬리는 오는 25일까지 11주년 &#039;벌쓰 위크(Birth Week)&#039; 기획전을 진행한다고 19일 밝혔다. 서비스 오픈 11주년을 맞아 이번 행사에서는 그간의 고객 사랑에 보답하고자 1,300여 개 상품을 최대 60% 할인 판매한다. 카테고리별 베스트 상품을 저렴한 가격에
+
+### 08. [컬리 뉴스룸] [이주의 신상] 11살 생일 맞은 컬리의 단독 신상
+
+- 날짜: 2026-05-18
+- 대분류: Service
+- 카테고리: ecommerce
+- 타겟 적합성: exclude
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: 컬리 뉴스룸
+- 후보 발견 URL: https://newsroom.kurlycorp.com/k-11th-anniversary/?utm_source=rss&utm_medium=rss&utm_campaign=k-11th-anniversary
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img-newsroom.kurlycorp.com/wp-content/uploads/2026/05/thum_%EA%B0%80%EB%A1%9C.jpg
+
+[실리만] 11주년 세렌 IH 세라믹 프라이팬&웍 골라담기 컬리 11주년을 기념해 실리만과 단독으로 선보이는 프라이팬&웍을 소개합니다. 요리와 용도에 맞춰 다양한 사이즈의 프라이팬과 웍을 골라 담을 수 있어 우리 집 조리 환경에 꼭 맞는 주방 구성이 가능해요. 손잡이에는
+
+### 09. [무신사 뉴스룸] 무신사 스탠다드, 20대가 꼽은 ‘한국 대세·대표 SPA’···“향후 구매 의향에서도 1위”
+
+- 날짜: 2026-05-28
+- 대분류: Service
+- 카테고리: fashion
+- 타겟 적합성: exclude
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: 무신사 뉴스룸
+- 후보 발견 URL: https://newsroom.musinsa.com/newsroom-menu/2026-0528
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://cdn.prod.website-files.com/60a3629e04f26d12caff56df/6a16405a0a8bcc9e1f84e7ea_%5B%EB%AC%B4%EC%8B%A0%EC%82%AC%20%EC%82%AC%EC%A7%84%EC%9E%90%EB%A3%8C%5D%2020%EB%8C%80%20%EB%82%A8%EB%85%80%20%EC%86%8C%EB%B9%84%EC%9E%90%20%EB%8C%80%EC%83%81%20SPA%20%EB%B8%8C%EB%9E%9C%EB%93%9C%20%EC%9D%B8%EC%8B%9D%20%EC%A1%B0%EC%82%AC.jpg
+
+2026.05.28
+
+### 10. [CJ News Room] CNN 다큐멘터리 <K-Everything>이 CJ를 조명한 이유 &#8211; CJ 뉴스룸
+
+- 날짜: 2026-05-27
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: exclude
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: CJ News Room
+- 후보 발견 URL: https://cjnews.cj.net/cnn-%eb%8b%a4%ed%81%90%eb%a9%98%ed%84%b0%eb%a6%ac-k-everything%ec%9d%b4-cj%eb%a5%bc-%ec%a1%b0%eb%aa%85%ed%95%9c-%ec%9d%b4%ec%9c%a0/?utm_source=rss&utm_medium=rss&utm_campaign=cnn-%25eb%258b%25a4%25ed%2581%2590%25eb%25a9%2598%25ed%2584%25b0%25eb%25a6%25ac-k-everything%25ec%259d%25b4-cj%25eb%25a5%25bc-%25ec%25a1%25b0%25eb%25aa%2585%25ed%2595%259c-%25ec%259d%25b4%25ec%259c%25a0
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJ-ENM_thumbnail.jpg
+
+K컬처는 어떻게 &#039;산업&#039;이 됐나 - 30년의 설계자를 돌아보다 2026년 5월 9일 공개된 CNN 오리지널 시리즈 은 K컬처의 세계적 확산을 추적하는 4부작 다큐멘터리입니다. 배우 대니얼 대 킴(Daniel Dae Kim)이 진행을 맡아 K팝, K필름, K
+
+### 11. [CJ News Room] “더 CJ컵 개막” CJ제일제당, 글로벌 K푸드 브랜드 ‘비비고’로 전세계에 한국 식문화 알린다
+
+- 날짜: 2026-05-21
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: exclude
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 직무 태그: 웹서비스기획, 웹디자인
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: CJ News Room
+- 후보 발견 URL: https://cjnews.cj.net/%eb%8d%94-cj%ec%bb%b5-%ea%b0%9c%eb%a7%89-cj%ec%a0%9c%ec%9d%bc%ec%a0%9c%eb%8b%b9-%ea%b8%80%eb%a1%9c%eb%b2%8c-k%ed%91%b8%eb%93%9c-%eb%b8%8c%eb%9e%9c%eb%93%9c-%eb%b9%84/?utm_source=rss&utm_medium=rss&utm_campaign=%25eb%258d%2594-cj%25ec%25bb%25b5-%25ea%25b0%259c%25eb%25a7%2589-cj%25ec%25a0%259c%25ec%259d%25bc%25ec%25a0%259c%25eb%258b%25b9-%25ea%25b8%2580%25eb%25a1%259c%25eb%25b2%258c-k%25ed%2591%25b8%25eb%2593%259c-%25eb%25b8%258c%25eb%259e%259c%25eb%2593%259c-%25eb%25b9%2584
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJ%EC%A0%9C%EC%9D%BC%EC%A0%9C%EB%8B%B9_thumbnail-2.jpg
+
+CJ제일제당이 PGA 투어 정규대회인 ‘더 CJ컵 바이런 넬슨’에서 비비고를 앞세워 전 세계에 K푸드와 한국 식문화를 알린다. CJ제일제당은 5월 20일부터 24일까지 5일간(현지시간) 미국 텍사스주 맥키니 TPC 크레이그 랜치에서 열리는 ‘더 CJ컵 바이런 넬슨(THE CJ CUP
+
+### 12. [Glossy] No. 1 in women&#039;s swimwear for 10 years, Target is refining its approach to the category
+
+- 날짜: 2026-05-21
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: exclude
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Glossy
+- 후보 발견 URL: https://www.glossy.co/fashion/no-1-in-womens-swimwear-for-10-years-target-is-refining-its-approach-to-the-category/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss
+- 최종 기준 원문 필요: yes
+- 기계 상태: auto_excluded
+- 기계 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.glossy.co/wp-content/uploads/sites/4/2026/05/Untitled-design-64.png?w=1920
+
+Target has held the No. 1 market share in swim for the past decade. But, it&#039;s refocusing on its merchandising authority in the category based on industry-wide initiatives.
+
+### 13. [Glossy] L&#039;Oréal-owned Lancôme is leveraging longevity in prestige skin care under veteran exec Vania Lacascade
+
+- 날짜: 2026-05-21
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: exclude
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Glossy
+- 후보 발견 URL: https://www.glossy.co/beauty/loreal-owned-lancome-is-leveraging-longevity-in-prestige-skin-care-under-veteran-exec-vania-lacascade/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss
+- 최종 기준 원문 필요: yes
+- 기계 상태: auto_excluded
+- 기계 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.glossy.co/wp-content/uploads/sites/4/2026/05/GB_1140X520_0520.jpg
+
+Veteran exec and Lancôme global brand president Vania Lacascade shares the strategy leading L&#039;Oréal Group&#039;s next wave of product innovation.
+
+### 14. [CJ News Room] CJ ENM, 2026 ‘오펜(O’PEN)’ 새 기수 출범… 차세대 K-콘텐츠 창작자 육성 본격화
+
+- 날짜: 2026-05-20
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: exclude
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: CJ News Room
+- 후보 발견 URL: https://cjnews.cj.net/cj-enm-2026-%ec%98%a4%ed%8e%9copen-%ec%83%88-%ea%b8%b0%ec%88%98-%ec%b6%9c%eb%b2%94-%ec%b0%a8%ec%84%b8%eb%8c%80-k%ec%bd%98%ed%85%90%ec%b8%a0-%ec%b0%bd%ec%9e%91/?utm_source=rss&utm_medium=rss&utm_campaign=cj-enm-2026-%25ec%2598%25a4%25ed%258e%259copen-%25ec%2583%2588-%25ea%25b8%25b0%25ec%2588%2598-%25ec%25b6%259c%25eb%25b2%2594-%25ec%25b0%25a8%25ec%2584%25b8%25eb%258c%2580-k%25ec%25bd%2598%25ed%2585%2590%25ec%25b8%25a0-%25ec%25b0%25bd%25ec%259e%2591
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img.cjnews.cj.net/wp-content/uploads/2026/05/%EC%98%A4%ED%8E%9C%EC%8A%A4%ED%86%A0%EB%A6%AC%ED%85%94%EB%9F%AC_thumbnail.jpg
+
+CJ ENM은 지난 20일 서울 상암동 오펜 센터에서 신인 창작자 지원 사업인 ‘오펜 스토리텔러’ 10기와 ‘오펜 뮤직’ 8기의 통합 출범식을 개최하고, 차세대 K콘텐츠 창작자 22명의 본격적인 육성에 나선다고 21일 밝혔다. ■ 오펜(O’PEN)이란? 오펜은 CJ ENM이 콘텐츠 기
+
+### 15. [CJ News Room] CGV, 빠더너스 손잡고 &#8216;너바나 더 밴드&#8217; 굿즈 선봬&#8230;관객 전용 ‘팝딜타임’ 진행 &#8211; CJ 뉴스룸
+
+- 날짜: 2026-05-20
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: exclude
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: CJ News Room
+- 후보 발견 URL: https://cjnews.cj.net/cgv-%eb%b9%a0%eb%8d%94%eb%84%88%ec%8a%a4-%ec%86%90%ec%9e%a1%ea%b3%a0-%eb%84%88%eb%b0%94%eb%82%98-%eb%8d%94-%eb%b0%b4%eb%93%9c-%ea%b5%bf%ec%a6%88-%ec%84%a0%eb%b4%ac-%ea%b4%80%ea%b0%9d/?utm_source=rss&utm_medium=rss&utm_campaign=cgv-%25eb%25b9%25a0%25eb%258d%2594%25eb%2584%2588%25ec%258a%25a4-%25ec%2586%2590%25ec%259e%25a1%25ea%25b3%25a0-%25eb%2584%2588%25eb%25b0%2594%25eb%2582%2598-%25eb%258d%2594-%25eb%25b0%25b4%25eb%2593%259c-%25ea%25b5%25bf%25ec%25a6%2588-%25ec%2584%25a0%25eb%25b4%25ac-%25ea%25b4%2580%25ea%25b0%259d
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img.cjnews.cj.net/wp-content/uploads/2026/05/CGV_thumbnail-3.jpg
+
+CGV가 코미디 크루 빠더너스(BDNS)와 협업해 영화 ‘너바나 더 밴드 : 전설적 밴드 ‘너바나’와는 별 관련 없는 ‘너바나 더 밴드’의 콤비 맷과 제이. 어느 날 공연을 위해 타임머신을 만드는 황당한 작전을 세우고 처음 만났던 17년 전으로 돌(이하 &#039;너바나 더 밴드’)’ 개봉을 기
+
+### 16. [CJ News Room] CJ웰케어, 국산 신소재 ‘SHPro®’ 산업화 앞장…전립선 건강기능식품 시장 판도 바꾼다 &#8211; CJ 뉴스룸
+
+- 날짜: 2026-05-19
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: exclude
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: CJ News Room
+- 후보 발견 URL: https://cjnews.cj.net/cj%ec%9b%b0%ec%bc%80%ec%96%b4-%ea%b5%ad%ec%82%b0-%ec%8b%a0%ec%86%8c%ec%9e%ac-shpro-%ec%82%b0%ec%97%85%ed%99%94-%ec%95%9e%ec%9e%a5%ec%a0%84%eb%a6%bd%ec%84%a0-%ea%b1%b4/?utm_source=rss&utm_medium=rss&utm_campaign=cj%25ec%259b%25b0%25ec%25bc%2580%25ec%2596%25b4-%25ea%25b5%25ad%25ec%2582%25b0-%25ec%258b%25a0%25ec%2586%258c%25ec%259e%25ac-shpro-%25ec%2582%25b0%25ec%2597%2585%25ed%2599%2594-%25ec%2595%259e%25ec%259e%25a5%25ec%25a0%2584%25eb%25a6%25bd%25ec%2584%25a0-%25ea%25b1%25b4
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJ%EC%9B%B0%EC%BC%80%EC%96%B4_thumbnail.jpg
+
+건강기능식품 전문기업 CJ웰케어가 농촌진흥청과의 긴밀한 협력을 통해 국산 원료를 활용한 전립선 건강기능식품 시장의 혁신을 주도하고 있다.&nbsp; 농촌진흥청 국립원예특작과학원은 지난 18일, CJ웰케어를 비롯한 주요 산업체와 함께 오송에 위치한 서흥 공장에서 ‘원료국산화 및 산업화 제
+
+### 17. [CJ News Room] CGV, 몰입형 관람 경험 강화&#8230;SCREENX 4개관 신규·리뉴얼 오픈 &#8211; CJ 뉴스룸
+
+- 날짜: 2026-05-19
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: exclude
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: CJ News Room
+- 후보 발견 URL: https://cjnews.cj.net/cgv-%eb%aa%b0%ec%9e%85%ed%98%95-%ea%b4%80%eb%9e%8c-%ea%b2%bd%ed%97%98-%ea%b0%95%ed%99%94-screenx-4%ea%b0%9c%ea%b4%80-%ec%8b%a0%ea%b7%9c%c2%b7%eb%a6%ac%eb%89%b4%ec%96%bc-%ec%98%a4%ed%94%88/?utm_source=rss&utm_medium=rss&utm_campaign=cgv-%25eb%25aa%25b0%25ec%259e%2585%25ed%2598%2595-%25ea%25b4%2580%25eb%259e%258c-%25ea%25b2%25bd%25ed%2597%2598-%25ea%25b0%2595%25ed%2599%2594-screenx-4%25ea%25b0%259c%25ea%25b4%2580-%25ec%258b%25a0%25ea%25b7%259c%25c2%25b7%25eb%25a6%25ac%25eb%2589%25b4%25ec%2596%25bc-%25ec%2598%25a4%25ed%2594%2588
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img.cjnews.cj.net/wp-content/uploads/2026/05/CGV_thumbnail-1-1.jpg
+
+CGV가 SCREENX관을 신규 및 리뉴얼 오픈하며 기술 특별관 경쟁력 강화에 나선다. CGV는 배곧·인천·김포·의정부 등 4개 지점에서 SCREENX 상영관을 신규 및 리뉴얼 오픈한다고 19일 밝혔다. SCREENX는 정면 스크린과 함께 양옆 벽면까지 스크린을 확장해 현장감과 몰입감을
+
+### 18. [Glossy] Beauty Briefing: Fragrance layering makes its way to the mall
+
+- 날짜: 2026-05-19
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: exclude
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Glossy
+- 후보 발견 URL: https://www.glossy.co/beauty/beauty-briefing-fragrance-layering-makes-its-way-to-the-mall/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss
+- 최종 기준 원문 필요: yes
+- 기계 상태: auto_excluded
+- 기계 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://www.glossy.co/wp-content/uploads/sites/4/2026/05/BBW-inc-girl-with-travel-size-ffm-and-body-cream.jpeg
+
+As more U.S. consumers adopt fragrance wardrobes rather than a single signature scent, brands are finding ways to capitalize on the trend.
+
+### 19. [CJ News Room] &#8220;&#8216;마이클&#8217; 특별관에서 빛났다&#8221;&#8230;SCREENX·4DX 글로벌 TOP3 &#8211; CJ 뉴스룸
+
+- 날짜: 2026-05-15
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: exclude
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: CJ News Room
+- 후보 발견 URL: https://cjnews.cj.net/%eb%a7%88%ec%9d%b4%ed%81%b4-%ed%8a%b9%eb%b3%84%ea%b4%80%ec%97%90%ec%84%9c-%eb%b9%9b%eb%82%ac%eb%8b%a4-screenx%c2%b74dx-%ea%b8%80%eb%a1%9c%eb%b2%8c-top3/?utm_source=rss&utm_medium=rss&utm_campaign=%25eb%25a7%2588%25ec%259d%25b4%25ed%2581%25b4-%25ed%258a%25b9%25eb%25b3%2584%25ea%25b4%2580%25ec%2597%2590%25ec%2584%259c-%25eb%25b9%259b%25eb%2582%25ac%25eb%258b%25a4-screenx%25c2%25b74dx-%25ea%25b8%2580%25eb%25a1%259c%25eb%25b2%258c-top3
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img.cjnews.cj.net/wp-content/uploads/2026/05/%EB%A7%88%EC%9D%B4%ED%81%B4_thumbnail.jpg
+
+CGV는 음악영화 ‘마이클’이 SCREENX와 4DX 등 기술 특별관에서 올해 개봉작 기준 글로벌 흥행 TOP3에 올랐다고 15일 밝혔다. ‘마이클’은 지난 4월 북미를 시작으로 프랑스·영국·멕시코 등 글로벌 시장에서 순차 개봉한 이후 SCREENX·4DX 등 기술 특별관에서 꾸준한 관
+
+### 20. [CJ News Room] CJ ENM K컬처 30년 문화사업 선구안 CNN 다큐멘터리 &#8216;K-Everything&#8217; 통해 조명 &#8211; CJ 뉴스룸
+
+- 날짜: 2026-05-14
+- 대분류: Service
+- 카테고리: global_service_ux
+- 타겟 적합성: exclude
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: official
+- 출처 역할: official
+- 후보 발견 출처: CJ News Room
+- 후보 발견 URL: https://cjnews.cj.net/cj-enm-k%ec%bb%ac%ec%b2%98-30%eb%85%84-%eb%ac%b8%ed%99%94%ec%82%ac%ec%97%85-%ec%84%a0%ea%b5%ac%ec%95%88-cnn-%eb%8b%a4%ed%81%90%eb%a9%98%ed%84%b0%eb%a6%ac-k-everything-%ed%86%b5%ed%95%b4/?utm_source=rss&utm_medium=rss&utm_campaign=cj-enm-k%25ec%25bb%25ac%25ec%25b2%2598-30%25eb%2585%2584-%25eb%25ac%25b8%25ed%2599%2594%25ec%2582%25ac%25ec%2597%2585-%25ec%2584%25a0%25ea%25b5%25ac%25ec%2595%2588-cnn-%25eb%258b%25a4%25ed%2581%2590%25eb%25a9%2598%25ed%2584%25b0%25eb%25a6%25ac-k-everything-%25ed%2586%25b5%25ed%2595%25b4
+- 최종 기준 원문 필요: no
+- 기계 상태: auto_excluded
+- 기계 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 최종 기준 원문으로 사용할 수 있습니다. 원문 날짜, 기능명, 화면/릴리즈 범위를 확인하세요.
+- 이미지 후보: https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJ-ENM_thumbnail.jpg
+
+CJ ENM이 지난 30여 년간 이어온 문화사업 비전과 K콘텐츠 글로벌 확산 노력이 글로벌 미디어를 통해서 재조명됐다. CNN 오리지널 시리즈 이 지난 9일 전 세계에 최초 공개됐다. K컬처가 한국의 고유한 전통과 역사적 경험을 토대로 창의성과 혁신을
+
+### 21. [Retail Dive] Target, Walmart vie for beauty customers
+
+- 날짜: 2026-05-27
+- 대분류: Service
+- 카테고리: ai
+- 타겟 적합성: exclude
+- shortlist 우선순위: 자동 제외
+- 적합성 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 직무 태그: 웹서비스기획
+- 출처 유형: media_or_unknown
+- 출처 역할: reference
+- 후보 발견 출처: Retail Dive
+- 후보 발견 URL: https://www.retaildive.com/news/target-walmart-beauty-customers-q1/820890/
+- 최종 기준 원문 필요: yes
+- 기계 상태: auto_excluded
+- 기계 메모: 웹서비스 전문가가 왜 주목해야 하는지와 실제 서비스 적용 시 고려할 화면·정책·플로우 단서가 부족합니다.
+- 수집 단서 태그: 없음
+- 위험 단서 태그: 없음
+- 디자인 가치 태그: 없음
+- 출처 확인 메모: 출처 신뢰도를 AI가 재확인해야 합니다.
+- 이미지 후보: https://imgproxy.divecdn.com/Pq9boib2IPJQjKfvFE6HfZ0zPXydyfgQMShqXtffZaA/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9QcmVzc19LaXQtV2FsbWFydF9CZWF1dHktMy5qcGc=.webp
+
+The retailers are investing in ways to court beauty consumers away from specialty retailers, trying new staffing models and remixing the merchandising assortment.
