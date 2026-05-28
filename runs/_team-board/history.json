@@ -1,0 +1,59 @@
+{
+  "rounds": ["2026-05-27"],
+  "discovered_sites": [
+    {"url": "https://www.serenacongiu.com/", "first_seen": "2026-05-27", "by": "design-reference-scout"},
+    {"url": "https://www.anygivenmoment.co/", "first_seen": "2026-05-27", "by": "design-reference-scout"},
+    {"url": "https://www.ballet-de-marseille.com/", "first_seen": "2026-05-27", "by": "design-reference-scout"},
+    {"url": "https://lidofestival.com/", "first_seen": "2026-05-27", "by": "design-reference-scout"},
+    {"url": "https://becane.paris/", "first_seen": "2026-05-27", "by": "design-reference-scout"},
+    {"url": "https://burnstudio.com/", "first_seen": "2026-05-27", "by": "design-reference-scout"},
+    {"url": "https://www.kebhana.com/", "first_seen": "2026-05-27", "by": "service-reference-scout"},
+    {"url": "https://www.daangn.com/jobs", "first_seen": "2026-05-27", "by": "service-reference-scout"},
+    {"url": "https://story.pxd.co.kr/1888", "first_seen": "2026-05-27", "by": "service-reference-scout"},
+    {"url": "https://www.dodoform.com/", "first_seen": "2026-05-27", "by": "service-reference-scout"},
+    {"url": "https://smashingmagazine.com/2026/05/mathematical-layouts-sibling-index-sibling-count/", "first_seen": "2026-05-27", "by": "dev-reference-scout"},
+    {"url": "https://microsoftedge.github.io/Demos/css-gap-decorations/", "first_seen": "2026-05-27", "by": "dev-reference-scout"},
+    {"url": "https://shader.se", "first_seen": "2026-05-27", "by": "dev-reference-scout"},
+    {"url": "https://masaigon.space/en", "first_seen": "2026-05-27", "by": "dev-reference-scout"},
+    {"url": "https://demo.protopie.cloud/p/606d44ace6d7ea8f41cf38ff", "first_seen": "2026-05-27", "by": "dev-reference-scout"}
+  ],
+  "hot_keywords_by_round": {
+    "2026-05-27": [
+      "29CM 1조 4강 재편",
+      "올리브 멤버스 월간 승급",
+      "무신사 뷰티 800개 메가스토어",
+      "K-뷰티 인디 잘파 매대",
+      "CSS sibling-index",
+      "Codrops product-to-cart 인터랙션",
+      "강등 3개월 유예 자동",
+      "다이얼 회전 네비",
+      "alternative web design (Hover States)",
+      "한국 디자이너 Three.js WebGPU (Shining)"
+    ]
+  },
+  "media_diversity": {
+    "design": ["Hover States", "Awwwards", "Siteinspire", "Lapa Ninja", "Cosmos"],
+    "service": ["DIGITAL iNSIGHT", "pxd story", "당근 팀블로그", "ProductHunt", "Show HN", "Brunch"],
+    "dev": ["Codrops", "Chrome for Developers", "Smashing Magazine", "Show HN", "GitHub (Microsoft Edge Demos)"],
+    "trend": ["outstanding.kr", "mobiinside", "careet", "cjnews", "musinsa 뉴스룸", "asiae", "cheil"],
+    "inspiration": ["Codrops Playground", "Awwwards Interactions", "CodeMyUI", "WebSearch"]
+  },
+  "cross_findings": [
+    {
+      "round": "2026-05-27",
+      "pair": ["dev #1 sibling-index", "inspiration #9 Volt 가격 슬라이드"],
+      "shared_seed": "컬러 스왓치·가격 변동 UI"
+    },
+    {
+      "round": "2026-05-27",
+      "pair": ["service #2 당근알바 키즈케어 폼 입력 순서 역전", "inspiration #7 Pay→Fingerprint Morph"],
+      "shared_seed": "폼·결제 UX"
+    }
+  ],
+  "team_meta": {
+    "total_rounds": 1,
+    "total_items": 48,
+    "total_stars": 25,
+    "members": ["design-reference-scout", "service-reference-scout", "dev-reference-scout", "trend-hunter", "inspiration-scout"]
+  }
+}
