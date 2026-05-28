@@ -1,5 +1,45 @@
 import fs from "node:fs/promises";
+import fsSync from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// _blocked-sources.json 한 번만 로드해 캐시. council 끝판왕 결정 #4 후속.
+// dev/service/design 카테고리별 auto_exclude_keywords를 fetch 단계에서 제목 매칭으로 컷.
+const BLOCKED_SOURCES_PATH = path.join(__dirname, "..", "..", "news-tracking", "_blocked-sources.json");
+let _blockedKeywordsCache = null;
+function getBlockedKeywords() {
+  if (_blockedKeywordsCache !== null) return _blockedKeywordsCache;
+  try {
+    const raw = fsSync.readFileSync(BLOCKED_SOURCES_PATH, "utf8");
+    _blockedKeywordsCache = JSON.parse(raw).auto_exclude_keywords || {};
+  } catch {
+    _blockedKeywordsCache = {};
+  }
+  return _blockedKeywordsCache;
+}
+
+/**
+ * council 끝판왕 결정 #6 + #4 통합 — title이 카테고리별 자동 제외 키워드와 매치되면 true.
+ * fetch 단계에서 .filter(article => !isAutoExcluded(article.title, "dev")) 형태로 사용.
+ * @param {string} title - 후보 제목
+ * @param {"dev"|"service"|"design"} category - news-tracking 카테고리
+ * @returns {boolean}
+ */
+export function isAutoExcluded(title, category) {
+  if (!title || !category) return false;
+  const keywords = getBlockedKeywords()[category] || [];
+  if (!keywords.length) return false;
+  return keywords.some((kw) => {
+    try {
+      return new RegExp(kw, "i").test(title);
+    } catch {
+      return title.toLowerCase().includes(kw.toLowerCase());
+    }
+  });
+}
 
 export const FEED_TIMEOUT_MS = 25000;
 export const PAGE_TIMEOUT_MS = 25000;

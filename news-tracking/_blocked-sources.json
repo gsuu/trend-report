@@ -14,9 +14,12 @@
   "auto_exclude_keywords": {
     "_doc": "fetch 단계에서 제목/본문 키워드로 자동 제외. dev-digest-agent-prompt.md 자동 제외 룰 #6과 정합.",
     "dev": [
-      "Best GitHub Copilot Alternatives",
-      "Cursor vs Windsurf",
-      "GPT vs Claude vs Gemini",
+      "Best\\s.*?(Copilot|Cursor|Windsurf|AI Code|AI Coding|AI Editor|AI Assistant).*Alternative",
+      "Best\\s.*?(\\d+|few|several).*(Copilot|Cursor|Windsurf|AI Code|AI Coding|AI Editor)",
+      "Top\\s+\\d+.*(Copilot|Cursor|Windsurf|AI Code|AI Coding|AI Editor)",
+      "(Cursor|Windsurf|Copilot|Bolt|Lovable|v0|Replit Agent)\\s+vs\\s+(Cursor|Windsurf|Copilot|Bolt|Lovable|v0|Replit Agent)",
+      "GPT.*vs.*(Claude|Gemini|Llama)",
+      "(Claude|GPT|Gemini)\\s+\\d+\\s+benchmark",
       "MMLU benchmark"
     ],
     "service": [

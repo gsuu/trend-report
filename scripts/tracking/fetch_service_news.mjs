@@ -10,6 +10,7 @@ import {
   extractAnchors,
   fetchArticleMeta,
   fetchText,
+  isAutoExcluded,
   itemImage,
   matchesAny,
   matchesNone,
@@ -222,6 +223,7 @@ async function main() {
   }
 
   const output = uniqueArticles(articles)
+    .filter((article) => !isAutoExcluded(article.title, "service"))
     .map((article) => ({
       ...article,
       evidenceTags: serviceEvidenceTags(article),

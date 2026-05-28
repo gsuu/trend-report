@@ -151,6 +151,19 @@
         "UX|usability|user research|accessibility|a11y|navigation|search|onboarding|checkout|interaction|interface|design system|component|case study|method"
       ],
       "excludeTitlePatterns": ["book review|conference recap|career|salary"]
+    },
+    {
+      "name": "AmorePacific STORIES",
+      "url": "https://stories.amorepacific.com/",
+      "rss": "https://stories.amorepacific.com/feed",
+      "category": "kr_beauty_brand_magazine",
+      "sourceRole": "official",
+      "locale": "KR",
+      "topics": ["AmorePacific", "K-beauty", "brand magazine", "BI/BX"],
+      "includeTitlePatterns": [
+        "디자인|브랜드|컬러|패키지|아이덴티티|캠페인|콘텐츠|에디토리얼|뷰티|색조|스킨케어|메이크업|향수|아모레|이니스프리|에뛰드|라네즈|헤라|설화수|마몽드|에스쁘아|아이오페|프리메라|일리|design|brand|packaging|campaign|editorial|beauty"
+      ],
+      "excludeTitlePatterns": ["채용|hiring|연봉|복지|타운홀|IR|실적|매출|투자"]
     }
   ],
   "pages": [

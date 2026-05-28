@@ -148,6 +148,40 @@
       "topics": ["coupang", "commerce", "search", "recommendation"],
       "includeTitlePatterns": ["쿠팡|coupang|상품|검색|추천|상세|장바구니|결제|마이페이지|배송|리뷰|개인화|화면|UX|디자인|fulfillment|이커머스"],
       "excludeTitlePatterns": ["채용|hiring|타운홀|복지|연봉|infra|backend|kafka|kubernetes"]
+    },
+    {
+      "name": "Retail Dive",
+      "url": "https://www.retaildive.com/",
+      "rss": "https://www.retaildive.com/feeds/news/",
+      "category": "global_retail_comparison",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": ["retail", "e-commerce", "fashion", "beauty", "loyalty", "marketing"],
+      "includeTitlePatterns": ["e-commerce|loyalty|membership|checkout|fulfillment|personalization|recommendation|fashion|beauty|D2C|D&I|inventory|store of the future|omnichannel|app redesign|CX|conversion"],
+      "excludeTitlePatterns": ["IPO|funding round|merger|acquisition|earnings|Q\\d \\d{4} results"]
+    },
+    {
+      "name": "Glossy",
+      "url": "https://www.glossy.co/",
+      "rss": "https://www.glossy.co/feed/",
+      "category": "global_beauty_comparison",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": ["beauty", "fashion", "luxury", "DTC", "loyalty", "social commerce"],
+      "includeTitlePatterns": ["beauty|fashion|luxury|DTC|loyalty|membership|TikTok|Instagram|social commerce|brand strategy|membership program|personalization|app|launch"],
+      "excludeTitlePatterns": ["IPO|funding round|earnings|Q\\d \\d{4}"]
+    },
+    {
+      "name": "CJ News Room",
+      "url": "https://cjnews.cj.net/",
+      "rss": "https://cjnews.cj.net/feed",
+      "category": "kr_conglomerate_news",
+      "sourceRole": "official",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "topics": ["올리브영", "CJ온스타일", "CJ ENM", "뷰티", "콘텐츠"],
+      "includeTitlePatterns": ["올리브영|CJ온스타일|온스타일|ENM|뷰티|패션|커머스|멤버십|앱|개편|리뉴얼|캠페인|메가스토어|글로벌|점포|매장"],
+      "excludeTitlePatterns": ["채용|hiring|ESG|사회공헌|기부|IR|실적|배당|투자|수주"]
     }
   ],
   "pages": [

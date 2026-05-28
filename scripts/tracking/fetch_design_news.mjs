@@ -10,6 +10,7 @@ import {
   extractAnchors,
   fetchArticleMeta,
   fetchText,
+  isAutoExcluded,
   itemImage,
   matchesAny,
   matchesNone,
@@ -198,6 +199,7 @@ async function main() {
   }
 
   const output = uniqueArticles(articles)
+    .filter((article) => !isAutoExcluded(article.title, "design"))
     .map((article) => ({ ...article, valueTags: designValueTags(article) }))
     .sort(sortArticles);
 
