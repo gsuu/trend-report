@@ -1,5 +1,31 @@
 [
   {
+    "title": "무신사, 올 1분기 매출 24% 증가한 3636억 원···수출액 전년 동기비 11배 이상 급증",
+    "link": "https://newsroom.musinsa.com/newsroom-menu/2026-0527",
+    "pubDate": "Wed, 27 May 2026 12:37:32 GMT",
+    "content": "2026.05.27",
+    "image": "https://cdn.prod.website-files.com/60a3629e04f26d12caff56df/69d4517ed47a7ad580ad2059_%5B%EB%AC%B4%EC%8B%A0%EC%82%AC%20%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%9E%90%EB%A3%8C%5D%20%EB%AC%B4%EC%8B%A0%EC%82%AC%20%EA%B8%B0%EC%97%85%20%EB%A1%9C%EA%B3%A0.jpg",
+    "scraped": true,
+    "source": "무신사 뉴스룸",
+    "sourceUrl": "https://newsroom.musinsa.com/news",
+    "sourceRole": "official",
+    "publishStatus": "pending",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "service",
+    "category": "fashion",
+    "priority": "priority_commerce",
+    "topics": [
+      "fashion",
+      "commerce",
+      "brand"
+    ],
+    "evidenceTags": [],
+    "riskTags": [
+      "business_only"
+    ]
+  },
+  {
     "title": "“여름 침구 미리 산다” 오늘의집, 여름 맞이 ‘냉감 패브릭’ 검색량 급증 -",
     "link": "https://ohstory.io/press/pressrelease/15350",
     "pubDate": "Wed, 27 May 2026 01:04:04 +0000",
@@ -26,6 +52,33 @@
     "riskTags": []
   },
   {
+    "title": "[보도자료] 쿠팡, ‘덕후들의 놀이터’ 콜라보클럽 론칭…홍대 팝업스토어에서 캐릭터 상품 선착순 제공",
+    "link": "https://news.coupang.com/archives/62826/",
+    "pubDate": "Wed, 27 May 2026 00:23:57 +0000",
+    "content": "쿠팡이 특정 분야 마니아를 뜻하는 ‘덕후’ 고객들을 위한 쇼핑 경험 확장에 나선다. 쿠팡은 K-굿즈부터 글로벌 인기 캐릭터 상품까지 한 눈에 볼 수 있는 협업 상품 전문관 ‘쿠팡콜라보클럽’을 오는 28일 론칭한다고 27일 밝혔다.",
+    "image": "https://news.coupang.com/wp-content/uploads/2026/05/coupang-goods-character-collabo-club-hongdae-pop-up-store-260527.png",
+    "source": "쿠팡 뉴스룸",
+    "sourceUrl": "https://news.coupang.com/",
+    "sourceRole": "official",
+    "publishStatus": "pending",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "service",
+    "category": "ecommerce",
+    "priority": "priority_commerce",
+    "topics": [
+      "commerce",
+      "delivery",
+      "membership"
+    ],
+    "evidenceTags": [
+      "commerce_core"
+    ],
+    "riskTags": [
+      "offline_only"
+    ]
+  },
+  {
     "title": "스타벅스 카드 환불 기준 한시적 완화 운영",
     "link": "https://www.shinsegaegroupnewsroom.com/starbucks-card-refund-criteria-temporarily-relaxed/",
     "pubDate": "Tue, 26 May 2026 06:56:49 +0000",
@@ -48,6 +101,82 @@
     "evidenceTags": [
       "seller_operation"
     ],
+    "riskTags": []
+  },
+  {
+    "title": "[보도자료] 쿠팡 장애인 e스포츠팀, ‘2026 경기e스포츠 페스티벌’ 전 종목 우승",
+    "link": "https://news.coupang.com/archives/62821/",
+    "pubDate": "Tue, 26 May 2026 05:37:44 +0000",
+    "content": "쿠팡은 자사 장애인 e스포츠팀 선수들이 지난 21일 일산 킨텍스 제1전시장 특설경기장에서 열린 ‘2026 경기e스포츠 페스티벌’ 결승전에 출전해 모든 종목서 우승을 차지했다고 26일 밝혔다.",
+    "image": "https://news.coupang.com/wp-content/uploads/2026/05/coupang-disabled-2026-gyeonggi-esports-festival-championship-260526-01.jpg",
+    "source": "쿠팡 뉴스룸",
+    "sourceUrl": "https://news.coupang.com/",
+    "sourceRole": "official",
+    "publishStatus": "pending",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "service",
+    "category": "ecommerce",
+    "priority": "priority_commerce",
+    "topics": [
+      "commerce",
+      "delivery",
+      "membership"
+    ],
+    "evidenceTags": [],
+    "riskTags": [
+      "offline_only"
+    ]
+  },
+  {
+    "title": "VLM을 쓰지 않은 이유: Geometric Prior로 25배 빠른 의류 디테일컷 자동화",
+    "link": "https://techblog.musinsa.com/vlm%EC%9D%84-%EC%93%B0%EC%A7%80-%EC%95%8A%EC%9D%80-%EC%9D%B4%EC%9C%A0-geometric-prior%EB%A1%9C-25%EB%B0%B0-%EB%B9%A0%EB%A5%B8-%EC%9D%98%EB%A5%98-%EB%94%94%ED%85%8C%EC%9D%BC%EC%BB%B7-%EC%9E%90%EB%8F%99%ED%99%94-ea9dc5ca2add?source=rss----f107b03c406e---4",
+    "pubDate": "Tue, 26 May 2026 01:53:12 GMT",
+    "content": "무신사 유즈드에서 AI 기반 의류 디테일컷 자동 생성 시스템을 구축하며 겪은 기술적 의사결정과 구현 과정을 공유합니다. 들어가며 무신사 유즈드는 중고 의류를 거래하는 플랫폼입니다. 새 상품과 달리 중고 상품은 개별 상태가 모두 다릅니다. 목 라인이 얼마나 늘어났는지, 소매 끝이 마모되었는지, 주머니 안쪽은 깨끗한지, 이런 디테일이 구매 결정에 큰 영향을 미칩니다. 앞뒤 2장이 전부였던 상품 상세 페이지 Before 그런데 무신사 유즈드의 상품 상세 페이지에는 앞면과 뒷면, 단 2장의 사진만 제공되고 있었습니다. 구매자 입장에서는 “이 옷 상태가 진짜 괜찮은 건가?”라는 질문에 답할 수 없는 구조였던 거죠. 디테일컷이 필요하다는 건 모두가 알고 있었습니다. 다행히 검수 공정에서 촬영되는 원본 이미지는 충분히 고해상도였습니다. 즉, 의류의 디테일을 볼 수 있는 정보 자체는 이미 이미지 안에 다 들어 있었던 거죠. 문제는 구매자에게 그 디테일이 보이는 형태로 전달되지 못하고 있다는 점이었습니다. 그렇다면 해법은 분명했습니다. 고해상도 원본 이미지에서 문제가 되는 부위(주로 소매 끝, 밑단, 목 라인처럼 마모와 오염이 집중되는 의류의 끝단들)를 확대(zoom-in)해서 보여주는 것. 그 확대된 한 장 한 장이 “이 옷 상태가 괜찮은가?”라는 질문에 직접 답해주고, 결과적으로 구매 전환으로 이어질 수 있는 정보가 됩니다. 다만 그걸 실제로…",
+    "image": "",
+    "source": "무신사 Tech Medium",
+    "sourceUrl": "https://medium.com/musinsa-tech",
+    "sourceRole": "official",
+    "publishStatus": "pending",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "service",
+    "category": "kr_commerce_case",
+    "priority": "priority_commerce",
+    "topics": [
+      "musinsa",
+      "fashion commerce",
+      "search",
+      "recommendation"
+    ],
+    "evidenceTags": [
+      "commerce_core",
+      "review_trust",
+      "service_ai"
+    ],
+    "riskTags": []
+  },
+  {
+    "title": "어린이부터 어르신까지 맞춤 진료는 &#039;온동네 케어&#039; 로켓진료소와 함께!",
+    "link": "https://news.coupang.com/archives/62627/",
+    "pubDate": "Tue, 26 May 2026 01:00:00 +0000",
+    "content": "대학병원 교수진부터 한의사, 치과의사까지 함께한 쿠팡 온동네 케어는 주민들이 마을 안에서 다양한 진료와 돌봄을 받을 수 있도록 마련된 자리였는데요. 오랜만에 웃음과 활기로 가득했던 그날, 8년 차 이장님의 하루를 따라가 봅니다.",
+    "image": "https://news.coupang.com/wp-content/uploads/2026/05/coupang-community-care-medical-volunteer-danyang-260521-00.png",
+    "source": "쿠팡 뉴스룸",
+    "sourceUrl": "https://news.coupang.com/",
+    "sourceRole": "official",
+    "publishStatus": "pending",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "service",
+    "category": "ecommerce",
+    "priority": "priority_commerce",
+    "topics": [
+      "commerce",
+      "delivery",
+      "membership"
+    ],
+    "evidenceTags": [],
     "riskTags": []
   },
   {
@@ -145,6 +274,33 @@
     "riskTags": []
   },
   {
+    "title": "AI 스페셜리스트와 자동사냥 — 하네스로 제어하는 AI 파이프라인",
+    "link": "https://techblog.musinsa.com/ai-%EC%8A%A4%ED%8E%98%EC%85%9C%EB%A6%AC%EC%8A%A4%ED%8A%B8%EC%99%80-%EC%9E%90%EB%8F%99%EC%82%AC%EB%83%A5-%ED%95%98%EB%84%A4%EC%8A%A4%EB%A1%9C-%EC%A0%9C%EC%96%B4%ED%95%98%EB%8A%94-ai-%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8-6c578f8bd1fb?source=rss----f107b03c406e---4",
+    "pubDate": "Sun, 17 May 2026 22:01:00 GMT",
+    "content": "[Tech-Blog] AI 스페셜리스트와 자동사냥 — 하네스로 제어하는 AI 파이프라인 Slow Query 수집부터 정합성 검증 · PR 생성 · 리뷰 반영까지 “또 슬로우 쿼리야?” 안녕하세요, 무신사 물류플랫폼팀에서 WMS를 개발하고 있는 이상호입니다. 금요일 오후, 슬랙 알림이 울립니다. “DB 응답 속도 저하 감지.” 이미 익숙한 시나리오입니다. CloudWatch 콘솔을 열고, 로그 그룹을 찾아 Logs Insights 쿼리를 작성합니다. 느린 쿼리 몇 개를 복사해서 에디터에 붙여넣고, 코드베이스에서 해당 쿼리가 어디서 호출되는지 추적합니다. Repository를 찾고, Service 레이어를 거슬러 올라가며, Entity 관계를 파악합니다. 원인을 찾았습니다. N+1 문제. fetch join을 추가하고, 브랜치를 만들고, 커밋하고, PR을 올립니다. 리뷰어가 코멘트를 남기면 다시 코드를 수정합니다. 쿼리 하나에 이 정도면 양호합니다. 그런데 슬로우 쿼리가 10개라면? 매주 반복된다면? 백엔드 개발자라면 이 흐름이 익숙할 겁니다. 각 단계가 어렵지는 않지만, 반복되면 상당한 시간을 잡아먹습니다. 어느 날 문득 이런 생각이 들었습니다. “이 과정을 AI한테 시키면 어떨까?” 범용 AI에게 던져봤습니다 처음에는 Claude Code에 슬로우 쿼리를 붙여넣고 “분석해줘”라고 던졌습니다. 돌아오는 대답은 교과서적이었습니다. “인…",
+    "image": "",
+    "source": "무신사 Tech Medium",
+    "sourceUrl": "https://medium.com/musinsa-tech",
+    "sourceRole": "official",
+    "publishStatus": "pending",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "service",
+    "category": "kr_commerce_case",
+    "priority": "priority_commerce",
+    "topics": [
+      "musinsa",
+      "fashion commerce",
+      "search",
+      "recommendation"
+    ],
+    "evidenceTags": [
+      "review_trust",
+      "service_ai"
+    ],
+    "riskTags": []
+  },
+  {
     "title": "SSG랜더스, 키움과 주중 3연전 &#8216;레트로 데이&#8217; 개최",
     "link": "https://www.shinsegaegroupnewsroom.com/ssg-landers-hold-retro-day/",
     "pubDate": "Mon, 25 May 2026 23:52:05 +0000",
@@ -168,6 +324,58 @@
     "riskTags": [
       "offline_only"
     ]
+  },
+  {
+    "title": "컬리, 11주년 ‘벌쓰 위크’ 개최…최대 60% 할인",
+    "link": "https://newsroom.kurlycorp.com/%ec%bb%ac%eb%a6%ac-11%ec%a3%bc%eb%85%84-%eb%b2%8c%ec%93%b0-%ec%9c%84%ed%81%ac-%ea%b0%9c%ec%b5%9c%ec%b5%9c%eb%8c%80-60-%ed%95%a0%ec%9d%b8%ec%97%90-%ea%b8%b0%eb%85%90/?utm_source=rss&utm_medium=rss&utm_campaign=%25ec%25bb%25ac%25eb%25a6%25ac-11%25ec%25a3%25bc%25eb%2585%2584-%25eb%25b2%258c%25ec%2593%25b0-%25ec%259c%2584%25ed%2581%25ac-%25ea%25b0%259c%25ec%25b5%259c%25ec%25b5%259c%25eb%258c%2580-60-%25ed%2595%25a0%25ec%259d%25b8%25ec%2597%2590-%25ea%25b8%25b0%25eb%2585%2590",
+    "pubDate": "Mon, 18 May 2026 23:15:00 +0000",
+    "content": "리테일 테크 기업 컬리는 오는 25일까지 11주년 &#039;벌쓰 위크(Birth Week)&#039; 기획전을 진행한다고 19일 밝혔다. 서비스 오픈 11주년을 맞아 이번 행사에서는 그간의 고객 사랑에 보답하고자 1,300여 개 상품을 최대 60% 할인 판매한다. 카테고리별 베스트 상품을 저렴한 가격에",
+    "image": "https://img-newsroom.kurlycorp.com/wp-content/uploads/2026/05/260518_11%EC%A3%BC%EB%85%84_%EB%B2%8C%EC%93%B0%EC%9C%84%ED%81%AC_%EB%B3%B8%ED%94%84KV_main_mo.png",
+    "source": "컬리 뉴스룸",
+    "sourceUrl": "https://newsroom.kurlycorp.com/",
+    "sourceRole": "official",
+    "publishStatus": "pending",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "service",
+    "category": "ecommerce",
+    "priority": "priority_commerce",
+    "topics": [
+      "grocery",
+      "commerce",
+      "retention"
+    ],
+    "evidenceTags": [
+      "commerce_core"
+    ],
+    "riskTags": [
+      "weak_promo",
+      "offline_only",
+      "business_only"
+    ]
+  },
+  {
+    "title": "[이주의 신상] 11살 생일 맞은 컬리의 단독 신상",
+    "link": "https://newsroom.kurlycorp.com/k-11th-anniversary/?utm_source=rss&utm_medium=rss&utm_campaign=k-11th-anniversary",
+    "pubDate": "Mon, 18 May 2026 02:26:34 +0000",
+    "content": "[실리만] 11주년 세렌 IH 세라믹 프라이팬&웍 골라담기 컬리 11주년을 기념해 실리만과 단독으로 선보이는 프라이팬&웍을 소개합니다. 요리와 용도에 맞춰 다양한 사이즈의 프라이팬과 웍을 골라 담을 수 있어 우리 집 조리 환경에 꼭 맞는 주방 구성이 가능해요. 손잡이에는",
+    "image": "https://img-newsroom.kurlycorp.com/wp-content/uploads/2026/05/thum_%EA%B0%80%EB%A1%9C.jpg",
+    "source": "컬리 뉴스룸",
+    "sourceUrl": "https://newsroom.kurlycorp.com/",
+    "sourceRole": "official",
+    "publishStatus": "pending",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "service",
+    "category": "ecommerce",
+    "priority": "priority_commerce",
+    "topics": [
+      "grocery",
+      "commerce",
+      "retention"
+    ],
+    "evidenceTags": [],
+    "riskTags": []
   },
   {
     "title": "[Kurly Only] 샐러드를 일상으로 불러 온 &#039;샐러드판다&#039;",
@@ -247,7 +455,7 @@
   {
     "title": "수퍼세일 : 스포츠",
     "link": "https://event.ssg.com/eventDetail.ssg?nevntId=1000000022744&domainSiteNo=6005&_mpop=new",
-    "pubDate": "Wed, 27 May 2026 01:05:23 GMT",
+    "pubDate": "Wed, 27 May 2026 12:37:46 GMT",
     "content": "단 24시간 수퍼세일 : 스포츠 스포츠 브랜드 ~60% 할인 + 12% 쿠폰 ssg.com",
     "image": "https://sstatic.ssgcdn.com/promo/event/ssg/202605/47369578287323591.jpg",
     "scraped": true,
@@ -275,7 +483,7 @@
   {
     "title": "삼성카드 행사 안내",
     "link": "https://event.ssg.com/eventDetail.ssg?nevntId=1000000022727&domainSiteNo=6005&_mpop=new",
-    "pubDate": "Wed, 27 May 2026 01:05:23 GMT",
+    "pubDate": "Wed, 27 May 2026 12:37:46 GMT",
     "content": "2026.05.27 ~ 2026.05.27 10% 수퍼세일 청구할인 삼성카드 ssg.com",
     "image": "https://sstatic.ssgcdn.com/promo/event/ssg/202403/41728468091990056.jpg",
     "scraped": true,
@@ -298,6 +506,106 @@
       "weak_promo",
       "offline_only"
     ]
+  },
+  {
+    "title": "당근, ‘제9회 전국동시지방선거’ 정보 서비스 오픈",
+    "link": "https://about.daangn.com/company/pr/archive/%EB%8B%B9%EA%B7%BC-%EC%A0%9C9%ED%9A%8C-%EC%A0%84%EA%B5%AD%EB%8F%99%EC%8B%9C%EC%A7%80%EB%B0%A9%EC%84%A0%EA%B1%B0-%EC%A0%95%EB%B3%B4-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%98%A4%ED%94%88/",
+    "pubDate": "Wed, 27 May 2026 12:38:17 GMT",
+    "content": "\"우리 동네 선거 정보, 당근에서 손쉽게\"",
+    "image": "https://prismic-image-proxy.krrt.io/karrot/ahVFkLK9tuLqEIW6_%5B%E1%84%8B%E1%85%B5%E1%84%86%E1%85%B5%E1%84%8C%E1%85%B51%5D%E1%84%83%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B3%E1%86%AB%2C%E2%80%98%E1%84%8C%E1%85%A69%E1%84%92%E1%85%AC%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%80%E1%85%AE%E1%86%A8%E1%84%83%E1%85%A9%E1%86%BC%E1%84%89%E1%85%B5%E1%84%8C%E1%85%B5%E1%84%87%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A5%E1%86%AB%E1%84%80%E1%85%A5%E2%80%99%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%E1%84%89%E1%85%A5%E1%84%87%E1%85%B5%E1%84%89%E1%85%B3%E1%84%8B%E1%85%A9%E1%84%91%E1%85%B3%E1%86%AB.png?auto=compress%2Cformat&fit=max&q=100&w=1200&h=630&fm=png",
+    "scraped": true,
+    "source": "당근 보도자료",
+    "sourceUrl": "https://about.daangn.com/company/pr/",
+    "sourceRole": "official",
+    "publishStatus": "pending",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "service",
+    "category": "local_service",
+    "priority": "priority_platform",
+    "topics": [
+      "local",
+      "trust",
+      "community"
+    ],
+    "evidenceTags": [],
+    "riskTags": []
+  },
+  {
+    "title": "우아한공방의 새로운 동료, 시스템 맥락을 가진 챗봇서비스 개발기(feat. RAG)",
+    "link": "https://techblog.woowahan.com/26319/",
+    "pubDate": "Fri, 22 May 2026 03:10:35 +0000",
+    "content": "왼쪽 예시처럼 디자인시스템과 무관한 질문을 하거나, 오른쪽 예시처럼 특정 인물에 대한 평가를 요청하는 질의들이 들어오기 시작했습니다. 문제는 이러한 응답이 단순한 재미 요소를 넘어, 우아한공방 챗봇이 의도한 서비스 범주 밖의 답변까지 생성하고 있었다는 점입니다. 서비스의 역할과 무관한 응답이 계속 생성될 경우 사용자 경험과 응답 신뢰도에도 영향을 줄 수 있었기 때문에, 답변 범위를 명확히 제한할 필요가 있었습니다.",
+    "image": "https://techblog.woowahan.com/wp-content/uploads/2025/07/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC-%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%B0%B0%EB%84%88.png",
+    "source": "우아한형제들 기술블로그",
+    "sourceUrl": "https://techblog.woowahan.com/",
+    "sourceRole": "official",
+    "publishStatus": "pending",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "service",
+    "category": "ecommerce",
+    "priority": "priority_korean_service",
+    "topics": [
+      "food_delivery",
+      "service_design",
+      "frontend"
+    ],
+    "evidenceTags": [
+      "review_trust",
+      "service_ai"
+    ],
+    "riskTags": []
+  },
+  {
+    "title": "일본 Z세대 트렌드 리포트 2026",
+    "link": "https://blog.opensurvey.co.kr/trendreport/generationz-jp-ko-2026/",
+    "pubDate": "Thu, 14 May 2026 02:50:32 +0000",
+    "content": "워라밸·보상·자기이해까지, 일본 Z세대가 불확실한 시대를 헤쳐나가는 방식을 소비·가치관·관심사 데이터로 확인하세요.",
+    "image": "https://blog.opensurvey.co.kr/wp-content/uploads/2026/05/26_thumbnail_trendreport_JP_01.png",
+    "source": "오픈서베이 블로그",
+    "sourceUrl": "https://blog.opensurvey.co.kr/",
+    "sourceRole": "reference",
+    "publishStatus": "pending",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "service",
+    "category": "research",
+    "priority": "",
+    "topics": [
+      "research",
+      "consumer",
+      "cx"
+    ],
+    "evidenceTags": [
+      "research_signal"
+    ],
+    "riskTags": []
+  },
+  {
+    "title": "K-푸드 트렌드 리포트 2026",
+    "link": "https://blog.opensurvey.co.kr/trendreport/k-food-2026/",
+    "pubDate": "Sun, 17 May 2026 17:00:00 +0000",
+    "content": "K-푸드 스낵·소스·라면, &#039;K잘알&#039; 외국인은 어떻게 생각할까요? 약과는 캐러멜 쿠키로, 초코파이는 마시멜로 디저트로 재해석되는 K-스낵부터 권역별로 갈리는 소스 선호, 창의적인 K-라면 레시피까지. 국내 거주 외국인 100명의 실제 소비 데이터로 K-푸드 글로벌 트렌드를 확인하세요.",
+    "image": "https://i0.wp.com/blog.opensurvey.co.kr/wp-content/uploads/2026/05/26_thumbnail_trendreport_08-1.png?fit=1400%2C1400&ssl=1",
+    "source": "오픈서베이 블로그",
+    "sourceUrl": "https://blog.opensurvey.co.kr/",
+    "sourceRole": "reference",
+    "publishStatus": "pending",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "service",
+    "category": "research",
+    "priority": "",
+    "topics": [
+      "research",
+      "consumer",
+      "cx"
+    ],
+    "evidenceTags": [
+      "research_signal"
+    ],
+    "riskTags": []
   },
   {
     "title": "K-푸드 글로벌 트렌드, 약과부터 라면까지 외국인 유학생 100명이 발견한 K-푸드의 &#039;반전&#039;",

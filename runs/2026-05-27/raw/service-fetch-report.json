@@ -1,7 +1,7 @@
 {
   "date": "2026-05-27",
   "sourceFile": "news-tracking/service-sources.json",
-  "totalArticles": 13,
+  "totalArticles": 25,
   "sourceResults": [
     {
       "name": "신세계그룹 뉴스룸",
@@ -15,16 +15,16 @@
       "name": "쿠팡 뉴스룸",
       "type": "feed",
       "url": "https://news.coupang.com/feed/",
-      "status": "error",
-      "count": 0,
-      "error": "HTTP 403"
+      "status": "ok",
+      "count": 3,
+      "error": ""
     },
     {
       "name": "컬리 뉴스룸",
       "type": "feed",
       "url": "https://newsroom.kurlycorp.com/feed/",
       "status": "ok",
-      "count": 2,
+      "count": 4,
       "error": ""
     },
     {
@@ -48,7 +48,7 @@
       "type": "feed",
       "url": "https://blog.opensurvey.co.kr/feed/",
       "status": "ok",
-      "count": 1,
+      "count": 3,
       "error": ""
     },
     {
@@ -63,9 +63,9 @@
       "name": "우아한형제들 기술블로그",
       "type": "feed",
       "url": "https://techblog.woowahan.com/feed/",
-      "status": "error",
-      "count": 0,
-      "error": "HTTP 403"
+      "status": "ok",
+      "count": 1,
+      "error": ""
     },
     {
       "name": "Shopify Engineering",
@@ -89,14 +89,38 @@
       "url": "https://www.klarna.com/international/press/feed/",
       "status": "error",
       "count": 0,
-      "error": "Unexpected close tag\nLine: 20\nColumn: 7\nChar: >"
+      "error": "Unexpected close tag\nLine: 254\nColumn: 1672\nChar: >"
+    },
+    {
+      "name": "29CM Medium",
+      "type": "feed",
+      "url": "https://medium.com/feed/29cm",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "무신사 Tech Medium",
+      "type": "feed",
+      "url": "https://medium.com/feed/musinsa-tech",
+      "status": "ok",
+      "count": 2,
+      "error": ""
+    },
+    {
+      "name": "쿠팡 Engineering Medium",
+      "type": "feed",
+      "url": "https://medium.com/feed/coupang-engineering",
+      "status": "ok",
+      "count": 0,
+      "error": ""
     },
     {
       "name": "무신사 뉴스룸",
       "type": "page",
       "url": "https://newsroom.musinsa.com/news",
       "status": "ok",
-      "count": 0,
+      "count": 1,
       "error": ""
     },
     {
@@ -208,7 +232,7 @@
       "type": "page",
       "url": "https://about.daangn.com/company/pr/",
       "status": "ok",
-      "count": 0,
+      "count": 1,
       "error": ""
     },
     {

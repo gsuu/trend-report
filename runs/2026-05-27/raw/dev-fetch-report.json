@@ -1,14 +1,14 @@
 {
   "date": "2026-05-27",
   "sourceFile": "news-tracking/dev-sources.json",
-  "totalArticles": 82,
+  "totalArticles": 89,
   "sourceResults": [
     {
       "name": "GeekNews",
       "type": "feed",
       "url": "https://news.hada.io/rss/news",
       "status": "ok",
-      "count": 33,
+      "count": 30,
       "error": ""
     },
     {
@@ -16,7 +16,7 @@
       "type": "feed",
       "url": "https://frontendfoc.us/rss",
       "status": "ok",
-      "count": 0,
+      "count": 1,
       "error": ""
     },
     {
@@ -24,7 +24,7 @@
       "type": "feed",
       "url": "https://css-weekly.com/feed/",
       "status": "ok",
-      "count": 0,
+      "count": 1,
       "error": ""
     },
     {
@@ -32,7 +32,7 @@
       "type": "feed",
       "url": "https://javascriptweekly.com/rss",
       "status": "ok",
-      "count": 1,
+      "count": 2,
       "error": ""
     },
     {
@@ -40,7 +40,7 @@
       "type": "feed",
       "url": "https://www.smashingmagazine.com/feed/",
       "status": "ok",
-      "count": 2,
+      "count": 3,
       "error": ""
     },
     {
@@ -48,7 +48,7 @@
       "type": "feed",
       "url": "https://css-tricks.com/feed/",
       "status": "ok",
-      "count": 4,
+      "count": 11,
       "error": ""
     },
     {
@@ -80,7 +80,7 @@
       "type": "feed",
       "url": "https://vercel.com/atom",
       "status": "ok",
-      "count": 8,
+      "count": 21,
       "error": ""
     },
     {
@@ -112,7 +112,7 @@
       "type": "feed",
       "url": "https://github.blog/changelog/feed/",
       "status": "ok",
-      "count": 10,
+      "count": 1,
       "error": ""
     },
     {
@@ -120,7 +120,7 @@
       "type": "feed",
       "url": "https://storybook.js.org/blog/rss",
       "status": "ok",
-      "count": 0,
+      "count": 1,
       "error": ""
     },
     {
@@ -196,6 +196,86 @@
       "error": ""
     },
     {
+      "name": "Toss Tech",
+      "type": "feed",
+      "url": "https://toss.tech/rss.xml",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Kakao Tech",
+      "type": "feed",
+      "url": "https://tech.kakao.com/feed/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Daangn Tech",
+      "type": "feed",
+      "url": "https://medium.com/feed/daangn",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Woowahan Tech",
+      "type": "feed",
+      "url": "https://techblog.woowahan.com/feed/",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    },
+    {
+      "name": "Bramus van Damme",
+      "type": "feed",
+      "url": "https://www.bram.us/feed/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Una Kravets",
+      "type": "feed",
+      "url": "https://una.im/rss.xml",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "V8 Blog",
+      "type": "feed",
+      "url": "https://v8.dev/blog.atom",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Ahmad Shadeed",
+      "type": "feed",
+      "url": "https://ishadeed.com/feed.xml",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    },
+    {
+      "name": "Stefan Judis",
+      "type": "feed",
+      "url": "https://www.stefanjudis.com/rss.xml",
+      "status": "ok",
+      "count": 2,
+      "error": ""
+    },
+    {
+      "name": "Patrick Brosset",
+      "type": "feed",
+      "url": "https://www.patrickbrosset.com/feed.xml",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    },
+    {
       "name": "Chrome for Developers",
       "type": "page",
       "url": "https://developer.chrome.com/blog",
@@ -215,9 +295,9 @@
       "name": "OpenAI Blog",
       "type": "page",
       "url": "https://openai.com/blog/",
-      "status": "error",
+      "status": "ok",
       "count": 0,
-      "error": "HTTP 403"
+      "error": ""
     },
     {
       "name": "Cursor Changelog",
@@ -240,7 +320,7 @@
       "type": "page",
       "url": "https://www.builder.io/blog",
       "status": "ok",
-      "count": 12,
+      "count": 1,
       "error": ""
     },
     {

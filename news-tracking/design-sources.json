@@ -110,6 +110,47 @@
       "includeTitlePatterns": [
         "디자인 시스템|design system|컴포넌트|component|토큰|디자인-코드|핸드오프|UI 라이브러리|타이포|컬러|모션|아이콘|일러스트|디자인 가이드|브랜드 시스템|디자인 운영|디자인 워크플로우"
       ]
+    },
+    {
+      "name": "Toss Blog",
+      "url": "https://blog.toss.im/",
+      "rss": "https://blog.toss.im/rss.xml",
+      "category": "kr_uiux_case",
+      "sourceRole": "official",
+      "locale": "KR",
+      "topics": ["Toss", "Design", "Service"],
+      "includeTitlePatterns": [
+        "디자인|design|UI|UX|컴포넌트|component|토큰|시스템|모션|타이포|색상|아이콘|일러스트|핸드오프|운영|워크플로우|시안|화면|상세|결제|마이페이지|메인|이체|투자|보험|적금"
+      ],
+      "excludeTitlePatterns": ["채용|hiring|연봉|복지|타운홀"]
+    },
+    {
+      "name": "UX Design (Medium)",
+      "url": "https://uxdesign.cc/",
+      "rss": "https://uxdesign.cc/feed",
+      "category": "global_uiux_media",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": ["UX", "interaction", "case study"],
+      "includeTitlePatterns": [
+        "UX|UI|case study|design system|component|interaction|navigation|onboarding|search|checkout|accessibility|a11y|usability|interface|product design|service design|handoff|design token|figma"
+      ],
+      "excludeTitlePatterns": [
+        "How I (made|earned|got)|My journey|portfolio review|salary|career change|job hunt|how to land|side project|interview prep"
+      ]
+    },
+    {
+      "name": "UX Matters",
+      "url": "https://www.uxmatters.com/",
+      "rss": "https://www.uxmatters.com/index.xml",
+      "category": "global_uiux_media",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": ["UX", "usability", "accessibility"],
+      "includeTitlePatterns": [
+        "UX|usability|user research|accessibility|a11y|navigation|search|onboarding|checkout|interaction|interface|design system|component|case study|method"
+      ],
+      "excludeTitlePatterns": ["book review|conference recap|career|salary"]
     }
   ],
   "pages": [

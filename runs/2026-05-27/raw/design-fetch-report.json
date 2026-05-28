@@ -1,22 +1,22 @@
 {
   "date": "2026-05-27",
   "sourceFile": "news-tracking/design-sources.json",
-  "totalArticles": 8,
+  "totalArticles": 32,
   "sourceResults": [
     {
       "name": "DIGITAL iNSIGHT",
       "type": "feed",
       "url": "https://ditoday.com/feed/",
-      "status": "error",
-      "count": 0,
-      "error": "Invalid character in entity name\nLine: 0\nColumn: 225\nChar: &"
+      "status": "ok",
+      "count": 4,
+      "error": ""
     },
     {
       "name": "pxd story",
       "type": "feed",
       "url": "https://pxdstory.tistory.com/rss",
       "status": "ok",
-      "count": 1,
+      "count": 4,
       "error": ""
     },
     {
@@ -40,7 +40,7 @@
       "type": "feed",
       "url": "https://www.smashingmagazine.com/feed/",
       "status": "ok",
-      "count": 2,
+      "count": 4,
       "error": ""
     },
     {
@@ -48,7 +48,7 @@
       "type": "feed",
       "url": "https://www.nngroup.com/feed/rss/",
       "status": "ok",
-      "count": 2,
+      "count": 5,
       "error": ""
     },
     {
@@ -76,11 +76,35 @@
       "error": ""
     },
     {
+      "name": "Toss Blog",
+      "type": "feed",
+      "url": "https://blog.toss.im/rss.xml",
+      "status": "ok",
+      "count": 2,
+      "error": ""
+    },
+    {
+      "name": "UX Design (Medium)",
+      "type": "feed",
+      "url": "https://uxdesign.cc/feed",
+      "status": "ok",
+      "count": 7,
+      "error": ""
+    },
+    {
+      "name": "UX Matters",
+      "type": "feed",
+      "url": "https://www.uxmatters.com/index.xml",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
       "name": "DIGITAL iNSIGHT - UIUX",
       "type": "page",
       "url": "https://ditoday.com/ui-ux/",
       "status": "ok",
-      "count": 0,
+      "count": 1,
       "error": ""
     },
     {
@@ -135,9 +159,9 @@
       "name": "Page Flows",
       "type": "page",
       "url": "https://pageflows.com/",
-      "status": "error",
+      "status": "ok",
       "count": 0,
-      "error": "HTTP 403"
+      "error": ""
     },
     {
       "name": "Awwwards - Websites",
@@ -176,7 +200,7 @@
       "type": "page",
       "url": "https://the-brandidentity.com/",
       "status": "ok",
-      "count": 7,
+      "count": 5,
       "error": ""
     },
     {
@@ -184,7 +208,7 @@
       "type": "page",
       "url": "https://www.itsnicethat.com/",
       "status": "ok",
-      "count": 1,
+      "count": 4,
       "error": ""
     },
     {
@@ -231,9 +255,9 @@
       "name": "Canva Newsroom",
       "type": "page",
       "url": "https://www.canva.com/newsroom/news/",
-      "status": "error",
+      "status": "ok",
       "count": 0,
-      "error": "HTTP 403"
+      "error": ""
     }
   ]
 }

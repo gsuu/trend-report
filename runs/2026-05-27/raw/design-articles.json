@@ -1,8 +1,54 @@
 [
   {
+    "title": "반도체·AI에 투자하는 국민참여형 국민성장펀드, 손실 20%까지 정부가 부담해요",
+    "link": "https://toss.im/tossfeed/article/money-policies-62",
+    "pubDate": "Thu, 21 May 2026 02:50:00 GMT",
+    "content": "소득공제 혜택까지 받아보세요",
+    "image": "",
+    "valueTags": [
+      "promotion_event_design",
+      "design_ai_workflow"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "결제는 가볍게, 영감은 가득히",
+    "link": "https://toss.im/tossfeed/article/booknic",
+    "pubDate": "Sat, 23 May 2026 07:25:00 GMT",
+    "content": "토스 FacePay와 영풍문고가 제안하는 ‘가벼운 영감’의 여정",
+    "image": "",
+    "valueTags": [
+      "korean_reference",
+      "ux_method"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
     "title": "삼성, One UI 9 베타 공개",
     "link": "https://designcompass.org/2026/05/27/samsung-one-ui-9-beta-galaxy-s26/",
-    "pubDate": "Wed, 27 May 2026 01:06:32 GMT",
+    "pubDate": "Wed, 27 May 2026 12:37:17 GMT",
     "content": "삼성이 갤럭시 S26 시리즈 사용자를 대상으로 One UI 9 베타 프로그램을 시작했습니다. 이번 베타는 Android 17 기반입니다. 대상 국가는 한국, 독일, 인도, 폴란드, 영국, 미국입니다. 사용자는 Samsung Members 앱에서 베타 프로그램에 신청할 수 있습니다. 이번 업데이트는 대형 디자인 개편보다 사용자가 자주 쓰는 기능을 조정하는 데…",
     "image": "https://designcompass.org/wp-content/uploads/2026/05/oneui9beta-0301.jpg",
     "valueTags": [
@@ -18,6 +64,126 @@
     "area": "design",
     "category": "kr_design_media",
     "topics": []
+  },
+  {
+    "title": "디지털 트렌드 매거진 〈디지털 인사이트〉 285호 – INSPECTION 발간",
+    "link": "https://ditoday.com/digital-insight-issue-no-285/",
+    "pubDate": "Wed, 27 May 2026 04:50:31 +0000",
+    "content": "퍼지 코스로샤히 노션 CTO, 올리비아 리 웍스피어 익스피리언스 센터장, 황효선 일러스트레이터 인터뷰 수록 The post 디지털 트렌드 매거진 〈디지털 인사이트〉 285호 – INSPECTION 발간 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "visual_trend",
+      "look_and_feel",
+      "korean_uiux_case"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "팀스파르타, 브랜드 개편… ‘AI 네이티브’ 조직 발돋움",
+    "link": "https://ditoday.com/%ed%8c%80%ec%8a%a4%ed%8c%8c%eb%a5%b4%ed%83%80-%eb%b8%8c%eb%9e%9c%eb%93%9c-%ec%a0%84%eb%a9%b4-%ea%b0%9c%ed%8e%b8-ai-%eb%84%a4%ec%9d%b4%ed%8b%b0%eb%b8%8c-%ec%a1%b0%ec%a7%81-%eb%b0%9c%eb%8f%8b/",
+    "pubDate": "Wed, 27 May 2026 01:05:39 +0000",
+    "content": "산하 브랜드 재정비... AX 엔드투엔드 파트너 역할 강화 The post 팀스파르타, 브랜드 개편… ‘AI 네이티브’ 조직 발돋움 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "AI가 바꾸는 콘텐츠 산업… 2026 콘텐츠 엔지니어링 개최",
+    "link": "https://ditoday.com/ai%ea%b0%80-%eb%b0%94%ea%be%b8%eb%8a%94-%ec%bd%98%ed%85%90%ec%b8%a0-%ec%82%b0%ec%97%85-2026-%ec%bd%98%ed%85%90%ec%b8%a0-%ec%97%94%ec%a7%80%eb%8b%88%ec%96%b4%eb%a7%81-%ea%b0%9c%ec%b5%9c/",
+    "pubDate": "Wed, 27 May 2026 01:01:28 +0000",
+    "content": "EBS 김유열 사장 등 방송·VFX·광고 등 6인 전문가 발표 The post AI가 바꾸는 콘텐츠 산업… 2026 콘텐츠 엔지니어링 개최 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "“조직 내 격차 해소” 디엔아이, UX 거버넌스 플랫폼 구축",
+    "link": "https://ditoday.com/%ec%a1%b0%ec%a7%81-%eb%82%b4-%ea%b2%a9%ec%b0%a8-%ed%95%b4%ec%86%8c-%eb%94%94%ec%97%94%ec%95%84%ec%9d%b4-ux-%ea%b1%b0%eb%b2%84%eb%84%8c%ec%8a%a4-%ed%94%8c%eb%9e%ab%ed%8f%bc-%ea%b5%ac%ec%b6%95/",
+    "pubDate": "Tue, 26 May 2026 08:03:16 +0000",
+    "content": "'X-CORE' 도입으로 AX 시대 생산성 극대화 The post “조직 내 격차 해소” 디엔아이, UX 거버넌스 플랫폼 구축 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "AI 리서치 파트너, Affinity Bubble 서포터즈 1기를 모집합니다",
+    "link": "https://pxdstory.tistory.com/1898",
+    "pubDate": "Tue, 19 May 2026 07:50:02 +0900",
+    "content": "방대한 인터뷰와 설문 데이터 속에서 의미 있는 인사이트를 찾기 위해 고군분투해 오셨나요? pxd의 UX 노하우를 담아 정성 데이터 분석의 새 길을 열어가는 어피니티버블(Affinity Bubble)이 더 강력해진 v1.1 업데이트와 함께, 서비스의 완성도를 함께 높여갈 서포터즈 1기를 모집합니다. 어피니티버블은 인터뷰, 앱 리뷰, 설문 등 흩어진 정성 데이터를 AI로 분석해 어피니티 다이어그램 형태의 버블 시각화로 보여주는 도구입니다. 어피니티버블이 실무자분들에게 정말 유용한 도구로 진화할 수 있도록, 여러분의 현장감 넘치는 의견을 들려주세요. 1️⃣ 서포터즈는 어떤 활동을 하나요? 어피니티버블 서포터즈 1기의 자격 유지 및 활동 조건은 아래와 같습니다. 부담 갖기보다는 어피니티버블과 함께 즐겁게 연구하고 소통해 주시면 됩니다! 어피니티버블로 만든 분석 결과를 SNS에 공유하기 (월 2회) 어피니티버블을 쓰며 발견한 흥미로운 데이터 분석 결과를 개인 SNS 채널에 공유해 주세요. 활용 가능한 SNS: 링크드인, 브런…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
   },
   {
     "title": "검색엔진은 우리 사이트를 어떻게 발견할까?",
@@ -44,9 +210,80 @@
     ]
   },
   {
+    "title": "서울 시민의 목소리를 시각화하기",
+    "link": "https://pxdstory.tistory.com/1897",
+    "pubDate": "Thu, 14 May 2026 19:46:44 +0900",
+    "content": "시민의 목소리를 데이터로 UI 디자인을 할 때 늘 부딪히는 문제가 있습니다. 다양한 의견을 가진 사용자의 목소리를 어떻게 정리하고 전달할까. 개개인의 목소리에 집중하면 맥락과 목표가 저마다 다른 모두를 만족시키기 어렵고, 그렇다고 평균을 내면 누구도 대표하지 못해 모두가 만족하지 못하는 디자인이 됩니다. 그래서 보통 퍼소나로 사용자를 몇 가지 유형으로 나눠 접근하게 됩니다. 정원오 서울시장 후보가 만든 '서울의 목소리'는 비슷한 문제를 도시 단위로 마주하고 있습니다. 서울 시민의 불편과 고충을 수집해 데이터 기반 해법을 찾고, 그 데이터를 공공데이터로 모두에게 공개하고 있습니다. 수천명의 시민 목소리를 어떻게 정리해 보여주고 있는지, 거기에서 어떤 정보를 얻어낼 수 있는지 시각화 측면에서 살펴보았습니다. 설문을 통해 시민의 의견을 수집하는데, 세개의 주관식 문항이 주된 질문입니다. 서울 생활에서의 고충 차기 서울시장에게 바라는 점 서울하면 떠오르는 키워드 정성 데이터를 보여주는 방식 서울의목소리 사이트는 데이터를 두…",
+    "image": "",
+    "valueTags": [
+      "korean_reference",
+      "korean_uiux_case"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "컬러 토큰 설계 3가지 방식 (스케일 / 시멘틱 / 하이브리드)",
+    "link": "https://pxdstory.tistory.com/1888",
+    "pubDate": "Mon, 18 May 2026 07:50:07 +0900",
+    "content": "AI의 등장과 디자인 자동화가 본격화되면서, 이제는 작업 속도 자체보다 그 속도 안에서도 서비스의 일관성을 끝까지 유지할 수 있는지가 더 중요해졌습니다. 한 때는 정말 픽셀 하나, 간격 하나에 목숨 걸며 그 정교함이 디자인의 실력을 가늠하는 기준처럼 여겨지던 시절도 있었는데요. 이제는 손으로 어떻게 만들었는지보다, 어떤 기준을 세워 그 결과가 나오도록 만들었는지가 더 중요해졌다는 것이죠. 이러한 변화 속에서 디자인 시스템은 서비스를 안정적으로 운용하기 위한 핵심 인프라로 자리 잡았으며, 이를 전담 조직으로 운영하는 기업 역시 빠르게 늘어나고 있습니다. 그렇다면 디자인 시스템 중에서도 가장 기초이면서도, 동시에 가장 큰 영향을 미치는 컬러 토큰 설계는 어떤 관점에서 접근해야 할까요? 최근 진행했던 프로젝트에서 컬러 토큰 체계를 새롭게 구축하는 과정에서 얻은 경험과 인사이트를 바탕으로, 컬러 토큰 설계를 어떤 관점에서 선택하고 구조화할 수 있는지 공유해보려고 합니다. 컬러 토큰의 기본 개념은 아래 글을 참고하세요 :)…",
+    "image": "",
+    "valueTags": [
+      "look_and_feel",
+      "korean_uiux_case",
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "Los Campesinos!’ 20-year archive of silly band T-shirt designs is a sweaty journey through indie rock aesthetics",
+    "link": "https://www.itsnicethat.com/features/los-campesinos-gareth-david-robert-taylor-art-illustration-spotlight-270526",
+    "pubDate": "Wed, 27 May 2026 12:37:47 GMT",
+    "content": "The classic UK emo band has reached its 20th birthday. For the special occasion, the seven-piece outfit has created an archive of every piece of T-shirt they put out, charting the aesthetic values, political attitudes and sometimes football madness from 2006 until now.",
+    "image": "https://admin.itsnicethat.com/images/HiPK-9k9-JCcs56A8dGEAX43_rw=/278570/width-1440/los-camp-list.jpg",
+    "valueTags": [
+      "ux_method"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
     "title": "The revolution will not be optimised: on frictionmaxxing and the creative virtues of inconvenience",
     "link": "https://www.itsnicethat.com/articles/pov-friction-breeds-creativity-creative-industry-260526",
-    "pubDate": "Wed, 27 May 2026 01:07:12 GMT",
+    "pubDate": "Wed, 27 May 2026 12:37:47 GMT",
     "content": "In a culture obsessed with seamlessness and instant fulfilment, inconvenience is starting to feel strangely radical again.",
     "image": "https://admin.itsnicethat.com/images/xuLtgAxZ9hswgZlCDi7M0V1o4gw=/278509/width-1440%7Cformat-jpeg/39_POV_META.png",
     "valueTags": [
@@ -63,17 +300,55 @@
     "topics": []
   },
   {
-    "title": "The Brand Identity – Home of the Greatest in Graphic & Brand Design",
-    "link": "https://the-brandidentity.com/interview/hype-type-studio-reflects-on-25-years-of-making-work-for-good-people",
-    "pubDate": "Wed, 27 May 2026 01:06:47 GMT",
-    "content": "Twenty-five years in, Hype Type Studio has a simple way of describing what it does: make good work for good people. Led by Founder Paul Hutchison and Design Director Ross Burwell, the Los Angeles-based practice has built a client list that includes NASA, Sonos, Patagonia and Vans – all while staying deliberately small. Their new website marks a moment to reset, presenting a clearer snapshot of where the studio stands after years of heads-down client work. In our conversation, Hutchison and Burwell told us what ‘sy…",
-    "image": "https://the-brandidentity.com/uploads/articles/2026/05/hype-type-studio-reflects-on-25-years-of-making-work-for-good-people/Hype-Type-Studio-new-website-Hype-Type-Studio-13.png",
+    "title": "Plug in! Michael Romanowicz’s Outlet Atlas is a gorgeously designed guide to power adapters and outlet types",
+    "link": "https://www.itsnicethat.com/articles/michael-romanowicz-outlet-atlast-graphic-design-project-270526",
+    "pubDate": "Wed, 27 May 2026 12:37:47 GMT",
+    "content": "If your special interest is outlet types and power adapters, then boy do we have the online archive for you. Lovingly created by a designer who was frustrated with boring SEO-optimised websites whilst travelling, this community-based website seeks to make a guide that is as handsome as it is useful.",
+    "image": "https://admin.itsnicethat.com/images/LtwEJ52Dghqf4bKPyXQbfwUhhGI=/277912/width-1440%7Cformat-jpeg/Screenshot_2026-04-30_at_15.44.44.png",
     "valueTags": [
       "web_reference",
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "“Lots of creatives have a password-protected part of their portfolio”",
+    "link": "https://www.itsnicethat.com/articles/creative-career-conundrums-if-you-could-jobs-advice-270526",
+    "pubDate": "Wed, 27 May 2026 12:37:47 GMT",
+    "content": "NDAs are rife in the creative industry but you’ve started to feel like they might be halting your progression – so how can you work around them? Katie Cadwell offers insight in this week’s Creative Career Conundrums.",
+    "image": "https://admin.itsnicethat.com/images/H_guucZNJEfWiLPwCSa2KlQv3a4=/278572/width-1440/CCC_Square_HOW_DO_I_SHARE_WORK_IM_NOT_ALLOWED_TO_SHARE.jpg",
+    "valueTags": [
+      "web_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/decimal-brands-ccai-the-coalition-advocating-for-responsible-ai-use",
+    "pubDate": "Wed, 27 May 2026 12:37:30 GMT",
+    "content": "The Creators Coalition on Artificial Intelligence (CCAI) was founded by entertainment industry figures, including director Daniel Kwan and actor Joseph Gordon-Levitt, to push for ethical and artistic protections wherever AI enters creative work. Backed by more than 500 actors, artists and executives, the coalition rallies around a single line: “Technology should strengthen human creativity, not undermine it.” New York-based design and technology studio Decimal was brought in to give the organisation its inaugural…",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/05/decimal-brands-ccai-the-coalition-advocating-for-responsible-ai-use/Creators-Coalition-on-Artificial-Intelligence-Decimal-02.jpg",
+    "valueTags": [
       "look_and_feel",
       "brand_expression",
-      "korean_uiux_case",
-      "visual_reference"
+      "visual_reference",
+      "design_ai_workflow"
     ],
     "scraped": true,
     "source": "The Brand Identity",
@@ -84,6 +359,145 @@
     "area": "design",
     "category": "brand_expression",
     "topics": []
+  },
+  {
+    "title": "Practical Interface Patterns For AI Transparency (Part 2)",
+    "link": "https://smashingmagazine.com/2026/05/practical-interface-patterns-ai-transparency/",
+    "pubDate": "Wed, 13 May 2026 13:00:00 GMT",
+    "content": "Why traditional loading patterns like spinners fail in agentic AI experiences, and how interface patterns that reveal the system’s process, status, and decision-making can improve transparency and build user trust.",
+    "image": "http://files.smashing.media/articles/practical-interface-patterns-ai-transparency/practical-interface-patterns-ai-transparency.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "The book cover as a relational object",
+    "link": "https://uxdesign.cc/the-book-cover-as-a-relational-object-288fb15deff1?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 26 May 2026 22:06:23 GMT",
+    "content": "Designing a book cover isn’t about aesthetics. It’s about anticipating the reader’s behavior throughout the entire lifecycle of the book. Writing this piece is quite a challenge because, on the one hand, I want to explain my approach to design, and on the other — I really don’t want to ruin the experience of reading the books I mention by giving too much of them away. Wish me luck and let’s get into it. Or actually — no. Let’s not rush. Stop. Brake. Let’s think for a second about what a book cover even is, because…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Product discovery’s quietest, most consequential decision",
+    "link": "https://uxdesign.cc/product-discoverys-quietest-most-consequential-decision-ea697471cf6f?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 26 May 2026 22:06:22 GMT",
+    "content": "Validating a problem, an idea, or a solution is where most people begin discovery. The skipped judgment is whether to begin it at all. Generated with AI by Author “Customers keep asking us to add more dashboard widgets.” Someone raises it in a product roadmap planning meeting, and it sounds less like feedback and more like an instruction. Twenty-three of the last forty calls mentioned it. The people in the room all nod. It is added to the feature backlog. Discovery, if it happens at all, will now be about how to b…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "How to find out what your design work was really for",
+    "link": "https://uxdesign.cc/how-to-find-out-what-your-design-work-was-really-for-3f948d3900a5?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 26 May 2026 10:45:56 GMT",
+    "content": "Missing the business context means underselling your own work Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "UX Conference August Announced (Aug 17",
+    "link": "https://www.nngroup.com/training/august/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Tue, 19 May 2026 06:52:05 +0000",
+    "content": "Take up to 5 in-depth training courses, teaching user experience best practices for successful design. Training focused on long-lasting skills for UX professionals. August 17 - August 28, 2026.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "Should I design for humans or machines?",
+    "link": "https://uxdesign.cc/should-i-design-for-humans-or-machines-3b8d3addd006?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 25 May 2026 18:46:44 GMT",
+    "content": "Rethinking UX as we start designing for agents and automation “User” has traditionally meant one thing: a person. The user is someone who navigates an interface, scans text/visuals, and makes decisions. UX/UI has always been about “reducing friction” between humans and the products they use. But UX and the design process are heavily evolving. In Design systems, I’ve been running into a different kind of “user”…it’s not a person, but a machine. Documentation that needed to be clear to only designers and engineers i…",
+    "image": "",
+    "valueTags": [
+      "look_and_feel",
+      "korean_uiux_case",
+      "design_system",
+      "visual_reference"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
   },
   {
     "title": "Your Prototype Is Not Being Honest With Your Users (And Here’s How To Fix It)",
@@ -107,6 +521,76 @@
       "UX",
       "Design Practice",
       "Case Study"
+    ]
+  },
+  {
+    "title": "Being kind to machines, the genius of Claude’s branding, AI UX debt",
+    "link": "https://uxdesign.cc/being-kind-to-machines-the-genius-of-claudes-branding-ai-ux-debt-f40c616102bd?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 25 May 2026 11:17:57 GMT",
+    "content": "Weekly curated resources for designers — thinkers and makers. “The way we talk to technology has always said something about us. We barked commands at early voice recognition software. We typed queries into search engines like telegrams. Now we chat, negotiate, apologize, and occasionally vent to systems that, by any reasonable measure, couldn’t care less. What’s changed isn’t just the technology. It’s the tone.” Should we be kind to machines (for our own sake, really)? → By Dora Czerna Editor picks A designer’s p…",
+    "image": "",
+    "valueTags": [
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The permalink problem in AI chat",
+    "link": "https://uxdesign.cc/the-permalink-problem-in-ai-chat-1f1579ec991c?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 25 May 2026 11:10:59 GMT",
+    "content": "AI chat made the conversation addressable and the message ephemeral. Knowledge work needs the opposite. Editor’s note: I wrote this article from firsthand experience as a founder and engineer. Disclosure: I co-founded AI Toolbox — a Chrome extension that adds per-message bookmarking and full-text search to major AI chat products. Engelbart’s 1968 NLS could already jump to any individual text element by structural address. Fifty-eight years later, AI chat cannot. Credit: Frame from “A Research Center for Augmenting…",
+    "image": "",
+    "valueTags": [
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Designing locality, by redrawing the lines",
+    "link": "https://uxdesign.cc/designing-locality-by-redrawing-the-lines-120200ee81df?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 25 May 2026 11:10:40 GMT",
+    "content": "On a Bruno Munari picture book, an old Buddhist phrase, and an empty field in the middle of a town Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
     ]
   },
   {
@@ -155,6 +639,68 @@
     "pubDate": "Fri, 22 May 2026 13:00:00 GMT",
     "content": "What people say, feel, think, and do are often very different things. To understand the underlying reasons for user behavior, it helps to look beyond the surface and explore hidden motivations, root causes, and the different layers of reality that shape how people act. Brought to you by Measuring UX Impact, **friendly video course on UX** and design patterns by Vitaly.",
     "image": "http://files.smashing.media/articles/four-levels-customer-understanding/four-levels-customer-understanding.jpg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Small by Design: The Strength of Lean Design-System Teams",
+    "link": "https://www.nngroup.com/articles/lean-design-system-teams/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 15 May 2026 17:00:00 +0000",
+    "content": "Lean design-system teams, when strategically planned, can move faster, prioritize sharply, and scale impact beyond their size.",
+    "image": "",
+    "valueTags": [],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "What Designers Actually Struggle with on Product Teams",
+    "link": "https://www.nngroup.com/articles/designers-product-teams/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 15 May 2026 17:00:00 +0000",
+    "content": "Designers' top struggles aren't about design skills. They're about alignment, influence, and navigating org complexity — the work no one taught them to do.",
+    "image": "",
+    "valueTags": [],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "Ten Data-Backed Truths Of User Experience ROI",
+    "link": "https://smashingmagazine.com/2026/05/data-backed-truths-user-experience-roi/",
+    "pubDate": "Fri, 15 May 2026 10:00:00 GMT",
+    "content": "Every extra second of friction has a measurable business cost. Carrie Webster shares ten data-backed UX facts that link user experience directly to revenue, retention, and long-term growth.",
+    "image": "http://files.smashing.media/articles/data-backed-truths-user-experience-roi/data-backed-truths-user-experience-roi.jpg",
     "valueTags": [
       "korean_uiux_case"
     ],

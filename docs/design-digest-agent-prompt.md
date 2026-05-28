@@ -129,6 +129,21 @@ Service의 `요약`, `서비스 맥락`, `변경 전/후`, `사용자는 무엇�
 - "AI로 더 쉽게 만든다" 정도의 홍보 문구만 있고 실제 입력 방식, 결과물, 작업 흐름이 없는 글
 - 쇼케이스 페이지의 썸네일만 있고 원문 사이트나 실제 화면을 확인할 수 없는 글
 
+### 본문 검토 전 자동 제외 (제목 키워드)
+
+다음 키워드가 제목에 있는 무드보드·영감 큐레이션 글은 후보 단계부터 컷합니다. IT'S NICE THAT/The Brand Identity/Muzli/Typewolf 같은 inspiration 매체에 자주 나옵니다.
+
+- 무드보드형: `mood board`, `moodboard`, `inspiration round-up`, `weekly inspiration`, `this week in design`, `best of`, `top \d+ websites`, `logos of the week`
+- 단순 영감 모음: `our favourite (websites|brands|logos|projects) of`, `\d+ inspiring (sites|brands|projects)`
+
+inspiration 매체의 글은 다음을 통과해야 채택:
+- ✅ **케이스 스터디·리뉴얼·디자인 시스템 운영기** — 인터뷰·제작 과정·도구·결정 근거가 본문에 있음
+- ❌ **단순 큐레이션·이번 주의 영감** — 위 키워드에 걸리거나 본문에 결정 근거가 없음
+
+### 자기복제 시리즈는 묶음 1건으로 통합
+
+DIGITAL iNSIGHT의 "참을 수 없는 UX의 저렴함 ①②③" 같은 연재가 한 호에 여러 건 후보로 올라오면 매거진 1건으로 통합 발행합니다(대표 원문 + 보조 출처). **단일 매체 수량 한도는 두지 않습니다** — DIGITAL iNSIGHT에서 콘텐츠가 다른 글이 5건 다 좋으면 5건 다 채택 가능합니다. 통합 판단은 콘텐츠 차원에서만 합니다.
+
 ## 핀테크/금융앱 디자인 채택 기준 (2026-05-26 사용자 결정)
 
 CTTD 독자(이커머스 중심)의 관심도가 낮아, 핀테크·은행·증권·보험 앱의 일반적인 디자인 변화는 우선순위를 낮춥니다. **다음 조건 중 하나 이상**일 때만 채택 후보로 봅니다.

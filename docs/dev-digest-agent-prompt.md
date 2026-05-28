@@ -13,18 +13,24 @@ This is the DEV publishing standard. Do not replace it with an automatic LLM API
 
 DEV는 GeekNews 스타일의 "프론트엔드 UIUX 개발자에게 유익한 최신 기술 소식"을 목표로 운영합니다. 4축 스코프 안에 들어가는 후보만 채택합니다.
 
-DEV 4축 스코프:
+DEV 4축 스코프 (분포는 강제하지 않음, 호당 수량 할당 없음):
 
-1. 프론트엔드 표준·브라우저 — HTML/CSS/JavaScript, Web Platform API, Chrome/Safari/Firefox/WebKit 릴리즈, Baseline/Interop, Web Component
-2. UIUX 구현·접근성 — 컴포넌트 구현, 디자인-코드 연동, 접근성(ARIA/WCAG/스크린 리더/키보드), 성능 (Core Web Vitals)
-3. AI 코딩·도구 — Claude Code, Cursor, Copilot, v0, Bolt, Replit, OpenAI Codex 등 프론트엔드 실무 워크플로우를 바꾸는 AI 도구
-4. 디자인 시스템 자동화 — Storybook, shadcn/ui, Builder.io, Locofy, Anima, Figma Dev Mode 등 디자인-코드 파이프라인 자동화
+1. 웹 표준·브라우저·CSS·HTML — HTML/CSS/JavaScript, Web Platform API, Chrome/Safari/Firefox/WebKit 릴리즈, Baseline/Interop, Web Component
+2. 접근성·성능·한국어 타이포 — ARIA/WCAG/스크린 리더/키보드, Core Web Vitals(LCP/CLS/INP), 한글 폰트·IME·Pretendard·세로쓰기
+3. 디자인 시스템·핸드오프 자동화 — 토큰, Storybook, shadcn/ui, Figma Dev Mode/Variables/Code Connect, Style Dictionary 등 디자인-코드 파이프라인
+4. AI 코딩·도구 (실측 케이스만) — Claude Code, Cursor, Copilot, v0, MCP 등이 프론트엔드 워크플로우에 실제로 끼어드는 케이스. 가격·SMB/Enterprise plan·도메인 패키지·행사 announcement는 채택 금지
+
+좋은 글이면 한 축에 5편이 몰려도 모두 싣고, 그날 좋은 글이 없는 축은 비웁니다. 균형을 위해 약한 글을 끼워넣지 마세요. 다만 호 끝에 "이번 호 DEV 4축 분포"를 1줄로 보고하고, 같은 축이 2주 연속 0건이면 채널 점검 트리거를 남기세요.
 
 기준:
 
 - 웹 퍼블리셔는 HTML, CSS, JavaScript를 사용해 디자인을 실제 웹 화면으로 구현하는 직군입니다.
 - 접근성, 성능, 시맨틱 마크업, 브라우저 기능, UI 구현, 디자인 시스템, 개발 도구, AI 개발 워크플로우와 관련된 내용을 우선합니다. 접근성은 DEV의 핵심 축이므로 약한 시그널이라도 검토합니다.
 - 광고·홍보성 글은 제외합니다. 특정 제품·서비스 가입, 세일즈 랜딩, 스폰서 콘텐츠, 단순 출시 홍보, 이벤트/채용/교육 모집 글은 DEV 항목으로 쓰지 마세요.
+- 다음 글은 본문 검토 전에 자동 제외합니다: (1) AI 회사 자체의 가격·SMB/Enterprise plan·도메인 에이전트 패키지(Financial Services/Healthcare 등)·행사 announcement, (2) 백엔드/인프라/DB/AI 모델 학습 중심 글, (3) 본문 또는 src URL이 비어있는 후보, (4) "Introducing X" / "Announcing X" 같은 표지 글 중 본문에서 코드·속성·패턴·수치·체크리스트 중 하나도 추출되지 않는 후보, (5) GitHub Issue field/Project 같은 조직·거버넌스 공지.
+- 한국어 원문 또는 국내 회사 사례는 같은 품질일 때 우선합니다(가산점 +1). 양 할당은 두지 않습니다.
+- "다음 주 마크업·스타일·접근성·핸드오프 작업에 쓸 코드/속성/패턴이 한 개라도 있나" 자체 체크를 통과하지 못하면 P1 이하로 강등합니다.
+- **vanilla 웹 표준 신기능을 프레임워크 릴리즈보다 우선합니다.** CSS·HTML·JavaScript(ES/Web Platform API)의 새 문법·속성·함수·API를 다루는 글이 P0 우선 후보입니다. React/Vue/Svelte/Next/Astro/Tailwind 등 프레임워크 릴리즈는 그 글이 **새 웹 표준 기능을 어떻게 활용하는지, 또는 디자이너-개발 핸드오프·접근성·성능을 실측한 케이스**가 아닌 단순 "새 버전 출시·새 옵션 추가" 알림이면 P1 이하로 강등합니다. 같은 CSS-Tricks 같은 단일 매체에 의존하지 않도록 vanilla 신문법 글은 V8 Blog/Ahmad Shadeed/Stefan Judis/Patrick Brosset/Bramus/Una Kravets/Chrome for Developers/web.dev/WebKit/MDN 등 여러 출처에서 고루 가져오세요.
 - API 사용법이 중심인 글은 제외합니다. 단, 브라우저 API, CSS/HTML/ARIA 명세, 프론트엔드 UI 구현에 직접 필요한 Web API는 포함할 수 있습니다.
 - Backend 개발 중심 글은 제외합니다. 서버 아키텍처, DB, 인프라, DevOps, 인증 서버, API 서버, 백엔드 프레임워크, Kafka, Kubernetes, 머신러닝 모델 학습이 핵심인 글은 프론트엔드 구현 영향이 명확하지 않으면 쓰지 마세요.
 - CLI 도구·OS 설정·클라우드 관리자 콘솔처럼 화면 구현과 거리가 먼 글은 제외합니다.

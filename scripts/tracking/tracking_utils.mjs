@@ -3,7 +3,10 @@ import path from "node:path";
 
 export const FEED_TIMEOUT_MS = 25000;
 export const PAGE_TIMEOUT_MS = 25000;
-export const BOOTSTRAP_DAYS = 7;
+// 폴링 윈도우 14일. 한국 기업 기술블로그(Toss/Kakao/Naver D2/Woowahan 등)와 접근성 전문가 블로그는
+// 갱신 빈도가 낮아 7일이면 종종 0건이 된다. previousLinks()가 이전 호 링크를 제외하므로
+// 윈도우를 늘려도 중복 후보는 자동으로 컷된다. 필요시 TRACKING_SINCE_DATE 환경변수로 override.
+export const BOOTSTRAP_DAYS = 14;
 export const FETCH_RETRY_COUNT = 3;
 export const FETCH_RETRY_BASE_DELAY_MS = 1500;
 export const BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";

@@ -195,7 +195,10 @@
         "Actions"
       ],
       "includeTitlePatterns": [
-        "Copilot|AI|code review|pull request|workflow|action"
+        "Copilot.*(code|review|edit|chat|pull request|workflow|agent)|Actions.*workflow"
+      ],
+      "excludeTitlePatterns": [
+        "Issue (field|type|template|form)|Project|Organization|preview for all organizations|billing|pricing|public preview|general availability$|Enterprise (cloud|server|plan)|for Small Business"
       ]
     },
     {
@@ -346,6 +349,205 @@
       "excludeTitlePatterns": [
         "백엔드|backend|서버|server|infra|infrastructure|Kafka|Kubernetes|MySQL|MongoDB|Redis|보안 인프라|머신러닝|machine learning|모델 학습"
       ]
+    },
+    {
+      "name": "Toss Tech",
+      "url": "https://toss.tech/",
+      "rss": "https://toss.tech/rss.xml",
+      "category": "kr_frontend_blog",
+      "sourceRole": "official",
+      "locale": "KR",
+      "topics": [
+        "Frontend",
+        "Design System",
+        "Accessibility",
+        "Toss"
+      ],
+      "includeTitlePatterns": [
+        "프론트엔드|frontend|웹|web|JavaScript|TypeScript|React|Vue|Svelte|CSS|HTML|디자인 시스템|design system|컴포넌트|component|접근성|accessibility|a11y|성능|performance|UI|UX|토큰|token|핸드오프|handoff|마크업|시맨틱"
+      ],
+      "excludeTitlePatterns": [
+        "백엔드|backend|서버|server|infra|infrastructure|Kafka|Kubernetes|MySQL|MongoDB|Redis|머신러닝|machine learning|모델 학습|채용|hiring"
+      ]
+    },
+    {
+      "name": "Kakao Tech",
+      "url": "https://tech.kakao.com/blog/",
+      "rss": "https://tech.kakao.com/feed/",
+      "category": "kr_frontend_blog",
+      "sourceRole": "official",
+      "locale": "KR",
+      "topics": [
+        "Frontend",
+        "Kakao",
+        "Web Platform"
+      ],
+      "includeTitlePatterns": [
+        "프론트엔드|frontend|웹|web|JavaScript|TypeScript|React|Vue|Svelte|CSS|HTML|디자인 시스템|design system|컴포넌트|component|접근성|accessibility|a11y|성능|performance|UI|UX|토큰|token|마크업|시맨틱"
+      ],
+      "excludeTitlePatterns": [
+        "백엔드|backend|서버|server|infra|infrastructure|Kafka|Kubernetes|MySQL|MongoDB|Redis|머신러닝|machine learning|모델 학습|채용|hiring"
+      ]
+    },
+    {
+      "name": "Daangn Tech",
+      "url": "https://medium.com/daangn",
+      "rss": "https://medium.com/feed/daangn",
+      "category": "kr_frontend_blog",
+      "sourceRole": "official",
+      "locale": "KR",
+      "topics": [
+        "Frontend",
+        "UX Engineering",
+        "Design System",
+        "Daangn"
+      ],
+      "includeTitlePatterns": [
+        "프론트엔드|frontend|웹|web|JavaScript|TypeScript|React|Vue|Svelte|CSS|HTML|디자인 시스템|design system|컴포넌트|component|접근성|accessibility|a11y|성능|performance|UI|UX|토큰|token|핸드오프"
+      ],
+      "excludeTitlePatterns": [
+        "백엔드|backend|서버|server|infra|infrastructure|Kafka|Kubernetes|MySQL|MongoDB|Redis|머신러닝|machine learning|모델 학습|채용|hiring|회고"
+      ]
+    },
+    {
+      "name": "Woowahan Tech",
+      "url": "https://techblog.woowahan.com/",
+      "rss": "https://techblog.woowahan.com/feed/",
+      "category": "kr_frontend_blog",
+      "sourceRole": "official",
+      "locale": "KR",
+      "topics": [
+        "Frontend",
+        "Design System",
+        "Woowahan"
+      ],
+      "includeTitlePatterns": [
+        "프론트엔드|frontend|웹|web|JavaScript|TypeScript|React|Vue|Svelte|CSS|HTML|디자인 시스템|design system|컴포넌트|component|접근성|accessibility|a11y|성능|performance|UI|UX|토큰|token|마크업|핸드오프|Storybook"
+      ],
+      "excludeTitlePatterns": [
+        "백엔드|backend|서버|server|infra|infrastructure|Kafka|Kubernetes|MySQL|MongoDB|Redis|머신러닝|machine learning|모델 학습|채용|hiring"
+      ]
+    },
+    {
+      "name": "Bramus van Damme",
+      "url": "https://www.bram.us/",
+      "rss": "https://www.bram.us/feed/",
+      "category": "frontend_practice",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": [
+        "CSS",
+        "View Transitions",
+        "Scroll-driven Animations",
+        "Chrome"
+      ],
+      "includeTitlePatterns": [
+        "CSS|HTML|view-transition|scroll-driven|anchor|:has|container|@scope|color-mix|light-dark|popover|dialog|baseline|interop|Chrome|browser|web platform|animation|motion"
+      ],
+      "excludeTitlePatterns": [
+        "newsletter|sponsor|career|hiring"
+      ]
+    },
+    {
+      "name": "Una Kravets",
+      "url": "https://una.im/",
+      "rss": "https://una.im/rss.xml",
+      "category": "frontend_practice",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": [
+        "CSS",
+        "Design Systems",
+        "Chrome",
+        "Web Components"
+      ],
+      "includeTitlePatterns": [
+        "CSS|HTML|color|design token|component|view-transition|scroll-driven|container|:has|@scope|color-mix|light-dark|baseline|web platform|chrome"
+      ],
+      "excludeTitlePatterns": [
+        "newsletter|sponsor|career|hiring"
+      ]
+    },
+    {
+      "name": "V8 Blog",
+      "url": "https://v8.dev/blog",
+      "rss": "https://v8.dev/blog.atom",
+      "category": "javascript_engine",
+      "sourceRole": "official",
+      "locale": "global",
+      "topics": [
+        "JavaScript",
+        "ECMAScript",
+        "V8",
+        "Performance"
+      ],
+      "includeTitlePatterns": [
+        "JavaScript|TypeScript|ECMAScript|ES\\d{4}|V8|Iterator|Promise|async|await|Set|Map|Temporal|Intl|RegExp|Symbol|Proxy|WeakRef|WeakMap|WeakSet|generator|module|import|JSON|TypedArray|ArrayBuffer|SharedArrayBuffer|Atomics|BigInt|optional chaining|nullish|destructuring|pipeline|decorator|pattern matching|records|tuples|Wasm|WebAssembly|performance|memory|GC"
+      ],
+      "excludeTitlePatterns": [
+        "Node\\.js .* release|npm package release"
+      ]
+    },
+    {
+      "name": "Ahmad Shadeed",
+      "url": "https://ishadeed.com/",
+      "rss": "https://ishadeed.com/feed.xml",
+      "category": "frontend_practice",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": [
+        "CSS",
+        "Container Queries",
+        "Flexbox",
+        "Grid",
+        "Accessibility"
+      ],
+      "includeTitlePatterns": [
+        "CSS|HTML|flexbox|grid|container query|container-type|:has|:where|:is|@scope|@container|@layer|anchor|view-transition|scroll-driven|color-mix|light-dark|contrast-color|round\\(|min\\(|max\\(|clamp\\(|calc\\(|attr\\(|fluid|sizing|spacing|gap|popover|dialog|inert|focus|accessibility|a11y|responsive|design token|font|typography|component|layout|interpolation"
+      ],
+      "excludeTitlePatterns": [
+        "sponsor|course launch|book sale"
+      ]
+    },
+    {
+      "name": "Stefan Judis",
+      "url": "https://www.stefanjudis.com/",
+      "rss": "https://www.stefanjudis.com/rss.xml",
+      "category": "frontend_practice",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": [
+        "JavaScript",
+        "CSS",
+        "Web Platform",
+        "Web Weekly"
+      ],
+      "includeTitlePatterns": [
+        "Web Weekly|JavaScript|TypeScript|CSS|HTML|web platform|web API|ECMAScript|Promise|Iterator|Temporal|Intl|fetch|stream|signal|generator|module|import|JSON|view-transition|container|:has|@scope|popover|dialog|color-mix|light-dark|browser|baseline|interop|accessibility|a11y|performance"
+      ],
+      "excludeTitlePatterns": [
+        "sponsor|book sale|course launch"
+      ]
+    },
+    {
+      "name": "Patrick Brosset",
+      "url": "https://www.patrickbrosset.com/",
+      "rss": "https://www.patrickbrosset.com/feed.xml",
+      "category": "browser_standards",
+      "sourceRole": "reference",
+      "locale": "global",
+      "topics": [
+        "CSS",
+        "DevTools",
+        "Web Platform",
+        "Edge"
+      ],
+      "includeTitlePatterns": [
+        "CSS|HTML|DevTools|browser|Edge|Chrome|web platform|web API|container|@scope|anchor|view-transition|scroll-driven|color-mix|design token|inspect|debug"
+      ],
+      "excludeTitlePatterns": [
+        "newsletter|sponsor|career"
+      ]
     }
   ],
   "pages": [
@@ -390,13 +592,23 @@
         "anthropic\\.com/news/"
       ],
       "includeTitlePatterns": [
-        "Claude|Claude Code|MCP|Artifacts|tool use|coding|developer|skill|agent|computer use"
+        "Claude Code|MCP|Artifacts|tool use|Computer Use|skill|sub-?agent|extension"
       ],
       "excludeLinkPatterns": [
         "#",
         "mailto:",
         "/research/",
-        "/policy/"
+        "/policy/",
+        "/customers/",
+        "small-business",
+        "financial-services",
+        "healthcare",
+        "education",
+        "public-sector",
+        "enterprise"
+      ],
+      "excludeTitlePatterns": [
+        "for Small Business|for Financial Services|for Healthcare|for Education|for Public Sector|Enterprise plan|Team plan|Business plan|partnership|funding round|valuation"
       ],
       "limit": 12
     },
@@ -416,14 +628,23 @@
         "openai\\.com/(?:index|blog)/"
       ],
       "includeTitlePatterns": [
-        "Codex|GPT|ChatGPT|developer|API|coding|app|agent|canvas|operator|images|sora|MCP"
+        "Codex|ChatGPT.*(developer|API|extension|app|canvas)|Apps SDK|MCP|coding|operator|canvas"
       ],
       "excludeLinkPatterns": [
         "#",
         "mailto:",
         "/research/",
         "/safety/",
-        "/policies/"
+        "/policies/",
+        "/business/",
+        "/enterprise/",
+        "/customers/",
+        "small-business",
+        "financial-services",
+        "healthcare"
+      ],
+      "excludeTitlePatterns": [
+        "for Small Business|for Financial Services|for Healthcare|for Education|Enterprise plan|Team plan|Business plan|funding round|valuation|partnership"
       ],
       "limit": 12
     },
@@ -441,7 +662,7 @@
         "cursor\\.com/(?:changelog|blog)/"
       ],
       "includeTitlePatterns": [
-        "Cursor|composer|chat|inline|agent|MCP|model|ide|editor|review|tab|complete"
+        "Cursor|composer|inline (edit|chat)|agent|MCP|tab|complete|review|background"
       ],
       "excludeLinkPatterns": [
         "#",
@@ -449,7 +670,12 @@
         "/pricing",
         "/login",
         "/sign",
-        "/jobs"
+        "/jobs",
+        "/enterprise",
+        "/business"
+      ],
+      "excludeTitlePatterns": [
+        "for Small Business|for Enterprise|Business plan|Team plan|pricing|billing|funding round"
       ],
       "limit": 12
     },
@@ -468,14 +694,19 @@
         "v0\\.dev/(?:changelog|blog)/"
       ],
       "includeTitlePatterns": [
-        "v0|generate|ui|component|design|figma|deploy|integration|model|chat"
+        "v0|generate|component|design|figma|deploy|integration|model|chat"
       ],
       "excludeLinkPatterns": [
         "#",
         "mailto:",
         "/pricing",
         "/login",
-        "/sign"
+        "/sign",
+        "/enterprise",
+        "/business"
+      ],
+      "excludeTitlePatterns": [
+        "for Small Business|for Enterprise|Business plan|Team plan|pricing|billing"
       ],
       "limit": 12
     },
@@ -494,14 +725,19 @@
         "builder\\.io/blog/"
       ],
       "includeTitlePatterns": [
-        "figma|design|component|visual|code|AI|LLM|workflow|design system|token|export|handoff|Mitosis|Qwik"
+        "figma|design system|token|export|handoff|component|visual editor|Mitosis|Qwik|web component"
       ],
       "excludeLinkPatterns": [
         "#",
         "mailto:",
         "/login",
         "/sign",
-        "/pricing"
+        "/pricing",
+        "/enterprise",
+        "/business"
+      ],
+      "excludeTitlePatterns": [
+        "[Bb]est .* [Aa]lternative|[Tt]op \\d+|vs\\.?|comparison|comparing|review of|for Small Business|Enterprise plan|Business plan|pricing|billing"
       ],
       "limit": 12
     },
