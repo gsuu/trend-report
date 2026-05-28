@@ -46,6 +46,21 @@ source-verifier는 각 후보의 최종 기준 원문을 직접 열어 구체 �
 
 `weak_promo`와 `exclude`는 shortlist에 포함하지 않고 제외 메모로만 남긴다.
 
+### Phase 4.5: ★ 자동 후보 등록 (council 2026-05-27 끝판왕 결정 #1)
+
+지난 회차(가장 최근 날짜의 `runs/`)에서 다음을 읽어 *이번 회차 후보 풀에 P1로 자동 합류*시킨다:
+- `runs/YYYY-MM-DD-1/references/{design,service,dev}.md`의 **★ 항목**
+- `runs/YYYY-MM-DD-1/trend-radar.md`의 **★ 항목**
+- `runs/YYYY-MM-DD-1/team-board/inspiration.md`의 **★ 항목** (있을 때)
+
+**자동 등록 규칙**:
+- 매거진 본문 강제 승격 X (메모리 룰 `feedback_curation_no_quota.md` 정합) — *후보 풀에 P1로 합류*만
+- magazine-writer가 최종 채택은 자율 결정
+- 이전 회차 출처가 이번 회차 자동 제외 룰(`_blocked-sources.json` `auto_exclude_keywords`)과 일치하면 자동 등록 보류
+- 같은 사이트가 직전 2회차 안에 매거진 본문에 이미 발행됐다면 자동 등록 제외 (중복 회피)
+
+`source-verifier`·`target-classifier`는 자동 등록 후보도 같은 흐름으로 검증·분류. 단 *★ 출처라는 신호*는 priority 가산점으로 한 칸 반영.
+
 ## Phase 5: shortlist 작성
 
 `runs/YYYY-MM-DD/magazine/shortlist-20-30.md`를 작성한다.
