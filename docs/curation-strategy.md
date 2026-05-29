@@ -2,7 +2,7 @@
 
 이 문서는 매거진 회차별 큐레이션 폭과 깊이를 유지하기 위한 운영 가이드입니다. 자동 수집([news-tracking/*.json](../news-tracking/))과 수동 모니터링이 어떻게 분담되는지, 한국 서비스/디자인 콘텐츠를 어떻게 발굴하는지 정리합니다.
 
-[docs/magazine-writing-standard.md](magazine-writing-standard.md)의 자체 완결 요약·잠금 소제목 셋 표준을 함께 따릅니다.
+[docs/magazine-writing-standard.md](magazine-writing-standard.md)의 자체 완결 요약 원칙과 2026-05-28 본문 간결화 기준(인사이트 소제목 없음)을 함께 따릅니다.
 
 ## 자동 수집 한계와 수동 모니터링이 필요한 이유
 
@@ -101,6 +101,6 @@ DEV 4축 — 프론트엔드 표준·브라우저 / UIUX 구현·접근성 / AI 
 
 ## 큐레이션 결과의 품질 기준
 
-[magazine-writing-standard.md](magazine-writing-standard.md)의 **자체 완결 요약 원칙**과 **잠금 소제목 셋**이 모든 채택 항목에 동일하게 적용됩니다. 카테고리 폭이 넓어져도 글마다의 톤·구조는 같아야 매거진 전체가 한 호흡으로 읽힙니다.
+[magazine-writing-standard.md](magazine-writing-standard.md)의 **자체 완결 요약 원칙**과 **2026-05-28 본문 간결화 기준**(인사이트 소제목 없음·요약 3~5불릿)이 모든 채택 항목에 동일하게 적용됩니다. 카테고리 폭이 넓어져도 글마다의 톤·구조는 같아야 매거진 전체가 한 호흡으로 읽힙니다.
 
 운영 메모([editorial-style-guide.md](editorial-style-guide.md)의 제외 기준)도 함께 적용해, 화면·플로우·정책 변화가 원문에서 직접 확인되지 않는 후보는 제외합니다. 수집 폭을 넓히는 목적은 채택 건수 증가가 아니라 카테고리 다양성 확보입니다.
