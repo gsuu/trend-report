@@ -47,7 +47,7 @@ DIY 수요가 Home Depot와 정면으로 겹치는 상황에서, Lowe's는 AI를
 - 출처 URL: https://team.daangn.com/blog/archive/당근-신입-프로덕트-디자이너-인턴/
 - 이미지: https://prismic-image-proxy.krrt.io/karrot/agPxRKYofJOwHJxG_1.png?auto=format,compress
 - 이미지 설명: 당근 팀블로그 원문 본문 이미지, 키즈케어 폼 개선 관련 화면
-- 요약: 당근 신입 프로덕트 디자이너가 당근알바 키즈케어 매칭 폼을 직접 개선한 과정을 공개했다. 기존 '제목 입력 → AI 질문 생성' 흐름에서 '아이 정보 수집 → 연령대·역할 맞춤 선택지 → AI 공고 완성'으로 IA를 바꿔 공고 작성 시간을 78% 단축했다.
+- 요약: 당근 신입 프로덕트 디자이너가 당근알바 키즈케어 매칭 폼을 직접 개선한 과정을 공개했습니다. 기존 '제목 입력 → AI 질문 생성' 흐름에서 '아이 정보 수집 → 연령대·역할 맞춤 선택지 → AI 공고 완성'으로 IA를 바꿔 공고 작성 시간을 78% 단축했습니다.
 - 관련 링크 1: [한국 원문] 당근 팀블로그 — 어느 1년 차 신입 프로덕트 디자이너의 고백 | https://team.daangn.com/blog/archive/당근-신입-프로덕트-디자이너-인턴/
 - 관련 링크 2: [글로벌 비교] Nielsen Norman Group — Progressive Disclosure (Jakob Nielsen, 2006) | https://www.nngroup.com/articles/progressive-disclosure/
 
@@ -289,7 +289,7 @@ K뷰티에 대한 미국 소비자 관심이 온라인 구매를 넘어선 시�
 - 출처 URL: https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/
 - 이미지: https://designcompass.org/wp-content/uploads/2026/05/Neuralexpressiveavail-1.99.jpg
 - 이미지 설명: Designcompass.org — Neural Expressive 적용 Gemini 앱 화면 캡처
-- 요약: Google이 Gemini 앱에 'Neural Expressive'라는 새 디자인 언어를 공개했다. 유체 애니메이션, 활기찬 컬러, 새 타이포그래피, 햅틱 피드백 네 가지를 축으로 삼고, Android·iOS·웹 전체에 동시 배포했다.
+- 요약: Google이 Gemini 앱에 'Neural Expressive'라는 새 디자인 언어를 공개했습니다. 유체 애니메이션, 활기찬 컬러, 새 타이포그래피, 햅틱 피드백 네 가지를 축으로 삼고, Android·iOS·웹 전체에 동시 배포했습니다.
 - 관련 링크 1: [케이스 원문] Google The Keyword — The next evolution of the Gemini app | https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/
 - 관련 링크 2: [결정 근거] Designcompass — Neural Expressive 디자인 시스템 분석 | https://designcompass.org/2026/05/28/neural-expressive/
 
@@ -356,7 +356,7 @@ FacePay 기술을 스펙 나열이 아니라 결제가 끝난 뒤 무엇을 할 
 - 출처 URL: https://www.nngroup.com/articles/design-disposables/
 - 이미지: https://media.nngroup.com/media/articles/opengraph_images/B-CC.png
 - 이미지 설명: Nielsen Norman Group "The Case for Design Disposables" 아티클 OG 이미지
-- 요약: Nielsen Norman Group의 Laura Klein이 '내 사고를 돕기 위한 거친 산출물(design disposables)'과 이해관계자에게 전달하는 deliverable을 구분하지 못할 때 탐색 단계 자체가 비싸지는 원리를 설명한다. AI가 산출물 생성 시간을 줄여주지만 만드는 과정을 건너뛰면 학습도 함께 사라진다는 양면성을 경고한다.
+- 요약: Nielsen Norman Group의 Laura Klein이 '내 사고를 돕기 위한 거친 산출물(design disposables)'과 이해관계자에게 전달하는 deliverable을 구분하지 못할 때 탐색 단계 자체가 비싸지는 원리를 설명합니다. AI가 산출물 생성 시간을 줄여주지만 만드는 과정을 건너뛰면 학습도 함께 사라진다는 양면성을 경고합니다.
 - 관련 링크 1: [케이스 출처] Nielsen Norman Group — Paper Prototyping: Getting User Data Before You Code | https://www.nngroup.com/articles/paper-prototyping/
 - 관련 링크 2: [결정 근거] Smashing Magazine — The Skeptic's Guide To Low-Fidelity Prototyping | https://www.smashingmagazine.com/2014/10/the-skeptics-guide-to-low-fidelity-prototyping/
 
@@ -390,7 +390,7 @@ disposable을 의도적으로 유지한다는 건 완성도를 낮춘다는 뜻�
 - 출처 URL: https://www.nngroup.com/articles/after-design-critique/
 - 이미지: https://media.nngroup.com/media/editor/2026/04/29/show-before-after.png
 - 이미지 설명: NN/g 원문 수록 금융 대시보드 Before-After 비교 스크린샷. 피드백 반영 전후를 나란히 놓아 네비게이션 간소화와 저축 진행률 시각 강조가 어떻게 달라졌는지 보여준다.
-- 요약: NN/g 리서처 Rachel Krause가 디자인 크리틱 세션이 끝난 직후 해야 할 일을 정리했다. 피드백을 수용하지 않은 경우 4단계 응답 템플릿, 세션 요약과 심층 팔로업의 구분, 팔로업을 보내야 할 트리거 3가지를 제시한다.
+- 요약: NN/g 리서처 Rachel Krause가 디자인 크리틱 세션이 끝난 직후 해야 할 일을 정리했습니다. 피드백을 수용하지 않은 경우 4단계 응답 템플릿, 세션 요약과 심층 팔로업의 구분, 팔로업을 보내야 할 트리거 3가지를 제시합니다.
 - 관련 링크 1: [케이스 출처] NN/g — Design Critiques: Encourage a Positive Culture to Improve Products | https://www.nngroup.com/articles/design-critiques/
 - 관련 링크 2: [결정 근거] NN/g 원문 Before-After 비교 스크린샷 — 금융 대시보드 피드백 귀속 사례 | https://media.nngroup.com/media/editor/2026/04/29/show-before-after.png
 
@@ -457,7 +457,7 @@ VOC나 인터뷰 결과를 워드클라우드로 전달하면 글자 크기 조�
 - 출처 URL: https://hoverstat.es
 - 이미지: https://images.prismic.io/serena-congiu/Z_UwL3dAxsiBwcmV_SerenaShare.webp?auto=format,compress&rect=0,0,1200,630&w=2400&h=1260
 - 이미지 설명: serenacongiu.com OG 이미지 — 밀라노 기반 메이크업 아티스트 Serena Congiu 포트폴리오 대표 화면
-- 요약: 밀라노 기반 메이크업 아티스트 Serena Congiu의 포트폴리오 사이트는 그리드 탐색 대신 "Link to the next page" 시퀀스로 작품 한 점당 한 페이지 깊이를 만들고, Projects 9건과 Archive 20건을 분리해 운영한다.
+- 요약: 밀라노 기반 메이크업 아티스트 Serena Congiu의 포트폴리오 사이트는 그리드 탐색 대신 "Link to the next page" 시퀀스로 작품 한 점당 한 페이지 깊이를 만들고, Projects 9건과 Archive 20건을 분리해 운영합니다.
 - 관련 링크 1: [케이스 출처] Hover States — serenacongiu.com 소개 (2026-05-18) | https://hoverstat.es
 - 관련 링크 2: [결정 근거] serenacongiu.com — Projects 섹션, "Link to the next page" 시퀀셜 네비게이션 | https://serenacongiu.com/projects
 
@@ -492,7 +492,7 @@ VOC나 인터뷰 결과를 워드클라우드로 전달하면 글자 크기 조�
 - 출처 URL: https://anygivenmoment.co
 - 이미지: https://cdn.sanity.io/images/ooesksxl/production/4aa8ae52a1d2b7f337d5ae4975148492a8b98653-1536x1920.jpg?w=1200&h=630&fit=crop
 - 이미지 설명: Any Given Moment 공식 OG 이미지 — 럭셔리·뷰티 캠페인 프로덕션 에이전시 대표 화면
-- 요약: 런던·파리 기반 럭셔리 캠페인 프로덕션 에이전시 Any Given Moment가 Chanel·Guerlain 등의 포트폴리오를 다이얼 회전 네비게이션으로 인덱싱하고, Vignettes 섹션은 GIF 그리드 형태로 구성해 카드·캐러셀 없이 장인정신의 느낌을 시각화했다.
+- 요약: 런던·파리 기반 럭셔리 캠페인 프로덕션 에이전시 Any Given Moment가 Chanel·Guerlain 등의 포트폴리오를 다이얼 회전 네비게이션으로 인덱싱하고, Vignettes 섹션은 GIF 그리드 형태로 구성해 카드·캐러셀 없이 장인정신의 느낌을 시각화했습니다.
 - 관련 링크 1: [케이스 출처] Any Given Moment — 럭셔리·뷰티 캠페인 포트폴리오 인덱스 | https://anygivenmoment.co
 - 관련 링크 2: [결정 근거] Any Given Moment Profile — 에이전시 철학과 서비스 범위 | https://anygivenmoment.co/profile
 
@@ -596,7 +596,7 @@ SVG 도형 배치는 시각 위계를 곧 공간 위계로 만듭니다. Main St
 - 이미지:
 - 이미지 설명: Bécane Paris 공식 사이트 제품 화면 (Shopify CDN 호스팅)
 - 이미지 확보 메모: Shopify CDN URL 불완전. becaneparis.com 직접 접속 후 제품 이미지 URL 추출 필요
-- 요약: 여성 모터사이클 라이더 D2C 브랜드 Bécane Paris가 "Technical, protective and unapologetically feminine"을 내건 보호장구 라인을 에디토리얼형 구조로 풀어냈다. 네비게이션 라벨에 수량 카운터("All 27" / "Stories 04")를 인라인으로 노출하고, 컬렉션·룩 단위를 "Collection 01 / 01", "Look 01 / 11" 형식으로 인덱싱해 작은 SKU를 밀도 있게 편집한 방식이 눈에 띈다.
+- 요약: 여성 모터사이클 라이더 D2C 브랜드 Bécane Paris가 "Technical, protective and unapologetically feminine"을 내건 보호장구 라인을 에디토리얼형 구조로 풀어냈습니다. 네비게이션 라벨에 수량 카운터("All 27" / "Stories 04")를 인라인으로 노출하고, 컬렉션·룩 단위를 "Collection 01 / 01", "Look 01 / 11" 형식으로 인덱싱해 작은 SKU를 밀도 있게 편집한 방식이 눈에 띕니다.
 - 관련 링크 1: [케이스 출처] Bécane Paris 공식 사이트 | https://becaneparis.com
 
 ##### 요약
@@ -737,7 +737,7 @@ LLM이 생성한 accordion·toast·dialog·dropdown·tabs가 코드베이스에 
 - 출처 URL: https://smashingmagazine.com/2026/05/mathematical-layouts-sibling-index-sibling-count/
 - 이미지: https://files.smashing.media/articles/mathematical-layouts-sibling-index-sibling-count/sibling-index-devtools.jpeg
 - 이미지 설명: Smashing Magazine — sibling-index() DevTools 패널 스크린샷
-- 요약: CSS Values Level 5에 새로 들어온 `sibling-index()`와 `sibling-count()` 함수로, JS 없이 형제 요소 위치·총 개수를 `calc()` 안에서 바로 쓸 수 있다. Chrome 138·Safari 26.2에서 스테이블로 지원되며, 스태거 애니메이션·자동 균등 폭 탭·z-index 카드 부채꼴 같은 패턴을 CSS 한 줄로 처리한다.
+- 요약: CSS Values Level 5에 새로 들어온 `sibling-index()`와 `sibling-count()` 함수로, JS 없이 형제 요소 위치·총 개수를 `calc()` 안에서 바로 쓸 수 있습니다. Chrome 138·Safari 26.2에서 스테이블로 지원되며, 스태거 애니메이션·자동 균등 폭 탭·z-index 카드 부채꼴 같은 패턴을 CSS 한 줄로 처리합니다.
 - 관련 링크 1: [합성 데모] CodePen — Dynamic Staggered Animations with CSS sibling-index() (Smashing Magazine) | https://codepen.io/smashingmag/pen/zxowBog
 - 관련 링크 2: [공식 사양] MDN — sibling-index() | https://developer.mozilla.org/en-US/docs/Web/CSS/sibling-index
 - 관련 링크 3: [프로덕션 사례] MDN — sibling-count() 예시 (균등 분할 탭 패턴) | https://developer.mozilla.org/en-US/docs/Web/CSS/sibling-count

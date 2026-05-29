@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T04:21:00.764766+00:00",
+  "generatedAt": "2026-05-29T04:35:35.044814+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -145,7 +145,7 @@
           "AI 공고 작성"
         ],
         "takeawayHtml": "어느 1년 차 신입 프로덕트 디자이너의 고백",
-        "deckHtml": "당근 신입 프로덕트 디자이너가 당근알바 키즈케어 매칭 폼을 직접 개선한 과정을 공개했다. 기존 &#x27;제목 입력 → AI 질문 생성&#x27; 흐름에서 &#x27;아이 정보 수집 → 연령대·역할 맞춤 선택지 → AI 공고 완성&#x27;으로 IA를 바꿔 공고 작성 시간을 78% 단축했다.",
+        "deckHtml": "당근 신입 프로덕트 디자이너가 당근알바 키즈케어 매칭 폼을 직접 개선한 과정을 공개했습니다. 기존 &#x27;제목 입력 → AI 질문 생성&#x27; 흐름에서 &#x27;아이 정보 수집 → 연령대·역할 맞춤 선택지 → AI 공고 완성&#x27;으로 IA를 바꿔 공고 작성 시간을 78% 단축했습니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -994,7 +994,7 @@
           "디자인 언어"
         ],
         "takeawayHtml": "The next evolution of the Gemini app",
-        "deckHtml": "Google이 Gemini 앱에 &#x27;Neural Expressive&#x27;라는 새 디자인 언어를 공개했다. 유체 애니메이션, 활기찬 컬러, 새 타이포그래피, 햅틱 피드백 네 가지를 축으로 삼고, Android·iOS·웹 전체에 동시 배포했다.",
+        "deckHtml": "Google이 Gemini 앱에 &#x27;Neural Expressive&#x27;라는 새 디자인 언어를 공개했습니다. 유체 애니메이션, 활기찬 컬러, 새 타이포그래피, 햅틱 피드백 네 가지를 축으로 삼고, Android·iOS·웹 전체에 동시 배포했습니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -1233,7 +1233,7 @@
           "low-fidelity"
         ],
         "takeawayHtml": "The Case for Design Disposables",
-        "deckHtml": "Nielsen Norman Group의 Laura Klein이 &#x27;내 사고를 돕기 위한 거친 산출물(design disposables)&#x27;과 이해관계자에게 전달하는 deliverable을 구분하지 못할 때 탐색 단계 자체가 비싸지는 원리를 설명한다. AI가 산출물 생성 시간을 줄여주지만 만드는 과정을 건너뛰면 학습도 함께 사라진다는 양면성을 경고한다.",
+        "deckHtml": "Nielsen Norman Group의 Laura Klein이 &#x27;내 사고를 돕기 위한 거친 산출물(design disposables)&#x27;과 이해관계자에게 전달하는 deliverable을 구분하지 못할 때 탐색 단계 자체가 비싸지는 원리를 설명합니다. AI가 산출물 생성 시간을 줄여주지만 만드는 과정을 건너뛰면 학습도 함께 사라진다는 양면성을 경고합니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -1355,7 +1355,7 @@
           "feedback loop"
         ],
         "takeawayHtml": "Closing the Loop: What to Do After a Design Critique Ends",
-        "deckHtml": "NN/g 리서처 Rachel Krause가 디자인 크리틱 세션이 끝난 직후 해야 할 일을 정리했다. 피드백을 수용하지 않은 경우 4단계 응답 템플릿, 세션 요약과 심층 팔로업의 구분, 팔로업을 보내야 할 트리거 3가지를 제시한다.",
+        "deckHtml": "NN/g 리서처 Rachel Krause가 디자인 크리틱 세션이 끝난 직후 해야 할 일을 정리했습니다. 피드백을 수용하지 않은 경우 4단계 응답 템플릿, 세션 요약과 심층 팔로업의 구분, 팔로업을 보내야 할 트리거 3가지를 제시합니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -1594,7 +1594,7 @@
           "메이크업 아티스트"
         ],
         "takeawayHtml": "serenacongiu.com",
-        "deckHtml": "밀라노 기반 메이크업 아티스트 Serena Congiu의 포트폴리오 사이트는 그리드 탐색 대신 &quot;Link to the next page&quot; 시퀀스로 작품 한 점당 한 페이지 깊이를 만들고, Projects 9건과 Archive 20건을 분리해 운영한다.",
+        "deckHtml": "밀라노 기반 메이크업 아티스트 Serena Congiu의 포트폴리오 사이트는 그리드 탐색 대신 &quot;Link to the next page&quot; 시퀀스로 작품 한 점당 한 페이지 깊이를 만들고, Projects 9건과 Archive 20건을 분리해 운영합니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -1716,7 +1716,7 @@
           "포트폴리오 인덱싱"
         ],
         "takeawayHtml": "Any Given Moment",
-        "deckHtml": "런던·파리 기반 럭셔리 캠페인 프로덕션 에이전시 Any Given Moment가 Chanel·Guerlain 등의 포트폴리오를 다이얼 회전 네비게이션으로 인덱싱하고, Vignettes 섹션은 GIF 그리드 형태로 구성해 카드·캐러셀 없이 장인정신의 느낌을 시각화했다.",
+        "deckHtml": "런던·파리 기반 럭셔리 캠페인 프로덕션 에이전시 Any Given Moment가 Chanel·Guerlain 등의 포트폴리오를 다이얼 회전 네비게이션으로 인덱싱하고, Vignettes 섹션은 GIF 그리드 형태로 구성해 카드·캐러셀 없이 장인정신의 느낌을 시각화했습니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -2082,7 +2082,7 @@
           "보호장구"
         ],
         "takeawayHtml": "Bécane Paris",
-        "deckHtml": "여성 모터사이클 라이더 D2C 브랜드 Bécane Paris가 &quot;Technical, protective and unapologetically feminine&quot;을 내건 보호장구 라인을 에디토리얼형 구조로 풀어냈다. 네비게이션 라벨에 수량 카운터(&quot;All 27&quot; / &quot;Stories 04&quot;)를 인라인으로 노출하고, 컬렉션·룩 단위를 &quot;Collection 01 / 01&quot;, &quot;Look 01 / 11&quot; 형식으로 인덱싱해 작은 SKU를 밀도 있게 편집한 방식이 눈에 띈다.",
+        "deckHtml": "여성 모터사이클 라이더 D2C 브랜드 Bécane Paris가 &quot;Technical, protective and unapologetically feminine&quot;을 내건 보호장구 라인을 에디토리얼형 구조로 풀어냈습니다. 네비게이션 라벨에 수량 카운터(&quot;All 27&quot; / &quot;Stories 04&quot;)를 인라인으로 노출하고, 컬렉션·룩 단위를 &quot;Collection 01 / 01&quot;, &quot;Look 01 / 11&quot; 형식으로 인덱싱해 작은 SKU를 밀도 있게 편집한 방식이 눈에 띕니다.",
         "facts": [
           {
             "label": "발행날짜",
@@ -2599,7 +2599,7 @@
           "CSS Values Level 5"
         ],
         "takeawayHtml": "Advanced Tree Counting: Mathematical Layouts With sibling-index() And sibling-count()",
-        "deckHtml": "CSS Values Level 5에 새로 들어온 sibling-index()와 sibling-count() 함수로, JS 없이 형제 요소 위치·총 개수를 calc() 안에서 바로 쓸 수 있다. Chrome 138·Safari 26.2에서 스테이블로 지원되며, 스태거 애니메이션·자동 균등 폭 탭·z-index 카드 부채꼴 같은 패턴을 CSS 한 줄로 처리한다.",
+        "deckHtml": "CSS Values Level 5에 새로 들어온 sibling-index()와 sibling-count() 함수로, JS 없이 형제 요소 위치·총 개수를 calc() 안에서 바로 쓸 수 있습니다. Chrome 138·Safari 26.2에서 스테이블로 지원되며, 스태거 애니메이션·자동 균등 폭 탭·z-index 카드 부채꼴 같은 패턴을 CSS 한 줄로 처리합니다.",
         "facts": [
           {
             "label": "발행날짜",
