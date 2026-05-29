@@ -944,6 +944,7 @@ def notion_report_items(report: dict[str, object], audience: str) -> list[dict[s
 
         item = {
             "number": str(issue.get("number") or len(items) + 1).zfill(2),
+            "articleSlug": str(issue.get("articleSlug") or "").strip(),
             "platform": str(issue.get("platform") or "CTTD"),
             "tags": tags,
             "area": str(issue.get("area") or issue.get("areaKey") or ""),
@@ -1335,13 +1336,17 @@ def is_develop_issue(category: str, tags: list[str]) -> bool:
     return bool(tokens.intersection(DEVELOP_DETECTION_KEYS))
 
 
-def magazine_href(report_path: Path, number: str, magazine_base_url: str | None) -> str:
+def magazine_href(report_path: Path, number: str, magazine_base_url: str | None, slug: str = "") -> str:
     base_url = (magazine_base_url or os.getenv("SITE_URL", os.getenv("MAGAZINE_BASE_URL", ""))).strip()
 
-    if base_url:
-        return f"{base_url.rstrip('/')}/articles/{number.zfill(2)}"
+    # 호별 slug(예: 2026-05-28-01)가 있으면 그걸로 링크해 다음 호 발행 후에도
+    # 정확한 글을 가리키게 한다. 없으면 번호 fallback(현재 호 기준).
+    path_segment = slug.strip() or number.zfill(2)
 
-    return f"../site/articles/{number.zfill(2)}"
+    if base_url:
+        return f"{base_url.rstrip('/')}/articles/{path_segment}"
+
+    return f"../site/articles/{path_segment}"
 
 
 def magazine_asset_href(asset_name: str, magazine_base_url: str | None) -> str:
@@ -1750,7 +1755,7 @@ def render_newsletter_item(
     title = f"[{platform}] {headline}" if headline else f"[{platform}]"
     raw_href = str(item.get("externalUrl") or "")
     if not raw_href:
-        raw_href = magazine_href(report_path, number, magazine_base_url)
+        raw_href = magazine_href(report_path, number, magazine_base_url, str(item.get("articleSlug") or ""))
     href = html.escape(raw_href, quote=True)
     tags = "".join(
         f'<span style="display:inline-block;margin:0 5px 5px 0;padding:4px 7px;{SITE_MARK_BACKGROUND};color:#111111;font-size:11px;line-height:1.2;font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">'
@@ -1974,7 +1979,7 @@ def newsletter_plain_text(
         tags = " ".join(f"#{tag}" for tag in item["tags"])  # type: ignore[index]
         href = str(item.get("externalUrl") or "")
         if not href:
-            href = magazine_href(report_path, str(item["number"]), magazine_base_url)
+            href = magazine_href(report_path, str(item["number"]), magazine_base_url, str(item.get("articleSlug") or ""))
         lines.append(f"{display_number:02d}. {item_title}")
         if area:
             lines.append(area)
@@ -2023,7 +2028,7 @@ def combined_newsletter_plain_text(
         item_title = f"[{platform}] {headline}" if headline else f"[{platform}]"
         href = str(item.get("externalUrl") or "")
         if not href:
-            href = magazine_href(report_path, str(item["number"]), magazine_base_url)
+            href = magazine_href(report_path, str(item["number"]), magazine_base_url, str(item.get("articleSlug") or ""))
         lines.append(f"{number:02d}. {item_title}")
         if description:
             lines.append(description)
