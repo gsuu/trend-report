@@ -5,7 +5,7 @@
 - 날짜: 2026-05-28
 - 태그: Mylow, AI쇼핑어시스턴트, 전환율, 이커머스
 - 국가: GLOBAL
-- 카테고리: service/ecommerce
+- 카테고리: ecommerce
 - 직무 태그: 웹서비스기획
 - 출처 유형: news
 - 출처: Retail Dive
@@ -40,7 +40,7 @@ DIY 수요가 Home Depot와 정면으로 겹치는 상황에서, Lowe's는 AI를
 - 날짜: 2026-05-13
 - 태그: 당근알바, 키즈케어, AI 공고 작성, 폼 IA
 - 국가: KR
-- 카테고리: service/platform
+- 카테고리: platform
 - 직무 태그: 웹서비스기획
 - 출처 유형: blog_opinion
 - 출처: 당근 팀블로그
@@ -74,7 +74,7 @@ DIY 수요가 Home Depot와 정면으로 겹치는 상황에서, Lowe's는 AI를
 - 날짜: 2025-06-02
 - 태그: 회원제, 멤버십, VVIP, O2O
 - 국가: KR
-- 카테고리: service/ecommerce
+- 카테고리: ecommerce
 - 직무 태그: 웹서비스기획
 - 출처 유형: news
 - 출처: 무신사 뉴스룸
@@ -107,7 +107,7 @@ DIY 수요가 Home Depot와 정면으로 겹치는 상황에서, Lowe's는 AI를
 - 날짜: 2025-11-14
 - 태그: 여성패션플랫폼, 29CM, 쉬인, W컨셉
 - 국가: KR
-- 카테고리: service/ecommerce
+- 카테고리: ecommerce
 - 직무 태그: 웹서비스기획
 - 출처 유형: news
 - 출처: 아시아경제
@@ -142,7 +142,7 @@ DIY 수요가 Home Depot와 정면으로 겹치는 상황에서, Lowe's는 AI를
 - 날짜: 2025-09-04
 - 태그: 올리브멤버스, 멤버십등급, 쿠폰팩, 체험형행사
 - 국가: KR
-- 카테고리: service/beauty
+- 카테고리: beauty
 - 직무 태그: 웹서비스기획
 - 출처 유형: news
 - 출처: CJ뉴스룸
@@ -176,7 +176,7 @@ DIY 수요가 Home Depot와 정면으로 겹치는 상황에서, Lowe's는 AI를
 - 날짜: 2026-04-22
 - 태그: 무신사 뷰티, 메가스토어, 직매입, 오프라인 리테일
 - 국가: KR
-- 카테고리: service/fashion
+- 카테고리: fashion
 - 직무 태그: 웹서비스기획
 - 출처 유형: news
 - 출처: 무신사 뉴스룸
@@ -210,7 +210,7 @@ DIY 수요가 Home Depot와 정면으로 겹치는 상황에서, Lowe's는 AI를
 - 날짜: 2026-05-21
 - 태그: 올리브영, K뷰티, 미국오프라인, OY멤버스
 - 국가: GLOBAL
-- 카테고리: service/beauty
+- 카테고리: beauty
 - 직무 태그: 웹서비스기획
 - 출처 유형: news
 - 출처: CJ뉴스룸
@@ -244,7 +244,7 @@ K뷰티에 대한 미국 소비자 관심이 온라인 구매를 넘어선 시�
 - 날짜: 2026-05-18
 - 태그: AI스토어프론트, 가상피팅, 디스커버리피드, Swap Storefront
 - 국가: GLOBAL
-- 카테고리: service/fashion
+- 카테고리: fashion
 - 직무 태그: 웹서비스기획
 - 출처 유형: news
 - 출처: Glossy
@@ -282,7 +282,7 @@ K뷰티에 대한 미국 소비자 관심이 온라인 구매를 넘어선 시�
 - 날짜: 2026-05-19
 - 태그: Neural Expressive, Gemini, 디자인 언어, 모션
 - 국가: GLOBAL
-- 카테고리: design
+- 카테고리: ai
 - 직무 태그: 웹디자인
 - 출처 유형: release_note
 - 출처: Google The Keyword
@@ -316,7 +316,7 @@ AI 스타일링 챗봇이나 이미지 검색을 이미 운영한다면 그 진�
 - 날짜: 2026-05-23
 - 태그: FacePay, 북크닉, 큐레이션, 이벤트페이지
 - 국가: KR
-- 카테고리: design/결제
+- 카테고리: insight
 - 직무 태그: 웹디자인
 - 출처 유형: reference
 - 출처: 토스피드
@@ -349,7 +349,7 @@ FacePay 기술을 스펙 나열이 아니라 결제가 끝난 뒤 무엇을 할 
 - 날짜: 2026-05-22
 - 태그: design-disposables, sunk-cost, low-fidelity, AI-design
 - 국가: GLOBAL
-- 카테고리: design
+- 카테고리: insight
 - 직무 태그: 웹디자인
 - 출처 유형: blog_opinion
 - 출처: Nielsen Norman Group
@@ -383,7 +383,7 @@ disposable을 의도적으로 유지한다는 건 완성도를 낮춘다는 뜻�
 - 날짜: 2026-05-22
 - 태그: design critique, design process, feedback loop, attribution
 - 국가: GLOBAL
-- 카테고리: design
+- 카테고리: insight
 - 직무 태그: 웹디자인
 - 출처 유형: guide
 - 출처: Nielsen Norman Group
@@ -417,7 +417,7 @@ PDP 개편처럼 디자이너·개발·기획이 한 팀으로 도는 리뷰를 
 - 날짜: 2026-05-14
 - 태그: 데이터 시각화, alluvial diagram, force-directed simulation, VOC
 - 국가: KR
-- 카테고리: design
+- 카테고리: insight
 - 직무 태그: 웹디자인
 - 출처 유형: blog_opinion
 - 출처: pxd story
@@ -450,7 +450,7 @@ VOC나 인터뷰 결과를 워드클라우드로 전달하면 글자 크기 조�
 - 날짜: 2026-05-28
 - 태그: 포트폴리오, 시퀀셜 네비게이션, 메이크업 아티스트, 패션 캠페인
 - 국가: GLOBAL
-- 카테고리: design/reference
+- 카테고리: global
 - 직무 태그: 웹디자인
 - 출처 유형: reference
 - 출처: Hover States
@@ -485,7 +485,7 @@ VOC나 인터뷰 결과를 워드클라우드로 전달하면 글자 크기 조�
 - 날짜: 2026-05-28
 - 태그: 럭셔리 에이전시, 다이얼 네비게이션, 포트폴리오 인덱싱, 캠페인 프로덕션
 - 국가: GLOBAL
-- 카테고리: design/reference
+- 카테고리: global
 - 직무 태그: 웹디자인
 - 출처 유형: reference
 - 출처: Any Given Moment
@@ -519,7 +519,7 @@ VOC나 인터뷰 결과를 워드클라우드로 전달하면 글자 크기 조�
 - 날짜: 2026-05-28
 - 태그: BNM Lunch, CSS 3D, 커스텀 폰트, 타이포그래피
 - 국가: GLOBAL
-- 카테고리: design/reference
+- 카테고리: global
 - 직무 태그: 웹디자인
 - 출처 유형: reference
 - 출처: Ballet National de Marseille
@@ -554,7 +554,7 @@ VOC나 인터뷰 결과를 워드클라우드로 전달하면 글자 크기 조�
 - 날짜: 2026-05-28
 - 태그: 인터랙티브 사이트맵, SVG 지도, 페스티벌 UX, 라인업 탐색
 - 국가: GLOBAL
-- 카테고리: design
+- 카테고리: global
 - 직무 태그: 웹디자인
 - 출처 유형: reference
 - 출처: LIDO Festival
@@ -588,7 +588,7 @@ SVG 도형 배치는 시각 위계를 곧 공간 위계로 만듭니다. Main St
 - 날짜: 2026-05-28
 - 태그: D2C, 여성모터사이클, 보호장구, 카운터UI
 - 국가: GLOBAL
-- 카테고리: design/상품상세
+- 카테고리: global
 - 직무 태그: 웹디자인
 - 출처 유형: reference
 - 출처: Bécane Paris
@@ -625,7 +625,7 @@ SVG 도형 배치는 시각 위계를 곧 공간 위계로 만듭니다. Main St
 - 날짜: 2026-05-21
 - 태그: CSS Reset, text-wrap, interpolate-size, iOS Safari
 - 국가: GLOBAL
-- 카테고리: HTML/CSS
+- 카테고리: html_css
 - 직무 태그: 웹DEV
 - 출처 유형: guide
 - 출처: Josh W. Comeau
@@ -661,7 +661,7 @@ SVG 도형 배치는 시각 위계를 곧 공간 위계로 만듭니다. Main St
 - 날짜: 2026-05-28
 - 태그: MWG, 접근성, WCAG, LLM 코드 생성
 - 국가: GLOBAL
-- 카테고리: Accessibility
+- 카테고리: web_accessibility
 - 직무 태그: 웹DEV
 - 출처 유형: blog_opinion
 - 출처: Adrian Roselli
@@ -695,7 +695,7 @@ LLM이 생성한 accordion·toast·dialog·dropdown·tabs가 코드베이스에 
 - 날짜: 2026-05-25
 - 태그: View Transitions, view-transition-class, pageswap, pagereveal
 - 국가: GLOBAL
-- 카테고리: HTML/CSS
+- 카테고리: html_css
 - 직무 태그: 웹DEV
 - 출처 유형: guide
 - 출처: CSS-Tricks
@@ -730,7 +730,7 @@ LLM이 생성한 accordion·toast·dialog·dropdown·tabs가 코드베이스에 
 - 날짜: 2026-05-21
 - 태그: sibling-index, sibling-count, CSS Values Level 5, 스태거 애니메이션
 - 국가: GLOBAL
-- 카테고리: HTML/CSS
+- 카테고리: html_css
 - 직무 태그: 웹DEV
 - 출처 유형: guide
 - 출처: Smashing Magazine
@@ -764,7 +764,7 @@ LLM이 생성한 accordion·toast·dialog·dropdown·tabs가 코드베이스에 
 - 날짜: 2026-05-21
 - 태그: CSS Anchor Positioning, Safari Technology Preview, VoiceOver, MathML
 - 국가: GLOBAL
-- 카테고리: HTML/CSS
+- 카테고리: update
 - 직무 태그: 웹DEV
 - 출처 유형: release_note
 - 출처: WebKit (Apple)
@@ -799,7 +799,7 @@ CSS Anchor Positioning은 Chrome 125·Firefox 147에 이어 이번 STP 244로 Sa
 - 날짜: 2026-05-18
 - 태그: Storybook, AI에이전트, TanStack, 디자인시스템
 - 국가: GLOBAL
-- 카테고리: Design Systems
+- 카테고리: tool
 - 직무 태그: 웹DEV
 - 출처 유형: release_note
 - 출처: Storybook Blog
@@ -834,7 +834,7 @@ Storybook이 없거나 셋업이 오래된 프로젝트는 AI 셋업으로 초�
 - 날짜: 2026-05-28
 - 태그: CSS Transitions, timing-function, prefers-reduced-motion, will-change
 - 국가: GLOBAL
-- 카테고리: DEV
+- 카테고리: html_css
 - 직무 태그: 웹DEV
 - 출처 유형: guide
 - 출처: Josh W. Comeau

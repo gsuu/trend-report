@@ -42,6 +42,7 @@ shortlist 항목 1건을 받아 `magazine-report.md`에 들어갈 매거진 문�
 1. **원문 직접 재확인** — 사전 추출된 사실이 있더라도 `WebFetch`로 원문을 다시 연다. 글쓰기 직전 한 번 더 본문을 읽는다. (이 단계 생략하면 일반론으로 빠진다)
 2. **메타데이터 작성** — [docs/magazine-writing-standard.md](../../docs/magazine-writing-standard.md) 공통 메타데이터 형식 그대로:
    - `날짜`, `태그`(원문 중심 2-4개), `국가`, `카테고리`, `직무 태그`, `출처 유형`, `출처`, `출처 URL`, `이미지`, `이미지 설명`, `요약`(1-2문장 plain summary)
+   - **`카테고리`는 소분류 키 하나만** — `service/`·`design/`·`dev/` 접두 금지(접두 붙으면 사이트 필터에서 etc로 떨어짐). 허용 키: Service `ecommerce/platform/fintech/fashion/beauty/ai/insight`, Design `ai/global/insight/design_system/tool/update`(해외 레퍼런스=global·관점/방법론=insight·AI디자인=ai), DEV `html_css/javascript/web_accessibility/performance/ai/tool/update/insight`. 마땅한 소분류가 없을 때만 `etc`.
 3. **본문 작성** — 카테고리별 형식 (2026-05-28 본문 간결화 기준: **인사이트 소제목 없음**, 요약 3~5불릿, 단락당 3문장 상한, 점검 질문 1개=한국 응용 통합, 모든 문장 경어체 `~입니다/~합니다`, 인용·관련 자료는 본문이 아니라 메타데이터 `관련 링크`):
    - SERVICE: `요약`(3~5불릿) + `매거진 인사이트` (인용 → 배경 단락 → 설계 판단 단락 → 응용·점검 단락으로 끝)
    - DESIGN: `요약`(3~5불릿) + `디자인 인사이트` (인용 → 참고 가치 단락 → 디자인 판단 단락 → 응용·점검 단락으로 끝)

@@ -103,6 +103,20 @@
 - 요약: 카드와 상세 상단에 노출되는 1-2문장
 ```
 
+### 카테고리 값 규칙 (필터 분류)
+
+`- 카테고리:`에는 **소분류 키 하나만** 적습니다. **`service/`·`design/`·`dev/` 같은 대분류 접두를 붙이지 않습니다**(대분류는 `## Service`/`## Design`/`## DEV` 섹션으로 이미 정해집니다). area 접두가 붙거나 허용 목록 밖이면 사이트 필터에서 전부 `etc`로 떨어집니다. 허용 키:
+
+| area | 허용 소분류 키 |
+|---|---|
+| Service | `ecommerce` `platform` `fintech` `fashion` `beauty` `ai` `insight` (없으면 `etc`) |
+| Design | `ai` `global` `insight` `design_system` `tool` `update` (없으면 `etc`) |
+| DEV | `html_css` `javascript` `web_accessibility` `performance` `ai` `tool` `update` `insight` (없으면 `etc`) |
+
+- 예: `- 카테고리: ecommerce` (O) / `- 카테고리: service/ecommerce` (X — 접두 금지) / `- 카테고리: design` (X — 소분류 아님 → etc).
+- Design 레퍼런스(해외 사이트·포트폴리오)는 `global`, 관점·방법론·케이스는 `insight`, AI 디자인은 `ai`로 분류합니다.
+- 파서는 `service/ecommerce`처럼 접두가 붙어도 `ecommerce`로 구제하지만, 처음부터 소분류 키만 적는 것이 원칙입니다.
+
 묶음 DEV 항목처럼 보조 원문이 있으면 `보조 출처 1`, `보조 출처 2`, `관련 링크 1` 형식으로 이어서 씁니다.
 
 ### 관련 링크(인용·관련 자료)는 메타데이터로 → 출처 영역 표시 (2026-05-28 결정)

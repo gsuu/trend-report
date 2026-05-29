@@ -1023,25 +1023,38 @@ CATEGORY_ALIASES = {
 }
 
 
+CATEGORY_AREA_PREFIX_TOKENS = {
+    "service", "services", "서비스", "web_service", "webservice",
+    "design", "디자인",
+    "dev", "develop", "웹dev",
+}
+
+
 def issue_category_key(issue: Issue) -> str:
     area_key = issue_area_key(issue)
     raw_category = issue.category or issue.meta.get("카테고리", "")
     normalized = normalize_category_token(raw_category)
-    canonical = CATEGORY_ALIASES.get(normalized, normalized)
 
-    if area_key == "service":
-        if canonical in SERVICE_ALLOWED_CATEGORIES:
+    allowed = {
+        "service": SERVICE_ALLOWED_CATEGORIES,
+        "design": DESIGN_ALLOWED_CATEGORIES,
+        "dev": DEV_ALLOWED_CATEGORIES,
+    }.get(area_key)
+    if allowed is None:
+        return area_key
+
+    # 후보: ① 원본 정규화 키 ② area 접두 제거(`service/ecommerce` → `ecommerce` 같은
+    # 작성 실수 구제). 허용 키에 처음 맞는 것을 반환하고, 없으면 etc.
+    candidates = [normalized]
+    parts = [part for part in normalized.split("_") if part]
+    if len(parts) > 1 and parts[0] in CATEGORY_AREA_PREFIX_TOKENS:
+        candidates.append("_".join(parts[1:]))
+
+    for candidate in candidates:
+        canonical = CATEGORY_ALIASES.get(candidate, candidate)
+        if canonical in allowed:
             return canonical
-        return "etc"
-    if area_key == "design":
-        if canonical in DESIGN_ALLOWED_CATEGORIES:
-            return canonical
-        return "etc"
-    if area_key == "dev":
-        if canonical in DEV_ALLOWED_CATEGORIES:
-            return canonical
-        return "etc"
-    return area_key
+    return "etc"
 
 
 def issue_category_label(issue: Issue) -> str:

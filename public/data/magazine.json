@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T03:48:58.006940+00:00",
+  "generatedAt": "2026-05-29T04:21:00.764766+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -10,8 +10,8 @@
         "platform": "Retail Dive",
         "areaKey": "service",
         "area": "Service",
-        "categoryKey": "etc",
-        "category": "etc",
+        "categoryKey": "ecommerce",
+        "category": "ecommerce",
         "sourceType": "news",
         "sourceTypeLabel": "기사/뉴스",
         "publicationDate": "2026-05-28",
@@ -39,7 +39,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "service/ecommerce"
+            "valueHtml": "ecommerce"
           },
           {
             "label": "직무 태그",
@@ -128,8 +128,8 @@
         "platform": "당근 팀블로그",
         "areaKey": "service",
         "area": "Service",
-        "categoryKey": "etc",
-        "category": "etc",
+        "categoryKey": "platform",
+        "category": "platform",
         "sourceType": "blog_opinion",
         "sourceTypeLabel": "블로그/오피니언",
         "publicationDate": "2026-05-28",
@@ -161,7 +161,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "service/platform"
+            "valueHtml": "platform"
           },
           {
             "label": "직무 태그",
@@ -250,8 +250,8 @@
         "platform": "무신사 뉴스룸",
         "areaKey": "service",
         "area": "Service",
-        "categoryKey": "etc",
-        "category": "etc",
+        "categoryKey": "ecommerce",
+        "category": "ecommerce",
         "sourceType": "news",
         "sourceTypeLabel": "기사/뉴스",
         "publicationDate": "2026-05-28",
@@ -283,7 +283,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "service/ecommerce"
+            "valueHtml": "ecommerce"
           },
           {
             "label": "직무 태그",
@@ -367,8 +367,8 @@
         "platform": "아시아경제",
         "areaKey": "service",
         "area": "Service",
-        "categoryKey": "etc",
-        "category": "etc",
+        "categoryKey": "ecommerce",
+        "category": "ecommerce",
         "sourceType": "news",
         "sourceTypeLabel": "기사/뉴스",
         "publicationDate": "2026-05-28",
@@ -400,7 +400,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "service/ecommerce"
+            "valueHtml": "ecommerce"
           },
           {
             "label": "직무 태그",
@@ -489,8 +489,8 @@
         "platform": "CJ뉴스룸",
         "areaKey": "service",
         "area": "Service",
-        "categoryKey": "etc",
-        "category": "etc",
+        "categoryKey": "beauty",
+        "category": "beauty",
         "sourceType": "news",
         "sourceTypeLabel": "기사/뉴스",
         "publicationDate": "2026-05-28",
@@ -522,7 +522,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "service/beauty"
+            "valueHtml": "beauty"
           },
           {
             "label": "직무 태그",
@@ -611,8 +611,8 @@
         "platform": "무신사 뉴스룸",
         "areaKey": "service",
         "area": "Service",
-        "categoryKey": "etc",
-        "category": "etc",
+        "categoryKey": "fashion",
+        "category": "fashion",
         "sourceType": "news",
         "sourceTypeLabel": "기사/뉴스",
         "publicationDate": "2026-05-28",
@@ -644,7 +644,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "service/fashion"
+            "valueHtml": "fashion"
           },
           {
             "label": "직무 태그",
@@ -733,8 +733,8 @@
         "platform": "CJ뉴스룸",
         "areaKey": "service",
         "area": "Service",
-        "categoryKey": "etc",
-        "category": "etc",
+        "categoryKey": "beauty",
+        "category": "beauty",
         "sourceType": "news",
         "sourceTypeLabel": "기사/뉴스",
         "publicationDate": "2026-05-28",
@@ -766,7 +766,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "service/beauty"
+            "valueHtml": "beauty"
           },
           {
             "label": "직무 태그",
@@ -855,8 +855,8 @@
         "platform": "Glossy",
         "areaKey": "service",
         "area": "Service",
-        "categoryKey": "etc",
-        "category": "etc",
+        "categoryKey": "fashion",
+        "category": "fashion",
         "sourceType": "news",
         "sourceTypeLabel": "기사/뉴스",
         "publicationDate": "2026-05-28",
@@ -888,7 +888,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "service/fashion"
+            "valueHtml": "fashion"
           },
           {
             "label": "직무 태그",
@@ -977,8 +977,8 @@
         "platform": "Google The Keyword",
         "areaKey": "design",
         "area": "Design",
-        "categoryKey": "etc",
-        "category": "ETC",
+        "categoryKey": "ai",
+        "category": "AI",
         "sourceType": "release_note",
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-05-28",
@@ -1010,7 +1010,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "design"
+            "valueHtml": "ai"
           },
           {
             "label": "직무 태그",
@@ -1099,8 +1099,8 @@
         "platform": "토스피드",
         "areaKey": "design",
         "area": "Design",
-        "categoryKey": "etc",
-        "category": "ETC",
+        "categoryKey": "insight",
+        "category": "INSIGHT",
         "sourceType": "reference",
         "sourceTypeLabel": "레퍼런스/쇼케이스",
         "publicationDate": "2026-05-28",
@@ -1132,7 +1132,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "design/결제"
+            "valueHtml": "insight"
           },
           {
             "label": "직무 태그",
@@ -1216,8 +1216,8 @@
         "platform": "Nielsen Norman Group",
         "areaKey": "design",
         "area": "Design",
-        "categoryKey": "etc",
-        "category": "ETC",
+        "categoryKey": "insight",
+        "category": "INSIGHT",
         "sourceType": "blog_opinion",
         "sourceTypeLabel": "블로그/오피니언",
         "publicationDate": "2026-05-28",
@@ -1249,7 +1249,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "design"
+            "valueHtml": "insight"
           },
           {
             "label": "직무 태그",
@@ -1338,8 +1338,8 @@
         "platform": "Nielsen Norman Group",
         "areaKey": "design",
         "area": "Design",
-        "categoryKey": "etc",
-        "category": "ETC",
+        "categoryKey": "insight",
+        "category": "INSIGHT",
         "sourceType": "guide",
         "sourceTypeLabel": "방법론/가이드",
         "publicationDate": "2026-05-28",
@@ -1371,7 +1371,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "design"
+            "valueHtml": "insight"
           },
           {
             "label": "직무 태그",
@@ -1460,8 +1460,8 @@
         "platform": "pxd story",
         "areaKey": "design",
         "area": "Design",
-        "categoryKey": "etc",
-        "category": "ETC",
+        "categoryKey": "insight",
+        "category": "INSIGHT",
         "sourceType": "blog_opinion",
         "sourceTypeLabel": "블로그/오피니언",
         "publicationDate": "2026-05-28",
@@ -1493,7 +1493,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "design"
+            "valueHtml": "insight"
           },
           {
             "label": "직무 태그",
@@ -1577,8 +1577,8 @@
         "platform": "Hover States",
         "areaKey": "design",
         "area": "Design",
-        "categoryKey": "etc",
-        "category": "ETC",
+        "categoryKey": "global",
+        "category": "global",
         "sourceType": "reference",
         "sourceTypeLabel": "레퍼런스/쇼케이스",
         "publicationDate": "2026-05-28",
@@ -1610,7 +1610,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "design/reference"
+            "valueHtml": "global"
           },
           {
             "label": "직무 태그",
@@ -1699,8 +1699,8 @@
         "platform": "Any Given Moment",
         "areaKey": "design",
         "area": "Design",
-        "categoryKey": "etc",
-        "category": "ETC",
+        "categoryKey": "global",
+        "category": "global",
         "sourceType": "reference",
         "sourceTypeLabel": "레퍼런스/쇼케이스",
         "publicationDate": "2026-05-28",
@@ -1732,7 +1732,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "design/reference"
+            "valueHtml": "global"
           },
           {
             "label": "직무 태그",
@@ -1821,8 +1821,8 @@
         "platform": "Ballet National de Marseille",
         "areaKey": "design",
         "area": "Design",
-        "categoryKey": "etc",
-        "category": "ETC",
+        "categoryKey": "global",
+        "category": "global",
         "sourceType": "reference",
         "sourceTypeLabel": "레퍼런스/쇼케이스",
         "publicationDate": "2026-05-28",
@@ -1854,7 +1854,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "design/reference"
+            "valueHtml": "global"
           },
           {
             "label": "직무 태그",
@@ -1943,8 +1943,8 @@
         "platform": "LIDO Festival",
         "areaKey": "design",
         "area": "Design",
-        "categoryKey": "etc",
-        "category": "ETC",
+        "categoryKey": "global",
+        "category": "global",
         "sourceType": "reference",
         "sourceTypeLabel": "레퍼런스/쇼케이스",
         "publicationDate": "2026-05-28",
@@ -1976,7 +1976,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "design"
+            "valueHtml": "global"
           },
           {
             "label": "직무 태그",
@@ -2065,8 +2065,8 @@
         "platform": "Bécane Paris",
         "areaKey": "design",
         "area": "Design",
-        "categoryKey": "etc",
-        "category": "ETC",
+        "categoryKey": "global",
+        "category": "global",
         "sourceType": "reference",
         "sourceTypeLabel": "레퍼런스/쇼케이스",
         "publicationDate": "2026-05-28",
@@ -2098,7 +2098,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "design/상품상세"
+            "valueHtml": "global"
           },
           {
             "label": "직무 태그",
@@ -2219,7 +2219,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "HTML/CSS"
+            "valueHtml": "html_css"
           },
           {
             "label": "직무 태그",
@@ -2356,7 +2356,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "Accessibility"
+            "valueHtml": "web_accessibility"
           },
           {
             "label": "직무 태그",
@@ -2483,7 +2483,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "HTML/CSS"
+            "valueHtml": "html_css"
           },
           {
             "label": "직무 태그",
@@ -2615,7 +2615,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "HTML/CSS"
+            "valueHtml": "html_css"
           },
           {
             "label": "직무 태그",
@@ -2709,8 +2709,8 @@
         "platform": "WebKit (Apple)",
         "areaKey": "dev",
         "area": "DEV",
-        "categoryKey": "html_css",
-        "category": "HTML/CSS",
+        "categoryKey": "update",
+        "category": "Update",
         "sourceType": "release_note",
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-05-28",
@@ -2742,7 +2742,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "HTML/CSS"
+            "valueHtml": "update"
           },
           {
             "label": "직무 태그",
@@ -2841,8 +2841,8 @@
         "platform": "Storybook Blog",
         "areaKey": "dev",
         "area": "DEV",
-        "categoryKey": "etc",
-        "category": "Etc",
+        "categoryKey": "tool",
+        "category": "Tool",
         "sourceType": "release_note",
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-05-28",
@@ -2874,7 +2874,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "Design Systems"
+            "valueHtml": "tool"
           },
           {
             "label": "직무 태그",
@@ -2973,8 +2973,8 @@
         "platform": "Josh W. Comeau",
         "areaKey": "dev",
         "area": "DEV",
-        "categoryKey": "etc",
-        "category": "Etc",
+        "categoryKey": "html_css",
+        "category": "HTML/CSS",
         "sourceType": "guide",
         "sourceTypeLabel": "방법론/가이드",
         "publicationDate": "2026-05-28",
@@ -3006,7 +3006,7 @@
           },
           {
             "label": "카테고리",
-            "valueHtml": "DEV"
+            "valueHtml": "html_css"
           },
           {
             "label": "직무 태그",
