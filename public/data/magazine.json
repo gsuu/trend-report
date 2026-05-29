@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T02:02:06.011421+00:00",
+  "generatedAt": "2026-05-29T03:48:58.006940+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -1952,8 +1952,8 @@
         "route": "/articles/2026-05-28-17",
         "href": "/articles/2026-05-28-17",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-05-28-17",
-        "image": "",
-        "imageCaption": "LIDO 페스티벌 공식 인터랙티브 사이트맵 페이지 스크린샷",
+        "image": "https://www.lidofestival.co.uk/uploads/images/logo/_1200x630_crop_center-center_82_none/lido-logo-2.png?mtime=1775562615",
+        "imageCaption": "LIDO Festival 공식 OG 이미지 (브랜드 로고)",
         "tags": [
           "인터랙티브 사이트맵",
           "SVG 지도",
@@ -1985,10 +1985,6 @@
           {
             "label": "출처",
             "valueHtml": "LIDO Festival"
-          },
-          {
-            "label": "이미지 확보 메모",
-            "valueHtml": "siteplan.lidofestival.co.uk OG 이미지 미확인. 직접 접속 후 스크린샷 필요"
           }
         ],
         "sourceUrl": "https://siteplan.lidofestival.co.uk",

@@ -559,9 +559,8 @@ VOC나 인터뷰 결과를 워드클라우드로 전달하면 글자 크기 조�
 - 출처 유형: reference
 - 출처: LIDO Festival
 - 출처 URL: https://siteplan.lidofestival.co.uk
-- 이미지:
-- 이미지 설명: LIDO 페스티벌 공식 인터랙티브 사이트맵 페이지 스크린샷
-- 이미지 확보 메모: siteplan.lidofestival.co.uk OG 이미지 미확인. 직접 접속 후 스크린샷 필요
+- 이미지: https://www.lidofestival.co.uk/uploads/images/logo/_1200x630_crop_center-center_82_none/lido-logo-2.png?mtime=1775562615
+- 이미지 설명: LIDO Festival 공식 OG 이미지 (브랜드 로고)
 - 요약: 영국 LIDO 페스티벌이 라인업을 목록으로 나열하는 대신, 실제 공연장 SVG 배치도 위에서 무대를 클릭해 아티스트를 발견하게 만든 인터랙티브 사이트맵을 공개했습니다. 좌표 헤더(51° 32' 6.846'' N, 0° 2' 25.9044'' W)와 카운트다운 타이머가 공간 탐색의 맥락을 잡아줍니다.
 - 관련 링크 1: [케이스 출처] LIDO Festival — LIDO[2025]SITEMAP | https://siteplan.lidofestival.co.uk
 - 관련 링크 2: [결정 근거] Hover States — LIDO[2025]SITEMAP 선정 (인터랙티브 SVG 사이트맵, 좌표 헤더, 단계적 라인업 발견 UX) | https://siteplan.lidofestival.co.uk
