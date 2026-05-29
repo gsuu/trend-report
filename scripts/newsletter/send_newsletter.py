@@ -1760,18 +1760,15 @@ def render_newsletter_item(
     )
     description_html = ""
     if description:
+        # 제목뿐 아니라 설명(내용)에도 같은 글로 가는 링크를 건다.
         description_html = (
             '<div style="margin:6px 0 0;color:#555555;font-size:13px;line-height:1.55;'
             'font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">'
-            f"{inline_markdown_to_html(description)}</div>"
+            f'<a href="{href}" style="color:#555555;text-decoration:none;">'
+            f"{inline_markdown_to_html(description)}</a></div>"
         )
-    detail_summary_html = (
-        '<div style="margin:10px 0 0;padding:10px 0 0;border-top:1px solid #eeeeee;'
-        'color:#333333;font-size:13px;line-height:1.58;'
-        'font-family:Arial,Apple SD Gothic Neo,Malgun Gothic,sans-serif;">'
-        f'<a href="{href}" style="color:#111111;text-decoration:underline;text-underline-offset:3px;">더보기</a>'
-        '</div>'
-    )
+    # '더보기' 링크는 제거(제목이 이미 같은 글로 링크됨). 빈 블록으로 둔다.
+    detail_summary_html = ""
 
     category_html = ""
     if category:
@@ -1985,7 +1982,7 @@ def newsletter_plain_text(
             lines.append(description)
         detail_summary = str(item.get("detailSummary") or "").strip()
         if detail_summary:
-            lines.append(f"{detail_summary} 더보기: {href}")
+            lines.append(detail_summary)
         if tags:
             lines.append(tags)
         lines.append(href)
