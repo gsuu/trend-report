@@ -431,5 +431,19 @@
       "excludeTitlePatterns": ["Newsroom & Press Center"],
       "limit": 12
     }
+  ],
+  "stibeeArchives": [
+    {
+      "name": "노폴레터 (Notefolio)",
+      "url": "https://page.stibee.com/archives/75270/emails",
+      "archivePage": "https://page.stibee.com/archives/75270",
+      "category": "kr_design_newsletter",
+      "sourceRole": "reference",
+      "locale": "KR",
+      "topics": ["디자인 트렌드", "타이포그래피", "레퍼런스", "전시·팝업"],
+      "includeTitlePatterns": [],
+      "excludeTitlePatterns": ["\\(광고\\)"],
+      "limit": 8
+    }
   ]
 }

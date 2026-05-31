@@ -1,6 +1,18 @@
 {
   "feeds": [
     {
+      "name": "Trend A Word (Maily)",
+      "url": "https://maily.so/trendaword",
+      "rss": "https://maily.so/trendaword/feed",
+      "category": "trend_newsletter",
+      "sourceRole": "reference",
+      "locale": "KR",
+      "priority": "context",
+      "topics": ["trend", "consumer", "culture"],
+      "includeTitlePatterns": ["트렌드|소비|브랜드|마케팅|커머스|쇼핑|뷰티|패션|세대|Z세대|MZ|콘텐츠|서비스|앱|구독|리뉴얼|캠페인"],
+      "excludeTitlePatterns": ["채용|공지|이벤트 당첨|광고 문의"]
+    },
+    {
       "name": "신세계그룹 뉴스룸",
       "url": "https://www.shinsegaegroupnewsroom.com/",
       "rss": "https://www.shinsegaegroupnewsroom.com/feed/",
@@ -421,6 +433,22 @@
       "includeTitlePatterns": ["서비스|기획|PM|프로덕트|성장|리텐션|구독|고객|UX|커머스|전환"],
       "excludeLinkPatterns": ["#", "mailto:", "login", "signup"],
       "limit": 10
+    }
+  ],
+  "sitemaps": [
+    {
+      "name": "뉴닉 (NEWNEEK)",
+      "url": "https://newneek.co/sitemap/article-sitemap.xml",
+      "category": "trend_news",
+      "sourceRole": "reference",
+      "locale": "KR",
+      "priority": "context",
+      "topics": ["news", "trend", "policy"],
+      "includeLinkPatterns": ["newneek\\.co/@newneek/article/"],
+      "excludeLinkPatterns": [],
+      "includeTitlePatterns": ["커머스|쇼핑|소비|브랜드|마케팅|패션|뷰티|구독|멤버십|결제|배송|플랫폼|앱|서비스|트렌드|AI|인공지능|개인정보|규제|정책|이커머스|리뷰|광고"],
+      "excludeTitlePatterns": ["부고|인사이동|채용|날씨"],
+      "limit": 12
     }
   ]
 }

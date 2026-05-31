@@ -149,6 +149,49 @@ async function scrapePage(source, seenPreviousLinks) {
   }
 }
 
+async function fetchStibeeArchive(source, since, seenPreviousLinks) {
+  try {
+    const raw = await fetchText(source.url, FEED_TIMEOUT_MS, "CTTD Trend Report Stibee Archive Tracker");
+    let issues;
+    try {
+      issues = JSON.parse(raw);
+    } catch {
+      issues = [];
+    }
+    if (!Array.isArray(issues)) issues = [];
+    const candidates = issues
+      .filter((issue) => issue && issue.permanentLink && issue.subject)
+      .filter((issue) => !seenPreviousLinks.has(issue.permanentLink))
+      .filter((issue) => {
+        if (!issue.sentTime) return true;
+        const when = new Date(issue.sentTime);
+        return Number.isNaN(when.getTime()) ? true : when >= since;
+      })
+      .filter((issue) => {
+        const text = `${issue.subject} ${issue.previewText || ""}`;
+        return matchesAny(text, source.includeTitlePatterns || [])
+          && matchesNone(text, source.excludeTitlePatterns || []);
+      })
+      .sort((a, b) => String(b.sentTime || "").localeCompare(String(a.sentTime || "")))
+      .slice(0, source.limit || 8);
+
+    const articles = candidates.map((issue) => ({
+      title: cleanTitle(issue.subject),
+      link: issue.permanentLink,
+      pubDate: issue.sentTime || new Date().toUTCString(),
+      content: issue.previewText || "",
+      image: "",
+      valueTags: [],
+      scraped: true,
+      ...articleFields(source),
+    }));
+    return { articles, error: "" };
+  } catch (error) {
+    console.error(`Error fetching Stibee archive ${source.name}: ${error.message}`);
+    return { articles: [], error: error.message };
+  }
+}
+
 function sortArticles(a, b) {
   const roleOrder = { inspiration: 0, official: 1, reference: 2 };
   const localeOrder = { KR: 0, ko: 0, global: 1 };
@@ -191,6 +234,21 @@ async function main() {
     sourceResults.push({
       name: source.name,
       type: "page",
+      url: source.url,
+      status: result.error ? "error" : "ok",
+      count: result.articles.length,
+      error: result.error,
+    });
+  }
+
+  console.log("Reading Stibee newsletter archives...");
+  for (const source of sources.stibeeArchives || []) {
+    if (!source.url) continue;
+    const result = await fetchStibeeArchive(source, since, seenPreviousLinks);
+    articles.push(...result.articles);
+    sourceResults.push({
+      name: source.name,
+      type: "stibeeArchive",
       url: source.url,
       status: result.error ? "error" : "ok",
       count: result.articles.length,

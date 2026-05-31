@@ -7,6 +7,7 @@ import {
   PAGE_TIMEOUT_MS,
   articleContent,
   cleanTitle,
+  decodeHtml,
   extractAnchors,
   fetchArticleMeta,
   fetchText,
@@ -171,6 +172,63 @@ async function scrapePage(source, seenPreviousLinks) {
   }
 }
 
+function parseSitemapUrls(xml) {
+  const entries = [];
+  for (const match of xml.matchAll(/<url\b[^>]*>([\s\S]*?)<\/url>/gi)) {
+    const block = match[1];
+    const loc = block.match(/<loc>\s*([\s\S]*?)\s*<\/loc>/i)?.[1];
+    if (!loc) continue;
+    const lastmod = block.match(/<lastmod>\s*([\s\S]*?)\s*<\/lastmod>/i)?.[1] || "";
+    entries.push({ link: decodeHtml(loc), lastmod: lastmod.trim() });
+  }
+  return entries;
+}
+
+// 사이트맵(article-sitemap.xml)에서 최근 URL을 골라 본문 메타로 제목을 확보한다.
+// RSS도 SSR 링크 목록도 없는 SPA(예: 뉴닉) 대응. source.url은 <urlset> 사이트맵을 직접 가리킨다.
+async function fetchSitemap(source, since, seenPreviousLinks) {
+  try {
+    const xml = await fetchText(source.url, FEED_TIMEOUT_MS, "CTTD Trend Report SERVICE Sitemap Tracker");
+    const candidates = parseSitemapUrls(xml)
+      .filter((item) => matchesAny(item.link, source.includeLinkPatterns || []))
+      .filter((item) => matchesNone(item.link, source.excludeLinkPatterns || []))
+      .filter((item) => !seenPreviousLinks.has(item.link))
+      .filter((item) => {
+        if (!item.lastmod) return true;
+        const when = new Date(item.lastmod);
+        return Number.isNaN(when.getTime()) ? true : when >= since;
+      })
+      .sort((a, b) => String(b.lastmod || "").localeCompare(String(a.lastmod || "")))
+      .slice(0, source.limit || 12);
+
+    const articles = [];
+    for (const item of candidates) {
+      const meta = await fetchArticleMeta(item.link, {
+        userAgent: "CTTD Service Article Metadata Scraper",
+        textLimit: 700,
+      });
+      const title = cleanTitle(meta.title || "");
+      if (!title || isGenericTitle(title)) continue;
+      const text = `${title} ${meta.content || ""}`;
+      if (!matchesAny(text, source.includeTitlePatterns || [])) continue;
+      if (!matchesNone(text, source.excludeTitlePatterns || [])) continue;
+      articles.push({
+        title,
+        link: item.link,
+        pubDate: item.lastmod || new Date().toUTCString(),
+        content: meta.content || "",
+        image: meta.image || "",
+        scraped: true,
+        ...articleFields(source),
+      });
+    }
+    return { articles, error: "" };
+  } catch (error) {
+    console.error(`Error fetching sitemap ${source.name}: ${error.message}`);
+    return { articles: [], error: error.message };
+  }
+}
+
 function sortArticles(a, b) {
   const priorityOrder = { priority_commerce: 0, priority_platform: 1 };
   const roleOrder = { official: 0, reference: 1, discovery: 2 };
@@ -215,6 +273,21 @@ async function main() {
     sourceResults.push({
       name: source.name,
       type: "page",
+      url: source.url,
+      status: result.error ? "error" : "ok",
+      count: result.articles.length,
+      error: result.error,
+    });
+  }
+
+  console.log("Reading service sitemaps...");
+  for (const source of sources.sitemaps || []) {
+    if (!source.url) continue;
+    const result = await fetchSitemap(source, since, seenPreviousLinks);
+    articles.push(...result.articles);
+    sourceResults.push({
+      name: source.name,
+      type: "sitemap",
       url: source.url,
       status: result.error ? "error" : "ok",
       count: result.articles.length,
