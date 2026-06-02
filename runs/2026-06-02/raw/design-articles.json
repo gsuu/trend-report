@@ -1,0 +1,547 @@
+[
+  {
+    "title": "반도체·AI에 투자하는 국민참여형 국민성장펀드, 손실 20%까지 정부가 부담해요",
+    "link": "https://toss.im/tossfeed/article/money-policies-62",
+    "pubDate": "Thu, 21 May 2026 02:50:00 GMT",
+    "content": "소득공제 혜택까지 받아보세요",
+    "image": "",
+    "valueTags": [
+      "promotion_event_design",
+      "design_ai_workflow"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "결제는 가볍게, 영감은 가득히",
+    "link": "https://toss.im/tossfeed/article/booknic",
+    "pubDate": "Sat, 23 May 2026 07:25:00 GMT",
+    "content": "토스 FacePay와 영풍문고가 제안하는 ‘가벼운 영감’의 여정",
+    "image": "",
+    "valueTags": [
+      "korean_reference",
+      "ux_method"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "AX, 현장에서 구체적인 성과로 연결하려면… ‘산업AX KOREA 2026’ 개최",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40613&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Tue, 02 Jun 2026 01:13:01 GMT",
+    "content": "첨단(대표 이준원)이 오는 6월 16일(화) 서울 강남구 코엑스 3층 E홀에서 ‘산업AX KOREA 2026’을 개최한다. 이번 행사는 ‘AI Transformation, 산업의 판단 구조를 바꾸다’를 주제로 ...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260601105026239_6771.0.png",
+    "valueTags": [
+      "korean_reference",
+      "promotion_event_design",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "검색엔진은 우리 사이트를 어떻게 발견할까?",
+    "link": "https://pxdstory.tistory.com/1899",
+    "pubDate": "Thu, 21 May 2026 07:50:10 +0900",
+    "content": "들어가며 지난 편에서 프론트엔드 개발자가 왜 SEO를 챙겨야 하는지, 그리고 GEO라는 새로운 관점이 왜 필요해졌는지 이야기했어요. 이번 편에서는 좀 더 실전적인 이야기를 해볼게요. 검색엔진이 우리 사이트를 검색 결과에 보여주려면, 먼저 우리 사이트를 발견해야 하잖아요. 근데 이 \"발견\"이라는 과정이 생각보다 단순하지 않더라고요. SEO/GEO 분석 서비스를 만들면서 수많은 사이트를 들여다봤는데, 콘텐츠는 멀쩡한데 크롤러가 아예 접근을 못 하는 경우가 의외로 많았어요. 대기업 사이트에서도요. 이번 편에서는 검색엔진 크롤러가 우리 사이트를 발견하고 색인하는 과정을 프론트엔드 개발자 관점에서 풀어볼게요. 크롤링 → 인덱싱 → 랭킹, 이 흐름부터 잡자 검색엔진이 검색 결과를 보여주기까지는 크게 세 단계를 거쳐요. 크롤링(Crawling) — 크롤러가 웹을 돌아다니면서 페이지를 발견하고 수집하는 단계예요. 이때 크롤러는 링크를 따라가거나 sitemap을 참고해서 페이지를 찾아요. 인덱싱(Indexing) — 수집한 페이지의…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "Ey Studio avoided ‘gourmet’ trends for something more authentic to rebrand Italy’s most iconic panettonne",
+    "link": "https://www.itsnicethat.com/articles/ey-studio-alemagna-branding-project-010625",
+    "pubDate": "Tue, 02 Jun 2026 01:13:42 GMT",
+    "content": "In this refresh on the brands classic packaging, The Italian studio struck a balance between re-establishing the Milanese confectioners contemporary relevance and honouring the modernist heritage of a household name.",
+    "image": "https://admin.itsnicethat.com/images/eWiwWtWbQZ3euYAvPYD-LwYCOdY=/278578/width-1440/Post3.jpg",
+    "valueTags": [
+      "visual_trend",
+      "brand_expression",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "“I try to dream collectively”: Photographer Delali Ayivi on creative projects as catalysts for communities",
+    "link": "https://www.itsnicethat.com/articles/nicer-tuesdays-london-may-delali-ayivi-010626",
+    "pubDate": "Tue, 02 Jun 2026 01:13:42 GMT",
+    "content": "Delali Ayivi is a Togolese-German photographer based in London and Lomé, recognised for her work exploring identity and authentic storytelling, and in her Nicer Tuesdays talk she asked: who gets to decide what’s possible in art? She also reflected on how image-making has allowed her to question oversimplified, Western-framed stories often imposed on Togolese identities, as well as her creative journey from uploading photos to Facebook to a larger cultural platform. Thanks to EartH (Evolutionary Arts Hackney).",
+    "image": "https://www.itsnicethat.com/images/social.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference",
+      "ux_method"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/its-about-creating-something-genuine-respectful-and-caring-gemma-mahoney-on-her-brand-for-rise",
+    "pubDate": "Tue, 02 Jun 2026 01:13:24 GMT",
+    "content": "“This project has been an extraordinary undertaking in terms of its magnitude, scope and depth,” Melbourne-based designer Gemma Mahoney tells us about her extensive identity for online wellness and fitness platform Rise. “One of the biggest challenges came from the fact I was the designer and the client,” Mahoney details, “which was daunting, to say the least,” looking to create an online space that fosters supportive relationships to fitness and branding it simultaneously. “I found that my instincts played a sign…",
+    "image": "https://the-brandidentity.com/uploads/articles/2023/06/its-about-creating-something-genuine-respectful-and-caring-gemma-mahoney-on-her-brand-for-rise/GemmaMahoney-Rise-9.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "UX Conference August Announced (Aug 17",
+    "link": "https://www.nngroup.com/training/august/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Tue, 19 May 2026 06:52:05 +0000",
+    "content": "Take up to 5 in-depth training courses, teaching user experience best practices for successful design. Training focused on long-lasting skills for UX professionals. August 17 - August 28, 2026.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "AI Token Scarcity and Arcade Economics",
+    "link": "https://uxdesign.cc/ai-token-scarcity-and-arcade-economics-5d6c0f2df3b5?source=rss----138adf9c44c---4",
+    "pubDate": "Sun, 31 May 2026 12:22:00 GMT",
+    "content": "The rising cost of computing is prompting a reevaluation of designers' expectations. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Who is your content actually for?",
+    "link": "https://uxdesign.cc/who-is-your-content-actually-for-c9e40cca3d75?source=rss----138adf9c44c---4",
+    "pubDate": "Sun, 31 May 2026 12:22:00 GMT",
+    "content": "AI and SEO are converging. The combined pressure is reshaping how content gets made and read in ways that push the human reader further down the list of priorities. On a Tuesday morning in May 2024, Google quietly began rolling out AI Overviews to US users. The change looked small at face value: a paragraph of generated text now sat above the familiar list of blue links. The first viral reactions made the launch look like an embarrassment. Asked how to keep cheese from sliding off pizza, the Overview suggested add…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "YouTube is gonna auto-tag AI, and it makes me angry",
+    "link": "https://uxdesign.cc/youtube-is-gonna-auto-tag-ai-and-it-makes-me-angry-598bff827a68?source=rss----138adf9c44c---4",
+    "pubDate": "Sun, 31 May 2026 12:21:58 GMT",
+    "content": "So late to the party, so slimy, so angry. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "June Is For Exploring (2026 Wallpapers Edition)",
+    "link": "https://smashingmagazine.com/2026/05/desktop-wallpaper-calendars-june-2026/",
+    "pubDate": "Sun, 31 May 2026 08:00:00 GMT",
+    "content": "Let’s kick off June — and the beginning of summer — with some fresh inspiration! Artists and designers from across the globe once again tickled their creativity to welcome the new month with a new collection of desktop wallpapers. Enjoy!",
+    "image": "http://files.smashing.media/articles/desktop-wallpaper-calendars-june-2026/jun-26-drifting-into-june-preview-opt.png",
+    "valueTags": [
+      "visual_trend",
+      "commerce_design",
+      "commerce_campaign_design",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Your Prototype Is Not Being Honest With Your Users (And Here’s How To Fix It)",
+    "link": "https://smashingmagazine.com/2026/05/prototype-users-fix-protopie/",
+    "pubDate": "Mon, 25 May 2026 12:00:00 GMT",
+    "content": "There’s a moment in almost every usability session where a participant pauses at the login screen, types something, and glances up: checking whether they’re “doing it right.” That pause is a clear sign. They’ve already clocked that this isn’t a real app, and every data point collected after that moment is filtered through that awareness.",
+    "image": "http://files.smashing.media/articles/prototype-users-fix-protopie/prototype-users-fix-protopie.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "prototyping",
+      "ux_method"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "AI meets Sturgeon’s Law",
+    "link": "https://uxdesign.cc/ai-meets-sturgeons-law-21d17488fc48?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 01 Jun 2026 22:53:56 GMT",
+    "content": "Why does more content not mean more quality Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Foreman, guardian, team builder: all this is a box",
+    "link": "https://uxdesign.cc/foreman-guardian-team-builder-all-this-is-a-box-7d1119af30ba?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 01 Jun 2026 22:53:47 GMT",
+    "content": "On a moving company’s box, and the long reach of a few quiet decisions Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Can VR treat addiction?",
+    "link": "https://uxdesign.cc/can-vr-treat-addiction-da8b3d4d4357?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 01 Jun 2026 11:17:25 GMT",
+    "content": "Design challenges and limitations for VR addiction treatment Image created with AI tool ElevenLabs Addiction is a chronic, relapsing condition, and most people who struggle with it cycle through multiple rounds of treatment before achieving lasting recovery. However, stigma keeps many people from seeking care in the first place, and even those who do often relapse when they leave the therapist’s office and re-enter the world of bars, parties, casinos, and street corners where their habits were built. Some research…",
+    "image": "",
+    "valueTags": [
+      "look_and_feel",
+      "korean_uiux_case",
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Designing for AI, the permalink problem, vibe designing",
+    "link": "https://uxdesign.cc/designing-for-ai-the-permalink-problem-vibe-designing-5a13e857b6a3?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 01 Jun 2026 08:12:40 GMT",
+    "content": "Weekly curated resources for designers — thinkers and makers. “We have extraordinary capability and almost no shared conventions for handing it to people — no settled patterns, no agreed vocabulary (ambient, really? They’re just fancy Cron Jobs), half the tooling still being written as we use it, literally by the technology itself. The tools are remarkable; the ground under them is soft, shifting like a tech quicksand. That isn’t a complaint. It’s an invitation.” Designing for AI means designing like it’s 1999 → B…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Is your website ready for AI agents?",
+    "link": "https://uxdesign.cc/is-your-website-ready-for-ai-agents-84272a6a96c1?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 01 Jun 2026 08:10:07 GMT",
+    "content": "Your website just got ghosted by an AI agent and why accessibility is your new best friend. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "web_reference",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "How to Get Research Recommendations on the Roadmap",
+    "link": "https://www.nngroup.com/articles/research-recommendations-roadmap/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 29 May 2026 17:00:00 +0000",
+    "content": "To influence the roadmap: join planning early, learn constraints, tie research to PM metrics, and give clear recommendations at the right time.",
+    "image": "",
+    "valueTags": [
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "Using RAS to Guide UX Research Resource Allocation and Strategy",
+    "link": "https://www.nngroup.com/articles/ras-research-resource-allocation/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 29 May 2026 17:00:00 +0000",
+    "content": "RAS helps managers allocate resources based on actual impact, shifting focus from outputs to outcomes and enabling data-driven UX strategies.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "ux_method"
+    ],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "How to help people who don’t read discover new features",
+    "link": "https://uxdesign.cc/how-to-help-people-who-dont-read-discover-new-features-310f88fd76cb?source=rss----138adf9c44c---4",
+    "pubDate": "Fri, 29 May 2026 11:09:43 GMT",
+    "content": "Writing discovery and onboarding content for “another” new feature, but this time it’s actually gonna get read. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The Case for Design Disposables",
+    "link": "https://www.nngroup.com/articles/design-disposables/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 22 May 2026 17:00:00 +0000",
+    "content": "Design disposables are rough artifacts you make to think, not to deliver. Learn to tell them apart from deliverables and avoid the sunk-cost trap.",
+    "image": "",
+    "valueTags": [],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "Closing the Loop: What to Do After a Design Critique Ends",
+    "link": "https://www.nngroup.com/articles/after-design-critique/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+    "pubDate": "Fri, 22 May 2026 17:00:00 +0000",
+    "content": "Most designers invest in running critiques but skip the followup. That missing step is often why feedback culture breaks down.",
+    "image": "",
+    "valueTags": [],
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_research",
+    "topics": [
+      "UX Research",
+      "Usability",
+      "Interaction Design"
+    ]
+  },
+  {
+    "title": "Four Levels Of Customer Understanding",
+    "link": "https://smashingmagazine.com/2026/05/four-levels-customer-understanding/",
+    "pubDate": "Fri, 22 May 2026 13:00:00 GMT",
+    "content": "What people say, feel, think, and do are often very different things. To understand the underlying reasons for user behavior, it helps to look beyond the surface and explore hidden motivations, root causes, and the different layers of reality that shape how people act. Brought to you by Measuring UX Impact, **friendly video course on UX** and design patterns by Vitaly.",
+    "image": "http://files.smashing.media/articles/four-levels-customer-understanding/four-levels-customer-understanding.jpg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  }
+]
