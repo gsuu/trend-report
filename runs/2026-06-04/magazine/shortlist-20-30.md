@@ -3,7 +3,7 @@
 > 이 shortlist의 항목은 글쓰기 단계에서 4~7개로 임의 압축하지 않는다. 원문 부족·광고성·화면 미확인만 `수집했지만 제외한 것`으로 이동한다. 카테고리(SERVICE/DESIGN/DEV)는 한 풀에서 경쟁하지 않고 독립 선발한다.
 
 - 검증 통과: SERVICE 6 / DESIGN 18 / DEV 22
-- shortlist 선발: SERVICE 6 / DESIGN 18 / DEV 22 (합계 46)
+- shortlist 선발: SERVICE 5 / DESIGN 18 / DEV 23 (합계 46) — 우아한공방 RAG 챗봇 건은 'AX 전환 사례'로 DEV에 재분류(번호 02 유지)
 
 ---
 
@@ -25,7 +25,7 @@
 
 ### 2. 우아한공방의 새로운 동료, 시스템 맥락을 가진 챗봇서비스 개발기(feat. RAG)
 
-- **분류**: Service · 운영도구 · `웹서비스기획` · design_dev_reference · **P1**
+- **분류**: Dev · AX 전환 사례 · `웹DEV` · design_dev_reference · **P1**
 - **발행처**: 권현아·성민제 (우아한형제들) (2026-05-22)
 - **원문**: https://techblog.woowahan.com/26319/
 - **헤드라인**: 배민이 디자인시스템 지식을 RAG 챗봇으로 묶어 컴포넌트 질문에 답하게 했다

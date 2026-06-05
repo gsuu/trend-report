@@ -24,6 +24,7 @@ tools: Read, Bash, Edit
 3. **areaKey/categoryKey 정합성** — `public/data/magazine.json`과 Notion 데이터(있다면)의 `areaKey`, `categoryKey`, `area`, `category`가 같은 의미인지 확인한다.
 4. **article 번호와 route 연속성** — `magazine-report.md`의 article 번호가 끊김 없이 1, 2, 3…인지, JSON의 route가 같은 순서로 들어갔는지 확인한다.
 5. **카테고리 vs 본문 불일치** — Service 본문이 DEV 카테고리에, DEV 본문이 Design 카테고리에 들어가지 않았는지 확인한다.
+6. **지난 호 중복** — 이번 회차 글의 출처 URL이 지난 호에서 이미 발행된 적이 있는지 대조한다. `public/data/magazine.json`의 `report.issues`에서 이번 회차(`issueSlug`)가 아닌 발행분의 `sourceUrl`을 정규화(쿼리스트링 제거·끝 `/` 제거·소문자화)해 비교하고, 일치하면 어느 회차 몇 번과 겹치는지 호출자에게 보고한다. URL 대조는 `Bash`(python/jq)로 처리한다. 발행 전 마지막 안전망이므로 직접 삭제하지 말고 보고만 한다(중복 글을 뺄지·새 사실이 더해졌는지는 호출자·writer 판단).
 
 ## 작업 순서
 
@@ -43,6 +44,7 @@ tools: Read, Bash, Edit
 - article 번호 끊김 N건: (수정 완료/보고)
 - areaKey/categoryKey 불일치 N건: (수정 완료/보고)
 - DATA/API 제외 권고 N건:
+- 지난 호 중복 N건: (보고 — 회차·번호 명시)
 ```
 
 ## 금지

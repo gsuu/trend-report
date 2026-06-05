@@ -17,6 +17,8 @@
     "feedback:apply": "node scripts/feedback/apply_feedback.mjs",
     "feedback:score": "node scripts/feedback/score_priority.mjs",
     "magazine:export-json": "python scripts/magazine/export_json.py",
+    "images:fill": "python scripts/tracking/fill_missing_images.py",
+    "images:fill:shot": "python scripts/tracking/fill_missing_images.py --screenshot",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0"
   },
@@ -27,5 +29,8 @@
     "rss-parser": "^3.13.0",
     "vite": "^7.2.7",
     "vue": "^3.5.25"
+  },
+  "devDependencies": {
+    "playwright": "^1.60.0"
   }
 }

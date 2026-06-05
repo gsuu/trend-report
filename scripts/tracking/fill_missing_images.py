@@ -5,6 +5,7 @@ import argparse
 import html
 import json
 import re
+import subprocess
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Iterable
@@ -13,7 +14,17 @@ from urllib.parse import parse_qs, urlencode, urljoin, urlsplit
 from urllib.request import Request, urlopen
 
 
+import os
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+SCREENSHOT_SCRIPT = REPO_ROOT / "scripts" / "screenshot_fallback.mjs"
+THUMBNAIL_DIR = REPO_ROOT / "public" / "thumbnails"
+SITE_BASE_URL = os.getenv(
+    "SITE_URL", os.getenv("MAGAZINE_BASE_URL", "https://magazine.cttd.co.kr")
+).strip().rstrip("/")
+
 ISSUE_HEADING_PATTERN = re.compile(r"^#{3,4}\s+\d+(?:-\d+)?\.\s+")
+ISSUE_NUMBER_PATTERN = re.compile(r"^#{3,4}\s+(\d+(?:-\d+)?)\.\s+")
 APP_STORE_ID_PATTERN = re.compile(r"/id(\d+)")
 URL_PATTERN = re.compile(r"https?://[^\s)]+")
 USER_AGENT = "Mozilla/5.0 (compatible; trend-report-image-fill/1.0)"
@@ -110,6 +121,11 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Markdown 리포트/수집 파일의 빈 이미지 URL을 공식 출처 기준으로 채웁니다.")
     parser.add_argument("files", nargs="+", help="이미지를 채울 Markdown 파일")
     parser.add_argument("--dry-run", action="store_true", help="파일을 수정하지 않고 채울 수 있는 항목만 출력합니다.")
+    parser.add_argument(
+        "--screenshot",
+        action="store_true",
+        help="og:image·플랫폼 폴백이 모두 실패한 글은 원문 페이지 스크린샷으로 채웁니다(최후의 수단, Playwright 필요).",
+    )
     return parser.parse_args()
 
 
@@ -176,6 +192,47 @@ def resolve_image(url: str) -> str:
         return meta_image(url)
     except (OSError, UnicodeError, URLError, json.JSONDecodeError):
         return ""
+
+
+def issue_number(heading: str) -> str:
+    match = ISSUE_NUMBER_PATTERN.match(heading.strip())
+    return match.group(1) if match else ""
+
+
+def issue_slug_from_path(path: Path) -> str:
+    """runs/<date>/magazine/magazine-report.md → <date>. Empty if not a run report."""
+    parent = path.parent.parent if path.parent.name == "magazine" else path.parent
+    name = parent.name
+    return name if re.fullmatch(r"\d{4}-\d{2}-\d{2}", name) else ""
+
+
+def screenshot_image(url: str, article_id: str) -> str:
+    """Last-tier fallback: capture the source page as a card thumbnail.
+
+    Returns a site-root-relative path (/thumbnails/<id>.png) on success, else "".
+    Requires the source URL and a stable article_id for the cached filename.
+    """
+    if not url or not article_id or not SCREENSHOT_SCRIPT.exists():
+        return ""
+    THUMBNAIL_DIR.mkdir(parents=True, exist_ok=True)
+    out_path = THUMBNAIL_DIR / f"{article_id}.png"
+    # Absolute URL so og:image / newsletter emails (which need absolute src) work too.
+    site_path = f"{SITE_BASE_URL}/thumbnails/{article_id}.png"
+    if out_path.exists() and out_path.stat().st_size > 0:
+        return site_path  # cached — reuse, do not re-capture
+    try:
+        result = subprocess.run(
+            ["node", str(SCREENSHOT_SCRIPT), url, str(out_path)],
+            cwd=str(REPO_ROOT),
+            capture_output=True,
+            text=True,
+            timeout=60,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return ""
+    if result.returncode == 0 and out_path.exists() and out_path.stat().st_size > 0:
+        return site_path
+    return ""
 
 
 def is_issue_heading(line: str) -> bool:
@@ -340,6 +397,15 @@ def fill_caption(block: list[str]) -> list[str]:
     return next_block
 
 
+def mark_screenshot_caption(block: list[str]) -> list[str]:
+    next_block = list(block)
+    for index, line in metadata_lines(next_block):
+        if line.strip().startswith("- 이미지 설명:"):
+            next_block[index] = f"- 이미지 설명: {platform_name(next_block[0])} 원문 페이지 화면 캡처"
+            break
+    return next_block
+
+
 def has_blank_caption(block: list[str]) -> bool:
     for _, line in metadata_lines(block):
         if line.strip().startswith("- 이미지 설명:") and not field_value(line, "이미지 설명"):
@@ -347,20 +413,33 @@ def has_blank_caption(block: list[str]) -> bool:
     return False
 
 
-def block_has_image(block: list[str]) -> bool:
-    for _, line in metadata_lines(block):
-        value = field_value(line, "이미지")
-        if value:
+def is_placeholder_value(value: str) -> bool:
+    """Treat '(없음)' / '(원문 대표 이미지 없음)' / '(none)' style markers as empty."""
+    stripped = value.strip()
+    if not stripped:
+        return True
+    if stripped.startswith("(") and stripped.endswith(")"):
+        inner = stripped[1:-1]
+        if "없음" in inner or inner.lower() in {"none", "n/a", "없음"}:
             return True
     return False
 
 
-def update_file(path: Path, dry_run: bool) -> tuple[int, int, list[str]]:
+def block_has_image(block: list[str]) -> bool:
+    for _, line in metadata_lines(block):
+        value = field_value(line, "이미지")
+        if value and not is_placeholder_value(value):
+            return True
+    return False
+
+
+def update_file(path: Path, dry_run: bool, screenshot: bool = False) -> tuple[int, int, list[str]]:
     lines = path.read_text(encoding="utf-8").splitlines()
     replacements: dict[tuple[int, int], list[str]] = {}
     filled_images = 0
     filled_captions = 0
     unresolved: list[str] = []
+    issue_slug = issue_slug_from_path(path)
 
     for start, end in issue_blocks(lines):
         block = lines[start:end]
@@ -380,8 +459,24 @@ def update_file(path: Path, dry_run: bool) -> tuple[int, int, list[str]]:
                     related_service = label
                 break
 
+        # Last tier: capture the primary source page as a screenshot. Only when
+        # every real-image source above failed, and only if --screenshot is set.
+        screenshotted = False
+        if not image_url and screenshot and not dry_run:
+            primary = next((u for u, label in urls if label == "primary"), "")
+            number = issue_number(block[0]) if block else ""
+            article_id = f"{issue_slug}-{number}" if issue_slug and number else ""
+            shot = screenshot_image(primary, article_id)
+            if shot:
+                image_url = shot
+                related_service = ""
+                screenshotted = True
+
         if image_url:
-            replacements[(start, end)] = fill_block(block, image_url, related_service)
+            filled = fill_block(block, image_url, related_service)
+            if screenshotted:
+                filled = mark_screenshot_caption(filled)
+            replacements[(start, end)] = filled
             filled_images += 1
         else:
             unresolved.append(block[0].strip())
@@ -407,7 +502,7 @@ def main() -> None:
 
     for value in args.files:
         path = Path(value)
-        filled, captions, unresolved = update_file(path, args.dry_run)
+        filled, captions, unresolved = update_file(path, args.dry_run, args.screenshot)
         total_filled += filled
         total_captions += captions
         total_unresolved.extend(f"{path}: {heading}" for heading in unresolved)

@@ -491,7 +491,7 @@ PWA 설치 버튼은 지금까지 브라우저마다 진입점 위치와 시점�
 - 출처 유형: release_note
 - 출처: React Doctor
 - 출처 URL: https://www.react.doctor/
-- 이미지: 
+- 이미지: https://www.react.doctor/opengraph-image
 - 이미지 설명: 이미지 확보 메모: 원문(react.doctor) OG 이미지 없음. 공식 사이트 스크린샷 또는 CLI 실행 결과 화면으로 대체 가능.
 - 요약: React 코드베이스를 스캔해 보안·성능·정확성·아키텍처 영역에서 0~100 점수로 진단하는 도구. Claude Code, Codex, Cursor 등 50개 이상 코딩 에이전트에 React 품질 규칙을 심는 설치 명령도 제공한다.
 

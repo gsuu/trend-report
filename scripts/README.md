@@ -12,7 +12,7 @@
 - `fetch_dev_news.mjs`: `ai-tf` DEV 생성 로직과 같은 RSS 소스/최근 7일 기준으로 DEV 후보만 수집해 `runs/YYYY-MM-DD/dev-articles.json`과 `dev-fetch-report.json`을 만듭니다. 요약과 발행 판단은 자동 API가 아니라 AI 편집 단계에서 `docs/dev-digest-agent-prompt.md`를 읽고 수행합니다.
 - `tracking_utils.mjs`: SERVICE/DESIGN/DEV 수집 스크립트가 공유하는 날짜 계산, HTML 정리, 메타데이터 추출, 이미지 URL 판정, 링크 중복 제거 유틸입니다.
 - `collect_materials.mjs`: SERVICE/DESIGN/DEV 수집 자료를 합쳐 대분류, 카테고리, 직무 태그, 출처 유형으로 정리합니다. `tracking-data.json`, `editorial-brief.md`만 만듭니다. 제목 보정, 채택/보류/제외 판단, 매거진 본문 작성은 하지 않습니다.
-- `fill_missing_images.py`: 최종 원고 작성 뒤 빈 공식 이미지 URL을 보강할 때만 사용합니다.
+- `fill_missing_images.py`: 최종 원고 작성 뒤 빈 공식 이미지 URL을 보강할 때만 사용합니다. 해상 순서는 `og:image → twitter:image → 플랫폼 도메인 폴백 → 앱스토어 이미지`. `--screenshot`를 주면 이 모두가 실패한 글에 한해 원문 페이지를 캡처해 `public/thumbnails/<id>.png`로 저장하고 절대 URL로 채웁니다(최후의 수단, Playwright 필요 / 출처 URL이 없는 글은 빈칸 유지). npm: `npm run images:fill -- <report.md>` / `npm run images:fill:shot -- <report.md>`. 캡처 스크립트는 `scripts/screenshot_fallback.mjs`.
 - `new_collection.py`: 카테고리별 관찰 포인트, DEV 필수 수집 원칙, 확장 출처 체크리스트입니다. 자동 실행 파일이 아니라 AI 편집 단계에서 읽는 기준 파일입니다.
 
 ## notion

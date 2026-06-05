@@ -154,6 +154,7 @@ QA 기준:
 - 화면 구현이나 접근성 QA와 연결되지 않는 DATA/API 글은 제외 후보로 돌립니다.
 - `public/data/magazine.json`과 Notion 데이터의 `areaKey`, `categoryKey`, `area`, `category`가 같은 의미인지 확인합니다.
 - article 번호와 route가 연속되는지 확인합니다.
+- **지난 호 중복** — 이번 회차 글의 출처 URL이 `public/data/magazine.json`의 다른 `issueSlug` 발행분에 이미 있는지 정규화 후 대조해 보고합니다(발행 전 마지막 안전망). 1차 차단은 Phase 4 `target-classifier`(이미 발행한 원문은 `exclude`/`stale_topic`)에서 합니다.
 
 ## 10. Notion 동기화 에이전트
 

@@ -593,8 +593,8 @@ SVG 도형 배치는 시각 위계를 곧 공간 위계로 만듭니다. Main St
 - 출처 유형: reference
 - 출처: Bécane Paris
 - 출처 URL: https://becaneparis.com
-- 이미지:
-- 이미지 설명: Bécane Paris 공식 사이트 제품 화면 (Shopify CDN 호스팅)
+- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-05-28-18.png
+- 이미지 설명: 서비스 원문 페이지 화면 캡처
 - 이미지 확보 메모: Shopify CDN URL 불완전. becaneparis.com 직접 접속 후 제품 이미지 URL 추출 필요
 - 요약: 여성 모터사이클 라이더 D2C 브랜드 Bécane Paris가 "Technical, protective and unapologetically feminine"을 내건 보호장구 라인을 에디토리얼형 구조로 풀어냈습니다. 네비게이션 라벨에 수량 카운터("All 27" / "Stories 04")를 인라인으로 노출하고, 컬렉션·룩 단위를 "Collection 01 / 01", "Look 01 / 11" 형식으로 인덱싱해 작은 SKU를 밀도 있게 편집한 방식이 눈에 띕니다.
 - 관련 링크 1: [케이스 출처] Bécane Paris 공식 사이트 | https://becaneparis.com

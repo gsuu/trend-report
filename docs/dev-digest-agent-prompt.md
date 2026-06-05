@@ -18,7 +18,7 @@ DEV 4축 스코프 (분포는 강제하지 않음, 호당 수량 할당 없음):
 1. 웹 표준·브라우저·CSS·HTML — HTML/CSS/JavaScript, Web Platform API, Chrome/Safari/Firefox/WebKit 릴리즈, Baseline/Interop, Web Component
 2. 접근성·성능·한국어 타이포 — ARIA/WCAG/스크린 리더/키보드, Core Web Vitals(LCP/CLS/INP), 한글 폰트·IME·Pretendard·세로쓰기
 3. 디자인 시스템·핸드오프 자동화 — 토큰, Storybook, shadcn/ui, Figma Dev Mode/Variables/Code Connect, Style Dictionary 등 디자인-코드 파이프라인
-4. AI 코딩·도구 (실측 케이스만) — Claude Code, Cursor, Copilot, v0, MCP 등이 프론트엔드 워크플로우에 실제로 끼어드는 케이스. 가격·SMB/Enterprise plan·도메인 패키지·행사 announcement는 채택 금지
+4. AI 코딩·도구 + AX 전환 현장 적용기 (실측 케이스만) — (a) Claude Code, Cursor, Copilot, v0, MCP 등이 프론트엔드 워크플로우에 실제로 끼어드는 케이스, (b) 개발/디자인 조직이 AI를 실무·제품에 끌어들인 **AX(AI Transformation) 전환 적용기** — RAG 챗봇·사내 코파일럿·AI 코드리뷰 도입 등 *우리 팀도 이렇게 AI를 붙여볼 수 있겠다*는 레퍼런스가 되는 글. 통과 컷은 **도입 맥락·의사결정·시행착오·트레이드오프가 본문에 실제로 있는 현장 적용기**. 단순 기술 소개, "RAG란 무엇인가" 개론, 모델 벤치마크·자랑글, 가격·SMB/Enterprise plan·도메인 패키지·행사 announcement는 채택 금지. 디자인 시스템·핸드오프·프론트 접점이 함께 있으면 가산.
 
 좋은 글이면 한 축에 5편이 몰려도 모두 싣고, 그날 좋은 글이 없는 축은 비웁니다. 균형을 위해 약한 글을 끼워넣지 마세요. 다만 호 끝에 "이번 호 DEV 4축 분포"를 1줄로 보고하고, 같은 축이 2주 연속 0건이면 채널 점검 트리거를 남기세요.
 
@@ -66,7 +66,7 @@ DEV 4축 스코프 (분포는 강제하지 않음, 호당 수량 할당 없음):
 - `Accessibility`
 - `Performance`
 - `Design Systems`
-- `AI Tools`
+- `AI Tools` (AI 코딩 도구 + AX 전환 현장 적용기. JSON categoryKey는 `ai`)
 - `Others`
 
 각 항목은 [매거진 원고 출력 기준](magazine-writing-standard.md#dev-출력-형식)의 DEV 섹션 형식을 따르세요. 메타데이터, `요약`, `매거진 인사이트`의 세부 작성 기준도 이 문서를 단일 기준으로 봅니다.
