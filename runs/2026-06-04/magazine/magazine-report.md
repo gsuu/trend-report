@@ -484,7 +484,7 @@ CTTD가 패션·뷰티 클라이언트의 디자인시스템을 Figma로 운영�
 - 출처 유형: release_note
 - 출처: web.dev (Rachel Andrew)
 - 출처 URL: https://web.dev/blog/web-platform-05-2026?hl=en
-- 이미지: (글쓰기 단계 확보 필요)
+- 이미지: https://web.dev/static/blog/web-platform-05-2026/hero.png
 - 이미지 설명: web.dev 월간 웹 플랫폼 업데이트 글 대표 이미지
 - 요약: web.dev가 5월 안정판에 들어온 웹 플랫폼 신기능을 한 번에 정리했습니다. `:open` 의사 클래스가 Safari 26.5에서 Baseline에 올랐고, Chrome 148이 `container-type` 없이 이름만으로 쓰는 컨테이너 쿼리와 `video`·`audio`의 `loading="lazy"`를 더했습니다.
 - 관련 링크 1: [공식 사양] MDN — :open pseudo-class | https://developer.mozilla.org/en-US/docs/Web/CSS/:open
@@ -550,7 +550,7 @@ CTTD가 패션·뷰티 클라이언트의 디자인시스템을 Figma로 운영�
 - 출처 유형: guide
 - 출처: CSS-Tricks (Temani Afif)
 - 출처 URL: https://css-tricks.com/the-state-of-css-centering-in-2026/
-- 이미지: https://css-tricks.com/wp-content/uploads/2026/05/css-centering-2026.png
+- 이미지: https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/centered-text.webp
 - 이미지 설명: CSS-Tricks 본문 대표 이미지 (가운데 정렬 패턴 비교)
 - 요약: Temani Afif가 2026년 시점의 CSS 가운데 정렬을 디스플레이별 정렬·안전 정렬·앵커 정렬로 다시 정리하면서, `inset: 0` + `place-self: center`가 기존 `transform` 기반 absolute 정렬을 대체하는 현대적 패턴이라고 짚습니다.
 - 관련 링크 1: [합성 데모] CodePen — Centering in CSS 패턴 모음 | https://codepen.io/t_afif
@@ -616,7 +616,7 @@ CTTD가 패션·뷰티 클라이언트의 디자인시스템을 Figma로 운영�
 - 출처 유형: reference
 - 출처: Geoff Graham, CSS-Tricks Almanac
 - 출처 URL: https://css-tricks.com/almanac/properties/o/offset-path/
-- 이미지: https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/04/almanac-thumb.png
+- 이미지: https://i0.wp.com/css-tricks.com/wp-content/uploads/2016/07/funky-path.png
 - 이미지 설명: CSS-Tricks Almanac 대표 이미지
 - 요약: offset-path는 애니메이션 시 요소가 따라갈 이동 경로를 정의하는 속성으로, 과거 motion-path를 spec에서 motion-* → offset-*로 개명한 것입니다. 지정 값은 path()·shape()·url()·기본 도형·none이 있지만 실제로 동작하는 건 사실상 path()와 none뿐이고, offset-distance·offset-rotate·offset-anchor와 함께 JS 없이 경로 애니메이션을 구동합니다.
 - 관련 링크 1: [합성 데모] CSS-Tricks — offset-path path() 경로 애니메이션 데모 | https://css-tricks.com/almanac/properties/o/offset-path/
@@ -648,7 +648,7 @@ CTTD가 패션·뷰티 클라이언트의 디자인시스템을 Figma로 운영�
 - 출처 유형: reference
 - 출처: Declan Chidlow, CSS-Tricks Almanac
 - 출처 URL: https://css-tricks.com/almanac/rules/c/custom-media/
-- 이미지: https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/04/almanac-thumb.png
+- 이미지: https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/12/default-social-css-tricks.png
 - 이미지 설명: CSS-Tricks Almanac 대표 이미지
 - 요약: @custom-media는 미디어 쿼리에 이름을 붙여 브레이크포인트를 재사용 가능한 별칭으로 만드는 at-rule로, @custom-media --tablet (min-width: 768px)처럼 정의하고 @media (--tablet)로 씁니다. Media Queries Level 5 사양이지만 브라우저 지원이 제한적이고 matchMedia()로 접근할 수 없어, PostCSS Custom Media 플러그인으로 빌드 시 펼쳐 쓰는 보완이 현실적입니다.
 - 관련 링크 1: [합성 데모] CSS-Tricks Almanac — @custom-media 사용 예시 | https://css-tricks.com/almanac/rules/c/custom-media/
@@ -680,7 +680,7 @@ CTTD가 패션·뷰티 클라이언트의 디자인시스템을 Figma로 운영�
 - 출처 유형: release_note
 - 출처: Angular Team (blog.angular.dev)
 - 출처 URL: https://blog.angular.dev/announcing-angular-v22-c52bb83a4664
-- 이미지: (원문 대표 이미지 미확보)
+- 이미지: https://miro.medium.com/v2/resize:fit:1200/1*BWXZ-BI0XDmcOKySWZgHPA.jpeg
 - 이미지 설명: Angular 공식 블로그 v22 발표 글
 - 요약: Angular v22가 Signal Forms와 12개 UI 패턴 접근성 프리미티브 Angular Aria를 프로덕션 상태로 올리고, 신규 앱 기본 변경 감지를 `OnPush`로 바꿨습니다. 두 API가 서로 연동되고 테스트 하니스까지 포함돼 폼·접근성 컴포넌트 설계의 참고 레퍼런스가 됐습니다.
 - 관련 링크 1: [공식 사양] Angular Signal Forms 가이드 | https://angular.dev/guide/forms/signal-forms
@@ -745,7 +745,7 @@ Sätteri로 1분 이상 단축된 사례는 매력적이지만 remark·rehype �
 - 출처 유형: blog_opinion
 - 출처: CSS-Tricks (Preethi)
 - 출처 URL: https://css-tricks.com/revealing-text-with-css-letter-spacing/
-- 이미지: (글쓰기 단계 확보 필요)
+- 이미지: https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/revealing-text.webp
 - 이미지 설명: 원문 대표 이미지 미확보
 - 요약: Preethi가 `letter-spacing` 음수값과 `color: transparent`만으로 글자를 겹쳐 숨겼다가 드러내는 텍스트 리빌 모션을, 별도 JS 없이 CSS 전환·애니메이션으로 구현하는 타이포 기법을 정리했습니다.
 - 관련 링크 1: [합성 데모] CSS-Tricks 본문 내 CodePen 예제 — Preethi | https://css-tricks.com/revealing-text-with-css-letter-spacing/
@@ -780,7 +780,7 @@ Sätteri로 1분 이상 단축된 사례는 매력적이지만 remark·rehype �
 - 출처 유형: blog_opinion
 - 출처: CSS-Tricks (Daniel Schwarz)
 - 출처 URL: https://css-tricks.com/whats-important-12/
-- 이미지: (글쓰기 단계 확보 필요)
+- 이미지: https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/05/Screenshot-2026-05-28-at-2.31.26-PM.png
 - 이미지 설명: 원문 대표 이미지 미확보
 - 요약: Daniel Schwarz가 폼 체크마크를 스타일링하는 `::checkmark`, 사라진 HTML `anchor` 속성을 data 속성·`attr()`로 대체하는 방법, `clip-path`를 대체하는 `border-shape`+`shape()`, Firefox 151의 컨테이너 스타일 쿼리 Baseline 진입 등 최신 CSS 동향을 한 묶음으로 짚었습니다.
 - 관련 링크 1: [합성 데모] CSS Tip — border-shape 예제 (Temani Afif) | https://css-tip.com/
@@ -815,7 +815,7 @@ Sätteri로 1분 이상 단축된 사례는 매력적이지만 remark·rehype �
 - 출처 유형: blog_opinion
 - 출처: CSS-Tricks (Zell Liew)
 - 출처 URL: https://css-tricks.com/astro-markdown-component-utility-any-framework/
-- 이미지: (글쓰기 단계 확보 필요)
+- 이미지: https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/02/markdown-astro.webp
 - 이미지 설명: 원문 대표 이미지 미확보
 - 요약: Zell Liew가 `@splendidlabz/utils`의 markdown 유틸로, 들여쓴 콘텐츠를 코드 블록으로 오인하는 표준 라이브러리 문제 없이 마크다운을 HTML로 렌더하는 패턴을 Astro 슬롯과 Svelte·기타 프레임워크에 맞춰 정리했습니다.
 - 관련 링크 1: [합성 데모] Splendid Labz 문서 — markdown 유틸 | https://splendidlabz.com/
@@ -848,7 +848,7 @@ Sätteri로 1분 이상 단축된 사례는 매력적이지만 remark·rehype �
 - 출처 유형: release_note
 - 출처: Layoutit / PolyCSS
 - 출처 URL: https://polycss.com/
-- 이미지: (글쓰기 단계 확보 필요)
+- 이미지: https://polycss.com/polycss-github.png
 - 이미지 설명: PolyCSS 공식 사이트 데모 화면
 - 요약: PolyCSS는 WebGL·canvas 없이 3D 메시의 각 폴리곤을 `transform: matrix3d(...)`가 적용된 DOM 요소로 그려, 3D 레이어링을 브라우저 컴포지터에 맡기는 라이브러리입니다. 폴리곤마다 클릭 핸들러·CSS 클래스·트랜지션을 붙일 수 있어 3D 표면을 일반 DOM처럼 다룹니다.
 - 관련 링크 1: [합성 데모] PolyCSS 공식 데모 — poly-scene / poly-mesh 커스텀 엘리먼트 | https://polycss.com/
@@ -881,7 +881,7 @@ Sätteri로 1분 이상 단축된 사례는 매력적이지만 remark·rehype �
 - 출처 유형: release_note
 - 출처: GitHub Changelog
 - 출처 URL: https://github.blog/changelog/2026-06-02-expanded-technical-preview-availability-for-the-github-copilot-app
-- 이미지: (글쓰기 단계 확보 필요)
+- 이미지: https://github.blog/wp-content/uploads/2026/07/599715325-5025a589-c7c5-4452-a8af-5052d8d348b1.jpg
 - 이미지 설명: GitHub Copilot 데스크톱 앱 기술 프리뷰 안내
 - 요약: GitHub Copilot 데스크톱 앱 기술 프리뷰가 Pro·Pro+·Business·Enterprise 고객 전체로 확대됐고, 이슈·PR·프롬프트에서 세션을 시작해 git worktree·브랜치별로 격리된 병렬 에이전트 세션을 돌립니다. Canvases라는 사람·에이전트 양방향 작업 표면에서 에이전트 진행을 편집·재배치·재지정할 수 있습니다.
 - 관련 링크 1: [합성 데모] GitHub Copilot app — Canvases 작업 표면 소개 | https://github.blog/changelog/2026-06-02-expanded-technical-preview-availability-for-the-github-copilot-app

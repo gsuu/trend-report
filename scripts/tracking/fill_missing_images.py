@@ -414,15 +414,17 @@ def has_blank_caption(block: list[str]) -> bool:
 
 
 def is_placeholder_value(value: str) -> bool:
-    """Treat '(없음)' / '(원문 대표 이미지 없음)' / '(none)' style markers as empty."""
+    """A real image value must be an http(s) URL or a site-root path.
+
+    Anything else — '(없음)', '(글쓰기 단계 확보 필요)', '(원문 대표 이미지 미확보)',
+    free-text notes — is treated as missing so the resolver/screenshot fills it.
+    """
     stripped = value.strip()
     if not stripped:
         return True
-    if stripped.startswith("(") and stripped.endswith(")"):
-        inner = stripped[1:-1]
-        if "없음" in inner or inner.lower() in {"none", "n/a", "없음"}:
-            return True
-    return False
+    if stripped.startswith(("http://", "https://", "/")):
+        return False
+    return True
 
 
 def block_has_image(block: list[str]) -> bool:

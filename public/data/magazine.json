@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T07:00:04.275250+00:00",
+  "generatedAt": "2026-06-05T07:56:06.113498+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -1812,7 +1812,7 @@
         "route": "/articles/2026-06-04-28",
         "href": "/articles/2026-06-04-28",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-04-28",
-        "image": "(글쓰기 단계 확보 필요)",
+        "image": "https://web.dev/static/blog/web-platform-05-2026/hero.png",
         "imageCaption": "web.dev 월간 웹 플랫폼 업데이트 글 대표 이미지",
         "tags": [
           "웹 플랫폼",
@@ -2061,7 +2061,7 @@
         "route": "/articles/2026-06-04-31",
         "href": "/articles/2026-06-04-31",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-04-31",
-        "image": "https://css-tricks.com/wp-content/uploads/2026/05/css-centering-2026.png",
+        "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/centered-text.webp",
         "imageCaption": "CSS-Tricks 본문 대표 이미지 (가운데 정렬 패턴 비교)",
         "tags": [
           "CSS 정렬",
@@ -2325,7 +2325,7 @@
         "route": "/articles/2026-06-04-35",
         "href": "/articles/2026-06-04-35",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-04-35",
-        "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/04/almanac-thumb.png",
+        "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2016/07/funky-path.png",
         "imageCaption": "CSS-Tricks Almanac 대표 이미지",
         "tags": [
           "offset-path",
@@ -2452,7 +2452,7 @@
         "route": "/articles/2026-06-04-36",
         "href": "/articles/2026-06-04-36",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-04-36",
-        "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/04/almanac-thumb.png",
+        "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/12/default-social-css-tricks.png",
         "imageCaption": "CSS-Tricks Almanac 대표 이미지",
         "tags": [
           "@custom-media",
@@ -2579,7 +2579,7 @@
         "route": "/articles/2026-06-04-37",
         "href": "/articles/2026-06-04-37",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-04-37",
-        "image": "(원문 대표 이미지 미확보)",
+        "image": "https://miro.medium.com/v2/resize:fit:1200/1*BWXZ-BI0XDmcOKySWZgHPA.jpeg",
         "imageCaption": "Angular 공식 블로그 v22 발표 글",
         "tags": [
           "Angular v22",
@@ -2838,7 +2838,7 @@
         "route": "/articles/2026-06-04-40",
         "href": "/articles/2026-06-04-40",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-04-40",
-        "image": "(글쓰기 단계 확보 필요)",
+        "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/revealing-text.webp",
         "imageCaption": "원문 대표 이미지 미확보",
         "tags": [
           "letter-spacing",
@@ -2970,7 +2970,7 @@
         "route": "/articles/2026-06-04-41",
         "href": "/articles/2026-06-04-41",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-04-41",
-        "image": "(글쓰기 단계 확보 필요)",
+        "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/05/Screenshot-2026-05-28-at-2.31.26-PM.png",
         "imageCaption": "원문 대표 이미지 미확보",
         "tags": [
           "12:",
@@ -3102,7 +3102,7 @@
         "route": "/articles/2026-06-04-42",
         "href": "/articles/2026-06-04-42",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-04-42",
-        "image": "(글쓰기 단계 확보 필요)",
+        "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/02/markdown-astro.webp",
         "imageCaption": "원문 대표 이미지 미확보",
         "tags": [
           "Astro",
@@ -3234,7 +3234,7 @@
         "route": "/articles/2026-06-04-43",
         "href": "/articles/2026-06-04-43",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-04-43",
-        "image": "(글쓰기 단계 확보 필요)",
+        "image": "https://polycss.com/polycss-github.png",
         "imageCaption": "PolyCSS 공식 사이트 데모 화면",
         "tags": [
           "PolyCSS",
@@ -3366,7 +3366,7 @@
         "route": "/articles/2026-06-04-44",
         "href": "/articles/2026-06-04-44",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-04-44",
-        "image": "(글쓰기 단계 확보 필요)",
+        "image": "https://github.blog/wp-content/uploads/2026/07/599715325-5025a589-c7c5-4452-a8af-5052d8d348b1.jpg",
         "imageCaption": "GitHub Copilot 데스크톱 앱 기술 프리뷰 안내",
         "tags": [
           "GitHub Copilot",
