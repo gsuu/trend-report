@@ -48,7 +48,7 @@ mkdir -p runs/_team-board
 
 `Agent` tool로 5개 동시. 각 prompt:
 - CTTD 컨텍스트 (`cttd_company_context.md`, `cttd_persona_focus.md`)
-- 본인 명세 위치 (`.claude/agents/{role}.md`)
+- 본인 명세 위치 (scout 3 + inspiration-scout → `.claude/agents/scouts/{role}.md`, trend-hunter → `.claude/agents/market/trend-hunter.md`)
 - 출력 파일 (`runs/YYYY-MM-DD/team-board/{role}.md`)
 - 누적 메모리 (`runs/_team-board/history.json` — 있으면 중복 회피)
 - senior_voice.json (있으면 시니어 wish를 우선 키워드로)
@@ -136,12 +136,11 @@ mkdir -p runs/_team-board
 |---|---|---|
 | **reference-team** | *주 1회 팀 수집* — 5 영역 한 풀 | `team-board/digest.md` |
 | reference-scout (개별 3 카테고리) | 단독 카테고리 깊이 호출 | `references/{cat}.md` |
-| trend-radar | 단독 트렌드 호출 | `trend-radar.md` |
 | senior-meeting | 산출물 *평가* | `senior-meeting/` |
 | tf-leader | 외부 *비교* | `tf-leader-report.md` |
 | cttd-council | *방향 결정* 5명 합의 | `council/final-plan.md` |
 
-reference-team은 *주간 정기 수집*. reference-scout/trend-radar 개별 호출은 *특정 영역 깊이 작업*에 사용. 둘 다 살아있음.
+reference-team은 *주간 정기 수집*. reference-scout 개별 호출은 *특정 영역 깊이 작업*에 사용. 한국 트렌드(trend-hunter)는 별도 trend-radar 스킬을 폐지하고 reference-team의 한 멤버로만 수집한다.
 
 ## 절대 규칙
 

@@ -38,7 +38,7 @@ npm run tracking:prepare
 
 `tracking-data.json`의 후보 전체를 `source-verifier` 서브에이전트에 넘긴다. 후보 수가 많으면 카테고리(service/design/dev)별로 나눠 **병렬** 호출 (한 메시지에 여러 Agent 호출).
 
-source-verifier는 각 후보의 최종 기준 원문을 직접 열어 구체 사실 3개+를 추출하고 `검증 통과` / `원문 부족` / `원문 미확인`으로 판정한 결과를 `runs/YYYY-MM-DD/magazine/source-verification.json`에 저장해 돌려준다. 상세는 `.claude/agents/source-verifier.md`.
+source-verifier는 각 후보의 최종 기준 원문을 직접 열어 구체 사실 3개+를 추출하고 `검증 통과` / `원문 부족` / `원문 미확인`으로 판정한 결과를 `runs/YYYY-MM-DD/magazine/source-verification.json`에 저장해 돌려준다. 상세는 `.claude/agents/pipeline/source-verifier.md`.
 
 ## Phase 4: 타겟 적합성 분류 (target-classifier 에이전트 위임)
 

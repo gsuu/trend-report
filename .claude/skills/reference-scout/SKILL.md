@@ -106,7 +106,7 @@ runs/YYYY-MM-DD/references/
 └── dev.md       (TODO)
 ```
 
-각 파일은 카테고리별 에이전트의 출력 형식(`.claude/agents/{category}-reference-scout.md` 참조)을 따른다.
+각 파일은 카테고리별 에이전트의 출력 형식(`.claude/agents/scouts/{category}-reference-scout.md` 참조)을 따른다.
 
 ## 절대 규칙
 
