@@ -1,0 +1,228 @@
+[
+  {
+    "id": "우아한공방의 새로운 동료, 시스템 맥락을 가진 챗봇서비스 개발기(feat. RAG)",
+    "title": "우아한공방의 새로운 동료, 시스템 맥락을 가진 챗봇서비스 개발기(feat. RAG)",
+    "discovery_source": "우아한형제들 기술블로그",
+    "final_source_url": "https://techblog.woowahan.com/26319/",
+    "publisher": "권현아·성민제 (우아한형제들)",
+    "published_at": "2026-05-22",
+    "concrete_facts": [
+      "AWS Bedrock Knowledge Bases 기반 RAG + Amazon OpenSearch Serverless(AOSS) 벡터 스토어, DynamoDB 채팅 히스토리로 디자인시스템 챗봇 구성",
+      "`|ComponentName|` 형식의 메타데이터 필터링과 질문 유형별 동적 topK 튜닝으로 검색 범위를 제어",
+      "AWS Bedrock Guardrails로 인물 평가·디자인시스템 무관 질문을 차단하되, 비동기 SSE 스트리밍을 위해 output 검사를 비활성 처리",
+      "Storybook Composition 통합과 독립 npm 패키지 배포로 웹 챗봇·MCP 간 응답 품질을 통일"
+    ],
+    "image_url": "https://techblog.woowahan.com/wp-content/uploads/2026/05/%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%9C%EC%8A%A4%ED%85%9C%ED%94%8C%EB%9E%AB%ED%8F%BC%ED%8C%80-%EC%9B%B9%ED%8C%8C%ED%8A%B8-750x422.png",
+    "image_source": "우아한형제들 기술블로그 본문 대표 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "무신사, 'AI 트렌드 큐레이션' 도입··· \"사용자가 찾기 전에 AI가 답한다\"",
+    "title": "무신사, 'AI 트렌드 큐레이션' 도입··· \"사용자가 찾기 전에 AI가 답한다\"",
+    "discovery_source": "무신사 뉴스룸",
+    "final_source_url": "https://newsroom.musinsa.com/newsroom-menu/2026-0603",
+    "publisher": "무신사",
+    "published_at": "2026-06-03",
+    "concrete_facts": [
+      "'AI 트렌드 큐레이션' 도입 — AI가 플랫폼 외부 실시간 글로벌 트렌드를 선제 분석해 상품과 연결하는 '선제적 큐레이션 모델'",
+      "캡·야구모자 등 모자 카테고리에 우선 적용, 향후 패션·뷰티 전 영역으로 확대 예정",
+      "프론트엔드는 단순 필터 버튼 UI로 노출하되 백엔드에서 복잡한 AI 데이터 파이프라인을 운영하는 구조",
+      "구매 의도 미확정 방문객의 이탈률 감소와 CTR 상승을 목표로 함"
+    ],
+    "image_url": "https://cdn.prod.website-files.com/60a3629e04f26d12caff56df/6a20d4f62e7bdeb4682eda35_PR.png",
+    "image_source": "무신사 뉴스룸 보도자료 대표 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "\"여름 침구 미리 산다\" 오늘의집, 여름 맞이 '냉감 패브릭' 검색량 급증",
+    "title": "\"여름 침구 미리 산다\" 오늘의집, 여름 맞이 '냉감 패브릭' 검색량 급증",
+    "discovery_source": "오늘의집 뉴스룸",
+    "final_source_url": "https://ohstory.io/press/pressrelease/15350",
+    "publisher": "오늘의집(버킷플레이스)",
+    "published_at": "2026-05-27",
+    "concrete_facts": [
+      "4월 대비 5월 검색량: '냉감이불세트' 249%, '냉감패드' 234%, '냉감이불' 220% 증가",
+      "'쿨매트' 전월 대비 153% 증가, 모달·시어서커 등 특정 소재 여름이불 검색도 상승",
+      "5월 3주간 검색어 데이터 기준 분석, 기상청은 6~8월 기온이 평년보다 높을 확률 약 50~60%로 전망",
+      "오늘의집 layer의 60수 순면 냉감이불세트 출시"
+    ],
+    "image_url": "https://ohstory.io/wp-content/uploads/2026/05/%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%9E%90%EB%A3%8C-%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-layer%EC%9D%98-%EB%83%89%EA%B0%90%EC%9D%B4%EB%B6%88%EC%84%B8%ED%8A%B8.jpg",
+    "image_source": "오늘의집 뉴스룸 보도자료 대표 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "6/11 11시 아쿠아필드",
+    "title": "6/11 11시 아쿠아필드",
+    "discovery_source": "SSG 이벤트",
+    "final_source_url": "https://event.ssg.com/eventDetail.ssg?nevntId=1000000022764&domainSiteNo=6005&_mpop=new",
+    "publisher": "SSG.COM",
+    "published_at": "",
+    "concrete_facts": [],
+    "image_url": "https://sstatic.ssgcdn.com/promo/event/ssg/202606/48481113459307739.jpg",
+    "image_source": "SSG 이벤트 배너",
+    "verdict": "원문 부족",
+    "exclusion_reason": "쓱라이브 이용권 판촉 이벤트 페이지로, 서비스 화면·플로우·정책 변화 증거 없는 프로모션."
+  },
+  {
+    "id": "CJ 이재현 회장, 美 전역 돌며 북미 전략 점검 \"미국인 일상에 건강한 K 라이프스타일 전파할 것\"",
+    "title": "CJ 이재현 회장, 美 전역 돌며 북미 전략 점검 \"미국인 일상에 건강한 K 라이프스타일 전파할 것\"",
+    "discovery_source": "CJ News Room",
+    "final_source_url": "https://cjnews.cj.net/cj-이재현-회장-美-전역-돌며-북미-전략-점검-미국인/",
+    "publisher": "CJ News Room",
+    "published_at": "2026-05",
+    "concrete_facts": [],
+    "image_url": "https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJNEWSROOM_thumbnail_03.jpg",
+    "image_source": "CJ News Room 썸네일",
+    "verdict": "원문 부족",
+    "exclusion_reason": "회장 현장경영·그룹 전략 홍보성 기사로 웹/앱 서비스 화면·플로우 증거 없음."
+  },
+  {
+    "id": "美 '더CJ컵' 찾은 이재현 회장, \"K라이프스타일 플랫폼 통해 글로벌 사업 확대 가속\"",
+    "title": "美 '더CJ컵' 찾은 이재현 회장, \"K라이프스타일 플랫폼 통해 글로벌 사업 확대 가속\"",
+    "discovery_source": "CJ News Room",
+    "final_source_url": "https://cjnews.cj.net/美-더cj컵-찾은-이재현-회장-k라이프스타일-플랫/",
+    "publisher": "CJ News Room",
+    "published_at": "2026-05",
+    "concrete_facts": [],
+    "image_url": "https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJNEWSROOM_thumbnail_0525.jpg",
+    "image_source": "CJ News Room 썸네일",
+    "verdict": "원문 부족",
+    "exclusion_reason": "골프대회 현장 방문·그룹 전략 발언 중심 홍보 기사로 서비스 증거 없음."
+  },
+  {
+    "id": "CJ제일제당, 냉동김밥 전 공정 자동화로 글로벌 표준을 만들다",
+    "title": "CJ제일제당, 냉동김밥 전 공정 자동화로 글로벌 표준을 만들다",
+    "discovery_source": "CJ News Room",
+    "final_source_url": "https://cjnews.cj.net/cj제일제당-냉동김밥-전-공정-자동화로-글로벌-표준을/",
+    "publisher": "CJ News Room",
+    "published_at": "2026-05",
+    "concrete_facts": [],
+    "image_url": "https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJSTORY_cheiljedang_20260522_thumbnail.jpg",
+    "image_source": "CJ News Room 썸네일",
+    "verdict": "원문 부족",
+    "exclusion_reason": "식품 제조 공정 자동화 기사로 웹기획/커머스 서비스와 무관."
+  },
+  {
+    "id": "올리브영 미국 패서디나점 완벽 가이드: 매장·브랜드·온라인몰·멤버십 총정리",
+    "title": "올리브영 미국 패서디나점 완벽 가이드: 매장·브랜드·온라인몰·멤버십 총정리",
+    "discovery_source": "CJ News Room",
+    "final_source_url": "https://cjnews.cj.net/올리브영-미국-패서디나점-완벽-가이드-매장·브랜/",
+    "publisher": "CJ News Room (올리브영)",
+    "published_at": "2026-05-21",
+    "concrete_facts": [
+      "올리브영 첫 미국 매장과 함께 '미국 전용 독자 온라인몰' 론칭 — 배송 영업일 3~5일, $35 이상 무료배송, 캘리포니아 블루밍턴 물류센터 운영",
+      "멤버십 'OY멤버스' 도입 — Friend(가입)/Green($350 이상)/Gold($600 이상) 등급, 가입·생일 혜택과 포인트 적립, 7월부터 매월 첫 7일 'O.Y 멤버스 위크' 운영",
+      "스킨스캔 셀프 진단 기기, '더 뷰티 랩' 무료 스킨케어 레슨, 하프 접객 등 매장 서비스 운영",
+      "약 400개 브랜드·5,000개 이상 상품(80% 이상 K뷰티·K웰니스)을 8개 카테고리로 구성"
+    ],
+    "image_url": "https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJSTORY_oliveyoung_20260521_01.jpg",
+    "image_source": "CJ News Room 올리브영 본문 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "Fashion Briefing: How fashion schools are adopting AI and addressing the 'critical thinking gap' among new graduates",
+    "title": "Fashion Briefing: How fashion schools are adopting AI and addressing the 'critical thinking gap' among new graduates",
+    "discovery_source": "Glossy",
+    "final_source_url": "https://www.glossy.co/fashion/fashion-briefing-how-fashion-schools-are-adopting-ai-and-addressing-the-critical-thinking-gap-among-new-graduates/",
+    "publisher": "Glossy",
+    "published_at": "2026-06-04",
+    "concrete_facts": [],
+    "image_url": "https://www.glossy.co/wp-content/uploads/sites/4/2026/06/meet-your-people-spring-2026.jpg",
+    "image_source": "Glossy 기사 대표 이미지",
+    "verdict": "원문 부족",
+    "exclusion_reason": "패션 교육기관의 AI 도입·비판적 사고 격차를 다룬 교육 트렌드 인터뷰로, 커머스 서비스 화면·플로우 증거 없음."
+  },
+  {
+    "id": "Wellness Briefing: How top brands are training employees to use AI tools, plus news",
+    "title": "Wellness Briefing: How top brands are training employees to use AI tools, plus news",
+    "discovery_source": "Glossy",
+    "final_source_url": "https://www.glossy.co/beauty/wellness/how-top-brands-are-training-employees-to-use-ai-tools-plus-news/",
+    "publisher": "Glossy",
+    "published_at": "2026-06-03",
+    "concrete_facts": [],
+    "image_url": "https://www.glossy.co/wp-content/uploads/sites/4/2026/06/pexels-tara-winstead-8386434.jpg",
+    "image_source": "Glossy 기사 대표 이미지",
+    "verdict": "원문 부족",
+    "exclusion_reason": "브랜드 직원 AI 교육 전략을 다룬 일반 트렌드 요약으로, 서비스 제품·화면 변화 증거 없음."
+  },
+  {
+    "id": "CJ온스타일, 대화형 AI 쇼핑 유입 4배↑... AI 기반 커머스 확장",
+    "title": "CJ온스타일, 대화형 AI 쇼핑 유입 4배↑... AI 기반 커머스 확장",
+    "discovery_source": "CJ News Room",
+    "final_source_url": "https://cjnews.cj.net/cj온스타일-대화형-ai-쇼핑-유입-4배↑-ai-기반-커머스-확장/",
+    "publisher": "CJ News Room (CJ온스타일)",
+    "published_at": "2026-05-28",
+    "concrete_facts": [
+      "ChatGPT Apps에 CJ온스타일 전용 앱을 5월 15일 출시 — 대화로 상품 탐색→방송 정보 확인→공식 앱 연결 플로우",
+      "5월 1~25일 대화형 AI 유입이 1월 동기간 대비 4배 이상 증가",
+      "AI 최적화 상품 60만 개 완료(연내 100만 개 목표), 자체 앱 AI 추천 유입은 1~4월 전년比 37% 증가",
+      "생성형 엔진 최적화(GEO) 전략으로 고객 검색 표현·리뷰 데이터를 반영해 상품 데이터를 재구성"
+    ],
+    "image_url": "https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJ%EC%98%A8%EC%8A%A4%ED%83%80%EC%9D%BC-%EC%99%BC%EC%AA%BD%EB%B6%80%ED%84%B0-%EC%B1%97GPT-%EB%82%B4-CJ%EC%98%A8%EC%8A%A4%ED%83%80%EC%9D%BC-%EC%83%81%ED%92%88-%EC%B6%94%EC%B2%9C-%ED%99%94%EB%A9%B4-%EC%9E%90%EC%B2%B4-%EC%95%B1-%EB%82%B4-AI-%EA%B8%B0%EB%B0%98-%EA%B0%9C%EC%9D%B8%ED%99%94-%EC%B6%94%EC%B2%9C-%ED%99%94%EB%A9%B4-1024x633.png",
+    "image_source": "CJ News Room CJ온스타일 본문 이미지 (ChatGPT 내 상품추천 화면)",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "Is agentic shopping the next big thing in beauty? Sephora and Ulta are betting yes",
+    "title": "Is agentic shopping the next big thing in beauty? Sephora and Ulta are betting yes",
+    "discovery_source": "Glossy",
+    "final_source_url": "https://www.glossy.co/beauty/is-agentic-shopping-the-next-big-thing-in-beauty-sephora-and-ulta-are-betting-yes/",
+    "publisher": "Glossy Beauty Podcast",
+    "published_at": "2026-05-28",
+    "concrete_facts": [
+      "Sephora: 2026년 3월 ChatGPT 앱 통합 발표 — 얼굴 사진 업로드 기반 맞춤 추천, 3~4개 제품만 간결·대화식으로 제시",
+      "Ulta Beauty: 2026년 4월 Google Gemini 파트너십 통한 AI 통합 발표 — 11~12개 제품을 카테고리별 추천하고 팔로우업 질문 제공, 뷰티 외 질문은 거절",
+      "두 회사 모두 Amazon의 뷰티 리테일 강화에 대응해 에이전틱 쇼핑/AI에 투자"
+    ],
+    "image_url": "https://www.glossy.co/wp-content/uploads/sites/4/2026/05/Screenshot-2026-05-27-at-5.30.58-PM.png",
+    "image_source": "Glossy 팟캐스트 기사 대표 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "Expanding Stripe Radar to protect more of your business",
+    "title": "Expanding Stripe Radar to protect more of your business",
+    "discovery_source": "Stripe Sessions / Stripe blog",
+    "final_source_url": "https://stripe.com/blog/expanding-stripe-radar-to-protect-more-of-your-business",
+    "publisher": "Samuel Bakouch (Stripe)",
+    "published_at": "2026-05-27",
+    "concrete_facts": [],
+    "image_url": "https://images.stripeassets.com/fzn2n1nzq965/1YQEgHoT7D5t8qxeF6bODV/cf4ed4636c6479c72d6e604d737e103f/3v-lpms.jpg?w=1616&q=80",
+    "image_source": "Stripe 블로그 대표 이미지",
+    "verdict": "원문 부족",
+    "exclusion_reason": "결제 사기 방지 백엔드/리스크 엔진 중심 제품 발표로, 웹기획·UIUX·퍼블리싱 독자가 다룰 화면·플로우 증거가 약함."
+  },
+  {
+    "id": "당근 비즈프로필 단골 1000만 시대…\"지역 가게 연결 강화\"",
+    "title": "당근 비즈프로필 단골 1000만 시대…\"지역 가게 연결 강화\"",
+    "discovery_source": "당근 보도자료",
+    "final_source_url": "https://about.daangn.com/company/pr/archive/당근-비즈프로필-단골-1000만-시대지역-가게-연결-강화/",
+    "publisher": "당근마켓",
+    "published_at": "2026-06-04",
+    "concrete_facts": [
+      "비즈프로필 누적 단골 1000만 명, 누적 비즈프로필 300만 개 이상 달성",
+      "박보검과 가상 청음 카페 'Park BGM'을 활용한 '찐당근' 캠페인을 2026년 7월 29일까지 8주간 진행",
+      "맛집·카페, 뷰티·헬스, 학원, 병원 4개 업종 대상 비즈프로필 신청(6/8~23, 6/25 발표), 최대 단골 지원금 100만 원",
+      "단골 이용자에게 3곳 단골 기준 최대 5,000원 랜덤 지원금 제공"
+    ],
+    "image_url": "https://prismic-image-proxy.krrt.io/karrot/ah6gQAeQX7-eWiSk_%5B%E1%84%8B%E1%85%B5%E1%84%86%E1%85%B5%E1%84%8C%E1%85%B51%5D%E1%84%83%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B3%E1%86%AB%E1%84%85%E1%85%A9%E1%84%8F%E1%85%A5%E1%86%AF%E1%84%87%E1%85%B5%E1%84%8C%E1%85%B3%E1%84%82%E1%85%B5%E1%84%89%E1%85%B3%E1%84%8F%E1%85%A2%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E2%80%98%E1%84%8D%E1%85%B5%E1%86%AB%E1%84%83%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B3%E1%86%AB%E2%80%99%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%92%E1%85%A2%E1%86%BC%E2%80%8B.png?auto=compress%2Cformat&fit=max&q=100&w=1200&h=630&fm=png",
+    "image_source": "당근 보도자료 대표 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "K-푸드 글로벌 트렌드, 약과부터 라면까지 외국인 유학생 100명이 발견한 K-푸드의 '반전'",
+    "title": "K-푸드 글로벌 트렌드, 약과부터 라면까지 외국인 유학생 100명이 발견한 K-푸드의 '반전'",
+    "discovery_source": "오픈서베이 블로그",
+    "final_source_url": "https://blog.opensurvey.co.kr/article/k-food-2026-2/",
+    "publisher": "오픈서베이",
+    "published_at": "2026-05-25",
+    "concrete_facts": [
+      "서울 거주 외국인 대학(원)생 100명(46개국) 대상 조사 — 거주 전 60%가 K-푸드를 '맵고 빨간 음식'으로 인식, 거주 후 52%가 '생각보다 훨씬 다양함' 응답",
+      "권역별 선호 차이: 서구권 간장 선호(43.6%), 아시아권 고추장 선호",
+      "정체성 기준: 65%가 한국적 맛·풍미를, 74%가 유행 길거리 음식을 K-푸드로 인정"
+    ],
+    "image_url": "https://i0.wp.com/blog.opensurvey.co.kr/wp-content/uploads/2026/05/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C6-e1779370603336.png",
+    "image_source": "오픈서베이 블로그 리포트 슬라이드",
+    "verdict": "원문 부족",
+    "exclusion_reason": "리포트 다운로드 게이트형 식음료 조사 글로, 웹기획·커머스 서비스 화면·플로우와의 연결이 약하고 마케팅 인사이트 위주."
+  }
+]

@@ -1,0 +1,252 @@
+[
+  {
+    "title": "우아한공방의 새로운 동료, 시스템 맥락을 가진 챗봇서비스 개발기(feat. RAG)",
+    "link": "https://techblog.woowahan.com/26319/",
+    "source": "우아한형제들 기술블로그",
+    "domain": "techblog.woowahan.com",
+    "area": "Service",
+    "category": "ecommerce",
+    "targetFit": "core_ecommerce",
+    "shortlistPriority": "P0",
+    "summary": "왼쪽 예시처럼 디자인시스템과 무관한 질문을 하거나, 오른쪽 예시처럼 특정 인물에 대한 평가를 요청하는 질의들이 들어오기 시작했습니다. 문제는 이러한 응답이 단순한 재미 요소를 넘어, 우아한공방 챗봇이 의도한 서비스 범주 밖의 답변까지 생성하고 있었다는 점입니다. 서비스의 역할과 무관한 응답이 계속 생성될 경우 사용자 경험과 응답 신뢰도에도 영향을 줄 수 있었기 때문에, 답변 범위를 명확히 제한할 필요가 있었습니다.",
+    "image": "https://techblog.woowahan.com/wp-content/uploads/2025/07/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC-%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%B0%B0%EB%84%88.png",
+    "evidenceTags": [
+      "review_trust",
+      "service_ai"
+    ],
+    "sourceType": "official"
+  },
+  {
+    "title": "무신사, ‘AI 트렌드 큐레이션' 도입··· \"사용자가 찾기 전에 AI가 답한다\"",
+    "link": "https://newsroom.musinsa.com/newsroom-menu/2026-0603",
+    "source": "무신사 뉴스룸",
+    "domain": "newsroom.musinsa.com",
+    "area": "Service",
+    "category": "fashion",
+    "targetFit": "core_ecommerce",
+    "shortlistPriority": "P0",
+    "summary": "2026.06.03",
+    "image": "https://cdn.prod.website-files.com/60a3629e04f26d12caff56df/6a20d4f62e7bdeb4682eda35_PR.png",
+    "evidenceTags": [
+      "search_discovery",
+      "service_ai"
+    ],
+    "sourceType": "official"
+  },
+  {
+    "title": "“여름 침구 미리 산다” 오늘의집, 여름 맞이 ‘냉감 패브릭’ 검색량 급증",
+    "link": "https://ohstory.io/press/pressrelease/15350",
+    "source": "오늘의집 뉴스룸",
+    "domain": "ohstory.io",
+    "area": "Service",
+    "category": "lifestyle_commerce",
+    "targetFit": "core_ecommerce",
+    "shortlistPriority": "P0",
+    "summary": "초여름 더위가 예년보다 빠르게 찾아오면서 시원한 숙면을 위한 냉감 패브릭 상품을 찾는 소비자들이 늘고 있다. 실제로 최근 기상청은 브리핑을 통해 올해 6월~8월 기온이 평년보다 높을 확률이 약 50~60% 수준이라고 전망했다.",
+    "image": "https://ohstory.io/wp-content/uploads/2026/05/%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%9E%90%EB%A3%8C-%EC%98%A4%EB%8A%98%EC%9D%98%EC%A7%91-layer%EC%9D%98-%EB%83%89%EA%B0%90%EC%9D%B4%EB%B6%88%EC%84%B8%ED%8A%B8.jpg",
+    "evidenceTags": [
+      "commerce_core",
+      "search_discovery"
+    ],
+    "sourceType": "official"
+  },
+  {
+    "title": "6/11 11시 아쿠아필드",
+    "link": "https://event.ssg.com/eventDetail.ssg?nevntId=1000000022764&domainSiteNo=6005&_mpop=new",
+    "source": "SSG 이벤트",
+    "domain": "event.ssg.com",
+    "area": "Service",
+    "category": "global_service_ux",
+    "targetFit": "commerce_adjacent",
+    "shortlistPriority": "P1",
+    "summary": "6/11 11시 아쿠아필드/센텀스파랜드 쓱라이브 주중/주말 동일 금액! SSG 최저가 라이브 구매인증 아쿠아필드 멀티패스/찜질스파 이용권 경품 찬스 ssg.com",
+    "image": "https://sstatic.ssgcdn.com/promo/event/ssg/202606/48481113459307739.jpg",
+    "evidenceTags": [
+      "review_trust"
+    ],
+    "sourceType": "media_or_unknown"
+  },
+  {
+    "title": "CJ 이재현 회장, 美 전역 돌며 북미 전략 점검 “미국인 일상에 건강한 K 라이프스타일 전파할 것”",
+    "link": "https://cjnews.cj.net/cj-%ec%9d%b4%ec%9e%ac%ed%98%84-%ed%9a%8c%ec%9e%a5-%e7%be%8e-%ec%a0%84%ec%97%ad-%eb%8f%8c%eb%a9%b0-%eb%b6%81%eb%af%b8-%ec%a0%84%eb%9e%b5-%ec%a0%90%ea%b2%80-%eb%af%b8%ea%b5%ad%ec%9d%b8/?utm_source=rss&utm_medium=rss&utm_campaign=cj-%25ec%259d%25b4%25ec%259e%25ac%25ed%2598%2584-%25ed%259a%258c%25ec%259e%25a5-%25e7%25be%258e-%25ec%25a0%2584%25ec%2597%25ad-%25eb%258f%258c%25eb%25a9%25b0-%25eb%25b6%2581%25eb%25af%25b8-%25ec%25a0%2584%25eb%259e%25b5-%25ec%25a0%2590%25ea%25b2%2580-%25eb%25af%25b8%25ea%25b5%25ad%25ec%259d%25b8",
+    "source": "CJ News Room",
+    "domain": "cjnews.cj.net",
+    "area": "Service",
+    "category": "global_service_ux",
+    "targetFit": "commerce_adjacent",
+    "shortlistPriority": "P1",
+    "summary": "이재현 CJ그룹 회장이 미국 주요 사업 거점을 잇달아 방문하며 북미 공략에 속도를 내고 있다. 이번 현장경영은 단순히 개별 사업장의 성과를 점검하는 차원을 넘어 식품, 콘텐츠, 뷰티 사업 간 시너지를 기반으로 북미 시장에서 ‘K라이프스타일’ 확산을 가속화하기 위함이다. 이재현 회장은 2",
+    "image": "https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJNEWSROOM_thumbnail_03.jpg",
+    "evidenceTags": [
+      "o2o_flow"
+    ],
+    "sourceType": "official"
+  },
+  {
+    "title": "美 ‘더CJ컵’ 찾은 이재현 회장, “K라이프스타일 플랫폼 통해 글로벌 사업 확대 가속”",
+    "link": "https://cjnews.cj.net/%e7%be%8e-%eb%8d%94cj%ec%bb%b5-%ec%b0%be%ec%9d%80-%ec%9d%b4%ec%9e%ac%ed%98%84-%ed%9a%8c%ec%9e%a5-k%eb%9d%bc%ec%9d%b4%ed%94%84%ec%8a%a4%ed%83%80%ec%9d%bc-%ed%94%8c%eb%9e%ab/?utm_source=rss&utm_medium=rss&utm_campaign=%25e7%25be%258e-%25eb%258d%2594cj%25ec%25bb%25b5-%25ec%25b0%25be%25ec%259d%2580-%25ec%259d%25b4%25ec%259e%25ac%25ed%2598%2584-%25ed%259a%258c%25ec%259e%25a5-k%25eb%259d%25bc%25ec%259d%25b4%25ed%2594%2584%25ec%258a%25a4%25ed%2583%2580%25ec%259d%25bc-%25ed%2594%258c%25eb%259e%25ab",
+    "source": "CJ News Room",
+    "domain": "cjnews.cj.net",
+    "area": "Service",
+    "category": "global_service_ux",
+    "targetFit": "commerce_adjacent",
+    "shortlistPriority": "P1",
+    "summary": "이재현 CJ그룹 회장이 미국 텍사스주 맥키니에서 열린 ‘더 CJ컵 바이런 넬슨(THE CJ CUP Byron Nelson)’ 현장을 방문해 K라이프스타일 플랫폼의 글로벌 확장 가능성을 직접 점검하고, 그룹 차원의 글로벌 사업 가속화를 주문했다. 이 회장이 미국에서 개최된 더 CJ컵 현장",
+    "image": "https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJNEWSROOM_thumbnail_0525.jpg",
+    "evidenceTags": [
+      "payment_checkout",
+      "o2o_flow"
+    ],
+    "sourceType": "official"
+  },
+  {
+    "title": "CJ제일제당, 냉동김밥 전 공정 자동화로 글로벌 표준을 만들다",
+    "link": "https://cjnews.cj.net/cj%ec%a0%9c%ec%9d%bc%ec%a0%9c%eb%8b%b9-%eb%83%89%eb%8f%99%ea%b9%80%eb%b0%a5-%ec%a0%84-%ea%b3%b5%ec%a0%95-%ec%9e%90%eb%8f%99%ed%99%94%eb%a1%9c-%ea%b8%80%eb%a1%9c%eb%b2%8c-%ed%91%9c%ec%a4%80%ec%9d%84/?utm_source=rss&utm_medium=rss&utm_campaign=cj%25ec%25a0%259c%25ec%259d%25bc%25ec%25a0%259c%25eb%258b%25b9-%25eb%2583%2589%25eb%258f%2599%25ea%25b9%2580%25eb%25b0%25a5-%25ec%25a0%2584-%25ea%25b3%25b5%25ec%25a0%2595-%25ec%259e%2590%25eb%258f%2599%25ed%2599%2594%25eb%25a1%259c-%25ea%25b8%2580%25eb%25a1%259c%25eb%25b2%258c-%25ed%2591%259c%25ec%25a4%2580%25ec%259d%2584",
+    "source": "CJ News Room",
+    "domain": "cjnews.cj.net",
+    "area": "Service",
+    "category": "global_service_ux",
+    "targetFit": "commerce_adjacent",
+    "shortlistPriority": "P1",
+    "summary": "미국 마트 냉동식품 코너에서 품절 사태를 만든 한국 음식이 있다. 바로 냉동김밥이다. K콘텐츠를 통해 자연스럽게 알려진 김밥은 간편하면서도 균형 잡힌 한 끼로 주목받으며 북미와 일본을 중심으로 빠르게 시장을 확대하고 있다. 이제 냉동김밥은 단순한 유행을 넘어 K푸드의 새로운 글로벌 카테",
+    "image": "https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJSTORY_cheiljedang_20260522_thumbnail.jpg",
+    "evidenceTags": [
+      "service_ai"
+    ],
+    "sourceType": "official"
+  },
+  {
+    "title": "올리브영 미국 패서디나점 완벽 가이드: 매장·브랜드·온라인몰·멤버십 총정리",
+    "link": "https://cjnews.cj.net/%ec%98%ac%eb%a6%ac%eb%b8%8c%ec%98%81-%eb%af%b8%ea%b5%ad-%ed%8c%a8%ec%84%9c%eb%94%94%eb%82%98%ec%a0%90-%ec%99%84%eb%b2%bd-%ea%b0%80%ec%9d%b4%eb%93%9c-%eb%a7%a4%ec%9e%a5%c2%b7%eb%b8%8c%eb%9e%9c/?utm_source=rss&utm_medium=rss&utm_campaign=%25ec%2598%25ac%25eb%25a6%25ac%25eb%25b8%258c%25ec%2598%2581-%25eb%25af%25b8%25ea%25b5%25ad-%25ed%258c%25a8%25ec%2584%259c%25eb%2594%2594%25eb%2582%2598%25ec%25a0%2590-%25ec%2599%2584%25eb%25b2%25bd-%25ea%25b0%2580%25ec%259d%25b4%25eb%2593%259c-%25eb%25a7%25a4%25ec%259e%25a5%25c2%25b7%25eb%25b8%258c%25eb%259e%259c",
+    "source": "CJ News Room",
+    "domain": "cjnews.cj.net",
+    "area": "Service",
+    "category": "global_service_ux",
+    "targetFit": "commerce_adjacent",
+    "shortlistPriority": "P1",
+    "summary": "LA&nbsp;동북부&nbsp;핵심&nbsp;프리미엄&nbsp;상권&nbsp;조준&nbsp;‘올리브영&nbsp;패서디나점’ 올리브영의 첫 미국 매장이 들어서는&nbsp;패서디나의&nbsp;콜로라도대로(Colorado&nbsp;Blvd.) 일대는 로스앤젤레스(LA) 동북부를 관통하는 상징",
+    "image": "https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJ%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81_thumbnail-2.jpg",
+    "evidenceTags": [
+      "commerce_core",
+      "membership_retention",
+      "o2o_flow"
+    ],
+    "sourceType": "official"
+  },
+  {
+    "title": "Fashion Briefing: How fashion schools are adopting AI and addressing the &#039;critical thinking gap&#039; among new graduates",
+    "link": "https://www.glossy.co/fashion/fashion-briefing-how-fashion-schools-are-adopting-ai-and-addressing-the-critical-thinking-gap-among-new-graduates/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss",
+    "source": "Glossy",
+    "domain": "glossy.co",
+    "area": "Service",
+    "category": "ai",
+    "targetFit": "commerce_adjacent",
+    "shortlistPriority": "P1",
+    "summary": "Glossy spoke with several fashion educators from fashion design schools about how the rise of AI is playing out in fashion, how AI is being used in the classroom and what the fashion talent pipeline looks like, considering the graduates of today will be the leaders shaping the industry tomorrow.",
+    "image": "https://www.glossy.co/wp-content/uploads/sites/4/2026/06/meet-your-people-spring-2026.jpg",
+    "evidenceTags": [
+      "service_ai"
+    ],
+    "sourceType": "media_or_unknown"
+  },
+  {
+    "title": "Wellness Briefing: How top brands are training employees to use AI tools, plus news",
+    "link": "https://www.glossy.co/beauty/wellness/how-top-brands-are-training-employees-to-use-ai-tools-plus-news/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss",
+    "source": "Glossy",
+    "domain": "glossy.co",
+    "area": "Service",
+    "category": "ai",
+    "targetFit": "commerce_adjacent",
+    "shortlistPriority": "P1",
+    "summary": "For the Wellness Briefing, Glossy is reporting from our annual E-Commerce Summit where brand leaders from Ulta Beauty, Supergoop!, SharkNinja, Tarte, Sephora, Beekman1802 and more shared tactics and tips to supercharge brand success with AI tools.",
+    "image": "https://www.glossy.co/wp-content/uploads/sites/4/2026/06/pexels-tara-winstead-8386434.jpg",
+    "evidenceTags": [
+      "commerce_core",
+      "service_ai"
+    ],
+    "sourceType": "media_or_unknown"
+  },
+  {
+    "title": "CJ온스타일, 대화형 AI 쇼핑 유입 4배↑... AI 기반 커머스 확장",
+    "link": "https://cjnews.cj.net/cj%ec%98%a8%ec%8a%a4%ed%83%80%ec%9d%bc-%eb%8c%80%ed%99%94%ed%98%95-ai-%ec%87%bc%ed%95%91-%ec%9c%a0%ec%9e%85-4%eb%b0%b0%e2%86%91-ai-%ea%b8%b0%eb%b0%98-%ec%bb%a4%eb%a8%b8%ec%8a%a4-%ed%99%95%ec%9e%a5/?utm_source=rss&utm_medium=rss&utm_campaign=cj%25ec%2598%25a8%25ec%258a%25a4%25ed%2583%2580%25ec%259d%25bc-%25eb%258c%2580%25ed%2599%2594%25ed%2598%2595-ai-%25ec%2587%25bc%25ed%2595%2591-%25ec%259c%25a0%25ec%259e%2585-4%25eb%25b0%25b0%25e2%2586%2591-ai-%25ea%25b8%25b0%25eb%25b0%2598-%25ec%25bb%25a4%25eb%25a8%25b8%25ec%258a%25a4-%25ed%2599%2595%25ec%259e%25a5",
+    "source": "CJ News Room",
+    "domain": "cjnews.cj.net",
+    "area": "Service",
+    "category": "ai",
+    "targetFit": "commerce_adjacent",
+    "shortlistPriority": "P1",
+    "summary": "검색창 대신 AI와 대화하며 상품을 찾는 쇼핑 방식이 빠르게 확산되고 있다. 챗GPT(ChatGPT)·제미나이(Gemini) 등 대화형 AI 기반 소비 흐름이 커지는 가운데, CJ온스타일이 AI 쇼핑 확장에 속도를 낸다. CJ온스타일은 5월 1일부터 25일까지 챗GPT·제미나이 등 대화",
+    "image": "https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJ%EC%98%A8%EC%8A%A4%ED%83%80%EC%9D%BC_thumbnail-1-1.jpg",
+    "evidenceTags": [
+      "commerce_core",
+      "search_discovery",
+      "service_ai"
+    ],
+    "sourceType": "official"
+  },
+  {
+    "title": "Is agentic shopping the next big thing in beauty? Sephora and Ulta are betting yes",
+    "link": "https://www.glossy.co/beauty/is-agentic-shopping-the-next-big-thing-in-beauty-sephora-and-ulta-are-betting-yes/?utm_campaign=glossydis&utm_medium=rss&utm_source=general-rss",
+    "source": "Glossy",
+    "domain": "glossy.co",
+    "area": "Service",
+    "category": "ai",
+    "targetFit": "commerce_adjacent",
+    "shortlistPriority": "P1",
+    "summary": "On this week’s episode of the Glossy Beauty Podcast, hosts Lexy Lebsack and Sara Spruch-Feiner are joined by senior beauty reporter Emily Jensen to discuss Sephora and Ulta’s recent investments into AI, and how agentic shopping is poised to evolve in the beauty industry.",
+    "image": "https://www.glossy.co/wp-content/uploads/sites/4/2026/05/Screenshot-2026-05-27-at-5.30.58-PM.png",
+    "evidenceTags": [
+      "service_ai"
+    ],
+    "sourceType": "media_or_unknown"
+  },
+  {
+    "title": "Expanding Stripe Radar to protect more of your business",
+    "link": "https://stripe.com/blog/expanding-stripe-radar-to-protect-more-of-your-business",
+    "source": "Stripe Sessions",
+    "domain": "stripe.com",
+    "area": "Service",
+    "category": "ai",
+    "targetFit": "commerce_adjacent",
+    "shortlistPriority": "P1",
+    "summary": "Radar now blocks high-risk transactions across all supported payment methods; defends against new fraud types; and gives platforms new tools to evaluate and mitigate merchant risk on and off Stripe.",
+    "image": "https://images.stripeassets.com/fzn2n1nzq965/59d4stabEiviH63RKMAsKM/8864fdaf66ba05b17596ea4aecc07776/Radar-social.jpg?q=80",
+    "evidenceTags": [
+      "payment_checkout"
+    ],
+    "sourceType": "media_or_unknown"
+  },
+  {
+    "title": "당근 비즈프로필 단골 1000만 시대…\"지역 가게 연결 강화\"",
+    "link": "https://about.daangn.com/company/pr/archive/%EB%8B%B9%EA%B7%BC-%EB%B9%84%EC%A6%88%ED%94%84%EB%A1%9C%ED%95%84-%EB%8B%A8%EA%B3%A8-1000%EB%A7%8C-%EC%8B%9C%EB%8C%80%EC%A7%80%EC%97%AD-%EA%B0%80%EA%B2%8C-%EC%97%B0%EA%B2%B0-%EA%B0%95%ED%99%94/",
+    "source": "당근 보도자료",
+    "domain": "about.daangn.com",
+    "area": "Service",
+    "category": "local_service",
+    "targetFit": "commerce_adjacent",
+    "shortlistPriority": "P1",
+    "summary": "\"이웃은 진짜 가게를 알아보는 법\"",
+    "image": "https://prismic-image-proxy.krrt.io/karrot/ah6gQAeQX7-eWiSk_%5B%E1%84%8B%E1%85%B5%E1%84%86%E1%85%B5%E1%84%8C%E1%85%B51%5D%E1%84%83%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B3%E1%86%AB%E1%84%85%E1%85%A9%E1%84%8F%E1%85%A5%E1%86%AF%E1%84%87%E1%85%B5%E1%84%8C%E1%85%B3%E1%84%82%E1%85%B5%E1%84%89%E1%85%B3%E1%84%8F%E1%85%A2%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E2%80%98%E1%84%8D%E1%85%B5%E1%86%AB%E1%84%83%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B3%E1%86%AB%E2%80%99%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%92%E1%85%A2%E1%86%BC%E2%80%8B.png?auto=compress%2Cformat&fit=max&q=100&w=1200&h=630&fm=png",
+    "evidenceTags": [
+      "review_trust"
+    ],
+    "sourceType": "official"
+  },
+  {
+    "title": "K-푸드 글로벌 트렌드, 약과부터 라면까지 외국인 유학생 100명이 발견한 K-푸드의 &#039;반전&#039;",
+    "link": "https://blog.opensurvey.co.kr/article/k-food-2026-2/",
+    "source": "오픈서베이 블로그",
+    "domain": "blog.opensurvey.co.kr",
+    "area": "Service",
+    "category": "research",
+    "targetFit": "commerce_adjacent",
+    "shortlistPriority": "P1",
+    "summary": "K 잘알 외국인 유학생 100명이 직접 경험한 K-푸드 글로벌 트렌드를 데이터로 확인하세요. 한국 거주 전후 K-푸드 이미지 변화, 약과·초코파이의 재해석, 서구와 아시아의 각 대륙별 선호하는 맛의 차이까지 K-푸드 해외 마케팅 전략에 필요한 인사이트를 담았습니다.",
+    "image": "https://blog.opensurvey.co.kr/wp-content/uploads/2026/05/26_thumbnail_article_09.png",
+    "evidenceTags": [
+      "search_discovery",
+      "research_signal"
+    ],
+    "sourceType": "magazine_or_blog"
+  }
+]

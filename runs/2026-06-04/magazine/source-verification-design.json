@@ -1,0 +1,622 @@
+[
+  {
+    "id": "canva-perplexity",
+    "title": "From AI research to ready-to-use creative: Canva comes to Perplexity Computer",
+    "discovery_source": "Canva Newsroom",
+    "final_source_url": "https://www.canva.com/newsroom/news/perplexity/",
+    "publisher": "Canva Newsroom",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "https://content-management-files.canva.com/3b51c91c-f474-4710-ad66-f586ee54ecf6/PerplexityxCanva.png",
+    "image_source": "Canva Newsroom 대표 이미지",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "공식 출처이나 canva.com이 Cloudflare 챌린지(HTTP 403)로 본문을 열 수 없어 구체 사실을 본문에서 추출하지 못함. 재시도 필요."
+  },
+  {
+    "id": "canva-chatgpt-codex",
+    "title": "Bringing on-brand design creation to AI workflows: Create with Canva inside ChatGPT and Codex",
+    "discovery_source": "Canva Newsroom",
+    "final_source_url": "https://www.canva.com/newsroom/news/deep-research-integration-mcp-server/",
+    "publisher": "Canva Newsroom",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "https://content-management-files.canva.com/156e9dcc-6ab5-4433-885d-437710c28c06/CanvaxChatGPT.png",
+    "image_source": "Canva Newsroom 대표 이미지",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "공식 출처이나 canva.com이 Cloudflare 챌린지(HTTP 403)로 본문을 열 수 없음. RSS 요약만으로는 발행 불가."
+  },
+  {
+    "id": "canva-whats-new-may-2026",
+    "title": "What’s New: Our latest launches you won’t want to miss",
+    "discovery_source": "Canva Newsroom",
+    "final_source_url": "https://www.canva.com/newsroom/news/whats-new-may-2026/",
+    "publisher": "Canva Newsroom",
+    "published_at": "2026-05",
+    "concrete_facts": [],
+    "image_url": "https://content-management-files.canva.com/facb87bd-662c-48cd-aef9-4116bdd58f5d/CanvaWhatsNewMay2026.png",
+    "image_source": "Canva Newsroom 대표 이미지",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "공식 출처이나 canva.com이 Cloudflare 챌린지(HTTP 403)로 본문을 열 수 없음. 또한 월간 묶음 글로 단일 기능 초점이 약함."
+  },
+  {
+    "id": "itsnicethat-arab-minimalism",
+    "title": "Why minimalist aesthetics (smuggled in as the language of progress) are stifling truly Arab design",
+    "discovery_source": "It's Nice That",
+    "final_source_url": "https://www.itsnicethat.com/articles/the-view-from-cairo-minimalist-aesthetics-arab-design-critique-creative-industry-020626",
+    "publisher": "It's Nice That (Moe Elhossieny)",
+    "published_at": "2026-06-02",
+    "concrete_facts": [
+      "아랍권 디자인 비평 부재 논의 — 비평이 페이스북/인스타그램 단편으로만 생존, 평가 기준 미발달",
+      "미니멀리즘을 '진보의 언어'로 포장한 서구 인식론적 헤게모니 비판",
+      "Studio Atrissi가 디자인한 그랜드 이집트 박물관(GEM) 브랜딩 논쟁 — 문화 대표성 결여로 대중 반발"
+    ],
+    "image_url": "https://admin.itsnicethat.com/images/l_klQPKVZ7zCf5dyMQfG5VFDaik=/278301/width-1440%7Cformat-jpeg/TVF_Hero_Still.png",
+    "image_source": "It's Nice That 히어로 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "brandidentity-odin",
+    "title": "Office of Overview rebrands Odin, the Shopify for venture capital",
+    "discovery_source": "The Brand Identity",
+    "final_source_url": "https://the-brandidentity.com/project/office-of-overview-rebrands-odin-the-shopify-for-venture-capital",
+    "publisher": "The Brand Identity (Office of Overview / Avi Bamra)",
+    "published_at": "2026-06-03",
+    "concrete_facts": [
+      "오딘 신화(영원한 지식을 위해 한쪽 눈을 희생)에서 따온 눈 형태 로고마크",
+      "Mass Driver의 Thermochrome + Klim Type Foundry의 Die Grotesk 두 서체로 'romance and rigour' 운용",
+      "생성 비주얼 작가 3인(Mariano Peccinetti, Gizem Akdag, Mac Baconai)과 협업한 'many worlds of progression', 단순 정방 그리드 + 라운드 UI 패널 기반 시스템"
+    ],
+    "image_url": "https://the-brandidentity.com/uploads/articles/2026/06/office-of-overview-rebrands-odin-the-shopify-for-venture-capital/Odin-Office-of-Overview-04.jpeg",
+    "image_source": "The Brand Identity 기사 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "uxdesign-ai-document-fatigue",
+    "title": "AI-created document fatigue: how I designed my way out of it",
+    "discovery_source": "UX Design (Medium)",
+    "final_source_url": "https://uxdesign.cc/ai-created-document-fatigue-how-i-designed-my-way-out-of-it-1fcd4a565669",
+    "publisher": "UX Collective (Medium)",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "uxdesign.cc가 Medium 글로벌 로그인으로 리다이렉트 루프, 본문 열람 불가. 개인 보이스앱(ARC) 제작 에세이로 공식 출처 아님."
+  },
+  {
+    "id": "uxdesign-sturgeons-law",
+    "title": "AI meets Sturgeon’s Law",
+    "discovery_source": "UX Design (Medium)",
+    "final_source_url": "https://uxdesign.cc/ai-meets-sturgeons-law-21d17488fc48",
+    "publisher": "UX Collective (Medium)",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "Medium 리다이렉트로 본문 열람 불가, RSS 요약(한 줄)만 존재. 개인 오피니언 에세이로 화면·플로우 근거 없음."
+  },
+  {
+    "id": "uxdesign-vr-addiction",
+    "title": "Can VR treat addiction?",
+    "discovery_source": "UX Design (Medium)",
+    "final_source_url": "https://uxdesign.cc/can-vr-treat-addiction-da8b3d4d4357",
+    "publisher": "UX Collective (Medium)",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "Medium 리다이렉트로 본문 열람 불가. 디자인 직무 적합성도 낮음(VR 중독 치료 주제)."
+  },
+  {
+    "id": "uxdesign-designing-for-ai-permalink",
+    "title": "Designing for AI, the permalink problem, vibe designing",
+    "discovery_source": "UX Design (Medium)",
+    "final_source_url": "https://uxdesign.cc/designing-for-ai-the-permalink-problem-vibe-designing-5a13e857b6a3",
+    "publisher": "UX Collective (Medium)",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "Medium 리다이렉트로 본문 열람 불가. 주간 큐레이션 링크 모음 글로 단일 원문 사실 추출 부적합."
+  },
+  {
+    "id": "designcompass-apple-design-awards-2026",
+    "title": "애플 디자인 어워드 2026, 올해의 앱과 게임 12개 공개",
+    "discovery_source": "Design Compass",
+    "final_source_url": "https://designcompass.org/2026/06/04/apple-design-awards-2026/",
+    "publisher": "Design Compass (박종민)",
+    "published_at": "2026-06-04",
+    "concrete_facts": [
+      "6개 부문(Delight and Fun, Inclusivity, Innovation, Social Impact, Interaction, Visuals and Graphics)에서 앱·게임 각 1개씩 총 12개 수상",
+      "전 세계 36개 최종 후보 중 선정, 수상 개발자는 WWDC26에서 공식 소개",
+      "수상작 예: Innovation 앱 'NBA: Live Games & Scores'/게임 'Blue Prince', Visuals 게임 'Cyberpunk 2077: Ultimate Edition'"
+    ],
+    "image_url": "https://designcompass.org/wp-content/uploads/2026/06/wwdc-2026-design-award.jpg",
+    "image_source": "Design Compass 대표 이미지(원출처는 Apple)",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "designcompass-interbrand-rebranding",
+    "title": "극단적으로 좁아진 인터브랜드 워드마크",
+    "discovery_source": "Design Compass",
+    "final_source_url": "https://designcompass.org/2026/06/04/interbrand-rebranding/",
+    "publisher": "Design Compass (박종민)",
+    "published_at": "2026-06-04",
+    "concrete_facts": [
+      "워드마크가 소문자에서 대문자로 전환되고 커닝이 극단적으로 좁아져 일부 조합이 한 덩어리처럼 읽힘",
+      "외부 스튜디오가 아니라 인터브랜드 내부 팀이 리브랜딩 진행",
+      "좁은 커닝은 'Iconic Moves'·단단하고 압축된 조직 인상을 의도하나 앱 아이콘/소셜 프로필 등 작은 스케일에서 가독성 우려"
+    ],
+    "image_url": "https://designcompass.org/wp-content/uploads/2026/06/Interbrand.jpg",
+    "image_source": "Design Compass 대표 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "designcompass-design-aesthetic",
+    "title": "지금 가장 필요한 디자인 미학 세우기",
+    "discovery_source": "Design Compass",
+    "final_source_url": "https://designcompass.org/2026/06/01/building-the-design-aesthetic-you-need-most-right-now/",
+    "publisher": "Design Compass (박종민)",
+    "published_at": "2026-06-01",
+    "concrete_facts": [
+      "뛰어난 디자이너는 정립된 미학 철학을 닻으로 삼아 트렌드 변화에 휩쓸리지 않는다는 주장",
+      "AI가 평균 품질을 끌어올릴수록 도구 숙련이 아니라 판단 기준이 차별화 요소가 된다",
+      "레퍼런스 수집보다 '왜 끌리는지' 해석해야 개인 미학 프레임이 내재화된다"
+    ],
+    "image_url": "https://designcompass.org/wp-content/uploads/2026/06/aethe-01.jpg",
+    "image_source": "Design Compass 대표 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "designdb-genesis-monroe",
+    "title": "제네시스, 시대를 초월한 혁신의 아이콘 ‘마릴린 먼로’ 특별전 개최",
+    "discovery_source": "DesignDB - Design News",
+    "final_source_url": "https://www.designdb.com/?menuno=792&bbsno=40616&siteno=15&act=view",
+    "publisher": "DesignDB (보도자료)",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260602030138979_463.0.jpg",
+    "image_source": "DesignDB 썸네일",
+    "verdict": "원문 부족",
+    "exclusion_reason": "본문이 빈 페이지로 반환되어 구체 사실 추출 불가. 또한 마릴린 먼로 100주년 전시 보도자료로 디자인 직무 적합성이 낮은 홍보성 콘텐츠."
+  },
+  {
+    "id": "designdb-naver-200uk",
+    "title": "“AI 시대, UGC 늘려야” 네이버, 콘텐츠 창작자에 200억 지원",
+    "discovery_source": "DesignDB - Design News",
+    "final_source_url": "https://www.designdb.com/?menuno=792&bbsno=40615&siteno=15&act=view",
+    "publisher": "DesignDB (보도자료)",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260602103202386_294.0.jpg",
+    "image_source": "DesignDB 썸네일",
+    "verdict": "원문 부족",
+    "exclusion_reason": "재게시 보도자료. 콘텐츠 투자 프로모션 성격으로 화면·플로우·디자인 증거 없음. ditoday 동일 사안 기사와 중복."
+  },
+  {
+    "id": "designdb-industry-ax-korea",
+    "title": "AX, 현장에서 구체적인 성과로 연결하려면… ‘산업AX KOREA 2026’ 개최",
+    "discovery_source": "DesignDB - Design News",
+    "final_source_url": "https://www.designdb.com/?menuno=792&bbsno=40613&siteno=15&act=view",
+    "publisher": "DesignDB (보도자료)",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260601105026239_6771.0.png",
+    "image_source": "DesignDB 썸네일",
+    "verdict": "원문 부족",
+    "exclusion_reason": "행사 홍보 보도자료(산업 AI 컨퍼런스). 디자인·UIUX 직무 적합성 없음."
+  },
+  {
+    "id": "ditoday-canva-korea-event",
+    "title": "캔바, 국내 첫 행사 열고 ‘AI 활용 사례’ 공유",
+    "discovery_source": "DIGITAL iNSIGHT",
+    "final_source_url": "https://ditoday.com/요즘-업무-어떻게-바뀌고-있나-캔바-국내-ai-활용-혁신/",
+    "publisher": "DIGITAL iNSIGHT",
+    "published_at": "2026-05",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "캔바 국내 행사('캔바 인 리얼 라이프 2026') 후기성 기사로 제품 화면·기능 변화 근거가 약한 이벤트 홍보. Canva 공식 발표(별도 후보)로 대체 가능."
+  },
+  {
+    "id": "ditoday-google-workspace-icons",
+    "title": "5년 만의 사용성 고민? 구글 워크스페이스 아이콘 개편",
+    "discovery_source": "DIGITAL iNSIGHT - UIUX",
+    "final_source_url": "https://ditoday.com/5년-만에-사용성-찾아-나서기-구글-워크스페이스-아이/",
+    "publisher": "DIGITAL iNSIGHT",
+    "published_at": "2026-05-29",
+    "concrete_facts": [
+      "구글 통일 4색 체계 폐지, 서비스별 고유 색(지메일 빨강, 캘린더 파랑, 미트 노랑 등) 부여",
+      "아이콘을 감싸던 흰색 페이지 컨테이너 제거로 실루엣이 더 뚜렷해짐",
+      "전 아이콘에 그라데이션 적용 — AI/제미나이 브랜드 전략 맥락으로 해석"
+    ],
+    "image_url": "https://ditoday.com/wp-content/uploads/2026/05/0529.jpg",
+    "image_source": "DIGITAL iNSIGHT 대표 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "itsnicethat-lost-music-venues",
+    "title": "“Music venues are the engine of the creative industries”: lessons from the graphic ephemera of our lost clubs and pubs",
+    "discovery_source": "It's Nice That",
+    "final_source_url": "https://www.itsnicethat.com/features/victoria-and-albert-museum-lost-music-venues-harriet-reed-graphic-design-spotlight-030626",
+    "publisher": "It's Nice That",
+    "published_at": "2026-06-03",
+    "concrete_facts": [
+      "V&A 'Lost Music Venues' 전시 — 코로나 전후 공연장 위기에서 출발, 큐레이터 Harriet Reed",
+      "St Albans Pioneer Club 디스코볼, 철거 직전 건물에서 구출한 대형 금속 문 등 실물 대여 전시",
+      "공간 디자인 Misty Buckley·Laura Woodroffe, 그래픽 디자이너 Raissa Pardini 참여"
+    ],
+    "image_url": "https://admin.itsnicethat.com/images/JrjjqLSLxMCAbwrDKch3JHsjBjg=/278687/width-1440/heror.jpg",
+    "image_source": "It's Nice That 히어로 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "itsnicethat-koto-norton-museum",
+    "title": "Koto revives an 80-year-old wordmark to rebrand Norton Museum of Art",
+    "discovery_source": "It's Nice That",
+    "final_source_url": "https://www.itsnicethat.com/articles/koto-norton-museum-of-art-graphic-design-project-030626",
+    "publisher": "It's Nice That (Olivia Hingley)",
+    "published_at": "2026-06-03",
+    "concrete_facts": [
+      "아카이브 문서 마스트헤드에서 발견한 80년 된 'Norton' 워드마크를 복원",
+      "1941년 Paul Manship 조각 기반 Diana Seal을 가독성·축소 적용 위해 재드로잉",
+      "Sharp Type의 Centra No. 2 사용(Foster + Partners 2019 증축의 원형 기하 참조), 플로리다 풍경에서 딴 컬러 팔레트 + 'N'의 40도 사선 요소"
+    ],
+    "image_url": "https://admin.itsnicethat.com/images/5IooqjxtedNKIE8j6w_3Ah9wUrE=/278761/width-1440/TheNortonMuseum_Koto_5.jpg",
+    "image_source": "It's Nice That 기사 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "itsnicethat-daryn-roongrawewan",
+    "title": "Daryn Roongrawewan doesn’t design logos, she crafts “ornamental icons”",
+    "discovery_source": "It's Nice That",
+    "final_source_url": "https://www.itsnicethat.com/articles/daryn-roongrawewan-graphic-design-discover-030626",
+    "publisher": "It's Nice That (Ellis Tree)",
+    "published_at": "2026-06-03",
+    "concrete_facts": [
+      "베를린 기반 디자이너, 디지털 시작 대신 빈티지 레퍼런스·자연 관찰에서 형태를 도출(Padma 로고의 P는 자연에서 관찰)",
+      "Atelier Lin 플라워숍 아이덴티티 — 장식적 곡선 + 금속처럼 단단한 모서리의 커스텀 레터폼, 'L'이 회전하며 꽃 드로잉으로 변형",
+      "빅토리아·1920년대 영향의 정교한 'ornamental icon' 접근"
+    ],
+    "image_url": "https://admin.itsnicethat.com/images/TRSqbjt0TCF6KVYGWzTMK6k9EkM=/277998/width-1440/Daryn_Atelier_Lin_logo.jpg",
+    "image_source": "It's Nice That 기사 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "itsnicethat-oneplus-studio",
+    "title": "Why design studio OnePlus treats branding like cultural excavation, not invention",
+    "discovery_source": "It's Nice That",
+    "final_source_url": "https://www.itsnicethat.com/articles/oneplus-graphic-design-discover-020626",
+    "publisher": "It's Nice That (Ellis Tree)",
+    "published_at": "2026-06-02",
+    "concrete_facts": [
+      "밀라노 기반 스튜디오, 2023년 디자이너 6인(Pietro Avolio 등)이 설립",
+      "'발명이 아닌 발굴(excavation)' 철학 — 주제의 문화·시각 코어를 파내는 접근",
+      "밀라노 필리핀 타파스 레스토랑 아이덴티티, 상실·기억을 다룬 책 디자인 등 포트폴리오"
+    ],
+    "image_url": "https://admin.itsnicethat.com/images/T0BIr2OUeMim1-YUxld5TC124_U=/277466/width-1440/1._Oneplus_-_Balay_1.jpg",
+    "image_source": "It's Nice That 기사 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "itsnicethat-amber-weaver-type01",
+    "title": "How does contemporary type design translate into the wider world? Type01’s Amber Weaver shares her wisdom",
+    "discovery_source": "It's Nice That",
+    "final_source_url": "https://www.itsnicethat.com/articles/nicer-tuesdays-london-may-amber-weaver-020626",
+    "publisher": "It's Nice That",
+    "published_at": "2026-06-02",
+    "concrete_facts": [],
+    "image_url": "https://www.itsnicethat.com/images/social.jpg",
+    "image_source": "It's Nice That 기본 소셜 이미지",
+    "verdict": "원문 부족",
+    "exclusion_reason": "Nicer Tuesdays 강연 후기로 대표 이미지가 기본 소셜 이미지(고유 이미지 부재). 토크 소개 중심으로 발행에 쓸 구체 사실 추출이 제한적."
+  },
+  {
+    "id": "itsnicethat-ey-studio-alemagna",
+    "title": "Ey Studio avoided ‘gourmet’ trends for something more authentic to rebrand Italy’s most iconic panettonne",
+    "discovery_source": "It's Nice That",
+    "final_source_url": "https://www.itsnicethat.com/articles/ey-studio-alemagna-branding-project-010625",
+    "publisher": "It's Nice That",
+    "published_at": "2026-06-01",
+    "concrete_facts": [
+      "이탈리아 Ey Studio가 밀라노 제과 브랜드 Alemagna(파네토네) 리브랜딩",
+      "이탈리아 모더니즘 기반의 기하·핸드크래프트 레터링으로 활판 인쇄 서체 연상",
+      "Alemagna 헤리티지 ice blue + 볼드한 red-orange 조합으로 파스텔 베이커리 톤 탈피, 'gourmet/new-wave' 트렌드 거부"
+    ],
+    "image_url": "https://admin.itsnicethat.com/images/eWiwWtWbQZ3euYAvPYD-LwYCOdY=/278578/width-1440/Post3.jpg",
+    "image_source": "It's Nice That 기사 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "itsnicethat-delali-ayivi",
+    "title": "“I try to dream collectively”: Photographer Delali Ayivi on creative projects as catalysts for communities",
+    "discovery_source": "It's Nice That",
+    "final_source_url": "https://www.itsnicethat.com/articles/nicer-tuesdays-london-may-delali-ayivi-010626",
+    "publisher": "It's Nice That",
+    "published_at": "2026-06-01",
+    "concrete_facts": [],
+    "image_url": "https://www.itsnicethat.com/images/social.jpg",
+    "image_source": "It's Nice That 기본 소셜 이미지",
+    "verdict": "원문 부족",
+    "exclusion_reason": "사진가 강연 후기. 고유 대표 이미지 부재, 그래픽/UIUX 디자인 직무 적합성 낮음."
+  },
+  {
+    "id": "nngroup-uxconf-september",
+    "title": "UX Conference September Announced (Sep 14",
+    "discovery_source": "Nielsen Norman Group",
+    "final_source_url": "https://www.nngroup.com/training/september/",
+    "publisher": "Nielsen Norman Group",
+    "published_at": "2026",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "행사 안내(2026-09-14~25, 35개 주제, 최대 5강) 페이지로 트렌드/인사이트가 아닌 교육 프로모션. 발행 가치 낮음."
+  },
+  {
+    "id": "smashing-design-system-ai-ready",
+    "title": "How To Make Your Design System AI-Ready",
+    "discovery_source": "Smashing Magazine - UX Design",
+    "final_source_url": "https://smashingmagazine.com/2026/06/how-make-design-system-ai-ready/",
+    "publisher": "Smashing Magazine (Vitaly Friedman)",
+    "published_at": "2026-06-03",
+    "concrete_facts": [
+      "디자인 결정을 인프라처럼 spec 파일(Markdown: 간격/색/컴포넌트 규칙)로 문서화",
+      "FigmaLint 플러그인 — detached instance·누락 상태·하드코딩 값 감지",
+      "spec 파일 + 토큰 레이어 + 감사 스크립트의 3계층 구조, Atlassian·Carbon(IBM)·Nordhealth의 AI-ready 명세 예시"
+    ],
+    "image_url": "https://files.smashing.media/articles/how-make-design-system-ai-ready/1-traditional-llm-readable-design-systems.jpg",
+    "image_source": "Smashing Magazine 대표 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "ditoday-naver-geo",
+    "title": "창작자에 돈 쓰는 네이버, 국내 GEO 경쟁 본격화",
+    "discovery_source": "DIGITAL iNSIGHT",
+    "final_source_url": "https://ditoday.com/창작자에-돈-쓰는-네이버-진짜-노림수는-geo/",
+    "publisher": "DIGITAL iNSIGHT",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "네이버 창작자 투자/GEO(생성형 검색 최적화) 동향 해설로 디자인·UIUX 화면 근거 없음. 동일 사안 다수 중복."
+  },
+  {
+    "id": "ditoday-naver-place-rating",
+    "title": "네이버, 7월부터 플레이스 리뷰 평균 별점 공개한다",
+    "discovery_source": "DIGITAL iNSIGHT",
+    "final_source_url": "https://ditoday.com/네이버-7월부터-플레이스-리뷰-평균-별점-공개한다/",
+    "publisher": "DIGITAL iNSIGHT",
+    "published_at": "2026-06-02",
+    "concrete_facts": [
+      "7월 9일부터 누적 평균 별점과 사용자별 개별 별점을 플레이스 리뷰 주요 영역에 노출",
+      "사업주가 별점 공개 여부를 고르는 ON/OFF 옵션 도입(2021-10 이후 개업은 미노출 기본값)",
+      "평균 별점은 2021-10-25 이전 누적 + 올해 신규 수집분 합산, 5점 척도 기반"
+    ],
+    "image_url": "",
+    "image_source": "기사 내 고유 대표 이미지 없음",
+    "verdict": "검증 통과",
+    "exclusion_reason": ""
+  },
+  {
+    "id": "uxdesign-handoff-taste",
+    "title": "The most important part of building your taste is to hand it off",
+    "discovery_source": "UX Design (Medium)",
+    "final_source_url": "https://uxdesign.cc/the-most-important-part-of-building-your-taste-is-to-hand-it-off-be91aeac65d9",
+    "publisher": "UX Collective (Medium)",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "uxdesign.cc가 Medium 로그인 리다이렉트 루프로 본문 열람 불가. RSS는 한 줄 요약만 제공."
+  },
+  {
+    "id": "ditoday-busan-designer",
+    "title": "부산시, 글로벌 무대서 디자인 역량과 부산 알릴 디자이너 찾는다",
+    "discovery_source": "DIGITAL iNSIGHT",
+    "final_source_url": "https://ditoday.com/부산시-글로벌-무대서-디자인-역량과-부산-알릴-디자/",
+    "publisher": "DIGITAL iNSIGHT",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "디자이너 모집/지자체 사업 안내 보도성 기사. 트렌드·인사이트·화면 근거 없음."
+  },
+  {
+    "id": "uxdesign-foreman-box",
+    "title": "Foreman, guardian, team builder: all this is a box",
+    "discovery_source": "UX Design (Medium)",
+    "final_source_url": "https://uxdesign.cc/foreman-guardian-team-builder-all-this-is-a-box-7d1119af30ba",
+    "publisher": "UX Collective (Medium)",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "Medium 리다이렉트로 본문 열람 불가. 이사용 박스 디자인 에세이로 한 줄 요약만 존재."
+  },
+  {
+    "id": "uxdesign-website-ai-agents",
+    "title": "Is your website ready for AI agents?",
+    "discovery_source": "UX Design (Medium)",
+    "final_source_url": "https://uxdesign.cc/is-your-website-ready-for-ai-agents-84272a6a96c1",
+    "publisher": "UX Collective (Medium)",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "uxdesign.cc가 Medium 로그인으로 리다이렉트 루프, 본문 열람 불가. RSS 요약만으로는 발행 불가."
+  },
+  {
+    "id": "smashing-june-wallpapers",
+    "title": "June Is For Exploring (2026 Wallpapers Edition)",
+    "discovery_source": "Smashing Magazine - UX Design",
+    "final_source_url": "https://smashingmagazine.com/2026/05/desktop-wallpaper-calendars-june-2026/",
+    "publisher": "Smashing Magazine",
+    "published_at": "2026-05",
+    "concrete_facts": [],
+    "image_url": "https://files.smashing.media/articles/desktop-wallpaper-calendars-june-2026/jun-26-drifting-into-june-preview-opt.png",
+    "image_source": "Smashing Magazine 미리보기",
+    "verdict": "원문 부족",
+    "exclusion_reason": "월간 데스크톱 배경화면 모음 코너로 트렌드/인사이트 콘텐츠 아님."
+  },
+  {
+    "id": "uxdesign-token-scarcity-arcade",
+    "title": "AI Token Scarcity and Arcade Economics",
+    "discovery_source": "UX Design (Medium)",
+    "final_source_url": "https://uxdesign.cc/ai-token-scarcity-and-arcade-economics-5d6c0f2df3b5",
+    "publisher": "UX Collective (Medium)",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "Medium 리다이렉트로 본문 열람 불가. 한 줄 요약만 존재하는 오피니언 에세이."
+  },
+  {
+    "id": "ditoday-naver-200uk-ugc",
+    "title": "“AI 시대, UGC 늘려야” 네이버, 콘텐츠 창작자에 200억 지원",
+    "discovery_source": "DIGITAL iNSIGHT",
+    "final_source_url": "https://ditoday.com/ai-시대-ugc-늘려야-네이버-콘텐츠-창작자에-200억-지원/",
+    "publisher": "DIGITAL iNSIGHT",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "네이버 창작자 투자 보도자료. 화면·플로우·디자인 증거 없음. designdb·ditoday-geo와 동일 사안 중복."
+  },
+  {
+    "id": "nngroup-research-recommendations-roadmap",
+    "title": "How to Get Research Recommendations on the Roadmap",
+    "discovery_source": "Nielsen Norman Group",
+    "final_source_url": "https://www.nngroup.com/articles/research-recommendations-roadmap/",
+    "publisher": "Nielsen Norman Group (Laura Klein)",
+    "published_at": "2026-05-29",
+    "concrete_facts": [
+      "솔루션이 테이블에 오르기 전 discovery 단계에서 합류해야 영향력이 커진다",
+      "연구 결과를 PM 성과 지표(리텐션·전환·지원 문의량) 언어로 번역해 연결",
+      "관찰을 명확한 권고로 전환('내비게이션 어려움 → step-3 이탈, 다음 테스트 제안')"
+    ],
+    "image_url": "",
+    "image_source": "기사 내 고유 대표 이미지 미확인",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "nngroup-ras-resource-allocation",
+    "title": "Using RAS to Guide UX Research Resource Allocation and Strategy",
+    "discovery_source": "Nielsen Norman Group",
+    "final_source_url": "https://www.nngroup.com/articles/ras-research-resource-allocation/",
+    "publisher": "Nielsen Norman Group (Brian Utesch, Tammi Fitzwater)",
+    "published_at": "2026-05-29",
+    "concrete_facts": [
+      "RAS = Recommendation-Adoption Score — 권고 가치 중 실제 사용자에게 도달한 비율을 측정",
+      "활동량이 아니라 임팩트 기준으로 리서치 인력·자원 배분을 정당화",
+      "recommendation velocity(3개월 월평균) + RAS 추세(6개월 롤링 기울기)를 결합해 STOP/CAUTION/CONTINUE 신호 산출"
+    ],
+    "image_url": "",
+    "image_source": "기사 내 고유 대표 이미지 미확인",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "notefolio-movie-ad-concept",
+    "title": "영화 광고 컨셉이 '집착광공'이라고?",
+    "discovery_source": "노폴레터 (Notefolio)",
+    "final_source_url": "https://stib.ee/rNlN",
+    "publisher": "노폴레터 (Notefolio)",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "뉴스레터 발송 트래킹 링크(stib.ee)로 호별 본문을 직접 열어 구체 사실을 확인하지 못함. 인스타 트렌드·옥외광고 큐레이션 성격."
+  },
+  {
+    "id": "smashing-prototype-honesty-protopie",
+    "title": "Your Prototype Is Not Being Honest With Your Users (And Here’s How To Fix It)",
+    "discovery_source": "Smashing Magazine - UX Design",
+    "final_source_url": "https://smashingmagazine.com/2026/05/prototype-users-fix-protopie/",
+    "publisher": "Smashing Magazine (Eric Joseph L.)",
+    "published_at": "2026-05-25",
+    "concrete_facts": [
+      "사용성 테스트에서 참가자가 인터랙션 화면에서 멈칫·시선 들기 → 실제 앱이 아님을 인지해 데이터 오염",
+      "ProtoPie의 Input 레이어·Text Password 속성·변수 바인딩·조건 로직으로 실제 로그인 인증 구현(하드코딩 자격증명 검증)",
+      "자격증명 실패 시에만 뜨는 진짜 에러 메시지로 재시도·인증 전환 관찰 가능한 테스트 터치포인트 구성"
+    ],
+    "image_url": "https://files.smashing.media/articles/prototype-users-fix-protopie/Intro_fintech-tutorial-login-usecases-preview.gif",
+    "image_source": "Smashing Magazine 인트로 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "toss-booknic-facepay",
+    "title": "결제는 가볍게, 영감은 가득히",
+    "discovery_source": "Toss Blog",
+    "final_source_url": "https://toss.im/tossfeed/article/booknic",
+    "publisher": "Toss Blog",
+    "published_at": "2026-05",
+    "concrete_facts": [
+      "FacePay — 매장 토스 프론트를 바라보면 결제 완료, 카드 선택·단말 인식 과정 생략",
+      "서울숲 영풍문고 커뮤니티센터 '영감이 필요한 순간' 공간, 북크닉 키트(피크닉 박스·매트·거울·책) 최대 2시간 대여",
+      "북크닉 이벤트 5월 22~31일 10일간 사전 예약제 운영"
+    ],
+    "image_url": "https://resources-fe.toss.im/image-optimize/width=3840,quality=95/https%3A%2F%2Fstatic.toss.im%2Fphotos%2F_MG_0155.jpg",
+    "image_source": "Toss Blog 대표 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "nngroup-design-disposables",
+    "title": "The Case for Design Disposables",
+    "discovery_source": "Nielsen Norman Group",
+    "final_source_url": "https://www.nngroup.com/articles/design-disposables/",
+    "publisher": "Nielsen Norman Group (Laura Klein)",
+    "published_at": "2026-05-22",
+    "concrete_facts": [
+      "디자인 디스포저블 = 전달이 아닌 '사고를 돕기 위해' 만드는 거친 산출물",
+      "디스포저블/딜리버러블 구분은 산출물 자체가 아니라 '의도'에 있음(초기 스케치·브레인스토밍 메모·러프 프로토타입 등)",
+      "'누구를 위한 것인가?' 질문으로 내부용=디스포저블, 외부 이해관계자용=딜리버러블 판단 — 매몰비용 함정 회피"
+    ],
+    "image_url": "",
+    "image_source": "기사 내 고유 대표 이미지 미확인",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "nngroup-after-design-critique",
+    "title": "Closing the Loop: What to Do After a Design Critique Ends",
+    "discovery_source": "Nielsen Norman Group",
+    "final_source_url": "https://www.nngroup.com/articles/after-design-critique/",
+    "publisher": "Nielsen Norman Group (Rachel Krause)",
+    "published_at": "2026-05-22",
+    "concrete_facts": [
+      "크리틱 직후 Slack/Teams로 '진행할 것·검토 중·하지 않기로 한 것' 요약 리캡 발송",
+      "변경을 피드백에 연결한 before/after 주석 문서화('This changed because you said that')",
+      "반영하지 않은 피드백을 명시·이유·다음 단계까지 투명하게 공유해 신뢰 유지"
+    ],
+    "image_url": "",
+    "image_source": "기사 내 고유 대표 이미지 미확인",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "smashing-four-levels-customer-understanding",
+    "title": "Four Levels Of Customer Understanding",
+    "discovery_source": "Smashing Magazine - UX Design",
+    "final_source_url": "https://smashingmagazine.com/2026/05/four-levels-customer-understanding/",
+    "publisher": "Smashing Magazine (Vitaly Friedman)",
+    "published_at": "2026-05-22",
+    "concrete_facts": [
+      "고객 이해 4단계: ①말하는 것(설문, 신뢰 낮음) ②생각·감정(인터뷰) ③행동(분석·태스크 분석) ④이유(관찰·심층 인터뷰)",
+      "Exposure hours — 직원이 6~12주마다 고객과 2시간 이상 직접 접촉",
+      "헬프데스크 불만 분기 분석, 사용자 공동 디자인(기능 랭킹) 등 방법 제시"
+    ],
+    "image_url": "https://files.smashing.media/articles/four-levels-customer-understanding/1-four-levels-customer-understanding.jpg",
+    "image_source": "Smashing Magazine 대표 이미지",
+    "verdict": "검증 통과"
+  }
+]

@@ -1,0 +1,491 @@
+[
+  {
+    "id": "frontendmasters-whats-missing-css-layout",
+    "title": "What’s missing in CSS layout?",
+    "discovery_source": "https://frontendmasters.com/blog/whats-missing-in-css-layout/",
+    "final_source_url": "https://frontendmasters.com/blog/whats-missing-in-css-layout/",
+    "publisher": "Chris Coyier, Frontend Masters Blog",
+    "published_at": "2026-06-02",
+    "concrete_facts": [
+      "Patrick Brosset의 분석을 인용해 CSS 레이아웃에 빠진 기능이 '족히 12가지(solid dozen)' 있다고 정리",
+      "CSS Grid·Flexbox·Container queries를 현행 레이아웃의 강력한 도구로 들면서도, 구체적으로 파고들면 여전한 공백이 드러난다고 지적",
+      "CSS가 이미 알고 있는 것보다 많은 기능을 담고 있어 부족함이 잘 안 느껴지지만, 세부 명세를 보면 한계가 보인다는 논지"
+    ],
+    "image_url": "https://i0.wp.com/frontendmasters.com/blog/wp-content/uploads/2026/06/pexels-photo-6991807.jpeg?fit=1024%2C682&ssl=1",
+    "image_source": "Frontend Masters 블로그 본문 대표 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "csstricks-offset-path",
+    "title": "offset-path",
+    "discovery_source": "https://css-tricks.com/almanac/properties/o/offset-path/",
+    "final_source_url": "https://css-tricks.com/almanac/properties/o/offset-path/",
+    "publisher": "Geoff Graham, CSS-Tricks Almanac",
+    "published_at": "2026-06-03",
+    "concrete_facts": [
+      "offset-path는 애니메이션 시 요소가 따라갈 이동 경로를 정의하며, 과거 motion-path였던 속성을 spec에서 motion-* → offset-*로 개명한 것",
+      "지정 가능한 값은 path()·shape()·url()·circle()/ellipse()/inset()/polygon()/xywh()·none이지만 실제로 동작하는 건 사실상 path()와 none뿐",
+      "관련 속성으로 offset-distance(경로 진행), offset-rotate(회전), offset-anchor(앵커 지점)가 함께 동작하며 @keyframes에서 offset-distance: 100%로 이동을 구동"
+    ],
+    "image_url": "",
+    "image_source": "본문에 og:image 없음",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "csstricks-function-at-rule",
+    "title": "@function",
+    "discovery_source": "https://css-tricks.com/almanac/rules/f/function/",
+    "final_source_url": "https://css-tricks.com/almanac/rules/f/function/",
+    "publisher": "Declan Chidlow, CSS-Tricks Almanac",
+    "published_at": "2026-06-03",
+    "concrete_facts": [
+      "@function은 인자를 받고 값을 반환하는 재사용 가능한 CSS 커스텀 함수를 정의하며, 구문은 @function --name(--param <length>) { result: ... } 형태",
+      "파라미터는 --로 시작하는 dashed ident여야 하고 타입(<length>·<color> 등)·기본값·# 리스트 지원, result 디스크립터로 반환값 지정",
+      "CSS Custom Functions and Mixins Module Level 1(css-mixins-1) 명세 기반이며 현재 Chrome 148+에서 제한적 지원, @supports (at-rule(@function))로 기능 감지"
+    ],
+    "image_url": "",
+    "image_source": "본문에 og:image 없음",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "csstricks-custom-media-at-rule",
+    "title": "@custom-media",
+    "discovery_source": "https://css-tricks.com/almanac/rules/c/custom-media/",
+    "final_source_url": "https://css-tricks.com/almanac/rules/c/custom-media/",
+    "publisher": "Declan Chidlow, CSS-Tricks Almanac",
+    "published_at": "2026-06-03",
+    "concrete_facts": [
+      "@custom-media는 미디어 쿼리에 별칭을 만드는 at-rule로, @custom-media --tablet (min-width: 768px); 처럼 정의하고 @media (--tablet)로 사용",
+      "별칭은 --로 시작하는 dashed ident(대소문자 구분)이며 전역 스코프, range 구문(768px <= width <= 1024px)과 다른 custom media 중첩 참조 지원",
+      "Media Queries Level 5(mediaqueries-5) 명세 정의이며 JS matchMedia()로는 접근 불가, 미지원 브라우저는 무시하고 PostCSS 플러그인으로 보완"
+    ],
+    "image_url": "",
+    "image_source": "본문에 og:image 없음",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "meyerweb-split-cell-table-headers",
+    "title": "Accessible (I Think) Split-Cell Table Headers",
+    "discovery_source": "https://frontendfoc.us/issues/744 (Frontend Focus #744)",
+    "final_source_url": "https://meyerweb.com/eric/thoughts/2026/05/28/accessible-i-think-split-cell-table-headers/",
+    "publisher": "Eric Meyer, meyerweb.com",
+    "published_at": "2026-05-28",
+    "concrete_facts": [
+      "대각선으로 분할된 표 헤더 셀을 컬럼 헤더는 rowspan=\"2\"로 두 행을 걸치고, 두 번째 thead 행을 position: absolute; bottom:0; left:0로 첫 셀 위에 겹쳐 배치",
+      "대각선은 첫 셀에 linear-gradient 배경으로 그리며, Alice Boxhall·Adrian Roselli가 불완전한 행이 WCAG 1.3.3을 위반한다고 지적해 rowspan 해법으로 수정",
+      "Safari가 thead에 relative positioning을 적용하지 않아 transform·display를 조정하는 벤더별 @supports 규칙으로 우회"
+    ],
+    "image_url": "https://meyerweb.com/eric/thoughts/wp-content/uploads/apollo_16-page_050-crop.png",
+    "image_source": "meyerweb.com 본문 대표 이미지(아폴로 16 표 캡처)",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "polycss-3d-meshes-dom-css",
+    "title": "PolyCSS — Render 3D Meshes in the DOM with CSS",
+    "discovery_source": "https://frontendfoc.us/issues/744 (Frontend Focus #744)",
+    "final_source_url": "https://polycss.com/",
+    "publisher": "Layoutit / PolyCSS",
+    "published_at": "2026-06-03",
+    "concrete_facts": [
+      "PolyCSS는 WebGL·canvas 없이 DOM에서 3D 텍스처 메시를 렌더링하는 라이브러리로, 각 폴리곤이 실제 DOM 요소이며 transform: matrix3d(...)로 배치",
+      "OBJ·glTF·GLB·MagicaVoxel VOX 파일을 로드하고, UV 텍스처 삼각형을 스프라이트 아틀라스로 묶어 CSS background-position으로 처리하며 3D 레이어링은 브라우저 컴포지터가 담당",
+      "각 폴리곤에 클릭 핸들러·CSS 클래스·애니메이션 적용 가능, 커스텀 엘리먼트(<poly-camera>·<poly-scene>·<poly-mesh>)와 React/Vue 바인딩 제공, npm·esm.sh CDN 배포"
+    ],
+    "image_url": "",
+    "image_source": "본문에 og:image 메타 없음",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "angular-v22",
+    "title": "Angular v22 발표",
+    "discovery_source": "https://news.hada.io/topic?id=30162 (GeekNews)",
+    "final_source_url": "https://blog.angular.dev/announcing-angular-v22-c52bb83a4664",
+    "publisher": "Angular Team, blog.angular.dev",
+    "published_at": "2026-06-03",
+    "concrete_facts": [
+      "Signal Forms가 정식 출시 — 반응형 폼·강타입·템플릿 폼·시그널 반응성을 결합한 선언적 폼 API",
+      "Angular Aria가 12개 UI 패턴을 다루는 접근성 프리미티브로 프로덕션 준비 완료, 테스트 하니스 포함하며 Signal Forms와 완전 연동",
+      "OnPush가 신규 앱 기본 변경 감지로 전환되고 ChangeDetectionStrategy.Default가 Eager로 개명, Router가 네이티브 Navigation API 통합, resource·httpResource 비동기 API 제공"
+    ],
+    "image_url": "",
+    "image_source": "공식 블로그 본문(og:image 미확인)",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "github-copilot-app-technical-preview",
+    "title": "Expanded technical preview availability for the GitHub Copilot app",
+    "discovery_source": "https://github.blog/changelog/2026-06-02-expanded-technical-preview-availability-for-the-github-copilot-app",
+    "final_source_url": "https://github.blog/changelog/2026-06-02-expanded-technical-preview-availability-for-the-github-copilot-app",
+    "publisher": "GitHub Changelog",
+    "published_at": "2026-06-02",
+    "concrete_facts": [
+      "GitHub Copilot 데스크톱 앱 기술 프리뷰를 기존 Copilot Pro·Pro+·Business·Enterprise 고객 전체로 확대, Free 사용자는 대기자 등록",
+      "Windows·macOS·Linux 지원, 이슈·PR·프롬프트에서 세션을 시작하고 격리 워크스페이스로 병렬 에이전트 세션 실행",
+      "Canvases(사람·에이전트 양방향 작업 표면)에서 에이전트 진행을 가시적으로 갱신하고 사용자가 편집·재배치·재지정 가능, 음성 대화·클라우드 세션·에이전틱 브라우징 포함"
+    ],
+    "image_url": "",
+    "image_source": "GitHub 블로그 본문(og:image 미확인)",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "github-copilot-code-review-azure-repos",
+    "title": "GitHub Copilot code review for Azure Repos is now in technical preview",
+    "discovery_source": "https://github.blog/changelog/2026-06-02-github-copilot-code-review-for-azure-repos-is-now-in-technical-preview",
+    "final_source_url": "https://github.blog/changelog/2026-06-02-github-copilot-code-review-for-azure-repos-is-now-in-technical-preview",
+    "publisher": "GitHub Changelog",
+    "published_at": "2026-06-02",
+    "concrete_facts": [
+      "Azure Repos PR에서 Copilot 코드 리뷰를 온디맨드로 요청 가능, 조직·리포 레벨에서 각각 활성화 필요",
+      "코드 변경 인라인에 리뷰 코멘트 추가·개선 제안·잠재 이슈 조기 식별, Azure DevOps 떠나지 않고 수행",
+      "GitHub Copilot 라이선스 불필요, GitHub AI 크레딧 종량제 과금(2026-06-02 시작)이며 기존 Copilot 포함 크레딧은 소진하지 않음"
+    ],
+    "image_url": "https://github.blog/wp-content/uploads/2026/07/599853265-fad52fdd-37e1-4628-9be5-8334932a1d7b.jpg",
+    "image_source": "GitHub 블로그 본문 이미지",
+    "verdict": "검증 통과",
+    "exclusion_reason": "프론트엔드 구현 적합성은 낮으나 공식 출처+구체 사실 충족, 정보성 후보로 통과(편집 단계에서 우선순위 하향 권장)"
+  },
+  {
+    "id": "vercel-docker-in-sandbox",
+    "title": "Run Docker containers inside Vercel Sandbox",
+    "discovery_source": "https://vercel.com/changelog/run-docker-containers-inside-vercel-sandbox",
+    "final_source_url": "https://vercel.com/changelog/run-docker-containers-inside-vercel-sandbox",
+    "publisher": "Brandon Tuttle, Vercel Changelog",
+    "published_at": "2026-05-29",
+    "concrete_facts": [
+      "Vercel Sandbox SDK에서 dnf로 Docker 설치 후 dockerd로 데몬 기동, 호스트를 건드리지 않고 컨테이너 빌드·시스템 패키지 설치·파일 수정",
+      "Redis·Postgres 같은 컨테이너 서비스를 테스트 의존성으로 실행하거나 이미지 검증·앱 미리보기에 활용",
+      "sandbox.runCommand()로 sudo·cmd·args·detached 옵션을 써 Docker 작업을 순차 실행, 영속 샌드박스에서 설치·이미지가 세션 간 유지"
+    ],
+    "image_url": "",
+    "image_source": "본문에 og:image 없음",
+    "verdict": "원문 부족",
+    "exclusion_reason": "공식 출처·구체 사실은 충분하나 백엔드/인프라(컨테이너·샌드박스) 중심으로 프론트엔드 구현·디자인-코드 연동 적합성이 낮음"
+  },
+  {
+    "id": "vercel-cli-native-binaries",
+    "title": "Experimental native binaries for Vercel CLI",
+    "discovery_source": "https://vercel.com/changelog/experimental-native-binaries-for-vercel-cli",
+    "final_source_url": "https://vercel.com/changelog/experimental-native-binaries-for-vercel-cli",
+    "publisher": "Vercel Changelog",
+    "published_at": "2026-05-27",
+    "concrete_facts": [
+      "Vercel CLI가 Node.js 런타임 의존 없이 더 빠르게 시작하는 실험적 네이티브 바이너리를 옵션으로 제공",
+      "바이너리는 코드 서명되어 OS가 출처·변조를 검증, macOS에서는 자격증명을 바이너리 스코프의 시스템 Keychain에 저장",
+      "pnpm i -g @vercel/vc-native -f로 설치(vercel·vc 명령 대체), macOS·Linux·Windows의 x64·arm64 지원"
+    ],
+    "image_url": "",
+    "image_source": "본문에 og:image 없음",
+    "verdict": "원문 부족",
+    "exclusion_reason": "공식 출처·구체 사실은 충분하나 CLI 툴링 중심으로 프론트엔드 구현·디자인-코드 연동 적합성이 낮음"
+  },
+  {
+    "id": "vercel-opus-4-8-gateway",
+    "title": "Opus 4.8 on AI Gateway",
+    "discovery_source": "https://vercel.com/changelog/opus-4-8-on-ai-gateway",
+    "final_source_url": "https://vercel.com/changelog/opus-4-8-on-ai-gateway",
+    "publisher": "Vercel Changelog",
+    "published_at": "2026-05-28",
+    "concrete_facts": [
+      "Claude Opus 4.8이 Vercel AI Gateway에서 사용 가능, anthropic/claude-opus-4.8 모델 ID로 AI SDK 호출",
+      "장기 에이전틱 실행과 mid-task 인간 교정이 필요했던 리팩터 등 다단계 코딩 작업, 덜 헤지된 명료한 산문 생성에 강점",
+      "AI Gateway는 마크업·플랫폼 수수료 없이 프로바이더 가격 그대로 반영, BYOK 요청 포함"
+    ],
+    "image_url": "",
+    "image_source": "본문에 og:image 없음",
+    "verdict": "원문 부족",
+    "exclusion_reason": "모델 게이트웨이 추가 공지로 프론트엔드 구현·접근성·디자인-코드 연동 적합성이 낮음(모델 가용성 단신)"
+  },
+  {
+    "id": "vercel-provider-allowlist",
+    "title": "Team-wide provider allowlist on AI Gateway",
+    "discovery_source": "https://vercel.com/changelog/team-wide-provider-allowlist-on-ai-gateway",
+    "final_source_url": "https://vercel.com/changelog/team-wide-provider-allowlist-on-ai-gateway",
+    "publisher": "Vercel Changelog",
+    "published_at": "2026-05-28",
+    "concrete_facts": [
+      "AI Gateway가 팀 단위 프로바이더 허용목록 지원, 승인된 프로바이더로만 트래픽 라우팅하며 BYOK 포함 모든 트래픽에 적용",
+      "게이트웨이 레벨에서 강제되어 코딩 에이전트의 우회 시도도 차단, 허용목록 활성 시 신규 프로바이더는 기본 비활성",
+      "팀 소유자만 허용목록 수정 가능, AI SDK·OpenAI Chat Completions·Anthropic Messages 등 모든 API 포맷에 작동"
+    ],
+    "image_url": "",
+    "image_source": "본문에 og:image 없음",
+    "verdict": "원문 부족",
+    "exclusion_reason": "팀 거버넌스/인프라 설정 기능으로 프론트엔드 구현·디자인-코드 연동 적합성이 낮음"
+  },
+  {
+    "id": "vercel-qwen-37-max",
+    "title": "Qwen 3.7 Max now available on Vercel AI Gateway",
+    "discovery_source": "https://vercel.com/changelog/qwen-3-7-max-now-available-on-vercel-ai-gateway",
+    "final_source_url": "https://vercel.com/changelog/qwen-3-7-max-now-available-on-vercel-ai-gateway",
+    "publisher": "Vercel Changelog",
+    "published_at": "2026-05-21",
+    "concrete_facts": [
+      "알리바바 Qwen 3.7 Max가 Vercel AI Gateway에서 사용 가능, 모델 ID alibaba/qwen-3.7-max",
+      "프런트엔드 프로토타이핑과 복잡한 멀티파일 엔지니어링에서 개선, 에이전트 기반 아키텍처로 코딩·오피스 자동화 지원",
+      "장기 자율 실행과 멀티에이전트 오케스트레이션 지향, AI SDK·플레이그라운드로 접근"
+    ],
+    "image_url": "",
+    "image_source": "본문에 og:image 없음",
+    "verdict": "원문 부족",
+    "exclusion_reason": "모델 가용성 단신으로 프론트엔드 구현·디자인-코드 연동의 깊이가 부족(프런트엔드 프로토타이핑 언급은 있으나 화면·플로우 증거 없음)"
+  },
+  {
+    "id": "shadcn-4-8-0",
+    "title": "shadcn@4.8.0",
+    "discovery_source": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.0",
+    "final_source_url": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.0",
+    "publisher": "shadcn/ui Releases (GitHub)",
+    "published_at": "2025-05-21",
+    "concrete_facts": [
+      "shadcn registry validate 명령 추가(#10715)",
+      "registry.json에 include 지원 추가(#10708)",
+      "version derivation 테스트 실패 수정(#10567)"
+    ],
+    "image_url": "",
+    "image_source": "GitHub 릴리즈 노트(og:image 없음)",
+    "verdict": "원문 부족",
+    "exclusion_reason": "디자인 시스템 라이브러리라 타겟 적합성은 있으나 변경 내용이 registry CLI 검증·내부 테스트 수정 중심의 마이너 패치로 발행할 컴포넌트/UI 변화가 부족"
+  },
+  {
+    "id": "davinci-resolve-21",
+    "title": "DaVinci Resolve 21",
+    "discovery_source": "https://news.hada.io/topic?id=30168 (GeekNews)",
+    "final_source_url": "https://www.blackmagicdesign.com/products/davinciresolve",
+    "publisher": "Blackmagic Design",
+    "published_at": "2026-06-03",
+    "concrete_facts": [
+      "정지 사진용 Photo page 신설 — 노드 기반 조정·비파괴 편집·AI 검색 앨범 관리 통합",
+      "AI 도구 확장 — 10초 샘플 기반 음성 생성, 얼굴 나이·형상 변경, 잡티 제거, CineFocus 초점 조정, IntelliSearch 콘텐츠·대사·얼굴 검색",
+      "VR180/360·Apple Immersive 몰입형 영상, H.265/MV-HEVC 인코딩, 8K 실시간 편집 지원"
+    ],
+    "image_url": "",
+    "image_source": "GeekNews 경유, 공식 제품 페이지 직접 미열람(og:image 미확인)",
+    "verdict": "원문 부족",
+    "exclusion_reason": "영상 편집 소프트웨어 업데이트로 웹 프론트엔드·접근성·디자인-코드 연동 적합성이 낮고, 공식 원문을 직접 열지 못해 사실이 GeekNews 요약 경유"
+  },
+  {
+    "id": "claude-code-dynamic-workflows",
+    "title": "A harness for every task: dynamic workflows in Claude Code",
+    "discovery_source": "https://news.hada.io/topic?id=30144 (GeekNews)",
+    "final_source_url": "https://news.hada.io/topic?id=30144",
+    "publisher": "Thariq Shihipar, Sid Bidasaria (Anthropic, Claude Code team)",
+    "published_at": "2026-06-02",
+    "concrete_facts": [
+      "Dynamic Workflows는 Claude가 JS 파일로 자체 실행 구조(harness)를 작성해 다중 서브에이전트를 조율",
+      "에이전틱 게으름·자기편향 평가·목표 표류 세 가지 실패 모드를 겨냥",
+      "classify-and-route·fan-out-and-synthesize·adversarial verification·tournament·generate-and-filter·loop-until-convergence 6가지 패턴 제공"
+    ],
+    "image_url": "",
+    "image_source": "공식 원문 URL 미확보(X 게시물·GeekNews 경유)",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "공식 Anthropic 블로그 원문 URL을 특정하지 못하고 출처가 X 게시물·GeekNews 요약에 머물러 본문 직접 검증 불가"
+  },
+  {
+    "id": "openai-codex-every-role",
+    "title": "Codex for every role, tool, and workflow",
+    "discovery_source": "https://openai.com/index/codex-for-every-role-tool-workflow/",
+    "final_source_url": "https://openai.com/index/codex-for-every-role-tool-workflow/",
+    "publisher": "OpenAI Blog",
+    "published_at": "",
+    "concrete_facts": [],
+    "image_url": "https://images.ctfassets.net/kftzwdyauwt9/4Dvw4ZQ90swvHAxpe8tf49/b38745978bd83b554ac8e4f5865cee37/16x9_SEO_Preview.png?w=1600&h=900&fit=fill",
+    "image_source": "OG 미리보기 이미지(본문 미열람)",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "openai.com 본문이 HTTP 403으로 반복 차단되어 본문 직접 검증 불가"
+  },
+  {
+    "id": "openai-frontier-models-codex-aws",
+    "title": "OpenAI frontier models and Codex are now available on AWS",
+    "discovery_source": "https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws/",
+    "final_source_url": "https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws/",
+    "publisher": "OpenAI Blog",
+    "published_at": "",
+    "concrete_facts": [],
+    "image_url": "https://images.ctfassets.net/kftzwdyauwt9/2Tbsus4QAtPDAlsIM3vYO2/87f4c6894832d7937e54ecb3c245fdbe/OAI_AWS_Partnership_16x9_Art_Card.png?w=1600&h=900&fit=fill",
+    "image_source": "OG 미리보기 이미지(본문 미열람)",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "openai.com이 403 차단으로 본문 미열람, 또한 엔터프라이즈 조달/인프라 제휴로 프론트엔드 적합성 낮음"
+  },
+  {
+    "id": "openai-self-improving-tax-agents",
+    "title": "Building self-improving tax agents with Codex",
+    "discovery_source": "https://openai.com/index/building-self-improving-tax-agents-with-codex/",
+    "final_source_url": "https://openai.com/index/building-self-improving-tax-agents-with-codex/",
+    "publisher": "OpenAI Blog",
+    "published_at": "",
+    "concrete_facts": [],
+    "image_url": "https://images.ctfassets.net/kftzwdyauwt9/3upo248JfOrgp0fahNLrkt/10f9e23a8be06e38fb21d29faf5e320d/SEO.png?w=1600&h=900&fit=fill",
+    "image_source": "OG 미리보기 이미지(본문 미열람)",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "openai.com 403 차단으로 본문 미열람, 세무 에이전트 사례 연구로 프론트엔드 적합성 낮음"
+  },
+  {
+    "id": "fenews-2026-06",
+    "title": "FE News 26년 6월 소식을 전해드립니다.",
+    "discovery_source": "https://d2.naver.com/news/7161766",
+    "final_source_url": "https://d2.naver.com/news/7161766",
+    "publisher": "Naver D2 / FE News",
+    "published_at": "2026-06-01",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "d2.naver.com이 WebFetch에서 차단되어 본문 직접 열람 불가. 또한 FE News는 큐레이션 모음글이라 개별 원문 검증이 별도로 필요"
+  },
+  {
+    "id": "frontendfocus-744",
+    "title": "Frontend Focus #744 — June 3, 2026",
+    "discovery_source": "https://frontendfoc.us/issues/744",
+    "final_source_url": "https://frontendfoc.us/issues/744",
+    "publisher": "Frontend Focus (Cooperpress)",
+    "published_at": "2026-06-03",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "뉴스레터 큐레이션 모음으로 그 자체는 발행 원문이 아님. 내부 항목(PolyCSS, Eric Meyer split-cell)을 개별 후보로 분리해 별도 검증 통과 처리함"
+  },
+  {
+    "id": "geeknews-google-io-2026",
+    "title": "Google I/O 2026 주요 발표 12가지 키노트 모아보기",
+    "discovery_source": "https://news.hada.io/topic?id=30165 (GeekNews)",
+    "final_source_url": "https://news.hada.io/topic?id=30165",
+    "publisher": "GeekNews (출처 다수 키노트 모음)",
+    "published_at": "2026-06-02",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "여러 키노트를 묶은 모음 게시물이라 단일 공식 원문이 없고, Web UI 관련 개별 발표는 별도 공식 원문으로 분리 검증해야 함"
+  },
+  {
+    "id": "geeknews-rsync-and-rage",
+    "title": "rsync와 분노",
+    "discovery_source": "https://news.hada.io/topic?id=30161 (GeekNews)",
+    "final_source_url": "https://news.hada.io/topic?id=30161",
+    "publisher": "GeekNews",
+    "published_at": "2026-06-02",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "오픈소스 유지보수 에세이로 백엔드/CLI·CI 보안 중심, 프론트엔드 구현·디자인-코드 연동과 무관"
+  },
+  {
+    "id": "geeknews-gmail-thinks-im-stupid",
+    "title": "Gmail은 내가 멍청하다고 생각해서, 나는 떠났다",
+    "discovery_source": "https://news.hada.io/topic?id=30133 (GeekNews)",
+    "final_source_url": "https://news.hada.io/topic?id=30133",
+    "publisher": "GeekNews (개인 블로그 경유)",
+    "published_at": "2026-06-01",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "AI UX 비판 개인 에세이로 화면·플로우 증거는 일부 있으나 발행할 구체 사실이 주관 의견 중심, 프론트엔드 구현 적합성 낮음"
+  },
+  {
+    "id": "geeknews-adafruit-flux-letter",
+    "title": "Adafruit, Flux.ai를 대리한 Fenwick 법률 자문으로부터 요구 서한을 받다",
+    "discovery_source": "https://news.hada.io/topic?id=30132 (GeekNews)",
+    "final_source_url": "https://news.hada.io/topic?id=30132",
+    "publisher": "GeekNews (Adafruit 블로그 경유)",
+    "published_at": "2026-05-22",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "법적 분쟁 보도로 프론트엔드·디자인-코드 주제와 무관"
+  },
+  {
+    "id": "vercel-elastic-build-oom",
+    "title": "Elastic Build Machines now protect against out of memory builds",
+    "discovery_source": "https://vercel.com/changelog/elastic-build-machines-now-protect-against-out-of-memory-builds",
+    "final_source_url": "https://vercel.com/changelog/elastic-build-machines-now-protect-against-out-of-memory-builds",
+    "publisher": "Vercel Changelog",
+    "published_at": "2026-06-02",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "빌드 인프라 OOM 보호 기능으로 프론트엔드 구현·디자인-코드 연동 적합성 낮음(우선순위 하위라 간이 판정)"
+  },
+  {
+    "id": "vercel-qwen-37-plus",
+    "title": "Qwen 3.7 Plus now available on AI Gateway",
+    "discovery_source": "https://vercel.com/changelog/qwen-3-7-plus-now-available-on-ai-gateway",
+    "final_source_url": "https://vercel.com/changelog/qwen-3-7-plus-now-available-on-ai-gateway",
+    "publisher": "Vercel Changelog",
+    "published_at": "2026-05-21",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "모델 가용성 단신으로 Qwen 3.7 Max와 중복 성격, 프론트엔드 적합성 낮음(간이 판정)"
+  },
+  {
+    "id": "vercel-opensearch-serverless-marketplace",
+    "title": "Amazon OpenSearch Serverless is now available in the Vercel Marketplace",
+    "discovery_source": "https://vercel.com/changelog/amazon-opensearch-serverless-is-now-available-in-the-vercel-marketplace",
+    "final_source_url": "https://vercel.com/changelog/amazon-opensearch-serverless-is-now-available-in-the-vercel-marketplace",
+    "publisher": "Vercel Changelog",
+    "published_at": "2026-06-02",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "검색 인프라 마켓플레이스 통합으로 프론트엔드·디자인-코드 연동 적합성 낮음(간이 판정)"
+  },
+  {
+    "id": "vercel-conductor-parallel-agents",
+    "title": "How Conductor moved parallel coding agents from the laptop to the cloud with Vercel Sandbox",
+    "discovery_source": "https://vercel.com/blog/how-conductor-moved-parallel-coding-agents-from-the-laptop-to-the-cloud-with-vercel-sandbox",
+    "final_source_url": "https://vercel.com/blog/how-conductor-moved-parallel-coding-agents-from-the-laptop-to-the-cloud-with-vercel-sandbox",
+    "publisher": "Vercel Blog",
+    "published_at": "2026-06-02",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "고객 사례(에이전트 인프라 클라우드 이전) 성격으로 프론트엔드 구현·디자인-코드 연동 적합성 낮음(간이 판정)"
+  },
+  {
+    "id": "vercel-domains-price-sort",
+    "title": "Vercel Domains now supports price sorting and availability filtering",
+    "discovery_source": "https://vercel.com/changelog/vercel-domains-now-supports-price-sorting-and-availability-filtering",
+    "final_source_url": "https://vercel.com/changelog/vercel-domains-now-supports-price-sorting-and-availability-filtering",
+    "publisher": "Vercel Changelog",
+    "published_at": "2026-06-02",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "도메인 구매 UI 정렬·필터 단신으로 발행할 만한 프론트엔드 구현 깊이 부족(간이 판정)"
+  },
+  {
+    "id": "vercel-firecrawl-marketplace",
+    "title": "Firecrawl joins the Vercel Marketplace",
+    "discovery_source": "https://vercel.com/changelog/firecrawl-joins-the-vercel-marketplace",
+    "final_source_url": "https://vercel.com/changelog/firecrawl-joins-the-vercel-marketplace",
+    "publisher": "Vercel Changelog",
+    "published_at": "2026-06-02",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "크롤링 인프라 마켓플레이스 통합으로 프론트엔드·디자인-코드 연동 적합성 낮음(간이 판정)"
+  },
+  {
+    "id": "geeknews-nbd-vram",
+    "title": "nbd-vram",
+    "discovery_source": "https://news.hada.io/topic?id=30148 (GeekNews)",
+    "final_source_url": "https://news.hada.io/topic?id=30148",
+    "publisher": "GeekNews (GitHub 프로젝트 경유)",
+    "published_at": "2026-06-01",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "Linux GPU VRAM 스왑 데몬으로 시스템/하드웨어 영역, 프론트엔드·디자인-코드와 무관(간이 판정)"
+  }
+]

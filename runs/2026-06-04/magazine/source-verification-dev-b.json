@@ -1,0 +1,458 @@
+[
+  {
+    "id": "::search-text",
+    "title": "::search-text",
+    "discovery_source": "https://css-tricks.com/almanac/pseudo-selectors/s/search-text/",
+    "final_source_url": "https://css-tricks.com/almanac/pseudo-selectors/s/search-text/",
+    "publisher": "CSS-Tricks (Sunkanmi Fafowora)",
+    "published_at": "2026-06-02",
+    "concrete_facts": [
+      "::search-text는 브라우저 '페이지 내 찾기'(Ctrl+F/⌘F) 일치 텍스트를 선택하는 하이라이트 의사 요소로, background-color·color·text-decoration·text-shadow·custom property만 지원하고 레이아웃 속성은 제외된다",
+      "::search-text:current 조합으로 여러 일치 항목 중 현재 포커스된 항목만 별도 스타일링 가능, 속성은 트리 하위로 캐스케이드된다",
+      "CSS Pseudo-Elements Module Level 4에 정의된 기능으로 접근성상 색 대비 4.5:1 유지와 과한 색 변경 대신 text-decoration 권장"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미노출",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "New to the web platform in May",
+    "title": "New to the web platform in May",
+    "discovery_source": "https://web.dev/blog/web-platform-05-2026?hl=en",
+    "final_source_url": "https://web.dev/blog/web-platform-05-2026?hl=en",
+    "publisher": "web.dev (Rachel Andrew)",
+    "published_at": "2026-05-29",
+    "concrete_facts": [
+      ":open CSS 의사 클래스가 Safari 26.5에서 지원되며 details·dialog·picker 등 열림/닫힘 상태 스타일링을 details[open] 속성 선택자 대신 처리 (Baseline)",
+      "Chrome 148이 이름만 사용하는 컨테이너 쿼리(container-type 설정 불필요)와 video·audio의 loading=\"lazy\" 네이티브 지연 로딩 지원 추가",
+      "Firefox 151이 @container의 style() 커스텀 프로퍼티 쿼리와 데스크톱 Document Picture-in-Picture API 도입"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미노출",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "Release Notes for Safari Technology Preview 244",
+    "title": "Release Notes for Safari Technology Preview 244",
+    "discovery_source": "https://webkit.org/blog/17962/release-notes-for-safari-technology-preview-244/",
+    "final_source_url": "https://webkit.org/blog/17962/release-notes-for-safari-technology-preview-244/",
+    "publisher": "WebKit Blog",
+    "published_at": "2026-05-21",
+    "concrete_facts": [
+      "position-anchor CSS 속성에 normal·none 값 지원과 transform 인식 앵커 포지셔닝 추가",
+      "AnimationEvent·TransitionEvent 인터페이스에 animation 속성 추가, shared worker 내 dedicated worker 생성 지원",
+      "canvas drawFocusIfNeeded()의 VoiceOver 커서 위치 접근성 버그 수정, MathML 다중 문자 연산자 지원"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미노출",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "Astro 6.4",
+    "title": "Astro 6.4",
+    "discovery_source": "https://astro.build/blog/astro-640/",
+    "final_source_url": "https://astro.build/blog/astro-640/",
+    "publisher": "Astro Blog (Erika)",
+    "published_at": "2026-05-28",
+    "concrete_facts": [
+      "markdown.processor 설정 API 신설로 기본 unified 파이프라인을 통째로 교체 가능, 상위 deprecated 옵션은 Astro 8.0까지 processor별 설정으로 이전",
+      "@astrojs/markdown-satteri Rust 기반 마크다운 프로세서로 대형 문서 사이트에서 1분 이상 빌드 시간 단축",
+      "@astrojs/cloudflare의 cf() 헬퍼가 실험적 고급 라우팅의 SESSION KV 바인딩 주입·ASSETS 정적 자산 서빙을 자동 설정"
+    ],
+    "image_url": "https://astro.build/_astro/blog-post-astro-6.4.DCu1d7BD_ZIhAJT.webp",
+    "image_source": "원문 og:image",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "Algorithmic Theming Engines: Building Self-Correcting Color Systems With `contrast-color()`",
+    "title": "Algorithmic Theming Engines: Building Self-Correcting Color Systems With `contrast-color()`",
+    "discovery_source": "https://smashingmagazine.com/2026/05/building-self-correcting-color-systems-contrast-color/",
+    "final_source_url": "https://smashingmagazine.com/2026/05/building-self-correcting-color-systems-contrast-color/",
+    "publisher": "Smashing Magazine (Durgesh Pawar)",
+    "published_at": "2026-05-28",
+    "concrete_facts": [
+      "contrast-color() 함수는 색을 받아 검정 또는 흰색 중 대비가 높은 쪽을 반환(color: contrast-color(var(--brand-color))), 비율 숫자가 아닌 실제 색값 반환",
+      "Chrome 147(2026.4)·Firefox 146·Safari 26.0 안정판 구현, 2026년 4월 Baseline Newly Available 도달",
+      "WCAG 2.x 상대 휘도 수식 기반, 출력이 보간 불가능한 이산값이라 transition 시 색이 부드럽게 페이드되지 않고 약 18% 휘도 지점에서 스냅됨"
+    ],
+    "image_url": "http://files.smashing.media/articles/building-self-correcting-color-systems-contrast-color/building-self-correcting-color-systems-contrast-color.jpg",
+    "image_source": "pool 제공 og:image",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "Advanced Tree Counting: Mathematical Layouts With `sibling-index()` And `sibling-count()`",
+    "title": "Advanced Tree Counting: Mathematical Layouts With `sibling-index()` And `sibling-count()`",
+    "discovery_source": "https://smashingmagazine.com/2026/05/mathematical-layouts-sibling-index-sibling-count/",
+    "final_source_url": "https://smashingmagazine.com/2026/05/mathematical-layouts-sibling-index-sibling-count/",
+    "publisher": "Smashing Magazine (Durgesh Pawar)",
+    "published_at": "2026-05-21",
+    "concrete_facts": [
+      "sibling-index()는 1-based 위치, sibling-count()는 전체 자식 수를 <integer>로 반환해 calc()·min()·max()·삼각함수에서 사용 가능",
+      "animation-delay: calc(sibling-index() * 100ms) 한 줄로 :nth-child() 없이 5~5000개 항목 스태거 애니메이션 구현",
+      "Chrome/Edge 138(2025.6)·Safari 26.2 안정판 지원, Firefox 미구현이라 @supports 점진 향상 권장. display:none 요소도 sibling-count()에 포함되는 DOM 트리 기반 한계"
+    ],
+    "image_url": "http://files.smashing.media/articles/mathematical-layouts-sibling-index-sibling-count/mathematical-layouts-sibling-index-sibling-count.jpg",
+    "image_source": "pool 제공 og:image",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "The State of CSS Centering in 2026",
+    "title": "The State of CSS Centering in 2026",
+    "discovery_source": "https://css-tricks.com/the-state-of-css-centering-in-2026/",
+    "final_source_url": "https://css-tricks.com/the-state-of-css-centering-in-2026/",
+    "publisher": "CSS-Tricks (Temani Afif)",
+    "published_at": "2026-05-22",
+    "concrete_facts": [
+      "grid/flex에서 place-content: center, block display에서 align-content·justify-items 조합 등 디스플레이별 정렬 방식 구분",
+      "place-content: safe center로 오버플로 시 콘텐츠 잘림을 막는 안전 정렬, anchor positioning의 place-self: end anchor-center 활용",
+      "inset:0 + place-self:center로 기존 absolute 정렬 대체하는 현대적 패턴 제시"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미노출",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "Cross-Document View Transitions: Scaling Across Hundreds of Elements",
+    "title": "Cross-Document View Transitions: Scaling Across Hundreds of Elements",
+    "discovery_source": "https://css-tricks.com/cross-document-view-transitions-part-2/",
+    "final_source_url": "https://css-tricks.com/cross-document-view-transitions-part-2/",
+    "publisher": "CSS-Tricks (Durgesh Pawar)",
+    "published_at": "2026-05-25",
+    "concrete_facts": [
+      "view-transition-name(고유 식별자)과 view-transition-class(스타일 훅)를 구분하고 ::view-transition-group(*.card) 와일드카드로 셀렉터 폭증 방지",
+      "stylesheet에 미리 이름 두지 않고 pageswap/pagereveal 라이프사이클에서 동적 명명해 상호작용 요소만 스냅샷, 성능 오버헤드 감소",
+      "모든 애니메이션을 @media (prefers-reduced-motion: no-preference)로 감싸 접근성 보장, 미지원 브라우저는 일반 내비게이션으로 점진 향상"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미노출",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "Revealing Text With CSS letter-spacing",
+    "title": "Revealing Text With CSS letter-spacing",
+    "discovery_source": "https://css-tricks.com/revealing-text-with-css-letter-spacing/",
+    "final_source_url": "https://css-tricks.com/revealing-text-with-css-letter-spacing/",
+    "publisher": "CSS-Tricks (Preethi)",
+    "published_at": "2026-05-27",
+    "concrete_facts": [
+      "letter-spacing: -1ch + color: transparent로 글자를 겹쳐 숨긴 뒤 letter-spacing: 0ch·color로 전환해 텍스트를 드러내는 리빌 효과",
+      "letter-spacing: -2ch + text-indent: -1.5ch + overflow: clip 조합으로 콘텐츠를 화면 밖으로 밀어내는 숨김/교체 효과",
+      "::first-letter만 color: black으로 남겨 첫 글자만 표시, cubic-bezier(.8,-.5,.2,1.4) 바운스 타이밍으로 스태거 애니메이션"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미노출",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "What’s !important #12: Safari Testing, ::checkmark, HTML Anchor Positioning, and More",
+    "title": "What’s !important #12: Safari Testing, ::checkmark, HTML Anchor Positioning, and More",
+    "discovery_source": "https://css-tricks.com/whats-important-12/",
+    "final_source_url": "https://css-tricks.com/whats-important-12/",
+    "publisher": "CSS-Tricks (Daniel Schwarz)",
+    "published_at": "2026-05-29",
+    "concrete_facts": [
+      "::checkmark 의사 요소로 체크박스·라디오·select의 체크마크를 스타일링하는 신규 CSS 기능 소개",
+      "HTML anchor 속성이 빠진 대신 data 속성과 고급 attr() 함수로 앵커 연관을 관리하는 방식 시연",
+      "border-shape + shape() 함수로 clip-path보다 다양한 테두리 형태 생성, Firefox 151 컨테이너 스타일 쿼리 Baseline 진입"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미노출",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "Astro Markdown Component Utility for Any Framework",
+    "title": "Astro Markdown Component Utility for Any Framework",
+    "discovery_source": "https://css-tricks.com/astro-markdown-component-utility-any-framework/",
+    "final_source_url": "https://css-tricks.com/astro-markdown-component-utility-any-framework/",
+    "publisher": "CSS-Tricks (Zell Liew)",
+    "published_at": "2026-06-01",
+    "concrete_facts": [
+      "@splendidlabz/utils 패키지의 markdown 유틸이 마크다운 텍스트를 HTML로 변환하며 inline 옵션으로 p 태그 제거 지원",
+      "들여쓴 콘텐츠를 코드 블록(4칸 이상 → pre/code)으로 오해하는 표준 라이브러리 문제를 들여쓰기 무관하게 올바른 HTML 생성으로 해결",
+      "Astro에서 Astro.slots.render('default')로 슬롯을 캡처해 <Fragment set:html={html} />로 렌더, Svelte는 슬롯 동적 읽기 제약으로 prop + {@html} 사용"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미노출",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "Maybe Don’t Rely on Google’s “Modern Web Guidance”",
+    "title": "Maybe Don’t Rely on Google’s “Modern Web Guidance”",
+    "discovery_source": "https://adrianroselli.com/2026/05/maybe-dont-rely-on-googles-modern-web-guidance.html",
+    "final_source_url": "https://adrianroselli.com/2026/05/maybe-dont-rely-on-googles-modern-web-guidance.html",
+    "publisher": "Adrian Roselli",
+    "published_at": "2026-05-25",
+    "concrete_facts": [
+      "MWG가 토스트 알림 등 흔한 인터랙티브 패턴의 접근성 가이드를 누락, 가이드가 흩어질수록 AI 에이전트가 누락할 가능성 지적",
+      "MWG로 생성한 아코디언 예제가 WCAG 위반 — Baseline·폴백 약속에도 Firefox에서 애니메이션이 동작하지 않는 오류 발견",
+      "LLM 비결정성으로 접근성 규칙 준수 보장 불가, Google 컨설턴트도 '어떤 프롬프트에 가이드가 쓰일지 보장 못 한다' 인정"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미노출",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "Signed URLs are now available for Vercel Blob",
+    "title": "Signed URLs are now available for Vercel Blob",
+    "discovery_source": "https://vercel.com/changelog/signed-urls-are-now-available-for-vercel-blob",
+    "final_source_url": "https://vercel.com/changelog/signed-urls-are-now-available-for-vercel-blob",
+    "publisher": "Vercel",
+    "published_at": "2026-06-02",
+    "concrete_facts": [
+      "put·get·head·delete 단일 작업, 단일 pathname, 최대 7일 만료로 스코프된 시간 제한 서명 URL 생성",
+      "PUT URL은 multipart 지원으로 브라우저가 서버 경유 없이 대용량 파일을 Blob에 직접 스트리밍, delete는 ifMatch ETag 조건부 보호",
+      "@vercel/blob 2.4.0 이상 필요, OIDC 연동으로 BLOB_READ_WRITE_TOKEN이 서버를 떠나지 않음"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미노출",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "Redesigned Deployments List",
+    "title": "Redesigned Deployments List",
+    "discovery_source": "https://vercel.com/changelog/redesigned-deployments-list",
+    "final_source_url": "https://vercel.com/changelog/redesigned-deployments-list",
+    "publisher": "Vercel",
+    "published_at": "2026-05-27",
+    "concrete_facts": [
+      "배포 목록을 더 조밀한 레이아웃으로 재설계해 한 화면에 더 많은 배포 표시",
+      "환경을 상태와 함께 그룹화, 브랜치·커밋 스캔이 쉬워지도록 정비",
+      "활동량 많은 프로젝트용 모바일 배포 활동 스캔 경험 개선"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미노출",
+    "verdict": "원문 부족",
+    "exclusion_reason": "공식 changelog이나 구체 사실이 UI 밀도·그룹화·모바일 개선 3건에 그치고 화면 캡처/구체 수치가 없어 발행 분량 근거 약함. 화면 증거 부재."
+  },
+  {
+    "id": "shadcn@4.10.0",
+    "title": "shadcn@4.10.0",
+    "discovery_source": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.10.0",
+    "final_source_url": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.10.0",
+    "publisher": "shadcn/ui Releases",
+    "published_at": "2026-06-01",
+    "concrete_facts": [
+      "GitHub registries 지원 추가 (registry/github 문서)",
+      "단일 minor change로 변경 범위 제한적",
+      "추가 구체 기능·API 변화 없음"
+    ],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "공식 릴리즈이나 단일 minor change(GitHub registry 지원) 1건뿐으로 발행에 쓸 구체 사실 3개를 본문에서 채우지 못함."
+  },
+  {
+    "id": "Sandbox persistence is now GA",
+    "title": "Sandbox persistence is now GA",
+    "discovery_source": "https://vercel.com/changelog/sandbox-persistence-is-now-ga",
+    "final_source_url": "https://vercel.com/changelog/sandbox-persistence-is-now-ga",
+    "publisher": "Vercel",
+    "published_at": "2026-05-26",
+    "concrete_facts": [
+      "기본 활성 영속성으로 스냅샷 관리 없이 세션 간 파일시스템 상태 자동 저장·복원",
+      "Sandbox.create({ persistent: false }) 또는 --non-persistent로 비영속 워크로드 옵트아웃",
+      "Sandbox.fork()·getOrCreate()·delete() 및 onCreate·onResume 라이프사이클 훅 추가"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미노출",
+    "verdict": "원문 부족",
+    "exclusion_reason": "공식 출처에 구체 사실은 충분하나 서버사이드 샌드박스/SDK 인프라 중심 글로 프론트엔드 구현·화면·접근성 적합성이 낮음."
+  },
+  {
+    "id": "Chat SDK adds Lark and Feishu support",
+    "title": "Chat SDK adds Lark and Feishu support",
+    "discovery_source": "https://vercel.com/changelog/chat-sdk-adds-lark-feishu-support",
+    "final_source_url": "https://vercel.com/changelog/chat-sdk-adds-lark-feishu-support",
+    "publisher": "Vercel",
+    "published_at": "2026-05-31",
+    "concrete_facts": [
+      "vendor-official 어댑터가 Lark WebSocket 전송으로 연결, 장기 실행 Node 프로세스에서 봇 구동",
+      "cardkit typewriter API로 답변 스트리밍, 인터랙티브 카드·이모지 반응 지원",
+      "HTTP 웹훅 노출 없이 onNewMention() 핸들러로 메시지 처리"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미노출",
+    "verdict": "원문 부족",
+    "exclusion_reason": "백엔드/봇 인프라 중심 글로 프론트엔드 구현·디자인-코드 연동 적합성이 낮음."
+  },
+  {
+    "id": "DuckDuckGo, 트래픽 급증 속 ‘No-AI’ 검색 엔진에 더 쉽게 접근할 수 있게 함",
+    "title": "DuckDuckGo makes its no-AI search engine easier to access as its traffic booms",
+    "discovery_source": "https://news.hada.io/topic?id=30124",
+    "final_source_url": "https://techcrunch.com/2026/06/01/duckduckgo-makes-its-no-ai-search-engine-easier-to-access-as-its-traffic-booms/",
+    "publisher": "TechCrunch (원 보도) / DuckDuckGo (공식)",
+    "published_at": "2026-06-01",
+    "concrete_facts": [
+      "Chrome·Firefox 확장으로 AI 답변·채팅 프롬프트 없는 noai.duckduckgo.com 검색 페이지로 이동",
+      "기존 Privacy Essentials 확장을 Edge·Opera로 확대 예정",
+      "No-AI 페이지 트래픽 5/28 3배 급증, 기준 대비 평균 약 84% 증가"
+    ],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "공식 제품 블로그가 아닌 TechCrunch 보도 경유이며 프론트엔드 구현·화면 증거가 아닌 제품 정책/트래픽 뉴스라 DEV 적합성 낮음."
+  },
+  {
+    "id": "shadcn@4.9.0",
+    "title": "shadcn@4.9.0",
+    "discovery_source": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.9.0",
+    "final_source_url": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.9.0",
+    "publisher": "shadcn/ui Releases",
+    "published_at": "2026-05-31",
+    "concrete_facts": [
+      "npx shadcn eject 명령 추가",
+      "단일 minor change, 동작 상세 미기재",
+      "추가 변경 없음"
+    ],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "단일 명령 추가뿐으로 본문에서 구체 사실 3개를 채우지 못함."
+  },
+  {
+    "id": "shadcn@4.8.3",
+    "title": "shadcn@4.8.3",
+    "discovery_source": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.3",
+    "final_source_url": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.3",
+    "publisher": "shadcn/ui Releases",
+    "published_at": "2026-05",
+    "concrete_facts": [
+      "template handling 업데이트",
+      "RTL 변환 시 className 리터럴의 따옴표 보존",
+      "패치 수준 변경"
+    ],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "사소한 패치 changeset 2건뿐으로 발행 가치 있는 구체 사실 부족."
+  },
+  {
+    "id": "shadcn@4.8.2",
+    "title": "shadcn@4.8.2",
+    "discovery_source": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.2",
+    "final_source_url": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.2",
+    "publisher": "shadcn/ui Releases",
+    "published_at": "2026-05",
+    "concrete_facts": [
+      "template handling 업데이트 단일 패치"
+    ],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "단일 템플릿 패치뿐으로 구체 사실 3개 불가."
+  },
+  {
+    "id": "shadcn@4.8.1",
+    "title": "shadcn@4.8.1",
+    "discovery_source": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.1",
+    "final_source_url": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.8.1",
+    "publisher": "shadcn/ui Releases",
+    "published_at": "2026-05",
+    "concrete_facts": [
+      "style rhea 추가 단일 패치"
+    ],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "단일 스타일 추가뿐으로 구체 사실 3개 불가."
+  },
+  {
+    "id": "MiniMax M3 on AI Gateway",
+    "title": "MiniMax M3 on AI Gateway",
+    "discovery_source": "https://vercel.com/changelog/minimax-m3-on-ai-gateway",
+    "final_source_url": "https://vercel.com/changelog/minimax-m3-on-ai-gateway",
+    "publisher": "Vercel",
+    "published_at": "2026-05",
+    "concrete_facts": [
+      "MiniMax M3 모델이 Vercel AI Gateway에서 사용 가능",
+      "1M 토큰 컨텍스트·네이티브 멀티모달리티, MiniMax Sparse Attention(MSA)",
+      "model 식별자 minimax/m3 설정"
+    ],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "AI 모델 게이트웨이 등재 공지로 프론트엔드 구현·디자인-코드 연동 적합성이 낮은 백엔드/AI 인프라 글."
+  },
+  {
+    "id": "Protecting against token theft",
+    "title": "Protecting against token theft",
+    "discovery_source": "https://vercel.com/blog/protecting-against-token-theft",
+    "final_source_url": "https://vercel.com/blog/protecting-against-token-theft",
+    "publisher": "Vercel",
+    "published_at": "2026-05",
+    "concrete_facts": [
+      "AI 추론 토큰 탈취 공격과 비용 위험 분석",
+      "서버 측 보안 대응 중심",
+      "프론트엔드 화면 무관"
+    ],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "AI 엔드포인트 토큰 탈취 보안 중심 글로 프론트엔드 구현·접근성·디자인 연동 적합성 낮음."
+  },
+  {
+    "id": "작업별 맞춤 하네스: Claude Code의 동적 워크플로우",
+    "title": "작업별 맞춤 하네스: Claude Code의 동적 워크플로우",
+    "discovery_source": "https://news.hada.io/topic?id=30136",
+    "final_source_url": "",
+    "publisher": "GeekNews (큐레이션)",
+    "published_at": "2026-06",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 부족",
+    "exclusion_reason": "Claude Code 에이전트 워크플로우 주제로 프론트엔드 구현·디자인-코드 연동과 무관한 AI 코딩 에이전트 글. DEV(웹퍼블리셔/프론트엔드) 적합성 낮음."
+  },
+  {
+    "id": "How to vet an npm package in 2026",
+    "title": "How to vet an npm package in 2026",
+    "discovery_source": "https://javascriptweekly.com/issues/788",
+    "final_source_url": "",
+    "publisher": "JavaScript Weekly (뉴스레터 아카이브)",
+    "published_at": "2026-06-02",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "링크가 뉴스레터 호 아카이브이며 해당 글의 공식 원문 URL을 별도로 특정·확인하지 못함. 우선순위 낮아 깊은 검증 미수행."
+  },
+  {
+    "id": "What's still missing from CSS",
+    "title": "What's still missing from CSS",
+    "discovery_source": "https://frontendfoc.us/issues/743",
+    "final_source_url": "",
+    "publisher": "Frontend Focus (뉴스레터 아카이브)",
+    "published_at": "2026-05-27",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "링크가 뉴스레터 호 아카이브로 특정 글의 공식 원문 URL을 확정하지 못함. 풀 내 동일 주제 CSS 원문(centering 등)이 별도 통과로 존재."
+  },
+  {
+    "id": "npm and pnpm introduce staged publishing",
+    "title": "npm and pnpm introduce staged publishing",
+    "discovery_source": "https://javascriptweekly.com/issues/787",
+    "final_source_url": "",
+    "publisher": "JavaScript Weekly (뉴스레터 아카이브)",
+    "published_at": "2026-05-26",
+    "concrete_facts": [],
+    "image_url": "",
+    "image_source": "",
+    "verdict": "원문 미확인",
+    "exclusion_reason": "링크가 뉴스레터 호 아카이브로 staged publishing 공식 원문(npm/pnpm 블로그) URL을 별도 특정·확인하지 못함. 우선순위 낮아 깊은 검증 미수행."
+  },
+  {
+    "id": "Single Prompt to Fully Functional Websites Using Mobirise AI",
+    "title": "Single Prompt to Fully Functional Websites Using Mobirise AI",
+    "discovery_source": "https://feedpress.me/link/24028/17349320/single-prompt-to-fully-functional-websites-using-mobirise-ai",
+    "final_source_url": "",
+    "publisher": "CSS Weekly (스폰서 콘텐츠)",
+    "published_at": "2026-05",
+    "concrete_facts": [],
+    "image_url": "https://css-weekly.com/videos/single-prompt-to-fully-functional-websites-using-mobirise-ai/images/single-prompt-to-fully-functional-websites-using-mobirise-ai.jpg",
+    "image_source": "CSS Weekly 영상 썸네일",
+    "verdict": "원문 부족",
+    "exclusion_reason": "Mobirise AI 제품 홍보성/스폰서 튜토리얼 콘텐츠로 판정 기준상 제외 대상."
+  }
+]
