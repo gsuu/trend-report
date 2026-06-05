@@ -81,7 +81,7 @@ orchestrator는 자율적으로 라운드 진행, 종료 조건 만족 시 final
 | senior-meeting | *평가* — 시니어 3명이 이번 회차 산출물 점검 |
 | tf-leader | *외부 비교* — 우리 vs 외부 글 |
 | trend-radar | *시장 동기화* — 지금 한국 핫트렌드 |
-| reference-scout | *자료 발견* — 라이브 레퍼런스 |
+| reference-team | *자료 발견* — 라이브 레퍼런스 |
 | digest/write/review | *생산 라인* — 매거진 본 흐름 |
 
 council은 *분기/월 단위 큰 결정*. 매 회차마다 도는 게 아니라 *방향 재설정이 필요한 시점*에 호출.

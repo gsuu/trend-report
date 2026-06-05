@@ -78,12 +78,24 @@ source-verifier는 각 후보의 최종 기준 원문을 직접 열어 구체 �
 
 shortlist는 글쓰기 단계에서 다시 줄이지 않는다는 점을 첫 줄에 명시한다.
 
+## Phase 5.5: 큐레이션 리뷰 (shortlist-curator 에이전트 위임)
+
+작성된 `shortlist-20-30.md`를 shortlist-curator 에이전트에 넘겨 **리스트 전체의 큐레이션 퀄리티**를 자문받는다. 개별 후보 검증(Phase 3)·분류(Phase 4)와 달리 "이 구성으로 한 호를 내보내도 좋은가"를 본다.
+
+- 출력: 독자 매력도·카테고리 적합성·중복/신선도·출처 다양성·제목 원문 준수 5축 점수 + 약점·승격 제안.
+- 에이전트는 **리스트를 직접 수정하지 않는다.** 자문 결과를 Phase 6 보고에 요약으로 싣는다.
+- **수량·비율 강제 금지** — 약한 글 채워넣기 제안은 하지 않는다 (호당 비율 할당 금지 원칙).
+- 결과는 `runs/YYYY-MM-DD/magazine/shortlist-curation-review.md`에 저장.
+
+상세 기준은 `.claude/agents/pipeline/shortlist-curator.md`.
+
 ## Phase 6: 사용자 보고
 
 마무리로 한 메시지에 다음을 보고한다:
 
 - 카테고리별 검증 통과/shortlist 선발/제외 개수 (예: SERVICE 12건 중 7 선발, DESIGN 8건 중 6 선발, DEV 6건 중 5 선발)
 - shortlist 총 개수 (SERVICE N + DESIGN N + DEV N = 합계)
+- 큐레이션 리뷰 한 줄 요약 (shortlist-curator 판정 + 종합 점수 + 가장 큰 약점 1개)
 - 다음 단계 안내: "글쓰기로 진행하려면 `/magazine-write YYYY-MM-DD`" (스킬 미구현 시: "shortlist를 검토해주세요. 다음은 글쓰기 단계입니다.")
 
 ## 하지 않을 일

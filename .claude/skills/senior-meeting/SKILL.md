@@ -5,7 +5,7 @@ description: CTTD 시니어 3명(senior-designer / senior-publisher / senior-pla
 
 # senior-meeting — CTTD 시니어 페르소나 미팅 오케스트레이터
 
-매 회차 산출물(매거진 + references)을 받아 **시니어 3명을 병렬 호출**, 직무별 회의록을 모으고 누적 의견을 `runs/_feedback/senior_voice.json`에 쌓는다. 다음 회차 reference-scout·writer·digest-collect가 그 누적을 참조해 점진적으로 개선된다.
+매 회차 산출물(매거진 + references)을 받아 **시니어 3명을 병렬 호출**, 직무별 회의록을 모으고 누적 의견을 `runs/_feedback/senior_voice.json`에 쌓는다. 다음 회차 reference-team·writer·digest-collect가 그 누적을 참조해 점진적으로 개선된다.
 
 설계 배경: 2026-05-27 사용자가 처음 Hermes Agent(PyPI)로 시니어 페르소나를 구현하려 했으나 보안 마찰(키 노출·classifier 차단)로 자체 시스템으로 전환. Hermes의 "skill self-improvement" 패턴 = CTTD의 sub-agent + senior_voice.json 누적.
 
@@ -136,7 +136,7 @@ merge 규칙:
 
 ## 다른 에이전트의 senior_voice.json 활용
 
-- **reference-scout 3종** — 회차 시작 시 `senior_voice.json` 읽고 *각 직무의 누적 wish*를 탐색 우선순위로
+- **reference-team scout 3종** — 회차 시작 시 `senior_voice.json` 읽고 *각 직무의 누적 wish*를 탐색 우선순위로
 - **magazine-writer** — 본문 쓸 때 누적 reject 패턴 회피 (예: "N% 매출 PR" 자동 톤 회피)
 - **target-classifier** — 강한 reject가 누적된 발행처/주제는 P1 이하로 자동 강등
 

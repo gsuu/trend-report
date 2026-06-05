@@ -1,9 +1,28 @@
 ---
 name: reference-team
-description: CTTD 회사 팀원(디자이너 180·퍼블리셔 30·기획자 10)이 흥미로워할 레퍼런스를 *팀으로 협력해 계속 수집*. 5 멤버 — design-reference-scout · service-reference-scout · dev-reference-scout · trend-hunter · inspiration-scout — 가 한 자리에 모여 *팀 보드*(runs/YYYY-MM-DD/team-board/)에 결과 모음. 실무 레퍼런스(scout 3) + 시장 신호(trend) + 영감·잡담거리(inspiration) 모두 포함. 정기 주 1회 또는 사용자 명시. 트리거 — "레퍼런스 팀", "reference team", "팀 보드", "팀 레퍼런스 수집", "이번 주 팀 보드".
+description: CTTD 레퍼런스 수집 단일 진입점. 두 모드 — (A) 주간 팀 보드 5 멤버(design/service/dev-reference-scout · trend-hunter · inspiration-scout)가 team-board/에 모으는 정기 수집, (B) 카테고리 집중 스카우트(scout 1~3명만 references/{cat}.md + ★5건 시 매거진 승격). 매거진 발행 흐름과 분리된 보강 자료 라인. 트리거 — 팀 모드 "레퍼런스 팀"·"reference team"·"팀 보드"·"이번 주 팀 보드" / 집중 모드 "레퍼런스 수집"·"디자인 레퍼런스만"·"reference scout"·"이번주 레퍼런스 찾아줘".
 ---
 
-# reference-team — CTTD 회사 팀원용 레퍼런스 수집 팀
+# reference-team — CTTD 레퍼런스 수집 단일 진입점
+
+레퍼런스 수집은 이 스킬 하나로 들어온다. 트리거에 따라 두 모드로 갈린다. (구 `reference-scout` 스킬은 2026-06-05 이 스킬의 **Mode B**로 흡수됨.)
+
+## 모드 라우팅
+
+| 모드 | 언제 | 멤버 | 출력 |
+|---|---|---|---|
+| **A. 주간 팀 보드** (기본) | 카테고리 미지정 + "팀/주간/보드" | scout 3 + trend-hunter + inspiration-scout (5) | `team-board/digest.md` + history |
+| **B. 집중 스카우트** | 카테고리 지정("디자인만") 또는 "레퍼런스 수집/scout" | 지정 카테고리 scout만 (1~3) | `references/{cat}.md` + ★5 시 매거진 승격 |
+
+- "팀 보드", "reference team", "이번 주 팀 보드" → **Mode A**
+- "레퍼런스 수집", "디자인 레퍼런스만", "reference scout" → **Mode B**
+- 모호하면 한 줄로 되묻는다: "주간 팀 보드(5영역)인가요, 특정 카테고리 집중 수집인가요?"
+
+아래 Phase 1~4는 **Mode A**. Mode B는 맨 아래 "## Mode B — 집중 스카우트" 참조.
+
+---
+
+## Mode A — 주간 팀 보드
 
 5 멤버가 매주 같은 자리에 모여 *팀 보드*에 결과를 쌓는다. 각자 다른 시점 — 실무·시장·영감 — 으로 수집해서, *디자이너 180·퍼블리셔 30·기획자 10 누구도 흥미 한 가지는 가져갈* 풀을 만든다.
 
@@ -135,12 +154,46 @@ mkdir -p runs/_team-board
 | 시스템 | 역할 | 출력 |
 |---|---|---|
 | **reference-team** | *주 1회 팀 수집* — 5 영역 한 풀 | `team-board/digest.md` |
-| reference-scout (개별 3 카테고리) | 단독 카테고리 깊이 호출 | `references/{cat}.md` |
+| (이 스킬 Mode B) | 단독 카테고리 깊이 호출 | `references/{cat}.md` |
 | senior-meeting | 산출물 *평가* | `senior-meeting/` |
 | tf-leader | 외부 *비교* | `tf-leader-report.md` |
 | cttd-council | *방향 결정* 5명 합의 | `council/final-plan.md` |
 
-reference-team은 *주간 정기 수집*. reference-scout 개별 호출은 *특정 영역 깊이 작업*에 사용. 한국 트렌드(trend-hunter)는 별도 trend-radar 스킬을 폐지하고 reference-team의 한 멤버로만 수집한다.
+Mode A는 *주간 정기 수집*, Mode B는 *특정 영역 깊이 작업*. 한국 트렌드(trend-hunter)는 별도 trend-radar 스킬을 폐지하고 이 스킬의 한 멤버로만 수집한다.
+
+---
+
+## Mode B — 집중 스카우트 (구 reference-scout)
+
+카테고리를 지정한 단독 수집. scout 1~3명만 호출해 `references/{cat}.md`를 만들고, ★가 모이면 매거진 글로 승격할 수 있다. Mode A의 team-board/·history·inspiration·trend는 쓰지 않는다.
+
+### 카테고리별 타겟 (각자 다름, 공통은 한국 시장)
+
+| 에이전트 | 메인 독자 | 보여주는 것 |
+|---|---|---|
+| **service-reference-scout** | 한국 웹서비스 기획자 / PM | 다음 OKR·스프린트 회의에 끌어올 IA·화면 분기·정책·CRM·멤버십 사례 |
+| **design-reference-scout** | 한국 UIUX 디자이너 / 웹디자이너 | 다음 시각·브랜드·캠페인 시안에 끌어올 라이브 사이트 |
+| **dev-reference-scout** | 한국 웹 퍼블리셔 / 프론트엔드 | 다음 스프린트에 바로 끌어다 쓸 라이브 데모 + 코드 패턴 |
+
+공통점 = **한국 시장**. 글로벌 일반론으로 흐르면 약함. (배경: feedback_reference_scout_audience 메모)
+
+### 흐름
+
+```
+[B1] mkdir -p runs/YYYY-MM-DD/references
+[B2] 지정 카테고리 scout 호출 (미지정이면 3개 병렬) → references/{cat}.md
+[B3] 결과 정리 — 카테고리별 항목 수 / ★ 수 / 봇 차단 수 한 줄 보고
+[B4] (옵션) ★ 5건 이상이면 "이번 주 {카테고리} 레퍼런스 5선" 매거진 글 승격 제안
+```
+
+- **B4 승격 동의 시**: references/{cat}.md의 ★ 5개를 magazine-writer에 입력 → 5장 카드 형식 한 글 → 기존 `magazine-write → magazine-review` 흐름.
+- **승격은 사용자 트리거만**. 자동 승격 금지.
+- 각 파일은 카테고리별 에이전트 출력 형식(`.claude/agents/scouts/{category}-reference-scout.md`)을 따른다.
+
+### Mode B 절대 규칙
+- 매거진 발행 흐름과 분리. references/는 보강 자료.
+- 자동 발행/뉴스레터/Notion 동기화 없음.
+- 봇 차단되면 그 항목 빼고 솔직히 보고. 우회 금지.
 
 ## 절대 규칙
 
