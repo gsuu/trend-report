@@ -1,0 +1,406 @@
+[
+  {
+    "title": "결제는 가볍게, 영감은 가득히",
+    "link": "https://toss.im/tossfeed/article/booknic",
+    "pubDate": "Sat, 23 May 2026 07:25:00 GMT",
+    "content": "토스 FacePay와 영풍문고가 제안하는 ‘가벼운 영감’의 여정",
+    "image": "",
+    "valueTags": [
+      "korean_reference",
+      "ux_method"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "검색 UX 디자인",
+    "link": "https://designcompass.org/2026/06/04/search-ux-design/",
+    "pubDate": "Sat, 06 Jun 2026 01:06:29 GMT",
+    "content": "검색은 글로 정보를 찾는 UX 패턴입니다. 사용자는 언제 어디서나 돋보기 모양 아이콘을 누르고 단어를 입력해 정보를 조회할 수 있습니다.",
+    "image": "https://designcompass.org/wp-content/uploads/2026/06/lib-search-ux-01.jpg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "애플 디자인 어워드 2026, 올해의 앱과 게임 12개 공개",
+    "link": "https://designcompass.org/2026/06/04/apple-design-awards-2026/",
+    "pubDate": "Sat, 06 Jun 2026 01:06:29 GMT",
+    "content": "애플이 2026 애플 디자인 어워드 수상작을 공개했습니다. 애플 디자인 어워드는 매년 앱과 게임 디자인에서 혁신성, 완성도, 기술적 성취를 보여준 개발자를 조명하는 행사입니다. 올해 수상작은 전 세계 36개 최종 후보 가운데 선정됐습니다. 수상 개발자는 WWDC26에서 공식적으로 소개됩니다. 올해 어워드는 6개 부문으로 나뉘었습니다.",
+    "image": "https://designcompass.org/wp-content/uploads/2026/06/wwdc-2026-design-award.jpg",
+    "valueTags": [
+      "promotion_event_design",
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "한국디자인진흥원, 디자인시장개척단 미국 SFDW 참가",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40619&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Sat, 06 Jun 2026 01:06:24 GMT",
+    "content": "한국디자인진흥원, 디자인시장개척단 미국 SFDW 참가 - 현지 비즈니스 상담회, 네트워크 행사 개최 등 K-디자인 글로벌 시장 진출 가속 - 디자인전문기업",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260605042351816_1827.0.jpg",
+    "valueTags": [
+      "korean_reference",
+      "promotion_event_design"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "(신간소개) 생성형 AI와 함께 만드는 공간·경험 서비스디자인",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40618&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Sat, 06 Jun 2026 01:06:24 GMT",
+    "content": "생성형 AI와 함께 만드는 공간·경험 서비스 디자인 김유빈 경희대학교 산업디자인학과 교수 오늘날 디자인은 산업의 경계를 넘어 인간 중심의 경험을 창조하는 전략적 도구로 진화하고 있다. 특히 공간은 단순한 물...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260605095457325_2215.0.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "The Weekend With Julia Schimautz",
+    "link": "https://www.itsnicethat.com/features/the-weekend-with-julia-schimautz-050626",
+    "pubDate": "Sat, 06 Jun 2026 01:07:35 GMT",
+    "content": "For The Weekend With, creative people share cultural recommendations across food, film, fashion, literature, music and more, to help you make the most of your time off. This week, Julia Schimautz offers up her top picks.",
+    "image": "https://admin.itsnicethat.com/images/Ej0dwe5IOpqNP7uhAsTzSAihnAk=/278823/width-1440%7Cformat-jpeg/The_Weekend_List_list.png",
+    "valueTags": [],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/interview/how-athletics-designed-a-brand-rooted-in-place-graft-and-belonging",
+    "pubDate": "Sat, 06 Jun 2026 01:06:53 GMT",
+    "content": "Malcolm Buick has trained at Gleason’s Gym in Brooklyn for over two decades, but his roots remain in Arbroath, a Scottish coastal town where his father serves as President of the local amateur boxing club. When Arbroath Amateur Boxing Club secured a permanent home in a restored church hall – ending years of instability and near-closure following COVID – Buick saw an opportunity to give the volunteer-run club an identity that matched the character it had built over decades. The resulting work, designed through his…",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/06/how-athletics-designed-a-brand-rooted-in-place-graft-and-belonging/Arbroath-Amateur-Boxing-Club-Athletics-01.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "commerce_design",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "How To Make Your Design System AI-Ready",
+    "link": "https://smashingmagazine.com/2026/06/how-make-design-system-ai-ready/",
+    "pubDate": "Wed, 03 Jun 2026 13:00:00 GMT",
+    "content": "Practical guide on how to reduce drifts, minimize mistakes, maintain context, and improve the quality of AI-generated prototypes. Brought to you by Design Patterns For AI Interfaces, **friendly video course on UX** and design patterns by Vitaly.",
+    "image": "http://files.smashing.media/articles/how-make-design-system-ai-ready/how-make-design-system-ai-ready.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_system",
+      "prototyping",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "AI-created document fatigue: how I designed my way out of it",
+    "link": "https://uxdesign.cc/ai-created-document-fatigue-how-i-designed-my-way-out-of-it-1fcd4a565669?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 02 Jun 2026 21:53:50 GMT",
+    "content": "AI promised us a leisure revolution but delivered us more documents to consume. I designed a voice-first app to move my work away from the desk and into the spaces that suit me. Using ARC (Audio Review Companion), to provide document feedback away from the desk. Image generated by AI. A false promise Generative AI will change the way we live and work, forever. We will have more time to do fun, deep, meaningful work. We won’t need to write those tedious emails and Slack messages, because AI will instantly generate…",
+    "image": "",
+    "valueTags": [
+      "look_and_feel",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The most important part of building your taste is to hand it off",
+    "link": "https://uxdesign.cc/the-most-important-part-of-building-your-taste-is-to-hand-it-off-be91aeac65d9?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 02 Jun 2026 11:08:16 GMT",
+    "content": "What having taste trapped in your head costs you and your team Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The rhetorical mask of innovation",
+    "link": "https://uxdesign.cc/the-rhetorical-mask-of-innovation-12f3abcd6120?source=rss----138adf9c44c---4",
+    "pubDate": "Thu, 04 Jun 2026 19:15:48 GMT",
+    "content": "How a single word lets us claim progress before we prove it 1970s Reliant Robin | Image source: https://www.adrianflux.co.uk/cult-classics/reliant-robin/ What is innovation? We hear this word used constantly, particularly in the creative, technology, healthcare, and education sectors. Companies advertise innovative products, hospitals implement innovative care models, and universities promote innovative programs — the word has become so ubiquitous that almost nobody stops to ask who benefits from that ubiquity. Ac…",
+    "image": "",
+    "valueTags": [
+      "look_and_feel",
+      "promotion_event_design",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "June Is For Exploring (2026 Wallpapers Edition)",
+    "link": "https://smashingmagazine.com/2026/05/desktop-wallpaper-calendars-june-2026/",
+    "pubDate": "Sun, 31 May 2026 08:00:00 GMT",
+    "content": "Let’s kick off June — and the beginning of summer — with some fresh inspiration! Artists and designers from across the globe once again tickled their creativity to welcome the new month with a new collection of desktop wallpapers. Enjoy!",
+    "image": "http://files.smashing.media/articles/desktop-wallpaper-calendars-june-2026/jun-26-drifting-into-june-preview-opt.png",
+    "valueTags": [
+      "visual_trend",
+      "commerce_design",
+      "commerce_campaign_design",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Your Prototype Is Not Being Honest With Your Users (And Here’s How To Fix It)",
+    "link": "https://smashingmagazine.com/2026/05/prototype-users-fix-protopie/",
+    "pubDate": "Mon, 25 May 2026 12:00:00 GMT",
+    "content": "There’s a moment in almost every usability session where a participant pauses at the login screen, types something, and glances up: checking whether they’re “doing it right.” That pause is a clear sign. They’ve already clocked that this isn’t a real app, and every data point collected after that moment is filtered through that awareness.",
+    "image": "http://files.smashing.media/articles/prototype-users-fix-protopie/prototype-users-fix-protopie.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "prototyping",
+      "ux_method"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "AI meets Sturgeon’s Law",
+    "link": "https://uxdesign.cc/ai-meets-sturgeons-law-21d17488fc48?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 01 Jun 2026 22:53:56 GMT",
+    "content": "Why does more content not mean more quality Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Foreman, guardian, team builder: all this is a box",
+    "link": "https://uxdesign.cc/foreman-guardian-team-builder-all-this-is-a-box-7d1119af30ba?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 01 Jun 2026 22:53:47 GMT",
+    "content": "On a moving company’s box, and the long reach of a few quiet decisions Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Design’s alive and kicking. It just got some flashy new names.",
+    "link": "https://uxdesign.cc/designs-alive-and-kicking-it-just-got-some-flashy-new-names-779b4503c869?source=rss----138adf9c44c---4",
+    "pubDate": "Fri, 05 Jun 2026 11:14:48 GMT",
+    "content": "Here’s which design roles are emerging in the age of AI. Source The tech community has been gripped by a collective anxiety. If you browse tech subreddits or check newsletters, the headlines paint a stark picture: AI is coming for white-collar jobs. Coding is dead. Design is obsolete . Last month, AI pioneer Andrew Ng published a piece pushing back on this “jobpocalypse” narrative, arguing that AI is spinning up entirely new, highly specialized career paths. He focused on the engineering angle: roles like the AI F…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Designing for care, not growth",
+    "link": "https://uxdesign.cc/designing-for-care-not-growth-274d460f968c?source=rss----138adf9c44c---4",
+    "pubDate": "Fri, 05 Jun 2026 11:14:28 GMT",
+    "content": "From healing fiction to smart feeders, the booming pet economy shows what design looks like when households shrink instead of grow. The modern companion of choice: self-contained, low-maintenance, and entirely at home in a small flat. Image source Walk into a bookshop in Britain or the US, and you will find a table, usually near the front, stacked with novels about cats. Not children’s books. Gentle, faintly magical stories for adults, in which a cat narrates, or saves a bookshop, or guides a lonely person back to…",
+    "image": "",
+    "valueTags": [
+      "look_and_feel",
+      "commerce_design",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "You’re not building a product. You’re running a project",
+    "link": "https://uxdesign.cc/youre-not-building-a-product-you-re-running-a-project-a8fdec68788c?source=rss----138adf9c44c---4",
+    "pubDate": "Fri, 05 Jun 2026 07:39:19 GMT",
+    "content": "I said those words to a £30M bootstrapped CFO mid-interview. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  }
+]
