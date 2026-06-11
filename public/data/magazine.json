@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T04:03:12.596870+00:00",
+  "generatedAt": "2026-06-11T04:07:57.065760+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -1969,8 +1969,8 @@
         "route": "/articles/2026-06-11-16",
         "href": "/articles/2026-06-11-16",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-16",
-        "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-16.png",
-        "imageCaption": "pxd 원문 본문 — AI 검색 서비스와 인용 구조 (결정 근거 페이지 스크린샷)",
+        "image": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FwQ01x%2FdJMcadIVSMb%2FAAAAAAAAAAAAAAAAAAAAAO2N3MPvZMWEC7p8rDSrbMmX0PAYpeaE-4Pt-uGAGQN_%2Fimg.webp%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1782831599%26allow_ip%3D%26allow_referer%3D%26signature%3Dl93NEcjjtdvlAnxRgIWcklRLJ2g%253D",
+        "imageCaption": "pxd 원문 본문 첫 도판 — AI 인용 구조",
         "tags": [
           "RAG",
           "생성형 엔진 최적화",
@@ -2487,8 +2487,8 @@
         "route": "/articles/2026-06-11-20",
         "href": "/articles/2026-06-11-20",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-20",
-        "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-20.png",
-        "imageCaption": "Latent Space 원문 본문 — GitHub 에이전트 인프라 인터뷰 (결정 근거 페이지 스크린샷)",
+        "image": "https://pbs.substack.com/media/HFiCnT1akAM2OHh.jpg",
+        "imageCaption": "Latent Space 원문 본문 첫 이미지 — GitHub 인터뷰",
         "tags": [
           "GitHub",
           "Vitess",
@@ -3132,8 +3132,8 @@
         "route": "/articles/2026-06-11-25",
         "href": "/articles/2026-06-11-25",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-25",
-        "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-25.png",
-        "imageCaption": "Codex changelog 6월 항목 — app 26.608 새 기능 (결정 근거 페이지 스크린샷)",
+        "image": "https://developers.openai.com/images/codex/skills/skills-selector-cli-light.webp",
+        "imageCaption": "Codex changelog 본문 이미지 — CLI skills selector UI",
         "tags": [
           "OpenAI Codex",
           "Sites",

@@ -527,8 +527,8 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 - 출처 유형: blog
 - 출처: pxd story
 - 출처 URL: https://pxdstory.tistory.com/1900
-- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-16.png
-- 이미지 설명: pxd 원문 본문 — AI 검색 서비스와 인용 구조 (결정 근거 페이지 스크린샷)
+- 이미지: https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FwQ01x%2FdJMcadIVSMb%2FAAAAAAAAAAAAAAAAAAAAAO2N3MPvZMWEC7p8rDSrbMmX0PAYpeaE-4Pt-uGAGQN_%2Fimg.webp%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1782831599%26allow_ip%3D%26allow_referer%3D%26signature%3Dl93NEcjjtdvlAnxRgIWcklRLJ2g%253D
+- 이미지 설명: pxd 원문 본문 첫 도판 — AI 인용 구조
 - 요약: ChatGPT·Perplexity·Claude 같은 AI 검색이 페이지 전체가 아니라 질문과 맞는 문단(passage)만 골라 인용하는 RAG 구조라는 점을 짚고, 메타 설명·헤딩 계층·문단 단위 자족성·구체 통계·출처 명시 같은 마크업 레벨 점검 항목으로 정리한 글입니다.
 - 관련 링크 1: [원문] pxd story — AI가 인용하고 싶은 페이지는 어떻게 생겼을까 | https://pxdstory.tistory.com/1900
 - 관련 링크 2: [관련 표준] llms.txt 제안 | https://llmstxt.org/
@@ -663,8 +663,8 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 - 출처 유형: interview
 - 출처: Latent Space (Kyle Daigle, GitHub COO 인터뷰)
 - 출처 URL: https://www.latent.space/p/github
-- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-20.png
-- 이미지 설명: Latent Space 원문 본문 — GitHub 에이전트 인프라 인터뷰 (결정 근거 페이지 스크린샷)
+- 이미지: https://pbs.substack.com/media/HFiCnT1akAM2OHh.jpg
+- 이미지 설명: Latent Space 원문 본문 첫 이미지 — GitHub 인터뷰
 - 요약: 에이전트발 코드가 폭증하며 GitHub 활동이 연 10억 커밋에서 주 2.75억 규모로 약 14배 늘었고, Kyle Daigle COO가 권한 레이어 Vitess 재샤딩·모노레포·작업 큐잉 3대 인프라 재작성과 '마이크로 스킬'·retrospective-first·Ambient AI 전환을 설명한 인터뷰입니다.
 - 관련 링크 1: [원문] Latent Space — GitHub's Plan for Agents | https://www.latent.space/p/github
 - 관련 링크 2: [관련 도구] GitHub Copilot SDK | https://github.com/features/copilot
@@ -828,8 +828,8 @@ CI나 스크립트에서 Cursor 에이전트를 돌리는 팀이라면, 그동�
 - 출처 유형: release_note
 - 출처: OpenAI Codex Changelog
 - 출처 URL: https://developers.openai.com/codex/changelog/
-- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-25.png
-- 이미지 설명: Codex changelog 6월 항목 — app 26.608 새 기능 (결정 근거 페이지 스크린샷)
+- 이미지: https://developers.openai.com/images/codex/skills/skills-selector-cli-light.webp
+- 이미지 설명: Codex changelog 본문 이미지 — CLI skills selector UI
 - 요약: OpenAI Codex가 Claude Code·Cowork 설정을 가져오는 마이그레이션 플로우, 웹사이트·웹앱을 생성·배포하는 Sites 플러그인, Amazon Bedrock 경유 모델 사용을 한 달 사이에 연달아 추가했습니다.
 - 관련 링크 1: [공식 사양] OpenAI — Codex changelog | https://developers.openai.com/codex/changelog/
 - 관련 링크 2: [공식 사양] OpenAI — Codex documentation | https://developers.openai.com/codex/
