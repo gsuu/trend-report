@@ -1,0 +1,371 @@
+[
+  {
+    "title": "“얼굴결제 일상 됐다” 토스, ‘페이스페이’ 가입자 600만 돌파… 3개월 만에 2배 성장",
+    "link": "https://toss.im/tossfeed/article/50403",
+    "pubDate": "Mon, 08 Jun 2026 23:00:00 GMT",
+    "content": "가입자는 물론 성장세도 가파른 페이스페이",
+    "image": "",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "별점과 리뷰로 사용자 경험 이해하기",
+    "link": "https://pxdstory.tistory.com/1901",
+    "pubDate": "Tue, 9 Jun 2026 19:10:21 +0900",
+    "content": "배달 음식점을 고를 때도, 상품을 살 때도 별점부터 봅니다. 소비자에게는 나쁜 걸 먼저 걸러내는 좋은 휴리스틱입니다. 그런데 서비스를 운영하는 쪽, 그러니까 마케터나 리서처는 같은 별점을 어떻게 읽어야 할까요? 별점은 결국 개개인이 누른 별의 평균이고, '평균적인 사용자'는 대체로 존재하지 않습니다. 퍼소나를 나눠 보듯, 별점도 사용자를 세분화해서 봐야 합니다. 리뷰 텍스트를 어피니티버블로 묶으면 \"사용자가 무엇을 말하는지\"는 꽤 잘 보입니다. 그런데 리뷰에는 별점, 작성 시점 같은 정보가 늘 함께 달려 있습니다. 텍스트 군집을 이 메타데이터와 함께 보면 어떻게 되는지, K뷰티 앱 top3 (올리브영·화해·글로우픽)의 앱 리뷰로 확인해봤습니다. 별점은 평균이 아닌 분포를 봐야 한다 별점 2.6점인 사용자는 없습니다. 시장 1위 올리브영의 iOS 리뷰 평균이 2.6점인데, 이 숫자는 누가 만들었을까요? 올리브영 iOS 앱스토어 리뷰 별점 분포 리뷰 499개를 별점별로 나눠보면 1점이 44%, 5점이 24%로 양쪽 끝에…",
+    "image": "",
+    "valueTags": [
+      "commerce_design",
+      "korean_reference",
+      "korean_uiux_case"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "AI가 인용하고 싶은 페이지는 어떻게 생겼을까",
+    "link": "https://pxdstory.tistory.com/1900",
+    "pubDate": "Thu, 11 Jun 2026 10:08:15 +0900",
+    "content": "들어가며 지난 편에서 검색엔진과 AI 크롤러가 우리 사이트를 어떻게 발견하는지를 다뤘어요. robots.txt, sitemap, canonical, 리다이렉트, AI 크롤러 허용까지 — 결국 \"크롤러가 페이지에 안정적으로 닿을 수 있는가\"가 핵심이었죠. 이번 편에서는 그 다음 단계 이야기예요. 크롤러가 페이지에 도착했어요. 그다음엔 뭘 볼까요? 검색엔진이든 AI든, 페이지에 도착한 이후에는 콘텐츠의 구조를 읽어요. 제목이 뭔지, 주제가 뭔지, 어떤 질문에 답하고 있는지, 정보가 어떤 단위로 나뉘어 있는지. 이 구조가 명확한 페이지는 검색 결과에서도, AI 답변에서도 선택받을 가능성이 높아요. 이번 편에서는 \"AI가 인용하고 싶어지는 페이지\"가 어떤 구조적 특성을 가지고 있는지, 프론트엔드 개발자가 실제로 챙길 수 있는 요소들을 중심으로 풀어볼게요. 검색엔진과 AI는 페이지를 어떻게 \"읽는가\" 검색엔진의 읽기 방식 Google 같은 검색엔진은 페이지를 크롤링한 후, HTML 구조를 파싱해서 콘텐츠를 이해해요. 이때 참…",
+    "image": "",
+    "valueTags": [
+      "design_ai_workflow"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "💌 포토샵 점묘화 필터 대신 '이 사이트' 어때요?",
+    "link": "https://stib.ee/GHyN",
+    "pubDate": "2026-06-10T12:00:27.092303079+09:00",
+    "content": "#인스타트렌드 #편집툴추천 #클래식무드폰트",
+    "image": "",
+    "valueTags": [
+      "visual_trend"
+    ],
+    "scraped": true,
+    "source": "노폴레터 (Notefolio)",
+    "sourceUrl": "https://page.stibee.com/archives/75270/emails",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_newsletter",
+    "topics": [
+      "디자인 트렌드",
+      "타이포그래피",
+      "레퍼런스",
+      "전시·팝업"
+    ]
+  },
+  {
+    "title": "Meet the iconic printmakers that shaped half a century of the UK’s contemporary graphic art",
+    "link": "https://www.itsnicethat.com/features/50-years-of-print-harvey-lloyd-graphic-design-spotlight-100626",
+    "pubDate": "Thu, 11 Jun 2026 01:13:22 GMT",
+    "content": "In this deep dive into 50 Years of Print, the exhibition celebrating art from the archive of Harvey Lloyd screens, we go behind the scenes on the studio’s remarkable legacy and its imprint on design and illustration today.",
+    "image": "https://admin.itsnicethat.com/images/EmA7J71TFWDrLPAyU2xkMRm2Cdw=/274931/width-1440/f4b40c2b.webp",
+    "valueTags": [
+      "look_and_feel"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "From the dancefloor to the afters, this hedonistic book is an unfiltered photographic history of queer nightlife",
+    "link": "https://www.itsnicethat.com/articles/amelia-abraham-sex-clubs-dissent-mack-photography-publication-project-100626",
+    "pubDate": "Thu, 11 Jun 2026 01:13:22 GMT",
+    "content": "Sex, Clubs, Dissent is a fantastic foray into queer image-making that defies “easy categorisation or legibility”. Instead, it revels in its multiplicity.",
+    "image": "https://admin.itsnicethat.com/images/xYlraz4mkFwcCfbGDek757Av9SU=/278849/width-1440/AA_SexClubsDissent_9.jpg",
+    "valueTags": [
+      "look_and_feel"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/monday-nights-creates-a-sharp-frame-for-bolders-3d-and-motion-work",
+    "pubDate": "Thu, 11 Jun 2026 01:12:48 GMT",
+    "content": "Since 2007, Bolder has been producing high-quality 3D and motion projects. Over the years, both the team and technology advanced, but the brand in itself no longer represented that growth. As the studio looked back on its journey and ahead to the future, it saw the need for a rebrand to match its ambition. With its 20th birthday on the horizon, the formerly Brighton-based, now fully remote studio teamed up with Monday Nights to create an identity built to last.",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/06/monday-nights-creates-a-sharp-frame-for-bolders-3d-and-motion-work/Bolder-Monday-Nights-03.webp",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "motion_interaction",
+      "korean_uiux_case",
+      "prototyping",
+      "visual_reference",
+      "ux_method"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "What you count is what they feel",
+    "link": "https://uxdesign.cc/what-you-count-is-what-they-feel-2455e76682e0?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 10 Jun 2026 23:01:29 GMT",
+    "content": "What a Jakarta city bus taught me about where experience is really made. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Liquid Glass: who gets to decide how an interface looks?",
+    "link": "https://uxdesign.cc/liquid-glass-who-gets-to-decide-how-an-interface-looks-a0abe75ae21e?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 10 Jun 2026 10:42:59 GMT",
+    "content": "Notes from the 2026 WWDC keynote Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The Benefits Of Cognitive Inclusion In UX Research",
+    "link": "https://smashingmagazine.com/2026/06/benefits-cognitive-inclusion-ux-research/",
+    "pubDate": "Wed, 10 Jun 2026 10:00:00 GMT",
+    "content": "Findings from an exploratory user research study highlighting the unique insights and practical UX recommendations shared by participants with cognitive disabilities.",
+    "image": "http://files.smashing.media/articles/benefits-cognitive-inclusion-ux-research/benefits-cognitive-inclusion-ux-research.jpg",
+    "valueTags": [
+      "promotion_event_design",
+      "korean_uiux_case",
+      "ux_method"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "How To Make Your Design System AI-Ready",
+    "link": "https://smashingmagazine.com/2026/06/how-make-design-system-ai-ready/",
+    "pubDate": "Wed, 03 Jun 2026 13:00:00 GMT",
+    "content": "Practical guide on how to reduce drifts, minimize mistakes, maintain context, and improve the quality of AI-generated prototypes. Brought to you by Design Patterns For AI Interfaces, **friendly video course on UX** and design patterns by Vitaly.",
+    "image": "http://files.smashing.media/articles/how-make-design-system-ai-ready/how-make-design-system-ai-ready.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_system",
+      "prototyping",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Should you really give AI your whole digital life?",
+    "link": "https://uxdesign.cc/should-you-really-give-ai-your-whole-digital-life-9b0c55df46e2?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 09 Jun 2026 23:04:27 GMT",
+    "content": "You’ve felt it, haven’t you? That tiny pause. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Your design taste isn’t a feeling. It’s a prediction about user behavior.",
+    "link": "https://uxdesign.cc/your-design-taste-isnt-a-feeling-it-s-a-prediction-about-user-behavior-7a4a63f5f622?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 09 Jun 2026 11:46:27 GMT",
+    "content": "What DataViz taught me about the importance of explaining design Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "AI didn’t replace designers-it promoted them",
+    "link": "https://uxdesign.cc/ai-didnt-replace-designers-it-promoted-them-5b6d24de4e26?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 09 Jun 2026 11:45:44 GMT",
+    "content": "How AI is rewriting the product designer’s role — from spec-maker to system architect Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "June Is For Exploring (2026 Wallpapers Edition)",
+    "link": "https://smashingmagazine.com/2026/05/desktop-wallpaper-calendars-june-2026/",
+    "pubDate": "Sun, 31 May 2026 08:00:00 GMT",
+    "content": "Let’s kick off June — and the beginning of summer — with some fresh inspiration! Artists and designers from across the globe once again tickled their creativity to welcome the new month with a new collection of desktop wallpapers. Enjoy!",
+    "image": "http://files.smashing.media/articles/desktop-wallpaper-calendars-june-2026/jun-26-drifting-into-june-preview-opt.png",
+    "valueTags": [
+      "visual_trend",
+      "commerce_design",
+      "commerce_campaign_design",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "AI design isn’t ugly. It’s fluent — and that’s the problem.",
+    "link": "https://uxdesign.cc/ai-design-isnt-ugly-it-s-fluent-and-that-s-the-problem-131b2f4eb78c?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 08 Jun 2026 22:10:58 GMT",
+    "content": "Why Claude Design, Lovable, and v0 all wear the same face — and what a dynamited St. Louis housing project predicted about it. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  }
+]
