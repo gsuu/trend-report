@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T04:07:57.065760+00:00",
+  "generatedAt": "2026-06-11T04:13:17.047605+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -400,8 +400,8 @@
         "route": "/articles/2026-06-11-04",
         "href": "/articles/2026-06-11-04",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-04",
-        "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-4.png",
-        "imageCaption": "서비스 원문 페이지 화면 캡처",
+        "image": "https://cdn.sanity.io/images/599r6htc/regionalized/cc025e991e49b25eefba4448949501603d735b7c-1024x576.png?w=1680&h=945&q=75&fit=max&auto=format",
+        "imageCaption": "Figma Make 공식 페이지 본문 첫 이미지 — 제품 UI(컨트롤 표시)",
         "tags": [
           "Figma Make",
           "코드베이스 연동",

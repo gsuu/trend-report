@@ -119,8 +119,8 @@
 - 출처 유형: news
 - 출처: DIGITAL iNSIGHT
 - 출처 URL: https://ditoday.com/피그마-메이크로-디자인과-제품-개발-환경-통합한다/
-- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-4.png
-- 이미지 설명: 서비스 원문 페이지 화면 캡처
+- 이미지: https://cdn.sanity.io/images/599r6htc/regionalized/cc025e991e49b25eefba4448949501603d735b7c-1024x576.png?w=1680&h=945&q=75&fit=max&auto=format
+- 이미지 설명: Figma Make 공식 페이지 본문 첫 이미지 — 제품 UI(컨트롤 표시)
 - 요약: 피그마가 Figma Make에 운영 코드 저장소 직접 연동과 시각적 코드 편집을 붙여, 디자이너가 캔버스에서 색·레이아웃을 조정하면 내장 AI 에이전트가 관련 코드 파일을 실시간으로 찾아 자동 수정하게 했습니다.
 - 관련 링크 1: [케이스 출처] DIGITAL iNSIGHT — 피그마, 메이크로 디자인과 제품 개발 환경 통합한다 | https://ditoday.com/피그마-메이크로-디자인과-제품-개발-환경-통합한다/
 - 관련 링크 2: [결정 근거] Figma — Figma Make | https://www.figma.com/make/
