@@ -1909,14 +1909,21 @@ def render_newsletter(
         area_labels = {"service": "Service", "design": "Design", "dev": "DEV"}
         grouped: dict[str, list[dict[str, object]]] = {}
         for item in items:
-            area_token = normalize_develop_token(str(item.get("area") or ""))
-            item_tags = item.get("tags") if isinstance(item.get("tags"), list) else []
-            if area_token in DEVELOP_CATEGORY_KEYS or is_develop_issue(str(item.get("category") or ""), item_tags):
+            # 글이 속한 섹션(## SERVICE/DESIGN/DEV)을 우선 신뢰한다.
+            # category(ai 등)로 추정하면 SERVICE의 AI 글이 DEV로 새는 오분류가 난다.
+            area_raw = str(item.get("area") or "").strip().lower()
+            if area_raw in {"dev", "develop"}:
                 key = "dev"
-            elif area_token in DESIGN_CATEGORY_KEYS or area_token == "design":
+            elif area_raw == "design":
                 key = "design"
-            else:
+            elif area_raw == "service":
                 key = "service"
+            else:
+                item_tags = item.get("tags") if isinstance(item.get("tags"), list) else []
+                if is_develop_issue(str(item.get("category") or ""), item_tags):
+                    key = "dev"
+                else:
+                    key = "service"
             grouped.setdefault(key, []).append(item)
         parts: list[str] = []
         display_number = 1
