@@ -1904,6 +1904,31 @@ def render_newsletter(
         items = parse_newsletter_items(markdown, audience)
     if audience == "dev":
         body = render_develop_newsletter_body(report_path, items, magazine_base_url)
+    elif audience == "all":
+        # 전체 묶음 발송은 카테고리(Service/Design/DEV) 그룹 헤딩을 넣는다.
+        area_labels = {"service": "Service", "design": "Design", "dev": "DEV"}
+        grouped: dict[str, list[dict[str, object]]] = {}
+        for item in items:
+            area_token = normalize_develop_token(str(item.get("area") or ""))
+            item_tags = item.get("tags") if isinstance(item.get("tags"), list) else []
+            if area_token in DEVELOP_CATEGORY_KEYS or is_develop_issue(str(item.get("category") or ""), item_tags):
+                key = "dev"
+            elif area_token in DESIGN_CATEGORY_KEYS or area_token == "design":
+                key = "design"
+            else:
+                key = "service"
+            grouped.setdefault(key, []).append(item)
+        parts: list[str] = []
+        display_number = 1
+        for key in ("service", "design", "dev"):
+            group_items = grouped.get(key, [])
+            if not group_items:
+                continue
+            parts.append(render_newsletter_category_heading(area_labels[key]))
+            for item in group_items:
+                parts.append(render_newsletter_item(report_path, item, magazine_base_url, display_number, templates["card"]))
+                display_number += 1
+        body = "\n".join(parts)
     else:
         body = "\n".join(
             render_newsletter_item(report_path, item, magazine_base_url, index, templates["card"])
