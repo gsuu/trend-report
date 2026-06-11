@@ -1,0 +1,19 @@
+{
+  "id": "dev-fable5",
+  "title": "Claude Fable 5 and Claude Mythos 5",
+  "discovery_source": "GeekNews (news.hada.io) 링크모음 — 최종 기준 원문 아님",
+  "final_source_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+  "publisher": "Anthropic (공식 뉴스룸 anthropic.com/news)",
+  "published_at": "2026-06-09",
+  "concrete_facts": [
+    "라인업/포지셔닝 — Fable 5와 Mythos 5는 동일한 Mythos-class 기반 모델이며, 안전장치(safeguard)의 적용 여부가 둘을 가른다. Fable 5는 안전장치를 적용해 일반 사용 가능, Mythos 5는 Project Glasswing 파트너·일부 생물학 연구자 등 인가된 사용자에게만 일부 안전장치를 해제해 제공. Mythos-class는 기존 Opus 티어보다 상위 역량으로 위치.",
+    "API 가용성 — Fable 5는 출시 즉시 Claude API에서 `claude-fable-5` 식별자로 호출 가능. 종량제 Enterprise 플랜은 전면 제공, 구독 플랜은 6월 9~23일 단계적 롤아웃 후 usage credit 필요. Mythos 5는 trusted access 프로그램으로만 제한 제공.",
+    "가격 — 입력 100만 토큰당 $10, 출력 100만 토큰당 $50. 'Claude Mythos Preview의 절반 미만' 가격이라고 명시.",
+    "벤치마크/성능 — 테스트한 거의 모든 벤치마크에서 SOTA 주장. Cognition FrontierCode 평가에서 프런티어 모델 중 최고, Hebbia Finance Benchmark 시니어급 추론 최고점, 핵심 애널리틱스 벤치마크 최초 90% 돌파(Opus 대비 10점 향상).",
+    "개발자/에이전트 관점 — 이전 어떤 Claude보다 오래 자율 작동 가능, 수백만 토큰의 long-running 태스크에서 집중 유지. 사례로 Stripe가 5천만 라인 마이그레이션을 하루에 완료. 스크린샷에서 웹앱 소스 재구성 등 향상된 비전 역량. 과거 모델보다 토큰 효율 개선(단, 정확한 컨텍스트 윈도우 토큰 수는 발표에 미명시).",
+    "안전장치 구성 — Fable 5는 사이버보안/생물·화학/디스틸레이션 3개 자동 분류기를 두고 위험 시 Claude Opus 4.8로 폴백. 외부 버그바운티 1,000시간 테스트에서 universal jailbreak 미발견."
+  ],
+  "image_url": "https://www-cdn.anthropic.com/images/4zrzovbb/website/b7055119423427c40a0e4d84054aed17682b50a2-2880x1620.png",
+  "image_source": "Anthropic 공식 발표 페이지 hero/og 이미지 (anthropic.com CDN)",
+  "verdict": "검증 통과"
+}

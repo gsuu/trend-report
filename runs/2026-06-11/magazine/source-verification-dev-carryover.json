@@ -1,0 +1,54 @@
+[
+  {
+    "id": "dev-the-website-specification",
+    "title": "The Website Specification — 모던 웹사이트 베스트프랙티스 오픈 스펙",
+    "discovery_source": "carryover (next-issue-dev.md)",
+    "final_source_url": "https://specification.website/",
+    "publisher": "specification.website (오픈소스, GitHub: jdevalk/specification.website)",
+    "published_at": "2026-06-11",
+    "concrete_facts": [
+      "Foundations·SEO·Accessibility·Security·Well-Known URIs·Agent Readiness·Performance·Privacy·Resilience·Internationalisation·Project documentation 11개 영역으로 모던 웹사이트 베스트프랙티스를 정리한 오픈 스펙",
+      "사람과 기계 양쪽을 겨냥해 페이지별 Markdown(.md) 엔드포인트, JSON-LD 구조화 데이터, /llms.txt·/llms-full.txt, /.well-known/agent-skills/.../SKILL.md 형태의 Agent Skill을 동시 제공",
+      "https://mcp.specification.website/mcp 에 search·list_topics·get_topic·get_checklist·audit_url 5개 도구를 노출하는 MCP 서버를 운영해 AI 에이전트가 직접 스펙을 조회·감사 가능",
+      "MIT 라이선스 오픈 스펙으로 누구나 사용·기여 가능"
+    ],
+    "image_url": "https://specification.website/og-default.png",
+    "image_source": "specification.website 페이지 og:image",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "dev-github-plan-for-agents",
+    "title": "GitHub's Plan for Agents — 에이전트 코드 폭증과 인프라 재설계",
+    "discovery_source": "carryover (next-issue-dev.md)",
+    "final_source_url": "https://www.latent.space/p/github",
+    "publisher": "Latent Space (Swyx) — Kyle Daigle, GitHub COO 인터뷰",
+    "published_at": "2026-06-02",
+    "concrete_facts": [
+      "2025년 연간 약 10억 커밋이던 GitHub 활동이 주 275M(2.75억) 커밋 규모로 약 14배 급증했고, 200M 이상 계정을 가진 GitHub가 사상 최고 성장기를 맞았다는 Kyle Daigle COO 진술",
+      "스케일 압박으로 권한 레이어(내부명 'MySQL One')를 Vitess로 분리·재샤딩하고, 모노레포의 거대 blob 처리와 작업 큐잉 기반 기술을 다시 짜는 세 가지 인프라 재작성을 진행 중",
+      "'massive, beautiful, perfect skills'에서 한 가지만 잘 하는 'incredibly micro skills'(원자적·조합형 스킬)로 전환했고, 행동 생성 전에 과거 맥락을 먼저 검토하는 retrospective-first 패턴을 적용",
+      "Copilot을 코드 완성에서 CLI·데스크톱·클라우드 에이전트를 아우르는 단일 SDK·하니스로 통합하고, 모든 작업 산출물에 지속 맥락을 갖는 'Ambient AI'(앰비언트화) 방향으로 확장",
+      "GitHub Actions가 주 500M분(2023)→1B분(2025)으로 늘며 병목이 스토리지가 아닌 CPU라는 점, 성장으로 '새로운 방식으로' 발생한 가용성 문제를 향후 약 3개월에 걸쳐 개선 예정이라는 언급"
+    ],
+    "image_url": "https://substack-post-media.s3.amazonaws.com/public/images/a4fe1182-38af-4a5d-bacc-439c36225e87_5000x1200.png",
+    "image_source": "latent.space 포스트 og:image (Substack CDN)",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "dev-hermes-agent-nous",
+    "title": "Hermes Agent — 셀프임프루빙 데스크톱 AI 에이전트 (Nous Research)",
+    "discovery_source": "carryover (사용자 제공 hermes-ai.net은 비공식)",
+    "final_source_url": "https://hermes-agent.nousresearch.com",
+    "publisher": "Nous Research (v0.16.0, MIT License)",
+    "published_at": "2026-06-11",
+    "concrete_facts": [
+      "Telegram·Discord·Slack·WhatsApp·Signal·Email·CLI 등 여러 채널에서 맥락 연속성을 유지하며 동작하는 멀티채널 에이전트로, 단순 코딩 코파일럿이 아니라 지속 메모리와 자동 생성 스킬을 갖춘 '함께 성장하는' 에이전트로 포지셔닝",
+      "해결한 문제와 프로젝트 경험을 누적 학습하는 persistent memory를 갖고, 리포트·백업·브리핑 등을 자연어 cron 명령으로 예약하는 natural-language 스케줄링 지원",
+      "local·Docker·SSH·Singularity·Modal 5종 백엔드 샌드박스에서 컨테이너 하드닝과 함께 코드를 실행하며, macOS·Linux·Windows를 모두 지원",
+      "웹 검색·브라우저 자동화·비전·이미지 생성·TTS·멀티모델 추론을 추가 기능으로 제공하고 MIT 라이선스로 공개(v0.16.0)"
+    ],
+    "image_url": "https://hermes-agent.nousresearch.com/img/hermes-og-image.png",
+    "image_source": "공식 Nous Research 도메인 hermes-agent.nousresearch.com og:image",
+    "verdict": "검증 통과"
+  }
+]

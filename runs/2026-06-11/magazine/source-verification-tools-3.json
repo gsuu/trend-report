@@ -1,0 +1,38 @@
+[
+  {
+    "id": "chrome-149",
+    "title": "New in Chrome 149",
+    "discovery_source": "developer.chrome.com/release-notes",
+    "final_source_url": "https://developer.chrome.com/release-notes/149",
+    "publisher": "Chrome for Developers (Google)",
+    "published_at": "2026-06-02",
+    "concrete_facts": [
+      "CSS gap decorations — 그리드·플렉스·멀티컬럼 레이아웃의 gap 영역에 선(rule)을 그릴 수 있는 신규 기능. 그동안 빈 div나 가상요소로 흉내 내던 칸 구분선을 표준 속성으로 처리.",
+      "shape-outside가 path()·shape()와 rect()·xywh() 함수를 지원해, float 요소 주변 텍스트 래핑 형태를 더 자유롭게 정의 가능.",
+      "SVG 요소용 신규 CSS 속성 path-length 추가, image-rendering: crisp-edges 구현, 사용자 인터랙션 시 ellipsis로 텍스트 오버플로 클리핑 등 렌더링 관련 기능 추가.",
+      "Intl.Locale.prototype.variants 추가로 로케일 변형 처리, 윈도우 터치 키보드가 autocorrect=\"off\"를 존중하도록 변경 등 입력·국제화 개선.",
+      "Stable 출시일 2026-06-02."
+    ],
+    "image_url": "https://developer.chrome.com/static/blog/new-in-chrome-149/image/thumb.png",
+    "image_source": "Chrome 149 릴리스 노트 페이지 og:image (공식)",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "vscode-1-124",
+    "title": "Visual Studio Code June 2026 (version 1.124)",
+    "discovery_source": "code.visualstudio.com/updates",
+    "final_source_url": "https://code.visualstudio.com/updates/v1_124",
+    "publisher": "Visual Studio Code (Microsoft)",
+    "published_at": "2026-06-10",
+    "concrete_facts": [
+      "Autopilot가 기본 활성화되며 유틸리티 모델로 작업이 실제로 끝났는지 더 똑똑하게 판단하도록 개선.",
+      "Background session requests — Alt+Enter로 새 세션을 작성하는 동안 백그라운드에서 요청을 제출, 다음 질의를 위해 인터페이스를 비워 둠.",
+      "세션 내비게이션 — 검색 가능한 피커(Ctrl+R), 앞뒤 이동(Ctrl+Tab), 위치 기반 점프(Ctrl+1~9) 등 키보드 중심 세션 전환 도입.",
+      "통합 브라우저가 방문 기록을 유지하고 URL 바에서 제안하며 maxHistoryEntries 설정으로 조정 가능; Agents 창 리로드 시 이전 세션·레이아웃·에디터 상태 자동 복원.",
+      "typeInPage 도구에 submit 파라미터 추가로 입력과 Enter를 한 번에 처리."
+    ],
+    "image_url": "https://code.visualstudio.com/assets/updates/1_124/release-highlights.webp",
+    "image_source": "VS Code 1.124 릴리스 노트 페이지 og:image (공식)",
+    "verdict": "검증 통과"
+  }
+]

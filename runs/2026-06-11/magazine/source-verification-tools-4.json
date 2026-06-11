@@ -1,0 +1,36 @@
+[
+  {
+    "id": "notion-merge-cells-simple-tables",
+    "title": "Merge cells in simple tables",
+    "discovery_source": "Notion 공식 What's New 릴리스 페이지",
+    "final_source_url": "https://www.notion.com/releases/2026-05-26",
+    "publisher": "Notion",
+    "published_at": "2026-05-26",
+    "concrete_facts": [
+      "Notion의 simple table(데이터베이스 표가 아닌 일반 표)에서 여러 셀을 병합하는 'Merge cells' 기능이 추가됐다.",
+      "여러 열에 걸치는 헤더를 만들거나 관련된 행을 묶어 구조화된 레이아웃을 구성할 수 있다.",
+      "사용 방법은 세 단계 — 셀 여러 개 선택 → 셀 메뉴 열기 → 'Merge cells' 선택.",
+      "기능은 simple table에 한정되며, 데이터베이스 테이블 등 다른 표 유형에는 적용되지 않는다."
+    ],
+    "image_url": "https://images.ctfassets.net/spoqsaf9291f/4EuTg3AlokPBWOqowgiSPV/7584171709029faac1bec5b323f9541d/merge_cells_release_note_cover.png",
+    "image_source": "Notion 릴리스 노트 페이지 og:image (merge_cells_release_note_cover.png)",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "obsidian-1-13-0-settings-overhaul",
+    "title": "Obsidian Desktop v1.13.0 — 설정 패널 개편 및 키보드 내비게이션",
+    "discovery_source": "Obsidian 공식 changelog",
+    "final_source_url": "https://obsidian.md/changelog/2026-05-28-desktop-v1.13.0/",
+    "publisher": "Obsidian",
+    "published_at": "2026-05-28",
+    "concrete_facts": [
+      "설정(Settings)이 별도 창으로 열리도록 바뀌었고, 이름·설명으로 설정 항목을 검색할 수 있는 검색 기능이 추가됐다 (신규 API로 이전한 코어 설정·플러그인 대상).",
+      "설정 창에서 방향키로 항목 이동, Enter로 설정 탭 열기, Ctrl/Cmd-F로 검색에 재포커스가 가능하며 Vim 키 바인딩을 지원한다.",
+      "Live Preview에서 이미지가 자동 확장 없이 키보드로 선택 가능해지고, 삭제·복사·잘라내기 명령이 정상 동작하도록 개선됐다.",
+      "Obsidian URI 실행 전 확인 절차(allowlist)와 네트워크 드라이브 HTML 로드 경고 등 보안 옵션이 추가됐다. (북마크 뷰 검색, 폴더 드래그앤드롭 임포트 시 디렉터리 구조 보존도 포함)"
+    ],
+    "image_url": "https://obsidian.md/images/banner.png",
+    "image_source": "Obsidian changelog 페이지 og:image (사이트 공통 배너 — 기능 전용 이미지 아님)",
+    "verdict": "검증 통과"
+  }
+]
