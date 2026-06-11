@@ -1348,8 +1348,19 @@ main {
 }
 
 .article-section .article-source-link {
-  margin-top: 14px;
+  display: flex;
+  margin: 24px auto 0;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
   font-size: 15px;
+}
+
+.article-section .article-source-link:hover,
+.article-section .article-source-link:focus-visible {
+  text-decoration: none;
+  opacity: 0.8;
 }
 
 .article-source-link svg {
