@@ -1,0 +1,210 @@
+{
+  "date": "2026-06-11",
+  "category": "DESIGN",
+  "results": [
+    {
+      "id": "design-82",
+      "title": "검색 UX 디자인",
+      "discovery_source": "디자인 나침반(designcompass.org) 큐레이션",
+      "final_source_url": "https://designcompass.org/2026/06/04/search-ux-design/",
+      "publisher": "박종민 / 디자인 나침반",
+      "published_at": "2026-06-04",
+      "concrete_facts": [
+        "'THE NEW STANDARD PRODUCT DESIGN' 시리즈의 검색 UX 편으로 구성된 가이드 콘텐츠",
+        "본문 대부분이 플러스 멤버십 전용으로 잠겨 있어 공개 영역에서 추출 가능한 검색 UX 패턴·사례·수치가 없음",
+        "작성자 소개(18년 경력, 헤드 오브 디자인 등)만 공개로 노출"
+      ],
+      "image_url": "https://designcompass.org/wp-content/uploads/2026/06/lib-search-ux-01-1024x768.jpg",
+      "image_source": "designcompass.org 원문 대표 이미지",
+      "verdict": "원문 부족",
+      "exclusion_reason": "본문이 유료 멤버십 전용으로 잠겨 있어 검색 UX 패턴·도구·수치 등 발행에 쓸 구체 사실 3개를 본문에서 확보할 수 없음."
+    },
+    {
+      "id": "design-88",
+      "title": "[참을 수 없는 UX의 저렴함 ②-1] 외면했던 사용성 문제의 청구서",
+      "discovery_source": "DIGITAL iNSIGHT(ditoday.com) 칼럼",
+      "final_source_url": "https://ditoday.com/%ec%b0%b8%ec%9d%84-%ec%88%98-%ec%97%86%eb%8a%94-ux%ec%9d%98-%ec%a0%80%eb%a0%b4%ed%95%a8-%e2%91%a1-%ec%99%b8%eb%a9%b4%ed%96%88%eb%8d%98-%ec%82%ac%ec%9a%a9%ec%84%b1-%eb%ac%b8%ec%a0%9c%ec%9d%98/",
+      "publisher": "이동석 / DIGITAL iNSIGHT 디지털 인사이트",
+      "published_at": "2026-06-05",
+      "concrete_facts": [
+        "초기 UX 비용 절감은 사용자가 고객센터에 전화하고 유튜브로 사용법을 검색하는 시간 비용으로 나중에 청구된다는 논지",
+        "RFP의 기능 요구사항은 구체적이나 '사용자 친화적으로 구성' 같은 UX 요구사항은 모호하게 기술된다는 지적",
+        "사용법 매뉴얼·FAQ가 비정상적으로 많은 것은 UX 실패의 강력한 증거이며, 고객센터 문의·민원은 '저렴한 UX가 발행한 실패 영수증'이라는 프레임"
+      ],
+      "image_url": "https://ditoday.com/wp-content/uploads/2026/06/image-13.jpg",
+      "image_source": "ditoday.com 원문 대표 이미지(본문 SVG 플레이스홀더, tracking-data 기록 이미지)",
+      "verdict": "원문 부족",
+      "exclusion_reason": "원문은 열렸으나 화면·플로우·구체 사례·수치가 없는 칼럼성 논평으로, 발행에 쓸 검증 가능한 구체 사실이 관념적 주장에 머문다."
+    },
+    {
+      "id": "design-91",
+      "title": "5년 만의 사용성 고민? 구글 워크스페이스 아이콘 개편",
+      "discovery_source": "DIGITAL iNSIGHT(ditoday.com) 뉴스",
+      "final_source_url": "https://ditoday.com/5%eb%85%84-%eb%a7%8c%ec%97%90-%ec%82%ac%ec%9a%a9%ec%84%b1-%ec%b0%be%ec%95%84-%eb%82%98%ec%84%9c%ea%b8%b0-%ea%b5%ac%ea%b8%80-%ec%9b%8c%ed%81%ac%ec%8a%a4%ed%8e%98%ec%9d%b4%ec%8a%a4-%ec%95%84%ec%9d%b4/",
+      "publisher": "김동욱 / DIGITAL iNSIGHT 디지털 인사이트",
+      "published_at": "2026-05-29",
+      "concrete_facts": [
+        "지메일·드라이브·미트·문서 등 10여 개 주요 워크스페이스 앱 아이콘을 전반적으로 업데이트",
+        "기존 '4색 원칙'을 폐지하고 앱별 고유 색상 부여(지메일 빨강, 캘린더 파랑, 미트 노랑 등) — 동일 팔레트로 구분이 어려웠던 사용성 문제 대응",
+        "아이콘을 감싸던 하얀색 페이지 컨테이너 제거 후 그라데이션 도입, 안드로이드·iOS 앱과 PC 웹 전반에 적용"
+      ],
+      "image_url": "https://ditoday.com/wp-content/uploads/2026/05/0529.jpg",
+      "image_source": "ditoday.com 원문 대표 이미지",
+      "verdict": "검증 통과",
+      "exclusion_reason": ""
+    },
+    {
+      "id": "design-95",
+      "title": "AI가 인용하고 싶은 페이지는 어떻게 생겼을까",
+      "discovery_source": "pxd story(pxdstory.tistory.com)",
+      "final_source_url": "https://pxdstory.tistory.com/1900",
+      "publisher": "crsmym / pxd story",
+      "published_at": "2026-06-11",
+      "concrete_facts": [
+        "ChatGPT·Perplexity·Google AI Overviews·Claude 모두 RAG 구조 기반으로, 페이지 전체가 아닌 특정 문단(passage)을 인용한다는 메커니즘 정리",
+        "메타 설명은 모바일에서 약 680px(평균 120자)까지 표시되므로 핵심을 앞 120자에 배치해야 한다는 실무 기준",
+        "구체적 통계·전문가 인용·출처 명시가 인용률을 30~40% 높인다는 최적화 전략(원문 제시 수치)"
+      ],
+      "image_url": "https://tistory1.daumcdn.net/tistory/407306/skinSetting/27db96209f954066b11260326ab69155",
+      "image_source": "pxd story 원문 og:image",
+      "verdict": "검증 통과",
+      "exclusion_reason": ""
+    },
+    {
+      "id": "design-97",
+      "title": "AI로 진화하는 시리, 애플의 디바이스 경험은 어떻게 바뀔까?",
+      "discovery_source": "DIGITAL iNSIGHT(ditoday.com) 뉴스",
+      "final_source_url": "https://ditoday.com/ai%eb%a1%9c-%ec%a7%84%ed%99%94%ed%95%98%eb%8a%94-%ec%8b%9c%eb%a6%ac-%ec%95%a0%ed%94%8c%ec%9d%98-%eb%94%94%eb%b0%94%ec%9d%b4%ec%8a%a4-%ea%b2%bd%ed%97%98%ec%9d%80-%ec%96%b4%eb%96%bb%ea%b2%8c-%eb%b0%94/",
+      "publisher": "김동욱 / DIGITAL iNSIGHT 디지털 인사이트",
+      "published_at": "2026-06-10",
+      "concrete_facts": [
+        "시리가 화면에 표시된 콘텐츠와 개인적 맥락(메시지·이메일·사진)을 함께 이해하는 방향으로 확장",
+        "사진 앱에 촬영 후 구도를 조정하는 공간 프레임 재설정 기능 추가, 메시지·메일에서 대화 맥락 기반 일정·할 일 자동 제안",
+        "리퀴드 글래스 투명도를 슬라이더로 조절 가능하게 개선하고 앱 아이콘 선명도 강화"
+      ],
+      "image_url": "https://ditoday.com/wp-content/uploads/2026/06/0610.jpg",
+      "image_source": "ditoday.com 원문(본문 SVG 플레이스홀더, 명시 og:image 미확인 — 대표 이미지 별도 확인 필요)",
+      "verdict": "검증 통과",
+      "exclusion_reason": ""
+    },
+    {
+      "id": "design-98",
+      "title": "피그마, '메이크'로 디자인과 제품 개발 환경 통합한다",
+      "discovery_source": "DIGITAL iNSIGHT(ditoday.com) 뉴스",
+      "final_source_url": "https://ditoday.com/%ed%94%bc%ea%b7%b8%eb%a7%88-%eb%a9%94%ec%9d%b4%ed%81%ac%eb%a1%9c-%eb%94%94%ec%9e%90%ec%9d%b8%ea%b3%bc-%ec%a0%9c%ed%92%88-%ea%b0%9c%eb%b0%9c-%ed%99%98%ea%b2%bd-%ed%86%b5%ed%95%a9%ed%95%9c%eb%8b%a4/",
+      "publisher": "김동욱 / DIGITAL iNSIGHT 디지털 인사이트",
+      "published_at": "2026-06-10",
+      "concrete_facts": [
+        "Figma Make가 로컬 코드베이스와 직접 연동·시각적 코드 편집을 지원, 운영 코드 저장소를 연결",
+        "시각적 변경 시 내장 AI 에이전트가 관련 코드 파일을 실시간으로 찾아 자동 수정하고, 음성·이미지·피그마 프레임을 입력하는 멀티모달 지원",
+        "피그마 캔버스와 양방향 연동으로 메이크 화면을 캔버스 레이어로 붙여넣기 가능, 28일부터 맥용 베타 데스크톱 앱에서 제한 베타 제공"
+      ],
+      "image_url": "https://ditoday.com/wp-content/uploads/2026/06/figma-make.jpg",
+      "image_source": "ditoday.com 원문(본문 SVG 플레이스홀더, 명시 og:image 미확인 — 대표 이미지 별도 확인 필요)",
+      "verdict": "검증 통과",
+      "exclusion_reason": ""
+    },
+    {
+      "id": "design-99",
+      "title": "The Benefits Of Cognitive Inclusion In UX Research",
+      "discovery_source": "Smashing Magazine RSS",
+      "final_source_url": "https://smashingmagazine.com/2026/06/benefits-cognitive-inclusion-ux-research/",
+      "publisher": "Kate Kalcevich / Smashing Magazine",
+      "published_at": "2026-06-10",
+      "concrete_facts": [
+        "AI 생성 웹사이트 3개에서 인지장애·일반 참여자 균등 분할 30명 인터뷰, Accessible Usability Scale 설문 사용한 연구 방법론",
+        "인지장애 참여자가 197개 사용성 문제를 식별(일반 113개) — 1.8배 더 많은 문제·제안 도출",
+        "인지 참여자가 콘텐츠·버튼/링크·아이콘·시각요소·미디어에서 일반군보다 유의하게 많은 문제를 발견"
+      ],
+      "image_url": "https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_80/w_400/https://files.smashing.media/articles/benefits-cognitive-inclusion-ux-research/strong-snacks.png",
+      "image_source": "Smashing Magazine 원문 본문 이미지",
+      "verdict": "검증 통과",
+      "exclusion_reason": ""
+    },
+    {
+      "id": "design-101",
+      "title": "Liquid Glass: who gets to decide how an interface looks?",
+      "discovery_source": "UX Collective(uxdesign.cc) RSS",
+      "final_source_url": "https://uxdesign.cc/liquid-glass-who-gets-to-decide-how-an-interface-looks-a0abe75ae21e",
+      "publisher": "Fabrizia Ausiello / UX Collective",
+      "published_at": "2026-06-10",
+      "concrete_facts": [
+        "애플이 Liquid Glass UI에 시스템 요소 반투명도를 조절하는 투명도 슬라이더를 도입했다는 사실",
+        "해당 기능이 접근성 관점으로 포지셔닝되지만, 비전문 사용자에게 투명도 수준 평가를 떠넘기는 설계라는 비평",
+        "'좋은 디자인은 결정 부담을 제거한다'는 원칙과 커스터마이즈 옵션 제공 사이의 긴장을 논하는 관점 글"
+      ],
+      "image_url": "",
+      "image_source": "Medium 본문 이미지 URL 미노출",
+      "verdict": "원문 부족",
+      "exclusion_reason": "애플 투명도 슬라이더라는 사실 한 건 외에는 화면·플로우 증거 없이 저자 개인 의견(오피니언) 중심이라, 발행에 쓸 독립적 구체 사실 3개 기준에 미달. 동일 사실은 design-97(시리/디바이스 경험)에서 더 풍부하게 다룸."
+    },
+    {
+      "id": "design-105",
+      "title": "별점과 리뷰로 사용자 경험 이해하기",
+      "discovery_source": "pxd story(pxdstory.tistory.com)",
+      "final_source_url": "https://pxdstory.tistory.com/1901",
+      "publisher": "pxd story",
+      "published_at": "2026-06-09",
+      "concrete_facts": [
+        "올리브영 iOS 리뷰 499개 중 1점 44%·5점 24%로 양극화되어 '평균 2.6점 사용자는 실재하지 않는다'는 분석",
+        "앱 안정성·기술 오류는 빈도 34.7%·평균 2.1점으로 최우선, 배송서비스는 빈도 7.2%지만 평균 2.0점의 숨은 불만이라는 우선순위 매트릭스",
+        "글로우픽 긍정 리뷰의 21%가 체험단 당첨이며 이들 중 66%가 '이벤트' 언어로 제품력이 아닌 보상 설계를 칭찬한다는 보상 언어 분석"
+      ],
+      "image_url": "https://blog.kakaocdn.net/dna/cBM2jH/dJMcabRZVAN/AAAAAAAAAAAAAAAAAAAAAHagXEdnLexqRjpVEltTveB4B91FBt0jrtSrJx2-sWTA/img.png",
+      "image_source": "pxd story 원문 og:image",
+      "verdict": "검증 통과",
+      "exclusion_reason": ""
+    },
+    {
+      "id": "design-56",
+      "title": "얼굴 인식의 역사와 페이스페이의 미래",
+      "discovery_source": "토스테크(toss.tech)",
+      "final_source_url": "https://toss.tech/article/history-of-face-recognition-facepay",
+      "publisher": "토스테크 / Toss",
+      "published_at": "2026-06-09",
+      "concrete_facts": [
+        "1991년 MIT 미디어랩 Turk·Pentland가 PCA 기반 Eigenface로 얼굴을 '고유얼굴'로 표현하는 기법 발표",
+        "2014년 Facebook AI의 DeepFace가 LFW 벤치마크 97.35% 정확도로 인간 수준(97.53%)에 근접",
+        "2025년 9월 토스 페이스페이 정식 출시, 2개월 만에 가입자 100만 명 돌파, 서울 결제율 약 79%"
+      ],
+      "image_url": "https://resources-fe.toss.im/image-optimize/width=3840,quality=75/https%3A%2F%2Fstatic.toss.im%2Fillusts%2Ftossfeed-facepay-cover-2.jpg",
+      "image_source": "toss.tech 원문 대표 이미지",
+      "verdict": "검증 통과",
+      "exclusion_reason": ""
+    },
+    {
+      "id": "design-108",
+      "title": "How To Make Your Design System AI-Ready",
+      "discovery_source": "Smashing Magazine RSS",
+      "final_source_url": "https://smashingmagazine.com/2026/06/how-make-design-system-ai-ready/",
+      "publisher": "Vitaly Friedman / Smashing Magazine",
+      "published_at": "2026-06-03",
+      "concrete_facts": [
+        "디자인 결정을 구조화된 Markdown 스펙 파일(간격 규칙·색상·컴포넌트 가이드·우선순위)로 문서화해 AI가 읽게 한다는 방법",
+        "무료 Figma 플러그인 FigmaLint로 토큰·상태·접근성·분리된 인스턴스·하드코딩 값을 감사해 문서를 정비",
+        "토큰 레이어를 유지해 'AI가 그럴듯한 값을 즉석 발명하지 않고 명명된 변수의 닫힌 집합에서만 선택'하게 하고, 업데이트 시 sync 루틴으로 갱신 대상 스펙을 표시"
+      ],
+      "image_url": "https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_80/w_400/https://files.smashing.media/articles/how-make-design-system-ai-ready/1-traditional-llm-readable-design-systems.jpg",
+      "image_source": "Smashing Magazine 원문 본문 이미지",
+      "verdict": "검증 통과",
+      "exclusion_reason": ""
+    },
+    {
+      "id": "design-79",
+      "title": "Your design taste isn't a feeling. It's a prediction about user behavior.",
+      "discovery_source": "UX Collective(uxdesign.cc) RSS",
+      "final_source_url": "https://uxdesign.cc/your-design-taste-isnt-a-feeling-it-s-a-prediction-about-user-behavior-7a4a63f5f622",
+      "publisher": "Kai Wong / UX Collective",
+      "published_at": "2026-06-10",
+      "concrete_facts": [
+        "디자인 취향을 주관적 느낌이 아닌 사용자 행동에 대한 예측으로 재정의하는 관점",
+        "AI가 시각적으로 유능한 결과물을 빠르게 생성하는 환경에서 디자이너는 선택의 '왜'를 설명해야 한다는 주장",
+        "데이터 시각화 분야가 정량 지표에 치우치고 정성 설명에 약했던 신뢰 격차를 사례로 든 논의"
+      ],
+      "image_url": "",
+      "image_source": "본문 대표 이미지 미노출(저자 인용한 Pexels 외부 링크만 존재)",
+      "verdict": "원문 부족",
+      "exclusion_reason": "기능·정책·화면 변화 없이 저자 개인의 디자인 철학 에세이로, 검증 가능한 독립적 구체 사실이 아닌 일반론적 주장에 머문다."
+    }
+  ]
+}

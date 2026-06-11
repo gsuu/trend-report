@@ -1,14 +1,14 @@
 {
   "date": "2026-06-11",
   "sourceFile": "news-tracking/dev-sources.json",
-  "totalArticles": 78,
+  "totalArticles": 87,
   "sourceResults": [
     {
       "name": "GeekNews",
       "type": "feed",
       "url": "https://news.hada.io/rss/news",
       "status": "ok",
-      "count": 29,
+      "count": 28,
       "error": ""
     },
     {
@@ -47,9 +47,9 @@
       "name": "CSS-Tricks",
       "type": "feed",
       "url": "https://css-tricks.com/feed/",
-      "status": "error",
-      "count": 0,
-      "error": "Unexpected close tag\nLine: 92\nColumn: 7\nChar: >"
+      "status": "ok",
+      "count": 9,
+      "error": ""
     },
     {
       "name": "web.dev",
@@ -223,9 +223,9 @@
       "name": "Woowahan Tech",
       "type": "feed",
       "url": "https://techblog.woowahan.com/feed/",
-      "status": "error",
+      "status": "ok",
       "count": 0,
-      "error": "HTTP 403"
+      "error": ""
     },
     {
       "name": "Bramus van Damme",
@@ -271,9 +271,9 @@
       "name": "Patrick Brosset",
       "type": "feed",
       "url": "https://www.patrickbrosset.com/feed.xml",
-      "status": "error",
+      "status": "ok",
       "count": 0,
-      "error": "fetch failed"
+      "error": ""
     },
     {
       "name": "Chrome for Developers",
@@ -304,7 +304,7 @@
       "type": "page",
       "url": "https://cursor.com/changelog",
       "status": "ok",
-      "count": 0,
+      "count": 1,
       "error": ""
     },
     {

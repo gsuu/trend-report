@@ -1,7 +1,7 @@
 {
   "date": "2026-06-11",
   "sourceFile": "news-tracking/service-sources.json",
-  "totalArticles": 55,
+  "totalArticles": 75,
   "sourceResults": [
     {
       "name": "Trend A Word (Maily)",
@@ -23,9 +23,9 @@
       "name": "쿠팡 뉴스룸",
       "type": "feed",
       "url": "https://news.coupang.com/feed/",
-      "status": "error",
-      "count": 0,
-      "error": "HTTP 403"
+      "status": "ok",
+      "count": 5,
+      "error": ""
     },
     {
       "name": "컬리 뉴스룸",
@@ -71,9 +71,9 @@
       "name": "우아한형제들 기술블로그",
       "type": "feed",
       "url": "https://techblog.woowahan.com/feed/",
-      "status": "error",
+      "status": "ok",
       "count": 0,
-      "error": "HTTP 403"
+      "error": ""
     },
     {
       "name": "Shopify Engineering",
@@ -97,7 +97,7 @@
       "url": "https://www.klarna.com/international/press/feed/",
       "status": "error",
       "count": 0,
-      "error": "Unexpected close tag\nLine: 20\nColumn: 7\nChar: >"
+      "error": "Unexpected close tag\nLine: 264\nColumn: 1672\nChar: >"
     },
     {
       "name": "29CM Medium",
@@ -136,7 +136,7 @@
       "type": "feed",
       "url": "https://cjnews.cj.net/feed",
       "status": "ok",
-      "count": 20,
+      "count": 18,
       "error": ""
     },
     {
@@ -144,7 +144,7 @@
       "type": "page",
       "url": "https://newsroom.musinsa.com/news",
       "status": "ok",
-      "count": 2,
+      "count": 6,
       "error": ""
     },
     {
@@ -168,7 +168,7 @@
       "type": "page",
       "url": "https://corp.oliveyoung.com/ko/news",
       "status": "ok",
-      "count": 0,
+      "count": 1,
       "error": ""
     },
     {
@@ -185,14 +185,14 @@
       "url": "https://www.wconcept.co.kr/Event",
       "status": "error",
       "count": 0,
-      "error": "HTTP 403"
+      "error": "HTTP 500"
     },
     {
       "name": "SSG 이벤트",
       "type": "page",
       "url": "https://www.ssg.com/event/eventMain.ssg",
       "status": "ok",
-      "count": 3,
+      "count": 13,
       "error": ""
     },
     {
@@ -256,7 +256,7 @@
       "type": "page",
       "url": "https://about.daangn.com/company/pr/",
       "status": "ok",
-      "count": 0,
+      "count": 1,
       "error": ""
     },
     {
@@ -280,7 +280,7 @@
       "type": "sitemap",
       "url": "https://newneek.co/sitemap/article-sitemap.xml",
       "status": "ok",
-      "count": 0,
+      "count": 1,
       "error": ""
     }
   ]

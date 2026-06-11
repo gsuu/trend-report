@@ -1,0 +1,149 @@
+{
+  "date": "2026-06-11",
+  "category": "SERVICE",
+  "results": [
+    {
+      "id": "https://www.shinsegaegroupnewsroom.com/shinsegae-department-store-main-branch-doubles-foreigner-payments-in-one-year-3/",
+      "title": "외국인 결제 1년 새 두 배… 신세계 본점 변신, K-컬처 글로벌 랜드마크로",
+      "discovery_source": "신세계그룹 뉴스룸",
+      "final_source_url": "https://www.shinsegaegroupnewsroom.com/shinsegae-department-store-main-branch-doubles-foreigner-payments-in-one-year-3/",
+      "publisher": "신세계백화점",
+      "published_at": "2026-06-11",
+      "concrete_facts": [
+        "신세계 본점 외국인 결제액이 1년 새 두 배 증가",
+        "다국어 동시 통역 서비스, 택스리펀 서비스, 신세계 씨티투어 쇼핑페스타 운영",
+        "신세계스퀘어·더 리저브 리뉴얼, 까르띠에·루이비통·샤넬·에르메스 등 럭셔리 브랜드로 K-컬처 글로벌 랜드마크 전략 추진"
+      ],
+      "image_url": "https://shinsegae-prd-data.s3.ap-northeast-2.amazonaws.com/wp-content/uploads/2026/06/%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90-%EC%8B%A0%EC%84%B8%EA%B3%84%EC%8A%A4%ED%80%98%EC%96%B4-%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8-%EC%BB%B4%EB%B0%B1-MV-%EA%B4%80%EB%A0%A8-%EC%82%AC%EC%A7%84.jpg",
+      "image_source": "신세계그룹 뉴스룸 원문 대표 이미지",
+      "verdict": "검증 통과"
+    },
+    {
+      "id": "https://www.shinsegaegroupnewsroom.com/shinsegae-duty-free-completes-louis-vuitton-shinsegae-store-2/",
+      "title": "신세계면세점, '루이 비통 신세계 스토어' 완성… 입체적 럭셔리 공간 경험 선보여",
+      "discovery_source": "신세계그룹 뉴스룸",
+      "final_source_url": "https://www.shinsegaegroupnewsroom.com/shinsegae-duty-free-completes-louis-vuitton-shinsegae-store-2/",
+      "publisher": "신세계디에프",
+      "published_at": "2026-06-11",
+      "concrete_facts": [],
+      "image_url": "https://shinsegae-prd-data.s3.ap-northeast-2.amazonaws.com/wp-content/uploads/2026/06/%EC%82%AC%EC%A7%84-1.-%EC%9D%B8%EC%B2%9C%EA%B3%B5%ED%95%AD-2%ED%84%B0%EB%AF%B8%EB%84%90-%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-%EC%8B%A0%EC%84%B8%EA%B3%84-%EC%8A%A4%ED%86%A0%EC%96%B4-1.jpg",
+      "image_source": "신세계그룹 뉴스룸 원문 대표 이미지(태그: 인천공항 2터미널·트래블 컬렉션)",
+      "verdict": "원문 부족",
+      "exclusion_reason": "원문 페이지가 열렸으나 본문이 JS로 로드되어 WebFetch로 본문 사실을 추출하지 못함. 제목·태그(인천공항 2터미널, 트래블 컬렉션)만 확인되고 위치·면적·디자인·입점 브랜드 등 발행에 쓸 구체 사실 3개를 본문에서 확보하지 못함. 또한 면세점 럭셔리 매장 완성 보도로 화면·플로우 증거가 약함."
+    },
+    {
+      "id": "https://news.coupang.com/archives/63285/",
+      "title": "온·오프라인의 경계를 허물고, 전통시장의 맛을 더 넓은 식탁으로!",
+      "discovery_source": "쿠팡 뉴스룸",
+      "final_source_url": "https://news.coupang.com/archives/63285/",
+      "publisher": "쿠팡",
+      "published_at": "2026-06-08",
+      "concrete_facts": [
+        "쿠팡·쿠팡이츠서비스(CES)·전국상인연합회가 지난해 10월 체결한 상생협약 기반 프로그램으로 진주중앙시장(140여 년 역사) 지원",
+        "친환경 포장재 지원, 온라인 판매 전략 컨설팅, 밀키트 제작 지원으로 구성",
+        "컨설팅은 배달앱 구조 이해, 메뉴 등록, 가격 설정, 주문 접수, 사진·설명 구성, 광고·프로모션 활용법까지 포함"
+      ],
+      "image_url": "https://news.coupang.com/wp-content/uploads/2026/06/coupang-eats-jinju-jungang-market-digital-transformation-consulting-260608-01.jpg",
+      "image_source": "쿠팡 뉴스룸 원문 대표 이미지",
+      "verdict": "검증 통과"
+    },
+    {
+      "id": "https://newsroom.musinsa.com/newsroom-menu/2026-061102",
+      "title": "무신사 스탠다드, 남양주 첫 매장 공식 오픈… \"경기 동북부 상권 공략 본격화\"",
+      "discovery_source": "무신사 뉴스룸",
+      "final_source_url": "https://newsroom.musinsa.com/newsroom-menu/2026-061102",
+      "publisher": "무신사",
+      "published_at": "2026-06-11",
+      "concrete_facts": [
+        "남양주 다산 신도시 현대 프리미엄 아울렛 스페이스원에 입점, 맨·우먼 의류와 뷰티·홈 카테고리까지 구성",
+        "6월 11~12일 최대 50% 할인 쿠폰 일별 선착순 100명, 30만원 상당 '슈퍼백' 4만9900원 한정 판매",
+        "구매 고객 전원 온·오프라인 15% 웰컴백 쿠폰, 3인 이상 단체 방문 시 추가 5% 할인"
+      ],
+      "image_url": "https://cdn.prod.website-files.com/60a3629e04f26d12caff56df/6a292b72425874fdecd2bff6_%5B%EB%AC%B4%EC%8B%A0%EC%82%AC%20%EC%82%AC%EC%A7%84%EC%9E%90%EB%A3%8C%5D%EB%AC%B4%EC%8B%A0%EC%82%AC%20%EC%8A%A4%ED%83%A0%EB%8B%A4%EB%93%9C%20%ED%98%84%EB%8C%80%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%EC%95%84%EC%9A%B8%EB%A0%9B%20%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%9B%90%20%EB%82%A8%EC%96%91%EC%A3%BC%EC%A0%90%20%EC%99%B8%EA%B4%80.jpg",
+      "image_source": "무신사 뉴스룸 원문 대표 이미지",
+      "verdict": "원문 부족",
+      "exclusion_reason": "본문 사실은 충분하나 신규 오프라인 매장 오픈+할인 쿠폰·사은품 중심의 프로모션 보도. 화면·플로우·서비스 정책 변화가 아닌 매장 개점·프로모션 홍보성 내용으로, CTTD 웹기획자/PM 독자에게 줄 서비스 동향 가치가 약함."
+    },
+    {
+      "id": "https://newsroom.musinsa.com/newsroom-menu/2026-0608-01",
+      "title": "무신사, 中 '티몰 글로벌'에 공식 스토어 오픈… \"K-패션 브랜드 중국 수출 판로 넓힌다\"",
+      "discovery_source": "무신사 뉴스룸",
+      "final_source_url": "https://newsroom.musinsa.com/newsroom-menu/2026-0608-01",
+      "publisher": "무신사",
+      "published_at": "2026-06-08",
+      "concrete_facts": [
+        "6월 8일부터 크로스보더 이커머스 티몰 글로벌에 공식 스토어 오픈, 기존 티몰 플래그십 스토어(지난해 오픈)에 더해 내수+해외 직구 수요를 아우르는 채널 구조 완성",
+        "국내 무신사 스토어 상품 등록만으로 글로벌 스토어·티몰 글로벌 판매가 자동 연계되는 운영 방식",
+        "입점 브랜드에 기술 연동·물류·마케팅·CS를 통합한 원스톱 해외 진출 솔루션 제공"
+      ],
+      "image_url": "https://cdn.prod.website-files.com/60a3629e04f26d12caff56df/6a2286c36235ed4af0f35bb5_%5B%EB%AC%B4%EC%8B%A0%EC%82%AC%20%EC%82%AC%EC%A7%84%EC%9E%90%EB%A3%8C%5D%EB%AC%B4%EC%8B%A0%EC%82%AC%20%ED%8B%B0%EB%AA%B0%20%EA%B8%80%EB%A1%9C%EB%B2%8C.jpg",
+      "image_source": "무신사 뉴스룸 원문 대표 이미지",
+      "verdict": "검증 통과"
+    },
+    {
+      "id": "https://newsroom.musinsa.com/newsroom-menu/2026-0609-01",
+      "title": "무신사, 글로벌 AI 패션·뷰티 시장 정조준··· 챗GPT 무신사 전용 앱 출시",
+      "discovery_source": "무신사 뉴스룸",
+      "final_source_url": "https://newsroom.musinsa.com/newsroom-menu/2026-0609-01",
+      "publisher": "무신사",
+      "published_at": "2026-06-09",
+      "concrete_facts": [
+        "OpenAI의 ChatGPT 플랫폼에 '챗GPT 무신사 전용 앱'을 출시(앞서 2026년 3월 'ChatGPT for Kakao' 내 AI 스타일 추천 서비스 출시)",
+        "자체 개발한 '무신사 MCP(Model Context Protocol)'를 적용한 커머스 탐색 전용 인터페이스로 설계",
+        "TPO·날씨·시즌·선호 가격대 기반 추천, 브랜드명 없이 맥락 질문으로 상품 추천, 실시간 후기 연결, 추천 상품 클릭 시 무신사 스토어 직접 연결"
+      ],
+      "image_url": "https://cdn.prod.website-files.com/60a3629e04f26d12caff56df/6a26b04c69cf43051ca9daff_%5B%EB%AC%B4%EC%8B%A0%EC%82%AC%20%EC%82%AC%EC%A7%84%EC%9E%90%EB%A3%8C%5D%20%EB%AC%B4%EC%8B%A0%EC%82%AC%20ChatGPT%20%EC%A0%84%EC%9A%A9%20%EC%95%B1%20%EC%B6%9C%EC%8B%9C.jpg",
+      "image_source": "무신사 뉴스룸 원문 대표 이미지",
+      "verdict": "검증 통과"
+    },
+    {
+      "id": "https://cjnews.cj.net/cj대한통운-더-풀필-올인원-출시-b2bb2c-통합-물류/",
+      "title": "CJ대한통운, '더 풀필 올인원' 출시 …B2B·B2C 통합 물류로 이커머스 셀러 운영 효율 높인다",
+      "discovery_source": "CJ 뉴스룸",
+      "final_source_url": "https://cjnews.cj.net/cj%eb%8c%80%ed%95%9c%ed%86%b5%ec%9a%b4-%eb%8d%94-%ed%92%80%ed%95%84-%ec%98%ac%ec%9d%b8%ec%9b%90-%ec%b6%9c%ec%8b%9c-b2b%c2%b7b2c-%ed%86%b5%ed%95%a9-%eb%ac%bc%eb%a5%98/",
+      "publisher": "CJ대한통운",
+      "published_at": "2026-06-10",
+      "concrete_facts": [
+        "'더 풀필 올인원'은 B2B 출하(쉽먼트)와 B2C 풀필먼트를 통합, 총 26개 이커머스 플랫폼과 연동",
+        "로이스 이플렉스(LoIS eFLEXs) 주문관리 시스템과 자정 전 주문 시 다음날 배송 가능한 24시 주문마감 서비스 제공",
+        "상품을 한 번만 입고하면 재고관리·플랫폼별 상품 가공·출하·배송까지 일괄 처리하며 풀필먼트와 도착보장 서비스를 동시 제공"
+      ],
+      "image_url": "https://img.cjnews.cj.net/wp-content/uploads/2026/06/%EC%B0%B8%EA%B3%A0-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8D%94%ED%92%80%ED%95%84-%EC%98%AC%EC%9D%B8%EC%9B%90-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%9D%B4%EB%AF%B8%EC%A7%80-1024x546.jpg",
+      "image_source": "CJ 뉴스룸 원문 대표 이미지",
+      "verdict": "원문 부족",
+      "exclusion_reason": "사실은 충분하나 B2B·B2C 물류 셀러 운영 효율 중심의 백엔드/물류 인프라 보도. 화면·UX·서비스 플로우 변화가 아닌 셀러 대상 물류 솔루션으로 CTTD 웹기획자/PM/디자인 독자와의 연결이 약함."
+    },
+    {
+      "id": "https://cjnews.cj.net/cj온스타일-대화형-ai-쇼핑-유입-4배↑/",
+      "title": "CJ온스타일, 대화형 AI 쇼핑 유입 4배↑... AI 기반 커머스 확장",
+      "discovery_source": "CJ 뉴스룸",
+      "final_source_url": "https://cjnews.cj.net/cj%ec%98%a8%ec%8a%a4%ed%83%80%ec%9d%bc-%eb%8c%80%ed%99%94%ed%98%95-ai-%ec%87%bc%ed%95%91-%ec%9c%a0%ec%9e%85-4%eb%b0%b0%e2%86%91-ai-%ea%b8%b0%eb%b0%98-%ec%bb%a4%eb%a8%b8%ec%8a%a4-%ed%99%95%ec%9e%a5/",
+      "publisher": "CJ온스타일",
+      "published_at": "2026-05-28",
+      "concrete_facts": [
+        "5월 1~25일 챗GPT·제미나이 등 대화형 AI 플랫폼을 통한 앱·웹 유입이 지난 1월 같은 기간 대비 4배 이상 증가, 자체 앱 추천 영역 취급고는 1~4월 전년 동기 대비 37% 증가",
+        "지난 15일 챗GPT 앱스(Apps)에 CJ온스타일 전용 앱 출시, 현재 60만개 상품 AI 최적화 완료(연내 100만개 확대 계획)",
+        "GEO(생성형 엔진 최적화) 전략으로 '출근용 슬랙스' 등 고객 검색 표현 중심으로 상품 정보를 재구성하고 리뷰 데이터를 AI 추천에 활용"
+      ],
+      "image_url": "https://img.cjnews.cj.net/wp-content/uploads/2026/05/CJ%EC%98%A8%EC%8A%A4%ED%83%80%EC%9D%BC-%EC%99%BC%EC%AA%BD%EB%B6%80%ED%84%B0-%EC%B1%97GPT-%EB%82%B4-CJ%EC%98%A8%EC%8A%A4%ED%83%80%EC%9D%BC-%EC%83%81%ED%92%88-%EC%B6%94%EC%B2%9C-%ED%99%94%EB%A9%B4-%EC%9E%90%EC%B2%B4-%EC%95%B1-%EB%82%B4-AI-%EA%B8%B0%EB%B0%A5-%EA%B0%9C%EC%9D%B8%ED%99%94-%EC%B6%94%EC%B2%9C-%ED%99%94%EB%A9%B4-1024x633.png",
+      "image_source": "CJ 뉴스룸 원문 대표 이미지(챗GPT 내 상품 추천 화면 + 자체 앱 AI 추천 화면)",
+      "verdict": "검증 통과"
+    },
+    {
+      "id": "https://blog.opensurvey.co.kr/article/subscription-economy-2026-2/",
+      "title": "AI 구독은 늘고, 콘텐츠 멤버십은 빠진다 — 락인과 이탈로 갈리는 2026 구독 경제",
+      "discovery_source": "오픈서베이 블로그",
+      "final_source_url": "https://blog.opensurvey.co.kr/article/subscription-economy-2026-2/",
+      "publisher": "오픈서베이",
+      "published_at": "2026-06-08",
+      "concrete_facts": [
+        "전국 만 20~59세 남녀 1,500명 조사, 생성형 AI 구독은 전년 대비 8.4%p 증가(상승폭 1위), 콘텐츠 멤버십은 5.7%p 감소(하락폭 1위)",
+        "동영상 스트리밍/OTT 가입률 72.9%(1위), OTT 월평균 지출 22,700원, 쇼핑 멤버십 월평균 지출 33,400원",
+        "넷플릭스 유지 의향 우위 40.9%p로 락인과 이탈로 구독 서비스가 양극화"
+      ],
+      "image_url": "https://i0.wp.com/blog.opensurvey.co.kr/wp-content/uploads/2026/06/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C6-e1780651722982.png",
+      "image_source": "오픈서베이 블로그 원문 대표 이미지(조사 리포트 슬라이드)",
+      "verdict": "검증 통과"
+    }
+  ]
+}

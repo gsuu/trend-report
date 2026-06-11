@@ -7,18 +7,20 @@ import {
   PAGE_TIMEOUT_MS,
   articleContent,
   cleanTitle,
+  collectSourceGroup,
   extractAnchors,
   fetchArticleMeta,
   fetchText,
   isAutoExcluded,
   itemImage,
+  makeRawPaths,
   matchesAny,
   matchesNone,
   outputDate,
   previousLinks,
-  rawDir as resolveRawDir,
   sinceDate,
   uniqueArticles,
+  writeFetchOutput,
 } from "./tracking_utils.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -27,18 +29,7 @@ const root = path.resolve(__dirname, "..", "..");
 const sourcesPath = path.join(root, "news-tracking", "design-sources.json");
 const runsDir = path.join(root, "runs");
 const parser = new Parser();
-
-function rawDir(date = outputDate()) {
-  return resolveRawDir(runsDir, date);
-}
-
-function designArticlesPath(date = outputDate()) {
-  return path.join(rawDir(date), "design-articles.json");
-}
-
-function designFetchReportPath(date = outputDate()) {
-  return path.join(rawDir(date), "design-fetch-report.json");
-}
+const paths = makeRawPaths(runsDir, "design");
 
 function articleFields(source) {
   return {
@@ -203,78 +194,47 @@ function sortArticles(a, b) {
 
 async function main() {
   const date = outputDate();
-  await fs.mkdir(rawDir(date), { recursive: true });
+  await fs.mkdir(paths.rawDir(date), { recursive: true });
 
   const sources = JSON.parse(await fs.readFile(sourcesPath, "utf8"));
   const since = sinceDate();
-  const seenPreviousLinks = await previousLinks(runsDir, designArticlesPath, date);
+  const seenPreviousLinks = await previousLinks(runsDir, paths.articlesPath, date);
   const articles = [];
   const sourceResults = [];
 
   console.log("Fetching design feeds...");
-  for (const source of sources.feeds || []) {
-    if (!source.rss) continue;
-    const result = await fetchRssFeed(source, since);
-    articles.push(...result.articles);
-    sourceResults.push({
-      name: source.name,
-      type: "feed",
-      url: source.rss,
-      status: result.error ? "error" : "ok",
-      count: result.articles.length,
-      error: result.error,
-    });
-  }
+  await collectSourceGroup({
+    sources, key: "feeds", type: "feed", urlField: "rss",
+    handler: (source) => fetchRssFeed(source, since),
+    articles, sourceResults,
+  });
 
   console.log("Scraping design pages...");
-  for (const source of sources.pages || []) {
-    if (!source.url) continue;
-    const result = await scrapePage(source, seenPreviousLinks);
-    articles.push(...result.articles);
-    sourceResults.push({
-      name: source.name,
-      type: "page",
-      url: source.url,
-      status: result.error ? "error" : "ok",
-      count: result.articles.length,
-      error: result.error,
-    });
-  }
+  await collectSourceGroup({
+    sources, key: "pages", type: "page", urlField: "url",
+    handler: (source) => scrapePage(source, seenPreviousLinks),
+    articles, sourceResults,
+  });
 
   console.log("Reading Stibee newsletter archives...");
-  for (const source of sources.stibeeArchives || []) {
-    if (!source.url) continue;
-    const result = await fetchStibeeArchive(source, since, seenPreviousLinks);
-    articles.push(...result.articles);
-    sourceResults.push({
-      name: source.name,
-      type: "stibeeArchive",
-      url: source.url,
-      status: result.error ? "error" : "ok",
-      count: result.articles.length,
-      error: result.error,
-    });
-  }
+  await collectSourceGroup({
+    sources, key: "stibeeArchives", type: "stibeeArchive", urlField: "url",
+    handler: (source) => fetchStibeeArchive(source, since, seenPreviousLinks),
+    articles, sourceResults,
+  });
 
   const output = uniqueArticles(articles)
     .filter((article) => !isAutoExcluded(article.title, "design"))
     .map((article) => ({ ...article, valueTags: designValueTags(article) }))
     .sort(sortArticles);
 
-  const outputPath = designArticlesPath(date);
-  await fs.writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
-  const reportPath = designFetchReportPath(date);
-  await fs.writeFile(reportPath, `${JSON.stringify({
-    date,
+  await writeFetchOutput({
+    paths, date,
     sourceFile: "news-tracking/design-sources.json",
-    totalArticles: output.length,
-    sourceResults,
-  }, null, 2)}\n`, "utf8");
-
-  console.log(`Fetched ${output.length} design articles`);
-  console.log(`Saved to ${outputPath}`);
-  console.log(`Saved fetch report to ${reportPath}`);
-  console.log("Next: use docs/design-digest-agent-prompt.md to select UIUX design references.");
+    output, sourceResults,
+    fetchedLabel: "design articles",
+    nextHint: "Next: use docs/design-digest-agent-prompt.md to select UIUX design references.",
+  });
 }
 
 main().catch((error) => {

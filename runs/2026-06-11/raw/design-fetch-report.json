@@ -1,15 +1,15 @@
 {
   "date": "2026-06-11",
   "sourceFile": "news-tracking/design-sources.json",
-  "totalArticles": 16,
+  "totalArticles": 35,
   "sourceResults": [
     {
       "name": "DIGITAL iNSIGHT",
       "type": "feed",
       "url": "https://ditoday.com/feed/",
-      "status": "error",
-      "count": 0,
-      "error": "Invalid character in entity name\nLine: 0\nColumn: 225\nChar: &"
+      "status": "ok",
+      "count": 5,
+      "error": ""
     },
     {
       "name": "pxd story",
@@ -104,7 +104,7 @@
       "type": "page",
       "url": "https://ditoday.com/ui-ux/",
       "status": "ok",
-      "count": 0,
+      "count": 5,
       "error": ""
     },
     {
@@ -128,16 +128,16 @@
       "type": "page",
       "url": "https://www.designdb.com/?menuno=792",
       "status": "ok",
-      "count": 0,
+      "count": 5,
       "error": ""
     },
     {
       "name": "Design Compass",
       "type": "page",
       "url": "https://designcompass.org/",
-      "status": "error",
-      "count": 0,
-      "error": "HTTP 403"
+      "status": "ok",
+      "count": 1,
+      "error": ""
     },
     {
       "name": "Design X Blog",
@@ -159,17 +159,17 @@
       "name": "Page Flows",
       "type": "page",
       "url": "https://pageflows.com/",
-      "status": "error",
+      "status": "ok",
       "count": 0,
-      "error": "HTTP 403"
+      "error": ""
     },
     {
       "name": "Awwwards - Websites",
       "type": "page",
       "url": "https://www.awwwards.com/websites/",
-      "status": "error",
+      "status": "ok",
       "count": 0,
-      "error": "fetch failed"
+      "error": ""
     },
     {
       "name": "Siteinspire",
@@ -200,7 +200,7 @@
       "type": "page",
       "url": "https://the-brandidentity.com/",
       "status": "ok",
-      "count": 8,
+      "count": 14,
       "error": ""
     },
     {
@@ -208,7 +208,7 @@
       "type": "page",
       "url": "https://www.itsnicethat.com/",
       "status": "ok",
-      "count": 2,
+      "count": 6,
       "error": ""
     },
     {

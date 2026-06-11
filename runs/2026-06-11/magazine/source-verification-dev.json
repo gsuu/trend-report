@@ -1,0 +1,255 @@
+[
+  {
+    "id": "1",
+    "title": "HTML 우선 사이트로 사용자 2배",
+    "discovery_source": "https://news.hada.io/topic?id=30372",
+    "final_source_url": "https://mohkohn.co.uk/writing/html-first/",
+    "publisher": "Mo Kohn (mohkohn.co.uk)",
+    "published_at": "2026-06-10",
+    "concrete_facts": [
+      "공공 서비스 신청 폼을 HTML 우선 구조로 재구축한 뒤 폼 완료 사용자 수가 두 배로 증가",
+      "기존 React 앱은 공개 3일 만에 고객 불만으로 내려갔고, 새 사이트는 Astro로 구축",
+      "이미지 저장에 5MB 제한이 있는 localStorage를 활용",
+      "접근성 목표를 WCAG AAA가 아닌 AA로 설정"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미확인",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "2",
+    "title": "Creating Memorable Web Experiences: A Modern CSS Toolkit",
+    "discovery_source": "https://css-tricks.com/creating-memorable-web-experiences-a-modern-css-toolkit/",
+    "final_source_url": "https://css-tricks.com/creating-memorable-web-experiences-a-modern-css-toolkit/",
+    "publisher": "Mariana Beldi (CSS-Tricks)",
+    "published_at": "2026-06-10",
+    "concrete_facts": [
+      "@property로 커스텀 속성을 애니메이션하고 linear() 함수로 바운스 효과 구현",
+      "clip-path와 mask(명도·알파 채널)로 요소 일부를 시각적으로 처리",
+      "transform-style: preserve-3d와 perspective로 3D 공간에 자식 요소 배치",
+      "GSAP SplitText 플러그인으로 텍스트를 문자 단위 분할, Layoutit의 CSS 3D voxel 생성기 활용"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미확인 (Gravatar 아바타만 존재)",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "3",
+    "title": "Safari's 58 new features",
+    "discovery_source": "https://frontendfoc.us/issues/745",
+    "final_source_url": "https://webkit.org/blog/17967/news-from-wwdc26-webkit-in-safari-27-beta/",
+    "publisher": "WebKit Team (webkit.org)",
+    "published_at": "2026-06-08",
+    "concrete_facts": [
+      "Safari 27 beta에 58개 새 기능, 525개 수정, 4개 지원 중단 포함",
+      "appearance: base-select로 네이티브 스타일 제거 후 ::picker-icon, ::checkmark 의사 요소 제어",
+      ":heading 의사클래스로 h1~h6 모든 제목 요소 선택 가능",
+      "<img> sizes=\"auto\" 지원, WebAssembly JSPI로 Promise 연동 동기식 호출 지원"
+    ],
+    "image_url": "https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/v1781086714/ijwbpjbnhyh9glsma25i.jpg",
+    "image_source": "frontendfoc.us 745호 해당 항목 대표 이미지 (원문은 webkit.org 본문 이미지 web-env.png 등)",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "4",
+    "title": "CSS: 피할 수 없는 나쁜 부분들",
+    "discovery_source": "https://news.hada.io/topic?id=30335",
+    "final_source_url": "https://matklad.github.io/2026/06/04/css-unavoidable-bad-parts.html",
+    "publisher": "matklad (matklad.github.io)",
+    "published_at": "2026-06-04",
+    "concrete_facts": [
+      "box-sizing 기본값에서 width/height가 border·padding을 포함하지 않아 직관에 반함",
+      "margin은 인접 margin을 합산이 아니라 max로 결합(margin collapsing)",
+      "font-size 16px는 글리프 자체가 아닌 글리프를 둘러싼 가상 박스 크기이며, line-height는 한 줄 높이를 설정하지 않음",
+      "줄바꿈은 공백·하이픈 지점에서만 일어나 긴 구간은 끊기지 않을 수 있음"
+    ],
+    "image_url": "",
+    "image_source": "원문에 대표 이미지 미확인",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "5",
+    "title": "Introducing the Field Guide to Grid Lanes",
+    "discovery_source": "https://webkit.org/blog/18098/introducing-the-field-guide-to-grid-lanes/",
+    "final_source_url": "https://webkit.org/blog/18098/introducing-the-field-guide-to-grid-lanes/",
+    "publisher": "WebKit (webkit.org)",
+    "published_at": "2026-06-10",
+    "concrete_facts": [
+      "Grid Lanes는 display: grid-lanes로 활성화되는 새 CSS 레이아웃 모드로, Waterfall(세로 흐름)과 Brick(가로 흐름) 두 방식을 제공한다.",
+      "비정형 이미지 크기·가변 텍스트 길이 같은 동적 콘텐츠를 자동 배치하도록 설계됐고, flow-tolerance 속성으로 배치 유연성을 제어한다. fr/auto/min-content/max-content와 minmax()·repeat()·fit-content() 함수를 지원한다.",
+      "WebKit의 Jen Simmons가 2026-06-10 발행했고, 현재 Safari 26.4+에서 동작한다."
+    ],
+    "image_url": "https://webkit.org/blog/18098/introducing-the-field-guide-to-grid-lanes/",
+    "image_source": "webkit blog header",
+    "verdict": "검증 통과",
+    "exclusion_reason": ""
+  },
+  {
+    "id": "6",
+    "title": "Discover MapKit JS 6: Rebuilt for Today's Web Developer",
+    "discovery_source": "https://webkit.org/blog/18027/discover-mapkit-js-6-rebuilt-for-todays-web-developer/",
+    "final_source_url": "https://webkit.org/blog/18027/discover-mapkit-js-6-rebuilt-for-todays-web-developer/",
+    "publisher": "Tim Chien (webkit.org)",
+    "published_at": "2026-06-09",
+    "concrete_facts": [
+      "v6부터 MapKit JS 로더가 NPM 패키지로 제공되어 모던 빌드 파이프라인에 직접 통합",
+      "웹사이트 도메인에 바인딩된 정적 토큰 생성으로 개인 키 관리·자체 서명 불필요",
+      "libraries 배열(map, services, annotations)로 필요한 기능만 분할 로드",
+      "표준 EventTarget 모델 채택, PlaceLookup이 Promise 반환, PlaceAnnotation으로 Apple Maps 장소 데이터 자동 활용"
+    ],
+    "image_url": "https://webkit.org/wp-content/uploads/yosemite-explorer-hero.png",
+    "image_source": "원문 본문 대표 이미지 (og:image 명시 없음)",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "7",
+    "title": "Scroll-Driven, Scroll-Triggered, Scroll States, and View Transitions",
+    "discovery_source": "https://css-tricks.com/scroll-driven-scroll-triggered-scroll-states-and-view-transitions/",
+    "final_source_url": "https://css-tricks.com/scroll-driven-scroll-triggered-scroll-states-and-view-transitions/",
+    "publisher": "Geoff Graham (CSS-Tricks)",
+    "published_at": "2026-06-08",
+    "concrete_facts": [
+      "Scroll-driven은 animation-timeline: scroll()로 스크롤 진행도와 애니메이션을 직접 연동",
+      "Scroll-triggered는 요소가 정의된 trigger activation range를 넘으면 애니메이션을 끝까지 실행",
+      "Container query scroll state는 @container scroll-state(stuck: top) 구문 사용 (CSS Conditional Rules L5 draft)",
+      "View Transitions는 same-document·cross-document 두 종류를 제공하며 clip-path로 페이지 전환 연출"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미확인",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "8",
+    "title": "News from WWDC26: WebKit in Safari 27 beta",
+    "discovery_source": "https://webkit.org/blog/17967/news-from-wwdc26-webkit-in-safari-27-beta/",
+    "final_source_url": "https://webkit.org/blog/17967/news-from-wwdc26-webkit-in-safari-27-beta/",
+    "publisher": "WebKit Team (webkit.org)",
+    "published_at": "2026-06-08",
+    "concrete_facts": [
+      "Safari 27 beta에 58개 새 기능, 525개 수정, 4개 지원 중단",
+      "appearance: base-select + ::picker-icon, ::checkmark 의사 요소로 select 커스터마이징",
+      "SVG 2.0 기준 30개 수정(SVG는 전체 웹페이지 67%에서 사용), :heading 의사클래스로 h1~h6 선택",
+      "WebAssembly JSPI로 JS Promise 연동 동기식 호출, Scroll Anchoring으로 콘텐츠 삽입 시 스크롤 위치 자동 보정"
+    ],
+    "image_url": "https://webkit.org/wp-content/uploads/web-env.png",
+    "image_source": "원문 본문 이미지 (og:image 명시 없음)",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "9",
+    "title": "Another Stab at the Perfect CSS Pie Chart Sans JavaScript",
+    "discovery_source": "https://css-tricks.com/another-stab-at-the-perfect-css-pie-chart-sans-javascript/",
+    "final_source_url": "https://css-tricks.com/another-stab-at-the-perfect-css-pie-chart-sans-javascript/",
+    "publisher": "Antoine Villepreux (CSS-Tricks)",
+    "published_at": "2026-06-04",
+    "concrete_facts": [
+      "개별 <li>의 data-percentage를 부모 <ul>로 옮겨 --p-100-1, --p-100-2처럼 인덱싱 관리",
+      "--accum 변수로 이전 슬라이스 누적 백분율 계산(예: --accum-4: calc(var(--accum-3) + var(--p-100-3)))",
+      "attr(data-percentage-1 type(<number>))로 HTML 속성값을 CSS로 직접 전달",
+      "hsl(calc(360deg * sibling-index() / sibling-count()) 90% 40%)로 슬라이스 색상 자동 생성"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미확인",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "10",
+    "title": "Rendering 3D meshes in the DOM with CSS (PolyCSS)",
+    "discovery_source": "https://frontendfoc.us/issues/744",
+    "final_source_url": "https://polycss.com/",
+    "publisher": "LayoutitStudio (polycss.com)",
+    "published_at": "2026-06-03",
+    "concrete_facts": [
+      "CSS matrix3d() 변환으로 텍스처가 입혀진 3D를 DOM에서 렌더링",
+      "WebGL·canvas를 쓰지 않고 각 폴리곤을 독립 DOM 요소로 구현해 스타일·상호작용 가능",
+      "갤러리, 라이브 빌더, GitHub 저장소(LayoutitStudio/polycss) 제공"
+    ],
+    "image_url": "https://res.cloudinary.com/cpress/image/upload/w_1280,e_sharpen:60,q_auto/cellzi1ka9barclvytl9.jpg",
+    "image_source": "frontendfoc.us 744호 해당 항목 대표 이미지",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "11",
+    "title": "How to vet an npm package in 2026",
+    "discovery_source": "https://javascriptweekly.com/issues/788",
+    "final_source_url": "https://blog.gaborkoos.com",
+    "publisher": "Gabor Koos (blog.gaborkoos.com)",
+    "published_at": "2026-06-02",
+    "concrete_facts": [
+      "star 수를 넘어선 평가 기준으로 provenance attestation(출처 증명) 확인",
+      "install scripts의 안전성 점검과 CI 품질 평가",
+      "maintainer 이슈 대응 속도·패턴으로 유지보수 반응성 확인",
+      "npm install 전 식별해야 할 위험 신호를 체크리스트로 제시"
+    ],
+    "image_url": "",
+    "image_source": "원문에 대표 이미지 미확인",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "12",
+    "title": "New to the web platform in May",
+    "discovery_source": "https://web.dev/blog/web-platform-05-2026",
+    "final_source_url": "https://web.dev/blog/web-platform-05-2026",
+    "publisher": "Rachel Andrew (web.dev)",
+    "published_at": "2026-05-29",
+    "concrete_facts": [
+      ":open 의사클래스가 Safari 26.5 지원으로 Baseline Newly available 도달(details·dialog·select 열림 상태 스타일링)",
+      "Chrome 148에서 container-type 없이 name-only container queries 지원",
+      "Chrome 148에서 <video>·<audio>에 loading=\"lazy\" 지원, Firefox 151에서 @container style() 쿼리 지원",
+      "Firefox 151이 데스크톱 Document Picture-in-Picture API와 Web Serial API 지원"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미확인",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "13",
+    "title": "Algorithmic Theming Engines: contrast-color()",
+    "discovery_source": "https://smashingmagazine.com/2026/05/building-self-correcting-color-systems-contrast-color/",
+    "final_source_url": "https://smashingmagazine.com/2026/05/building-self-correcting-color-systems-contrast-color/",
+    "publisher": "Durgesh Pawar (Smashing Magazine)",
+    "published_at": "2026-05-28",
+    "concrete_facts": [
+      "contrast-color()는 단일 선언으로 브라우저가 페인트 전 style computation 단계에 대비 계산을 수행",
+      "숫자가 아닌 실제 <color> 값(black 또는 white)을 반환",
+      "3대 엔진 모두 안정 버전 출시: Chrome 147(2026-04), Firefox 146, Safari 26.0",
+      "구 명칭 color-contrast()에서 contrast-color()로 변경됨"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미확인",
+    "verdict": "검증 통과"
+  },
+  {
+    "id": "14",
+    "title": "AI국민비서: 공공 특화 에이전트 구축하기",
+    "discovery_source": "https://d2.naver.com/helloworld/6647064",
+    "final_source_url": "https://d2.naver.com/helloworld/6647064",
+    "publisher": "김한수 (NAVER Applied Agent)",
+    "published_at": "2026-06-08",
+    "concrete_facts": [
+      "AI국민비서는 NAVER ENGINEERING DAY 2026에서 발표된 공공 서비스 특화 에이전트",
+      "HyperClovaX 모델을 적용하고 LLM이 풀어야 할 문제의 난이도를 낮추는 데 집중"
+    ],
+    "image_url": "https://d2.naver.com/image/20251204/951918092737.jpg",
+    "image_source": "D2 페이지 대표 이미지",
+    "verdict": "원문 부족",
+    "exclusion_reason": "해당 페이지는 Engineering Day 세션 요약(목차: 프로젝트 개요·모델 선택·난이도 낮추기·속도 최적화·Safety·평가/QA·차별점)만 담고 본문 기술 세부(프레임워크·RAG 구조·intent 분류·멀티 에이전트 구조·평가 방법·수치)가 없음. 발행에 쓸 구체 사실 3개를 본문에서 채우지 못함. 발표 영상/자료 공개 시 재검증 필요."
+  },
+  {
+    "id": "15",
+    "title": "What's new in Svelte: June 2026",
+    "discovery_source": "https://svelte.dev/blog/whats-new-in-svelte-june-2026",
+    "final_source_url": "https://svelte.dev/blog/whats-new-in-svelte-june-2026",
+    "publisher": "Dani Sandoval (svelte.dev)",
+    "published_at": "2026-06-01",
+    "concrete_facts": [
+      "SvelteKit 2.57.0: enhanced remote form의 submit이 제출 유효성을 boolean으로 반환",
+      "2.58.0 Breaking: requested()가 limit를 요구하고 { arg, query } 엔트리를 yield",
+      "2.59.0: query.batch()로 배치 원격 쿼리 검사, query.live()로 long-lived 구독을 async-iterable 처리(2.61.0 정식)",
+      "2.61.0 Breaking: remote query에서 .run() 제거 후 await query() 직접 사용, svelte-language-server 0.18.0에서 TypeScript 6.0 지원"
+    ],
+    "image_url": "",
+    "image_source": "원문에 og:image 미확인",
+    "verdict": "검증 통과"
+  }
+]
