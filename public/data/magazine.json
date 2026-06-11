@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T03:58:29.367740+00:00",
+  "generatedAt": "2026-06-11T04:03:12.596870+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -1837,8 +1837,8 @@
         "route": "/articles/2026-06-11-15",
         "href": "/articles/2026-06-11-15",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-15",
-        "image": "https://svelte.dev/blog/whats-new-in-svelte-june-2026/card.png",
-        "imageCaption": "원문에 og:image 미확인 — 원문 페이지 스크린샷 폴백",
+        "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-15.png",
+        "imageCaption": "svelte.dev 원격 함수 문서 화면 — SvelteKit remote functions (결정 근거 페이지 스크린샷)",
         "tags": [
           "SvelteKit",
           "remote functions",
@@ -1969,8 +1969,8 @@
         "route": "/articles/2026-06-11-16",
         "href": "/articles/2026-06-11-16",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-16",
-        "image": "https://tistory1.daumcdn.net/tistory/407306/skinSetting/27db96209f954066b11260326ab69155",
-        "imageCaption": "AI가 인용하기 좋은 페이지 구조를 설명한 pxd story 아티클 대표 이미지. pxd 제공.",
+        "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-16.png",
+        "imageCaption": "pxd 원문 본문 — AI 검색 서비스와 인용 구조 (결정 근거 페이지 스크린샷)",
         "tags": [
           "RAG",
           "생성형 엔진 최적화",
@@ -2360,8 +2360,8 @@
         "route": "/articles/2026-06-11-19",
         "href": "/articles/2026-06-11-19",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-19",
-        "image": "https://specification.website/og-default.png",
-        "imageCaption": "The Website Specification 대표 og 이미지. specification.website 제공.",
+        "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-19.png",
+        "imageCaption": "specification.website 홈 — 11개 영역 스펙 구성 (결정 근거 페이지 스크린샷)",
         "tags": [
           "웹 베스트프랙티스",
           "llms.txt",
@@ -2487,8 +2487,8 @@
         "route": "/articles/2026-06-11-20",
         "href": "/articles/2026-06-11-20",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-20",
-        "image": "https://substack-post-media.s3.amazonaws.com/public/images/a4fe1182-38af-4a5d-bacc-439c36225e87_5000x1200.png",
-        "imageCaption": "GitHub의 에이전트 시대 인프라 계획을 다룬 Latent Space 인터뷰 대표 이미지. Latent Space 제공.",
+        "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-20.png",
+        "imageCaption": "Latent Space 원문 본문 — GitHub 에이전트 인프라 인터뷰 (결정 근거 페이지 스크린샷)",
         "tags": [
           "GitHub",
           "Vitess",
@@ -2619,8 +2619,8 @@
         "route": "/articles/2026-06-11-21",
         "href": "/articles/2026-06-11-21",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-21",
-        "image": "https://hermes-agent.nousresearch.com/img/hermes-og-image.png",
-        "imageCaption": "Nous Research의 Hermes Agent 공식 페이지 og 이미지. Nous Research 제공.",
+        "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-21.png",
+        "imageCaption": "Hermes Agent 공식 페이지 — 설치 명령과 데모 터미널 (결정 근거 페이지 스크린샷)",
         "tags": [
           "Hermes Agent",
           "persistent memory",
@@ -2746,8 +2746,8 @@
         "route": "/articles/2026-06-11-22",
         "href": "/articles/2026-06-11-22",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-22",
-        "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/b7055119423427c40a0e4d84054aed17682b50a2-2880x1620.png",
-        "imageCaption": "Claude Fable 5·Mythos 5 발표 페이지의 히어로 이미지. Anthropic 제공.",
+        "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-22.png",
+        "imageCaption": "Anthropic 공식 발표 본문 — Agentic coding 벤치마크 차트 (결정 근거 페이지 스크린샷)",
         "tags": [
           "Claude Fable 5",
           "Mythos 5",
@@ -3005,8 +3005,8 @@
         "route": "/articles/2026-06-11-24",
         "href": "/articles/2026-06-11-24",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-24",
-        "image": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/uploads/changelog-og.png",
-        "imageCaption": "Cursor changelog 본문에 안정적 대표 이미지 미확인 — 원문 페이지 스크린샷 폴백",
+        "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-24.png",
+        "imageCaption": "Cursor SDK 공식 문서 화면 (결정 근거 페이지 스크린샷)",
         "tags": [
           "Cursor SDK",
           "Custom Tools",
@@ -3132,8 +3132,8 @@
         "route": "/articles/2026-06-11-25",
         "href": "/articles/2026-06-11-25",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-25",
-        "image": "https://developers.openai.com/codex/open-graph.png",
-        "imageCaption": "Codex changelog 페이지 텍스트 위주 — 대표 이미지 미확인, 원문 페이지 스크린샷 폴백",
+        "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-25.png",
+        "imageCaption": "Codex changelog 6월 항목 — app 26.608 새 기능 (결정 근거 페이지 스크린샷)",
         "tags": [
           "OpenAI Codex",
           "Sites",
@@ -3259,8 +3259,8 @@
         "route": "/articles/2026-06-11-26",
         "href": "/articles/2026-06-11-26",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-26",
-        "image": "https://nodejs.org/static/images/logo-hexagon-card.png",
-        "imageCaption": "nodejs.org v26.0.0 블로그 페이지의 twitter:image (Node.js 헥사곤 로고 카드)",
+        "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-26.png",
+        "imageCaption": "Node.js 26.0.0 공식 릴리스 노트 본문 (결정 근거 페이지 스크린샷)",
         "tags": [
           "Node.js 26",
           "Temporal",
@@ -3386,8 +3386,8 @@
         "route": "/articles/2026-06-11-27",
         "href": "/articles/2026-06-11-27",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-27",
-        "image": "https://opengraph.githubassets.com/330894abc90847f2857b9a8c77ff925da214e7808cc069287f689ae0ad4a2c28/pnpm/pnpm/releases/tag/v11.5.0",
-        "imageCaption": "GitHub Releases 페이지에 본문 대표 이미지 없음 — 원문 페이지 스크린샷 폴백",
+        "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-27.png",
+        "imageCaption": "pnpm 공식 설정 문서 — hoistingLimits (결정 근거 페이지 스크린샷)",
         "tags": [
           "pnpm",
           "hoistingLimits",

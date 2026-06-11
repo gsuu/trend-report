@@ -494,8 +494,8 @@ Grid Lanes는 룩북·갤러리·매거진형 카드처럼 비율이 제각각�
 - 출처 유형: release_note
 - 출처: Dani Sandoval (svelte.dev)
 - 출처 URL: https://svelte.dev/blog/whats-new-in-svelte-june-2026
-- 이미지: https://svelte.dev/blog/whats-new-in-svelte-june-2026/card.png
-- 이미지 설명: 원문에 og:image 미확인 — 원문 페이지 스크린샷 폴백
+- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-15.png
+- 이미지 설명: svelte.dev 원격 함수 문서 화면 — SvelteKit remote functions (결정 근거 페이지 스크린샷)
 - 요약: SvelteKit이 6월 동안 enhanced remote form의 submit 유효성 boolean 반환(2.57.0)부터 `query.batch()`·`query.live()`(2.59.0), remote query `.run()` 제거 후 `await query()` 직접 사용(2.61.0)까지 원격 함수 API를 정리했고, svelte-language-server 0.18.0이 TypeScript 6.0을 지원합니다.
 - 관련 링크 1: [합성 데모] Svelte — Remote functions 튜토리얼 | https://svelte.dev/docs/kit/remote-functions
 - 관련 링크 2: [공식 사양] Svelte — June 2026 릴리스 노트 | https://svelte.dev/blog/whats-new-in-svelte-june-2026
@@ -527,8 +527,8 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 - 출처 유형: blog
 - 출처: pxd story
 - 출처 URL: https://pxdstory.tistory.com/1900
-- 이미지: https://tistory1.daumcdn.net/tistory/407306/skinSetting/27db96209f954066b11260326ab69155
-- 이미지 설명: AI가 인용하기 좋은 페이지 구조를 설명한 pxd story 아티클 대표 이미지. pxd 제공.
+- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-16.png
+- 이미지 설명: pxd 원문 본문 — AI 검색 서비스와 인용 구조 (결정 근거 페이지 스크린샷)
 - 요약: ChatGPT·Perplexity·Claude 같은 AI 검색이 페이지 전체가 아니라 질문과 맞는 문단(passage)만 골라 인용하는 RAG 구조라는 점을 짚고, 메타 설명·헤딩 계층·문단 단위 자족성·구체 통계·출처 명시 같은 마크업 레벨 점검 항목으로 정리한 글입니다.
 - 관련 링크 1: [원문] pxd story — AI가 인용하고 싶은 페이지는 어떻게 생겼을까 | https://pxdstory.tistory.com/1900
 - 관련 링크 2: [관련 표준] llms.txt 제안 | https://llmstxt.org/
@@ -630,8 +630,8 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 - 출처 유형: release
 - 출처: specification.website (오픈소스)
 - 출처 URL: https://specification.website/
-- 이미지: https://specification.website/og-default.png
-- 이미지 설명: The Website Specification 대표 og 이미지. specification.website 제공.
+- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-19.png
+- 이미지 설명: specification.website 홈 — 11개 영역 스펙 구성 (결정 근거 페이지 스크린샷)
 - 요약: Foundations·SEO·접근성·보안·성능 등 11개 영역의 모던 웹사이트 베스트프랙티스를 사람과 기계가 함께 읽도록 정리한 오픈 스펙입니다. 페이지별 `.md` 엔드포인트·JSON-LD·`/llms.txt`·Agent Skill을 동시 제공하고, 5개 도구를 노출하는 MCP 서버까지 MIT로 운영합니다.
 - 관련 링크 1: [원문] The Website Specification | https://specification.website/
 - 관련 링크 2: [저장소] GitHub — jdevalk/specification.website | https://github.com/jdevalk/specification.website
@@ -663,8 +663,8 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 - 출처 유형: interview
 - 출처: Latent Space (Kyle Daigle, GitHub COO 인터뷰)
 - 출처 URL: https://www.latent.space/p/github
-- 이미지: https://substack-post-media.s3.amazonaws.com/public/images/a4fe1182-38af-4a5d-bacc-439c36225e87_5000x1200.png
-- 이미지 설명: GitHub의 에이전트 시대 인프라 계획을 다룬 Latent Space 인터뷰 대표 이미지. Latent Space 제공.
+- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-20.png
+- 이미지 설명: Latent Space 원문 본문 — GitHub 에이전트 인프라 인터뷰 (결정 근거 페이지 스크린샷)
 - 요약: 에이전트발 코드가 폭증하며 GitHub 활동이 연 10억 커밋에서 주 2.75억 규모로 약 14배 늘었고, Kyle Daigle COO가 권한 레이어 Vitess 재샤딩·모노레포·작업 큐잉 3대 인프라 재작성과 '마이크로 스킬'·retrospective-first·Ambient AI 전환을 설명한 인터뷰입니다.
 - 관련 링크 1: [원문] Latent Space — GitHub's Plan for Agents | https://www.latent.space/p/github
 - 관련 링크 2: [관련 도구] GitHub Copilot SDK | https://github.com/features/copilot
@@ -698,8 +698,8 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 - 출처 유형: release
 - 출처: Nous Research
 - 출처 URL: https://hermes-agent.nousresearch.com
-- 이미지: https://hermes-agent.nousresearch.com/img/hermes-og-image.png
-- 이미지 설명: Nous Research의 Hermes Agent 공식 페이지 og 이미지. Nous Research 제공.
+- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-21.png
+- 이미지 설명: Hermes Agent 공식 페이지 — 설치 명령과 데모 터미널 (결정 근거 페이지 스크린샷)
 - 요약: Telegram·Slack·CLI 등 7채널에서 맥락을 이어가는 멀티채널 데스크톱 에이전트입니다. 해결 경험을 누적하는 persistent memory, 자연어 cron 스케줄링, local·Docker·SSH 등 5종 샌드박스 실행을 갖췄고 MIT 라이선스(v0.16.0)로 공개됐습니다.
 - 관련 링크 1: [원문] Hermes Agent — Nous Research | https://hermes-agent.nousresearch.com
 - 관련 링크 2: [관련 표준] cron 표현식 (crontab.guru) | https://crontab.guru/
@@ -731,8 +731,8 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 - 출처 유형: release
 - 출처: Anthropic
 - 출처 URL: https://www.anthropic.com/news/claude-fable-5-mythos-5
-- 이미지: https://www-cdn.anthropic.com/images/4zrzovbb/website/b7055119423427c40a0e4d84054aed17682b50a2-2880x1620.png
-- 이미지 설명: Claude Fable 5·Mythos 5 발표 페이지의 히어로 이미지. Anthropic 제공.
+- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-22.png
+- 이미지 설명: Anthropic 공식 발표 본문 — Agentic coding 벤치마크 차트 (결정 근거 페이지 스크린샷)
 - 요약: Anthropic이 6월 9일 5세대 모델 Claude Fable 5·Mythos 5를 공개했습니다. 둘은 동일 Mythos-class 기반이고 안전장치 적용 여부로 갈리며, Fable 5는 `claude-fable-5`로 API 즉시 호출(입력 $10·출력 $50)이 되고, 수백만 토큰 long-running 태스크 집중과 향상된 비전을 내세웁니다.
 - 관련 링크 1: [원문] Anthropic — Claude Fable 5 and Claude Mythos 5 | https://www.anthropic.com/news/claude-fable-5-mythos-5
 - 관련 링크 2: [공식 문서] Anthropic — Models overview | https://docs.anthropic.com/en/docs/about-claude/models
@@ -796,8 +796,8 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 - 출처 유형: release_note
 - 출처: Cursor (Anysphere) Changelog
 - 출처 URL: https://cursor.com/changelog
-- 이미지: https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/uploads/changelog-og.png
-- 이미지 설명: Cursor changelog 본문에 안정적 대표 이미지 미확인 — 원문 페이지 스크린샷 폴백
+- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-24.png
+- 이미지 설명: Cursor SDK 공식 문서 화면 (결정 근거 페이지 스크린샷)
 - 요약: Cursor SDK가 별도 MCP 서버 없이 함수 정의를 넘기는 Custom Tools, 도구 호출을 분류기로 자동 실행과 사람 검토로 가르는 Auto-Review, 서브에이전트가 다시 서브에이전트를 부르는 Nested Subagents를 추가했습니다.
 - 관련 링크 1: [공식 사양] Cursor — Changelog | https://cursor.com/changelog
 - 관련 링크 2: [공식 사양] Cursor — SDK documentation | https://docs.cursor.com/en/cli/sdk
@@ -828,8 +828,8 @@ CI나 스크립트에서 Cursor 에이전트를 돌리는 팀이라면, 그동�
 - 출처 유형: release_note
 - 출처: OpenAI Codex Changelog
 - 출처 URL: https://developers.openai.com/codex/changelog/
-- 이미지: https://developers.openai.com/codex/open-graph.png
-- 이미지 설명: Codex changelog 페이지 텍스트 위주 — 대표 이미지 미확인, 원문 페이지 스크린샷 폴백
+- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-25.png
+- 이미지 설명: Codex changelog 6월 항목 — app 26.608 새 기능 (결정 근거 페이지 스크린샷)
 - 요약: OpenAI Codex가 Claude Code·Cowork 설정을 가져오는 마이그레이션 플로우, 웹사이트·웹앱을 생성·배포하는 Sites 플러그인, Amazon Bedrock 경유 모델 사용을 한 달 사이에 연달아 추가했습니다.
 - 관련 링크 1: [공식 사양] OpenAI — Codex changelog | https://developers.openai.com/codex/changelog/
 - 관련 링크 2: [공식 사양] OpenAI — Codex documentation | https://developers.openai.com/codex/
@@ -860,8 +860,8 @@ CI나 스크립트에서 Cursor 에이전트를 돌리는 팀이라면, 그동�
 - 출처 유형: release_note
 - 출처: Node.js (OpenJS Foundation)
 - 출처 URL: https://nodejs.org/en/blog/release/v26.0.0
-- 이미지: https://nodejs.org/static/images/logo-hexagon-card.png
-- 이미지 설명: nodejs.org v26.0.0 블로그 페이지의 twitter:image (Node.js 헥사곤 로고 카드)
+- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-26.png
+- 이미지 설명: Node.js 26.0.0 공식 릴리스 노트 본문 (결정 근거 페이지 스크린샷)
 - 요약: Node.js 26.0.0(Current)이 그동안 플래그 뒤에 있던 Temporal 날짜·시간 API를 전역 `Temporal` 객체로 기본 활성화하고, V8 14.6로 올라가며 메이저 제거·디프리케이션을 정리했습니다.
 - 관련 링크 1: [공식 사양] Node.js — v26.0.0 release notes | https://nodejs.org/en/blog/release/v26.0.0
 - 관련 링크 2: [공식 사양] MDN — Temporal | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal
@@ -892,8 +892,8 @@ CI나 스크립트에서 Cursor 에이전트를 돌리는 팀이라면, 그동�
 - 출처 유형: release_note
 - 출처: pnpm (GitHub Releases)
 - 출처 URL: https://github.com/pnpm/pnpm/releases/tag/v11.5.0
-- 이미지: https://opengraph.githubassets.com/330894abc90847f2857b9a8c77ff925da214e7808cc069287f689ae0ad4a2c28/pnpm/pnpm/releases/tag/v11.5.0
-- 이미지 설명: GitHub Releases 페이지에 본문 대표 이미지 없음 — 원문 페이지 스크린샷 폴백
+- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-27.png
+- 이미지 설명: pnpm 공식 설정 문서 — hoistingLimits (결정 근거 페이지 스크린샷)
 - 요약: pnpm v11.5.0이 `nodeLinker: hoisted` 설치에서 호이스팅 범위를 제어하는 `hoistingLimits` 설정을 신설하고, 대화형 프롬프트 라이브러리를 교체해 긴 목록 스크롤 버그를 잡았습니다.
 - 관련 링크 1: [공식 사양] pnpm — v11.5.0 release notes | https://github.com/pnpm/pnpm/releases/tag/v11.5.0
 - 관련 링크 2: [공식 사양] pnpm — Settings (hoisting) | https://pnpm.io/settings
