@@ -190,8 +190,8 @@
 - 출처 유형: news
 - 출처: DIGITAL iNSIGHT
 - 출처 URL: https://ditoday.com/ai로-진화하는-시리-애플의-디바이스-경험은-어떻게-바/
-- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-6.png
-- 이미지 설명: 서비스 원문 페이지 화면 캡처
+- 이미지: https://ditoday.com/wp-content/uploads/2026/06/siri__fsb5b98qe526_og.png.webp
+- 이미지 설명: 원문 본문 첫 이미지 — 애플 시리 공식 비주얼
 - 요약: 애플이 WWDC26에서 시리를 화면 콘텐츠와 메시지·메일·사진 같은 개인 맥락을 함께 이해하는 방향으로 확장하고, 리퀴드 글래스 투명도를 슬라이더로 조절하게 해 가독성 비판에 대응했습니다.
 - 관련 링크 1: [케이스 출처] DIGITAL iNSIGHT — AI로 진화하는 시리, 애플의 디바이스 경험은 어떻게 바뀔까? | https://ditoday.com/ai로-진화하는-시리-애플의-디바이스-경험은-어떻게-바/
 - 관련 링크 2: [결정 근거] Apple — Apple Intelligence | https://www.apple.com/apple-intelligence/
