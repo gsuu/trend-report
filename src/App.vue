@@ -664,14 +664,6 @@ async function shareIssue(issue) {
               <time v-text="activeIssue.date"></time>
               <span aria-hidden="true">|</span>
               <span class="category-label" v-text="activeIssue.category"></span>
-              <span v-if="activeIssue.sourceUrl" aria-hidden="true">|</span>
-              <a v-if="activeIssue.sourceUrl" class="article-source-link" :href="activeIssue.sourceUrl" target="_blank" rel="noreferrer">
-                <span>원문 바로보기</span>
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M7 17 17 7" />
-                  <path d="M9 7h8v8" />
-                </svg>
-              </a>
             </div>
             <button class="article-share-button" type="button" :aria-label="shareStatus || '공유하기'" :title="shareStatus || '공유하기'" @click="shareIssue(activeIssue)">
               <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -716,6 +708,13 @@ async function shareIssue(issue) {
               <ul v-else class="bullet-summary-list">
                 <li v-for="item in section.itemsHtml" :key="item" v-html="item"></li>
               </ul>
+              <a v-if="activeIssue.sourceUrl && String(section.title || '').includes('요약')" class="article-source-link" :href="activeIssue.sourceUrl" target="_blank" rel="noreferrer">
+                <span>원문 바로보기</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 17 17 7" />
+                  <path d="M9 7h8v8" />
+                </svg>
+              </a>
             </template>
           </section>
 

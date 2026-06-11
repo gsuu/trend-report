@@ -1347,6 +1347,11 @@ main {
   white-space: nowrap;
 }
 
+.article-section .article-source-link {
+  margin-top: 14px;
+  font-size: 15px;
+}
+
 .article-source-link svg {
   width: 15px;
   height: 15px;
