@@ -1,0 +1,774 @@
+[
+  {
+    "title": "“얼굴결제 일상 됐다” 토스, ‘페이스페이’ 가입자 600만 돌파… 3개월 만에 2배 성장",
+    "link": "https://toss.im/tossfeed/article/50403",
+    "pubDate": "Mon, 08 Jun 2026 23:00:00 GMT",
+    "content": "가입자는 물론 성장세도 가파른 페이스페이",
+    "image": "",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "AI로 진화하는 시리, 애플의 디바이스 경험은 어떻게 바뀔까?",
+    "link": "https://ditoday.com/ai%eb%a1%9c-%ec%a7%84%ed%99%94%ed%95%98%eb%8a%94-%ec%8b%9c%eb%a6%ac-%ec%95%a0%ed%94%8c%ec%9d%98-%eb%94%94%eb%b0%94%ec%9d%b4%ec%8a%a4-%ea%b2%bd%ed%97%98%ec%9d%80-%ec%96%b4%eb%96%bb%ea%b2%8c-%eb%b0%94/",
+    "pubDate": "Wed, 10 Jun 2026 02:42:41 +0000",
+    "content": "화면과 맥락을 이해하는 시리부터 리퀴드 글래스 개편까지 The post AI로 진화하는 시리, 애플의 디바이스 경험은 어떻게 바뀔까? appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "피그마, ‘메이크’로 디자인과 제품 개발 환경 통합한다",
+    "link": "https://ditoday.com/%ed%94%bc%ea%b7%b8%eb%a7%88-%eb%a9%94%ec%9d%b4%ed%81%ac%eb%a1%9c-%eb%94%94%ec%9e%90%ec%9d%b8%ea%b3%bc-%ec%a0%9c%ed%92%88-%ea%b0%9c%eb%b0%9c-%ed%99%98%ea%b2%bd-%ed%86%b5%ed%95%a9%ed%95%9c%eb%8b%a4/",
+    "pubDate": "Wed, 10 Jun 2026 02:22:07 +0000",
+    "content": "시각적이고 협업 중심적인 제품 개발 워크플로우 구축해 The post 피그마, ‘메이크’로 디자인과 제품 개발 환경 통합한다 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "별점과 리뷰로 사용자 경험 이해하기",
+    "link": "https://pxdstory.tistory.com/1901",
+    "pubDate": "Tue, 9 Jun 2026 19:10:21 +0900",
+    "content": "배달 음식점을 고를 때도, 상품을 살 때도 별점부터 봅니다. 소비자에게는 나쁜 걸 먼저 걸러내는 좋은 휴리스틱입니다. 그런데 서비스를 운영하는 쪽, 그러니까 마케터나 리서처는 같은 별점을 어떻게 읽어야 할까요? 별점은 결국 개개인이 누른 별의 평균이고, '평균적인 사용자'는 대체로 존재하지 않습니다. 퍼소나를 나눠 보듯, 별점도 사용자를 세분화해서 봐야 합니다. 리뷰 텍스트를 어피니티버블로 묶으면 \"사용자가 무엇을 말하는지\"는 꽤 잘 보입니다. 그런데 리뷰에는 별점, 작성 시점 같은 정보가 늘 함께 달려 있습니다. 텍스트 군집을 이 메타데이터와 함께 보면 어떻게 되는지, K뷰티 앱 top3 (올리브영·화해·글로우픽)의 앱 리뷰로 확인해봤습니다. 별점은 평균이 아닌 분포를 봐야 한다 별점 2.6점인 사용자는 없습니다. 시장 1위 올리브영의 iOS 리뷰 평균이 2.6점인데, 이 숫자는 누가 만들었을까요? 올리브영 iOS 앱스토어 리뷰 별점 분포 리뷰 499개를 별점별로 나눠보면 1점이 44%, 5점이 24%로 양쪽 끝에…",
+    "image": "",
+    "valueTags": [
+      "commerce_design",
+      "korean_reference",
+      "korean_uiux_case"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "챗GPT, 에이전트 중심 ‘슈퍼앱’ 개편 임박… ‘코덱스’ 전면",
+    "link": "https://ditoday.com/%ec%b1%97gpt-%ec%97%90%ec%9d%b4%ec%a0%84%ed%8a%b8-%ec%a4%91%ec%8b%ac-%ec%8a%88%ed%8d%bc%ec%95%b1-%ea%b0%9c%ed%8e%b8-%ec%9e%84%eb%b0%95-%ec%bd%94%eb%8d%b1%ec%8a%a4-%ec%a0%84%eb%a9%b4/",
+    "pubDate": "Tue, 09 Jun 2026 04:27:16 +0000",
+    "content": "오픈AI, IPO 앞서 개편 예정... 수익화 염두 The post 챗GPT, 에이전트 중심 ‘슈퍼앱’ 개편 임박… ‘코덱스’ 전면 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "피처링, 에이블리에 AI 마케팅 솔루션 공급",
+    "link": "https://ditoday.com/%ed%94%bc%ec%b2%98%eb%a7%81-%ec%97%90%ec%9d%b4%eb%b8%94%eb%a6%ac%ec%97%90-ai-%eb%a7%88%ec%bc%80%ed%8c%85-%ec%86%94%eb%a3%a8%ec%85%98-%ea%b3%b5%ea%b8%89/",
+    "pubDate": "Tue, 09 Jun 2026 01:24:02 +0000",
+    "content": "메가세일 프로모션 성과 최대 달성 The post 피처링, 에이블리에 AI 마케팅 솔루션 공급 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "motion_interaction",
+      "promotion_event_design",
+      "korean_uiux_case",
+      "prototyping",
+      "design_ai_workflow"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "AI가 인용하고 싶은 페이지는 어떻게 생겼을까",
+    "link": "https://pxdstory.tistory.com/1900",
+    "pubDate": "Thu, 11 Jun 2026 10:08:15 +0900",
+    "content": "들어가며 지난 편에서 검색엔진과 AI 크롤러가 우리 사이트를 어떻게 발견하는지를 다뤘어요. robots.txt, sitemap, canonical, 리다이렉트, AI 크롤러 허용까지 — 결국 \"크롤러가 페이지에 안정적으로 닿을 수 있는가\"가 핵심이었죠. 이번 편에서는 그 다음 단계 이야기예요. 크롤러가 페이지에 도착했어요. 그다음엔 뭘 볼까요? 검색엔진이든 AI든, 페이지에 도착한 이후에는 콘텐츠의 구조를 읽어요. 제목이 뭔지, 주제가 뭔지, 어떤 질문에 답하고 있는지, 정보가 어떤 단위로 나뉘어 있는지. 이 구조가 명확한 페이지는 검색 결과에서도, AI 답변에서도 선택받을 가능성이 높아요. 이번 편에서는 \"AI가 인용하고 싶어지는 페이지\"가 어떤 구조적 특성을 가지고 있는지, 프론트엔드 개발자가 실제로 챙길 수 있는 요소들을 중심으로 풀어볼게요. 검색엔진과 AI는 페이지를 어떻게 \"읽는가\" 검색엔진의 읽기 방식 Google 같은 검색엔진은 페이지를 크롤링한 후, HTML 구조를 파싱해서 콘텐츠를 이해해요. 이때 참…",
+    "image": "",
+    "valueTags": [
+      "design_ai_workflow"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "검색 UX 디자인",
+    "link": "https://designcompass.org/2026/06/04/search-ux-design/",
+    "pubDate": "Thu, 11 Jun 2026 01:25:48 GMT",
+    "content": "검색은 글로 정보를 찾는 UX 패턴입니다. 사용자는 언제 어디서나 돋보기 모양 아이콘을 누르고 단어를 입력해 정보를 조회할 수 있습니다.",
+    "image": "https://designcompass.org/wp-content/uploads/2026/06/lib-search-ux-01.jpg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "한국디자인진흥원, 국가인적자원개발컨소시엄 성과평가 A등급 달성",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40622&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 11 Jun 2026 01:25:45 GMT",
+    "content": "한국디자인진흥원, 국가인적자원개발컨소시엄 성과평가",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260609020458198_6279.0.jpg",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "아임웹, ‘브랜드콘 26’ 개최… 브랜드 생존 전략 살펴",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40621&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 11 Jun 2026 01:25:45 GMT",
+    "content": "내달 28일 서울 코엑스 그랜드볼룸서 열려 (자료=아임웹) 브랜드 빌더 아임웹은 다음달 28일 서울 코엑스 그랜드볼룸에서 ‘DEEP: 깊은 브랜드만 남는다’를 주제로 ‘브랜드콘 26(BRANDCON 26...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260609084223840_9530.0.jpg",
+    "valueTags": [
+      "brand_expression",
+      "korean_reference",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "천재교과서·한국시각정보디자인협회 ‘건강하고 즐거운 초등학생’ 디자인 공모전 개최",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40620&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 11 Jun 2026 01:25:45 GMT",
+    "content": "천재교과서가 주최하고 한국시각정보디자인협회(VIDAK)가 주관하는 ‘건강하고 즐거운 초등학생’ 디자인 공모전이 6월 30일까지 개최된다. 천재교과서가 주최하고 한국시각정보디자인협회(VIDAK)가 주관하는 ‘...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260609083722539_498.0.png",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "한국디자인진흥원, 디자인시장개척단 미국 SFDW 참가",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40619&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 11 Jun 2026 01:25:45 GMT",
+    "content": "한국디자인진흥원, 디자인시장개척단 미국 SFDW 참가 - 현지 비즈니스 상담회, 네트워크 행사 개최 등 K-디자인 글로벌 시장 진출 가속 - 디자인전문기업",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260605042351816_1827.0.jpg",
+    "valueTags": [
+      "korean_reference",
+      "promotion_event_design"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "(신간소개) 생성형 AI와 함께 만드는 공간·경험 서비스디자인",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40618&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 11 Jun 2026 01:25:45 GMT",
+    "content": "생성형 AI와 함께 만드는 공간·경험 서비스 디자인 김유빈 경희대학교 산업디자인학과 교수 오늘날 디자인은 산업의 경계를 넘어 인간 중심의 경험을 창조하는 전략적 도구로 진화하고 있다. 특히 공간은 단순한 물...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260605095457325_2215.0.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "[참을 수 없는 UX의 저렴함 ②-1] 외면했던 사용성 문제의 청구서",
+    "link": "https://ditoday.com/%ec%b0%b8%ec%9d%84-%ec%88%98-%ec%97%86%eb%8a%94-ux%ec%9d%98-%ec%a0%80%eb%a0%b4%ed%95%a8-%e2%91%a1-%ec%99%b8%eb%a9%b4%ed%96%88%eb%8d%98-%ec%82%ac%ec%9a%a9%ec%84%b1-%eb%ac%b8%ec%a0%9c%ec%9d%98/",
+    "pubDate": "Thu, 11 Jun 2026 01:25:43 GMT",
+    "content": "왜 막대한 예산을 들여도 같은 실수가 반복될까",
+    "image": "https://ditoday.com/wp-content/uploads/2026/06/image-13.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "ux_method"
+    ],
+    "scraped": true,
+    "source": "DIGITAL iNSIGHT - UIUX",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "[참을 수 없는 UX의 저렴함 ②-2] 외면했던 사용성 문제의 청구서",
+    "link": "https://ditoday.com/%ec%b0%b8%ec%9d%84-%ec%88%98-%ec%97%86%eb%8a%94-ux%ec%9d%98-%ec%a0%80%eb%a0%b4%ed%95%a8-%e2%91%a1-%ec%99%b8%eb%a9%b4%ed%96%88%eb%8d%98-%ec%82%ac%ec%9a%a9%ec%84%b1-%eb%ac%b8%ec%a0%9c%ec%9d%98-2/",
+    "pubDate": "Thu, 11 Jun 2026 01:25:43 GMT",
+    "content": "우리에게는 UX PM이 필요하다",
+    "image": "https://ditoday.com/wp-content/uploads/2026/06/image-13-8.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "ux_method"
+    ],
+    "scraped": true,
+    "source": "DIGITAL iNSIGHT - UIUX",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "HOW TO UI·UX Archives",
+    "link": "https://ditoday.com/series/uiux-company/",
+    "pubDate": "Thu, 11 Jun 2026 01:25:43 GMT",
+    "content": "UI·UX 실무에 바로 쓰는 가이드",
+    "image": "https://ditoday.com/wp-content/uploads/2019/11/di_facebook.jpg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "DIGITAL iNSIGHT - UIUX",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "5년 만의 사용성 고민? 구글 워크스페이스 아이콘 개편",
+    "link": "https://ditoday.com/5%eb%85%84-%eb%a7%8c%ec%97%90-%ec%82%ac%ec%9a%a9%ec%84%b1-%ec%b0%be%ec%95%84-%eb%82%98%ec%84%9c%ea%b8%b0-%ea%b5%ac%ea%b8%80-%ec%9b%8c%ed%81%ac%ec%8a%a4%ed%8e%98%ec%9d%b4%ec%8a%a4-%ec%95%84%ec%9d%b4/",
+    "pubDate": "Thu, 11 Jun 2026 01:25:43 GMT",
+    "content": "아이콘도 브랜드 일관성보다 사용성이 우선돼야",
+    "image": "https://ditoday.com/wp-content/uploads/2026/05/0529.jpg",
+    "valueTags": [
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference",
+      "ux_method"
+    ],
+    "scraped": true,
+    "source": "DIGITAL iNSIGHT - UIUX",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "6월의 추천 스톡 콘텐츠 : 여름감성",
+    "link": "https://ditoday.com/6%ec%9b%94%ec%9d%98-%ec%b6%94%ec%b2%9c-%ec%8a%a4%ed%86%a1-%ec%bd%98%ed%85%90%ec%b8%a0-%ec%97%ac%eb%a6%84%ea%b0%90%ec%84%b1-%ec%9e%a5%eb%a7%88-%ed%98%b8%ea%b5%ad%eb%b3%b4%ed%9b%88/",
+    "pubDate": "Mon, 08 Jun 2026 06:16:38 +0000",
+    "content": "유토이미지가 소개하는 2026년 6월의 스톡 콘텐츠 트렌드 The post 6월의 추천 스톡 콘텐츠 : 여름감성 | 장마 | 호국보훈 appeared first on DIGITAL iNSIGHT 디지털 인사이트.",
+    "image": "",
+    "valueTags": [
+      "visual_trend",
+      "korean_uiux_case"
+    ],
+    "source": "DIGITAL iNSIGHT",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "💌 포토샵 점묘화 필터 대신 '이 사이트' 어때요?",
+    "link": "https://stib.ee/GHyN",
+    "pubDate": "2026-06-10T12:00:27.092303079+09:00",
+    "content": "#인스타트렌드 #편집툴추천 #클래식무드폰트",
+    "image": "",
+    "valueTags": [
+      "visual_trend"
+    ],
+    "scraped": true,
+    "source": "노폴레터 (Notefolio)",
+    "sourceUrl": "https://page.stibee.com/archives/75270/emails",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_newsletter",
+    "topics": [
+      "디자인 트렌드",
+      "타이포그래피",
+      "레퍼런스",
+      "전시·팝업"
+    ]
+  },
+  {
+    "title": "Meet the iconic printmakers that shaped half a century of the UK’s contemporary graphic art",
+    "link": "https://www.itsnicethat.com/features/50-years-of-print-harvey-lloyd-graphic-design-spotlight-100626",
+    "pubDate": "Thu, 11 Jun 2026 01:27:15 GMT",
+    "content": "In this deep dive into 50 Years of Print, the exhibition celebrating art from the archive of Harvey Lloyd screens, we go behind the scenes on the studio’s remarkable legacy and its imprint on design and illustration today.",
+    "image": "https://admin.itsnicethat.com/images/EmA7J71TFWDrLPAyU2xkMRm2Cdw=/274931/width-1440/f4b40c2b.webp",
+    "valueTags": [
+      "look_and_feel"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Mamdani’s NYC World Cup campaign is inspired by sports memorabilia, city signage, the subway and the five boroughs",
+    "link": "https://www.itsnicethat.com/articles/zohran-mamdani-arsh-raziuddin-new-york-city-hall-world-cup-campaign-graphic-design-project-090626",
+    "pubDate": "Thu, 11 Jun 2026 01:27:15 GMT",
+    "content": "Working with designer and illustrator Arsh Raziuddin, Mayor Mamdani’s City Hall campaign aims to build community by being rooted in local visual culture.",
+    "image": "https://admin.itsnicethat.com/images/VkAG92v8sWT8lCwhU1vwisrMI5s=/278946/width-1440%7Cformat-jpeg/arsh-raziuddan-graphic-design-itsnicethat-1_KEYPOSTER_WORLDCUP_FINAL.png",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "promotion_event_design",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "From the dancefloor to the afters, this hedonistic book is an unfiltered photographic history of queer nightlife",
+    "link": "https://www.itsnicethat.com/articles/amelia-abraham-sex-clubs-dissent-mack-photography-publication-project-100626",
+    "pubDate": "Thu, 11 Jun 2026 01:27:15 GMT",
+    "content": "Sex, Clubs, Dissent is a fantastic foray into queer image-making that defies “easy categorisation or legibility”. Instead, it revels in its multiplicity.",
+    "image": "https://admin.itsnicethat.com/images/xYlraz4mkFwcCfbGDek757Av9SU=/278849/width-1440/AA_SexClubsDissent_9.jpg",
+    "valueTags": [
+      "look_and_feel"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Unpack how Amanita Design created an entire game out of cardboard, paper and 3D programmes",
+    "link": "https://www.itsnicethat.com/features/amanita-design-phonopolis-illustration-graphic-design-project-090626",
+    "pubDate": "Thu, 11 Jun 2026 01:27:15 GMT",
+    "content": "The newest game from Czech games studio Amanita Design doesn’t just think outside of the box, it’s literally made from the box.",
+    "image": "https://www.itsnicethat.com/images/social.jpg",
+    "valueTags": [
+      "layout_pattern",
+      "motion_interaction"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "A24 creative director Liam Hamill embraces brainrot with his monthly music venue posters",
+    "link": "https://www.itsnicethat.com/articles/liam-hamill-babys-all-right-graphic-design-project-080626",
+    "pubDate": "Thu, 11 Jun 2026 01:27:15 GMT",
+    "content": "The associate creative director behind A24’s biggest hits is trading blockbusters for Brooklyn brainrot, internet satire and tongue-in-cheek energy for venue Baby’s All Right.",
+    "image": "https://admin.itsnicethat.com/images/pR1pY8WpvmPg31PlvlY9f4kT9pQ=/278503/width-1440/liam-hamill-graphic-design-itsnicethat-12.jpg",
+    "valueTags": [
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Meet Nice Groceries, the creatives shaking up the production agency model with the slow craft of analogue film",
+    "link": "https://www.itsnicethat.com/articles/nice-groceries-film-discover-080626",
+    "pubDate": "Thu, 11 Jun 2026 01:27:15 GMT",
+    "content": "From camcorders and Super8 to 16mm, the emerging studio is creating commercial campaigns that hold the nostalgia and charm of indie, amateur movie-making.",
+    "image": "https://admin.itsnicethat.com/images/NFZUXQiLXGo1T59yMbgNuoz0ck4=/278445/width-1440%7Cformat-jpeg/NG-LOGOSLOGAN-EXAMPLE-1080x1350_2025.png",
+    "valueTags": [
+      "brand_expression",
+      "promotion_event_design",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/monday-nights-creates-a-sharp-frame-for-bolders-3d-and-motion-work",
+    "pubDate": "Thu, 11 Jun 2026 01:26:01 GMT",
+    "content": "Since 2007, Bolder has been producing high-quality 3D and motion projects. Over the years, both the team and technology advanced, but the brand in itself no longer represented that growth. As the studio looked back on its journey and ahead to the future, it saw the need for a rebrand to match its ambition. With its 20th birthday on the horizon, the formerly Brighton-based, now fully remote studio teamed up with Monday Nights to create an identity built to last.",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/06/monday-nights-creates-a-sharp-frame-for-bolders-3d-and-motion-work/Bolder-Monday-Nights-03.webp",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "motion_interaction",
+      "korean_uiux_case",
+      "prototyping",
+      "visual_reference",
+      "ux_method"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "What you count is what they feel",
+    "link": "https://uxdesign.cc/what-you-count-is-what-they-feel-2455e76682e0?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 10 Jun 2026 23:01:29 GMT",
+    "content": "What a Jakarta city bus taught me about where experience is really made. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Liquid Glass: who gets to decide how an interface looks?",
+    "link": "https://uxdesign.cc/liquid-glass-who-gets-to-decide-how-an-interface-looks-a0abe75ae21e?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 10 Jun 2026 10:42:59 GMT",
+    "content": "Notes from the 2026 WWDC keynote Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The Benefits Of Cognitive Inclusion In UX Research",
+    "link": "https://smashingmagazine.com/2026/06/benefits-cognitive-inclusion-ux-research/",
+    "pubDate": "Wed, 10 Jun 2026 10:00:00 GMT",
+    "content": "Findings from an exploratory user research study highlighting the unique insights and practical UX recommendations shared by participants with cognitive disabilities.",
+    "image": "http://files.smashing.media/articles/benefits-cognitive-inclusion-ux-research/benefits-cognitive-inclusion-ux-research.jpg",
+    "valueTags": [
+      "promotion_event_design",
+      "korean_uiux_case",
+      "ux_method"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "How To Make Your Design System AI-Ready",
+    "link": "https://smashingmagazine.com/2026/06/how-make-design-system-ai-ready/",
+    "pubDate": "Wed, 03 Jun 2026 13:00:00 GMT",
+    "content": "Practical guide on how to reduce drifts, minimize mistakes, maintain context, and improve the quality of AI-generated prototypes. Brought to you by Design Patterns For AI Interfaces, **friendly video course on UX** and design patterns by Vitaly.",
+    "image": "http://files.smashing.media/articles/how-make-design-system-ai-ready/how-make-design-system-ai-ready.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_system",
+      "prototyping",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Should you really give AI your whole digital life?",
+    "link": "https://uxdesign.cc/should-you-really-give-ai-your-whole-digital-life-9b0c55df46e2?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 09 Jun 2026 23:04:27 GMT",
+    "content": "You’ve felt it, haven’t you? That tiny pause. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Your design taste isn’t a feeling. It’s a prediction about user behavior.",
+    "link": "https://uxdesign.cc/your-design-taste-isnt-a-feeling-it-s-a-prediction-about-user-behavior-7a4a63f5f622?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 09 Jun 2026 11:46:27 GMT",
+    "content": "What DataViz taught me about the importance of explaining design Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "AI didn’t replace designers-it promoted them",
+    "link": "https://uxdesign.cc/ai-didnt-replace-designers-it-promoted-them-5b6d24de4e26?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 09 Jun 2026 11:45:44 GMT",
+    "content": "How AI is rewriting the product designer’s role — from spec-maker to system architect Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "June Is For Exploring (2026 Wallpapers Edition)",
+    "link": "https://smashingmagazine.com/2026/05/desktop-wallpaper-calendars-june-2026/",
+    "pubDate": "Sun, 31 May 2026 08:00:00 GMT",
+    "content": "Let’s kick off June — and the beginning of summer — with some fresh inspiration! Artists and designers from across the globe once again tickled their creativity to welcome the new month with a new collection of desktop wallpapers. Enjoy!",
+    "image": "http://files.smashing.media/articles/desktop-wallpaper-calendars-june-2026/jun-26-drifting-into-june-preview-opt.png",
+    "valueTags": [
+      "visual_trend",
+      "commerce_design",
+      "commerce_campaign_design",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "AI design isn’t ugly. It’s fluent — and that’s the problem.",
+    "link": "https://uxdesign.cc/ai-design-isnt-ugly-it-s-fluent-and-that-s-the-problem-131b2f4eb78c?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 08 Jun 2026 22:10:58 GMT",
+    "content": "Why Claude Design, Lovable, and v0 all wear the same face — and what a dynamited St. Louis housing project predicted about it. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  }
+]
