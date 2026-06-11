@@ -260,6 +260,73 @@ export async function previousLinks(runsDir, articlesPath, today = outputDate())
   return links;
 }
 
+export function addTagWhen(tags, name, pattern, text) {
+  if (pattern.test(text)) tags.add(name);
+}
+
+// fetch_{service,design,dev}_news.mjs 공용 골격 ----------------------------------
+// 영역별로 다른 부분(태그/정렬/articleFields/핸들러)은 각 스크립트에 남기고,
+// 완전히 동일한 경로·소스 루프·출력 쓰기만 여기서 공유한다.
+
+export function makeRawPaths(runsDir, area) {
+  return {
+    rawDir: (date = outputDate()) => rawDir(runsDir, date),
+    articlesPath: (date = outputDate()) => path.join(rawDir(runsDir, date), `${area}-articles.json`),
+    fetchReportPath: (date = outputDate()) => path.join(rawDir(runsDir, date), `${area}-fetch-report.json`),
+  };
+}
+
+// sources[key] 각 항목을 handler로 돌리고 articles/sourceResults에 누적한다.
+// urlField가 비어 있는 소스는 건너뛴다(feed=rss, 그 외=url).
+export async function collectSourceGroup({
+  sources,
+  key,
+  type,
+  urlField,
+  handler,
+  articles,
+  sourceResults,
+}) {
+  for (const source of sources[key] || []) {
+    if (!source[urlField]) continue;
+    const result = await handler(source);
+    articles.push(...result.articles);
+    sourceResults.push({
+      name: source.name,
+      type,
+      url: source[urlField],
+      status: result.error ? "error" : "ok",
+      count: result.articles.length,
+      error: result.error,
+    });
+  }
+}
+
+export async function writeFetchOutput({
+  paths,
+  date,
+  sourceFile,
+  output,
+  sourceResults,
+  fetchedLabel,
+  nextHint,
+}) {
+  const outputPath = paths.articlesPath(date);
+  await fs.writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
+  const reportPath = paths.fetchReportPath(date);
+  await fs.writeFile(reportPath, `${JSON.stringify({
+    date,
+    sourceFile,
+    totalArticles: output.length,
+    sourceResults,
+  }, null, 2)}\n`, "utf8");
+
+  console.log(`Fetched ${output.length} ${fetchedLabel}`);
+  console.log(`Saved to ${outputPath}`);
+  console.log(`Saved fetch report to ${reportPath}`);
+  console.log(nextHint);
+}
+
 export function uniqueArticles(articles) {
   const seen = new Set();
   return articles.filter((article) => {

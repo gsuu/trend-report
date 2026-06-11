@@ -5,21 +5,24 @@ import Parser from "rss-parser";
 import {
   FEED_TIMEOUT_MS,
   PAGE_TIMEOUT_MS,
+  addTagWhen,
   articleContent,
   cleanTitle,
+  collectSourceGroup,
   decodeHtml,
   extractAnchors,
   fetchArticleMeta,
   fetchText,
   isAutoExcluded,
   itemImage,
+  makeRawPaths,
   matchesAny,
   matchesNone,
   outputDate,
   previousLinks,
-  rawDir as resolveRawDir,
   sinceDate,
   uniqueArticles,
+  writeFetchOutput,
 } from "./tracking_utils.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -28,18 +31,7 @@ const root = path.resolve(__dirname, "..", "..");
 const sourcesPath = path.join(root, "news-tracking", "service-sources.json");
 const runsDir = path.join(root, "runs");
 const parser = new Parser();
-
-function rawDir(date = outputDate()) {
-  return resolveRawDir(runsDir, date);
-}
-
-function serviceArticlesPath(date = outputDate()) {
-  return path.join(rawDir(date), "service-articles.json");
-}
-
-function serviceFetchReportPath(date = outputDate()) {
-  return path.join(rawDir(date), "service-fetch-report.json");
-}
+const paths = makeRawPaths(runsDir, "service");
 
 function isGenericTitle(value = "") {
   return /^(게시물 상세|상세|뉴스 상세|보도자료 상세|공지사항 상세|article|detail)$/i.test(cleanTitle(value));
@@ -58,10 +50,6 @@ function articleFields(source) {
     priority: source.priority || "",
     topics: source.topics || [],
   };
-}
-
-function addTagWhen(tags, name, pattern, text) {
-  if (pattern.test(text)) tags.add(name);
 }
 
 function serviceEvidenceTags(article) {
@@ -242,58 +230,34 @@ function sortArticles(a, b) {
 
 async function main() {
   const date = outputDate();
-  await fs.mkdir(rawDir(date), { recursive: true });
+  await fs.mkdir(paths.rawDir(date), { recursive: true });
 
   const sources = JSON.parse(await fs.readFile(sourcesPath, "utf8"));
   const since = sinceDate();
-  const seenPreviousLinks = await previousLinks(runsDir, serviceArticlesPath, date);
+  const seenPreviousLinks = await previousLinks(runsDir, paths.articlesPath, date);
   const articles = [];
   const sourceResults = [];
 
   console.log("Fetching service feeds...");
-  for (const source of sources.feeds || []) {
-    if (!source.rss) continue;
-    const result = await fetchRssFeed(source, since);
-    articles.push(...result.articles);
-    sourceResults.push({
-      name: source.name,
-      type: "feed",
-      url: source.rss,
-      status: result.error ? "error" : "ok",
-      count: result.articles.length,
-      error: result.error,
-    });
-  }
+  await collectSourceGroup({
+    sources, key: "feeds", type: "feed", urlField: "rss",
+    handler: (source) => fetchRssFeed(source, since),
+    articles, sourceResults,
+  });
 
   console.log("Scraping service pages...");
-  for (const source of sources.pages || []) {
-    if (!source.url) continue;
-    const result = await scrapePage(source, seenPreviousLinks);
-    articles.push(...result.articles);
-    sourceResults.push({
-      name: source.name,
-      type: "page",
-      url: source.url,
-      status: result.error ? "error" : "ok",
-      count: result.articles.length,
-      error: result.error,
-    });
-  }
+  await collectSourceGroup({
+    sources, key: "pages", type: "page", urlField: "url",
+    handler: (source) => scrapePage(source, seenPreviousLinks),
+    articles, sourceResults,
+  });
 
   console.log("Reading service sitemaps...");
-  for (const source of sources.sitemaps || []) {
-    if (!source.url) continue;
-    const result = await fetchSitemap(source, since, seenPreviousLinks);
-    articles.push(...result.articles);
-    sourceResults.push({
-      name: source.name,
-      type: "sitemap",
-      url: source.url,
-      status: result.error ? "error" : "ok",
-      count: result.articles.length,
-      error: result.error,
-    });
-  }
+  await collectSourceGroup({
+    sources, key: "sitemaps", type: "sitemap", urlField: "url",
+    handler: (source) => fetchSitemap(source, since, seenPreviousLinks),
+    articles, sourceResults,
+  });
 
   const output = uniqueArticles(articles)
     .filter((article) => !isAutoExcluded(article.title, "service"))
@@ -304,20 +268,13 @@ async function main() {
     }))
     .sort(sortArticles);
 
-  const outputPath = serviceArticlesPath(date);
-  await fs.writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
-  const reportPath = serviceFetchReportPath(date);
-  await fs.writeFile(reportPath, `${JSON.stringify({
-    date,
+  await writeFetchOutput({
+    paths, date,
     sourceFile: "news-tracking/service-sources.json",
-    totalArticles: output.length,
-    sourceResults,
-  }, null, 2)}\n`, "utf8");
-
-  console.log(`Fetched ${output.length} SERVICE articles`);
-  console.log(`Saved to ${outputPath}`);
-  console.log(`Saved fetch report to ${reportPath}`);
-  console.log("Next: use docs/service-digest-agent-prompt.md to verify source evidence and select service items.");
+    output, sourceResults,
+    fetchedLabel: "SERVICE articles",
+    nextHint: "Next: use docs/service-digest-agent-prompt.md to verify source evidence and select service items.",
+  });
 }
 
 main().catch((error) => {

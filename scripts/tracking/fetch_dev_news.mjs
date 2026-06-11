@@ -5,20 +5,23 @@ import Parser from "rss-parser";
 import {
   FEED_TIMEOUT_MS,
   PAGE_TIMEOUT_MS,
+  addTagWhen,
   articleContent,
   cleanTitle,
+  collectSourceGroup,
   extractAnchors,
   fetchArticleMeta,
   fetchText,
   isAutoExcluded,
   itemImage,
+  makeRawPaths,
   matchesAny,
   matchesNone,
   outputDate,
   previousLinks,
-  rawDir as resolveRawDir,
   sinceDate,
   uniqueArticles,
+  writeFetchOutput,
 } from "./tracking_utils.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -27,18 +30,7 @@ const root = path.resolve(__dirname, "..", "..");
 const sourcesPath = path.join(root, "news-tracking", "dev-sources.json");
 const runsDir = path.join(root, "runs");
 const parser = new Parser();
-
-function rawDir(date = outputDate()) {
-  return resolveRawDir(runsDir, date);
-}
-
-function devArticlesPath(date = outputDate()) {
-  return path.join(rawDir(date), "dev-articles.json");
-}
-
-function devFetchReportPath(date = outputDate()) {
-  return path.join(rawDir(date), "dev-fetch-report.json");
-}
+const paths = makeRawPaths(runsDir, "dev");
 
 function articleFields(source) {
   return {
@@ -51,10 +43,6 @@ function articleFields(source) {
     category: source.category || "dev_reference",
     topics: source.topics || [],
   };
-}
-
-function addTagWhen(tags, name, pattern, text) {
-  if (pattern.test(text)) tags.add(name);
 }
 
 function devValueTags(article) {
@@ -158,63 +146,40 @@ function sortArticles(a, b) {
 
 async function main() {
   const date = outputDate();
-  await fs.mkdir(rawDir(date), { recursive: true });
+  await fs.mkdir(paths.rawDir(date), { recursive: true });
 
   const sources = JSON.parse(await fs.readFile(sourcesPath, "utf8"));
   const since = sinceDate();
-  const seenPreviousLinks = await previousLinks(runsDir, devArticlesPath, date);
+  const seenPreviousLinks = await previousLinks(runsDir, paths.articlesPath, date);
   const articles = [];
   const sourceResults = [];
 
   console.log("Fetching dev feeds...");
-  for (const source of sources.feeds || []) {
-    if (!source.rss) continue;
-    const result = await fetchRssFeed(source, since);
-    articles.push(...result.articles);
-    sourceResults.push({
-      name: source.name,
-      type: "feed",
-      url: source.rss,
-      status: result.error ? "error" : "ok",
-      count: result.articles.length,
-      error: result.error,
-    });
-  }
+  await collectSourceGroup({
+    sources, key: "feeds", type: "feed", urlField: "rss",
+    handler: (source) => fetchRssFeed(source, since),
+    articles, sourceResults,
+  });
 
   console.log("Scraping dev pages...");
-  for (const source of sources.pages || []) {
-    if (!source.url) continue;
-    const result = await scrapePage(source, seenPreviousLinks);
-    articles.push(...result.articles);
-    sourceResults.push({
-      name: source.name,
-      type: "page",
-      url: source.url,
-      status: result.error ? "error" : "ok",
-      count: result.articles.length,
-      error: result.error,
-    });
-  }
+  await collectSourceGroup({
+    sources, key: "pages", type: "page", urlField: "url",
+    handler: (source) => scrapePage(source, seenPreviousLinks),
+    articles, sourceResults,
+  });
 
   const output = uniqueArticles(articles)
     .filter((article) => !isAutoExcluded(article.title, "dev"))
     .map((article) => ({ ...article, valueTags: devValueTags(article) }))
     .sort(sortArticles);
 
-  const outputPath = devArticlesPath(date);
-  await fs.writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
-  const reportPath = devFetchReportPath(date);
-  await fs.writeFile(reportPath, `${JSON.stringify({
-    date,
+  await writeFetchOutput({
+    paths, date,
     sourceFile: "news-tracking/dev-sources.json",
-    totalArticles: output.length,
-    sourceResults,
-  }, null, 2)}\n`, "utf8");
-
-  console.log(`Fetched ${output.length} DEV articles`);
-  console.log(`Saved to ${outputPath}`);
-  console.log(`Saved fetch report to ${reportPath}`);
-  console.log("Next: use docs/dev-digest-agent-prompt.md with this JSON to select, summarize, and write DEV items.");
+    output, sourceResults,
+    fetchedLabel: "DEV articles",
+    nextHint: "Next: use docs/dev-digest-agent-prompt.md with this JSON to select, summarize, and write DEV items.",
+  });
 }
 
 main().catch((error) => {
