@@ -1,0 +1,287 @@
+{
+  "date": "2026-06-07",
+  "sourceFile": "news-tracking/service-sources.json",
+  "totalArticles": 46,
+  "sourceResults": [
+    {
+      "name": "Trend A Word (Maily)",
+      "type": "feed",
+      "url": "https://maily.so/trendaword/feed",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    },
+    {
+      "name": "신세계그룹 뉴스룸",
+      "type": "feed",
+      "url": "https://www.shinsegaegroupnewsroom.com/feed/",
+      "status": "ok",
+      "count": 8,
+      "error": ""
+    },
+    {
+      "name": "쿠팡 뉴스룸",
+      "type": "feed",
+      "url": "https://news.coupang.com/feed/",
+      "status": "ok",
+      "count": 4,
+      "error": ""
+    },
+    {
+      "name": "컬리 뉴스룸",
+      "type": "feed",
+      "url": "https://newsroom.kurlycorp.com/feed/",
+      "status": "ok",
+      "count": 4,
+      "error": ""
+    },
+    {
+      "name": "오늘의집 뉴스룸",
+      "type": "feed",
+      "url": "https://ohstory.io/feed/",
+      "status": "ok",
+      "count": 2,
+      "error": ""
+    },
+    {
+      "name": "네이버 보도자료",
+      "type": "feed",
+      "url": "https://www.navercorp.com/api/article/naver/rss",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "오픈서베이 블로그",
+      "type": "feed",
+      "url": "https://blog.opensurvey.co.kr/feed/",
+      "status": "ok",
+      "count": 4,
+      "error": ""
+    },
+    {
+      "name": "토스 테크",
+      "type": "feed",
+      "url": "https://toss.tech/rss.xml",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "우아한형제들 기술블로그",
+      "type": "feed",
+      "url": "https://techblog.woowahan.com/feed/",
+      "status": "error",
+      "count": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "Shopify Engineering",
+      "type": "feed",
+      "url": "https://shopify.engineering/blog.atom",
+      "status": "error",
+      "count": 0,
+      "error": "Invalid character in entity name\nLine: 0\nColumn: 462\nChar: &"
+    },
+    {
+      "name": "Stripe Sessions",
+      "type": "feed",
+      "url": "https://stripe.com/blog/feed.rss",
+      "status": "ok",
+      "count": 3,
+      "error": ""
+    },
+    {
+      "name": "Klarna Newsroom",
+      "type": "feed",
+      "url": "https://www.klarna.com/international/press/feed/",
+      "status": "error",
+      "count": 0,
+      "error": "Unexpected close tag\nLine: 254\nColumn: 1672\nChar: >"
+    },
+    {
+      "name": "29CM Medium",
+      "type": "feed",
+      "url": "https://medium.com/feed/29cm",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "쿠팡 Engineering Medium",
+      "type": "feed",
+      "url": "https://medium.com/feed/coupang-engineering",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Retail Dive",
+      "type": "feed",
+      "url": "https://www.retaildive.com/feeds/news/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "Glossy",
+      "type": "feed",
+      "url": "https://www.glossy.co/feed/",
+      "status": "ok",
+      "count": 15,
+      "error": ""
+    },
+    {
+      "name": "CJ News Room",
+      "type": "feed",
+      "url": "https://cjnews.cj.net/feed",
+      "status": "ok",
+      "count": 13,
+      "error": ""
+    },
+    {
+      "name": "무신사 뉴스룸",
+      "type": "page",
+      "url": "https://newsroom.musinsa.com/news",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "29CM Special Order",
+      "type": "page",
+      "url": "https://shop.29cm.co.kr/special-order",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "카카오스타일 파트너라운지",
+      "type": "page",
+      "url": "https://partner.kakaostyle.com/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "CJ올리브영 뉴스룸",
+      "type": "page",
+      "url": "https://corp.oliveyoung.com/ko/news",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "올리브영 이벤트",
+      "type": "page",
+      "url": "https://www.oliveyoung.co.kr/store/main/getEventList.do",
+      "status": "error",
+      "count": 0,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "W Concept 이벤트",
+      "type": "page",
+      "url": "https://www.wconcept.co.kr/Event",
+      "status": "error",
+      "count": 0,
+      "error": "HTTP 500"
+    },
+    {
+      "name": "SSG 이벤트",
+      "type": "page",
+      "url": "https://www.ssg.com/event/eventMain.ssg",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "11번가 뉴스룸",
+      "type": "page",
+      "url": "https://news.11st.co.kr/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "G마켓 뉴스",
+      "type": "page",
+      "url": "https://corp.gmarket.com/ko/news",
+      "status": "error",
+      "count": 0,
+      "error": "HTTP 404"
+    },
+    {
+      "name": "Kream Newsroom",
+      "type": "page",
+      "url": "https://kream.co.kr/inside",
+      "status": "error",
+      "count": 0,
+      "error": "HTTP 404"
+    },
+    {
+      "name": "Brandi & Hint",
+      "type": "page",
+      "url": "https://about.brandi.co.kr/news/",
+      "status": "error",
+      "count": 0,
+      "error": "fetch failed"
+    },
+    {
+      "name": "S.I.VILLAGE",
+      "type": "page",
+      "url": "https://www.sivillage.com/promotion/getEventListAjax.siv",
+      "status": "error",
+      "count": 0,
+      "error": "HTTP 404"
+    },
+    {
+      "name": "SSF SHOP",
+      "type": "page",
+      "url": "https://www.ssfshop.com/EventPlanShop/index",
+      "status": "error",
+      "count": 0,
+      "error": "HTTP 404"
+    },
+    {
+      "name": "카카오 보도자료",
+      "type": "page",
+      "url": "https://www.kakaocorp.com/page",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "당근 보도자료",
+      "type": "page",
+      "url": "https://about.daangn.com/company/pr/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "야놀자 보도자료",
+      "type": "page",
+      "url": "https://www.yanoljagroup.com/press_release",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "PUBLY",
+      "type": "page",
+      "url": "https://publy.co/",
+      "status": "ok",
+      "count": 0,
+      "error": ""
+    },
+    {
+      "name": "뉴닉 (NEWNEEK)",
+      "type": "sitemap",
+      "url": "https://newneek.co/sitemap/article-sitemap.xml",
+      "status": "ok",
+      "count": 1,
+      "error": ""
+    }
+  ]
+}
