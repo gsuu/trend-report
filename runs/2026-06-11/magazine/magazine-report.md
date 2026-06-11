@@ -1,6 +1,6 @@
 # CTTD 매거진 — 2026-06-11
 
-> 자동 생성(magazine-write) + 원문 대조 검수(magazine-review) 완료. 총 31건.
+> 자동 생성(magazine-write) + 원문 대조 검수(magazine-review) 완료. 총 29건.
 
 ## SERVICE
 
@@ -250,42 +250,7 @@
 
 ---
 
-#### 8. 얼굴 인식의 역사와 페이스페이의 미래
-
-- 날짜: 2026-06-11
-- 태그: 얼굴 인식, 페이스페이, Eigenface, 결제 UX
-- 국가: KR
-- 카테고리: insight
-- 직무 태그: 웹디자인
-- 출처 유형: blog_opinion
-- 출처: 토스테크
-- 출처 URL: https://toss.tech/article/history-of-face-recognition-facepay
-- 이미지: https://resources-fe.toss.im/image-optimize/width=3840,quality=75/https%3A%2F%2Fstatic.toss.im%2Fillusts%2Ftossfeed-facepay-cover-2.jpg
-- 이미지 설명: 토스테크 원문 대표 이미지 — 페이스페이
-- 요약: 토스테크가 1991년 Eigenface부터 2014년 DeepFace까지 얼굴 인식 기술의 발전사를 정리하고, 2025년 출시 2개월 만에 가입자 100만을 넘긴 페이스페이가 '얼굴이 곧 결제 수단'이 되는 경험을 어떻게 설계했는지 풀어냈습니다.
-- 관련 링크 1: [케이스 출처] 토스테크 — 얼굴 인식의 역사와 페이스페이의 미래 | https://toss.tech/article/history-of-face-recognition-facepay
-- 관련 링크 2: [결정 근거] MIT Media Lab — Eigenfaces for Recognition (Turk & Pentland, 1991) | https://www.face-rec.org/algorithms/PCA/jcn.pdf
-
-##### 요약
-
-- 토스가 얼굴 인식 기술사를 짚으며, 페이스페이가 지갑·휴대폰 없이 얼굴만으로 결제를 끝내는 경험을 어떻게 신뢰 가능하게 만들었는지 설명합니다.
-- 1991년 MIT 미디어랩의 Turk·Pentland가 PCA 기반 Eigenface로 얼굴을 '고유얼굴'로 표현하는 기법을 발표했습니다.
-- 2014년 Facebook AI의 DeepFace가 LFW 벤치마크 97.35% 정확도로 인간 수준(97.53%)에 근접했습니다.
-- 2025년 9월 정식 출시한 페이스페이는 2개월 만에 가입자 100만 명을 넘었고, 서울 결제율은 약 79%에 이릅니다.
-
-##### 디자인 인사이트
-
-> 인증 수단이 몸이 되면, 사용자가 가장 두려워하는 건 속도가 아니라 '내가 통제하고 있다는 감각'입니다.
-
-페이스페이는 결제에서 카드·휴대폰을 꺼내는 동작 자체를 없앤 사례라, 핀테크를 넘어 인증·신원확인 UX 패러다임의 전환으로 읽을 만합니다. 30년간 정확도가 인간 수준에 도달한 기술 위에서, 토스는 '얼굴=결제'라는 강력한 단축을 만들면서도 오인식·도용·취소 같은 실패 상태를 사용자가 어떻게 통제하는지를 함께 설계해야 했습니다. 출시 2개월 100만이라는 채택 속도는 기술보다 '믿고 맡겨도 된다'는 화면 설계가 받쳐졌을 때 나옵니다.
-
-디자인 판단의 초점은 결제의 화려함이 아니라 실패·취소·되돌리기 상태의 명확성입니다. 얼굴이 잘못 인식됐을 때 어떻게 빠져나오는지, 결제가 의도와 다르게 진행됐을 때 어디서 멈추고 취소하는지, 생체정보가 어디까지 쓰이는지가 화면에서 읽혀야 신뢰가 유지됩니다. 인증 시점과 결제 확정 시점이 한 동작으로 붙을수록, 사용자가 '확정 전 마지막 통제 지점'을 어디서 갖는지가 더 중요해집니다.
-
-패션·뷰티 클라이언트에 간편결제나 생체인증을 이미 붙였다면 인증과 결제 확정 사이에 사용자가 멈출 수 있는 마지막 확인 지점이 화면에 있는지, 아직 도입 전이라면 속도만큼 실패·취소 상태의 가시성을 설계 기준에 넣을 수 있을지 점검할 지점입니다.
-
----
-
-#### 9. Stripe Press
+#### 8. Stripe Press
 
 - 날짜: 2026-06-11
 - 태그: 리빙커버, 인터랙티브 북커버, 퍼블리싱, 에디토리얼
@@ -320,7 +285,7 @@ Stripe Press의 핵심은 모든 책을 같은 카드 틀에 넣으면서도 표
 
 ## DEV
 
-#### 10. HTML 우선 사이트로 사용자 2배
+#### 9. HTML 우선 사이트로 사용자 2배
 
 - 날짜: 2026-06-10
 - 태그: HTML 우선, Astro, 점진적 향상, 폼 완료율
@@ -353,7 +318,7 @@ Stripe Press의 핵심은 모든 책을 같은 카드 틀에 넣으면서도 표
 
 새 사이트가 Astro로 JS 없이도 동작하는 마크업을 먼저 깔고 웹 컴포넌트로 점진적 향상만 얹은 구조라, 회원가입·주문서·문의 폼처럼 전환에 직결되는 화면의 QA 기준을 다시 잡는 데 그대로 쓸 수 있습니다. JS 비활성·실패 상태에서 폼 제출이 서버까지 도달하는지를 별도 테스트 케이스로 두고, 접근성 목표를 AAA가 아닌 AA로 명시해 합격선을 합의하며, "이 폼이 깨지는 사용자가 퍼널에 안 잡힌다"를 전제로 비-JS 경로의 완료율을 따로 계측하는 것을 다음 분기 체크리스트로 가져갈 수 있습니다.
 
-#### 11. Introducing the Field Guide to Grid Lanes
+#### 10. Introducing the Field Guide to Grid Lanes
 
 - 날짜: 2026-06-10
 - 태그: Grid Lanes, CSS 레이아웃, flow-tolerance, Safari
@@ -386,7 +351,7 @@ Grid Lanes는 룩북·갤러리·매거진형 카드처럼 비율이 제각각�
 
 `fr`·`minmax()`·`repeat()`·`fit-content()`를 그대로 받기 때문에 기존 Grid 컴포넌트의 사이징 토큰을 재활용하기 쉽습니다. 다만 단일 브라우저 선행 기능이라 패션 룩북·상품 그리드에 바로 운영 투입하기보다, `@supports (display: grid-lanes)`로 감싸 미지원 브라우저에는 기존 Grid·Flex 폴백을 유지하고, `flow-tolerance` 값별로 키보드 탭 순서가 콘텐츠 의미와 어긋나지 않는지 접근성 QA에 넣는 것을 적용 조건으로 둘 수 있습니다.
 
-#### 12. News from WWDC26: WebKit in Safari 27 beta
+#### 11. News from WWDC26: WebKit in Safari 27 beta
 
 - 날짜: 2026-06-08
 - 태그: Safari 27, base-select, WebAssembly JSPI, Scroll Anchoring
@@ -419,7 +384,7 @@ Grid Lanes는 룩북·갤러리·매거진형 카드처럼 비율이 제각각�
 
 다만 아직 beta 채널이고 단일 엔진 선행이라, base-select·`:heading`·`sizes="auto"`는 모두 `@supports`·기능 감지로 감싸 미지원 환경 폴백을 유지해야 합니다. Scroll Anchoring으로 무한 스크롤·동적 배너 삽입 시 점프가 줄어드는지를 회귀 테스트에 넣고, WebAssembly JSPI는 Wasm을 쓰는 뷰어·에디터류에서만 영향 범위를 확인하는 식으로, 정식 출시 전까지는 "다음 분기 QA 후보"로만 잡아두는 것을 적용 조건으로 둡니다.
 
-#### 13. Creating Memorable Web Experiences: A Modern CSS Toolkit
+#### 12. Creating Memorable Web Experiences: A Modern CSS Toolkit
 
 - 날짜: 2026-06-10
 - 태그: 모던 CSS, 스크롤 애니메이션, 3D 트랜스폼, 모션
@@ -452,7 +417,7 @@ Grid Lanes는 룩북·갤러리·매거진형 카드처럼 비율이 제각각�
 
 도구별로 영향 범위가 달라, 스크롤 연동 애니메이션은 LCP·CLS 같은 성능 지표와, 3D 트랜스폼은 모바일 GPU 부하와, SplitText는 스크린리더가 분할된 문자를 어떻게 읽는지와 각각 충돌할 수 있습니다. 캠페인 시안을 받을 때 "이 모션이 reduced-motion에서 무엇으로 대체되는가"와 "분할·마스킹된 텍스트가 접근성 트리에 온전히 남는가"를 산출물 검수 기준으로 추가하는 것을 적용 조건으로 둡니다.
 
-#### 14. CSS: 피할 수 없는 나쁜 부분들
+#### 13. CSS: 피할 수 없는 나쁜 부분들
 
 - 날짜: 2026-06-04
 - 태그: box-sizing, margin collapsing, line-height, CSS 모델
@@ -486,7 +451,7 @@ Grid Lanes는 룩북·갤러리·매거진형 카드처럼 비율이 제각각�
 
 실무에서는 컴포넌트 라이브러리의 reset에 `box-sizing: border-box`를 강제하는 이유를 이 글로 다시 설명할 수 있고, 인접 요소 간격을 margin 대신 `gap`으로 두는 결정의 근거(margin collapsing 회피)를 코드 리뷰 기준으로 명문화할 수 있습니다. 긴 URL·코드 토큰이 모바일에서 넘치는 케이스는 `overflow-wrap`/`word-break` 적용을 디자인 시스템 타이포 토큰에 포함시키는 것을, 그리고 한글·영문 혼용 텍스트의 행간 검수를 폰트 교체 시 회귀 항목으로 두는 것을 적용 조건으로 가져갈 수 있습니다.
 
-#### 15. Scroll-Driven, Scroll-Triggered, Scroll States, and View Transitions
+#### 14. Scroll-Driven, Scroll-Triggered, Scroll States, and View Transitions
 
 - 날짜: 2026-06-08
 - 태그: 스크롤 애니메이션, animation-timeline, scroll-state, View Transitions
@@ -519,40 +484,7 @@ Grid Lanes는 룩북·갤러리·매거진형 카드처럼 비율이 제각각�
 
 각 기능을 `@supports`로 감싸고 `prefers-reduced-motion`에서 모션을 끄는 분기를 두며, scroll-state·view-transition은 still-evolving 스펙이라 운영 투입 전 회귀 테스트에 브라우저 매트릭스를 명시하는 것을 적용 조건으로 둡니다. 시안에서 "이건 진행도형인가 트리거형인가"를 디자이너와 먼저 합의하면 구현·QA 단계의 재작업을 줄일 수 있습니다.
 
-#### 16. How to vet an npm package in 2026
-
-- 날짜: 2026-06-02
-- 태그: npm, provenance, 공급망, 의존성 점검
-- 국가: GLOBAL
-- 카테고리: javascript
-- 직무 태그: 웹DEV
-- 출처 유형: blog_opinion
-- 출처: Gabor Koos (blog.gaborkoos.com)
-- 출처 URL: https://blog.gaborkoos.com/how-to-vet-an-npm-package-in-2026/
-- 이미지:
-- 이미지 설명: 원문에 대표 이미지 미확인 — 원문 페이지 스크린샷 폴백
-- 요약: Gabor Koos가 GitHub 스타 수만 보던 npm 패키지 검증을 2026년 기준으로 갱신해, provenance attestation(출처 증명)·install scripts 안전성·CI 품질·maintainer 대응 속도를 설치 전 위험 신호 체크리스트로 묶어 제시합니다.
-- 관련 링크 1: [합성 데모] npm Docs — Generating provenance statements | https://docs.npmjs.com/generating-provenance-statements
-- 관련 링크 2: [공식 사양] npm Docs — About package provenance | https://docs.npmjs.com/about-package-provenance
-- 관련 링크 3: [프로덕션 사례] OpenSSF — npm best practices for the supply chain | https://github.com/ossf/package-manager-best-practices
-
-##### 요약
-
-- 패키지 신뢰도를 스타 수가 아니라 출처·실행 위험·유지보수 신호로 판단하라는 2026년판 npm 검증 가이드입니다.
-- provenance attestation(출처 증명)으로 패키지가 어느 저장소·빌드에서 나왔는지를 확인하는 것을 1차 기준으로 둡니다.
-- 설치 시 자동 실행되는 install scripts의 안전성과, 저장소의 CI 품질을 함께 점검합니다.
-- maintainer의 이슈 대응 속도·패턴으로 유지보수 반응성을 가늠합니다.
-- `npm install` 전에 식별해야 할 위험 신호를 체크리스트 형태로 정리합니다.
-
-##### 매거진 인사이트
-
-> 패키지를 고르는 기준이 "별이 몇 개냐"에서 "어디서 빌드됐고, 설치 때 무엇을 실행하느냐"로 옮겨갑니다.
-
-공급망 공격이 늘면서 npm 의존성 추가는 코드 리뷰만큼 따져야 하는 결정이 됐고, 이 글은 그 판단을 provenance·install scripts·CI·maintainer 반응성이라는 확인 가능한 신호로 환원합니다. 프런트엔드·퍼블리싱 작업이 빌드 파이프라인에 수십 개 transitive 의존성을 끌어오는 한국 실무 환경에서, 새 라이브러리를 디자인 시스템·번들에 넣기 전 이 체크리스트를 게이트로 두면 사후 사고 대응 비용을 앞단으로 옮길 수 있습니다.
-
-실무에서는 의존성 추가 PR 템플릿에 "provenance 확인 여부 / install scripts 유무 / 최근 이슈 응답 주기"를 필수 항목으로 넣고, CI에서 `npm install --ignore-scripts`를 기본으로 두되 스크립트가 필요한 패키지만 화이트리스트로 허용하는 식의 방어선을 적용 조건으로 둘 수 있습니다. 새 패키지 도입 결정을 한 사람의 감이 아니라 공유된 위험 신호 체크리스트로 내리도록 팀 규칙에 박아두는 것이 핵심입니다.
-
-#### 17. What's new in Svelte: June 2026
+#### 15. What's new in Svelte: June 2026
 
 - 날짜: 2026-06-01
 - 태그: SvelteKit, remote functions, query.live, TypeScript 6.0
@@ -585,7 +517,7 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 
 실무에서는 `.run()`·구버전 `requested()` 사용처를 코드베이스에서 먼저 grep해 마이그레이션 규모를 산정하고, breaking change가 포함된 만큼 패치가 아닌 마이너 업그레이드로 취급해 회귀 테스트를 거친 뒤 배포하는 것을 롤백 기준과 함께 적용 조건으로 둡니다. `query.live()`는 아직 도입 직후이므로, 실시간 구독이 필요한 화면에 한정해 시범 적용하고 안정성을 본 뒤 확대하는 것이 안전합니다.
 
-#### 18. AI가 인용하고 싶은 페이지는 어떻게 생겼을까
+#### 16. AI가 인용하고 싶은 페이지는 어떻게 생겼을까
 
 - 날짜: 2026-06-11
 - 태그: RAG, 생성형 엔진 최적화, 메타 설명, passage
@@ -620,7 +552,7 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 
 ---
 
-#### 19. Discover MapKit JS 6: Rebuilt for Today's Web Developer
+#### 17. Discover MapKit JS 6: Rebuilt for Today's Web Developer
 
 - 날짜: 2026-06-11
 - 태그: MapKit JS, NPM, EventTarget, Promise
@@ -653,7 +585,7 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 
 ---
 
-#### 20. Another Stab at the Perfect CSS Pie Chart… Sans JavaScript!
+#### 18. Another Stab at the Perfect CSS Pie Chart… Sans JavaScript!
 
 - 날짜: 2026-06-11
 - 태그: CSS 파이차트, attr(), sibling-index, conic-gradient
@@ -688,7 +620,7 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 
 ---
 
-#### 21. The Website Specification — 모던 웹사이트 베스트프랙티스 오픈 스펙
+#### 19. The Website Specification — 모던 웹사이트 베스트프랙티스 오픈 스펙
 
 - 날짜: 2026-06-11
 - 태그: 웹 베스트프랙티스, llms.txt, Agent Skills, MCP
@@ -721,7 +653,7 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 
 ---
 
-#### 22. GitHub's Plan for Agents — 에이전트 코드 폭증과 인프라 재설계
+#### 20. GitHub's Plan for Agents — 에이전트 코드 폭증과 인프라 재설계
 
 - 날짜: 2026-06-11
 - 태그: GitHub, Vitess, 마이크로 스킬, Ambient AI
@@ -756,7 +688,7 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 
 ---
 
-#### 23. Hermes Agent — 셀프임프루빙 데스크톱 AI 에이전트 (Nous Research)
+#### 21. Hermes Agent — 셀프임프루빙 데스크톱 AI 에이전트 (Nous Research)
 
 - 날짜: 2026-06-11
 - 태그: Hermes Agent, persistent memory, 샌드박스, MIT
@@ -789,7 +721,7 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 
 ---
 
-#### 24. Claude Fable 5/Mythos 5 공개, Anthropic의 5세대 프런티어 모델
+#### 22. Claude Fable 5/Mythos 5 공개, Anthropic의 5세대 프런티어 모델
 
 - 날짜: 2026-06-11
 - 태그: Claude Fable 5, Mythos 5, long-running, 안전장치
@@ -822,7 +754,7 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 
 실무 적용 관점에서는 스크린샷으로 웹앱 소스를 재구성하는 비전 역량이 퍼블리싱·프론트엔드 작업에 직접 걸립니다. 디자인 시안 이미지에서 마크업 초안을 끌어내는 식의 쓰임이 현실화되는 셈입니다. 동시에 위험 시 Opus 4.8로 떨어지는 폴백과 3개 자동 분류기가 기본 탑재된 점은, 모델을 바꿀 때 응답 거부·폴백 동작이 기존 파이프라인과 어떻게 맞물리는지 함께 확인할 지점입니다.
 
-#### 25. Copilot Chat, 에이전트 세션 로그를 채팅으로 — Get agent logs·Session search
+#### 23. Copilot Chat, 에이전트 세션 로그를 채팅으로 — Get agent logs·Session search
 
 - 날짜: 2026-06-11
 - 태그: GitHub Copilot, 에이전트 세션, Copilot SDK
@@ -854,7 +786,7 @@ SvelteKit을 쓰는 팀에는 신기능 추가보다 마이그레이션 영향�
 
 다음 분기에 에이전트 PR을 머지하는 워크플로우를 운영한다면, 리뷰어 체크리스트에 "세션 로그에서 검증 단계가 실제로 돌았는지" 확인 항목을 넣고, `Session search`로 중복·충돌 작업을 사전에 골라내는 흐름을 점검 기준으로 둘 수 있습니다.
 
-#### 26. Cursor SDK: Custom Tools, Auto-Review, Nested Subagents
+#### 24. Cursor SDK: Custom Tools, Auto-Review, Nested Subagents
 
 - 날짜: 2026-06-11
 - 태그: Cursor SDK, Custom Tools, Auto-Review, Nested Subagents
@@ -886,7 +818,7 @@ CI나 스크립트에서 Cursor 에이전트를 돌리는 팀이라면, 그동�
 
 다음 분기에 에이전트 자동화를 파이프라인에 넣는다면, Custom Tools로 사내 린트·디자인 토큰 검증 함수를 직접 노출하고 Auto-Review allow/block 규칙을 `permissions.json`에 명시해 PR로 관리하는 흐름을 적용 조건으로 잡을 수 있습니다.
 
-#### 27. OpenAI Codex — Sites, 마이그레이션 플로우, Bedrock 지원
+#### 25. OpenAI Codex — Sites, 마이그레이션 플로우, Bedrock 지원
 
 - 날짜: 2026-06-11
 - 태그: OpenAI Codex, Sites, Amazon Bedrock, 마이그레이션
@@ -918,7 +850,7 @@ CI나 스크립트에서 Cursor 에이전트를 돌리는 팀이라면, 그동�
 
 다음 분기에 Codex를 프로토타이핑 도구로 검토한다면, Sites로 만든 산출물을 그대로 발행하기보다 마크업·접근성·한글 렌더링을 사람이 한 번 검수하는 단계를 적용 조건으로 두고, 모델 공급 경로(직접 vs Bedrock)를 보안 정책에 맞춰 정하는 기준을 먼저 잡을 수 있습니다.
 
-#### 28. Node.js 26.0.0 — Temporal 기본 활성화, V8 14.6
+#### 26. Node.js 26.0.0 — Temporal 기본 활성화, V8 14.6
 
 - 날짜: 2026-06-11
 - 태그: Node.js 26, Temporal, V8 14.6
@@ -950,7 +882,7 @@ CI나 스크립트에서 Cursor 에이전트를 돌리는 팀이라면, 그동�
 
 다음 분기에 Node 런타임을 올리는 팀이라면, `writeHeader()`·`_stream_*`·`--experimental-transform-types` 제거에 걸리는 코드를 CI에서 먼저 걸러내고, Temporal 이전은 신규 코드부터 적용하며 라이브러리 병행 기간을 두는 롤아웃 기준을 잡을 수 있습니다.
 
-#### 29. pnpm v11.5.0 — hoistingLimits 신설
+#### 27. pnpm v11.5.0 — hoistingLimits 신설
 
 - 날짜: 2026-06-11
 - 태그: pnpm, hoistingLimits, 모노레포
@@ -981,7 +913,7 @@ CI나 스크립트에서 Cursor 에이전트를 돌리는 팀이라면, 그동�
 
 다음 분기에 모노레포 설치 동작을 정리하는 팀이라면, `nodeLinker: hoisted`를 쓰는 워크스페이스에 `hoistingLimits`를 명시해 phantom dependency를 차단하고, CI 설치 로그로 끌어올림 범위가 의도대로 좁혀졌는지 검증하는 기준을 적용 조건으로 둘 수 있습니다.
 
-#### 30. New in Chrome 149 — CSS gap decorations
+#### 28. New in Chrome 149 — CSS gap decorations
 
 - 날짜: 2026-06-02
 - 태그: CSS gap decorations, shape-outside, Chrome 149
@@ -1012,7 +944,7 @@ gap decorations는 그 우회를 정리합니다. 선의 위치와 표시 여부
 
 다만 아직 Chromium 계열 단일 구현 단계라, 멀티 브라우저 폴백이 필요한 상용 페이지에서는 progressive enhancement로 얹는 게 안전합니다. 패션·뷰티 카탈로그처럼 그리드 카드 사이 구분선을 자주 쓰는 화면을 운영 중이라면 구분선용 빈 요소를 gap decorations로 걷어낼 수 있는지, 아직 도입 전이라면 `@supports`로 감싼 점진 적용 분기를 컴포넌트에 미리 설계해 둘 수 있는지 살펴볼 지점입니다.
 
-#### 31. Visual Studio Code 1.124 (June 2026)
+#### 29. Visual Studio Code 1.124 (June 2026)
 
 - 날짜: 2026-06-10
 - 태그: VS Code, Autopilot, 세션 내비게이션
@@ -1049,3 +981,5 @@ Autopilot 기본 활성화는 팀 설정에서 한 번 짚고 넘어갈 지점�
 - **Rendering 3D meshes in the DOM with CSS (PolyCSS)** (polycss.com) · DEV/html_css · 지난 호(2026-06-04 #43 "Layoutit / PolyCSS")와 동일 출처 URL 중복(category-qa 보고) + 큐레이션 리뷰에서 제품 랜딩 페이지로 근거 약함 지적 → 제외. 새 기법 해설 원문이 나오면 재검토.
 - **Notion — Merge cells in simple tables** (notion.com) · 문서 표 서식 기능으로 실제 개발 작업에 영향 없음(사용자 기준 "개발에 영향 없으면 제외") → 제외
 - **Obsidian Desktop v1.13.0 — 설정 패널 개편·키보드 내비게이션** (obsidian.md) · 노트 앱 UX 개선으로 개발 작업과 무관 → 제외
+- **얼굴 인식의 역사와 페이스페이의 미래** (toss.tech) · DESIGN · 원문이 얼굴인식 기술사 에세이로 화면·플로우·디자인 결정 실체 없음(디자인 인사이트가 원문 근거 아닌 해석) → 제외. 페이스페이 UX 설계를 다룬 원문이 나오면 재검토
+- **How to vet an npm package in 2026** (blog.gaborkoos.com) · DEV · 원문 403 봇차단 지속으로 발행 직전 재대조·이미지 확보 모두 불가 → 제외. 접근 가능해지면 재검토

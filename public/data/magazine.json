@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T03:45:09.709790+00:00",
+  "generatedAt": "2026-06-11T03:58:29.367740+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -901,133 +901,6 @@
       },
       {
         "number": "08",
-        "platform": "토스테크",
-        "areaKey": "design",
-        "area": "Design",
-        "categoryKey": "insight",
-        "category": "INSIGHT",
-        "sourceType": "blog_opinion",
-        "sourceTypeLabel": "블로그/오피니언",
-        "publicationDate": "2026-06-11",
-        "date": "2026-06-11",
-        "route": "/articles/2026-06-11-08",
-        "href": "/articles/2026-06-11-08",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-08",
-        "image": "https://resources-fe.toss.im/image-optimize/width=3840,quality=75/https%3A%2F%2Fstatic.toss.im%2Fillusts%2Ftossfeed-facepay-cover-2.jpg",
-        "imageCaption": "토스테크 원문 대표 이미지 — 페이스페이",
-        "tags": [
-          "얼굴 인식",
-          "페이스페이",
-          "Eigenface"
-        ],
-        "takeawayHtml": "얼굴 인식의 역사와 페이스페이의 미래",
-        "deckHtml": "토스테크가 1991년 Eigenface부터 2014년 DeepFace까지 얼굴 인식 기술의 발전사를 정리하고, 2025년 출시 2개월 만에 가입자 100만을 넘긴 페이스페이가 &#x27;얼굴이 곧 결제 수단&#x27;이 되는 경험을 어떻게 설계했는지 풀어냈습니다.",
-        "facts": [
-          {
-            "label": "발행날짜",
-            "valueHtml": "2026-06-11"
-          },
-          {
-            "label": "태그",
-            "valueHtml": "얼굴 인식, 페이스페이, Eigenface, 결제 UX"
-          },
-          {
-            "label": "국가",
-            "valueHtml": "KR"
-          },
-          {
-            "label": "카테고리",
-            "valueHtml": "insight"
-          },
-          {
-            "label": "직무 태그",
-            "valueHtml": "웹디자인"
-          },
-          {
-            "label": "출처",
-            "valueHtml": "토스테크"
-          }
-        ],
-        "sourceUrl": "https://toss.tech/article/history-of-face-recognition-facepay",
-        "sourceTitle": "토스테크",
-        "referenceLinks": [
-          {
-            "label": "관련 링크",
-            "title": "[케이스 출처] 토스테크 — 얼굴 인식의 역사와 페이스페이의 미래",
-            "url": "https://toss.tech/article/history-of-face-recognition-facepay"
-          },
-          {
-            "label": "관련 링크",
-            "title": "[결정 근거] MIT Media Lab — Eigenfaces for Recognition (Turk & Pentland, 1991)",
-            "url": "https://www.face-rec.org/algorithms/PCA/jcn.pdf"
-          }
-        ],
-        "sections": [
-          {
-            "title": "요약",
-            "className": "article-section is-bullet-summary",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "토스가 얼굴 인식 기술사를 짚으며, 페이스페이가 지갑·휴대폰 없이 얼굴만으로 결제를 끝내는 경험을 어떻게 신뢰 가능하게 만들었는지 설명합니다."
-              },
-              {
-                "kind": "list",
-                "html": "1991년 MIT 미디어랩의 Turk·Pentland가 PCA 기반 Eigenface로 얼굴을 &#x27;고유얼굴&#x27;로 표현하는 기법을 발표했습니다."
-              },
-              {
-                "kind": "list",
-                "html": "2014년 Facebook AI의 DeepFace가 LFW 벤치마크 97.35% 정확도로 인간 수준(97.53%)에 근접했습니다."
-              },
-              {
-                "kind": "list",
-                "html": "2025년 9월 정식 출시한 페이스페이는 2개월 만에 가입자 100만 명을 넘었고, 서울 결제율은 약 79%에 이릅니다."
-              }
-            ],
-            "itemsHtml": [
-              "토스가 얼굴 인식 기술사를 짚으며, 페이스페이가 지갑·휴대폰 없이 얼굴만으로 결제를 끝내는 경험을 어떻게 신뢰 가능하게 만들었는지 설명합니다.",
-              "1991년 MIT 미디어랩의 Turk·Pentland가 PCA 기반 Eigenface로 얼굴을 &#x27;고유얼굴&#x27;로 표현하는 기법을 발표했습니다.",
-              "2014년 Facebook AI의 DeepFace가 LFW 벤치마크 97.35% 정확도로 인간 수준(97.53%)에 근접했습니다.",
-              "2025년 9월 정식 출시한 페이스페이는 2개월 만에 가입자 100만 명을 넘었고, 서울 결제율은 약 79%에 이릅니다."
-            ]
-          },
-          {
-            "title": "인사이트",
-            "className": "article-section is-deep-dive",
-            "prose": true,
-            "blocks": [
-              {
-                "kind": "quote",
-                "html": "인증 수단이 몸이 되면, 사용자가 가장 두려워하는 건 속도가 아니라 &#x27;내가 통제하고 있다는 감각&#x27;입니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "페이스페이는 결제에서 카드·휴대폰을 꺼내는 동작 자체를 없앤 사례라, 핀테크를 넘어 인증·신원확인 UX 패러다임의 전환으로 읽을 만합니다. 30년간 정확도가 인간 수준에 도달한 기술 위에서, 토스는 &#x27;얼굴=결제&#x27;라는 강력한 단축을 만들면서도 오인식·도용·취소 같은 실패 상태를 사용자가 어떻게 통제하는지를 함께 설계해야 했습니다. 출시 2개월 100만이라는 채택 속도는 기술보다 &#x27;믿고 맡겨도 된다&#x27;는 화면 설계가 받쳐졌을 때 나옵니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "디자인 판단의 초점은 결제의 화려함이 아니라 실패·취소·되돌리기 상태의 명확성입니다. 얼굴이 잘못 인식됐을 때 어떻게 빠져나오는지, 결제가 의도와 다르게 진행됐을 때 어디서 멈추고 취소하는지, 생체정보가 어디까지 쓰이는지가 화면에서 읽혀야 신뢰가 유지됩니다. 인증 시점과 결제 확정 시점이 한 동작으로 붙을수록, 사용자가 &#x27;확정 전 마지막 통제 지점&#x27;을 어디서 갖는지가 더 중요해집니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "패션·뷰티 클라이언트에 간편결제나 생체인증을 이미 붙였다면 인증과 결제 확정 사이에 사용자가 멈출 수 있는 마지막 확인 지점이 화면에 있는지, 아직 도입 전이라면 속도만큼 실패·취소 상태의 가시성을 설계 기준에 넣을 수 있을지 점검할 지점입니다."
-              }
-            ],
-            "itemsHtml": [
-              "@@quote@@인증 수단이 몸이 되면, 사용자가 가장 두려워하는 건 속도가 아니라 &#x27;내가 통제하고 있다는 감각&#x27;입니다.",
-              "@@paragraph@@페이스페이는 결제에서 카드·휴대폰을 꺼내는 동작 자체를 없앤 사례라, 핀테크를 넘어 인증·신원확인 UX 패러다임의 전환으로 읽을 만합니다. 30년간 정확도가 인간 수준에 도달한 기술 위에서, 토스는 &#x27;얼굴=결제&#x27;라는 강력한 단축을 만들면서도 오인식·도용·취소 같은 실패 상태를 사용자가 어떻게 통제하는지를 함께 설계해야 했습니다. 출시 2개월 100만이라는 채택 속도는 기술보다 &#x27;믿고 맡겨도 된다&#x27;는 화면 설계가 받쳐졌을 때 나옵니다.",
-              "@@paragraph@@디자인 판단의 초점은 결제의 화려함이 아니라 실패·취소·되돌리기 상태의 명확성입니다. 얼굴이 잘못 인식됐을 때 어떻게 빠져나오는지, 결제가 의도와 다르게 진행됐을 때 어디서 멈추고 취소하는지, 생체정보가 어디까지 쓰이는지가 화면에서 읽혀야 신뢰가 유지됩니다. 인증 시점과 결제 확정 시점이 한 동작으로 붙을수록, 사용자가 &#x27;확정 전 마지막 통제 지점&#x27;을 어디서 갖는지가 더 중요해집니다.",
-              "@@paragraph@@패션·뷰티 클라이언트에 간편결제나 생체인증을 이미 붙였다면 인증과 결제 확정 사이에 사용자가 멈출 수 있는 마지막 확인 지점이 화면에 있는지, 아직 도입 전이라면 속도만큼 실패·취소 상태의 가시성을 설계 기준에 넣을 수 있을지 점검할 지점입니다."
-            ]
-          }
-        ],
-        "id": "2026-06-11-08",
-        "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-08"
-      },
-      {
-        "number": "09",
         "platform": "Stripe Press",
         "areaKey": "design",
         "area": "Design",
@@ -1037,9 +910,9 @@
         "sourceTypeLabel": "레퍼런스/쇼케이스",
         "publicationDate": "2026-06-11",
         "date": "2026-06-11",
-        "route": "/articles/2026-06-11-09",
-        "href": "/articles/2026-06-11-09",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-09",
+        "route": "/articles/2026-06-11-08",
+        "href": "/articles/2026-06-11-08",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-08",
         "image": "https://images.stripeassets.com/fzn2n1nzq965/13zaWB3aiz08hqNr69CMW4/772586e910faef5d26d15e01edb9c010/social.png?q=80",
         "imageCaption": "Stripe Press 공식 OG 이미지 — \"Ideas for progress\"",
         "tags": [
@@ -1149,12 +1022,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-09",
+        "id": "2026-06-11-08",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-09"
+        "articleSlug": "2026-06-11-08"
       },
       {
-        "number": "10",
+        "number": "09",
         "platform": "Mo Kohn (mohkohn.co.uk)",
         "areaKey": "dev",
         "area": "DEV",
@@ -1164,9 +1037,9 @@
         "sourceTypeLabel": "블로그/오피니언",
         "publicationDate": "2026-06-11",
         "date": "2026-06-10",
-        "route": "/articles/2026-06-11-10",
-        "href": "/articles/2026-06-11-10",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-10",
+        "route": "/articles/2026-06-11-09",
+        "href": "/articles/2026-06-11-09",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-09",
         "image": "https://mohkohn.co.uk/_astro/efe-kurnaz-RnCPiXixooY-unsplash.Bp9uDJkY.jpg",
         "imageCaption": "원문에 og:image 미확인 — 원문 페이지 스크린샷 폴백",
         "tags": [
@@ -1281,12 +1154,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-10",
+        "id": "2026-06-11-09",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-10"
+        "articleSlug": "2026-06-11-09"
       },
       {
-        "number": "11",
+        "number": "10",
         "platform": "WebKit (webkit.org)",
         "areaKey": "dev",
         "area": "DEV",
@@ -1296,9 +1169,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-06-11",
         "date": "2026-06-10",
-        "route": "/articles/2026-06-11-11",
-        "href": "/articles/2026-06-11-11",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-11",
+        "route": "/articles/2026-06-11-10",
+        "href": "/articles/2026-06-11-10",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-10",
         "image": "https://webkit.org/wp-content/uploads/field-guide-grid-lanes-social-1024x686.png",
         "imageCaption": "원문 webkit blog 헤더 이미지 — 원문 페이지 스크린샷 폴백",
         "tags": [
@@ -1413,12 +1286,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-11",
+        "id": "2026-06-11-10",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-11"
+        "articleSlug": "2026-06-11-10"
       },
       {
-        "number": "12",
+        "number": "11",
         "platform": "WebKit Team (webkit.org)",
         "areaKey": "dev",
         "area": "DEV",
@@ -1428,9 +1301,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-06-11",
         "date": "2026-06-08",
-        "route": "/articles/2026-06-11-12",
-        "href": "/articles/2026-06-11-12",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-12",
+        "route": "/articles/2026-06-11-11",
+        "href": "/articles/2026-06-11-11",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-11",
         "image": "https://webkit.org/wp-content/uploads/web-env.png",
         "imageCaption": "원문 본문 이미지 (og:image 명시 없음)",
         "tags": [
@@ -1545,12 +1418,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-12",
+        "id": "2026-06-11-11",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-12"
+        "articleSlug": "2026-06-11-11"
       },
       {
-        "number": "13",
+        "number": "12",
         "platform": "Mariana Beldi (CSS-Tricks)",
         "areaKey": "dev",
         "area": "DEV",
@@ -1560,9 +1433,9 @@
         "sourceTypeLabel": "방법론/가이드",
         "publicationDate": "2026-06-11",
         "date": "2026-06-10",
-        "route": "/articles/2026-06-11-13",
-        "href": "/articles/2026-06-11-13",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-13",
+        "route": "/articles/2026-06-11-12",
+        "href": "/articles/2026-06-11-12",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-12",
         "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/psychedlic-event.webp",
         "imageCaption": "원문에 og:image 미확인(Gravatar 아바타만 존재) — 원문 페이지 스크린샷 폴백",
         "tags": [
@@ -1677,12 +1550,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-13",
+        "id": "2026-06-11-12",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-13"
+        "articleSlug": "2026-06-11-12"
       },
       {
-        "number": "14",
+        "number": "13",
         "platform": "matklad (matklad.github.io)",
         "areaKey": "dev",
         "area": "DEV",
@@ -1692,9 +1565,9 @@
         "sourceTypeLabel": "블로그/오피니언",
         "publicationDate": "2026-06-11",
         "date": "2026-06-04",
-        "route": "/articles/2026-06-11-14",
-        "href": "/articles/2026-06-11-14",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-14",
+        "route": "/articles/2026-06-11-13",
+        "href": "/articles/2026-06-11-13",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-13",
         "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-14.png",
         "imageCaption": "서비스 원문 페이지 화면 캡처",
         "tags": [
@@ -1814,12 +1687,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-14",
+        "id": "2026-06-11-13",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-14"
+        "articleSlug": "2026-06-11-13"
       },
       {
-        "number": "15",
+        "number": "14",
         "platform": "Geoff Graham (CSS-Tricks)",
         "areaKey": "dev",
         "area": "DEV",
@@ -1829,9 +1702,9 @@
         "sourceTypeLabel": "방법론/가이드",
         "publicationDate": "2026-06-11",
         "date": "2026-06-08",
-        "route": "/articles/2026-06-11-15",
-        "href": "/articles/2026-06-11-15",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-15",
+        "route": "/articles/2026-06-11-14",
+        "href": "/articles/2026-06-11-14",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-14",
         "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/04/scroll-animations-view-transitions.webp",
         "imageCaption": "원문에 og:image 미확인 — 원문 페이지 스크린샷 폴백",
         "tags": [
@@ -1946,144 +1819,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-15",
+        "id": "2026-06-11-14",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-15"
+        "articleSlug": "2026-06-11-14"
       },
       {
-        "number": "16",
-        "platform": "Gabor Koos (blog.gaborkoos.com)",
-        "areaKey": "dev",
-        "area": "DEV",
-        "categoryKey": "javascript",
-        "category": "JAVASCRIPT",
-        "sourceType": "blog_opinion",
-        "sourceTypeLabel": "블로그/오피니언",
-        "publicationDate": "2026-06-11",
-        "date": "2026-06-02",
-        "route": "/articles/2026-06-11-16",
-        "href": "/articles/2026-06-11-16",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-16",
-        "image": "",
-        "imageCaption": "원문에 대표 이미지 미확인 — 원문 페이지 스크린샷 폴백",
-        "tags": [
-          "npm",
-          "provenance",
-          "공급망"
-        ],
-        "takeawayHtml": "How to vet an npm package in 2026",
-        "deckHtml": "Gabor Koos가 GitHub 스타 수만 보던 npm 패키지 검증을 2026년 기준으로 갱신해, provenance attestation(출처 증명)·install scripts 안전성·CI 품질·maintainer 대응 속도를 설치 전 위험 신호 체크리스트로 묶어 제시합니다.",
-        "facts": [
-          {
-            "label": "발행날짜",
-            "valueHtml": "2026-06-02"
-          },
-          {
-            "label": "태그",
-            "valueHtml": "npm, provenance, 공급망, 의존성 점검"
-          },
-          {
-            "label": "국가",
-            "valueHtml": "GLOBAL"
-          },
-          {
-            "label": "카테고리",
-            "valueHtml": "javascript"
-          },
-          {
-            "label": "직무 태그",
-            "valueHtml": "웹DEV"
-          },
-          {
-            "label": "출처",
-            "valueHtml": "Gabor Koos (blog.gaborkoos.com)"
-          }
-        ],
-        "sourceUrl": "https://blog.gaborkoos.com/how-to-vet-an-npm-package-in-2026/",
-        "sourceTitle": "Gabor Koos (blog.gaborkoos.com)",
-        "referenceLinks": [
-          {
-            "label": "관련 링크",
-            "title": "[합성 데모] npm Docs — Generating provenance statements",
-            "url": "https://docs.npmjs.com/generating-provenance-statements"
-          },
-          {
-            "label": "관련 링크",
-            "title": "[공식 사양] npm Docs — About package provenance",
-            "url": "https://docs.npmjs.com/about-package-provenance"
-          },
-          {
-            "label": "관련 링크",
-            "title": "[프로덕션 사례] OpenSSF — npm best practices for the supply chain",
-            "url": "https://github.com/ossf/package-manager-best-practices"
-          }
-        ],
-        "sections": [
-          {
-            "title": "요약",
-            "className": "article-section is-bullet-summary",
-            "prose": false,
-            "blocks": [
-              {
-                "kind": "list",
-                "html": "패키지 신뢰도를 스타 수가 아니라 출처·실행 위험·유지보수 신호로 판단하라는 2026년판 npm 검증 가이드입니다."
-              },
-              {
-                "kind": "list",
-                "html": "provenance attestation(출처 증명)으로 패키지가 어느 저장소·빌드에서 나왔는지를 확인하는 것을 1차 기준으로 둡니다."
-              },
-              {
-                "kind": "list",
-                "html": "설치 시 자동 실행되는 install scripts의 안전성과, 저장소의 CI 품질을 함께 점검합니다."
-              },
-              {
-                "kind": "list",
-                "html": "maintainer의 이슈 대응 속도·패턴으로 유지보수 반응성을 가늠합니다."
-              },
-              {
-                "kind": "list",
-                "html": "<code>npm install</code> 전에 식별해야 할 위험 신호를 체크리스트 형태로 정리합니다."
-              }
-            ],
-            "itemsHtml": [
-              "패키지 신뢰도를 스타 수가 아니라 출처·실행 위험·유지보수 신호로 판단하라는 2026년판 npm 검증 가이드입니다.",
-              "provenance attestation(출처 증명)으로 패키지가 어느 저장소·빌드에서 나왔는지를 확인하는 것을 1차 기준으로 둡니다.",
-              "설치 시 자동 실행되는 install scripts의 안전성과, 저장소의 CI 품질을 함께 점검합니다.",
-              "maintainer의 이슈 대응 속도·패턴으로 유지보수 반응성을 가늠합니다.",
-              "<code>npm install</code> 전에 식별해야 할 위험 신호를 체크리스트 형태로 정리합니다."
-            ]
-          },
-          {
-            "title": "인사이트",
-            "className": "article-section is-deep-dive",
-            "prose": true,
-            "blocks": [
-              {
-                "kind": "quote",
-                "html": "패키지를 고르는 기준이 &quot;별이 몇 개냐&quot;에서 &quot;어디서 빌드됐고, 설치 때 무엇을 실행하느냐&quot;로 옮겨갑니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "공급망 공격이 늘면서 npm 의존성 추가는 코드 리뷰만큼 따져야 하는 결정이 됐고, 이 글은 그 판단을 provenance·install scripts·CI·maintainer 반응성이라는 확인 가능한 신호로 환원합니다. 프런트엔드·퍼블리싱 작업이 빌드 파이프라인에 수십 개 transitive 의존성을 끌어오는 한국 실무 환경에서, 새 라이브러리를 디자인 시스템·번들에 넣기 전 이 체크리스트를 게이트로 두면 사후 사고 대응 비용을 앞단으로 옮길 수 있습니다."
-              },
-              {
-                "kind": "paragraph",
-                "html": "실무에서는 의존성 추가 PR 템플릿에 &quot;provenance 확인 여부 / install scripts 유무 / 최근 이슈 응답 주기&quot;를 필수 항목으로 넣고, CI에서 <code>npm install --ignore-scripts</code>를 기본으로 두되 스크립트가 필요한 패키지만 화이트리스트로 허용하는 식의 방어선을 적용 조건으로 둘 수 있습니다. 새 패키지 도입 결정을 한 사람의 감이 아니라 공유된 위험 신호 체크리스트로 내리도록 팀 규칙에 박아두는 것이 핵심입니다."
-              }
-            ],
-            "itemsHtml": [
-              "@@quote@@패키지를 고르는 기준이 &quot;별이 몇 개냐&quot;에서 &quot;어디서 빌드됐고, 설치 때 무엇을 실행하느냐&quot;로 옮겨갑니다.",
-              "@@paragraph@@공급망 공격이 늘면서 npm 의존성 추가는 코드 리뷰만큼 따져야 하는 결정이 됐고, 이 글은 그 판단을 provenance·install scripts·CI·maintainer 반응성이라는 확인 가능한 신호로 환원합니다. 프런트엔드·퍼블리싱 작업이 빌드 파이프라인에 수십 개 transitive 의존성을 끌어오는 한국 실무 환경에서, 새 라이브러리를 디자인 시스템·번들에 넣기 전 이 체크리스트를 게이트로 두면 사후 사고 대응 비용을 앞단으로 옮길 수 있습니다.",
-              "@@paragraph@@실무에서는 의존성 추가 PR 템플릿에 &quot;provenance 확인 여부 / install scripts 유무 / 최근 이슈 응답 주기&quot;를 필수 항목으로 넣고, CI에서 <code>npm install --ignore-scripts</code>를 기본으로 두되 스크립트가 필요한 패키지만 화이트리스트로 허용하는 식의 방어선을 적용 조건으로 둘 수 있습니다. 새 패키지 도입 결정을 한 사람의 감이 아니라 공유된 위험 신호 체크리스트로 내리도록 팀 규칙에 박아두는 것이 핵심입니다."
-            ]
-          }
-        ],
-        "id": "2026-06-11-16",
-        "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-16"
-      },
-      {
-        "number": "17",
+        "number": "15",
         "platform": "Dani Sandoval (svelte.dev)",
         "areaKey": "dev",
         "area": "DEV",
@@ -2093,9 +1834,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-06-11",
         "date": "2026-06-01",
-        "route": "/articles/2026-06-11-17",
-        "href": "/articles/2026-06-11-17",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-17",
+        "route": "/articles/2026-06-11-15",
+        "href": "/articles/2026-06-11-15",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-15",
         "image": "https://svelte.dev/blog/whats-new-in-svelte-june-2026/card.png",
         "imageCaption": "원문에 og:image 미확인 — 원문 페이지 스크린샷 폴백",
         "tags": [
@@ -2210,12 +1951,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-17",
+        "id": "2026-06-11-15",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-17"
+        "articleSlug": "2026-06-11-15"
       },
       {
-        "number": "18",
+        "number": "16",
         "platform": "pxd story",
         "areaKey": "dev",
         "area": "DEV",
@@ -2225,9 +1966,9 @@
         "sourceTypeLabel": "블로그/오피니언",
         "publicationDate": "2026-06-11",
         "date": "2026-06-11",
-        "route": "/articles/2026-06-11-18",
-        "href": "/articles/2026-06-11-18",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-18",
+        "route": "/articles/2026-06-11-16",
+        "href": "/articles/2026-06-11-16",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-16",
         "image": "https://tistory1.daumcdn.net/tistory/407306/skinSetting/27db96209f954066b11260326ab69155",
         "imageCaption": "AI가 인용하기 좋은 페이지 구조를 설명한 pxd story 아티클 대표 이미지. pxd 제공.",
         "tags": [
@@ -2342,12 +2083,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-18",
+        "id": "2026-06-11-16",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-18"
+        "articleSlug": "2026-06-11-16"
       },
       {
-        "number": "19",
+        "number": "17",
         "platform": "WebKit Blog",
         "areaKey": "dev",
         "area": "DEV",
@@ -2357,9 +2098,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-06-11",
         "date": "2026-06-11",
-        "route": "/articles/2026-06-11-19",
-        "href": "/articles/2026-06-11-19",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-19",
+        "route": "/articles/2026-06-11-17",
+        "href": "/articles/2026-06-11-17",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-17",
         "image": "https://webkit.org/wp-content/uploads/yosemite-explorer-hero.png",
         "imageCaption": "MapKit JS 6 소개 글의 Yosemite Explorer 데모 히어로 이미지. WebKit 제공.",
         "tags": [
@@ -2469,12 +2210,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-19",
+        "id": "2026-06-11-17",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-19"
+        "articleSlug": "2026-06-11-17"
       },
       {
-        "number": "20",
+        "number": "18",
         "platform": "CSS-Tricks",
         "areaKey": "dev",
         "area": "DEV",
@@ -2484,9 +2225,9 @@
         "sourceTypeLabel": "블로그/오피니언",
         "publicationDate": "2026-06-11",
         "date": "2026-06-11",
-        "route": "/articles/2026-06-11-20",
-        "href": "/articles/2026-06-11-20",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-20",
+        "route": "/articles/2026-06-11-18",
+        "href": "/articles/2026-06-11-18",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-18",
         "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2026/01/pie-chart.webp",
         "imageCaption": "JS 없이 CSS만으로 파이차트를 그리는 기법을 다룬 CSS-Tricks 아티클 화면.",
         "tags": [
@@ -2601,12 +2342,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-20",
+        "id": "2026-06-11-18",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-20"
+        "articleSlug": "2026-06-11-18"
       },
       {
-        "number": "21",
+        "number": "19",
         "platform": "specification.website (오픈소스)",
         "areaKey": "dev",
         "area": "DEV",
@@ -2616,9 +2357,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-06-11",
         "date": "2026-06-11",
-        "route": "/articles/2026-06-11-21",
-        "href": "/articles/2026-06-11-21",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-21",
+        "route": "/articles/2026-06-11-19",
+        "href": "/articles/2026-06-11-19",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-19",
         "image": "https://specification.website/og-default.png",
         "imageCaption": "The Website Specification 대표 og 이미지. specification.website 제공.",
         "tags": [
@@ -2728,12 +2469,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-21",
+        "id": "2026-06-11-19",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-21"
+        "articleSlug": "2026-06-11-19"
       },
       {
-        "number": "22",
+        "number": "20",
         "platform": "Latent Space (Kyle Daigle, GitHub COO 인터뷰)",
         "areaKey": "dev",
         "area": "DEV",
@@ -2743,9 +2484,9 @@
         "sourceTypeLabel": "미분류",
         "publicationDate": "2026-06-11",
         "date": "2026-06-11",
-        "route": "/articles/2026-06-11-22",
-        "href": "/articles/2026-06-11-22",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-22",
+        "route": "/articles/2026-06-11-20",
+        "href": "/articles/2026-06-11-20",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-20",
         "image": "https://substack-post-media.s3.amazonaws.com/public/images/a4fe1182-38af-4a5d-bacc-439c36225e87_5000x1200.png",
         "imageCaption": "GitHub의 에이전트 시대 인프라 계획을 다룬 Latent Space 인터뷰 대표 이미지. Latent Space 제공.",
         "tags": [
@@ -2860,12 +2601,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-22",
+        "id": "2026-06-11-20",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-22"
+        "articleSlug": "2026-06-11-20"
       },
       {
-        "number": "23",
+        "number": "21",
         "platform": "Nous Research",
         "areaKey": "dev",
         "area": "DEV",
@@ -2875,9 +2616,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-06-11",
         "date": "2026-06-11",
-        "route": "/articles/2026-06-11-23",
-        "href": "/articles/2026-06-11-23",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-23",
+        "route": "/articles/2026-06-11-21",
+        "href": "/articles/2026-06-11-21",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-21",
         "image": "https://hermes-agent.nousresearch.com/img/hermes-og-image.png",
         "imageCaption": "Nous Research의 Hermes Agent 공식 페이지 og 이미지. Nous Research 제공.",
         "tags": [
@@ -2987,12 +2728,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-23",
+        "id": "2026-06-11-21",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-23"
+        "articleSlug": "2026-06-11-21"
       },
       {
-        "number": "24",
+        "number": "22",
         "platform": "Anthropic",
         "areaKey": "dev",
         "area": "DEV",
@@ -3002,9 +2743,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-06-11",
         "date": "2026-06-11",
-        "route": "/articles/2026-06-11-24",
-        "href": "/articles/2026-06-11-24",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-24",
+        "route": "/articles/2026-06-11-22",
+        "href": "/articles/2026-06-11-22",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-22",
         "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/b7055119423427c40a0e4d84054aed17682b50a2-2880x1620.png",
         "imageCaption": "Claude Fable 5·Mythos 5 발표 페이지의 히어로 이미지. Anthropic 제공.",
         "tags": [
@@ -3119,12 +2860,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-24",
+        "id": "2026-06-11-22",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-24"
+        "articleSlug": "2026-06-11-22"
       },
       {
-        "number": "25",
+        "number": "23",
         "platform": "GitHub Changelog",
         "areaKey": "dev",
         "area": "DEV",
@@ -3134,9 +2875,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-06-11",
         "date": "2026-06-11",
-        "route": "/articles/2026-06-11-25",
-        "href": "/articles/2026-06-11-25",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-25",
+        "route": "/articles/2026-06-11-23",
+        "href": "/articles/2026-06-11-23",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-23",
         "image": "https://github.blog/wp-content/uploads/2026/06/605289820-db6eeea2-d512-4a40-b74e-b31413f88d88.jpg?resize=2064%2C1096",
         "imageCaption": "GitHub Changelog 본문 대표 스크린샷 (에이전트 세션 로그를 Copilot Chat에서 조회하는 화면)",
         "tags": [
@@ -3246,12 +2987,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-25",
+        "id": "2026-06-11-23",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-25"
+        "articleSlug": "2026-06-11-23"
       },
       {
-        "number": "26",
+        "number": "24",
         "platform": "Cursor (Anysphere) Changelog",
         "areaKey": "dev",
         "area": "DEV",
@@ -3261,9 +3002,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-06-11",
         "date": "2026-06-11",
-        "route": "/articles/2026-06-11-26",
-        "href": "/articles/2026-06-11-26",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-26",
+        "route": "/articles/2026-06-11-24",
+        "href": "/articles/2026-06-11-24",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-24",
         "image": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/uploads/changelog-og.png",
         "imageCaption": "Cursor changelog 본문에 안정적 대표 이미지 미확인 — 원문 페이지 스크린샷 폴백",
         "tags": [
@@ -3373,12 +3114,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-26",
+        "id": "2026-06-11-24",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-26"
+        "articleSlug": "2026-06-11-24"
       },
       {
-        "number": "27",
+        "number": "25",
         "platform": "OpenAI Codex Changelog",
         "areaKey": "dev",
         "area": "DEV",
@@ -3388,9 +3129,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-06-11",
         "date": "2026-06-11",
-        "route": "/articles/2026-06-11-27",
-        "href": "/articles/2026-06-11-27",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-27",
+        "route": "/articles/2026-06-11-25",
+        "href": "/articles/2026-06-11-25",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-25",
         "image": "https://developers.openai.com/codex/open-graph.png",
         "imageCaption": "Codex changelog 페이지 텍스트 위주 — 대표 이미지 미확인, 원문 페이지 스크린샷 폴백",
         "tags": [
@@ -3500,12 +3241,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-27",
+        "id": "2026-06-11-25",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-27"
+        "articleSlug": "2026-06-11-25"
       },
       {
-        "number": "28",
+        "number": "26",
         "platform": "Node.js (OpenJS Foundation)",
         "areaKey": "dev",
         "area": "DEV",
@@ -3515,9 +3256,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-06-11",
         "date": "2026-06-11",
-        "route": "/articles/2026-06-11-28",
-        "href": "/articles/2026-06-11-28",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-28",
+        "route": "/articles/2026-06-11-26",
+        "href": "/articles/2026-06-11-26",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-26",
         "image": "https://nodejs.org/static/images/logo-hexagon-card.png",
         "imageCaption": "nodejs.org v26.0.0 블로그 페이지의 twitter:image (Node.js 헥사곤 로고 카드)",
         "tags": [
@@ -3627,12 +3368,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-28",
+        "id": "2026-06-11-26",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-28"
+        "articleSlug": "2026-06-11-26"
       },
       {
-        "number": "29",
+        "number": "27",
         "platform": "pnpm (GitHub Releases)",
         "areaKey": "dev",
         "area": "DEV",
@@ -3642,9 +3383,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-06-11",
         "date": "2026-06-11",
-        "route": "/articles/2026-06-11-29",
-        "href": "/articles/2026-06-11-29",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-29",
+        "route": "/articles/2026-06-11-27",
+        "href": "/articles/2026-06-11-27",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-27",
         "image": "https://opengraph.githubassets.com/330894abc90847f2857b9a8c77ff925da214e7808cc069287f689ae0ad4a2c28/pnpm/pnpm/releases/tag/v11.5.0",
         "imageCaption": "GitHub Releases 페이지에 본문 대표 이미지 없음 — 원문 페이지 스크린샷 폴백",
         "tags": [
@@ -3749,12 +3490,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-29",
+        "id": "2026-06-11-27",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-29"
+        "articleSlug": "2026-06-11-27"
       },
       {
-        "number": "30",
+        "number": "28",
         "platform": "Chrome for Developers",
         "areaKey": "dev",
         "area": "DEV",
@@ -3764,9 +3505,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-06-11",
         "date": "2026-06-02",
-        "route": "/articles/2026-06-11-30",
-        "href": "/articles/2026-06-11-30",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-30",
+        "route": "/articles/2026-06-11-28",
+        "href": "/articles/2026-06-11-28",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-28",
         "image": "https://developer.chrome.com/static/blog/new-in-chrome-149/image/thumb.png",
         "imageCaption": "Chrome 149 릴리스 노트 페이지 대표 이미지(공식 og:image)",
         "tags": [
@@ -3871,12 +3612,12 @@
             ]
           }
         ],
-        "id": "2026-06-11-30",
+        "id": "2026-06-11-28",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-30"
+        "articleSlug": "2026-06-11-28"
       },
       {
-        "number": "31",
+        "number": "29",
         "platform": "Visual Studio Code",
         "areaKey": "dev",
         "area": "DEV",
@@ -3886,9 +3627,9 @@
         "sourceTypeLabel": "공식 릴리즈",
         "publicationDate": "2026-06-11",
         "date": "2026-06-10",
-        "route": "/articles/2026-06-11-31",
-        "href": "/articles/2026-06-11-31",
-        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-31",
+        "route": "/articles/2026-06-11-29",
+        "href": "/articles/2026-06-11-29",
+        "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-29",
         "image": "https://code.visualstudio.com/assets/updates/1_124/release-highlights.webp",
         "imageCaption": "VS Code 1.124 릴리스 노트 페이지 대표 이미지(공식 og:image)",
         "tags": [
@@ -3988,9 +3729,9 @@
             ]
           }
         ],
-        "id": "2026-06-11-31",
+        "id": "2026-06-11-29",
         "issueSlug": "2026-06-11",
-        "articleSlug": "2026-06-11-31"
+        "articleSlug": "2026-06-11-29"
       },
       {
         "number": "01",
