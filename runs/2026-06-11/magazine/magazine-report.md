@@ -119,8 +119,8 @@
 - 출처 유형: news
 - 출처: DIGITAL iNSIGHT
 - 출처 URL: https://ditoday.com/피그마-메이크로-디자인과-제품-개발-환경-통합한다/
-- 이미지: https://ditoday.com/wp-content/uploads/2026/06/figma-make.jpg
-- 이미지 설명: DIGITAL iNSIGHT 원문 대표 이미지 — Figma Make
+- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-4.png
+- 이미지 설명: 서비스 원문 페이지 화면 캡처
 - 요약: 피그마가 Figma Make에 운영 코드 저장소 직접 연동과 시각적 코드 편집을 붙여, 디자이너가 캔버스에서 색·레이아웃을 조정하면 내장 AI 에이전트가 관련 코드 파일을 실시간으로 찾아 자동 수정하게 했습니다.
 - 관련 링크 1: [케이스 출처] DIGITAL iNSIGHT — 피그마, 메이크로 디자인과 제품 개발 환경 통합한다 | https://ditoday.com/피그마-메이크로-디자인과-제품-개발-환경-통합한다/
 - 관련 링크 2: [결정 근거] Figma — Figma Make | https://www.figma.com/make/
@@ -155,7 +155,7 @@
 - 출처 유형: research
 - 출처: pxd story
 - 출처 URL: https://pxdstory.tistory.com/1901
-- 이미지: https://blog.kakaocdn.net/dna/cBM2jH/dJMcabRZVAN/AAAAAAAAAAAAAAAAAAAAAHagXEdnLexqRjpVEltTveB4B91FBt0jrtSrJx2-sWTA/img.png
+- 이미지: https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2F8XJGf%2FdJMcajidSKj%2FAAAAAAAAAAAAAAAAAAAAAPcdNwKnoqKN57SruzrRsIwzgLO3FYSKSJVRD0psSrWY%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1782831599%26allow_ip%3D%26allow_referer%3D%26signature%3DEy%252Bo6BkxWCxLAynDlNAUESrIQEs%253D
 - 이미지 설명: pxd story 원문 대표 이미지
 - 요약: pxd가 올리브영·글로우픽 앱스토어 리뷰를 분석해, 평균 별점이 양극화를 가린다는 점과 빈도·만족도를 교차한 우선순위 매트릭스로 숨은 불만을 찾아내는 리뷰 해석 방법을 정리했습니다.
 - 관련 링크 1: [케이스 출처] pxd story — 별점과 리뷰로 사용자 경험 이해하기 | https://pxdstory.tistory.com/1901
@@ -190,8 +190,8 @@
 - 출처 유형: news
 - 출처: DIGITAL iNSIGHT
 - 출처 URL: https://ditoday.com/ai로-진화하는-시리-애플의-디바이스-경험은-어떻게-바/
-- 이미지: https://ditoday.com/wp-content/uploads/2026/06/0610.jpg
-- 이미지 설명: DIGITAL iNSIGHT 원문 대표 이미지
+- 이미지: https://magazine.cttd.co.kr/thumbnails/2026-06-11-6.png
+- 이미지 설명: 서비스 원문 페이지 화면 캡처
 - 요약: 애플이 WWDC26에서 시리를 화면 콘텐츠와 메시지·메일·사진 같은 개인 맥락을 함께 이해하는 방향으로 확장하고, 리퀴드 글래스 투명도를 슬라이더로 조절하게 해 가독성 비판에 대응했습니다.
 - 관련 링크 1: [케이스 출처] DIGITAL iNSIGHT — AI로 진화하는 시리, 애플의 디바이스 경험은 어떻게 바뀔까? | https://ditoday.com/ai로-진화하는-시리-애플의-디바이스-경험은-어떻게-바/
 - 관련 링크 2: [결정 근거] Apple — Apple Intelligence | https://www.apple.com/apple-intelligence/

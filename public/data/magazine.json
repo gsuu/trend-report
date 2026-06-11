@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T02:11:45.211892+00:00",
+  "generatedAt": "2026-06-11T03:45:09.709790+00:00",
   "report": {
     "title": "CTTD Trend Magazine",
     "description": "CTTD Service/Design/DEV Weekly Trend Magazine",
@@ -400,8 +400,8 @@
         "route": "/articles/2026-06-11-04",
         "href": "/articles/2026-06-11-04",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-04",
-        "image": "https://ditoday.com/wp-content/uploads/2026/06/figma-make.jpg",
-        "imageCaption": "DIGITAL iNSIGHT 원문 대표 이미지 — Figma Make",
+        "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-4.png",
+        "imageCaption": "서비스 원문 페이지 화면 캡처",
         "tags": [
           "Figma Make",
           "코드베이스 연동",
@@ -532,7 +532,7 @@
         "route": "/articles/2026-06-11-05",
         "href": "/articles/2026-06-11-05",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-05",
-        "image": "https://blog.kakaocdn.net/dna/cBM2jH/dJMcabRZVAN/AAAAAAAAAAAAAAAAAAAAAHagXEdnLexqRjpVEltTveB4B91FBt0jrtSrJx2-sWTA/img.png",
+        "image": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2F8XJGf%2FdJMcajidSKj%2FAAAAAAAAAAAAAAAAAAAAAPcdNwKnoqKN57SruzrRsIwzgLO3FYSKSJVRD0psSrWY%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1782831599%26allow_ip%3D%26allow_referer%3D%26signature%3DEy%252Bo6BkxWCxLAynDlNAUESrIQEs%253D",
         "imageCaption": "pxd story 원문 대표 이미지",
         "tags": [
           "리뷰 분석",
@@ -659,8 +659,8 @@
         "route": "/articles/2026-06-11-06",
         "href": "/articles/2026-06-11-06",
         "articleUrl": "https://magazine.cttd.co.kr/articles/2026-06-11-06",
-        "image": "https://ditoday.com/wp-content/uploads/2026/06/0610.jpg",
-        "imageCaption": "DIGITAL iNSIGHT 원문 대표 이미지",
+        "image": "https://magazine.cttd.co.kr/thumbnails/2026-06-11-6.png",
+        "imageCaption": "서비스 원문 페이지 화면 캡처",
         "tags": [
           "시리",
           "개인 맥락",
