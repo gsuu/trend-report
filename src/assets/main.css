@@ -1349,18 +1349,21 @@ main {
 
 .article-section .article-source-link {
   display: flex;
+  min-height: 42px;
+  justify-content: center;
   margin: 24px auto 0;
-  padding: 12px 24px;
-  border-radius: 999px;
-  background: #000;
-  color: #fff;
-  font-size: 15px;
+  padding: 0 22px;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1;
 }
 
 .article-section .article-source-link:hover,
 .article-section .article-source-link:focus-visible {
-  text-decoration: none;
-  opacity: 0.8;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .article-source-link svg {
