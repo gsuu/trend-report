@@ -1,0 +1,265 @@
+[
+ {
+  "title": "무신사, 메가스토어 성수 ‘글로벌 쇼핑 명소’ 급부상… “전체 구매객 3분의 2가 외국인”",
+  "finalSourceUrl": "https://newsroom.musinsa.com/newsroom-menu/2026-06-17-1",
+  "verdict": "검증 통과",
+  "facts": [
+   "개점 후 50일(4월 24일~6월 13일) 누적 거래액 70억 원 중 외국인 구매액이 약 30억 원으로 40% 이상을 차지",
+   "최근 7일(6월 7~13일) 외국인 구매 비중 평균 56%, 6월 9일에는 66% 기록",
+   "같은 기간 무신사 글로벌 스토어 거래액 전년 동기 대비 81% 증가, 신규 회원 약 2배 성장",
+   "여권 인증 고객 추가 할인, 제품 QR코드 스캔 시 자국어 번역 정보 제공 등 외국인 대응 기능 운영"
+  ],
+  "category": "fashion",
+  "roleTags": [
+   "웹서비스기획"
+  ],
+  "priority": "P0",
+  "image": "https://cdn.prod.website-files.com/60a3629e04f26d12caff56df/6a31374ccf6164258ec752e6_%5B%EB%AC%B4%EC%8B%A0%EC%82%AC%20%EC%82%AC%EC%A7%84%EC%9E%90%EB%A3%8C%5D%EB%AC%B4%EC%8B%A0%EC%82%AC%20%EB%A9%94%EA%B0%80%EC%8A%A4%ED%86%A0%EC%96%B4%20%EC%84%B1%EC%88%98%20%EB%82%B4%20%EC%9B%B0%EC%BB%B4%20%EA%B8%B0%ED%94%84%ED%8A%B8%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%EC%97%90%20%EC%B0%B8%EC%97%AC%20%EC%A4%91%EC%9D%B8%20%EC%99%B8%EA%B5%AD%EC%9D%B8%20%EA%B3%A0%EA%B0%9D%EC%9D%98%20%EB%AA%A8%EC%8A%B5.jpg",
+  "note": "공식 뉴스룸. 글로벌 커머스 운영·온오프 연계 사실 충분."
+ },
+ {
+  "title": "CJ올리브영, 신상품 전용관 '올영신상' 신설…신생 브랜드 성장 기회 넓힌다",
+  "finalSourceUrl": "https://corp.oliveyoung.com/ko/news/142?pg=1&category=",
+  "verdict": "검증 통과",
+  "facts": [
+   "모바일 앱 내 신상품 전용 페이지 '올영신상' 6월 19일 오픈 — 최근 3개월 출시 상품 300여 개를 카테고리별로 제안하는 '신상 리와인드', 출시 예정·프로모션을 미리 보는 '신상 캘린더' 구성",
+   "인디 브랜드 신제품을 할인가에 선구매하는 '공들여 구해온 펀딩' 코너와 신상 매거진 콘텐츠 운영",
+   "사전 운영 기간(6월 8~17일) 신상품 매출이 지난달 같은 기간 동일 상품 대비 35% 높게 나타남",
+   "첫 '올영신상위크' 행사는 6월 22일부터 5일간 진행, 나르카·바이오가·쏘내추럴·아리얼 4개 브랜드 참여"
+  ],
+  "category": "beauty",
+  "roleTags": [
+   "웹서비스기획",
+   "웹디자인"
+  ],
+  "priority": "P0",
+  "image": "https://corp.oliveyoung.com/img/logo/oliveyoung.png",
+  "note": "공식 기업 뉴스룸. 화면·노출 영역·수치 명확. cjnews 중복 후보보다 1차 출처."
+ },
+ {
+  "title": "AI로 바꾼 제품 설계의 순서",
+  "finalSourceUrl": "https://toss.tech/article/chatbot",
+  "verdict": "검증 통과",
+  "facts": [
+   "기존 '시나리오 작성 → 프로토타입' 순서를 뒤집어 AI가 상담 데이터를 학습해 시나리오 초안을 만들고 즉시 프로토타입에서 검증하는 방식으로 전환",
+   "다양한 상황 조합을 저장·검증하는 '시나리오 허브'를 구축해 같은 조건의 챗봇 대화를 바로 시작",
+   "고객센터 월 방문자 약 60만 명·채팅 상담 시도 약 17만 명, 기존 챗봇 이탈률 약 60%를 개선 대상으로 삼아 약 3주 만에 분석~검증 진행"
+  ],
+  "category": "fintech",
+  "roleTags": [
+   "웹서비스기획"
+  ],
+  "priority": "P1",
+  "image": "https://static.toss.im/tosst/2d-illust/so12tsrvz88becro85awxlqg.png",
+  "note": "토스 제품 블로그. 챗봇·시나리오 설계 프로세스 사실 충분."
+ },
+ {
+  "title": "디자이너가 시안 대신 앱을 만든 이유",
+  "finalSourceUrl": "https://toss.tech/article/deadend",
+  "verdict": "검증 통과",
+  "facts": [
+   "디자이너가 Figma 시안 대신 Xcode·SwiftUI로 iOS 앱을 직접 만들고 Metal 셰이더로 스캔 효과를 구현",
+   "AI와 협업해 '경험 설명 → 제안 중 선택 → 실제 기기에서 판단' 3단계로 디자인 작업을 진행",
+   "개발자에게 인터랙션 가이드 문서 대신 직접 만든 레포를 전달해 첫 개발 버전부터 시안 기본 구조를 거의 그대로 구현"
+  ],
+  "category": "design_workflow",
+  "roleTags": [
+   "웹디자인"
+  ],
+  "priority": "P1",
+  "image": "https://static.toss.im/photos/techblog_underlay.png",
+  "note": "토스 제품 블로그. 디자인-개발 협업 워크플로 사실 충분."
+ },
+ {
+  "title": "빠르게 움직이는 조직에서, TAM은 어떻게 문제를 해결할까?",
+  "finalSourceUrl": "https://toss.tech/article/tam-connect-2025",
+  "verdict": "원문 부족",
+  "facts": [
+   "TAM이 파트너사 연동 문제 해결·API 도입 컨설팅·장애 시 조직 연결을 담당",
+   "n8n 자동화와 LLM 로그 분석으로 평균 10분 내 대응 달성",
+   "PDCA 기반으로 연동 가이드를 지속 개선"
+  ],
+  "category": "fintech",
+  "roleTags": [
+   "웹서비스기획"
+  ],
+  "priority": "P1",
+  "image": "https://static.toss.im/photos/404A2727.JPG",
+  "note": "원문 부족 — 사내 기술 운영 직무(TAM) 조직 컨퍼런스 후기. API/장애 대응 중심으로 패션·뷰티 커머스 기획자 화면·플로우 관련성 낮음."
+ },
+ {
+  "title": "CJ올리브영, 신상품 전용관 ‘올영신상’ 신설…신생 브랜드 성장 기회 넓힌다",
+  "finalSourceUrl": "https://corp.oliveyoung.com/ko/news/142?pg=1&category=",
+  "verdict": "원문 부족",
+  "facts": [
+   "corp.oliveyoung.com 동일 사안의 중복 후보 (cjnews.cj.net 경유)",
+   "올리브영 공식 뉴스룸 후보로 이미 검증 통과 처리됨",
+   "동일 주제 중복으로 별도 발행 불필요"
+  ],
+  "category": "global_service_ux",
+  "roleTags": [
+   "웹서비스기획",
+   "웹디자인"
+  ],
+  "priority": "P1",
+  "image": "https://img.cjnews.cj.net/wp-content/uploads/2026/06/CJ%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81_%EC%82%AC%EC%A7%84%EC%9E%90%EB%A3%8C-%EC%98%AC%EC%98%81%EC%8B%A0%EC%83%81.jpg",
+  "note": "원문 부족 — 올영신상 corp.oliveyoung 1차 후보와 중복. 중복 제거."
+ },
+ {
+  "title": "Luxury Briefing: Inside LuisaViaRoma’s NYC store closure and investor-backed next chapter",
+  "finalSourceUrl": "https://www.glossy.co/fashion/luxury/luxury-briefing-inside-luisaviaromas-nyc-store-closure-and-investor-backed-next-chapter/",
+  "verdict": "원문 부족",
+  "facts": [
+   "LuisaViaRoma의 뉴욕 NoHo 1 Bond Street 매장(16,500sqft)이 2024년 7월 개점 후 2026년 6월 8일 폐쇄",
+   "이탈리아 법원 절차 중 재정난, 신규 투자자 그룹 인수 제안 수령",
+   "당시 CEO는 매장을 '이커머스와 물리적 브랜드 표현의 연결'로 추진했으나 차별성 부족 평가"
+  ],
+  "category": "global_service_ux",
+  "roleTags": [
+   "웹서비스기획",
+   "웹디자인"
+  ],
+  "priority": "P1",
+  "image": "https://www.glossy.co/wp-content/uploads/sites/4/2026/06/Screenshot-2026-06-18-at-21.07.23.png",
+  "note": "원문 부족 — LuisaViaRoma는 글로벌 저명 브랜드 기준에 못 미치는 멀티브랜드 리테일러. 매장 폐쇄·재정 이슈 중심으로 한국 커머스 기획자에 줄 화면·플로우 시사점 약함."
+ },
+ {
+  "title": "Where to invest, sell and set boundaries: The 6 truths guiding brands' next steps",
+  "finalSourceUrl": "https://www.glossy.co/fashion/where-to-invest-sell-and-set-boundaries-the-6-truths-guiding-brands-next-steps/",
+  "verdict": "원문 부족",
+  "facts": [
+   "agentic commerce 확산, GEO/AEO로의 검색 진화 등 6가지 트렌드 제시",
+   "Gen Z 74% 이상이 TikTok 검색 활용, UGC 70%/페이드 30% 비율 권장",
+   "할인 문화 거부·옴니채널 시너지 등 브랜드 전략 방향 정리"
+  ],
+  "category": "global_service_ux",
+  "roleTags": [
+   "웹서비스기획",
+   "웹디자인"
+  ],
+  "priority": "P1",
+  "image": "https://www.glossy.co/wp-content/uploads/sites/4/2026/06/IMG_4441.jpg",
+  "note": "원문 부족 — 패널 요약형 트렌드 일반론. 특정 제품·화면·정책 변화가 아닌 개론으로 발행 근거 약함."
+ },
+ {
+  "title": "L’Oréal accelerates generative AI content engine with fresh OpenAI deal",
+  "finalSourceUrl": "https://www.glossy.co/beauty/loreal-accelerates-generative-ai-content-engine-with-fresh-openai-deal/",
+  "verdict": "검증 통과",
+  "facts": [
+   "로레알이 OpenAI와 제휴해 내부 마케팅 생성형 AI 플랫폼 'CreAItech'를 강화 — 자회사 메이블린은 ChatGPT에 통합되는 가상 try-on 앱 개발",
+   "CreAItech는 제작 비용을 40% 절감하며 5만 개 마케팅 자산을 제작, OpenAI 이미지 생성 모델과 생명과학 추론 모델(GPT-Rosalind) 접근 추가",
+   "전 세계 마케팅 직원 1만 명, AI 교육받은 직원 7만 명, 2025년 기술 투자 1.5억 유로 규모로 운영"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹서비스기획"
+  ],
+  "priority": "P1",
+  "image": "https://www.glossy.co/wp-content/uploads/sites/4/2022/04/Loreal.picone-1024x509-1.jpg",
+  "note": "글로벌 저명 뷰티 브랜드(로레알)의 AI 콘텐츠·가상 try-on 적용기. 커머스 화면·플로우 시사점 있음."
+ },
+ {
+  "title": "What Link data tells us about AI spending",
+  "finalSourceUrl": "https://stripe.com/blog/what-link-data-tells-us-about-ai-spending",
+  "verdict": "원문 부족",
+  "facts": [
+   "Link 고객 394명 중 80%가 지난 한 달 채팅형 AI 에이전트 사용, 절반이 월 단위로 쇼핑 리서치에 AI 활용",
+   "상위 10% 고객 월 AI 지출이 2025년 12월 $183에서 2026년 3월 $359로 2배 증가",
+   "Replit·Lovable·Bolt 등 AI 앱 빌더 지출이 2025년 1월 대비 5배 증가"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹서비스기획",
+   "웹디자인"
+  ],
+  "priority": "P1",
+  "image": "https://images.stripeassets.com/fzn2n1nzq965/5b20xASmGKz237fuA7Z4hd/9aadd387e845cd29ba1d2ec50861e854/Graph_3.png?q=80",
+  "note": "원문 부족 — 결제 데이터 기반 AI 소비 리포트. 패션·뷰티 커머스 화면·플로우와 거리가 멀고 결제 백엔드 인사이트 중심."
+ },
+ {
+  "title": "CJ온스타일, 챗GPT 쇼핑 이어 ‘클로드’ 전사 도입… AI 네이티브 전환 가속",
+  "finalSourceUrl": "https://cjnews.cj.net/cj%ec%98%a8%ec%8a%a4%ed%83%80%ec%9d%bc-%ec%b1%97gpt-%ec%87%bc%ed%95%91-%ec%9d%b4%ec%96%b4-%ed%81%b4%eb%a1%9c%eb%93%9c-%ec%a0%84%ec%82%ac-%eb%8f%84%ec%9e%85-ai-%eb%84%a4/",
+  "verdict": "검증 통과",
+  "facts": [
+   "지난달 선보인 챗GPT 쇼핑 서비스 등 AI를 통해 CJ온스타일 앱·웹에 유입된 고객 수가 1월 대비 약 4배 증가",
+   "클로드 엔터프라이즈를 전사 도입 — 컨플루언스·지라·MS오피스와 연동, 테크 조직에서 MD·PD·방송운영·제작·심의 등 비개발 조직으로 확대",
+   "방송 자막 유형화 자동화·방송 중 챗봇 구축 등에 활용, 'AI 효율화 랩(LAB)' 신설로 업무 자동화 추진"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹서비스기획"
+  ],
+  "priority": "P1",
+  "image": "https://img.cjnews.cj.net/wp-content/uploads/2026/06/CJ%EC%98%A8%EC%8A%A4%ED%83%80%EC%9D%BC_thumbnail-8.jpg",
+  "note": "공식 뉴스룸. 커머스 앱 유입 증가·AI 운영 적용 사실 충분. AX 현장 적용기로 유효."
+ },
+ {
+  "title": "Beauty Briefing: AI-developed fragrance molecules to be put up for auction at the World Perfumery Congress",
+  "finalSourceUrl": "https://www.glossy.co/beauty/beauty-briefing-ai-developed-fragrance-molecules-to-be-put-up-for-auction-at-the-world-perfumery-congress/",
+  "verdict": "원문 부족",
+  "facts": [
+   "Osmo가 6월 23일 World Perfumery Congress에서 AI 개발 향료 분자 10개를 경매",
+   "Glossine·Melonpop·Tonkacloud 등 분자 공개, Series A·B로 1.3억 달러 펀딩",
+   "CEO Alex Wiltschko는 업계 투명성 부족을 지적"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹서비스기획"
+  ],
+  "priority": "P1",
+  "image": "https://www.glossy.co/wp-content/uploads/sites/4/2026/06/osmo-ai-fragrance-molecules.jpg",
+  "note": "원문 부족 — R&D·소재 산업 뉴스. 한국 패션·뷰티 커머스 웹서비스 기획자의 화면·구매 플로우와 무관."
+ },
+ {
+  "title": "Luxury Briefing: Mytheresa is using AI to find future VIPs",
+  "finalSourceUrl": "https://www.glossy.co/fashion/luxury/luxury-briefing-mytheresa-is-using-ai-to-find-future-vips/",
+  "verdict": "검증 통과",
+  "facts": [
+   "Mytheresa가 2017년부터 도입한 머신러닝 예측 모델로 신규 고객의 미래 VIP 가능성을 식별 — 첫 구매·검색 행동·결제 수단·배송지·거래 시간대·구매 상품 유형을 종합 분석",
+   "고가치 신규 고객으로 판단되면 충분한 구매 이력 전에도 선호 서비스·무료 배송/반품·개인 쇼핑을 제공",
+   "추천 시스템은 반복 구매 로직 대신 최근 3주 신호를 우선하고 유사 고객의 현재 관심사를 반영, 의미론적(자연어) 검색도 지원"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹서비스기획",
+   "웹디자인"
+  ],
+  "priority": "P1",
+  "image": "https://www.glossy.co/wp-content/uploads/sites/4/2026/06/Untitled-design-66.png?w=1920",
+  "note": "글로벌 저명 럭셔리 커머스(Mytheresa)의 AI 고객 세분화·추천·검색 적용기. core_ecommerce(멤버십·추천) 직결."
+ },
+ {
+  "title": "GEN.AI가 그리는 미래 : 수개월 걸리는 작업을 수일로, 창작자 자유도도 높여",
+  "finalSourceUrl": "https://cjnews.cj.net/gen-ai%ea%b0%80-%ea%b7%b8%eb%a6%ac%eb%8a%94-%eb%af%b8%eb%9e%98-%ec%88%98%ea%b0%9c%ec%9b%94-%ea%b1%b8%eb%a6%ac%eb%8a%94-%ec%9e%91%ec%97%85%ec%9d%84-%ec%88%98%ec%9d%bc%eb%a1%9c-%ec%b0%bd%ec%9e%91/",
+  "verdict": "원문 부족",
+  "facts": [
+   "기획·스토리보드·특수효과 등 콘텐츠 제작 전 과정에 GEN.AI 적용",
+   "어셋 라이브러리로 제작 자산을 AI 검색·추천·재활용",
+   "수개월 걸리던 아티스트 작업을 단축해 제작비 절감"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹서비스기획"
+  ],
+  "priority": "P1",
+  "image": "https://img.cjnews.cj.net/wp-content/uploads/2026/06/CJSTORY_cj4dplex_20260608_thumbnail.jpg",
+  "note": "원문 부족 — 영화/VFX 콘텐츠 제작 AI 적용기. 패션·뷰티 커머스 웹서비스 기획자와 영역 불일치."
+ },
+ {
+  "title": "AI 구독은 늘고, 콘텐츠 멤버십은 빠진다 — 락인과 이탈로 갈리는 2026 구독 경제",
+  "finalSourceUrl": "https://blog.opensurvey.co.kr/article/subscription-economy-2026-2/",
+  "verdict": "검증 통과",
+  "facts": [
+   "전국 만 20~59세 1,500명 조사 — 생성형 AI 구독이 전년 대비 8.4%p 상승해 9개 카테고리 중 상승폭 1위, 콘텐츠 멤버십(도서·웹툰)은 5.7%p 감소로 하락폭 1위",
+   "쇼핑 멤버십 월평균 지출 33,400원으로 OTT(22,700원)를 역전, 동영상 스트리밍/OTT 구독률은 72.9%",
+   "넷플릭스 유지 1위 이유는 '가족·친구 계정 공유', 비용 절감법도 '계정 분담'이 최다"
+  ],
+  "category": "research",
+  "roleTags": [
+   "웹서비스기획"
+  ],
+  "priority": "P1",
+  "image": "https://i0.wp.com/blog.opensurvey.co.kr/wp-content/uploads/2026/06/26_thumbnail_article_10.png?fit=1400%2C1400&ssl=1",
+  "note": "오픈서베이 공식 리서치. 쇼핑 멤버십·구독 락인 수치로 커머스 기획 시사점 있음."
+ }
+]

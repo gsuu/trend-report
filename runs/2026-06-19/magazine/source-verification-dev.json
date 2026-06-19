@@ -1,0 +1,436 @@
+[
+ {
+  "title": "AI Sped Up Coding Faster Than It Sped Up Delivery",
+  "finalSourceUrl": "https://www.builder.io/blog/ai-sped-up-coding-faster-than-it-sped-up-delivery",
+  "verdict": "검증 통과",
+  "facts": [
+   "코딩은 기능 전달 타임라인에서 작은 부분일 뿐이며, AI 코딩 도입 후에도 cycle time·배포 빈도·greenlit→고객 사용까지의 간격은 거의 변하지 않았다고 주장",
+   "기능은 PM 스펙 작성 → Figma 목업 → 엔지니어링 코드 재구현 → QA → PR 리뷰의 5단계 순차 핸드오프를 거치며 각 단계에서 번역 손실이 발생",
+   "자율 에이전트를 추가하면 코드 생산이 싸지면서 조정·승인 대기 항목 수가 늘어 리뷰 병목이 심화",
+   "Builder의 접근은 팀과 에이전트가 같은 실제 코드·같은 브랜치에서 동시 작업해 순차 핸드오프를 없애는 것"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P1",
+  "image": "https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/4ff69c14463440a6bbdaa0cd55b32888?width=1200",
+  "note": "Amy Cross / Builder.io, 2026-06-17. AI 도입의 실제 병목을 짚는 현장형 논점, 프론트 워크플로우 독자에 유효"
+ },
+ {
+  "title": "Noam Shazeer, OpenAI 합류",
+  "finalSourceUrl": "https://news.hada.io/topic?id=30626",
+  "verdict": "원문 부족",
+  "facts": [
+   "Transformer 공동 설계자·Gemini 공동 리드 Noam Shazeer가 OpenAI로 이직",
+   "출처가 본인 트위터(twitter.com/NoamShazeer) 단신",
+   "퍼블리셔·프론트엔드 구현과 직접 연결되는 기술 사실 없음"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P3",
+  "image": "",
+  "note": "인물 이직 단신. CTTD 웹퍼블리셔·프론트엔드 독자와 무관, 업계 가십"
+ },
+ {
+  "title": "AI는 엔지니어링 규율을 더 적게가 아니라 더 많이 요구한다",
+  "finalSourceUrl": "https://charitydotwtf.substack.com/p/ai-demands-more-engineering-discipline",
+  "verdict": "검증 통과",
+  "facts": [
+   "코드 생성 비용이 0에 수렴하며 소스코드가 보존 자산에서 재생성 가능한 일회성 캐시로 바뀌었다는 논지 (Charity Majors)",
+   "인간은 반복적·꼼꼼한 검증에 약하므로 코드 리뷰만으로 부족하고 관측가능성·트레이싱·프로덕션 평가가 필요",
+   "인프라의 'fix nothing, replace everything'(불변 시스템·컨테이너·블루그린)가 애플리케이션 코드로 확장",
+   "비결정적 시스템일수록 사양 정의(요구·허용 실패·불변식·평가법)가 핵심 규율이 된다는 주장"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P2",
+  "image": "",
+  "note": "원문은 charitydotwtf.substack.com. 개론에 가깝지만 AI 시대 엔지니어링 규율 담론으로 프론트 실무자에게 시사점 있음. 이미지 없음"
+ },
+ {
+  "title": "htmlbook – AI가 만든 HTML, 파일로 안 보내고 링크 하나로 공유",
+  "finalSourceUrl": "https://htmlbook.io",
+  "verdict": "원문 부족",
+  "facts": [
+   "에이전트가 MCP로 push하거나 .md/.html을 업로드하면 즉시 공개 URL 생성",
+   "모바일 최적 뷰, paper/sepia/dark 테마, 목차 지원, 공개/워크스페이스 비공개 선택",
+   "마크다운 원본 보존으로 에이전트 재편집 가능"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P3",
+  "image": "",
+  "note": "Show GN 자체 홍보성 제품 소개. 화면·플로우 증거가 한정적이고 본질은 런칭 PR. 약함"
+ },
+ {
+  "title": "MAI-Code-1-Flash available on more Copilot surfaces",
+  "finalSourceUrl": "https://github.blog/changelog/2026-06-18-mai-code-1-flash-available-on-more-copilot-surfaces",
+  "verdict": "원문 부족",
+  "facts": [
+   "MS의 소형 코딩 모델 MAI-Code-1-Flash가 Copilot CLI·VS·JetBrains·Xcode 등 8개 surface로 확대",
+   "Free/Student/Pro/Pro+/Max 플랜 포함, 제한 사용자부터 점진 롤아웃",
+   "Business/Enterprise는 추후 지원"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P3",
+  "image": "",
+  "note": "단순 모델 가용성 확대 changelog. 화면·플로우 변화 없는 1줄성 공지"
+ },
+ {
+  "title": "Copilot code review: AGENTS.md support and UI improvements",
+  "finalSourceUrl": "https://github.blog/changelog/2026-06-18-copilot-code-review-agents-md-support-and-ui-improvements",
+  "verdict": "검증 통과",
+  "facts": [
+   "저장소 루트의 AGENTS.md를 읽어 그 지침으로 Copilot 코드 리뷰 피드백을 저장소 컨벤션에 맞게 생성",
+   "draft PR의 리뷰어 픽커에서 Copilot 옆에 Request 버튼 추가로 사전 리뷰 요청 간소화",
+   "PR 대화 타임라인의 Copilot 코드 리뷰 이벤트를 접어 노이즈 감소",
+   "모두 generally available"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P2",
+  "image": "",
+  "note": "AGENTS.md로 리뷰 규칙 커스터마이즈 + UI 변화. AI 코드리뷰 현장 도입 맥락으로 유효. 이미지 없음"
+ },
+ {
+  "title": "Vercel Ship 2026 recap",
+  "finalSourceUrl": "https://vercel.com/blog/vercel-ship-2026-recap",
+  "verdict": "검증 통과",
+  "facts": [
+   "Vercel Connect — 에이전트에 저장 토큰 대신 작업 범위로 한정된 임시 자격증명 부여하는 보안 도구",
+   "Agent Stack 5개 프리미티브: AI SDK, AI Gateway, Workflow SDK, Vercel Sandbox(격리 microVM), Chat SDK",
+   "Vercel Services — 7월 1일 출시, 공개 인터넷 노출 없이 백엔드 마이크로서비스 통신 + 백엔드 전용 변경의 프리뷰 환경 유지",
+   "Vercel Agent(프라이빗 베타) — 프로덕션 알림을 자율 조사하고 PR을 열어 검토 요청"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P1",
+  "image": "",
+  "note": "2026-06-17. Vercel 연례 발표 종합, Next/프론트 인프라 독자에 핵심. 다만 eve/agent-stack 항목과 주제 중복 — 글쓰기 단계 통합 검토. 이미지 없음"
+ },
+ {
+  "title": "The Agent Stack",
+  "finalSourceUrl": "https://vercel.com/blog/agent-stack",
+  "verdict": "검증 통과",
+  "facts": [
+   "프로덕션 에이전트 구축 빌딩블록: AI SDK(통합 모델 인터페이스), AI Gateway(토큰 CDN), Workflow SDK(내구 실행), Vercel Sandbox(격리 컴퓨트), Vercel Connect(범위 접근), Chat SDK(멀티플랫폼 전달)",
+   "아키텍처 레이어: 모델 연결 / 워크플로우 오케스트레이션 / 데이터·도구 통합",
+   "오픈소스 eve 프레임워크가 이 컴포넌트들을 마크다운 지침+TS 도구의 디렉터리 구조로 구현"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P2",
+  "image": "",
+  "note": "2026-06-17. Ship recap·eve와 주제 중복. 묶음 처리 권장. 이미지 없음"
+ },
+ {
+  "title": "Introducing eve",
+  "finalSourceUrl": "https://vercel.com/blog/introducing-eve",
+  "verdict": "검증 통과",
+  "facts": [
+   "eve는 빌드·실행·확장이 가능한 오픈소스 에이전트 프레임워크, 프로덕션 인프라 내장",
+   "디렉터리 구조 기반: 도구는 TypeScript 파일, 지식은 마크다운, 연결은 설정 파일로 정의하면 eve가 자동 연결",
+   "체크포인트 내구 실행·격리 샌드박스·휴먼 승인 게이트·OpenTelemetry 트레이싱 관측성 내장",
+   "단일 에이전트가 채널 어댑터로 Slack·Discord·Teams·GitHub 등 다중 플랫폼 서비스, npm `eve` 패키지로 공개(github.com/vercel/eve)"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P2",
+  "image": "",
+  "note": "2026-06-17 블로그 버전. changelog 항목과 동일 주제 중복 — 글쓰기 단계에서 하나로 통합. 이미지 없음"
+ },
+ {
+  "title": "Introducing eve, an open-source agent framework",
+  "finalSourceUrl": "https://vercel.com/changelog/introducing-eve-an-open-source-agent-framework",
+  "verdict": "원문 부족",
+  "facts": [
+   "에이전트를 디렉터리로 다루는 오픈소스 프레임워크, TS 설정 파일+마크다운 지침 2개로 동작",
+   "`npx eve@latest init my-agent`로 1분 내 로컬 스캐폴딩, 표준 Vercel 배포로 프로덕션 이동",
+   "어떤 LLM·MCP 서버와도 호환, Slack·Discord·GitHub 채널 지원"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P3",
+  "image": "",
+  "note": "위 'Introducing eve' 블로그의 changelog 중복본. 블로그 쪽을 채택하고 이건 중복 제외"
+ },
+ {
+  "title": "How the Weather Company serves real-time forecasts to 350 million daily active users on Vercel",
+  "finalSourceUrl": "https://vercel.com/blog/how-the-weather-company-serves-real-time-forecasts-to-350-million-daily-active-users-on-vercel",
+  "verdict": "원문 부족",
+  "facts": [
+   "월 3.5억 활성 사용자, 15분마다 22억 좌표 계산",
+   "웹 서빙 스택·CMS를 Vercel과 v0로 재구축, 디자인→라이브 속도 80% 향상",
+   "약 130명 기상학자 운영"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P3",
+  "image": "",
+  "note": "Vercel 고객 사례(마케팅성 case study). 프론트 구현 디테일보다 도입 효과 홍보 중심, 스폰서드 성격"
+ },
+ {
+  "title": "How Fern runs multi-tenant docs for Webflow and ElevenLabs on Vercel",
+  "finalSourceUrl": "https://vercel.com/blog/how-fern-runs-multi-tenant-docs-for-webflow-and-elevenlabs-on-vercel",
+  "verdict": "원문 부족",
+  "facts": [
+   "단일 Next.js 앱으로 Webflow·ElevenLabs 등 커스텀 도메인 멀티테넌트 문서 운영",
+   "TTFB 3배 개선, 페이지 로드 80% 단축, 월 600만 페이지뷰",
+   "Pages Router→App Router 65%를 7일에 마이그레이션, 배포 5분"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P3",
+  "image": "",
+  "note": "Vercel 고객 사례. App Router 마이그레이션 수치는 흥미롭지만 본질은 플랫폼 홍보형 case study, 약함"
+ },
+ {
+  "title": "How to Make AI Agents Follow Your Design System",
+  "finalSourceUrl": "https://www.builder.io/blog/how-to-make-ai-agents-follow-your-design-system",
+  "verdict": "검증 통과",
+  "facts": [
+   "ESLint no-restricted-imports로 deprecated 컴포넌트 import를 막고, 에이전트가 lint 에러를 수리 지침으로 삼게 함",
+   "discriminated union 타입으로 잘못된 prop 조합을 컴파일 불가로 만들어 에이전트가 타입 에러를 먼저 해결하게 강제",
+   "stylelint-declaration-strict-value로 raw 색상값 금지·var(--color-border-error) 같은 시맨틱 토큰 강제",
+   "src/design-system/examples/ 참조 구현 디렉터리 + `npm run test:verify-ui`(TS·ESLint·Stylelint·Storybook) 단일 검증 루프. 핵심 명제: '코드베이스가 곧 프롬프트'"
+  ],
+  "category": "design_system",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P1",
+  "image": "https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/5f67593086194c7a83229e35ffa3a488?width=1200",
+  "note": "Alice Moore / Builder.io, 2026-06-15. 디자인시스템·디자인토큰·Storybook 직결, CTTD 퍼블리셔에 강력 추천"
+ },
+ {
+  "title": "Ubiquiti, ZFS 기반 Enterprise NAS 공개",
+  "finalSourceUrl": "https://blog.ui.com",
+  "verdict": "원문 부족",
+  "facts": [
+   "8코어 Arm Neoverse N2, 64GB ECC, 16베이 1PB+ 저장, 듀얼 25GbE",
+   "네이티브 ZFS·iSCSI, UniFi 통합 관리, $3,999",
+   "Proxmox·VMware·Hyper-V 호환"
+  ],
+  "category": "tool",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P3",
+  "image": "",
+  "note": "순수 하드웨어 인프라(NAS). 웹퍼블리셔·프론트엔드 무관, 제외 대상"
+ },
+ {
+  "title": "Audacity 4.0 베타, 새 Qt 인터페이스 공개 테스트 시작",
+  "finalSourceUrl": "https://www.omgubuntu.co.uk/2026/06/audacity-4-0-beta",
+  "verdict": "원문 부족",
+  "facts": [
+   "wxWidgets에서 Qt로 인터페이스 교체, 오디오 엔진은 유지",
+   "엔벨로프 툴 재설계·스펙트럼 편집·메타데이터 에디터·VST3 전 플랫폼 지원 추가",
+   "베타2에서 다수 하드 크래시, 프로덕션 부적합"
+  ],
+  "category": "tool",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P3",
+  "image": "",
+  "note": "데스크톱 오디오 앱 베타. 웹 프론트엔드 독자와 무관"
+ },
+ {
+  "title": "컴파일러가 싫다",
+  "finalSourceUrl": "https://xeiaso.net/notes/2026/anubis-wasm-vendor-binary/",
+  "verdict": "원문 부족",
+  "facts": [
+   "C/C++ 컴파일러가 __DATE__/__TIME__ 등으로 동일 소스에도 비결정적 바이트코드를 내는 재현빌드 문제",
+   "Clang이 링킹 시 $PATH의 wasm-opt를 호출해 재현성에 영향",
+   "아키텍처별 SHA-256 체크섬으로 빌드 검증, 크로스아키텍처 재현성은 LLVM 한계"
+  ],
+  "category": "javascript",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P3",
+  "image": "",
+  "note": "WASM 재현빌드·컴파일러 내부 이야기. 깊은 시스템 주제로 웹퍼블리셔 실무와 거리. 약함"
+ },
+ {
+  "title": "EC2 안 Firecracker VM으로 브라우저를 1초 미만에 시작하기",
+  "finalSourceUrl": "https://browser-use.com/posts/firecracker-browser-infra",
+  "verdict": "원문 부족",
+  "facts": [
+   "VM 콜드스타트 400ms 미만, 브라우저 생성 p50 825ms·p99 1.35s, 1만 동시 세션 100% 성공",
+   "Unikraft→Firecracker 전환으로 브라우저-시간당 $0.06→$0.02, 4KB→2MB 메모리 페이지로 페이지폴트 91% 감소",
+   "Chromium 포크 스텔스로 안티봇 81% 우회"
+  ],
+  "category": "html",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P3",
+  "image": "",
+  "note": "순수 인프라(microVM/EC2). 흥미로운 수치지만 웹퍼블리셔 마크업·CSS와 무관. category 오분류(html 아님)"
+ },
+ {
+  "title": "Safer pull_request_target defaults for GitHub Actions checkout",
+  "finalSourceUrl": "https://github.blog/changelog/2026-06-18-safer-pull_request_target-defaults-for-github-actions-checkout",
+  "verdict": "검증 통과",
+  "facts": [
+   "actions/checkout v7가 pull_request_target 워크플로우에서 fork PR 코드를 기본적으로 가져오지 않도록 변경 ('pwn requests' 차단)",
+   "head.sha, refs/pull/.../merge, head.repo.full_name 같은 위험 패턴 차단",
+   "2026-07-16 모든 메이저 버전에 백포트(@v4 등 floating tag 영향)",
+   "필요 시 allow-unsafe-pr-checkout 입력으로 opt-out 가능하나 의도된 보안 결정으로 검토 권장"
+  ],
+  "category": "design_system",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P2",
+  "image": "",
+  "note": "CI 보안 기본값 변경. GitHub Actions 쓰는 프론트팀에 직접 영향. category는 design_system 아님(ci/tool로 보정 필요). 이미지 없음"
+ },
+ {
+  "title": "The Siren Song of ariaNotify()",
+  "finalSourceUrl": "https://css-tricks.com/the-siren-song-of-arianotify/",
+  "verdict": "검증 통과",
+  "facts": [
+   "ariaNotify()는 WAI-ARIA 1.3에 정의된 메서드로 live region 마크업 없이 스크린리더 낭독을 프로그래밍적으로 트리거",
+   "문법: document.ariaNotify(\"Hello, World.\", { priority: \"high\" }) — 기본은 aria-live=polite, high는 assertive에 해당",
+   "document 호출 시 <html>의 lang, 요소 호출 시 가장 가까운 조상의 lang 사용",
+   "현재 Firefox만 지원하며 lang 처리는 미완. alert() 남용처럼 과용 위험을 저자가 경고"
+  ],
+  "category": "css",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P1",
+  "image": "",
+  "note": "Mat Marquis, 2026-06-17. 접근성·ARIA 신규 API, CTTD 퍼블리셔 핵심 주제. category는 a11y가 더 정확. 이미지 없음"
+ },
+ {
+  "title": "The scope superpower hiding in CSS @function",
+  "finalSourceUrl": "https://master.dev/blog/the-scope-of-css-function/",
+  "verdict": "검증 통과",
+  "facts": [
+   "CSS 커스텀 @function은 변수를 호출 위치에서 해석하며, DOM 상속을 따르는 일반 커스텀 프로퍼티와 다름",
+   "이 스코프 특성으로 라이브러리 작성자가 복잡한 로직을 단순한 인터페이스 뒤에 캡슐화 가능",
+   "DOM 상속이 아닌 호출 컨텍스트에서 평가된다는 점이 핵심 차이이며, 사용 시 알아야 할 제약도 존재"
+  ],
+  "category": "css",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P1",
+  "image": "",
+  "note": "Jane Ori, master.dev 원문(frontendfoc.us #746 리드). CSS @function 신기능 심화, 프론트 핵심. 글쓰기 시 master.dev 원문 직접 재확인 권장. 이미지 없음"
+ },
+ {
+  "title": "하지만 yak shaving은 재미있다",
+  "finalSourceUrl": "https://parksb.github.io/en/article/32.html",
+  "verdict": "원문 부족",
+  "facts": [
+   "yak shaving이 재미있는 이유: 창작의 즐거움, 지식 사슬 탐구, 지적 도전",
+   "실패해도 학습으로 가치를 남긴다는 논지",
+   "Knuth의 TeX 프로젝트(10년 yak shaving)를 사례로 인용"
+  ],
+  "category": "tool",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P3",
+  "image": "",
+  "note": "개인 에세이. 구체 기술 사실 없는 감상문, 발행 근거 부족"
+ },
+ {
+  "title": "Release Notes for Safari Technology Preview 246",
+  "finalSourceUrl": "https://webkit.org/blog/18128/release-notes-for-safari-technology-preview-246/",
+  "verdict": "검증 통과",
+  "facts": [
+   "CSS light-dark(<image>, <image>)에 <image> 값 지원 — 색 구성표별 다른 이미지 지정 가능",
+   "복잡한 원본 요소를 가진 가상요소에서 attr() 치환 함수 지원 확대",
+   "color-mix()가 2개 초과 색상 혼합 및 alpha() 상대 색상 함수 지원",
+   "HTML popover의 close watcher 통합, FileSystemHandle을 IndexedDB에 직접 저장 가능"
+  ],
+  "category": "html",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P1",
+  "image": "",
+  "note": "2026-06-17. Safari TP 릴리즈 노트, CSS light-dark·color-mix·attr() 등 마크업/CSS 직결. 브라우저 QA 독자 핵심. 이미지 없음"
+ },
+ {
+  "title": "Prop For That",
+  "finalSourceUrl": "https://css-tricks.com/prop-for-that/",
+  "verdict": "검증 통과",
+  "facts": [
+   "CSS 커스텀 프로퍼티로 커서 위치 같은 실시간 데이터를 추적: var(--live-pointer-x, 0)",
+   "calc(var(--live-pointer-x, 0) * 1px)로 JS 추적값을 단위로 변환",
+   "data-props-for=\"pointer\" 속성으로 해당 CSS 변수를 채우는 JS 플러그인 활성화",
+   "aspect-ratio:1과 absolute 좌표를 라이브 커스텀 프로퍼티로 커서 트래킹 구현"
+  ],
+  "category": "css",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P2",
+  "image": "",
+  "note": "Geoff Graham / CSS-Tricks, 2026-06-16. CSS 변수+JS 인터랙션 패턴, 퍼블리셔 실무에 적용 가능. 이미지 없음"
+ },
+ {
+  "title": "Flow vs TypeScript in 2026",
+  "finalSourceUrl": "https://javascriptweekly.com/link/186567/web",
+  "verdict": "원문 부족",
+  "facts": [
+   "Flow와 TypeScript 문법이 수년간 크게 수렴(George Zahariev, Meta)",
+   "Flow는 TS strict가 허용하는 충돌 유발 패턴을 기본적으로 거부하는 더 엄격한 기본값",
+   "Flow에는 exhaustive match 표현식 등 TS에 없는 고유 기능 존재"
+  ],
+  "category": "javascript",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "priority": "P3",
+  "image": "",
+  "note": "원문 URL이 javascriptweekly 리다이렉트 링크(medium.com)로 본문 직접 확인 미완 + 비교/개론 성격. TS 거의 표준인 한국 현장 적합도 낮음. 약함"
+ },
+ {
+  "title": "Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem",
+  "finalSourceUrl": "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem",
+  "verdict": "검증 통과",
+  "facts": [
+   "Anthropic이 서울에 아시아·태평양 세 번째 사무소를 개설하고 NAVER·Nexon·LG CNS·Hanwha Solutions·Samsung SDS 등 국내 대형 기업이 Claude를 배포 중",
+   "국가AI연구거점(NAIRL) 소속 연구자 최대 60명에게 무료 Claude 접근 지원, 한국 과기정통부와 AI 안전성 MOU 체결",
+   "한국은 Claude.ai 사용량 기준 세계 상위권 국가이며 Hanwha Solutions는 AWS Bedrock을 통해 Claude를 배포"
+  ],
+  "category": "ai",
+  "roleTags": [
+   "웹DEV"
+  ],
+  "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/ffc0d7957a232518519f13c0d64896921ea215e2-1000x1000.svg",
+  "note": "공식 뉴스룸 원문 직접 확인. 발견 출처는 GeekNews(id=30600). 대표 이미지가 SVG 1000x1000라 본문 대표 비주얼 적합성은 글쓰기 단계에서 재확인 필요."
+ }
+]
