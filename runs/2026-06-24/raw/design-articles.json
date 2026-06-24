@@ -1,0 +1,790 @@
+[
+  {
+    "title": "토스페이먼츠, 웹케시와 결제·정산 데이터 연동 추진을 위한 업무협약 체결",
+    "link": "https://toss.im/tossfeed/article/50705",
+    "pubDate": "Tue, 16 Jun 2026 23:00:00 GMT",
+    "content": "경리나라에서 결제 및 정산 데이터 자동 연동",
+    "image": "",
+    "valueTags": [
+      "korean_reference",
+      "korean_uiux_case"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "토스플레이스, SK브로드밴드와 손잡고 소상공인 부담 낮춘다… \"통신비·매장 운영 지원\"",
+    "link": "https://toss.im/tossfeed/article/50707",
+    "pubDate": "Thu, 18 Jun 2026 23:00:00 GMT",
+    "content": "소상공인 상생 위해 손잡아",
+    "image": "",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "토스플레이스, 예비 창업자 대상 결제 체험 교육 진행… 매장 운영 실습 배웠다",
+    "link": "https://toss.im/tossfeed/article/50625",
+    "pubDate": "Thu, 11 Jun 2026 23:00:00 GMT",
+    "content": "서울신용보증재단의 ‘프렙 아카데미’에 참여",
+    "image": "",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "AI가 프로덕트 디자인에 진짜 기여할까?",
+    "link": "https://designcompass.org/2026/06/22/ai-augmented-product-design/",
+    "pubDate": "Wed, 24 Jun 2026 23:36:26 GMT",
+    "content": "디자인에서 가장 중요한 것은 언제나 인간입니다. 디자인은 결국 인간을 만족시키기 위한 행위이기 때문이죠.",
+    "image": "https://designcompass.org/wp-content/uploads/2026/06/AI-Augmented-Product-Design-01.jpg",
+    "valueTags": [
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "금호타이어, 2026 레드닷 디자인 어워드 2관왕 달성",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40632&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Wed, 24 Jun 2026 23:36:22 GMT",
+    "content": "금호타이어(대표이사 정일택)가 세계 최고 권위의 디자인 공모전인 ‘2026 레드닷 디자인 어워드(Red Dot Design Award)’에서 2관왕을 달성하며 글로벌 경쟁력을 다시 한번 입증했다. ...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260625082628059_3823.0.jpg",
+    "valueTags": [],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "한국디자인진흥원, 서비스경험디자인 사전 발간",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40630&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Wed, 24 Jun 2026 23:36:22 GMT",
+    "content": "한국디자인진흥원(원장 강윤주)이 서비스디자인과 사용자경험디자인(UX) 분야(이하 서비스·경험디자인)의 핵심 용어와 개념을 체계화한 「디자인사전(서비스·경험디자인)」을 발간했다고 19일 밝혔다. 이번 연구는 ...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260623014503088_260.0.jpg",
+    "valueTags": [
+      "korean_reference",
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "스타트업 디자이너로 어느덧 3주년",
+    "link": "https://designspectrum.org/spectrumpicks-article49",
+    "pubDate": "Wed, 24 Jun 2026 23:36:09 GMT",
+    "content": "spectrumpicks,스펙트럼픽스,이번주의디자인읽기,사보미,스타일쉐어,스타트업,디자이너",
+    "image": "https://images.ctfassets.net/yz0q2ou4v67o/6JnjPUI6OqL4OJwtJKUkTM/5f636397079c84c078c567c3c53b2f4a/spectrumpicks-article49.png?w=480&h=480&q=50",
+    "valueTags": [],
+    "scraped": true,
+    "source": "Design Spectrum",
+    "sourceUrl": "https://designspectrum.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "Graphest",
+    "link": "https://designspectrum.org/spectrumpicks-design23",
+    "pubDate": "Wed, 24 Jun 2026 23:36:09 GMT",
+    "content": "spectrumpicks,스펙트럼픽스,이번주의디자인,디자인,music,김소연,정서우",
+    "image": "https://images.ctfassets.net/yz0q2ou4v67o/6NcMxxk9mYClh7vZJprjn1/e854bc57144382bda416d98a66b6ef94/spectrumpicks-design23.png?w=480&h=480&q=50",
+    "valueTags": [],
+    "scraped": true,
+    "source": "Design Spectrum",
+    "sourceUrl": "https://designspectrum.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "Adobe XD UI Kits Project",
+    "link": "https://designspectrum.org/spectrumpicks-design22",
+    "pubDate": "Wed, 24 Jun 2026 23:36:09 GMT",
+    "content": "spectrumpicks,스펙트럼픽스,이번주의디자인,디자인,adobexd,어도비xd,어도비,UI키트,UI",
+    "image": "https://images.ctfassets.net/yz0q2ou4v67o/79MS0VrrJI7nKy6L5yG6Qo/fa36aa0f3489b03af94d991ae2178144/spectrumpicks-design22.png?w=480&h=480&q=50",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "Design Spectrum",
+    "sourceUrl": "https://designspectrum.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "놓치고 있던 와이어프레임 전 단계, 스토리프레임",
+    "link": "https://designspectrum.org/spectrumpicks-article48",
+    "pubDate": "Wed, 24 Jun 2026 23:36:09 GMT",
+    "content": "spectrumpicks,스펙트럼픽스,이번주의디자인읽기,디독,디자인아티클,인터페이스",
+    "image": "https://images.ctfassets.net/yz0q2ou4v67o/RHKhi3FGUafNIFXBp1ofy/9d3fb5811fe4cbf279de6dd3dd1ab4d4/spectrumpicks-article48.png?w=480&h=480&q=50",
+    "valueTags": [],
+    "scraped": true,
+    "source": "Design Spectrum",
+    "sourceUrl": "https://designspectrum.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "Notion: Template Gallerey",
+    "link": "https://designspectrum.org/spectrumpicks-design21",
+    "pubDate": "Wed, 24 Jun 2026 23:36:09 GMT",
+    "content": "spectrumpicks,스펙트럼픽스,이번주의디자인,디자인,노션,디자인,템플릿",
+    "image": "https://images.ctfassets.net/yz0q2ou4v67o/4Csl7d56IXwOn6kHNUJQh9/2169c42ac99fbc869a1586029ab7ef05/spectrumpicks-design21.png?w=480&h=480&q=50",
+    "valueTags": [
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "Design Spectrum",
+    "sourceUrl": "https://designspectrum.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "The Paradox of Design System",
+    "link": "https://designspectrum.org/spectrumpicks-article47",
+    "pubDate": "Wed, 24 Jun 2026 23:36:09 GMT",
+    "content": "spectrumpicks,스펙트럼픽스,이번주의디자인읽기,스포티파이,디자인시스템",
+    "image": "https://images.ctfassets.net/yz0q2ou4v67o/4RI5za28gOI5aRbyMsIY3S/6a508cb8798a7bb7432c703424b6ba45/spectrumpicks-article47.png?w=480&h=480&q=50",
+    "valueTags": [
+      "design_system"
+    ],
+    "scraped": true,
+    "source": "Design Spectrum",
+    "sourceUrl": "https://designspectrum.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "toss, design, system",
+    "link": "https://designspectrum.org/spectrumpicks-article46",
+    "pubDate": "Wed, 24 Jun 2026 23:36:09 GMT",
+    "content": "spectrumpicks,스펙트럼픽스,이번주의디자인읽기,서유진,토스,토스디자인시스템,토스디자인컨퍼런스",
+    "image": "https://images.ctfassets.net/yz0q2ou4v67o/4YhtNSQBLxx3HxTi3BM4Gm/7e71b2af44a4da5476bdbbdbf62c1199/spectrumpicks-article46.png?w=480&h=480&q=50",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "scraped": true,
+    "source": "Design Spectrum",
+    "sourceUrl": "https://designspectrum.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "오이뮤, 과거와 현재를 잇는 디자인 스튜디오",
+    "link": "https://designspectrum.org/designtable-s2e10",
+    "pubDate": "Wed, 24 Jun 2026 23:36:09 GMT",
+    "content": "designtable,디자인테이블,디자인팟캐스트,디자인,오이뮤,디자인스튜디오,과거와현재잇기",
+    "image": "https://images.ctfassets.net/yz0q2ou4v67o/13fEhPqmJdvCzSCORLDw5y/b420fd056aec0af64f9873f3ae535f1b/designtable-s2e10.png?w=480&h=480&q=50",
+    "valueTags": [],
+    "scraped": true,
+    "source": "Design Spectrum",
+    "sourceUrl": "https://designspectrum.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "UX업계가 죽어가고 있다",
+    "link": "https://designspectrum.org/spectrumpicks-article45",
+    "pubDate": "Wed, 24 Jun 2026 23:36:09 GMT",
+    "content": "spectrumpicks,스펙트럼픽스,이번주의디자인읽기,디자인,uxplanet,ux",
+    "image": "https://images.ctfassets.net/yz0q2ou4v67o/2gjJXWHUqSGVXdQr7DKxwV/341521fac3617e497c06f9a16cd14e37/spectrumpicks-article45.png?w=480&h=480&q=50",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "Design Spectrum",
+    "sourceUrl": "https://designspectrum.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "2019년 UX 커리어 트렌드 5가지",
+    "link": "https://designspectrum.org/spectrumpicks-article44",
+    "pubDate": "Wed, 24 Jun 2026 23:36:09 GMT",
+    "content": "spectrumpicks,스펙트럼픽스,이번주의디자인읽기,디자인,reasign,디독,디자인타이클,UX트렌드,UX커리어",
+    "image": "https://images.ctfassets.net/yz0q2ou4v67o/5RgM5ryFgwVEVz0jhRHooy/8bdb529d2aa71775d0354480aa1154c5/spectrumpicks-article44.png?w=480&h=480&q=50",
+    "valueTags": [
+      "visual_trend",
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "Design Spectrum",
+    "sourceUrl": "https://designspectrum.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "작은 디자인팀의 일 잘하는 방법 찾기",
+    "link": "https://designspectrum.org/spectrumpicks-article43",
+    "pubDate": "Wed, 24 Jun 2026 23:36:09 GMT",
+    "content": "spectrumpicks,스펙트럼픽스,이번주의디자인읽기,디자인,유다정,스포카,디자인팀",
+    "image": "https://images.ctfassets.net/yz0q2ou4v67o/57SYOTJqvI8BPOFFDRp1ji/f27c4d780172a51951cbdba97ebc212a/spectrumpicks-article43.png?w=480&h=480&q=50",
+    "valueTags": [],
+    "scraped": true,
+    "source": "Design Spectrum",
+    "sourceUrl": "https://designspectrum.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "프로토타이핑의 세 얼굴",
+    "link": "https://designspectrum.org/spectrumpicks-article42",
+    "pubDate": "Wed, 24 Jun 2026 23:36:09 GMT",
+    "content": "spectrumpicks,스펙트럼픽스,이번주의디자인읽기,디자인,프로토타이핑,이다윗",
+    "image": "https://images.ctfassets.net/yz0q2ou4v67o/2MO3ZmhSL9eb7n02ZiHTLc/a7b50c876cbae43505e5a752b1be7865/spectrumpicks-article42.png?w=480&h=480&q=50",
+    "valueTags": [],
+    "scraped": true,
+    "source": "Design Spectrum",
+    "sourceUrl": "https://designspectrum.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "AI가 인용하고 싶은 페이지는 어떻게 생겼을까",
+    "link": "https://pxdstory.tistory.com/1900",
+    "pubDate": "Thu, 11 Jun 2026 10:08:15 +0900",
+    "content": "들어가며 지난 편에서 검색엔진과 AI 크롤러가 우리 사이트를 어떻게 발견하는지를 다뤘어요. robots.txt, sitemap, canonical, 리다이렉트, AI 크롤러 허용까지 — 결국 \"크롤러가 페이지에 안정적으로 닿을 수 있는가\"가 핵심이었죠. 이번 편에서는 그 다음 단계 이야기예요. 크롤러가 페이지에 도착했어요. 그다음엔 뭘 볼까요? 검색엔진이든 AI든, 페이지에 도착한 이후에는 콘텐츠의 구조를 읽어요. 제목이 뭔지, 주제가 뭔지, 어떤 질문에 답하고 있는지, 정보가 어떤 단위로 나뉘어 있는지. 이 구조가 명확한 페이지는 검색 결과에서도, AI 답변에서도 선택받을 가능성이 높아요. 이번 편에서는 \"AI가 인용하고 싶어지는 페이지\"가 어떤 구조적 특성을 가지고 있는지, 프론트엔드 개발자가 실제로 챙길 수 있는 요소들을 중심으로 풀어볼게요. 검색엔진과 AI는 페이지를 어떻게 \"읽는가\" 검색엔진의 읽기 방식 Google 같은 검색엔진은 페이지를 크롤링한 후, HTML 구조를 파싱해서 콘텐츠를 이해해요. 이때 참…",
+    "image": "",
+    "valueTags": [
+      "design_ai_workflow"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "App Router 이후 React 생태계 동향",
+    "link": "https://pxdstory.tistory.com/1902",
+    "pubDate": "Mon, 22 Jun 2026 07:50:31 +0900",
+    "content": "들어가며 React 공식 블로그나 Next.js App Router 중심의 흐름을 보면 최근 React 생태계는 서버 중심 렌더링 구조를 적극적으로 활용하는 방향으로 변화하고 있는 것 같습니다. Server Components, Streaming UI, Server Actions 같은 개념들의 등장 이후, 기존에 익숙했던 CSR(Client Side Rendering) 중심의 개발 방식이 Server Components 기반 구조와 공존하는 방향으로 흐르는 추세인 것 같습니다. 이런 흐름은 React 19 이후에 좀 더 명확해졌는데요, 근래의 React 동향에 대해서 정리해 보았습니다. 서버 중심 구조로 변화하는 React Server Components 중심으로 변화해온 흐름 React 공식 블로그를 보면 몇 가지 공통적으로 등장하는 키워드들이 있습니다. Server Components Streaming UI React Compiler Server Actions 이 키워드들의 등장 의미는 React가 단순히 컴포넌…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_system"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "💌 철학이 돋보이는 ‘영감의 샘터’ 로고",
+    "link": "https://stib.ee/ql9M",
+    "pubDate": "2026-06-24T12:00:09.259220887+09:00",
+    "content": "#인스타트렌드 #로고디자인 #썸네일폰트",
+    "image": "",
+    "valueTags": [
+      "visual_trend"
+    ],
+    "scraped": true,
+    "source": "노폴레터 (Notefolio)",
+    "sourceUrl": "https://page.stibee.com/archives/75270/emails",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_newsletter",
+    "topics": [
+      "디자인 트렌드",
+      "타이포그래피",
+      "레퍼런스",
+      "전시·팝업"
+    ]
+  },
+  {
+    "title": "It’s Nice That In Depth: how to wield the power of fan culture in design",
+    "link": "https://www.itsnicethat.com/features/its-nice-that-in-depth-the-fandom-edition-230626",
+    "pubDate": "Wed, 24 Jun 2026 23:37:44 GMT",
+    "content": "Exploring the value of working with fandoms to nurture community, and what creatives can learn from listening to the lore.",
+    "image": "https://admin.itsnicethat.com/images/S_dkwj5S5Q4U_IROkninxSDggKw=/279406/width-1440%7Cformat-jpeg/INT_InDepth_Meta_otBf2NT.png",
+    "valueTags": [],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Sick of being ripped off? Raymond Biesinger illustratres a self-defense guide for creatives",
+    "link": "https://www.itsnicethat.com/articles/raymond-biesinger-nine-times-ive-been-ripped-off-graphic-design-publication-project-240626",
+    "pubDate": "Wed, 24 Jun 2026 23:37:44 GMT",
+    "content": "The illustrator has had quite a few run-ins with vultures in the creative industry, but he’s had enough. After an altercation with lousy quasi-capitalists, he decided to write a book to earn back more than what he was owed.",
+    "image": "https://admin.itsnicethat.com/images/YIoSJqMx3Llva57lU5KX3wvEEgA=/278982/width-1440/raymond-beiseinger-graphic-design-itsnicethat-Biesinger9TimesCover.jpg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "How&How’s colourful and collaged Bristol Dockyards rebrand makes nautical cliches walk the plank",
+    "link": "https://www.itsnicethat.com/articles/how-and-how-bristol-dockyards-branding-project-240626",
+    "pubDate": "Wed, 24 Jun 2026 23:37:44 GMT",
+    "content": "Taking tips from the city itself this brand system uses iron clad typography and photo collage to bring the heart of Bristol back up to date.",
+    "image": "https://media.itsnicethat.com/original_images/ezgif.com-video-to-gif-converter_2_copy_3_R2K0JjN.gif",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Secret 7” reveals sleeve designs for 2026’s auction, by Orlando Weeks, Joy Yamusangie, Murugiah and more",
+    "link": "https://www.itsnicethat.com/articles/war-child-uk-secret-seven-graphic-design-art-project-230626",
+    "pubDate": "Wed, 24 Jun 2026 23:37:44 GMT",
+    "content": "The renowned album art auction in support of War Child UK is back with an extraordinary line-up of world-renowned artists, including artworks for vinyl by Anthony Burrill, Justin Frischmann, Jon Burgerman, Thierry Noir and Clare Twomey MBE.",
+    "image": "https://admin.itsnicethat.com/images/5guBEiQLHrm3-rM6DWXTtUrPutg=/279431/width-1440/secret-seven-graphic-design-itsnicethat-5.jpg",
+    "valueTags": [],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "This photographic fairytale follows a fictional women’s football team in the 1970s",
+    "link": "https://www.itsnicethat.com/articles/barley-nimmo-honeyball-photography-project-220626",
+    "pubDate": "Wed, 24 Jun 2026 23:37:44 GMT",
+    "content": "It’s so hard to recreate a time that doesn’t exist anymore, but everything about this new photo-book is surprisingly effective. From its warm hues and kitschy wallpaper to stylish haircuts and thick-rimmed glasses.",
+    "image": "https://admin.itsnicethat.com/images/2gzzkZ1AUE_mpyzCsXKeT4Se_nA=/279224/width-1440/barley-nimmo-photography-itsnicethat-3.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/studio-gruhls-identity-for-rerun-is-hard-and-human-at-the-same-time",
+    "pubDate": "Wed, 24 Jun 2026 23:36:46 GMT",
+    "content": "Rerun builds open source software that lets robotics teams see what their robots see, then log, query and train on the data behind it. The Stockholm-based company had outgrown the gradient and domain-name-focused logo it started with, so Berlin-based Studio Gruhl took on the rebrand and digital design system to reset where Rerun sits in its category. The old mark had a deeper problem than just its dated execution. “It read like just another dark-themed tech thing,” Katerina Gavrilo, Design Lead at Rerun, tells us.…",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/06/studio-gruhls-identity-for-rerun-is-hard-and-human-at-the-same-time/Rerun-Studio-Gruhl-01_2026-06-18-123650_dqcr.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "design_system",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Your design system runs on one person’s judgment-AI is about to prove it",
+    "link": "https://uxdesign.cc/your-design-system-runs-on-one-persons-judgment-ai-is-about-to-prove-it-4e969a862765?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 24 Jun 2026 22:38:19 GMT",
+    "content": "Your design system runs on one person’s judgment — AI is about to prove it 76 open contributions to IBM’s Carbon design system, each waiting to clear the same gate. Some have been here since April. The label says it plainly: “one more review.” Source: Carbon Design System on GitHub , captured June 2026. It is 6:40 on a Friday. Nine contributions are waiting for review, and every one of them is waiting on the same person. One changes a button’s hover state. One renames a token in a way that will break three teams i…",
+    "image": "",
+    "valueTags": [
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "How DesignOps roles are changing with new priorities",
+    "link": "https://uxdesign.cc/how-designops-roles-are-changing-with-new-priorities-c8db3a5bc1c3?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 23 Jun 2026 11:11:43 GMT",
+    "content": "Design Vision Matters More than Ever, When AI is Integrating with Design Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Your banking app is lying to you",
+    "link": "https://uxdesign.cc/your-banking-app-is-lying-to-you-52959b075823?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 23 Jun 2026 11:09:13 GMT",
+    "content": "It shows you a balance. It doesn’t show you the future. Here’s what happens when AI starts telling the truth. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Designing With Uncertainty: How AI Supercharges Probabilistic Thinking",
+    "link": "https://smashingmagazine.com/2026/06/designing-uncertainty-how-ai-supercharges-probabilistic-thinking/",
+    "pubDate": "Tue, 16 Jun 2026 15:00:00 GMT",
+    "content": "In a world where AI is informing more design choices, it’s easy to mistake predictions for certainties. This article introduces Probabilistic Design, a mindset that allows UX and product teams to accept uncertainty, decipher AI outputs with nuance, and make smart, adaptive decisions.",
+    "image": "http://files.smashing.media/articles/designing-uncertainty-how-ai-supercharges-probabilistic-thinking/designing-uncertainty-how-ai-supercharges-probabilistic-thinking.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Why the best part of the flow isn't the end",
+    "link": "https://uxdesign.cc/why-the-best-part-of-the-flow-isnt-the-end-e9fef73f6bb3?source=rss----138adf9c44c---4",
+    "pubDate": "Sun, 21 Jun 2026 18:23:01 GMT",
+    "content": "South Korea’s “dopamine sites” let you order food that never arrives. Strip out the transaction and what’s left still works — which should… Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_reference",
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Two modernisms",
+    "link": "https://uxdesign.cc/two-modernisms-ba94169b79dd?source=rss----138adf9c44c---4",
+    "pubDate": "Sun, 21 Jun 2026 18:21:07 GMT",
+    "content": "Mies hid the steel. Beck removed the geography. Radix stripped the styles. None of them were making a philosophical statement — they were… Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The organizational cost of low taste",
+    "link": "https://uxdesign.cc/the-organizational-cost-of-low-taste-135cb8b10c34?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 22 Jun 2026 16:46:04 GMT",
+    "content": "When taste is weak, organizations don’t fail in strategy. They fail in decisions. This is what happens when an organization loses a shared sense of quality. Every downstream symptom is just a different way of compensating for the same missing signal. From scaling problem to judgment problem In a previous article, I argued that AI has made everyone a creator, but not a designer . Creation is becoming abundant while judgment remains scarce. Images, interfaces, code, content, and even entire products can now be gener…",
+    "image": "",
+    "valueTags": [
+      "look_and_feel",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Better search, worse web",
+    "link": "https://uxdesign.cc/better-search-worse-web-1ed2c43fe38f?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 22 Jun 2026 16:45:25 GMT",
+    "content": "Every number says Google AI Search is better. None of them can see the cost. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Access is not mastery, the polymath UX architect, A2UI under the hood",
+    "link": "https://uxdesign.cc/access-is-not-mastery-the-polymath-ux-architect-a2ui-under-the-hood-88edc2288979?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 22 Jun 2026 11:14:54 GMT",
+    "content": "Weekly curated resources for designers — thinkers and makers. “I’ve seen PMs and sales teams build working prototypes with AI tools that genuinely work — they ship, users can use them. But there are details underneath: interactions that are slightly off, components that don’t quite fit the pattern, decisions that made sense in the moment but will create friction as the product grows or when someone tries to bring it into visual alignment with everything else. Nothing catastrophic. Nothing a user would name. Just t…",
+    "image": "",
+    "valueTags": [
+      "look_and_feel",
+      "motion_interaction",
+      "promotion_event_design",
+      "korean_uiux_case",
+      "design_system",
+      "prototyping",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "What sits on the engawa",
+    "link": "https://uxdesign.cc/what-sits-on-the-engawa-46acaa876713?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 22 Jun 2026 09:46:11 GMT",
+    "content": "On designing for wishes we cannot yet wish alone. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The Impact Of Humanoid Robots On Humanity",
+    "link": "https://smashingmagazine.com/2026/06/impact-humanoid-robots-humanity/",
+    "pubDate": "Fri, 12 Jun 2026 08:00:00 GMT",
+    "content": "We have officially moved past the era of humanoid robots as mere public relations stunts. As they become increasingly lifelike, society may soon face profound social, psychological, and ethical challenges. What happens when the boundary between humans and machines becomes almost impossible to distinguish?",
+    "image": "http://files.smashing.media/articles/impact-humanoid-robots-humanity/impact-humanoid-robots-humanity.jpg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  }
+]
