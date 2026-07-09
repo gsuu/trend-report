@@ -1,0 +1,721 @@
+[
+  {
+    "title": "청년미래적금 총정리: 가입 조건, 혜택, 신청 방법 한눈에 보기",
+    "link": "https://toss.im/tossfeed/article/money-policies-64",
+    "pubDate": "Thu, 25 Jun 2026 08:16:00 GMT",
+    "content": "청년미래적금, 7월 3일까지 신청하세요",
+    "image": "",
+    "valueTags": [
+      "promotion_event_design"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "토스, 자립준비청년 대상 커리어 멘토링 프로그램 운영",
+    "link": "https://toss.im/tossfeed/article/career-mentoring",
+    "pubDate": "Sun, 05 Jul 2026 01:00:00 GMT",
+    "content": "7주간의 프로그램에 토스 팀원들 직접 멘토로 참여",
+    "image": "",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "토스페이 결제 혜택 총정리: 2026년 7월",
+    "link": "https://toss.im/tossfeed/article/tosspay-promotion-july",
+    "pubDate": "Fri, 03 Jul 2026 03:41:00 GMT",
+    "content": "크림, 매머드커피, 지그재그, 아고다, 요기요, 코오롱몰까지 할인·적립 쿠폰 확인하기",
+    "image": "",
+    "valueTags": [
+      "korean_reference",
+      "promotion_event_design"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "검색에는 보이는데, AI 답변에는 없다면? (GEONIQ 온보딩 미션 이벤트)",
+    "link": "https://pxdstory.tistory.com/1907",
+    "pubDate": "Wed, 1 Jul 2026 11:14:40 +0900",
+    "content": "사용자는 이제 검색보다 AI에게 먼저 묻습니다. “OO 추천해줘.” “믿을 만한 곳 알려줘.” “어떤 서비스를 고르면 좋을까?” 좋은 콘텐츠도 AI가 이해하기 어려운 구조라면 답변에 포함되기 어렵습니다. GEONIQ에서 URL 하나로 내 콘텐츠의 SEO·GEO 상태를 진단해보세요. 두 가지 미션, 두 가지 혜택 참여 미션 대상 완료 조건 혜택 무료 진단 미션 신규 회원 회원가입 후 URL 진단 1회 완료 Starter 플랜 1개월 (16,800원 상당) 채널 공유 미션 신규 회원 · 기존 회원 공식 채널 팔로우 및 이벤트 게시물 좋아요, 리포스트 후 '공유 완료' 댓글 (댓글 계정으로 미션 완료 확인 되면 지오닉 계정을 받기 위해 DM 드립니다.) Basic 플랜 1개월 (85,600원 상당) 신규 회원은 두 미션을 모두 완료하면 혜택을 함께 받을 수 있습니다. 보상 적용 기준 참여 유형 제공 혜택 신규 회원 · 무료 진단 미션 완료 Starter 플랜 1개월 (16,800원 상당) 신규 회원 · 두 미션 모두 완료…",
+    "image": "",
+    "valueTags": [
+      "promotion_event_design",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "앱 리뷰를 속성으로 쪼개 의사결정으로 연결하는 법",
+    "link": "https://pxdstory.tistory.com/1905",
+    "pubDate": "Tue, 30 Jun 2026 12:44:03 +0900",
+    "content": "오버뷰 다음에 필요한 것 앱 리뷰를 볼 때 처음 필요한 것은 전체 지형입니다. 사람들이 어떤 이야기를 많이 하는지, 그 이야기가 긍정에 가까운지 부정에 가까운지를 먼저 알아야 하니까요. 어피니티버블은 이 첫 단계에 강합니다. 정성 텍스트를 한 장의 지도로 펼쳐서, 리뷰 더미 안의 큰 주제와 감정의 흐름을 빠르게 보여줍니다. 하지만 서비스 제공자 입장에서는 전체 지도를 보는 것만으로 다음 액션을 결정하기 어렵습니다. \"이런 주제의 불만이 많구나\", \"이 영역은 만족도가 높구나\"까지는 알 수 있지만, 무엇을 먼저 고쳐야 하는지, 어떤 기능을 더 밀어야 하는지, 경쟁사 대비 어디가 강점인지까지 바로 이어지지는 않습니다. 의사결정에는 한 단계가 더 필요합니다. 이번에서는 패션앱 3종(에이블리·무신사·지그재그) 리뷰를 샘플로, 오버뷰 이후의 분석을 어떻게 설계할 수 있는지 살펴봤습니다. 1. 도메인의 중요한 속성을 찾는다 의사결정을 하려면 먼저 이 도메인에서 사용자가 무엇을 기준으로 판단하는지 알아야 합니다. 패션앱 리뷰라면…",
+    "image": "",
+    "valueTags": [
+      "korean_reference",
+      "korean_uiux_case"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "package.json 어디까지 알고 계신가요? (peerDependencies, files, engines, version)",
+    "link": "https://pxdstory.tistory.com/1906",
+    "pubDate": "Thu, 9 Jul 2026 07:50:21 +0900",
+    "content": "들어가며 프로젝트를 시작하면 공통 UI를 설계하더라도, 보통은 해당 프로젝트 내에서만 제한적으로 사용하는 경우가 많았습니다. 이번에는 저는 공통 컴포넌트를 별도 패키지로 만들어 배포하고, 다른 서비스에서 설치해 사용하는 구조로 진행하게 되었습니다. 그 과정에서 package.json을 단순히 “패키지 목록과 실행 스크립트를 관리하는 파일”로만 알고 있다가 실제로 어떤 역할을 하는지 살펴보게 되어 소개하고자 합니다. 1. PeerDependencies dependencies와 devDependencies는 프로젝트 환경 세팅 시 설치해야 하는 항목들이라 익숙한 개념입니다. 하지만 peerDependencies는 npm init 시 기본적으로 생성되지 않기 때문에 상대적으로 생소할 수 있어, 함께 비교해 보았습니다. dependencies 패키지가 실제 실행될 때 필요한 의존성으로 런타임에서 필요한 라이브러리는 dependencies에 포함해야 합니다. (예: react, react-dom, styled-componen…",
+    "image": "",
+    "valueTags": [
+      "promotion_event_design",
+      "korean_uiux_case",
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "‘전남 소도시(1권역) 연계 관광 콘텐츠 아이디어 공모전’ 시상… 청년 시각 담은 지역관광 협력 본격화",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40638&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 09 Jul 2026 00:20:59 GMT",
+    "content": "전라남도관광재단은 성신여자대학교 지리학과·융합산업대학원 로컬디자인정책학 전공과 공동으로 추진한 ‘전남 소도시(1권역) 연계 관광 콘텐츠 아이디어 공모전’을 성공적으로 마무리하고, 수상팀을 선정했다고 밝혔다. ...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260707011111360_3063.0.png",
+    "valueTags": [],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "제네시스 ‘2027 GV70’ 및 ‘GV70 그래파이트 패키지’ 출시",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40636&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 09 Jul 2026 00:20:59 GMT",
+    "content": "제네시스가 럭셔리 중형 SUV GV70의 연식 변경 모델 ‘2027 GV70’과 신규 디자인 패키지 ‘GV70 그래파이트 패키지’를 7월 1일 출시했다. 제네시스 GV70 그래파이트 패키지 2027 GV...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260702082242289_5205.0.jpg",
+    "valueTags": [],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "동국씨엠, 친환경 컬러강판 기술 고도화 ‘세계 최초’",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40637&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 09 Jul 2026 00:20:59 GMT",
+    "content": "동국제강그룹 도금·컬러강판 전문회사 동국씨엠(대표이사 박상훈)이 친환경 컬러강판 브랜드 ‘리-본 그린 컬러강판’[1] 제조 기술 수준을 대폭 향상하며 자원 순환형 철강소재 시장 공략에 나선다. 동국씨엠 리본...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260702105313679_8130.0.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "💌 디자이너는 컵을 드는 순간도 설계한다",
+    "link": "https://stib.ee/e1OM",
+    "pubDate": "2026-07-08T12:00:28.55187764+09:00",
+    "content": "#인스타트렌드 #정류장디자인 #옛날예능폰트",
+    "image": "",
+    "valueTags": [
+      "visual_trend"
+    ],
+    "scraped": true,
+    "source": "노폴레터 (Notefolio)",
+    "sourceUrl": "https://page.stibee.com/archives/75270/emails",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_newsletter",
+    "topics": [
+      "디자인 트렌드",
+      "타이포그래피",
+      "레퍼런스",
+      "전시·팝업"
+    ]
+  },
+  {
+    "title": "Figma’s Loredana Crisan talks taste, last-minute decisions and the art of prioritisation",
+    "link": "https://www.itsnicethat.com/features/in-house-figma-loredana-crisan-creative-industry-080726",
+    "pubDate": "Thu, 09 Jul 2026 00:22:34 GMT",
+    "content": "In House is a new column from It’s Nice That where we go inside the workings of major brands, agencies and companies shaping the future of the creative industry.",
+    "image": "https://admin.itsnicethat.com/images/nXei0M1YyFQYo1OFma_quXr4L9Q=/279794/width-1440%7Cformat-jpeg/In-House_16x9_Figma.png",
+    "valueTags": [
+      "brand_expression",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Koto launches CCType foundry to create typefaces that meet the demands of modern brands",
+    "link": "https://www.itsnicethat.com/articles/koto-cctype-typography-project-080726",
+    "pubDate": "Thu, 09 Jul 2026 00:22:34 GMT",
+    "content": "The global creative studio has expanded into the letterforms landscape with a backdrop of bespoke type systems for brands under their belt and one debut release: CC Timeline.",
+    "image": "https://admin.itsnicethat.com/images/4lzak4NyZrkHY0CpVbmrCNZ1HBs=/279571/width-1440/CCType_PR_05.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "How Freitag keeps its cool: A look inside the brand’s less-than-conventional approach to creative campaigns",
+    "link": "https://www.itsnicethat.com/features/freitag-spotlight-060726",
+    "pubDate": "Thu, 09 Jul 2026 00:22:34 GMT",
+    "content": "The cult favourite Swiss brand is built on inventive ideas and a healthy dose of Dada-esque humour. To find out more about why its marketing has never missed, we talk to creative director, Thomas Wakeford, about what makes Freitag’s visual world as unique as its bags.",
+    "image": "https://admin.itsnicethat.com/images/O0I5PO7gjeYmYKjB9hxKEkhY7gg=/279652/width-1440/FREITAG-EASYRIDERS-F140-FRAN-F141-BERYL-F142-HEINZ-Engineer-NicolasHaeni-.jpeg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "promotion_event_design",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "More of a performance than a fixed system, Ronnie Scott’s new identity does a typographic dance",
+    "link": "https://www.itsnicethat.com/articles/dan-cottrell-studio-ronnie-scotts-branding-graphic-design-project-080726",
+    "pubDate": "Thu, 09 Jul 2026 00:22:34 GMT",
+    "content": "This new visual language is inspired by the “rhythm and spontaneity of jazz” – type, image and colour dance across a new digital world for the venue.",
+    "image": "https://media.itsnicethat.com/original_images/DanCottrellStudio_RonnieScotts_05.gif",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "“Artists don’t need pity, they need power.” Can Artist Corporations revolutionise creative business?",
+    "link": "https://www.itsnicethat.com/articles/pov-a-corps-artist-corporations-creative-industry-070726",
+    "pubDate": "Thu, 09 Jul 2026 00:22:34 GMT",
+    "content": "A-Corps promise to prioritise IP protection and creative mission over corporate profit – but they’re not a quick fix for a creative industry in turmoil.",
+    "image": "https://admin.itsnicethat.com/images/6gS7uAK3l3RABopwV0vZkHRdYAI=/279735/width-1440%7Cformat-jpeg/43_POV_HERO.png",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "The “glitchy, jittery” visuals of this Pitchfork designer are made with serendipity and his new favourite motion software",
+    "link": "https://www.itsnicethat.com/articles/chris-panicker-pitchfork-selects-graphic-design-project-070726",
+    "pubDate": "Thu, 09 Jul 2026 00:22:34 GMT",
+    "content": "Pitchfork Selects is a weekly playlist made up of the most exciting new music drops, so its visuals have to match its audible freshness. Enter Chris Panicker, and the Cavalry app.",
+    "image": "https://admin.itsnicethat.com/images/_b7zitqF47XSR6UbF6fCZNv3w00=/279730/width-1440%7Cformat-jpeg/Screenshot_2026-07-03_at_12.32.37.png",
+    "valueTags": [
+      "look_and_feel",
+      "motion_interaction",
+      "korean_uiux_case",
+      "prototyping",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "“Story is humanity’s oldest technology”: Wedge Studio on its 12 steps for tackling design projects",
+    "link": "https://www.itsnicethat.com/articles/wedge-studio-nicer-tuesdays-la-070726",
+    "pubDate": "Thu, 09 Jul 2026 00:22:34 GMT",
+    "content": "Based between LA and Montreal, Wedge Studio joined Nicer Tuesdays in one of its home cities to present its “seemingly unsexy” projects – such as designing the visual identities for dental floss, beans and protein powder – arguing that “everything can be special”. Co-founders Justin Lortie and Sarah Di Domenico took the audience through “the Wedge way”, the 12 steps the studio takes when approaching its idiosyncratic creative projects.",
+    "image": "https://www.itsnicethat.com/images/social.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Stanley Plowman’s Garble is machine-executed typography filled with human mess",
+    "link": "https://www.itsnicethat.com/articles/stanley-plowman-garble-graphic-design-publication-project-060726",
+    "pubDate": "Thu, 09 Jul 2026 00:22:34 GMT",
+    "content": "Break out the sweet, sweet memories of spirographs, stencils and felt tip pens with Stanley Plowman’s inventive pen plotter typeface and zine.",
+    "image": "https://admin.itsnicethat.com/images/9GOSVysCoHKG6MYudMMhuz6qsZI=/279532/width-1440/stanley-plowman-pen-plotter-illustration-itsnicethat-13.jpeg",
+    "valueTags": [
+      "look_and_feel"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Art school students and Bob Design brand refresh a 750-year-old London market with collaged pictograms",
+    "link": "https://www.itsnicethat.com/articles/bob-design-croydon-school-of-art-surrey-market-graphic-design-architecture-project-060726",
+    "pubDate": "Thu, 09 Jul 2026 00:22:34 GMT",
+    "content": "How do you visually represent something that’s been around for over seven centuries? Bob Design teamed up with the young creatives of Croydon School of Art to make the titanic task possible.",
+    "image": "https://admin.itsnicethat.com/images/KVF_9audsqjG_7sGDw82BwNyulI=/279503/width-1440/bob-design-surrey-market-graphic-design-itsnicethat-10.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "At Warsaw’s The Poster Festival, a new school of artists emerge alongside an overlooked history of graphic design",
+    "link": "https://www.itsnicethat.com/features/the-poster-festival-warsaw-round-up-graphic-design-spotlight-020726",
+    "pubDate": "Thu, 09 Jul 2026 00:22:34 GMT",
+    "content": "Spanning the hidden Polish design pioneers of modern history, to the next generation of visual innovators, we report back from our visit to this expansive event dedicated to the humble but mighty medium of posters.",
+    "image": "https://admin.itsnicethat.com/images/ssTRxAwQbuZ88R-r8mpvOHSJv_U=/279539/width-1440%7Cformat-jpeg/listt.png",
+    "valueTags": [
+      "look_and_feel",
+      "promotion_event_design",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/interview/why-mike-pharaoh-gave-up-corporate-branding-to-build-plant-world",
+    "pubDate": "Thu, 09 Jul 2026 00:21:26 GMT",
+    "content": "Mike Pharaoh built a career working with corporate and real estate clients before deciding the arrangement was backwards. The brain holds a finite amount of creative resource each day, he reasoned, and his own projects were getting the dregs. So he took a day job in streetwear product development to keep his design lobe fresh, then poured what was left into Plant World Studio, the brand he runs in Melbourne. It started during COVID, burning incense and posting design work to Instagram, and grew into a catalogue wh…",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/07/why-mike-pharaoh-gave-up-corporate-branding-to-build-plant-world/Plant-World-Plant-World-Studio-01.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "The revolution was the easy part",
+    "link": "https://uxdesign.cc/the-revolution-was-the-easy-part-c753340e3e22?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 08 Jul 2026 21:52:46 GMT",
+    "content": "The announcement is one loud night. The evolution, the slow build starts the morning after, is the whole job. I recently asked Spotify for a Fourth of July playlist. Specifically, a rock one. It came back with big drums and big choruses: “Born in the USA,” “Fortunate Son,” “For What It’s Worth,” “Rockin’ in the Free World.” The kind of songs you crank over a grill without really hearing the words and the fascinating thing to me was that every single one is a protest song. “Born in the USA” is Springsteen screaming…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Designing in regulated industries",
+    "link": "https://uxdesign.cc/when-compliance-is-the-brief-a-creative-practitioners-survival-guide-to-designing-in-regulated-f0759cd3732c?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 08 Jul 2026 05:15:18 GMT",
+    "content": "How to ship meaningful, human-centered design when the legal team has as much say as the user When compliance is part of basic anatomy of design. Co-created with AI by the author. There is a particular kind of design meeting that every practitioner in fintech or insurance eventually experiences. You have done the research. The user flows are clean. The friction is down. And then someone from legal or compliance walks in, slides a document across the table, and says: “This all needs to change.” Welcome to regulated…",
+    "image": "",
+    "valueTags": [
+      "promotion_event_design",
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Why Accessibility Is An Operational Capability, Not A Feature",
+    "link": "https://smashingmagazine.com/2026/06/why-accessibility-operational-capability-not-feature/",
+    "pubDate": "Tue, 30 Jun 2026 12:00:00 GMT",
+    "content": "Teams can generate UI faster than ever, but they still have to guarantee that what they ship is usable, secure, and maintainable. Accessibility as an operational capability rather than a compliance checklist or end-of-project audit, and what that looks like in practice.",
+    "image": "http://files.smashing.media/articles/why-accessibility-operational-capability-not-feature/why-accessibility-operational-capability-not-feature.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "The crisis of the what",
+    "link": "https://uxdesign.cc/the-crisis-of-the-what-d29135a8be59?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 07 Jul 2026 22:51:18 GMT",
+    "content": "AI took the how. Now it’s coming for the what — and judgment built through experience, intuition with scars, is what survives Image created with Google Gemini, art-directed by the author. There’s a moment, working with AI, when you stop knowing exactly what you’re doing. Not because you get lost technically, but because your relationship with the tool changes completely. That’s where something cracks. Not in the technology, but in our role. For the past few days I’ve been building an agent that evaluates the quali…",
+    "image": "",
+    "valueTags": [
+      "look_and_feel",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "How any designer can build a more open design culture at work",
+    "link": "https://uxdesign.cc/how-any-designer-can-build-a-more-open-design-culture-at-work-e74e0925d781?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 07 Jul 2026 12:04:52 GMT",
+    "content": "You don’t need a “leader” title to build psychological safety at work. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Matching AI Modality To User Intent: Designing The Right Interface",
+    "link": "https://smashingmagazine.com/2026/07/matching-ai-modality-user-intent-designing-right-interface/",
+    "pubDate": "Thu, 02 Jul 2026 10:00:00 GMT",
+    "content": "We’ve fallen into conversational tunnel vision, defaulting every AI capability into a chat-based interface simply because LLMs are trained on dialogue data. But great UX is about matching modality to users’ context, intent, and cognitive load, so the interface adapts to the user, not the other way around.",
+    "image": "http://files.smashing.media/articles/matching-ai-modality-user-intent-designing-right-interface/matching-ai-modality-user-intent-designing-right-interface.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "What the Lean Startup still teaches us about generative AI",
+    "link": "https://uxdesign.cc/what-the-lean-startup-still-teaches-us-about-generative-ai-2d1505fe1db1?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 06 Jul 2026 22:11:57 GMT",
+    "content": "Fifteen Years After Eric Ries Named the Apporach, Most Generative AI Programs Are Repeating the Exact Mistakes the Book Was Written to Prevent. Here’s How To Shift. Enterprises have poured billions into generative AI, and most of it has produced nothing you can measure. A 2025 study from MIT’s NANDA initiative found that roughly ninety-five percent of enterprise generative AI pilots delivered no measurable impact . The models work. The programs do not. The failure is old: most enterprises never learned to build so…",
+    "image": "",
+    "valueTags": [
+      "promotion_event_design",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Should you really aim to be the best?",
+    "link": "https://uxdesign.cc/should-you-really-aim-to-be-the-best-a570d43fae37?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 06 Jul 2026 22:09:59 GMT",
+    "content": "Knowing you are not the strongest in the room can sharpen you or wear you down. The research is oddly split, and the difference comes down to a handful of things you can control. Watch the podium closely at almost any Olympic Games and you will catch something that does not instantly add up. The silver medallist, second-best on the planet at their event that day, often looks faintly gutted. The bronze medallist, standing one step lower, tends to be beaming. By the result, silver did better. So why does bronze so o…",
+    "image": "",
+    "valueTags": [
+      "promotion_event_design",
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The promotion that didn’t take",
+    "link": "https://uxdesign.cc/the-promotion-that-didnt-take-adb678a7ec74?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 06 Jul 2026 22:09:40 GMT",
+    "content": "Your title and your actual level are two different measurements. I built an instrument, and nearly half of the designers came apart from their badge. © Graficon Stuff One of my designers was promoted twelve months ago. The promotion was correct. Their scope had been growing for two years before the title caught up: they owned a product area, ran discovery with stakeholders, made calls that used to land on my desk. Six months after the promotion, something strange started showing up in our one on ones. The work was…",
+    "image": "",
+    "valueTags": [
+      "motion_interaction",
+      "promotion_event_design",
+      "korean_uiux_case",
+      "prototyping"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Design system debt, game UX, 39 principles for AI interaction",
+    "link": "https://uxdesign.cc/design-system-debt-game-ux-39-principles-for-ai-interaction-dab9500dc926?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 06 Jul 2026 11:25:19 GMT",
+    "content": "Weekly curated resources for designers — thinkers and makers. “This is the real shift. Design system debt used to be paid by one person, quietly, in files nobody else opened. Now it gets paid by the engineer whose generated component is wrong, the PM whose timeline slips because handoff broke, the marketer whose banners came out off-brand. The cost moved out of your corner and into theirs. Designers have argued for years that a design system is not a deliverable but a product that needs governance, funding, and an…",
+    "image": "",
+    "valueTags": [
+      "brand_expression",
+      "motion_interaction",
+      "korean_uiux_case",
+      "design_system",
+      "prototyping",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Users Don’t Need More Tools: They Need Seamless Integrations",
+    "link": "https://smashingmagazine.com/2026/07/users-dont-need-more-tools-need-seamless-integrations/",
+    "pubDate": "Fri, 03 Jul 2026 13:00:00 GMT",
+    "content": "A closer look at why users don’t need more tools in their daily lives. What they need are seamless integrations of useful features to match already existing, established mental models. Brought to you by Design Patterns For AI Interfaces, **friendly video course on UX** and design patterns by Vitaly.",
+    "image": "http://files.smashing.media/articles/ux-impact-seamless-integrations/users-dont-need-more-tools-need-seamless-integrations.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  }
+]
