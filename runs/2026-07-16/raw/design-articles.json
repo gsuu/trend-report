@@ -1,0 +1,798 @@
+[
+  {
+    "title": "토스, 자립준비청년 대상 커리어 멘토링 프로그램 운영",
+    "link": "https://toss.im/tossfeed/article/career-mentoring",
+    "pubDate": "Sun, 05 Jul 2026 01:00:00 GMT",
+    "content": "7주간의 프로그램에 토스 팀원들 직접 멘토로 참여",
+    "image": "",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "토스페이 결제 혜택 총정리: 2026년 7월",
+    "link": "https://toss.im/tossfeed/article/tosspay-promotion-july",
+    "pubDate": "Fri, 03 Jul 2026 03:41:00 GMT",
+    "content": "크림, 매머드커피, 지그재그, 아고다, 요기요, 코오롱몰까지 할인·적립 쿠폰 확인하기",
+    "image": "",
+    "valueTags": [
+      "korean_reference",
+      "promotion_event_design"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "package.json 어디까지 알고 계신가요? (peerDependencies, files, engines, version)",
+    "link": "https://pxdstory.tistory.com/1906",
+    "pubDate": "Thu, 9 Jul 2026 07:50:21 +0900",
+    "content": "들어가며 프로젝트를 시작하면 공통 UI를 설계하더라도, 보통은 해당 프로젝트 내에서만 제한적으로 사용하는 경우가 많았습니다. 이번에는 저는 공통 컴포넌트를 별도 패키지로 만들어 배포하고, 다른 서비스에서 설치해 사용하는 구조로 진행하게 되었습니다. 그 과정에서 package.json을 단순히 “패키지 목록과 실행 스크립트를 관리하는 파일”로만 알고 있다가 실제로 어떤 역할을 하는지 살펴보게 되어 소개하고자 합니다. 1. PeerDependencies dependencies와 devDependencies는 프로젝트 환경 세팅 시 설치해야 하는 항목들이라 익숙한 개념입니다. 하지만 peerDependencies는 npm init 시 기본적으로 생성되지 않기 때문에 상대적으로 생소할 수 있어, 함께 비교해 보았습니다. dependencies 패키지가 실제 실행될 때 필요한 의존성으로 런타임에서 필요한 라이브러리는 dependencies에 포함해야 합니다. (예: react, react-dom, styled-componen…",
+    "image": "",
+    "valueTags": [
+      "promotion_event_design",
+      "korean_uiux_case",
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "AI 디자인 시스템 아키텍쳐",
+    "link": "https://designcompass.org/2026/07/13/ai-design-system-architecture/",
+    "pubDate": "Thu, 16 Jul 2026 00:07:54 GMT",
+    "content": "AI를 활용하는 방법은 매우 빠르게 바뀝니다. AI 활용법을 따라가며 경쟁력을 만들려면, 이제 전체 아키텍처를 설계해야 합니다.",
+    "image": "https://designcompass.org/wp-content/uploads/2026/07/ai-design-system-architecture-01-1.png",
+    "valueTags": [
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "하만카돈, 시대를 초월한 디자인과 혁신 기술을 담은 Onyx Studio 9 출시",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40646&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 16 Jul 2026 00:07:47 GMT",
+    "content": "라이프스타일 오디오 글로벌 리더이자 삼성전자의 자회사인 하만의 하만카돈 브랜드가 하만카돈 오닉스 스튜디오 9(Onyx Studio 9)을 출시한다. 새롭게 재해석된 하만카돈 Onyx Studio 9은 이전 모델...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260715094223146_8340.0.jpg",
+    "valueTags": [
+      "brand_expression",
+      "korean_reference",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "라한호텔 ‘2026년 울산광역시 관광기념품 공모전’ 후원",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40645&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 16 Jul 2026 00:07:47 GMT",
+    "content": "전국 랜드마크 호텔로 자리 잡은 라한호텔이 울산 지역의 정체성을 담은 관광기념품의 판로 확대에 나선다. 14일 울산전시컨벤션센터(UECO)에서 ‘2026년 울산광역시 관광기념품 공모전 시상식’이 열린 가운데...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260715094053039_1634.0.jpg",
+    "valueTags": [],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "직업계고 학과 재구조화…인공지능 교과목 반영 학과 67.5%",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40642&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 16 Jul 2026 00:07:47 GMT",
+    "content": "올해 직업계고(특성화고·마이스터고) 재구조화 사업 대상으로 신산업·신기술 분야 69개와 지역전략·특화산업 분야 23개 등 모두 82개 교 117개 학과(과정)를 선정해 학과 개편 학급당 3억 7500만 원의 재...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260714110153492_7868.0.jpg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "삼성전자, 레드닷 디자인 어워드 2026 최고상 2개 포함 8개 수상",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40643&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 16 Jul 2026 00:07:47 GMT",
+    "content": "삼성전자가 세계적 권위의 국제 디자인상인 ‘레드닷 디자인 어워드 2026(Red Dot Design Award 2026)’ 디자인 콘셉트 부문에서 최고상인 ‘베스트 오브 더 베스트(Best of the Best...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260714110401740_2172.0.jpg",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "현대차·기아, 2026 레드닷 어워드서 ‘모베드 어반호퍼&골프’ 최우수상 등 총 6개 상 수상",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40644&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 16 Jul 2026 00:07:47 GMT",
+    "content": "현대자동차·기아 모베드가 글로벌 디자인 어워드에서 최우수상을 수상하며 앞선 디자인 경쟁력을 또다시 입증했다. 2026 레드닷 어워드 최우수상 현대차 ‘어반호퍼’ 현대차·기아는 14일 ‘2026 레드닷 어...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260714110601894_5973.0.jpg",
+    "valueTags": [],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "냉감테크(ICE-TECH) 뉴노멀 시대",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40641&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 16 Jul 2026 00:07:47 GMT",
+    "content": "2026년 4월 초 갑작스런 더위로 여름 제품의 판매 시작 시점이 더욱 앞당겨지는 대혼란기를 겪었다. 통상 여름 아이템은 4월 중후반부터 시작이 되는 것이 일반적이다. 물론 그 이후 아침저녁 큰 일교차로 일...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260710101429821_2685.0.jpg",
+    "valueTags": [],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "계림바스, ‘2026 상반기 한경 소비자 대상’ 욕실자재 부문 수상",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40640&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 16 Jul 2026 00:07:47 GMT",
+    "content": "계림바스가 욕실자재 부문에서 ‘2026 상반기 한경 소비자 대상’을 수상하며 60년간 축적해온 기술력과 소비자 중심 혁신을 다시 한번 인정받았다. 계림바스 신제품 KHD-600 한경 소비자 대상은 제품 ...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260710100430546_9638.0.jpg",
+    "valueTags": [],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "💌 우리나라 그래픽 디자인 1세대가 누구냐면요",
+    "link": "https://stib.ee/HwRM",
+    "pubDate": "2026-07-15T12:00:27.683155922+09:00",
+    "content": "#인스타트렌드 #디자인1세대 #여름맛폰트",
+    "image": "",
+    "valueTags": [
+      "visual_trend",
+      "look_and_feel"
+    ],
+    "scraped": true,
+    "source": "노폴레터 (Notefolio)",
+    "sourceUrl": "https://page.stibee.com/archives/75270/emails",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_newsletter",
+    "topics": [
+      "디자인 트렌드",
+      "타이포그래피",
+      "레퍼런스",
+      "전시·팝업"
+    ]
+  },
+  {
+    "title": "Tinder’s first rebrand in nearly a decade channels the voice of a dating columnist",
+    "link": "https://www.itsnicethat.com/features/porto-rocha-tinder-rebrand-graphic-design-spotlight-140726",
+    "pubDate": "Thu, 16 Jul 2026 00:09:20 GMT",
+    "content": "I couldn’t help but wonder… can a dating app have a point of view? Elizabeth Goodspeed speaks with the Porto Rocha team behind Tinder’s rebrand about designing for contradiction and giving an app a voice.",
+    "image": "https://admin.itsnicethat.com/images/P3J-vI1GcCUR6ba6mOh1SyWrvLw=/279971/width-1440/TINDER_Press-INT_15.jpg",
+    "valueTags": [
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Are we stuck in the typographic principles of the 20th century? Matter Of’s new anti-design manual investigates",
+    "link": "https://www.itsnicethat.com/articles/matter-of-new-new-typography-graphic-design-publication-project-150726",
+    "pubDate": "Thu, 16 Jul 2026 00:09:20 GMT",
+    "content": "With essays, images and typography from a giant pool of collaborators, Matter Of’s book New New Typography is a cornucopia of ideas. It’s also a manual for the most unstable art: type design.",
+    "image": "https://admin.itsnicethat.com/images/zKeVn3NVxn6vqV5tr8NBjbCMSx4=/279894/width-1440/matter-of-publication-itsnicethat-5.jpg",
+    "valueTags": [
+      "look_and_feel"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "From Garth Marenghi to Garden Force: Sam Campbell and Joe Pelling discuss the creative approach to Make That Movie",
+    "link": "https://www.itsnicethat.com/features/sam-campbell-joe-pelling-make-that-movie-film-animation-spotlight-130726",
+    "pubDate": "Thu, 16 Jul 2026 00:09:20 GMT",
+    "content": "We chat to the creator and co-writer / director of the show about their love for amateur filmmaking, iconic TV references, and the fun they had making that unnerving Yooglet.",
+    "image": "https://admin.itsnicethat.com/images/rdnC6R37Zq4Yph1PGoP1eKYdTqg=/279834/width-1440%7Cformat-jpeg/Blinkink_Joe_Pelling_MTM_Title_Sequence_Still02.png",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Body, mind and printed matter: Angela Lian on how she exercises creative muscles as well as her body’s",
+    "link": "https://www.itsnicethat.com/articles/nicer-tuesdays-new-york-june-angela-lian-150726",
+    "pubDate": "Thu, 16 Jul 2026 00:09:20 GMT",
+    "content": "Chinese-Taiwanese artist co-founder of It’s Happening Angela Lian joined us on our New York Nicer Tuesdays stage in June – and she made it very clear that one thing is a constant through all of her work: pain. The artist centres chronic pain and illness in her work (like many designers, she’s always dealing with posture issues and back pains!) and she delivered a brilliant talk on how her work exercises not just her creative muscles but her body’s too, revealing how her design work at Baggu brings together the cle…",
+    "image": "https://www.itsnicethat.com/images/social.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "From hand-drawn type to doodled logos, illustration takes the lead in the visual identity for Florence’s first art book fair",
+    "link": "https://www.itsnicethat.com/articles/edoardo-cantarella-livia-de-magistris-tam-graphic-design-illustration-project-130726",
+    "pubDate": "Thu, 16 Jul 2026 00:09:20 GMT",
+    "content": "Tam festival’s loveable book character logo is made of “one single, slightly crooked line” – that’s what makes it so special.",
+    "image": "https://admin.itsnicethat.com/images/reTuXNmyPLtpSt-kXYWE0gXdPIQ=/279798/width-1440/TAM-foto3_1.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "This browser-based generative tool allows musicians to create their own visualisers with trippy geometry",
+    "link": "https://www.itsnicethat.com/articles/alasu-works-alex-koxias-iris-loi-animation-graphic-design-project-090726",
+    "pubDate": "Thu, 16 Jul 2026 00:09:20 GMT",
+    "content": "Whether it’s made for electronic tracks, album covers, posters or just for fun, this easy-to-use generative tool makes the visualisers more fun than ever to make.",
+    "image": "https://admin.itsnicethat.com/images/T6kW3TTXGrSZBLJ01igw8sHxdGs=/279419/width-1440/alashu-works-animation-itsnicethat10.jpeg",
+    "valueTags": [
+      "look_and_feel",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/fold7design-gives-the-national-year-of-reading-a-passion-led-identity",
+    "pubDate": "Thu, 16 Jul 2026 00:08:12 GMT",
+    "content": "The identity for the UK’s National Year of Reading 2026 recasts reading as the way to go deeper into something you already love – whether that is cooking, coding or climate action – rather than a duty to be shouldered. “By pulling from vernacular language, we created the ‘Go All In’ name to inherently function as an active call to action,” Tom Munckton, Executive Creative Director at London-based brand studio Fold7Design, tells us. “It acts as a natural sign-off for every application; even in the absence of a head…",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/07/fold7design-gives-the-national-year-of-reading-a-passion-led-identity/Go-All-In-Fold7Design-01.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "CMS Update: Quickly Add Items",
+    "link": "https://www.framer.com/updates/updates/cms-3.1",
+    "pubDate": "Thu, 16 Jul 2026 00:09:23 GMT",
+    "content": "CMS Update: Quickly Add Items",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "Framer Updates",
+    "sourceUrl": "https://www.framer.com/updates/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "prototyping",
+    "topics": []
+  },
+  {
+    "title": "CanvasBench",
+    "link": "https://www.framer.com/updates/canvasbench/",
+    "pubDate": "Thu, 16 Jul 2026 00:09:23 GMT",
+    "content": "CanvasBench",
+    "image": "",
+    "valueTags": [
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Framer Updates",
+    "sourceUrl": "https://www.framer.com/updates/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "prototyping",
+    "topics": []
+  },
+  {
+    "title": "How Decagon Uses AI For Design System Saturation",
+    "link": "https://www.figma.com/blog/how-decagon-uses-ai-for-design-system-saturation/",
+    "pubDate": "Thu, 16 Jul 2026 00:09:21 GMT",
+    "content": "The fast-growing customer experience platform explains how Figma MCP and Figma Make helped them scale a new design system and keep pace with customer requests.",
+    "image": "https://cdn.sanity.io/images/599r6htc/regionalized/a6469cadcc96476913042e85925c1eaf9e395d10-3840x2160.png?w=1200&q=70&fit=max&auto=format",
+    "valueTags": [
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Figma Blog - Design Systems",
+    "sourceUrl": "https://www.figma.com/blog/design-systems/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "AI systems are demanding new interaction models. Are designers ready?",
+    "link": "https://uxdesign.cc/ai-systems-are-demanding-new-interaction-models-are-designers-ready-d8a95f5e55a9?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 15 Jul 2026 19:48:50 GMT",
+    "content": "The first big shift in how we use software in years is underway. For decades, most software interactions have worked the same way. You open applications, close them, drag files into folders, click through menus, move between windows… That’s the desktop metaphor, software designed to feel like a physical workspace. Mobile touch and the web brought their own interaction models, but the desktop set much of the grammar, and it still defines how people move through software even as interfaces evolve around it. Now, AI…",
+    "image": "",
+    "valueTags": [
+      "motion_interaction",
+      "korean_uiux_case",
+      "prototyping",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Designers are sharpening knives for the wrong fight",
+    "link": "https://uxdesign.cc/everyones-sharpening-knives-for-the-wrong-fight-56844adad459?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 15 Jul 2026 19:47:57 GMT",
+    "content": "AI made building free. So why is the whole conversation still about how to build? We have never made a more beautiful knife, but as a beautiful knife what we needed? A few weeks ago I sat on a call with a company that had spent two and a half years and four design iterations building and re-building a product. About forty minutes in, one of their engineers chimed in and echoed a mantra I’ve said many times and one that plenty of people smarter than me have shouted for decades because its the most important mantra…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "No, People Don’t Want More AI In Their Life",
+    "link": "https://smashingmagazine.com/2026/07/people-dont-want-more-ai/",
+    "pubDate": "Wed, 15 Jul 2026 10:00:00 GMT",
+    "content": "Many companies assume everyone craves new AI features. But the reality is that most people don't want more AI — at least not in the way most AI leaders envision it. Brought to you by Design Patterns For AI Interfaces, **friendly video courses on UX** and design patterns by Vitaly.",
+    "image": "http://files.smashing.media/articles/people-dont-want-more-ai/people-dont-want-more-ai.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Designing with web standards: The playbook for this AI moment",
+    "link": "https://uxdesign.cc/designing-with-web-standards-the-playbook-for-this-ai-moment-92394884dc0d?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 15 Jul 2026 07:33:17 GMT",
+    "content": "Standards come up from practitioners, not down from committees. A reasonable facsimile of L. Jeffrey Zeldman up top there. AI assisted. Jeffrey Zeldman helped end the browser wars by making the case for standards. We are starting that journey again and we should follow his example. Every team building with artificial intelligence right now believes it is working on a blank frontier. New interface, new rules, no map. That belief is wrong, and it is expensive. The cost is not hypothetical, and it shows up as rework,…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Play and design: in favour of the novel digital experience",
+    "link": "https://uxdesign.cc/play-and-design-in-favour-of-the-novel-digital-experience-ea4798a2f621?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 14 Jul 2026 11:02:36 GMT",
+    "content": "Design used to let us wander; modernity replaced that wandering with efficiency — now, every product decides where you’ll end up before… Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "What 32 design leaders do when told to move faster",
+    "link": "https://uxdesign.cc/what-32-design-leaders-do-when-told-to-move-faster-9c8d46c90319?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 14 Jul 2026 11:00:41 GMT",
+    "content": "The Greeks knew the answer to this problem, 2300 years ago Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Agentic Design Systems: The Self-Healing Loop Explained",
+    "link": "https://www.intodesignsystems.com/blog/agentic-design-systems-self-healing-loop",
+    "pubDate": "Thu, 16 Jul 2026 00:09:22 GMT",
+    "content": "Romina Kavcic rebuilt a 2003 IBM control loop for design systems. Inside her agentic design system: when to use MCP or CLI, the drift scoring engine that opens PRs on its own, agent trust levels modelled on career progression and why you should plant seeds, not trees.",
+    "image": "https://www.intodesignsystems.com/blog/img/agentic-design-systems-self-healing-loop.png",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Into Design Systems",
+    "sourceUrl": "https://www.intodesignsystems.com/blog",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "Designing For Distressed Users: Why Mental Health Apps Shouldn’t Follow Every UI Fashion",
+    "link": "https://smashingmagazine.com/2026/07/designing-distressed-users-mental-health-apps-ui/",
+    "pubDate": "Thu, 09 Jul 2026 15:00:00 GMT",
+    "content": "Many UI trends are designed to capture attention and signal innovation, but those goals often conflict with the needs of mental health apps: reducing cognitive strain, fostering trust, and providing a sense of refuge. Kat Homan introduces an evaluation framework that helps designers assess whether trendy visual and interaction patterns support or undermine the unique goals of mental health experiences.",
+    "image": "http://files.smashing.media/articles/designing-distressed-users-mental-health-apps-ui/designing-distressed-users-mental-health-apps-ui.jpg",
+    "valueTags": [
+      "visual_trend",
+      "look_and_feel",
+      "motion_interaction",
+      "korean_uiux_case",
+      "prototyping",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Matching AI Modality To User Intent: Designing The Right Interface",
+    "link": "https://smashingmagazine.com/2026/07/matching-ai-modality-user-intent-designing-right-interface/",
+    "pubDate": "Thu, 02 Jul 2026 10:00:00 GMT",
+    "content": "We’ve fallen into conversational tunnel vision, defaulting every AI capability into a chat-based interface simply because LLMs are trained on dialogue data. But great UX is about matching modality to users’ context, intent, and cognitive load, so the interface adapts to the user, not the other way around.",
+    "image": "http://files.smashing.media/articles/matching-ai-modality-user-intent-designing-right-interface/matching-ai-modality-user-intent-designing-right-interface.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Taste cannot be delegated",
+    "link": "https://uxdesign.cc/taste-cannot-be-delegated-1706847a0b4b?source=rss----138adf9c44c---4",
+    "pubDate": "Sun, 12 Jul 2026 21:32:06 GMT",
+    "content": "The death of design by committee in the age of AI As AI democratizes execution, strategic thinking becomes the true competitive advantage. In my previous writing, I explored two ideas that initially seemed separate. In AI made everyone a creator, not a designer, I argued that AI is fundamentally changing the relationship between creation and design. When anyone can generate interfaces, visuals, and concepts in seconds, the designer’s value no longer comes from producing more outputs. It comes from knowing which ou…",
+    "image": "",
+    "valueTags": [
+      "look_and_feel",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The terminal became my canvas",
+    "link": "https://uxdesign.cc/the-terminal-became-my-canvas-18af0740f650?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 13 Jul 2026 22:10:10 GMT",
+    "content": "And it’s great… but horrible at the same time Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "AX is just the orchestration layer",
+    "link": "https://uxdesign.cc/ax-is-just-the-orchestration-layer-cacb4ed4fe45?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 13 Jul 2026 22:09:55 GMT",
+    "content": "The work didn’t vanish with the screen. It fell one layer down. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "When design becomes the organisation, and AI becomes the design",
+    "link": "https://uxdesign.cc/when-design-becomes-the-organisation-and-ai-becomes-the-design-19185e56319a?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 13 Jul 2026 11:09:50 GMT",
+    "content": "What happens when the entity that designs everything is itself being designed by machines? Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "From Kickoff To First Concept: How To Turn Brand Strategy Into Visual Direction",
+    "link": "https://smashingmagazine.com/2026/07/how-turn-brand-strategy-into-visual-direction/",
+    "pubDate": "Fri, 10 Jul 2026 13:00:00 GMT",
+    "content": "The strongest visual concepts don’t start in Figma. They start with the right questions. Explore the pre-concept phase of brand identity design, where teams research brand context, uncover hidden assumptions with stakeholders, and turn shared direction into a visual foundation before a single concept is created.",
+    "image": "http://files.smashing.media/articles/how-turn-brand-strategy-into-visual-direction/how-turn-brand-strategy-into-visual-direction.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference",
+      "ux_method"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Users Don’t Need More Tools: They Need Seamless Integrations",
+    "link": "https://smashingmagazine.com/2026/07/users-dont-need-more-tools-need-seamless-integrations/",
+    "pubDate": "Fri, 03 Jul 2026 13:00:00 GMT",
+    "content": "A closer look at why users don’t need more tools in their daily lives. What they need are seamless integrations of useful features to match already existing, established mental models. Brought to you by Design Patterns For AI Interfaces, **friendly video course on UX** and design patterns by Vitaly.",
+    "image": "http://files.smashing.media/articles/ux-impact-seamless-integrations/users-dont-need-more-tools-need-seamless-integrations.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  }
+]
