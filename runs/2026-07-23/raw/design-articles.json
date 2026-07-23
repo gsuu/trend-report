@@ -1,0 +1,805 @@
+[
+  {
+    "title": "토스, 하나은행과 ‘하나 만보기 적금’ 출시...최대 연 4.5% 금리 제공",
+    "link": "https://toss.im/tossfeed/article/51451",
+    "pubDate": "Wed, 15 Jul 2026 03:00:00 GMT",
+    "content": "최초 가입 시 0원으로도 적금 개설 가능",
+    "image": "",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "토스플레이스, 서울페이 QR 단말기에서 바로 띄운다… 서울사랑상품권 결제 지원",
+    "link": "https://toss.im/tossfeed/article/51447",
+    "pubDate": "Thu, 16 Jul 2026 23:00:00 GMT",
+    "content": "토스 프론트에서 서울페이 QR 사용 가능",
+    "image": "",
+    "valueTags": [
+      "commerce_design",
+      "korean_reference"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "프로덕트 디자인 코어",
+    "link": "https://designcompass.org/2026/07/20/product-design-core/",
+    "pubDate": "Thu, 23 Jul 2026 00:10:43 GMT",
+    "content": "사용자가 서비스를 떠올릴 때 느끼는 일관된 인상을 만듭니다. 화면마다 불필요하게 분위기가 달라지지 않도록 통일성을 유지하고, 그 위에서 사용자가 프로덕트의 가치를 느끼는 순간인 와우 모먼트까지. 하나의 경험으로 연결해 브랜드를 인식하게 만듭니다.",
+    "image": "https://designcompass.org/wp-content/uploads/2026/07/ai-design-system-architecture-01-3.png",
+    "valueTags": [
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "피그마 위브로 만든 디자인 스튜디오 자체 축구 클럽",
+    "link": "https://designcompass.org/2026/07/21/zak-fc-studio-football-club-identity/",
+    "pubDate": "Thu, 23 Jul 2026 00:10:43 GMT",
+    "content": "디자인 스튜디오 ZAK이 월드컵 분위기에 맞춰 자체 축구 클럽 아이덴티티 ‘ZAK F.C.’를 공개했습니다. 이번 프로젝트는 실제 스포츠 브랜드 론칭이라기보다, 스튜디오 내부의 놀이와 실험을 브랜드 디자인으로 확장한 사례입니다. ZAK은 Hoodzpah Design이 스튜디오를 ‘Inter Hoodzpah FC’로 변신시킨 작업에서 영감을 받아 자신들만의…",
+    "image": "https://designcompass.org/wp-content/uploads/2026/07/zak.jpg",
+    "valueTags": [
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "코카콜라, 상징 자산을 강화한 글로벌 브랜드 아이덴티티 공개",
+    "link": "https://designcompass.org/2026/07/21/coca-cola-global-visual-identity/",
+    "pubDate": "Thu, 23 Jul 2026 00:10:43 GMT",
+    "content": "코카콜라가 새로운 글로벌 비주얼 아이덴티티 시스템을 공개했습니다. 200개 이상의 시장에서 패키지와 디지털 경험, 매장, 냉장고 및 판매 장비에 이르기까지 일관된 브랜드 경험을 구축하는 것이 목표입니다. 새로운 디자인은 라틴아메리카와 유럽, 중동, 아시아를 중심으로 순차 적용됩니다. 이번 리브랜딩은 새로운 로고를 만드는 대신 코카콜라를 상징해 온 디자인…",
+    "image": "https://designcompass.org/wp-content/uploads/2026/07/thumb.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "구글 이미지, 핀터레스트를 닮은 리디자인",
+    "link": "https://designcompass.org/2026/07/16/google-images-25-for-you-redesign/",
+    "pubDate": "Thu, 23 Jul 2026 00:10:43 GMT",
+    "content": "구글이 이미지 검색 홈페이지를 개인화된 ‘For You’ 갤러리로 바꾸고 AI 기반 이미지 생성 기능을 통합했습니다. 데스크톱(미국·영문)에서 순차 적용 중입니다.",
+    "image": "https://designcompass.org/wp-content/uploads/2026/07/google-image-for-you-00.jpg",
+    "valueTags": [
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "모노타입 ‘브랜드톡 코리아 2026’ 성료",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40653&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 23 Jul 2026 00:10:38 GMT",
+    "content": "모노타입은 지난 7월 13일 서울 가빈아트홀에서 개최한 ‘브랜드톡 코리아 2026(Brand Talks Korea 2026)’을 성황리에 마무리했다고 밝혔다. 찰스 닉스(Charles Nix) 모노타입 수석...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260722093202142_119.0.jpg",
+    "valueTags": [
+      "brand_expression",
+      "korean_reference",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "현대자동차 ‘현대 블루 프라이즈+ 2025’ 첫 전시 개최",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40652&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 23 Jul 2026 00:10:38 GMT",
+    "content": "현대자동차는 ‘현대 블루 프라이즈+ 2025(Hyundai Blue Prize+ 2025)’의 첫 번째 전시 ‘Prayers to Fornax: Science, Technology, and Spiritualit...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260721092507634_5825.0.jpg",
+    "valueTags": [
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "한국민속촌, 세계 3대 디자인상 ‘레드닷’ 수상… 국내 테마파크 최초 브랜드·커뮤니케이션 부문 쾌거",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40651&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 23 Jul 2026 00:10:38 GMT",
+    "content": "한국민속촌이 개발한 공식 모바일 플랫폼이 세계적인 권위의 국제 디자인상인 ‘Red Dot Award 2026’에서 Brands & Communication Design 부문 Winner에 선정되며 브랜드 경험과...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260720101651183_1338.0.jpg",
+    "valueTags": [
+      "brand_expression",
+      "korean_reference",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "제네시스 ‘마릴린 먼로 특별전’ 전시 연장",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40650&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 23 Jul 2026 00:10:38 GMT",
+    "content": "“우리 모두는 별이며, 누구나 빛날 자격이 있다(We are all of us stars, and we deserve to twinkle)” ‘매니페스팅 마릴린(Manifesting Marilyn)’ 특별전...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260720101423252_2195.0.jpg",
+    "valueTags": [],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "삼성전자 ‘플렉스 티타늄’ 기술로 폴더블 디스플레이의 새로운 기준 제시",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40649&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 23 Jul 2026 00:10:38 GMT",
+    "content": "삼성전자가 15일 차세대 갤럭시 폴더블 기기에 적용될 ‘플렉스 티타늄(Flex Titanium)’ 디스플레이 기술을 공개했다. 플렉스 티타늄 디스플레이 새롭게 선보이는 플렉스 티타늄 기술은 삼성전자가 ...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260716092020511_1337.0.jpg",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "아이돌에서 화가로 작업 중인 필독, 떠오르는 신예 모스플라이, 배우 김홍표의 도슨트 그리고 미술감독 김종원까지… 부산·울산·경남을 문화예술로 물들이다",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40647&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 23 Jul 2026 00:10:38 GMT",
+    "content": "예술문화연구원(대표 김종원)이 전시기획과 작가 에이전시, 미술 콘텐츠 개발, 도서 출판을 아우르는 문화 플랫폼으로 활동 영역을 확대하며 부산·울산·경남 문화예술계에서 다양한 프로젝트를 선보이고 있다. 김종원...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260716091603849_9070.0.jpg",
+    "valueTags": [],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "구글의 AI 검색 최적화 가이드, 실무자는 이렇게 읽었습니다.",
+    "link": "https://pxdstory.tistory.com/1908",
+    "pubDate": "Sat, 18 Jul 2026 18:02:21 +0900",
+    "content": "\"GEO 방법론은 다 미신이다\", \"결국 SEO만 하면 된다\" — 구글의 가이드 발표 이후 이런 해석들이 퍼지고 있는데요. SEO/GEO 분석 서비스를 만들면서 느낀 점들, 그리고 직접 측정해 본 데이터를 바탕으로 이 가이드를 어떻게 읽으면 좋을지 정리해 보았습니다. 들어가며 올해 구글이 「Optimizing your website for generative AI features on Google Search」라는 AI 검색 최적화 가이드를 발표했습니다. GEO(생성형 엔진 최적화) 분야에서 처음 나온 공식 지침이다 보니 반응이 뜨거웠는데요. 그런데 이 가이드가 여러 매체와 커뮤니티를 거치면서 \"그동안의 GEO 방법론은 전부 미신이었다\", \"결국 SEO만 잘하면 된다더라\" 같은 요약으로 퍼지는 걸 보게 되었습니다. 큰 틀에서는 맞는 말이지만, SEO/GEO 분석 서비스를 만들면서 매일 이 주제를 들여다보고 있는 입장에서는 이렇게 요약되면 곤란하지 않나 싶은 지점들이 있었습니다. 그래서 이번 글에서는 구글 가이드의 원…",
+    "image": "",
+    "valueTags": [
+      "web_reference",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "💌 수정에 지친 디자이너: 헤드라이너를 없애버림",
+    "link": "https://stib.ee/w0ZM",
+    "pubDate": "2026-07-22T12:00:28.489649102+09:00",
+    "content": "#인스타트렌드 #디자인리뉴얼 #여름제철로고",
+    "image": "",
+    "valueTags": [
+      "visual_trend",
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "노폴레터 (Notefolio)",
+    "sourceUrl": "https://page.stibee.com/archives/75270/emails",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_newsletter",
+    "topics": [
+      "디자인 트렌드",
+      "타이포그래피",
+      "레퍼런스",
+      "전시·팝업"
+    ]
+  },
+  {
+    "title": "Hinge’s Jackie Jantos on inclusive design, trust and the path from creative to CEO",
+    "link": "https://www.itsnicethat.com/features/in-house-hinge-jackie-jantos-creative-industry-220726",
+    "pubDate": "Thu, 23 Jul 2026 00:12:05 GMT",
+    "content": "The CEO of dating app Hinge sheds light on the creative strategies behind everything from UX to ad campaigns and product research, and her personal approach to such an influential role.",
+    "image": "https://admin.itsnicethat.com/images/ViMd5o1WnvwpY083gPeFn96GY04=/280072/width-1440%7Cformat-jpeg/KEY_ART_16X9.png",
+    "valueTags": [
+      "brand_expression",
+      "promotion_event_design",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Design studio Supersystème builds visual worlds by treating typography as image",
+    "link": "https://www.itsnicethat.com/articles/supersyteme-graphic-design-discover-210726",
+    "pubDate": "Thu, 23 Jul 2026 00:12:05 GMT",
+    "content": "Masters in the art of letters and layouts, the Montreal-based design studio creates identities, publications and posters where words become an essential part of the message.",
+    "image": "https://admin.itsnicethat.com/images/mt4ZcUnYUQVJ3fZtSNSJYPe1jK4=/280039/width-1440/5-Supersysteme-Offta-2025.jpg",
+    "valueTags": [
+      "layout_pattern",
+      "look_and_feel",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Robert Beatty on retro Photoshop, creative friction and designing album covers that feel almost primeval",
+    "link": "https://www.itsnicethat.com/features/robert-beatty-illustration-spotlight-200726",
+    "pubDate": "Thu, 23 Jul 2026 00:12:05 GMT",
+    "content": "On the occasion of Robert Beatty’s newest work for the cult-favourite trip-hop duo Boards Of Canada, It’s Nice That does a deep dive into his vast career of video collage, noise rock, alternative tech and iconic album covers.",
+    "image": "https://admin.itsnicethat.com/images/dBZ5sou-WMaGzoyu4nXA_w6jUBM=/280048/width-1440/robert-beatty-illustration-itsnicethat-_Currents__Tame_Impala_gatefold_201.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "commerce_design"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Kelli Anderson’s paper gadgets and pop-up books approach graphic design as a fine art",
+    "link": "https://www.itsnicethat.com/articles/nicer-tuesdays-new-york-june-kelli-anderson-210726",
+    "pubDate": "Thu, 23 Jul 2026 00:12:05 GMT",
+    "content": "Graphic designer and paper engineer Kelli Anderson joined us on the Nicer Tuesdays stage in New York City in a Q&A with Elizabeth Goodspeed to talk about her latest book Alphabet in Motion, an inventive, interactive pop-up book made entirely out of paper, along with her history with tactile typography. Kelli’s previous books include This Book is a Camera, a working 4x5 camera made from paper and This Book is a Planetarium, a publication that unfolds into a whole host of paper gadgets – and Kelli dives into her int…",
+    "image": "https://www.itsnicethat.com/images/social.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "motion_interaction",
+      "promotion_event_design",
+      "korean_uiux_case",
+      "prototyping"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "In the burgeoning Nigerian animation industry, these creatives are turning myth, memory and mischief into moving image",
+    "link": "https://www.itsnicethat.com/articles/the-view-from-lagos-nigerian-animation-200726",
+    "pubDate": "Thu, 23 Jul 2026 00:12:05 GMT",
+    "content": "From NTA jingles and stop-motion soap adverts to Disney’s Lagos-set Iwájú and a new wave of Spirit Fiction, Somto Ajuluchukwu, Erem Emeka Nehemiah and more are building worlds rooted in folklore, humour and everyday Nigerian life.",
+    "image": "https://admin.itsnicethat.com/images/5fESLx2ufkU40qINsBxOHUdU2ls=/280031/width-1440%7Cformat-jpeg/TVF_Meta_BackUp.png",
+    "valueTags": [
+      "look_and_feel",
+      "motion_interaction",
+      "korean_uiux_case",
+      "prototyping"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "How Parallel Press is cataloguing Black history through indie books, graphic design and space travel",
+    "link": "https://www.itsnicethat.com/articles/nicer-tuesdays-new-york-june-parallel-press-200726",
+    "pubDate": "Thu, 23 Jul 2026 00:12:05 GMT",
+    "content": "Founders of Parallel Press, Akoua Smith and renald Louissaint joined us on the Nicer Tuesdays stage in New York City to talk about how Parallel Press started up, its major projects and its newest publication Astro Black. This homage to Black astronauts is more than just an archive of boundary-pushing astrophysics, space travel technology and the people behind our most daring missions into the solar system, but a crucial protection of the archival materials from the Trump administration.",
+    "image": "https://www.itsnicethat.com/images/social.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Look up! Parallel Press’ Astro Black archives and protects the dazzling visual history of Black astronauts",
+    "link": "https://www.itsnicethat.com/articles/parallel-press-astro-black-publication-graphic-design-project-160726",
+    "pubDate": "Thu, 23 Jul 2026 00:12:05 GMT",
+    "content": "Drawing on a cultural “fascination Black people have had with the planets and stars”, as well as the racial tensions surrounding the space race, this catalogue doesn’t just aim to pay homage to Black excellence in astrophysics, but to urgently protect Black history too.",
+    "image": "https://admin.itsnicethat.com/images/3MVSfXSJZ534p-zhXrmqVxnHrwE=/279855/width-1440%7Cformat-jpeg/parallel-press-astro-black-graphic-design-itsnicethat-7.png",
+    "valueTags": [
+      "look_and_feel",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "How do you avoid overcomplicating an editorial illustration? Ana Miminoshvili has mastered the art",
+    "link": "https://www.itsnicethat.com/articles/ana-miminoshvili-illustration-discover-160726",
+    "pubDate": "Thu, 23 Jul 2026 00:12:05 GMT",
+    "content": "This illustrator cuts straight to the core of the story through low fantasy and reimagined realities.",
+    "image": "https://admin.itsnicethat.com/images/c5tgwRRlvpHe3ubvAGCro-3WWnk=/279837/width-1440/ana-miminoshvili-illustration-itsnicethatAna_Miminoshvili-Das-Magazin-cove.jpg",
+    "valueTags": [
+      "visual_trend",
+      "look_and_feel",
+      "commerce_campaign_design",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/sonder-studio-brands-veritas-to-honour-a-factorys-past-and-future",
+    "pubDate": "Thu, 23 Jul 2026 00:11:05 GMT",
+    "content": "In Wittenberge, a small town between Berlin and Hamburg, the former VERITAS sewing machine factory is being turned into an urban district of hotels, restaurants, offices and event spaces, conceived to gather creatives from the arts, technology, science and business. The plant was built in 1903 and was Europe’s largest sewing machine factory until closing in 1991 – leaving around 3,000 people without jobs. To give the revival a brand strategy, visual identity and verbal identity, Berlin-based Sonder Studio was task…",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/07/sonder-studio-brands-veritas-to-honour-a-factorys-past-and-future/VERITAS-Sonder-Studio-08.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "promotion_event_design",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "How Office of Overview turned real speech into Human’s identity Human started from a simple premise: the best way to understand the world is through the people experiencing it. Interesting stories, told by the people who live them. As a new kind of factual storytelling &nbsp;(...)",
+    "link": "https://the-brandidentity.com/project/how-office-of-overview-turned-real-speech-into-humans-identity",
+    "pubDate": "Thu, 23 Jul 2026 00:11:05 GMT",
+    "content": "How Office of Overview turned real speech into Human’s identity Human started from a simple premise: the best way to understand the world is through the people experiencing it. Interesting stories, told by the people who live them. As a new kind of factual storytelling &nbsp;(...)",
+    "image": "",
+    "valueTags": [
+      "brand_expression",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "The screens are getting demoted",
+    "link": "https://uxdesign.cc/the-screens-are-getting-demoted-6b40120fcf04?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 22 Jul 2026 22:21:02 GMT",
+    "content": "As AI products become more advanced, the interface is no longer the main focus. Now, the real question is which screens are still needed and which can serve as fallbacks. Illustration created by author Designers often say that UX isn’t really about screens. It’s a line I see in portfolios, I hear in interviews; that’s the line we use to signal that we’re thinking beyond just pixels. But honestly, for most of my career, that wasn’t true. In one way or another, the job was screens: building flows in Figma, mapping o…",
+    "image": "",
+    "valueTags": [
+      "web_reference",
+      "look_and_feel",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The digital wall we built ourselves",
+    "link": "https://uxdesign.cc/the-digital-wall-we-built-ourselves-e9578f774374?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 22 Jul 2026 11:17:21 GMT",
+    "content": "Why 95.9% of the world’s top million sites still fail the people who need them most. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "No, People Don’t Want More AI In Their Life",
+    "link": "https://smashingmagazine.com/2026/07/people-dont-want-more-ai/",
+    "pubDate": "Wed, 15 Jul 2026 10:00:00 GMT",
+    "content": "Many companies assume everyone craves new AI features. But the reality is that most people don't want more AI — at least not in the way most AI leaders envision it. Brought to you by Design Patterns For AI Interfaces, **friendly video courses on UX** and design patterns by Vitaly.",
+    "image": "http://files.smashing.media/articles/people-dont-want-more-ai/people-dont-want-more-ai.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "I handed a UX review over to AI. Here’s what happened.",
+    "link": "https://uxdesign.cc/i-handed-a-ux-review-over-to-ai-heres-what-happened-0511e73e4ffe?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 21 Jul 2026 21:36:57 GMT",
+    "content": "AI is a powerful partner for UX reviews, not a replacement for the expert, and the accuracy comes from the expertise you feed it, not the model. I got a task that isn’t complicated in itself: I had to write a UX expert review for the search, results, and product detail pages of a portal. I had a set of questions about the target audience, the goals, and the USP, an industry research document, plus access to Google Analytics and Clarity. My starting hypothesis (one you read more and more everywhere) was that AI is…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The feature trap",
+    "link": "https://uxdesign.cc/the-feature-trap-how-product-teams-confuse-building-with-validating-24b13f865f2e?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 21 Jul 2026 21:35:59 GMT",
+    "content": "How product teams confuse building with validating Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Design experiments are more important than ever, and they don’t require a lab",
+    "link": "https://uxdesign.cc/design-experiments-are-more-important-than-ever-and-they-dont-require-a-lab-a81d68e97393?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 21 Jul 2026 11:02:04 GMT",
+    "content": "If design experiments scare you? Take a page from design leaders and call them bets. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Designing For Distressed Users: Why Mental Health Apps Shouldn’t Follow Every UI Fashion",
+    "link": "https://smashingmagazine.com/2026/07/designing-distressed-users-mental-health-apps-ui/",
+    "pubDate": "Thu, 09 Jul 2026 15:00:00 GMT",
+    "content": "Many UI trends are designed to capture attention and signal innovation, but those goals often conflict with the needs of mental health apps: reducing cognitive strain, fostering trust, and providing a sense of refuge. Kat Homan introduces an evaluation framework that helps designers assess whether trendy visual and interaction patterns support or undermine the unique goals of mental health experiences.",
+    "image": "http://files.smashing.media/articles/designing-distressed-users-mental-health-apps-ui/designing-distressed-users-mental-health-apps-ui.jpg",
+    "valueTags": [
+      "visual_trend",
+      "look_and_feel",
+      "motion_interaction",
+      "korean_uiux_case",
+      "prototyping",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Research shouldn’t end in a deck",
+    "link": "https://uxdesign.cc/research-shouldnt-end-in-a-deck-fe7c1d4fe1af?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 20 Jul 2026 22:02:20 GMT",
+    "content": "How I use Claude Code to challenge assumptions and turn research into a living artifact Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "ux_method"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "How to apply Nir Eyal’s Hook Model to AI products, safely",
+    "link": "https://uxdesign.cc/how-to-apply-nir-eyals-hook-model-to-ai-products-safely-f6a986305a2d?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 20 Jul 2026 22:00:29 GMT",
+    "content": "The four-step hook — trigger, action, variable reward, investment — drawn as one machine that keeps restarting itself. AI assisted. The habit loop that built social media is now wired into every chatbot — here are ways to use it without becoming the dealer. Nir Eyal published Hooked in 2014, and product teams have been running its playbook ever since. It was a topic I taught in General Assembly, and have been fascinated with ever since because it’s at the base of many interactions, digital or not. B.J. Fogg of Tin…",
+    "image": "",
+    "valueTags": [
+      "motion_interaction",
+      "korean_uiux_case",
+      "design_system",
+      "prototyping",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Delegating taste, orchestration layer, AI workflows",
+    "link": "https://uxdesign.cc/delegating-taste-orchestration-layer-ai-workflows-7ac13d2ff1d6?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 20 Jul 2026 11:14:00 GMT",
+    "content": "Weekly curated resources for designers — thinkers and makers. “We increasingly talk about taste as though it were something that can be collected, measured, or encoded. We assume that if enough people agree, or if enough data is available, the right answer will eventually emerge. But taste has never worked that way. Taste begins with knowing what good looks like. It comes from exposure to exceptional work, from studying history, understanding proportion, typography, interaction, composition, and learning to recogn…",
+    "image": "",
+    "valueTags": [
+      "layout_pattern",
+      "look_and_feel",
+      "motion_interaction",
+      "promotion_event_design",
+      "prototyping",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Lonely at a lower latency",
+    "link": "https://uxdesign.cc/lonely-at-a-lower-latency-99ae638489b9?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 20 Jul 2026 11:09:56 GMT",
+    "content": "Everything got faster, closer, more certain. The person inside stayed the same. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "From Kickoff To First Concept: How To Turn Brand Strategy Into Visual Direction",
+    "link": "https://smashingmagazine.com/2026/07/how-turn-brand-strategy-into-visual-direction/",
+    "pubDate": "Fri, 10 Jul 2026 13:00:00 GMT",
+    "content": "The strongest visual concepts don’t start in Figma. They start with the right questions. Explore the pre-concept phase of brand identity design, where teams research brand context, uncover hidden assumptions with stakeholders, and turn shared direction into a visual foundation before a single concept is created.",
+    "image": "http://files.smashing.media/articles/how-turn-brand-strategy-into-visual-direction/how-turn-brand-strategy-into-visual-direction.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference",
+      "ux_method"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  }
+]
