@@ -1,0 +1,767 @@
+[
+  {
+    "title": "Toss and Toss Bank Sign Strategic MOU with Circle to Explore Stablecoin-Based Payments",
+    "link": "https://toss.im/tossfeed/article/Toss-Tossbank-CRCL-MOU",
+    "pubDate": "Thu, 23 Jul 2026 06:00:00 GMT",
+    "content": "Collaboration to explore stablecoin payment models and digital asset infrastructure built on Circle's USDC Companies to examine blockchain-based payment infrastructure for cross-border payments, remittances, and real-time settlement Parties to also review KRW-denominated digital assets and tokenized financial services in line with applicable regulatory frameworks Toss and Toss Bank announced that they have signed a strategic memorandum of understanding (MOU) with Circle Internet Group, Inc. (NYSE: CRCL) to explore…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "토스·토스뱅크, 써클과 스테이블코인 기반 결제 협력 위한 업무협약 체결",
+    "link": "https://toss.im/tossfeed/article/Toss-Tossbank-Circle-MOU",
+    "pubDate": "Thu, 23 Jul 2026 00:00:00 GMT",
+    "content": "스테이블코인과 블록체인 기술을 활용한 결제 및 정산 인프라 분야에서의 협력 가능성 타진",
+    "image": "",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "토스플레이스, 서울페이 QR 단말기에서 바로 띄운다… 서울사랑상품권 결제 지원",
+    "link": "https://toss.im/tossfeed/article/51447",
+    "pubDate": "Thu, 16 Jul 2026 23:00:00 GMT",
+    "content": "토스 프론트에서 서울페이 QR 사용 가능",
+    "image": "",
+    "valueTags": [
+      "commerce_design",
+      "korean_reference"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "토스, 유통 POS사 투게더스와 MOU… 전국 5,000개 마트에 '페이스페이' 도입",
+    "link": "https://toss.im/tossfeed/article/toss-togethers-pos-mou",
+    "pubDate": "Mon, 27 Jul 2026 00:00:00 GMT",
+    "content": "전국 중소형 마트에서 얼굴 결제 서비스 순차 사용 가능",
+    "image": "",
+    "valueTags": [
+      "korean_reference",
+      "korean_uiux_case"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "AI 라이팅 어시스턴트, Writone 개선기",
+    "link": "https://pxdstory.tistory.com/1911",
+    "pubDate": "Thu, 30 Jul 2026 07:50:58 +0900",
+    "content": "들어가며 2024년 9월, pxd story를 통해 UX Writing을 돕는 AI 툴에 대한 실험기를 공유한 적이 있습니다. 당시 우리는 'AI가 우리 회사만의 가이드라인을 학습해 글쓰기를 도와줄 수 있을까?'라는 질문에서 출발한 프로덕트였습니다. 그로부터 약 7개월, 우리가 발견한 건 단순히 기술적인 답이 아니었습니다. \"AI Writing 어시스턴트가 실제로 쓰이려면, 사용자의 경험 중 어디에 있어야 하는가?\" 그 답을 Uxer로서 찾아가는 과정, UX의 필터를 통해 AX 서비스의 마켓핏을 찾아갔던 경험을 공유합니다. 1. 수천 페이지의 가이드라인은 어디로 가는가? 많은 기업이 막대한 비용을 들여 브랜드만의 UX Writing 가이드라인을 만듭니다. pxd도 여러 UX Writing 프로젝트를 거치며 기업의 가이드라인 제작을 함께해 왔습니다. 그런데 그 과정에서 반복적으로 마주하는 장면이 있었습니다. 공들여 만든 UX 라이팅 가이드라인이 사내 클라우드 깊숙한 곳의 PDF 파일로 잠들어 있는 것입니다. 디자이너와…",
+    "image": "",
+    "valueTags": [
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "화이자, 수백 개 제품을 연결하는 브랜드 디자인 시스템",
+    "link": "https://designcompass.org/2026/07/29/pfizer-global-brand-design-system/",
+    "pubDate": "Thu, 30 Jul 2026 00:07:30 GMT",
+    "content": "화이자(Pfizer)가 펜타그램(Pentagram)과 함께 새로운 전략적 아이덴티티와 브랜드 아키텍처, 디자인 시스템을 공개했습니다. 이번 프로젝트는 화이자가 공식적으로 구축한 첫 브랜드 디자인 시스템입니다. 팬데믹 이후 암 치료와 종양학을 비롯한 주요 글로벌 보건 분야로 영향력을 확대하는 가운데, 기업의 목적과 환자가 일상에서 접하는 의약품을 더욱…",
+    "image": "https://designcompass.org/wp-content/uploads/2026/07/01_Instagram-10.00.jpg",
+    "valueTags": [
+      "brand_expression",
+      "design_system",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "월스트리트의 ‘겁 없는 소녀’, 하나의 브랜드로 확장되다",
+    "link": "https://designcompass.org/2026/07/27/fearless-girl-brand-identity/",
+    "pubDate": "Thu, 30 Jul 2026 00:07:30 GMT",
+    "content": "뉴욕 월스트리트의 상징적인 조형물 ‘겁 없는 소녀(Fearless Girl)’가 새로운 브랜드 아이덴티티를 공개했습니다. 브랜딩 스튜디오 루디(Rudy)는 전략 파트너 오드 셰이프드 오브젝트(Odd Shaped Objects), 스테이트 스트리트(State Street)와 협력해 조형물의 메시지를 캠페인과 교육, 디지털 경험으로 확장할 수 있는 시각 체계를…",
+    "image": "https://designcompass.org/wp-content/uploads/2026/07/@brandiosas-Photo-by-Brandiosas-on-July-23-2026.-May-be-an-illustrati.jpg",
+    "valueTags": [
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "당근, 디자인 시스템 ‘SEED’ 브랜드 아이덴티티 공개",
+    "link": "https://designcompass.org/2026/07/27/daangn-seed-design-system-rebranding/",
+    "pubDate": "Thu, 30 Jul 2026 00:07:30 GMT",
+    "content": "당근이 디자인 시스템 ‘SEED’의 새로운 브랜드 아이덴티티와 웹사이트를 공개했습니다. SEED는 색상과 타이포그래피 같은 기초 요소부터 컴포넌트, 인터랙션, 패턴까지 제품을 구성하는 디자인 결정을 하나의 기준으로 연결하는 당근의 통합 디자인 언어입니다. 새로운 브랜드는 ‘Seed to Root, Root to Daangn’을 슬로건으로 삼았습니다.",
+    "image": "https://designcompass.org/wp-content/uploads/2026/07/@seeun_in-12.45.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "motion_interaction",
+      "korean_uiux_case",
+      "design_system",
+      "prototyping",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "광화문 현판 한글 병기, 숙의와 공감으로 채운",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40660&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 30 Jul 2026 00:07:22 GMT",
+    "content": "연간 100만 명 이상 방문, 총 콘텐츠 수 36만 건의 국내 최대 디자인정보 포털사이트. 실시간 업데이트 되는 디자인 및 산업 전반 트렌드와 이슈, 글로벌 시장변화, 소비자동향 등 디자이너를 위한 모든 정보를 제공합니다.",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260729022800538_905.0.jpg",
+    "valueTags": [
+      "visual_trend",
+      "korean_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "현대자동차 ‘디 올 뉴 아반떼 테크 데이’ 개최",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40661&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 30 Jul 2026 00:07:22 GMT",
+    "content": "현대자동차가 29일 서울 서초구 ‘아크 강남’에서 ‘디 올 뉴 아반떼 테크 데이(The all new AVANTE Tech Day)’를 열고 디 올 뉴 아반떼의 핵심 기술과 개발 배경을 공개했다. ...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260730084957665_5786.0.png",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "AI 역량과 ICT 기술력 돋보여… ‘ICT AWARD KOREA 2026’ 대학부 수상작 발표",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40659&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 30 Jul 2026 00:07:22 GMT",
+    "content": "디지털 산업의 미래 경쟁력 증명해 국내 최대 ICT·디지털 혁신을 조명하는 어워드 ‘ICT AWARD KOREA 2026(ICT 어워드 코리아 2026)’가 최종 심사를 마치고 우수 대학부 수상작을 27...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260728110300403_5479.0.jpg",
+    "valueTags": [
+      "korean_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "'미술서비스업 신고제' 26일부터…화랑·경매·감정 등 6개 업종",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40657&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 30 Jul 2026 00:07:22 GMT",
+    "content": "오는 26일부터 화랑, 경매, 전시, 감정 등 미술서비스 업종을 운영하려면 관할 지방자치단체장에게 신고해야 한다. 문화체육관광부는 지난 21일 국무회의에서",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260727091520981_1400.0.jpg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "기아, 브랜드를 일상으로 확장하는 ‘Kia Collection’ 2026 신규 라인업 공개",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40658&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 30 Jul 2026 00:07:22 GMT",
+    "content": "기아가 브랜드 정체성을 담은 라이프스타일 컬렉션 ‘Kia Collection(기아 컬렉션)’ 2026을 선보인다고 27일 밝혔다. Kia Collection 2026 신규 라인업 기아 컬렉션은 고객이 차...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260728092148693_9065.0.png",
+    "valueTags": [
+      "visual_trend",
+      "brand_expression",
+      "commerce_design",
+      "commerce_campaign_design",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "삼성전자, 인텔리전트 아이웨어 공개",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40655&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 30 Jul 2026 00:07:22 GMT",
+    "content": "삼성전자가 22일 런던에서 열린 갤럭시 언팩(Galaxy Unpacked)에서 인텔리전트 아이웨어(Intelligent Eyewear)의 주요 기능과 새로운 디자인 2종을 추가로 공개했다. 인텔리전트 아이웨...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260727090947657_4805.0.jpg",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "삼성전자, 갤럭시 Z 폴드8 울트라·폴드8·플립8 등 폴더블 3종 라인업으로 확대",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40656&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 30 Jul 2026 00:07:22 GMT",
+    "content": "삼성전자는 22일(현지시간) 영국 런던 올드 빌링스게이트(Old Billingsgate)에서 열린 ‘갤럭시 언팩 2026’ 행사에서 새로운 갤럭시 Z 시리즈를 공개했다. 왼쪽부터 갤럭시 Z 플립8, Z 폴드...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260727091200076_2296.0.jpg",
+    "valueTags": [
+      "korean_reference",
+      "promotion_event_design"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "구글의 AI 검색 최적화 가이드, 실무자는 이렇게 읽었습니다.",
+    "link": "https://pxdstory.tistory.com/1908",
+    "pubDate": "Sat, 18 Jul 2026 18:02:21 +0900",
+    "content": "\"GEO 방법론은 다 미신이다\", \"결국 SEO만 하면 된다\" — 구글의 가이드 발표 이후 이런 해석들이 퍼지고 있는데요. SEO/GEO 분석 서비스를 만들면서 느낀 점들, 그리고 직접 측정해 본 데이터를 바탕으로 이 가이드를 어떻게 읽으면 좋을지 정리해 보았습니다. 들어가며 올해 구글이 「Optimizing your website for generative AI features on Google Search」라는 AI 검색 최적화 가이드를 발표했습니다. GEO(생성형 엔진 최적화) 분야에서 처음 나온 공식 지침이다 보니 반응이 뜨거웠는데요. 그런데 이 가이드가 여러 매체와 커뮤니티를 거치면서 \"그동안의 GEO 방법론은 전부 미신이었다\", \"결국 SEO만 잘하면 된다더라\" 같은 요약으로 퍼지는 걸 보게 되었습니다. 큰 틀에서는 맞는 말이지만, SEO/GEO 분석 서비스를 만들면서 매일 이 주제를 들여다보고 있는 입장에서는 이렇게 요약되면 곤란하지 않나 싶은 지점들이 있었습니다. 그래서 이번 글에서는 구글 가이드의 원…",
+    "image": "",
+    "valueTags": [
+      "web_reference",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "GEONIQ Integrated Insight Report &mdash; GEO 최적화 잘 되어있는 사이트 BEST 5 (Vol.1 실제 진단/분석 결과는?)",
+    "link": "https://pxdstory.tistory.com/1909",
+    "pubDate": "Fri, 24 Jul 2026 17:43:09 +0900",
+    "content": "신한금융, KB Think, 카카오뱅크, 이랜드, SK브로드밴드의 대표 콘텐츠 30페이지를 직접 진단했습니다 질문형 제목과 핵심 요약이 있으면 GEO가 잘된 사이트일까? 온라인에서 우수 사례로 소개된 5개 사이트를 GEONIQ으로 진단해, 콘텐츠의 인상과 실제 페이지 상태가 얼마나 일치하는지 확인해봤습니다. 들어가며 구글의 AI 검색 최적화 가이드 발표 이후 SEO/GEO에 대한 다양한 의견과 해석들이 많았습니다. 관련해 GEO 최적화가 잘된 국내 사이트 5곳을 소개한 글에서 언급된 사이트들을 GEONIQ으로 살펴보려 합니다. 신한금융 인사이트는 데이터와 시각 자료를 활용한 콘텐츠, KB Think는 금융 전문 콘텐츠, 카카오뱅크 블로그와 이랜드 E:KI HOW는 실제 검색 질문을 반영한 주제, SK브로드밴드 블로그는 질문형 소제목과 이용자 댓글이 강점으로 소개됐습니다. 이런 특징은 충분히 참고할 만합니다. 질문에 가까운 제목, 핵심 요약, 명확한 소제목, 표와 목록은 사람이 읽기에도 편하고 AI가 내용을 나눠 이해…",
+    "image": "",
+    "valueTags": [
+      "korean_reference",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "💌 레터링 장인 특: 연습없이 프리스타일로 함",
+    "link": "https://stib.ee/kxbM",
+    "pubDate": "2026-07-29T12:00:28.319782461+09:00",
+    "content": "#인스타트렌드 #레터링장인 #걸그룹폰트",
+    "image": "",
+    "valueTags": [
+      "visual_trend"
+    ],
+    "scraped": true,
+    "source": "노폴레터 (Notefolio)",
+    "sourceUrl": "https://page.stibee.com/archives/75270/emails",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_newsletter",
+    "topics": [
+      "디자인 트렌드",
+      "타이포그래피",
+      "레퍼런스",
+      "전시·팝업"
+    ]
+  },
+  {
+    "title": "Accept & Proceed’s new system for Vans is a lesson in how to inject clarity into an iconic brand",
+    "link": "https://www.itsnicethat.com/articles/accept-and-proceed-vans-graphic-design-290726",
+    "pubDate": "Thu, 30 Jul 2026 00:08:37 GMT",
+    "content": "The visual and conceptual overhaul of the shoemaker speaks to the brand’s place in culture and its role as a conduit for expression.",
+    "image": "https://www.itsnicethat.com/images/social.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "How International Magic established its technology-bending design collaboration with Martine Rose",
+    "link": "https://www.itsnicethat.com/articles/international-magic-martine-rose-graphic-design-digital-280726",
+    "pubDate": "Thu, 30 Jul 2026 00:08:37 GMT",
+    "content": "From virtual fashion shows to live web platforms, the studio consistently resists conventions to disrupt digital spaces.",
+    "image": "https://admin.itsnicethat.com/images/HF5DGnkbVe6TpjN8XFo9ZC2qUf0=/280320/width-1440/MRxSSENSE-XX-3.jpeg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Can you visually capture how dancing feels? Inside Las Cabbalos’ expressive social identity for Public Records",
+    "link": "https://www.itsnicethat.com/articles/los-cabbalos-public-records-graphic-design-illustration-project-270726",
+    "pubDate": "Thu, 30 Jul 2026 00:08:37 GMT",
+    "content": "Using figurative illustrations, block and lino-esque print and a modular design system, Los Cabbalos returns to work with New York City’s Public Records to capture its bustling music scene and eclectic roster.",
+    "image": "https://admin.itsnicethat.com/images/gkM8ZLXbke6bzdHJWoyIO59NWAU=/280265/width-1440%7Cformat-jpeg/los-cabbalos-graphic-design-itsnicethat-5.png",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "design_system",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "“It’s about branding consistently”",
+    "link": "https://www.itsnicethat.com/articles/creative-career-conundrums-if-you-could-jobs-270726",
+    "pubDate": "Thu, 30 Jul 2026 00:08:37 GMT",
+    "content": "There are only so many names in the world, and you’re bound to share it with at least a couple people in your field of work. But when you’re self-employed and rely on other people’s awareness of you, is this a drawback? What should you do? Kat Wong has her say.",
+    "image": "https://admin.itsnicethat.com/images/fhPa9f5sBJ6HZOc2515c4xQgwYo=/280260/width-1440%7Cformat-jpeg/CCC_Square_DO_I_NEED_A_CREATIVE_PSEUDONYM.png",
+    "valueTags": [
+      "brand_expression",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Anatomy’s campaign for the Horniman museum is built on a bespoke typeface foraged from its collections and gardens",
+    "link": "https://www.itsnicethat.com/articles/anatomy-horniman-museum-graphic-design-project-230726",
+    "pubDate": "Thu, 30 Jul 2026 00:08:37 GMT",
+    "content": "The agencies new visual system was built to reflect the excitement of the eclectic discoveries that emerge from a visit to the historical London location.",
+    "image": "https://admin.itsnicethat.com/images/V_ryxGqUmyplKx6uTi4h4-w1uog=/280280/width-1440/Horniman_Anatomy_Tote.jpg",
+    "valueTags": [
+      "visual_trend",
+      "look_and_feel",
+      "brand_expression",
+      "commerce_design",
+      "promotion_event_design",
+      "commerce_campaign_design",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/how-merchery-turned-moma-ps1s-50th-anniversary-into-merch-worth-keeping",
+    "pubDate": "Thu, 30 Jul 2026 00:07:55 GMT",
+    "content": "For its 50th anniversary, contemporary art institution MoMA PS1 turned to Merchery to produce a custom merchandise collection, built as an extension of the anniversary identity designed by PORTO ROCHA. Founded in 1976 in Long Island City and affiliated with the Museum of Modern Art, MoMA PS1 has rarely produced merchandise that expresses its own identity rather than supporting one of its exhibitions. Merchery sources and personalises premium products and runs bespoke projects, with clients ranging from Netflix and…",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/07/how-merchery-turned-moma-ps1s-50th-anniversary-into-merch-worth-keeping/MoMA-PS1-x-Porto-Rocha-Merchery-03.jpeg",
+    "valueTags": [
+      "visual_trend",
+      "look_and_feel",
+      "brand_expression",
+      "commerce_design",
+      "commerce_campaign_design",
+      "korean_uiux_case",
+      "visual_reference",
+      "ux_method"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Designers",
+    "link": "https://www.framer.com/updates/solutions/designers/",
+    "pubDate": "Thu, 30 Jul 2026 00:08:40 GMT",
+    "content": "Designers",
+    "image": "",
+    "valueTags": [],
+    "scraped": true,
+    "source": "Framer Updates",
+    "sourceUrl": "https://www.framer.com/updates/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "prototyping",
+    "topics": []
+  },
+  {
+    "title": "Battling AI fatigue as a designer and developer: a practical guide",
+    "link": "https://uxdesign.cc/battling-ai-fatigue-as-a-designer-and-developer-a-practical-guide-d04a2549e802?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 29 Jul 2026 21:57:29 GMT",
+    "content": "AI is great, but it doesn’t have to take over your life Image is by René Magritte: “ The Listening Room ”, 1952 A warning about using AI for everything Not too long ago, I needed a new app for writing down my expenses so I could better keep track of my money, so I searched the iOS App Store. I found many apps for expense reports, for budgeting and money management in general, but something felt strange. As a UI Designer and a Front-end Developer, I can spot patterns in the designs, and these apps weren’t human-mad…",
+    "image": "",
+    "valueTags": [
+      "look_and_feel",
+      "commerce_design",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The UX of Contrast: Lessons from Indika’s Game Design",
+    "link": "https://uxdesign.cc/the-ux-of-contrast-what-indika-taught-me-about-designing-intentional-contradiction-c880e9eaf084?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 29 Jul 2026 21:57:08 GMT",
+    "content": "Introducing PX Contrast: a deliberate layering of conflicting player experiences leading to intentional multiple interpretations Contrast is one of the most familiar visual tools for guiding attention in design. But in Indika it becomes a game UX tool. It shapes how players interpret the story. Released in 2024 by Odd Meter, the game won Best Narrative at the Games for Change Awards 2025 for its unconventional storytelling. I first played Indika on release, and one thing kept bothering me: why do different parts o…",
+    "image": "",
+    "valueTags": [
+      "look_and_feel",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The Bull And Bear Case For Digital Design In The Age Of AI",
+    "link": "https://smashingmagazine.com/2026/07/bull-and-bear-case-digital-design-age-ai/",
+    "pubDate": "Wed, 29 Jul 2026 13:00:00 GMT",
+    "content": "As AI reshapes product design, it could give designers greater autonomy or expose the gaps that autonomy makes harder to hide. Exploring both the bull and bear cases, Andy Budd examines what happens when designers need less permission to act.",
+    "image": "http://files.smashing.media/articles/bull-and-bear-case-digital-design-age-ai/bull-and-bear-case-digital-design-age-ai.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "The MOS 6502: the people’s princess",
+    "link": "https://uxdesign.cc/the-mos-6502-the-peoples-princess-0a2f99409834?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 28 Jul 2026 22:21:13 GMT",
+    "content": "The impact of blending arcade game UI concepts with the power of affordable 1970s calculator chips Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Thinking Outside The Box: Digital Design In The AI Era",
+    "link": "https://smashingmagazine.com/2026/07/digital-design-ai-era/",
+    "pubDate": "Tue, 28 Jul 2026 10:00:00 GMT",
+    "content": "Many of the AI tools we interact with take the form of text boxes. But what if there was a different way to interact with AI? Oleksii Hrzhehorzhevskyi explores a different approach to creating a new AI assistant and how designers can navigate the field as AI continues to change it.",
+    "image": "http://files.smashing.media/articles/digital-design-ai-era/digital-design-ai-era.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "The seams are where the system lives",
+    "link": "https://uxdesign.cc/the-seams-are-where-the-system-lives-9c43587be771?source=rss----138adf9c44c---4",
+    "pubDate": "Sun, 26 Jul 2026 12:08:08 GMT",
+    "content": "Partitioning a system into clean modules doesn’t remove complexity — it relocates it to the seams. Cities learned this by zoning. Software… Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "From frictionless to meaningful",
+    "link": "https://uxdesign.cc/from-frictionless-to-meaningful-2dc785d6cc4e?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 27 Jul 2026 22:00:18 GMT",
+    "content": "Inviting friction into design and life Good design is frictionless, right? When a product seamlessly fits into our lives, when a digital experience is smooth and without problems, that is what we call successful design. It’s when we experience friction with a product that we start to pay attention. A Slack outage. A phone where the user interface makes it hard to find the call button. A shirt that, despite its promise, doesn’t protect against the ice-cold wind. A designer’s goal and dream are to create frictionles…",
+    "image": "",
+    "valueTags": [
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The consciousness mirage in AI design",
+    "link": "https://uxdesign.cc/the-anthropomorphism-consciousness-mirage-in-ai-design-ux-framework-8e23beb1d7c1?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 27 Jul 2026 11:20:13 GMT",
+    "content": "We know it’s not human. We feel heard anyway. What mind attribution does to your users, and why it’s now a UX design dial. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "AI can fake your portfolio, Lower latency, 5-to-9, Monochrome dataviz",
+    "link": "https://uxdesign.cc/ai-can-fake-your-portfolio-lower-latency-5-to-9-monochrome-dataviz-51af76de0552?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 27 Jul 2026 11:17:20 GMT",
+    "content": "Weekly curated resources for designers — thinkers and makers. “This photographic series slips into the hours after the badge comes off — the unbranded life where designers become someone the job never meets.” Five to nine → By Will Sertório Editor picks Lonely at a lower latency → Everything got faster, closer, more certain. By Wira Indra Kusuma The brainstorm that couldn’t storm → On the small delay that makes a brainstorm actually storm. By Hiroshi Sato Questions every tool should answer (even Figma) → Understan…",
+    "image": "",
+    "valueTags": [
+      "web_reference",
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  }
+]
