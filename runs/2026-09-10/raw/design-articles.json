@@ -1,0 +1,710 @@
+[
+  {
+    "title": "AI 전사 도입 시대, 스마트워커 되기",
+    "link": "https://pxdstory.tistory.com/1924",
+    "pubDate": "Thu, 10 Sep 2026 07:50:39 +0900",
+    "content": "들어가며 얼마 전 \"AI 전사 시대, 스마트워커로 살아남는 법\"라는 강의를 듣고 왔습니다. 하루 만에 Claude Code의 핵심과 실무 활용법을 쭉 훑어보는 알찬 시간이었어요. 강의를 듣는 내내 머릿속에 계속 맴돌던 핵심 문장이 하나 있었습니다. \"이제는 내가 직접 일하기보다, AI 인부 5~10명을 관리하는 현장 감독이 되어야 한다.\" 코드를 직접 짜는 개발자뿐만 아니라, 저 같은 비개발자나 일반 실무자도 '관리자 마인드'로 AI를 대할 때 비로소 일의 생산성이 폭발한다는 이야기였죠. 오늘은 강의에서 인상 깊었던 핵심 인사이트와 실습에서 배운 유용한 실무 팁을 함께 정리해 보았습니다. 1. 시대의 변화: 프롬프트 입력에서 '현장 감독'으로 예전의 AI 활용이 \"프롬프트 하나 잘 던지는 기술\"이었다면, 이제는 여러 AI 에이전트에게 역할을 나누어 맡기고 결과를 검수하는 '관리자의 역량'이 중요해졌습니다. 일반 챗봇: '뇌'만 있어서 질문에 답을 알려주는 수준 Claude Code: '뇌 + 손'이 결합되어 실제 파…",
+    "image": "",
+    "valueTags": [
+      "design_ai_workflow"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "Mono-color Skill, 단색 인쇄 디자인 스킬",
+    "link": "https://designcompass.org/2026/09/08/mono-color-editorial-print-skill/",
+    "pubDate": "Thu, 10 Sep 2026 01:00:24 GMT",
+    "content": "주제, 문장, 사진을 단색 또는 제한된 2색 인쇄물 형식의 이미지로 바꾸는 디자인 스킬입니다. GitHub에 공개된 설명에 따르면 이 스킬은 포스터, 진, 초상, 패키지, 비주얼 노트 등에 쓰이는 편집 그래픽 생성을 목표로 합니다. 이 스킬은 사진에 단색 필터를 씌우는 방식이 아닙니다. 입력된 대상과 의도, 문구, 이미지 역할을 읽고 화면을 다시 구성합니다.",
+    "image": "https://designcompass.org/wp-content/uploads/2026/09/Mono-Color-Skill-Editorial-Print-5-scaled.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "최고의 텍스트 필드 디자인 하는 법",
+    "link": "https://designcompass.org/2026/09/04/how-to-design-the-best-text-fields/",
+    "pubDate": "Thu, 10 Sep 2026 01:00:24 GMT",
+    "content": "텍스트 필드는 사용자가 버튼이나 선택지로는 전달하기 어려운 정보를 직접 입력하는 기본 입력 요소입니다. 이름, 이메일, 주소, 검색어, 메모처럼 사용자의 상황에 따라 내용이 달라지는 정보를 받을 때 사용합니다. 주로 키보드를 통해 입력하지만, 모바일 환경에서는 음성 입력, 자동 완성, 스캔, 저장된 정보 불러오기와 함께 쓰이기도 합니다.",
+    "image": "https://designcompass.org/wp-content/uploads/2026/09/text-field-thumbnail-1.png",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "버스데이, 서울라이트 DDP 2026 가을서 실시간 미디어아트 ‘The Break Point’ 선보여",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40713&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 10 Sep 2026 01:00:19 GMT",
+    "content": "미디어아트 레이블 버스데이(VERSEDAY)가 ‘서울라이트 DDP 2026 가을’에서 라이브 퍼포먼스와 실시간 미디어아트를 결합한 새로운 형식의 작품 ‘The Break Point’를 선보인다. 버스데이가 기획...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260910091310734_7292.0.jpg",
+    "valueTags": [
+      "korean_reference",
+      "promotion_event_design"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "대한민국의 가을이 미술로 물들다…",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40711&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 10 Sep 2026 01:00:19 GMT",
+    "content": "매년 개최되는 예술 문화 행사 중 내가 가장 기다리는 것은 바로",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260904090807180_2339.0.jpg",
+    "valueTags": [
+      "korean_reference",
+      "promotion_event_design"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "가을빛 궁궐에서 만나는 특별한 시간 ‘궁중문화축전’",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40710&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 10 Sep 2026 01:00:19 GMT",
+    "content": "국가유산청 궁능유적본부(본부장 조규형)는 국가유산청 산하 국가유산진흥원(원장 이귀영)과 함께 ‘2026 가을 궁중문화축전’을 오는 10월 7일(수)부터 11일(일)까지 5일간 경복궁·창덕궁·덕수궁·창경궁과 종묘...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260903023112410_560.0.png",
+    "valueTags": [],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "현대자동차그룹 ‘2026 IDEA 디자인 어워드’ 16개 부문 수상",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40708&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 10 Sep 2026 01:00:19 GMT",
+    "content": "현대자동차그룹은 미국 산업디자인협회(IDSA, Industrial Design Society of America)가 주관하는 ‘2026 IDEA 디자인 어워드(International Design Excelle...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20260903022457813_3950.0.jpg",
+    "valueTags": [],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "“현장에 답이 있다” 현대차, UX 실무자 행사 &#039;UX 살롱&#039; 참관",
+    "link": "https://ditoday.com/%ed%98%84%ec%9e%a5%ec%97%90-%eb%8b%b5%ec%9d%b4-%ec%9e%88%eb%8b%a4-%ed%98%84%eb%8c%80%ec%b0%a8-ux-%ec%8b%a4%eb%ac%b4%ec%9e%90-%ed%96%89%ec%82%ac-ux-%ec%82%b4%eb%a1%b1-%ea%b0%9c/",
+    "pubDate": "Thu, 10 Sep 2026 01:00:13 GMT",
+    "content": "2일 UX 스튜디오 서울서 진행... 강연 및 네트워킹",
+    "image": "https://ditoday.com/wp-content/uploads/2026/09/KakaoTalk_20260903_115444331_04.jpg",
+    "valueTags": [
+      "korean_reference",
+      "promotion_event_design",
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "DIGITAL iNSIGHT - UIUX",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "합성 사용자(Synthetic User)를 보는 세 가지 기준",
+    "link": "https://pxdstory.tistory.com/1923",
+    "pubDate": "Mon, 7 Sep 2026 03:05:29 +0900",
+    "content": "합성 사용자(Synthetic User)를 보는 세 가지 기준 1. Overview [바로가기] 2. Anchor [바로가기] 3. Align [바로가기] 4. Act Act 합성 사용자는 대부분 질문에 잘 대답하는 사용자에서 출발했습니다. 그런데 합성 사용자에게 UX에 대한 의견을 구하게 되면서 의견을 생성하는 것을 넘어 실제 행동으로 경험을 할 수 있게 해야 합니다. 그래서 점점 궁금해지죠. 이 합성 사용자는 실제 사람의 경험 중에서 어디까지 행동할 수 있는가? (What can this synthetic user actually do?) Act의 자율성 합성 사용자의 행동 수준은 어떤 스펙트럼을 구성할까요? 답변 Answer 합성 사용자는 백그라운드, 니즈, 목표, 속성, 페인포인트, 선호도 등의 정보를 바탕으로 ‘이 기능을 어떻게 생각하세요?’ ‘무엇이 가장 걱정되나요?’ ‘왜 이 브랜드를 선택하겠어요?’와 같은 질문에 대해서 대답합니다. 또는 인터뷰, 서베이와 같은 리서치에 참여하여 질문에 대답하고 의견을…",
+    "image": "",
+    "valueTags": [
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "💌 디자이너라면 꼭 알아야 할 ‘버내큘러 디자인’",
+    "link": "https://stib.ee/QkGO",
+    "pubDate": "2026-09-09T12:00:32.051351475+09:00",
+    "content": "#인스타트렌드 #버내큘러디자인 #효리수앨범폰트",
+    "image": "",
+    "valueTags": [
+      "visual_trend"
+    ],
+    "scraped": true,
+    "source": "노폴레터 (Notefolio)",
+    "sourceUrl": "https://page.stibee.com/archives/75270/emails",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_newsletter",
+    "topics": [
+      "디자인 트렌드",
+      "타이포그래피",
+      "레퍼런스",
+      "전시·팝업"
+    ]
+  },
+  {
+    "title": "Good isn’t good enough: beware the design middle ground",
+    "link": "https://www.itsnicethat.com/articles/pov-good-isnt-good-enough-beware-the-design-middle-ground-creative-industry-070926",
+    "pubDate": "Thu, 10 Sep 2026 01:01:23 GMT",
+    "content": "Design is getting less weird, and the pull to the centre grows stronger every day. Aporva Baxi looks at why this happens through the “accumulation of reasonable decisions” and how to fight back.",
+    "image": "https://m.itsnicethat.com/original_images/45_POV_Meta.png?class=w1440",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Gabriel Abascal’s ethereal graphic design evokes daydreams of childhood clip art, Nintendogs and Hannah Montana CDs",
+    "link": "https://www.itsnicethat.com/articles/gabriel-abascal-graphic-design-art-discover-070926",
+    "pubDate": "Thu, 10 Sep 2026 01:01:23 GMT",
+    "content": "As a means of healing his twelve-year-old self, this graphic designer reaches through the surreality of internet ephemera to unlock the person he always wanted to be, with the help of glowing labradors, esoteric diagrams and digital collage.",
+    "image": "https://m.itsnicethat.com/original_images/gabriel_abascal_the_song_i_wrote_u_in_the_dark__2026.png?class=w1440",
+    "valueTags": [
+      "look_and_feel"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Mac Moss Studio designs the identity for KEEN’s move into trail running — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/mac-moss-studio-designs-the-identity-for-keens-move-into-trail-running",
+    "pubDate": "Thu, 10 Sep 2026 01:00:52 GMT",
+    "content": "KEEN was founded in 2003 and is known as ‘the original hybrid shoe’ across sandals, hiking and utility. In 2026, it moved into the trail running category for the first time – launching the Seek, Roam and Wander. “Running is a natural extension of our existing product range,” KEEN’s Associate Creative Director Sean Coggins explains. “As categories like fast-and-light hiking and thru-hiking have evolved, the natural progression is towards moving faster. Running was the next logical step. What connects the range is l…",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/09/mac-moss-studio-designs-the-identity-for-keens-move-into-trail-running/Keen-Running-FW26-Mac-Moss-Studio-01.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "SOCIO designs the identity for Modern Chemistry, a Boots own brand — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/socio-designs-the-identity-for-modern-chemistry-a-boots-own-brand",
+    "pubDate": "Thu, 10 Sep 2026 01:00:52 GMT",
+    "content": "Modern Chemistry is Boots’ advanced skin and nutritional health brand, with an ingredient-led range developed by the British pharmacy chain’s in-house team of pharmacists, doctors, nutritionists, biochemists and cosmetic chemists. London-based creative studio SOCIO was commissioned to create the brand strategy, identity, packaging system and art direction. “Boots approached us with the name Modern Chemistry and a clear vision to create a heritage-inspired own brand focused on affordable, high-performing formulatio…",
+    "image": "https://the-brandidentity.com/uploads/videos/12501821.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Skogen borrows from scouting, not tech, for GridScout’s identity — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/skogen-borrows-from-scouting-not-tech-for-gridscouts-identity",
+    "pubDate": "Thu, 10 Sep 2026 01:00:52 GMT",
+    "content": "GridScout makes sensor units that bolt to power-line poles and sit out in Norwegian weather at its most extreme – picking up vibration, temperature, moisture, woodpecker damage and pole tilt long before any of it becomes an outage. The units deter woodpeckers as well, playing the call of a rival bird. Most of the people that GridScout is built for are former scouts once, or at least spend their free time hunting and hiking.",
+    "image": "https://the-brandidentity.com/uploads/videos/12344070.jpg",
+    "valueTags": [
+      "layout_pattern",
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Take five with POV Budapest: how Alright Studio builds work to last — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/interview/take-five-with-pov-budapest-how-alright-studio-builds-work-to-last",
+    "pubDate": "Thu, 10 Sep 2026 01:00:52 GMT",
+    "content": "Alright Studio spent much of the past half-decade finding out how much it could do, and is now more interested in what it can do exceptionally well. For the Brooklyn-based studio, founded in 2017, that means a smaller core team, closer collaboration and more emphasis on design as a craft. It thinks less in terms of separate disciplines, because the big idea has to work across an identity, website, product and campaign. At POV Budapest 2026, Partners Spencer Joynt and Garrett DeRossett are giving a talk called ‘Aft…",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/09/take-five-with-pov-budapest-how-alright-studio-builds-work-to-last/Spencer-Alright-Studio-01_2026-09-03-031641_gmof.jpg",
+    "valueTags": [
+      "web_reference",
+      "look_and_feel",
+      "brand_expression",
+      "promotion_event_design",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Fermentation science shapes Love + Money’s identity for Omega Yeast — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/fermentation-science-shapes-love-moneys-identity-for-omega-yeast",
+    "pubDate": "Thu, 10 Sep 2026 01:00:52 GMT",
+    "content": "Omega is a Chicago-based brewing technology company that uses brewing science to get more out of yeast. “There are hundreds of beautiful strains available, and the overwhelming majority (~95%) of the world’s beer is made with a handful of them,” explains Brand & Marketing Lead Bill McFarland. “The catalogue had grown past the point where our identity could carry it. We hit the ceiling and our brand began to get confusing as we rolled out new products. With roughly 100 strains, multiple product tiers and global amb…",
+    "image": "https://the-brandidentity.com/uploads/videos/12114703.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "How do you build a brand for an organisation fighting disinformation? Studio Cronica explains — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/how-do-you-build-a-brand-for-an-organisation-fighting-disinformation-studio-cronica-explains",
+    "pubDate": "Thu, 10 Sep 2026 01:00:52 GMT",
+    "content": "In a world rife with disinformation, the European Media and Information Fund (EMIF) is doing some special work. By combating the burgeoning growth of disinformation, the collaborative initiative aims to support media literacy across Europe. To do so, it provides grants to projects dedicated to improving the quality of information in the digital age, enhancing the public’s ability to critically engage with the information they’re handed, resulting in a more informed, resilient European society. The initiative – fou…",
+    "image": "https://the-brandidentity.com/uploads/articles/2024/07/how-do-you-build-a-brand-for-an-organisation-fighting-disinformation-studio-cronica-explains/EMIF-StudioCronica-1.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Koto dials everyday life up to 11 in its maximalist identity system for collaborative app Fluz — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/koto-dials-everyday-life-up-to-11-in-its-maximalist-identity-system-for-collaborative-app-fluz",
+    "pubDate": "Thu, 10 Sep 2026 01:00:52 GMT",
+    "content": "Anchored in the concept of ‘Life On Max,’ the glistening, glittering, bombastic look for banking platform Fluz is beyond the realm of reality. It’s “everyday life, dialled way up.” Created by the team at Koto New York, the challenge was to communicate the power of this unique collaborative earning app in simple terms while creating a brand experience full of possibility.",
+    "image": "https://the-brandidentity.com/uploads/articles/2025/03/koto-dials-everyday-life-up-to-11-in-its-maximalist-identity-system-for-collaborative-app-fluz/Fluz-Koto-1.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "To brand Connected Wight, Thump Studio distils the true beauty of their home, the Isle of Wight — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/to-brand-connected-wight-thump-studio-distils-the-true-beauty-of-their-home-the-isle-of-wight",
+    "pubDate": "Thu, 10 Sep 2026 01:00:52 GMT",
+    "content": "Thump Studio, a multi-disciplinary brand and design studio based on the Isle of Wight, has created an energetic and resonant identity and visual language for Connected Wight, a web portal that connects various aspects of life on the Isle of Wight, an island off the south coast of England. “We were approached by the four founders of Connected Wight – Brian Marriott, Simon Dover, Stephen Izatt and Barnaby Edwards, each with an admirable background in the creative industry,” explains Creative Director Samuel Tinson-W…",
+    "image": "https://the-brandidentity.com/uploads/articles/2024/06/to-brand-connected-wight-thump-studio-distils-the-true-beauty-of-their-home-the-isle-of-wight/CW-Thump-1.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "CMS List Field",
+    "link": "https://www.framer.com/updates/updates/cms-list-field",
+    "pubDate": "Thu, 10 Sep 2026 01:01:24 GMT",
+    "content": "CMS List Field",
+    "image": "",
+    "valueTags": [],
+    "scraped": true,
+    "source": "Framer Updates",
+    "sourceUrl": "https://www.framer.com/updates/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "prototyping",
+    "topics": []
+  },
+  {
+    "title": "What Shakespeare got right about AI",
+    "link": "https://uxdesign.cc/what-shakespeare-got-right-about-ai-4369fc16ab2b?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 09 Sep 2026 23:04:39 GMT",
+    "content": "From ink and quill to glowing code: Shakespeare’s exploration of prophecy and equivocation, the art of speaking truths that mislead, anticipates the central challenge of our own relationship with artificial intelligence. Every warning we need about AI was written four hundred years ago. What witches, a forged letter, and a haunted prince can teach you about talking to a machine. The sharpest words ever written about artificial intelligence came from a man who never had electricity, a telephone, or a single line of…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The origins — the birth, lonely childhood, and adoption of software",
+    "link": "https://uxdesign.cc/the-origins-the-birth-lonely-childhood-and-adoption-of-software-59e3013c3c23?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 09 Sep 2026 23:04:27 GMT",
+    "content": "Side A, meaning is irrelevant to the problem Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The Death Of The Button: Why The Best Interface Is No Interface",
+    "link": "https://smashingmagazine.com/2026/09/death-button-why-best-interface-is-no-interface/",
+    "pubDate": "Wed, 09 Sep 2026 10:00:00 GMT",
+    "content": "TThe web is evolving beyond menus, forms, and endless clicks toward experiences shaped around human intent. For UX designers, understanding this shift means re-evaluating their role, moving from designing visible interfaces to guiding transparent, intent-driven AI experiences.",
+    "image": "http://files.smashing.media/articles/death-button-why-best-interface-is-no-interface/death-button-why-best-interface-is-no-interface.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Persistent lessons in human-centered automation",
+    "link": "https://uxdesign.cc/persistent-lessons-in-human-centered-automation-45b53412e6a5?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 08 Sep 2026 20:34:18 GMT",
+    "content": "What a 1980s photocopier study reveals about the Agentic UX era A mixed-media recreation of a field observation at Bossa Nova Robotics, where a shopper attempts to scan a container of blueberries against an autonomous inventory robot. During my time as a User Researcher at Bossa Nova Robotics , I conducted multiple studies in grocery store aisles watching our inventory-assessing robot do its job. My objective was to identify moments when the robot had to pause because of obstructions or human interference. The goa…",
+    "image": "",
+    "valueTags": [
+      "look_and_feel",
+      "commerce_design",
+      "korean_uiux_case",
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "If you can externalize your design process, you can win back your time",
+    "link": "https://uxdesign.cc/if-you-can-externalize-your-design-process-you-can-win-back-your-time-59c531521346?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 08 Sep 2026 11:13:56 GMT",
+    "content": "How Skill.MD helps you spell out the depth of your work for your team and organization Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "AI canvas, Synthetic self, The prompt is the product",
+    "link": "https://uxdesign.cc/ai-canvas-synthetic-self-the-prompt-is-the-product-801f0da7bea6?source=rss----138adf9c44c---4",
+    "pubDate": "Sun, 06 Sep 2026 23:49:45 GMT",
+    "content": "Weekly curated resources for designers — thinkers and makers. “AI coding agents are bringing some of that interaction model back. You can describe an outcome and let the agent decide which commands to run, which files to change and which tests to execute. You no longer have to operate the software step by step, but a familiar design problem comes back in another form: What did the system understand? What is it doing? What has it changed? What can I stop? What should I review? The interface is no longer just someth…",
+    "image": "",
+    "valueTags": [
+      "motion_interaction",
+      "prototyping",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The Many Faces Of September (2026 Wallpapers Edition)",
+    "link": "https://smashingmagazine.com/2026/08/desktop-wallpaper-calendars-september-2026/",
+    "pubDate": "Mon, 31 Aug 2026 11:00:00 GMT",
+    "content": "Could there be a better way to welcome the new month than with a new collection of desktop wallpapers? Whether you’re holding tightly onto summer or eagerly awaiting autumn, we’ve got some eye-catching designs to make your September just a bit more colorful. Enjoy!",
+    "image": "http://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/55161fb1-16dc-47e1-a118-5ecd0f0a3fbb/sept-17-autumn-rains-preview-opt.png",
+    "valueTags": [
+      "visual_trend",
+      "look_and_feel",
+      "commerce_design",
+      "commerce_campaign_design",
+      "design_ai_workflow"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "Tetris had to cheat to feel random",
+    "link": "https://uxdesign.cc/tetris-had-to-cheat-to-feel-random-201913dc69ed?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 07 Sep 2026 22:27:53 GMT",
+    "content": "Nobody can see a probability distribution. You only ever see a sequence, and sequences are where human intuition falls apart. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The model is behaving impeccably. Your information architecture isn’t.",
+    "link": "https://uxdesign.cc/the-model-is-behaving-impeccably-your-information-architecture-isnt-bfe8881da3c2?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 07 Sep 2026 22:27:32 GMT",
+    "content": "What a 1960 study of city maps explains about AI context. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The sycophancy trap: what happens when feelings become the metric",
+    "link": "https://uxdesign.cc/the-sycophancy-trap-what-happens-when-feelings-become-the-metric-14a4f1f26a75?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 07 Sep 2026 22:27:01 GMT",
+    "content": "A framework for emotional design that survives contact with an engagement dashboard Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "motion_interaction",
+      "korean_uiux_case",
+      "prototyping"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Villains plan. Heroes react.",
+    "link": "https://uxdesign.cc/villains-plan-heroes-react-ee012a510ecb?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 07 Sep 2026 22:26:09 GMT",
+    "content": "What product teams should borrow from the people who want to take over the world. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "layout_pattern",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  }
+]
