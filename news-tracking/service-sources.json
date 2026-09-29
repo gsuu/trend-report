@@ -450,5 +450,292 @@
       "excludeTitlePatterns": ["부고|인사이동|채용|날씨"],
       "limit": 12
     }
-  ]
+  ],
+  "naverSearch": [
+    {
+      "name": "네이버 블로그 · 무신사 앱 개편",
+      "query": "무신사 앱 개편",
+      "api": "blog",
+      "category": "fashion",
+      "sourceRole": "discovery",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "display": 50,
+      "limit": 4,
+      "includeTitlePatterns": [
+        "개편|리뉴얼|업데이트|신규 기능|새 기능|기능 추가|출시|론칭|런칭|도입|오픈|베타|새롭게|달라진|바뀐"
+      ],
+      "excludeTitlePatterns": [
+        "체험단|협찬|원고료|제공받아|내돈내산|구매후기|하울|언박싱|쿠폰 코드|추천인|적립금 받는|이벤트 당첨|채용|주가|공모주"
+      ]
+    },
+    {
+      "name": "네이버 블로그 · 29CM 새 기능",
+      "query": "29CM 새 기능",
+      "api": "blog",
+      "category": "fashion",
+      "sourceRole": "discovery",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "display": 50,
+      "limit": 4,
+      "includeTitlePatterns": [
+        "개편|리뉴얼|업데이트|신규 기능|새 기능|기능 추가|출시|론칭|런칭|도입|오픈|베타|새롭게|달라진|바뀐"
+      ],
+      "excludeTitlePatterns": [
+        "체험단|협찬|원고료|제공받아|내돈내산|구매후기|하울|언박싱|쿠폰 코드|추천인|적립금 받는|이벤트 당첨|채용|주가|공모주"
+      ]
+    },
+    {
+      "name": "네이버 블로그 · W컨셉 앱 업데이트",
+      "query": "W컨셉 앱 업데이트",
+      "api": "blog",
+      "category": "fashion",
+      "sourceRole": "discovery",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "display": 50,
+      "limit": 4,
+      "includeTitlePatterns": [
+        "개편|리뉴얼|업데이트|신규 기능|새 기능|기능 추가|출시|론칭|런칭|도입|오픈|베타|새롭게|달라진|바뀐"
+      ],
+      "excludeTitlePatterns": [
+        "체험단|협찬|원고료|제공받아|내돈내산|구매후기|하울|언박싱|쿠폰 코드|추천인|적립금 받는|이벤트 당첨|채용|주가|공모주"
+      ]
+    },
+    {
+      "name": "네이버 블로그 · 에이블리 신규 서비스",
+      "query": "에이블리 신규 서비스",
+      "api": "blog",
+      "category": "fashion",
+      "sourceRole": "discovery",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "display": 50,
+      "limit": 4,
+      "includeTitlePatterns": [
+        "개편|리뉴얼|업데이트|신규 기능|새 기능|기능 추가|출시|론칭|런칭|도입|오픈|베타|새롭게|달라진|바뀐"
+      ],
+      "excludeTitlePatterns": [
+        "체험단|협찬|원고료|제공받아|내돈내산|구매후기|하울|언박싱|쿠폰 코드|추천인|적립금 받는|이벤트 당첨|채용|주가|공모주"
+      ]
+    },
+    {
+      "name": "네이버 블로그 · 지그재그 앱 개편",
+      "query": "지그재그 앱 개편",
+      "api": "blog",
+      "category": "fashion",
+      "sourceRole": "discovery",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "display": 50,
+      "limit": 4,
+      "includeTitlePatterns": [
+        "개편|리뉴얼|업데이트|신규 기능|새 기능|기능 추가|출시|론칭|런칭|도입|오픈|베타|새롭게|달라진|바뀐"
+      ],
+      "excludeTitlePatterns": [
+        "체험단|협찬|원고료|제공받아|내돈내산|구매후기|하울|언박싱|쿠폰 코드|추천인|적립금 받는|이벤트 당첨|채용|주가|공모주"
+      ]
+    },
+    {
+      "name": "네이버 블로그 · 올리브영 앱 새 기능",
+      "query": "올리브영 앱 새 기능",
+      "api": "blog",
+      "category": "beauty",
+      "sourceRole": "discovery",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "display": 50,
+      "limit": 4,
+      "includeTitlePatterns": [
+        "개편|리뉴얼|업데이트|신규 기능|새 기능|기능 추가|출시|론칭|런칭|도입|오픈|베타|새롭게|달라진|바뀐"
+      ],
+      "excludeTitlePatterns": [
+        "체험단|협찬|원고료|제공받아|내돈내산|구매후기|하울|언박싱|쿠폰 코드|추천인|적립금 받는|이벤트 당첨|채용|주가|공모주"
+      ]
+    },
+    {
+      "name": "네이버 블로그 · 쿠팡 와우 멤버십 변경",
+      "query": "쿠팡 와우 멤버십 변경",
+      "api": "blog",
+      "category": "ecommerce",
+      "sourceRole": "discovery",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "display": 50,
+      "limit": 4,
+      "includeTitlePatterns": [
+        "개편|리뉴얼|업데이트|신규 기능|새 기능|기능 추가|출시|론칭|런칭|도입|오픈|베타|새롭게|달라진|바뀐"
+      ],
+      "excludeTitlePatterns": [
+        "체험단|협찬|원고료|제공받아|내돈내산|구매후기|하울|언박싱|쿠폰 코드|추천인|적립금 받는|이벤트 당첨|채용|주가|공모주"
+      ]
+    },
+    {
+      "name": "네이버 블로그 · 컬리 멤버스 개편",
+      "query": "컬리 멤버스 개편",
+      "api": "blog",
+      "category": "ecommerce",
+      "sourceRole": "discovery",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "display": 50,
+      "limit": 4,
+      "includeTitlePatterns": [
+        "개편|리뉴얼|업데이트|신규 기능|새 기능|기능 추가|출시|론칭|런칭|도입|오픈|베타|새롭게|달라진|바뀐"
+      ],
+      "excludeTitlePatterns": [
+        "체험단|협찬|원고료|제공받아|내돈내산|구매후기|하울|언박싱|쿠폰 코드|추천인|적립금 받는|이벤트 당첨|채용|주가|공모주"
+      ]
+    },
+    {
+      "name": "네이버 블로그 · 네이버플러스 스토어 새 기능",
+      "query": "네이버플러스 스토어 새 기능",
+      "api": "blog",
+      "category": "platform_commerce",
+      "sourceRole": "discovery",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "display": 50,
+      "limit": 4,
+      "includeTitlePatterns": [
+        "개편|리뉴얼|업데이트|신규 기능|새 기능|기능 추가|출시|론칭|런칭|도입|오픈|베타|새롭게|달라진|바뀐"
+      ],
+      "excludeTitlePatterns": [
+        "체험단|협찬|원고료|제공받아|내돈내산|구매후기|하울|언박싱|쿠폰 코드|추천인|적립금 받는|이벤트 당첨|채용|주가|공모주"
+      ]
+    },
+    {
+      "name": "네이버 웹문서 · 패션 플랫폼 신규 서비스 출시",
+      "query": "패션 플랫폼 신규 서비스 출시",
+      "api": "webkr",
+      "category": "fashion",
+      "sourceRole": "discovery",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "display": 30,
+      "limit": 6,
+      "includeTitlePatterns": [
+        "개편|리뉴얼|업데이트|신규 기능|새 기능|기능 추가|출시|론칭|런칭|도입|오픈|베타|새롭게|달라진|바뀐"
+      ],
+      "excludeTitlePatterns": [
+        "체험단|협찬|원고료|제공받아|내돈내산|구매후기|하울|언박싱|쿠폰 코드|추천인|적립금 받는|이벤트 당첨|채용|주가|공모주"
+      ],
+      "excludeLinkPatterns": [
+        "blog\\.naver\\.com|cafe\\.naver\\.com|tistory\\.com|smartstore\\.naver\\.com|brand\\.naver\\.com|/product/|/goods/"
+      ]
+    },
+    {
+      "name": "네이버 웹문서 · 뷰티 플랫폼 앱 신규 기능 도입",
+      "query": "뷰티 플랫폼 앱 신규 기능 도입",
+      "api": "webkr",
+      "category": "beauty",
+      "sourceRole": "discovery",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "display": 30,
+      "limit": 6,
+      "includeTitlePatterns": [
+        "개편|리뉴얼|업데이트|신규 기능|새 기능|기능 추가|출시|론칭|런칭|도입|오픈|베타|새롭게|달라진|바뀐"
+      ],
+      "excludeTitlePatterns": [
+        "체험단|협찬|원고료|제공받아|내돈내산|구매후기|하울|언박싱|쿠폰 코드|추천인|적립금 받는|이벤트 당첨|채용|주가|공모주"
+      ],
+      "excludeLinkPatterns": [
+        "blog\\.naver\\.com|cafe\\.naver\\.com|tistory\\.com|smartstore\\.naver\\.com|brand\\.naver\\.com|/product/|/goods/"
+      ]
+    },
+    {
+      "name": "네이버 웹문서 · 이커머스 앱 UX 개편",
+      "query": "이커머스 앱 UX 개편",
+      "api": "webkr",
+      "category": "ecommerce",
+      "sourceRole": "discovery",
+      "locale": "KR",
+      "priority": "priority_commerce",
+      "display": 30,
+      "limit": 6,
+      "includeTitlePatterns": [
+        "개편|리뉴얼|업데이트|신규 기능|새 기능|기능 추가|출시|론칭|런칭|도입|오픈|베타|새롭게|달라진|바뀐"
+      ],
+      "excludeTitlePatterns": [
+        "체험단|협찬|원고료|제공받아|내돈내산|구매후기|하울|언박싱|쿠폰 코드|추천인|적립금 받는|이벤트 당첨|채용|주가|공모주"
+      ],
+      "excludeLinkPatterns": [
+        "blog\\.naver\\.com|cafe\\.naver\\.com|tistory\\.com|smartstore\\.naver\\.com|brand\\.naver\\.com|/product/|/goods/"
+      ]
+    }
+  ],
+  "naverTrend": {
+    "timeUnit": "week",
+    "days": 56,
+    "keywordGroups": [
+      {
+        "groupName": "무신사",
+        "keywords": [
+          "무신사",
+          "MUSINSA"
+        ]
+      },
+      {
+        "groupName": "29CM",
+        "keywords": [
+          "29CM",
+          "이구씨엠"
+        ]
+      },
+      {
+        "groupName": "W컨셉",
+        "keywords": [
+          "W컨셉",
+          "더블유컨셉"
+        ]
+      },
+      {
+        "groupName": "에이블리",
+        "keywords": [
+          "에이블리"
+        ]
+      },
+      {
+        "groupName": "지그재그",
+        "keywords": [
+          "지그재그"
+        ]
+      },
+      {
+        "groupName": "올리브영",
+        "keywords": [
+          "올리브영"
+        ]
+      },
+      {
+        "groupName": "쿠팡",
+        "keywords": [
+          "쿠팡"
+        ]
+      },
+      {
+        "groupName": "컬리",
+        "keywords": [
+          "컬리",
+          "마켓컬리"
+        ]
+      },
+      {
+        "groupName": "SSG닷컴",
+        "keywords": [
+          "SSG닷컴",
+          "쓱닷컴"
+        ]
+      },
+      {
+        "groupName": "네이버플러스 스토어",
+        "keywords": [
+          "네이버플러스 스토어",
+          "네이버쇼핑"
+        ]
+      }
+    ]
+  }
 }

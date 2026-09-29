@@ -13,6 +13,7 @@
     "tracking:brief": "node scripts/tracking/collect_materials.mjs --no-fetch",
     "tracking:workflow": "node scripts/tracking/automation_runner.mjs",
     "tracking:quality": "node scripts/tracking/workflow_quality_gate.mjs",
+    "naver:check": "node scripts/collect/naver_api_hub.mjs",
     "feedback:template": "node scripts/feedback/generate_template.mjs",
     "feedback:apply": "node scripts/feedback/apply_feedback.mjs",
     "feedback:score": "node scripts/feedback/score_priority.mjs",

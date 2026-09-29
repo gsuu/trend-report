@@ -87,6 +87,8 @@ CTTD 매거진은 패션·뷰티·라이프스타일 이커머스 프로젝트�
 
 - 커뮤니티, SNS, 블로그, 채용공고
 - 이 출처는 단서로만 사용합니다. 메인 리포트에 쓰려면 1순위 또는 2순위 출처로 재확인합니다.
+- SERVICE 수집은 NAVER API HUB(블로그·웹문서 검색)로 우선 관찰 브랜드의 앱 개편·신규 기능 단서를 자동으로 모읍니다(`news-tracking/service-sources.json`의 `naverSearch`). 결과는 `sourceRole: discovery`로 들어가며, 블로그 글 자체를 원문으로 쓰지 않고 공식 뉴스룸·앱스토어 업데이트 노트로 역추적합니다.
+- 같은 수집에서 데이터랩 검색어트렌드(`naverTrend`)를 `runs/YYYY-MM-DD/raw/service-naver-trend.json`으로 남깁니다. 브랜드 관심도 변화 맥락용이며, 비율은 같은 요청 묶음(`batch`) 안에서만 비교합니다.
 
 ### 확장 수집 후보
 
