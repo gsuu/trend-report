@@ -24,7 +24,6 @@ import {
   uniqueArticles,
   writeFetchOutput,
 } from "./tracking_utils.mjs";
-import { hasNaverApiHubCredentials, searchBlog, searchTrend, searchWeb } from "../collect/naver_api_hub.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -218,90 +217,6 @@ async function fetchSitemap(source, since, seenPreviousLinks) {
   }
 }
 
-// "20260925" → Date. 블로그 검색 응답의 postdate 형식.
-function parseNaverPostdate(value = "") {
-  const match = String(value).match(/^(\d{4})(\d{2})(\d{2})$/);
-  return match ? new Date(`${match[1]}-${match[2]}-${match[3]}T00:00:00+09:00`) : null;
-}
-
-// NAVER API HUB 블로그·웹문서 검색. 공식 채널이 놓친 서비스 변화를 찾는 발견 경로라서
-// sourceRole은 기본 discovery — 글쓰기 전 source-verifier가 최종 기준 원문을 따로 찾는다.
-async function fetchNaverSearch(source, since, seenPreviousLinks) {
-  try {
-    const display = Math.min(source.display || 30, 100);
-    const isBlog = source.api === "blog";
-    const data = isBlog
-      ? await searchBlog(source.query, { display, sort: source.sort || "date" })
-      : await searchWeb(source.query, { display });
-
-    const candidates = data.items
-      .map((item) => {
-        const postdate = isBlog ? parseNaverPostdate(item.postdate) : null;
-        return { ...item, postdate };
-      })
-      // 웹문서 검색은 날짜가 없어 이전 회차에 본 링크로만 신선도를 거른다.
-      .filter((item) => (item.postdate ? item.postdate >= since : !seenPreviousLinks.has(item.link)))
-      .filter((item) => matchesAny(`${item.title} ${item.description}`, source.includeTitlePatterns || []))
-      .filter((item) => matchesNone(`${item.title} ${item.description}`, source.excludeTitlePatterns || []))
-      .filter((item) => matchesAny(item.link, source.includeLinkPatterns || []))
-      .filter((item) => matchesNone(item.link, source.excludeLinkPatterns || []))
-      .slice(0, source.limit || 8);
-
-    const articles = [];
-    for (const item of candidates) {
-      const meta = await fetchArticleMeta(item.link, {
-        userAgent: "CTTD Service Article Metadata Scraper",
-        textLimit: 700,
-      });
-      articles.push({
-        title: cleanTitle(item.title),
-        link: item.link,
-        pubDate: item.postdate ? item.postdate.toUTCString() : new Date().toUTCString(),
-        content: item.description || meta.content || "",
-        image: meta.image || "",
-        scraped: !item.postdate,
-        searchQuery: source.query,
-        searchApi: isBlog ? "naver_blog" : "naver_webkr",
-        ...(isBlog ? { blogger: item.bloggername || "" } : {}),
-        ...articleFields({ sourceRole: "discovery", ...source }),
-      });
-    }
-    return { articles, error: "" };
-  } catch (error) {
-    console.error(`Error searching ${source.name}: ${error.message}`);
-    return { articles: [], error: error.message };
-  }
-}
-
-// 데이터랩 검색어트렌드. 후보 기사가 아니라 편집 맥락 자료라서 articles와 별도 파일로 남긴다.
-async function fetchNaverTrend(trendConfig, date) {
-  if (!trendConfig?.keywordGroups?.length) return null;
-  const end = new Date();
-  const start = new Date(end.getTime() - (trendConfig.days || 56) * 24 * 60 * 60 * 1000);
-  const iso = (value) => value.toISOString().slice(0, 10);
-  const results = [];
-  // API 한 번에 최대 5그룹.
-  for (let index = 0; index < trendConfig.keywordGroups.length; index += 5) {
-    const data = await searchTrend({
-      startDate: iso(start),
-      endDate: iso(end),
-      timeUnit: trendConfig.timeUnit || "week",
-      keywordGroups: trendConfig.keywordGroups.slice(index, index + 5),
-    });
-    results.push(...data.results.map((result) => ({
-      ...result,
-      // 같은 요청 안에서만 비교 가능한 상대값이라 요청 묶음 번호를 함께 남긴다.
-      batch: index / 5,
-      latestRatio: result.data.at(-1)?.ratio ?? null,
-      changeFromFirst: result.data.length > 1 ? Number((result.data.at(-1).ratio - result.data[0].ratio).toFixed(2)) : null,
-    })));
-  }
-  const outputPath = path.join(paths.rawDir(date), "service-naver-trend.json");
-  await fs.writeFile(outputPath, `${JSON.stringify({ date, startDate: iso(start), endDate: iso(end), results }, null, 2)}\n`, "utf8");
-  console.log(`Saved Naver search trend to ${outputPath}`);
-  return outputPath;
-}
-
 function sortArticles(a, b) {
   const priorityOrder = { priority_commerce: 0, priority_platform: 1 };
   const roleOrder = { official: 0, reference: 1, discovery: 2 };
@@ -343,26 +258,6 @@ async function main() {
     handler: (source) => fetchSitemap(source, since, seenPreviousLinks),
     articles, sourceResults,
   });
-
-  if (hasNaverApiHubCredentials()) {
-    console.log("Searching NAVER API HUB (blog/webkr)...");
-    await collectSourceGroup({
-      sources, key: "naverSearch", type: "naver_search", urlField: "query",
-      handler: (source) => fetchNaverSearch(source, since, seenPreviousLinks),
-      articles, sourceResults,
-    });
-    try {
-      await fetchNaverTrend(sources.naverTrend, date);
-    } catch (error) {
-      console.error(`Error fetching Naver search trend: ${error.message}`);
-      sourceResults.push({ name: "네이버 데이터랩 검색어트렌드", type: "naver_trend", url: "", status: "error", count: 0, error: error.message });
-    }
-  } else if ((sources.naverSearch || []).length) {
-    console.warn("NAVER_API_HUB_CLIENT_ID/SECRET 없음 — 네이버 검색 수집을 건너뜁니다.");
-    for (const source of sources.naverSearch) {
-      sourceResults.push({ name: source.name, type: "naver_search", url: source.query, status: "skipped", count: 0, error: "missing NAVER_API_HUB credentials" });
-    }
-  }
 
   const output = uniqueArticles(articles)
     .filter((article) => !isAutoExcluded(article.title, "service"))

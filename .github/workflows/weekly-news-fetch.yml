@@ -27,10 +27,6 @@ jobs:
 
       - name: Fetch service news
         run: npm run fetch:service
-        env:
-          # 비어 있으면 네이버 검색 수집만 건너뛰고 나머지는 그대로 진행한다.
-          NAVER_API_HUB_CLIENT_ID: ${{ secrets.NAVER_API_HUB_CLIENT_ID }}
-          NAVER_API_HUB_CLIENT_SECRET: ${{ secrets.NAVER_API_HUB_CLIENT_SECRET }}
         continue-on-error: true
 
       - name: Fetch design news
