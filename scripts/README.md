@@ -15,6 +15,15 @@
 - `fill_missing_images.py`: 최종 원고 작성 뒤 빈 공식 이미지 URL을 보강할 때만 사용합니다. 해상 순서는 `og:image → twitter:image → 플랫폼 도메인 폴백 → 앱스토어 이미지`. `--screenshot`를 주면 이 모두가 실패한 글에 한해 원문 페이지를 캡처해 `public/thumbnails/<id>.png`로 저장하고 절대 URL로 채웁니다(최후의 수단, Playwright 필요 / 출처 URL이 없는 글은 빈칸 유지). npm: `npm run images:fill -- <report.md>` / `npm run images:fill:shot -- <report.md>`. 캡처 스크립트는 `scripts/screenshot_fallback.mjs`.
 - `new_collection.py`: 카테고리별 관찰 포인트, DEV 필수 수집 원칙, 확장 출처 체크리스트입니다. 자동 실행 파일이 아니라 AI 편집 단계에서 읽는 기준 파일입니다.
 
+## keywords
+
+스튜디오·촬영 도메인의 네이버 검색 키워드 순위를 만든다. 매거진 발행 흐름과 분리된 별도 라인.
+
+- `fetch_studio_keywords.mjs`: `config/keywords/studio-keywords.json`의 전국 시드 30개와 17개 시·도 별칭 × 시드 용어를 힌트로 네이버 검색광고 키워드도구(연관키워드)를 호출해 **전국 Top 30 + 시·도별 Top 30**을 만든다. 전국 = 지역명 없는 키워드, 지역 = 해당 시·도 지역명이 들어간 키워드로 두 표는 겹치지 않는다. 산출물은 `runs/YYYY-MM-DD/keywords/`의 `studio-keywords.md`(표), `studio-keywords.json`(Top N + 관련 후보 전체), `studio-keywords-raw.json`(응답 원자료), `studio-keywords-fetch-report.json`(호출·실패 기록). 옵션: `--date=`, `--regions=서울,부산`, `--national-only`, `--regional-only`, `--limit=`, `--from=<raw.json>`(재요청 없이 설정만 바꿔 다시 산출).
+- `naver_searchad.mjs`: 검색광고 API 클라이언트(HMAC 서명, 키워드도구 호출, 429/5xx 재시도). `npm run naver:searchad-check -- --hint=촬영스튜디오`로 키 점검. 키는 `NAVER_SEARCHAD_API_KEY / NAVER_SEARCHAD_SECRET_KEY / NAVER_SEARCHAD_CUSTOMER_ID`.
+- `rank.mjs`: 원자료 병합·관련성 필터·지역 판정·정렬·Markdown 렌더링 순수 함수. 관련성 include/exclude와 지역 별칭은 설정 JSON에서 조정한다.
+- `env.mjs`: `.env.local` → `.env` 로더와 CLI 인자 헬퍼.
+
 ## notion
 
 Notion 업로드와 업로드 전 검증에만 사용합니다.
@@ -45,5 +54,6 @@ Notion 업로드와 업로드 전 검증에만 사용합니다.
 - DESIGN 후보만 새 기준으로 수집: `npm run fetch:design`
 - DEV 후보만 새 기준으로 수집: `npm run fetch:dev`
 - 기존 카테고리별 수집 결과로 편집 브리프만 재생성: `npm run tracking:brief`
+- 스튜디오·촬영 키워드 전국/시·도별 Top 30 수집: `npm run keywords:studio`
 - 최종 원고를 Notion에 업로드: `npm run notion:upload -- runs/YYYY-MM-DD/magazine-report.md`
 - Notion 데이터를 정적 JSON으로 내보내기: `npm run magazine:export-json`
