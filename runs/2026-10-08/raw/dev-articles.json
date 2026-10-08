@@ -1,0 +1,1886 @@
+[
+  {
+    "title": "당근 동네걷기 위에서 동시에 쏟아지는 오버레이들을 우아하게 제어하기",
+    "link": "https://medium.com/daangn/%EB%8B%B9%EA%B7%BC-%EB%8F%99%EB%84%A4%EA%B1%B7%EA%B8%B0-%EC%9C%84%EC%97%90%EC%84%9C-%EB%8F%99%EC%8B%9C%EC%97%90-%EC%8F%9F%EC%95%84%EC%A7%80%EB%8A%94-%EC%98%A4%EB%B2%84%EB%A0%88%EC%9D%B4%EB%93%A4%EC%9D%84-%EC%9A%B0%EC%95%84%ED%95%98%EA%B2%8C-%EC%A0%9C%EC%96%B4%ED%95%98%EA%B8%B0-097551289b2a?source=rss----4505f82a2dbd---4",
+    "pubDate": "Wed, 30 Sep 2026 03:32:44 GMT",
+    "content": "들어가며 안녕하세요. 당근 로컬비즈니스실 동네걷기팀에서 FE 인턴으로 일하고 있는 카멜(진나영)이에요. 당근 동네걷기 는 걸음 수를 기록하고 보상을 제공하는 서비스예요. 그런데 모달, 바텀시트, OS 권한 팝업이 각기 다른 조건에서 열리다 보니, 한 화면에 여러 UI가 겹쳐 나타나는 문제 가 있었어요. 이 글은 제가 이 복잡도를 어떻게 풀었는지에 대한 기록이에요. 다만 “이렇게 만들었습니다” 보다는, 어떻게 문제를 정의하고 고민하며 해결해나갔는지 서술해보려고 해요. 이런 분들이 읽으면 재미있을 것 같아요 한 화면에 오버레이를 띄우는 조건이 계속 늘어나서 onClose 체이닝이 감당이 안 되기 시작한 분 웹뷰-네이티브 환경에서 웹뷰가 제어할 수 없는 OS 팝업 까지 같은 흐름으로 다루고 싶은 분 비동기 스케쥴링에 대한 이해가 실무에 어떻게 활용될 수 있을지 궁금한 분 나올 키워드들 문제 재정의 · 추상화 단위(데이터 vs 함수) · Promise deferred 패턴 · ES2024 Promise.withResolve…",
+    "image": "",
+    "valueTags": [
+      "javascript_ts",
+      "korean_dev"
+    ],
+    "source": "Daangn Tech",
+    "sourceUrl": "https://medium.com/daangn",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_frontend_blog",
+    "topics": [
+      "Frontend",
+      "UX Engineering",
+      "Design System",
+      "Daangn"
+    ]
+  },
+  {
+    "title": "데이터 분석 에이전트를 만들며 배운 컨텍스트 설계",
+    "link": "https://tech.kakao.com/posts/838",
+    "pubDate": "Thu, 01 Oct 2026 15:00:00 GMT",
+    "content": "LLM 에이전트는 목표를 받으면 필요한 정보를 찾고 적절한 도구를 선택해 실행하며, 그 결과를 관찰한 뒤 다음 행동을 결정합니다. Anthropic은 에이전트를 활용한 여러 실험을 공개했습니다. Claude Sonnet 4.5로 Claude.ai를 재현하는 실험 과 Claude Opus 4.6 기반 에이전트가 Rust로 Linux 6.9 커널을 빌드할 수 있는 C 컴파일러를 개발한 사례를 소개했습니다. 이처럼 모델의 성능이 높아지면서 에이전트가 자율적으...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Kakao Tech",
+    "sourceUrl": "https://tech.kakao.com/blog/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_frontend_blog",
+    "topics": [
+      "Frontend",
+      "Kakao",
+      "Web Platform"
+    ]
+  },
+  {
+    "title": "Show GN: sysone_trans",
+    "link": "https://news.hada.io/topic?id=34984",
+    "pubDate": "2026-10-08T01:08:38.000Z",
+    "content": "TypeSafe의 Jev나 OpenAI Decisions처럼 정해진 선택지 중 하나를 고르는 모델로도 번역문을 만들 수 있을까 궁금해서 직접 만든 CLI입니다. 한 번에 문장 전체를 생성하는 대신, 다음 문자나 한글 자모를 하나씩 선택하고 이어 붙입니다. 어떻게 동작하나요? 매 결정마다 원문 전체와 지금까지 만든",
+    "image": "",
+    "valueTags": [],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "a16z의 2026년 소비자 AI 앱 Top 100",
+    "link": "https://news.hada.io/topic?id=34980",
+    "pubDate": "2026-10-08T00:45:01.000Z",
+    "content": "ChatGPT가 웹·모바일 이용량과 미국 소비자 지출에서 선두를 유지하며, Claude는 웹 3위로 올라 DeepSeek와 Perplexity를 앞섬 소비자 지출 분석을 처음 추가했으며, 상위 1%의 월평균 AI 지출은 903달러로 유료 이용자 중앙값인 25달러와 큰 차이를 보임",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "WorldCrafter",
+    "link": "https://news.hada.io/topic?id=34977",
+    "pubDate": "2026-10-08T00:35:01.000Z",
+    "content": "Tencent ARC Lab과 베이징대학교가 개발한 영상 월드 모델로, 이미지 한 장이나 텍스트 설명에서 시작해 카메라를 움직이며 탐색하는 장면을 생성 시선을 돌렸다 돌아왔을 때 앞서 본 사물과 공간을 기억해 복원하며, 분 단위로 이어지는 탐색에서도 장면의 일관성...",
+    "image": "",
+    "valueTags": [],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Lemma",
+    "link": "https://news.hada.io/topic?id=34976",
+    "pubDate": "2026-10-08T00:30:02.000Z",
+    "content": "여러 사람이 같은 AI 동료와 업무 데이터·문서·작업 흐름을 공유하며 일하는 오픈소스 플랫폼 Claude Code, Codex, Cursor, OpenCode에 원하는 업무를 설명하면 앱 화면부터 데이터 테이블, 에이전트, 워크플로와 권한까지 함께 구성 팀의 수정과 피드백을...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "소프트웨어 개발자들은 괜찮지 않다",
+    "link": "https://news.hada.io/topic?id=34974",
+    "pubDate": "2026-10-08T00:07:32.000Z",
+    "content": "AI가 개발의 미래라는 말을 믿고 받아들였던 개발자들조차 업계를 떠나고 있음. 직접 사용해 본 뒤, 그 미래가 더는 즐겁지 않고 자신에게 해롭다고 느끼기 때문임 AI는 직접 작업을 돕는 전동 공구보다 다른 사람에게 제작을 맡기는 방식에 가까움. 결과물과의 거...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "PSP용 God of War, WebAssembly로 재컴파일해 브라우저에서 실행",
+    "link": "https://news.hada.io/topic?id=34973",
+    "pubDate": "2026-10-07T23:41:36.000Z",
+    "content": "PSP Web Recomp는 PSP 게임의 MIPS 기계어를 미리 C++로 변환하고 WebAssembly로 컴파일해 브라우저에서 실행함. PSP 운영체제와 그래픽 칩의 필요한 기능을 재구현하고 WebGL2로 화면을 그림 첫 적용작인 God of War: Chains of Olympus는 부팅부터 메뉴, 컷신, 전...",
+    "image": "",
+    "valueTags": [
+      "web_platform"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Docker Agent",
+    "link": "https://news.hada.io/topic?id=34968",
+    "pubDate": "2026-10-07T22:40:12.000Z",
+    "content": "YAML에 모델·지침·도구를 정의해 AI 에이전트를 만들고 실행하는 Docker 공식 CLI 플러그인으로, 별도의 프로그램 작성 없이 업무별 에이전트 구성 가능 여러 전문 에이전트를 팀으로 묶고 작업을 자동으로 위임하는 멀티 에이전트 오케스트레이션 지원 내...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "수학의 아포칼립스",
+    "link": "https://news.hada.io/topic?id=34967",
+    "pubDate": "2026-10-07T22:37:12.000Z",
+    "content": "“엄마가 평생 연구한 문제를 로봇이 풀었다며?”라는 아홉 살 아들의 놀림이 현실이 됨. OpenAI가 공개한 수학 성과에는 Dana Moshkovitz가 오랫동안 연구한 유일 게임 추측(UGC) 의 증명도 포함됨 AI가 증명을 내놓는 것과 사람이 이해하는 것은 다름",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Meta·Microsoft, 사내 Claude 사용 줄이고 자체 AI 도구로 전환",
+    "link": "https://news.hada.io/topic?id=34964",
+    "pubDate": "2026-10-07T21:32:12.000Z",
+    "content": "Meta와 Microsoft가 직원들의 Claude 사용을 줄이고 자체 AI 도구 사용을 확대하고 있음. 늘어난 내부 AI 비용을 통제하고 자사 제품을 활용하려는 움직임 Microsoft는 연간 10억 달러 이상으로 예상했던 사내 Anthropic 지출을 3분의 1 이상 축소하고, GitHub Cop...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Gentoo, Chromium 소스 패키지 유지보수 중단 절차 돌입",
+    "link": "https://news.hada.io/topic?id=34963",
+    "pubDate": "2026-10-07T21:03:10.000Z",
+    "content": "Linux 배포판 Gentoo가 Chromium 소스 패키지의 유지보수 중단 절차에 들어감. 복잡한 빌드와 잦은 업데이트, 반복되는 사용자 불만으로 담당자들이 소진됨 Gentoo는 사용자가 기능과 의존성을 선택해 직접 컴파일할 수 있지만, 한 컴퓨터에서 빌드에 성공했다고 다...",
+    "image": "",
+    "valueTags": [],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Show HN: Bigwords.page",
+    "link": "https://news.hada.io/topic?id=34961",
+    "pubDate": "2026-10-07T19:43:37.000Z",
+    "content": "Bigwords.page는 링크 하나로 전체 화면 안내판, 타이머, 메시지를 만드는 서비스로, 계정이나 별도 앱 없이 사용할 수 있음 화면 구성이 URL에 담기는 방식이라 링크를 공유하거나 북마크할 수 있으며, 메시지는 브라우저가 서버로 보내지 않는 URL 프래그먼트에 ...",
+    "image": "",
+    "valueTags": [],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "OpenAI, GPT‑6 확대 적용과 더 똑똑한 대화형 UI 도입",
+    "link": "https://news.hada.io/topic?id=34960",
+    "pubDate": "2026-10-07T19:40:36.000Z",
+    "content": "OpenAI가 ChatGPT에 GPT‑6와 대화형 인터페이스 ‘Intelligent UI’ 를 도입해, 텍스트 답변뿐 아니라 버튼·폼·차트·조작 가능한 도표를 대화 안에서 제공함 여행 경로를 지도에 표시하거나, 인원수를 바꾸면 장보기 수량이 달라지는 요리 계획을 만드는 등 질문...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Claude Haiku 5.5 출시",
+    "link": "https://news.hada.io/topic?id=34958",
+    "pubDate": "2026-10-07T18:43:26.000Z",
+    "content": "Anthropic이 더 빠르고 저렴한 소형 모델 Claude Haiku 5.5를 출시함. 요약, 문맥 압축, 데이터베이스 질의, 분류와 코딩 보조 에이전트처럼 대량으로 반복하는 작업에 최적화 프롬프트 10만 토큰 이하에서 입력·출력 가격을 Haiku 4.5 대비 90% 인하함. 100만 토큰...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "웹 페이지용 애니메이션 ASCII 아트",
+    "link": "https://news.hada.io/topic?id=34957",
+    "pubDate": "2026-10-07T18:40:25.000Z",
+    "content": "ascii.rest는 웹 페이지용 애니메이션 ASCII 아트를 소개하는 프로젝트임 doom fire와 fireworks는 각각 불 확산 효과와 여러 형태로 터지는 폭죽을 구현함 matrix rain은 문자가 줄지어 떨어지는 효과이며, 선두는 짙...",
+    "image": "",
+    "valueTags": [],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Codemode란 무엇인가",
+    "link": "https://news.hada.io/topic?id=34952",
+    "pubDate": "2026-10-07T15:46:47.000Z",
+    "content": "Codemode는 AI가 도구를 하나씩 호출하는 대신, 여러 호출을 묶는 코드를 작성해 실행하는 방식임. 반복·병렬 처리와 결과 가공을 코드에 맡기고, 필요한 결과만 모델에 전달함 도구가 반환한 데이터를 모두 컨텍스트 창에 넣지 않고 처리할 수 있으며, 중간 결과를...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "유타주, 사람의 감독 없이 AI가 환자를 진찰하고 약물을 처방하도록 허용 예정",
+    "link": "https://news.hada.io/topic?id=34951",
+    "pubDate": "2026-10-07T15:43:47.000Z",
+    "content": "유타주에서 Nolla Health의 AI 진찰/처방 프로그램이 시작됨. 직접적인 사람의 감독 없이 진료하는 방식으로 전환할 예정이지만, 현재는 1년간 경증~중등도 여드름 환자만 대상으로 함 환자가 월 4.99달러 앱으로 얼굴을 스캔하고 병력과 개인정보...",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "2026년 노벨 화학상, Henri B. Kagan과 Kenso Soai 수상",
+    "link": "https://news.hada.io/topic?id=34947",
+    "pubDate": "2026-10-07T14:32:10.000Z",
+    "content": "Henri B. Kagan과 Kenso Soai가 비대칭 유기 합성의 비선형 효과와 자기촉매 작용을 발견한 공로로 2026년 노벨 화학상 수상자로 선정됨 두 사람의 발견은 거울상 관계인 두 분자 중 한쪽만 존재하는 단일 손잡이성(homochirality) 이 어떻게 자발적으로 나타날 수...",
+    "image": "",
+    "valueTags": [],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Chrome에 JPEG XL 지원 도입",
+    "link": "https://news.hada.io/topic?id=34946",
+    "pubDate": "2026-10-07T13:42:53.000Z",
+    "content": "Chrome 155부터 JPEG XL(.jxl) 이미지 디코딩을 지원함. JPEG 대비 30~50% 더 나은 압축률과 무손실 압축, 내장 HDR 지원, JPEG 무손실 트랜스코딩을 제공함 AVIF와 JPEG XL을 모두 시험해 최적의 결과를 선택할 것을 권장함. JPEG XL은 특히 사진의 ...",
+    "image": "",
+    "valueTags": [
+      "web_platform"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Show GN: 해외 직구한 내 소포, 어디쯤 있을까요?",
+    "link": "https://news.hada.io/topic?id=34940",
+    "pubDate": "2026-10-07T10:33:59.000Z",
+    "content": "먼 나라에서 날아 오는 소포, 어디있을지 상상만 하며 우편함을 열어 보셨나요? 하염없이 우체국 홈페이지만 새로고침하며 기다리셨나요? 국제 배송, 지금 어디쯤 왔는지 궁금할 때. 송장 번호 하나면 됩니다. DB에 기반합니다 많은 예측 서비스들은 LLM에게 정보를",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "x32에서 실행한 Janet: 32비트 포인터, 64비트 속도, RAM 25% 절감",
+    "link": "https://news.hada.io/topic?id=34939",
+    "pubDate": "2026-10-07T10:09:34.000Z",
+    "content": "Linux x32 ABI는 64비트 명령어 집합을 유지하면서 32비트 포인터를 사용함. Janet 실험에서는 RAM 사용량이 평균 21% 줄었으며, 실행 속도는 작업에 따라 느려지거나 빨라짐 일반 32비트 빌드인 -m32와 x32 빌드인 -mx32는 다름. Arch에...",
+    "image": "",
+    "valueTags": [],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "Tell HN: GitHub이 한 달이 지나도 제 소프트웨어의 크랙 복제본 삭제를 거부합니다",
+    "link": "https://news.hada.io/topic?id=34933",
+    "pubDate": "2026-10-07T07:35:20.000Z",
+    "content": "웹 브라우저용 사진 편집기 Photopea 의 JavaScript 코드에서 AI 모델로 광고를 제거하고 ‘새 제품’으로 공개한 GitHub 저장소가 수십 개 있음 안정 버전의 유일한 배포처를 Photopea.com으로 유지하고 싶지만, 다른 복제...",
+    "image": "",
+    "valueTags": [
+      "javascript_ts",
+      "ai_coding"
+    ],
+    "source": "GeekNews",
+    "sourceUrl": "https://news.hada.io/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "dev",
+    "area": "dev",
+    "category": "kr_dev_curation",
+    "topics": [
+      "Frontend",
+      "AI",
+      "Web Platform",
+      "Tooling"
+    ]
+  },
+  {
+    "title": "What's new in Astro",
+    "link": "https://astro.build/blog/whats-new-september-2026/",
+    "pubDate": "Wed, 30 Sep 2026 00:00:00 GMT",
+    "content": "September 2026 - Astro Germany, Evil Martians migration story, and more!",
+    "image": "",
+    "valueTags": [
+      "frontend_framework"
+    ],
+    "source": "Astro Blog",
+    "sourceUrl": "https://astro.build/blog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Astro",
+      "Islands",
+      "Content Sites"
+    ]
+  },
+  {
+    "title": "Claude Haiku 5.5 in GitHub Copilot",
+    "link": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot",
+    "pubDate": "Wed, 07 Oct 2026 20:12:18 +0000",
+    "content": "Claude Haiku 5.5, Anthropic’s newest lightweight model, is now generally available in GitHub Copilot. It is designed for fast, high-volume work like subagents, quick edits, and terminal tasks. In early… The post Claude Haiku 5.5 in GitHub Copilot appeared first on The GitHub Blog.",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "ai_coding",
+    "topics": [
+      "GitHub",
+      "Copilot",
+      "Actions"
+    ]
+  },
+  {
+    "title": "Local sandboxing for GitHub Copilot now generally available",
+    "link": "https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available",
+    "pubDate": "Wed, 07 Oct 2026 15:46:17 +0000",
+    "content": "Local sandboxing for GitHub Copilot is now generally available in GitHub Copilot CLI, the GitHub Copilot app, and VS Code sessions using Agent Host. Local sandboxes give developers a secure… The post Local sandboxing for GitHub Copilot now generally available appeared first on The GitHub Blog.",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "ai_coding",
+    "topics": [
+      "GitHub",
+      "Copilot",
+      "Actions"
+    ]
+  },
+  {
+    "title": "Discover local models in GitHub Copilot CLI",
+    "link": "https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli",
+    "pubDate": "Wed, 07 Oct 2026 15:46:13 +0000",
+    "content": "GitHub Copilot CLI makes it easier to choose a local model without leaving your existing workflow. Starting in CLI version 1.0.94-0, use /model to discover supported models from a running… The post Discover local models in GitHub Copilot CLI appeared first on The GitHub Blog.",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "ai_coding",
+    "topics": [
+      "GitHub",
+      "Copilot",
+      "Actions"
+    ]
+  },
+  {
+    "title": "Update your IDE to restore agent activity in Copilot usage metrics",
+    "link": "https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics",
+    "pubDate": "Tue, 06 Oct 2026 23:43:00 +0000",
+    "content": "If your Copilot usage metrics have shown agent activity or agent lines of code falling while Copilot usage kept growing, we’ve found the cause, and a fix is rolling out… The post Update your IDE to restore agent activity in Copilot usage metrics appeared first on The GitHub Blog.",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "ai_coding",
+    "topics": [
+      "GitHub",
+      "Copilot",
+      "Actions"
+    ]
+  },
+  {
+    "title": "What’s new in Svelte: October 2026",
+    "link": "https://svelte.dev/blog/whats-new-in-svelte-october-2026",
+    "pubDate": "Thu, 01 Oct 2026 00:00:00 GMT",
+    "content": "SvelteKit 3 is here! Check out the announcement post for the highlights, then run sv migrate to handle most of the upgrade for you. sv itself hit 1.0 on the same day, making the community add-on API official. Below you’ll find the last round of changes that landed before 3.0 - adapter API updates, zero-config deploys to Render and a few final breaking changes. Svelte Summit is also back for Svelte’s 10th birthday! It’s happening in Ljubljana on November 19-20 with talks from Rich Harris, Elliott Johnson, Paolo Ric…",
+    "image": "",
+    "valueTags": [
+      "frontend_framework"
+    ],
+    "source": "Svelte Blog",
+    "sourceUrl": "https://svelte.dev/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Svelte",
+      "SvelteKit"
+    ]
+  },
+  {
+    "title": "SvelteKit 3 is here",
+    "link": "https://svelte.dev/blog/sveltekit-3-is-here",
+    "pubDate": "Thu, 01 Oct 2026 00:00:00 GMT",
+    "content": "Version 3.0 of SvelteKit, the official application framework for Svelte, is now available. If you’ve used earlier versions of SvelteKit, everything will feel very familiar — it’s the same framework with a little more polish, a little more type safety, and a little less junk. We’ve made migration as seamless as we can with the sv migrate command... npx sv migrate sveltekit-3 --tasks all --confirm ...which will automatically migrate as much of your codebase as possible, and generate a TODO list for everything else.…",
+    "image": "",
+    "valueTags": [
+      "frontend_framework"
+    ],
+    "source": "Svelte Blog",
+    "sourceUrl": "https://svelte.dev/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Svelte",
+      "SvelteKit"
+    ]
+  },
+  {
+    "title": "Copilot code review: API support and new default effort level",
+    "link": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level",
+    "pubDate": "Fri, 02 Oct 2026 19:13:50 +0000",
+    "content": "You can now request a GitHub Copilot code review through the REST and GraphQL APIs and set the review effort level for each request. Balanced is also now the default… The post Copilot code review: API support and new default effort level appeared first on The GitHub Blog.",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "ai_coding",
+    "topics": [
+      "GitHub",
+      "Copilot",
+      "Actions"
+    ]
+  },
+  {
+    "title": "shadcn@4.21.4",
+    "link": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.21.4",
+    "pubDate": "2026-10-07T11:11:31.000Z",
+    "content": "Patch Changes #12189 76fd499595ba7cc01f49d159bd7ac82d7aca8e63 Thanks @shadcn! - Drop the ts-morph dependency from @shadcn/registry. #12184 995c2cfff44c373bd210d451089726ec097ab917 Thanks @shadcn! - Run the icons and asChild transformers without ts-morph. #12160 6efecd8fe9aa167886fe2cc0c05c5623a5bb5670 Thanks @shadcn! - Edit the Next.js layout for font items without ts-morph, and skip it with a warning instead of writing a broken layout. #12188 efa11781f756c86debb0392fbea4fe468250b41b Thanks @shadcn! - Rewrite impo…",
+    "image": "",
+    "valueTags": [
+      "frontend_framework",
+      "javascript_ts"
+    ],
+    "source": "shadcn/ui Releases",
+    "sourceUrl": "https://github.com/shadcn-ui/ui/releases",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "shadcn/ui",
+      "Component Library",
+      "AI Components"
+    ]
+  },
+  {
+    "title": "@shadcn/registry@0.1.3",
+    "link": "https://github.com/shadcn-ui/ui/releases/tag/%40shadcn%2Fregistry%400.1.3",
+    "pubDate": "2026-10-07T11:11:28.000Z",
+    "content": "Patch Changes #12189 76fd499595ba7cc01f49d159bd7ac82d7aca8e63 Thanks @shadcn! - Drop the ts-morph dependency from @shadcn/registry. #12184 995c2cfff44c373bd210d451089726ec097ab917 Thanks @shadcn! - Run the icons and asChild transformers without ts-morph. #12160 6efecd8fe9aa167886fe2cc0c05c5623a5bb5670 Thanks @shadcn! - Edit the Next.js layout for font items without ts-morph, and skip it with a warning instead of writing a broken layout. #12146 232d7e2c128d94d37a6dae74e3b0e1a8f08ff6e4 Thanks @shadcn! - Load ts-morp…",
+    "image": "",
+    "valueTags": [
+      "frontend_framework",
+      "javascript_ts"
+    ],
+    "source": "shadcn/ui Releases",
+    "sourceUrl": "https://github.com/shadcn-ui/ui/releases",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "shadcn/ui",
+      "Component Library",
+      "AI Components"
+    ]
+  },
+  {
+    "title": "Microfrontends Routing is now free for Firewall-mitigated traffic",
+    "link": "https://vercel.com/changelog/microfrontends-routing-is-now-free-for-firewall-mitigated-traffic",
+    "pubDate": "2026-10-07T00:00:00.000Z",
+    "content": "is now free for requests that the (WAF) denies, challenges, or rate limits. CDN Requests and Fast Data Transfer are for this traffic.Microfrontends RoutingWeb Application Firewallalready free The change applies automatically to every project using microfrontends. Learn how to in the Firewall documentation.set up WAF rules Read more",
+    "image": "",
+    "valueTags": [],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "OpenAI Decisions API now available on AI Gateway",
+    "link": "https://vercel.com/changelog/openai-decisions-api-now-available-on-ai-gateway",
+    "pubDate": "2026-10-07T00:00:00.000Z",
+    "content": "is now available on through an OpenAI-compatible endpoint. Use it with or any other decision model on AI Gateway.OpenAI's Decisions APIAI GatewayGPT-6 Luna Decisions/v1/decisions Decision models answer typed questions about a shared input and return probabilities, choices, and scores instead of generated text, which suits routing, triage, guardrails, and rubric scoring. You can ask predicate (yes/no), choice, and score questions against the same input in one request. is a separate model ID from , which stays a lan…",
+    "image": "",
+    "valueTags": [
+      "performance",
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Claude Haiku 5.5 now available on AI Gateway",
+    "link": "https://vercel.com/changelog/claude-haiku-5-5-now-available-on-ai-gateway",
+    "pubDate": "2026-10-07T00:00:00.000Z",
+    "content": "from is now available on .Claude Haiku 5.5AnthropicAI Gateway It is built for high-volume, cost-sensitive tasks such as summaries, context compaction, database queries, and classification, and works as a subagent alongside larger Claude models on coding work. It is also the fastest Claude model at standard speed, which suits live customer support and browser use. Test it as a direct upgrade wherever you use today.Claude Haiku 4.5 Haiku 5.5 is the first Haiku model with effort levels. It uses adaptive thinking and…",
+    "image": "",
+    "valueTags": [
+      "web_platform",
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Glyph Cluster is now available in stealth for free on AI Gateway",
+    "link": "https://vercel.com/changelog/glyph-cluster-is-now-available-in-stealth-for-free-on-ai-gateway",
+    "pubDate": "2026-10-07T00:00:00.000Z",
+    "content": "is now available on as a stealth model for teams on with purchased AI Gateway credits. It is free to use during the stealth period.Glyph ClusterAI GatewayPro and Enterprise plans Glyph Cluster is a reasoning model for coding and long-context analysis, and handles multi-step work such as planning, synthesis, quantitative reasoning, and comparing material across large inputs. For coding, Glyph Cluster can review code, explain failures, debug issues, propose changes, and reason through implementation options. It supp…",
+    "image": "",
+    "valueTags": [
+      "performance",
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Timestamp attributes are now supported in Vercel Flags",
+    "link": "https://vercel.com/changelog/timestamp-attributes-are-now-supported-in-vercel-flags",
+    "pubDate": "2026-10-07T00:00:00.000Z",
+    "content": "now supports timestamp attributes, so you can target by date and time.Vercel Flagsentities Use timestamp attributes to show a campaign page only between two dates, run a Black Friday promotion, or target users who registered before a cutoff. You can configure timestamp attributes in the dashboard or via the CLI. In the Vercel dashboard, open , select , and create or select an entity. Add an attribute and set its data type to .FlagsEntitiestimestamp Or define the attribute with the CLI: Whether you configure the at…",
+    "image": "",
+    "valueTags": [],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "AI Gateway adds confidence-based decision fallbacks",
+    "link": "https://vercel.com/changelog/confidence-based-decision-fallbacks",
+    "pubDate": "2026-10-06T17:19:00.000Z",
+    "content": "can now escalate a decision request to a fallback model when the primary model's answer trips a .AI Gatewayconfidence condition you set Conditions can be combined, so an escalation can depend on more than one signal. The plain model names you already list in keep catching outright errors, so existing fallbacks are unaffected. Confidence conditions cover Choice and Score questions. Boolean questions escalate on a probability range instead.models Set the fallback by adding one conditional object to . Requests withou…",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "shadcn@4.21.3",
+    "link": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.21.3",
+    "pubDate": "2026-10-06T06:17:47.000Z",
+    "content": "Patch Changes #12148 596be8dda8f94927281184b8c4575150531f85ea Thanks @shadcn! - Fix ERR_REQUIRE_CYCLE_MODULE when running the CLI with pnpm dlx on Windows. Updated dependencies [596be8dda8f94927281184b8c4575150531f85ea]: @shadcn/registry@0.1.2",
+    "image": "",
+    "valueTags": [],
+    "source": "shadcn/ui Releases",
+    "sourceUrl": "https://github.com/shadcn-ui/ui/releases",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "shadcn/ui",
+      "Component Library",
+      "AI Components"
+    ]
+  },
+  {
+    "title": "@shadcn/registry@0.1.2",
+    "link": "https://github.com/shadcn-ui/ui/releases/tag/%40shadcn%2Fregistry%400.1.2",
+    "pubDate": "2026-10-06T06:17:45.000Z",
+    "content": "Patch Changes #12148 596be8dda8f94927281184b8c4575150531f85ea Thanks @shadcn! - Fix ERR_REQUIRE_CYCLE_MODULE when running the CLI with pnpm dlx on Windows.",
+    "image": "",
+    "valueTags": [],
+    "source": "shadcn/ui Releases",
+    "sourceUrl": "https://github.com/shadcn-ui/ui/releases",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "shadcn/ui",
+      "Component Library",
+      "AI Components"
+    ]
+  },
+  {
+    "title": "Nano Banana 2.1 now available on AI Gateway",
+    "link": "https://vercel.com/changelog/nano-banana-2-1-now-available-on-ai-gateway",
+    "pubDate": "2026-10-06T00:00:00.000Z",
+    "content": "from is now available on . It improves image generation and editing over earlier Nano Banana models.Nano Banana 2.1GoogleAI Gateway This release targets product recontextualization, mask- and ink-based editing, and factuality. Product recontextualization places an existing product in a new scene. Mask- and ink-based edits change only the region marked by a mask or by strokes drawn on the image. Factuality is how accurately images depict real-world subjects. The model renders photorealistic skin tones, intricate ma…",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Mistral Large 4 now available on AI Gateway",
+    "link": "https://vercel.com/changelog/mistral-large-4-now-available-on-ai-gateway",
+    "pubDate": "2026-10-06T00:00:00.000Z",
+    "content": "is now available on AI Gateway. The open-weight, natively multimodal model combines reasoning with text and image understanding. It is useful for cyber defense, manufacturing, and finance workflows.Mistral Large 4 You can access the model through AI Gateway with one API key, without creating a separate Mistral account. Use Mistral Large 4 ( ) with the , , , or . You can also select it in a connected to AI Gateway.mistral/mistral-large-4AI SDKOpenAI-compatible Chat Completions APIResponses APIAnthropic Messages API…",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "shadcn@4.21.2",
+    "link": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.21.2",
+    "pubDate": "2026-10-05T14:38:22.000Z",
+    "content": "Patch Changes #12143 8c2bf3882cb856ac10abbb162bdc0b8383ebd432 Thanks @shadcn! - Accept components.json and package.json files that start with a UTF-8 byte order mark. #12142 95efb5cd8d7f13adba70b58b1119211e8980683f Thanks @shadcn! - replace cosmiconfig with a smaller custom reader. #12140 3b1ae6e43f082dd82d0e5710b813cfad929abdb4 Thanks @shadcn! - Skip npm audit and the funding check when installing or removing dependencies, or creating a project, with npm. Updated dependencies [8c2bf3882cb856ac10abbb162bdc0b8383eb…",
+    "image": "",
+    "valueTags": [],
+    "source": "shadcn/ui Releases",
+    "sourceUrl": "https://github.com/shadcn-ui/ui/releases",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "shadcn/ui",
+      "Component Library",
+      "AI Components"
+    ]
+  },
+  {
+    "title": "@shadcn/registry@0.1.1",
+    "link": "https://github.com/shadcn-ui/ui/releases/tag/%40shadcn%2Fregistry%400.1.1",
+    "pubDate": "2026-10-05T14:38:19.000Z",
+    "content": "Patch Changes #12143 8c2bf3882cb856ac10abbb162bdc0b8383ebd432 Thanks @shadcn! - Accept components.json and package.json files that start with a UTF-8 byte order mark. #12142 95efb5cd8d7f13adba70b58b1119211e8980683f Thanks @shadcn! - replace cosmiconfig with a smaller custom reader. #12140 3b1ae6e43f082dd82d0e5710b813cfad929abdb4 Thanks @shadcn! - Skip npm audit and the funding check when installing or removing dependencies, or creating a project, with npm.",
+    "image": "",
+    "valueTags": [],
+    "source": "shadcn/ui Releases",
+    "sourceUrl": "https://github.com/shadcn-ui/ui/releases",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "shadcn/ui",
+      "Component Library",
+      "AI Components"
+    ]
+  },
+  {
+    "title": "OpenAI Ultrafast mode now available on AI Gateway",
+    "link": "https://vercel.com/changelog/openai-ultrafast-mode-now-available-on-ai-gateway",
+    "pubDate": "2026-10-05T00:00:00.000Z",
+    "content": "now supports OpenAI's Ultrafast service tier for GPT-6 Astra, providing faster output for interactive applications and rapid coding iterations.AI Gateway To use Ultrafast, request it for through AI SDK, the Chat Completions API, or Responses API:openai/gpt-6-astra For workflows with frequent tool calls, OpenAI recommends the Responses API over a persistent WebSocket connection to reduce overhead between turns. See the for persistent connections, including AI SDK over WebSocket.Ultrafast service-tier examples Ultra…",
+    "image": "",
+    "valueTags": [
+      "web_platform",
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "FLUX 3 Image now available on AI Gateway",
+    "link": "https://vercel.com/changelog/flux-3-image-now-available-on-ai-gateway",
+    "pubDate": "2026-10-05T00:00:00.000Z",
+    "content": "from Black Forest Labs is now available on AI Gateway. Generate images from text or edit existing images using the same model, with one API key and no Black Forest Labs account required.FLUX 3 Image FLUX 3 Image supports up to ten reference images for editing, combining subjects, or changing the composition. It supports five resolution tiers from 768 × 768 to 4K, with square, portrait, and landscape aspect ratios. Set , then use as the model ID in AI SDK 7 or later. To generate an image, call with a text prompt:AI…",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Jev for Python engineers",
+    "link": "https://vercel.com/blog/jev-for-python-engineers",
+    "pubDate": "2026-10-02T07:00:00.000Z",
+    "content": "It's simply impossible to not hear about Jev. Seemingly everyone is tinkering with it in some way, from using it to to . make trading decisionsgenerating UIs with it(what could possibly go wrong?)(maybe we're onto something here!) is a new kind of AI model. You feed it data and ask it a set of multiple-choice questions, and it responds with its answers and how confident it is in each. Just like with any other model, Jev can and will make mistakes, but it will make them fast. ​Jev ​The bottom line is: Jev is built…",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "How Rogo ships agent-written code to production in 5 minutes on Vercel",
+    "link": "https://vercel.com/blog/how-rogo-ships-agent-written-code-to-production-in-5-minutes-on-vercel",
+    "pubDate": "2026-10-02T04:00:00.000Z",
+    "content": "Rogo on Vercel 73,000+ deployments in a single month Agent-written code shipped to production in 5 minutes 6 production AI agents automating work from churn analysis to deal desk Zero manual triage during production incidents with agent swarms on AI SDK builds Felix, an AI agent that generates decks, financial models, and reports for a majority of the world's largest financial institutions. The Rogo team is rearchitecting its internal applications on Vercel, where agent-written code ships in 5 minutes. When incide…",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Speed Insights deprecates First Input Delay on November 1st",
+    "link": "https://vercel.com/changelog/speed-insights-deprecates-first-input-delay-on-november-first",
+    "pubDate": "2026-10-01T12:39:14.942Z",
+    "content": "is deprecating First Input Delay (FID) and will stop recording new measurements on November 1st.Speed Insights Speed Insights already uses , the Core Web Vital that replaced FID, as the responsiveness metric in your . The deprecation won’t require changes on your side, affect your score, or prevent you from viewing existing FID data.Interaction to Next Paint (INP)Real Experience Score Learn more in the .Speed Insights metrics documentation Read more",
+    "image": "",
+    "valueTags": [
+      "performance"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "shadcn@4.21.1",
+    "link": "https://github.com/shadcn-ui/ui/releases/tag/shadcn%404.21.1",
+    "pubDate": "2026-10-01T10:30:53.000Z",
+    "content": "Patch Changes #12087 bf6646b449684e687f28531305eca4e4768c2782 Thanks @shadcn! - Add @shadcn/registry, the registry engine behind the CLI. shadcn now depends on it, and shadcn/registry and shadcn/schema re-export it, so there are no changes for existing users. #12061 a9c1da49ec4eab488dc99c69ae20a7ffaa4897d4 Thanks @shadcn! - fix shimmer reduced motion handling when used with a variant #12087 bf6646b449684e687f28531305eca4e4768c2782 Thanks @shadcn! - shadcn docs only rewrites links on the ui.shadcn.com host. Updated…",
+    "image": "",
+    "valueTags": [
+      "accessibility"
+    ],
+    "source": "shadcn/ui Releases",
+    "sourceUrl": "https://github.com/shadcn-ui/ui/releases",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "shadcn/ui",
+      "Component Library",
+      "AI Components"
+    ]
+  },
+  {
+    "title": "@shadcn/registry@0.1.0",
+    "link": "https://github.com/shadcn-ui/ui/releases/tag/%40shadcn%2Fregistry%400.1.0",
+    "pubDate": "2026-10-01T10:30:50.000Z",
+    "content": "Minor Changes #12087 bf6646b449684e687f28531305eca4e4768c2782 Thanks @shadcn! - Add @shadcn/registry, the registry engine behind the CLI. shadcn now depends on it, and shadcn/registry and shadcn/schema re-export it, so there are no changes for existing users.",
+    "image": "",
+    "valueTags": [],
+    "source": "shadcn/ui Releases",
+    "sourceUrl": "https://github.com/shadcn-ui/ui/releases",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "design_system_automation",
+    "topics": [
+      "shadcn/ui",
+      "Component Library",
+      "AI Components"
+    ]
+  },
+  {
+    "title": "Laya decision model now available on AI Gateway, free through October 31",
+    "link": "https://vercel.com/changelog/laya-decision-model-now-available-on-ai-gateway-free-through-october-31",
+    "pubDate": "2026-10-01T00:00:00.000Z",
+    "content": "is free to use on for 1 month through October 31, 2026 via .Laya from Convai InnovationsAI GatewayBoundless Laya is an that evaluates shared context against yes/no, choice, or scoring questions and returns structured answers with probabilities. For example, use it to:evaluation/decision model You can call Laya through the , the , the , or the with or :AI SDK evaluation APInative HTTP APITypeSafe-compatible APIAI CLIconvaiinnovations/layaconvaiinnovations/laya-free Through October 31, 2026, both and are free when s…",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Microsoft AI models are now available on AI Gateway",
+    "link": "https://vercel.com/changelog/microsoft-ai-models-are-now-available-on-ai-gateway",
+    "pubDate": "2026-10-01T00:00:00.000Z",
+    "content": "Vercel and Microsoft AI (MAI) have partnered to make MAI models available on AI Gateway. AI Gateway is one of a limited number of platforms offering access to MAI models. MAI's focus on security and zero data retention (ZDR) align with Vercel's goal of giving AI Gateway users control over their data and transparency in how it is used for training. are now supported on AI Gateway. MAI-Voice-2.1 and MAI-Voice-2.1-Flash generate speech, while MAI-Transcribe-2 Streaming returns transcript updates as audio arrives.MAI'…",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Vercel Agent now installs private packages from npm and custom registries",
+    "link": "https://vercel.com/changelog/vercel-agent-now-installs-private-packages-from-npm-and-custom-registries",
+    "pubDate": "2026-09-30T23:22:00.000Z",
+    "content": "Vercel Agent can install private dependencies from npm and custom registries using credentials stored as shared environment variables on Vercel. , , and classic Yarn running in Agent sessions authenticate as they do in Vercel builds.npmpnpm To get started, add a for Development or Preview:shared environment variable Vercel Agent reads only team-shared variables, not project-scoped ones. Credential values stay outside the sandbox, so the agent cannot read them. Learn more in the .private dependencies docs Read more…",
+    "image": "",
+    "valueTags": [
+      "accessibility",
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "AI Gateway adds Browserbase Search and Fetch tools",
+    "link": "https://vercel.com/changelog/ai-gateway-adds-browserbase-search-and-fetch-tools",
+    "pubDate": "2026-09-30T21:00:00.000Z",
+    "content": "are now available through . Give your models access to current information, find relevant pages, and retrieve their contents, alongside Browserbase's existing AI SDK and Vercel Marketplace integrations.Browserbase Search and FetchAI Gateway AI Gateway lets you use Browserbase's tools across model providers with one API key. Add web search and page retrieval to any model that supports tool calling, and keep the same tools when you switch models. These helpers are available in AI SDK 7.0.116 and later. Update with a…",
+    "image": "",
+    "valueTags": [
+      "web_platform",
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Edge Requests are now called CDN Requests",
+    "link": "https://vercel.com/changelog/edge-requests-are-now-called-cdn-requests",
+    "pubDate": "2026-09-30T20:00:00.000Z",
+    "content": "CDN Requests is now the name for the usage metric previously called Edge Requests. This is a naming change only: pricing, limits, and how usage is measured are all unchanged. The new name appears on the usage dashboard, the Observability Events chart, usage notifications, and invoice line items. It reflects that these are requests served by Vercel's CDN. Metric IDs and product aliases are unchanged, so saved queries keep working. In the billing charges API, now returns the new name. Integrations that match charges…",
+    "image": "",
+    "valueTags": [],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Voyage Rerank 3 and Rerank 3 Lite are now available on AI Gateway",
+    "link": "https://vercel.com/changelog/voyage-rerank-3-and-rerank-3-lite-are-now-available-on-ai-gateway",
+    "pubDate": "2026-09-30T00:00:00.000Z",
+    "content": "and from Voyage AI by MongoDB are now available on AI Gateway.Rerank 3Rerank 3 Lite The models reorder search results by relevance before passing documents to a language model. The series improves retrieval quality across domains, with the largest gains on long documents and code. Rerank 3 focuses on accuracy, while Rerank 3 Lite is optimized for latency and cost. Both handle up to 32K tokens per query-document pair and follow instructions in the query to guide ranking. To use Rerank 3, set the model to :voyage/re…",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Vercel Sandbox now supports Secure Compute",
+    "link": "https://vercel.com/changelog/vercel-sandbox-now-supports-secure-compute",
+    "pubDate": "2026-09-30T00:00:00.000Z",
+    "content": "Vercel Sandbox now supports , connecting sandboxes to a team's dedicated network. Public-internet traffic exits through the network's static IPs, and sandboxes can reach private resources in an AWS VPC through VPC peering.Secure Compute You can attach a sandbox to your network in your code or via the CLI. In your code, pass an existing Secure Compute network ID when creating a sandbox: In the CLI, append and your network id value when you run the sandbox create command.--network-id Existing sandboxes can attach to…",
+    "image": "",
+    "valueTags": [],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Ling 3.1 Flash is now available on AI Gateway",
+    "link": "https://vercel.com/changelog/ling-3-1-flash-is-now-available-on-ai-gateway",
+    "pubDate": "2026-09-30T00:00:00.000Z",
+    "content": "from InclusionAI is now available on AI Gateway. The model is free to use through October 13, 2026.Ling 3.1 Flash Ling 3.1 Flash is a hybrid reasoning language model with 560B total parameters and 25B active per token. It has a 262K-token context window on AI Gateway. The model is designed for coding, multi-step analysis, and agents that use tools, including workflows involving long documents, code, and extended task histories. To try Ling 3.1 Flash, use or as the model name:inclusionai/ling-3.1-flashinclusionai/l…",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Vercel CDN no longer caches responses with Vary: Cookie",
+    "link": "https://vercel.com/changelog/vary-cookie-responses-no-longer-cached",
+    "pubDate": "2026-09-30T00:00:00.000Z",
+    "content": "Vercel CDN no longer caches origin responses when includes . VaryCookie tells a cache which request headers may change the response. Because cookies often contain visitor-specific values, varying by can create many cache entries that are rarely reused. The response is still served normally but isn't stored for future requests.VaryCookie You can identify these responses by checking the header and . The header is set to , and Logs show as the cache reason.x-vercel-cacheMISSvary_key_denied:cookieRuntime Logs If Logs…",
+    "image": "",
+    "valueTags": [],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Vercel Connect now accepts service submissions",
+    "link": "https://vercel.com/changelog/vercel-connect-service-submissions",
+    "pubDate": "2026-09-29T22:00:00.000Z",
+    "content": "now lets you submit your own service to the , so you no longer need to wait for Vercel to build a connector for it.Vercel Connectconnectors directory Submitting a service takes four steps: Vercel reviews each submission before publishing it to the directory. Get started from in the dashboard, or read what your service needs to support in the .Submit a Servicedocumentation Read more Describe your service. Add one or more connection methods, using OAuth or an API key. Verify each OAuth method by requesting a real to…",
+    "image": "",
+    "valueTags": [],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Search trace spans from the Vercel CLI",
+    "link": "https://vercel.com/changelog/search-trace-spans-from-the-vercel-cli",
+    "pubDate": "2026-09-29T13:00:00.000Z",
+    "content": "You and your coding agents can now search a project’s trace spans from the terminal with . vercel traces search Each span represents one step in a request, helping you investigate errors, latency, and security-related behavior without opening the dashboard. By default, returns up to 100 spans from the last hour, newest first, so you can search without first finding a request or trace ID. Filter results by environment, service, span name, status, deployment ID, request ID, trace ID, or span ID, or narrow the time r…",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "GPT-6.1 Sol now available on AI Gateway",
+    "link": "https://vercel.com/changelog/gpt-6-1-sol-now-available-on-ai-gateway",
+    "pubDate": "2026-09-29T00:00:00.000Z",
+    "content": "from OpenAI is now available on AI Gateway. It improves on GPT-6 Sol for coding, computer use, and professional work, including reading complex documents and carrying out multi-step workflows.GPT-6.1 Sol The model is suited to agents that need to debug code, work through business tasks, or extract answers from PDFs with tables and charts. It also improves factual accuracy on difficult questions. Its standard input and output pricing is lower than GPT-6 Astra's, while cheaper cached input makes it useful for reques…",
+    "image": "",
+    "valueTags": [
+      "performance",
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Search domains without authentication",
+    "link": "https://vercel.com/changelog/search-domains-without-authentication",
+    "pubDate": "2026-09-28T00:00:00.000Z",
+    "content": "You can now discover domain names and check availability and pricing without signing in to Vercel or providing an access token. This works through the Vercel CLI and Domains Registrar API. With the , search by keyword or domain fragment: Vercel CLI With the , check up to 200 exact domain names in one request. The response shows whether each can be registered and, when available, its registration and renewal prices:Domains Registrar API Authentication is still required to buy or manage domains. Try the public , or…",
+    "image": "",
+    "valueTags": [],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Claude Sonnet 5.5 now available on AI Gateway",
+    "link": "https://vercel.com/changelog/claude-sonnet-5-5-now-available-on-ai-gateway",
+    "pubDate": "2026-09-28T00:00:00.000Z",
+    "content": "from is now available on as .Claude Sonnet 5.5AnthropicAI Gatewayanthropic/claude-sonnet-5.5 Sonnet 5.5 improves on for well-scoped everyday work, from building features and fixing bugs to creating documents, slides, and spreadsheets.Claude Sonnet 5 On coding tasks, Sonnet 5.5 carries changes through multiple steps and checks its work before reporting completion. It produces more polished documents, slides, and spreadsheets with fewer follow-up edits, and writes clearer explanations and reports. It also improves a…",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Vercel Sandbox now supports memory observability",
+    "link": "https://vercel.com/changelog/vercel-sandbox-now-supports-memory-observability",
+    "pubDate": "2026-09-28T00:00:00.000Z",
+    "content": "now includes memory usage data.Vercel Sandbox observability You can access sandbox memory usage data in the dashboard and through the CLI via the command. vercel metrics The Memory Usage card reports average, P75, and P95 memory across your sandboxes, alongside the existing CPU usage and data transfer metrics on the sandbox overview page and the project and team-level pages. On the sandbox detail page, charts are designed to show how close a sandbox is running to its memory ceiling by: Sandbox memory is also avail…",
+    "image": "",
+    "valueTags": [],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Ember-1 from Fireworks now available on AI Gateway",
+    "link": "https://vercel.com/changelog/ember-1-from-fireworks-now-available-on-ai-gateway",
+    "pubDate": "2026-09-27T00:00:00.000Z",
+    "content": "from Fireworks is now available on .Ember-1AI Gateway Ember-1 is a research preview reasoning model built on for coding and agentic workflows.Kimi K3 Fireworks reports approximately 40% fewer generated tokens than Kimi K3 at comparable quality across its evaluations. For coding agents that make repeated model calls, shorter reasoning traces can reduce output costs and the amount of context carried into later steps. Ember-1 supports a 1M-token context window, text and image input, tool calling, and . The Fireworks…",
+    "image": "",
+    "valueTags": [
+      "performance",
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Push images to Vercel Container Registry from GitHub Actions",
+    "link": "https://vercel.com/changelog/vcr-login-github-action",
+    "pubDate": "2026-09-25T09:15:00.000Z",
+    "content": "You can now push container images from GitHub Actions to (VCR) without storing long-lived registry credentials.Vercel Container Registry The new action authenticates your workflow using GitHub OIDC. It exchanges the workflow’s OIDC token for a short-lived Vercel access token, then uses that token to log in to . When the job ends, the action logs out and revokes the Vercel token.vercel/vcr-action/loginvcr.vercel.com To start: Then add the login step before you build and push and the image: The action authenticates…",
+    "image": "",
+    "valueTags": [],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "State of agent skills",
+    "link": "https://vercel.com/blog/state-of-agent-skills",
+    "pubDate": "2026-09-25T06:00:00.000Z",
+    "content": "In seven months, the registry grew to one million agent skills and recorded nearly 280 million installs.skills.sh A skill gives an AI agent reusable instructions for a particular job. Agents are capable but generic; they can do many jobs, but they don't know how a specific person, team, or company does them. A skill supplies that missing context and can be as simple as a file written in ordinary language. Anthropic introduced in October 2025, and Vercel launched the registry three months later.Agent Skillsskills.s…",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Vercel Marketplace database browser now supports Redis",
+    "link": "https://vercel.com/changelog/vercel-marketplace-database-browser-now-supports-redis",
+    "pubDate": "2026-09-25T00:00:00.000Z",
+    "content": "You can now run Redis commands, browse keys, and inspect values directly in the Vercel dashboard using the .Marketplace database browser Both the and integrations in Vercel Marketplace are supported, so you no longer need or a separate database UI.RedisUpstash for Redisredis-cli From your project, open and select a Redis database. The database page now includes two new tabs:Infrastructure > Storage These tabs are currently available only to team members with the Owner role. Learn more in the .Marketplace storage d…",
+    "image": "",
+    "valueTags": [
+      "web_platform"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "Pixel Canary is now available in stealth for free on AI Gateway",
+    "link": "https://vercel.com/changelog/pixel-canary-is-now-available-in-stealth-for-free-on-ai-gateway",
+    "pubDate": "2026-09-25T00:00:00.000Z",
+    "content": "is now available on as . It's free for a limited time while in stealth.Pixel CanaryAI Gatewaystealth/pixel-canary Pixel Canary is strong at coding, including building applications and refactoring existing code. It is well suited to frontend development and mobile app design, from responsive layouts and app screens to navigation and interactive components. On , Pixel Canary ties at a 90.3% baseline success rate, passing 28 of 31 tasks. With Next.js documentation supplied through , it passes 30 of 31 tasks (96.8%),…",
+    "image": "",
+    "valueTags": [
+      "web_platform",
+      "frontend_framework",
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "The Vercel Bug Bounty Program is now publicly available",
+    "link": "https://vercel.com/blog/the-vercel-bug-bounty-program-is-now-publicly-available",
+    "pubDate": "2026-09-24T07:00:00.000Z",
+    "content": "In 2022, we launched a private bug bounty program through HackerOne. Over the last several years, we've worked with HackerOne's VIP program to refine our process, targets, and scope, onboarding thousands of their best researchers and hardening security across our platform. We've translated those learnings into several public bounty programs: Today, we are combining our private and OSS bounty programs into a single, public . Vercel bug bounty program AI has fundamentally changed the nature of bug bounty programs, e…",
+    "image": "",
+    "valueTags": [
+      "ai_coding"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "How Klaviyo shipped 356 internal apps in two weeks on Vercel",
+    "link": "https://vercel.com/blog/how-klaviyo-shipped-356-internal-apps-in-two-weeks-on-vercel",
+    "pubDate": "2026-09-24T04:00:00.000Z",
+    "content": "Klaviyo on Vercel Implementing safeguards across the stack Built a platform for shipping internal apps 512 builders and 356 live apps in two weeks Every app ships SSO-gated and private by default Builders go from idea to live app in 3 minutes Apps are private and SSO-gated through Okta Sensitive environment variables are set at the team level, out of builders' hands Klaviyo's hardened GitHub security is inherited by every project Wiz scans every project, and findings feed Klaviyo's SIEM Public deployment is grante…",
+    "image": "",
+    "valueTags": [
+      "accessibility"
+    ],
+    "source": "Vercel Blog",
+    "sourceUrl": "https://vercel.com/blog",
+    "sourceRole": "official",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_framework",
+    "topics": [
+      "Next.js",
+      "Vercel",
+      "v0",
+      "AI SDK"
+    ]
+  },
+  {
+    "title": "JPEG XL finally ships in Chrome",
+    "link": "https://frontendfoc.us/issues/761",
+    "pubDate": "Wed, 7 Oct 2026 00:00:00 +0000",
+    "content": "🚀 Frontend Focus #​761 — October 7, 2026 | Read on the web How Fast is the Web? Exploring Billions of Real-User Measurements — A new free BigQuery dataset of anonymized real user Core Web Vitals from 10,000 large Cloudflare-fronted sites, updated daily and covering Safari/WebKit as well as Chrome. The post covers some of the initial findings, including how downloads are usually the smallest part of a slow LCP. Townsend & Jansma (Cloudflare) Would You Let Your AI Agent Grade Its Own Homework? — Agents write code f…",
+    "image": "",
+    "valueTags": [
+      "web_platform",
+      "performance",
+      "ai_coding"
+    ],
+    "source": "Frontend Focus",
+    "sourceUrl": "https://frontendfoc.us/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "newsletter_curation",
+    "topics": [
+      "HTML",
+      "CSS",
+      "Web Platform"
+    ]
+  },
+  {
+    "title": "Why GitHub now ships more CSS, not less",
+    "link": "https://frontendfoc.us/issues/760",
+    "pubDate": "Wed, 30 Sep 2026 00:00:00 +0000",
+    "content": "🚀 Frontend Focus #​760 — September 30, 2026 | Read on the web Improving Site Performance by Shipping More CSS — GitHub details how it spent three years purging styled-components and 'CSS-in-JS' from github․com in favor of CSS Modules. The result? Shipping more CSS, but GitHub reports 55% less time to server-side render a page. Josh Black and Marie Lucca (GitHub) 💡 CSS Modules isn't a browser feature or standard, but a widely supported bundler convention where classes in a .module.css file get rewritten to unique…",
+    "image": "",
+    "valueTags": [
+      "web_platform",
+      "css_html",
+      "javascript_ts",
+      "performance"
+    ],
+    "source": "Frontend Focus",
+    "sourceUrl": "https://frontendfoc.us/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "newsletter_curation",
+    "topics": [
+      "HTML",
+      "CSS",
+      "Web Platform"
+    ]
+  },
+  {
+    "title": "Bringing Microsoft Internet Explorer’s proprietary “Interpage Transitions” back to Modern Browsers using the View Transition API",
+    "link": "https://www.bram.us/2026/10/07/ie-page-transitions/",
+    "pubDate": "Wed, 07 Oct 2026 19:07:00 +0000",
+    "content": "Back in late 2024, I started working on a fun end-of-year side project named ie-page-transitions. It”s a CSS + JS library that brings back Microsoft Internet Explorer’s proprietary “Interpage Transitions” to modern browsers, powered by the View Transition API. After sitting unfinished for a while, I finally got all 23 classic effects over the finish line and published the project on page-transitions.style.",
+    "image": "",
+    "valueTags": [
+      "web_platform",
+      "css_html"
+    ],
+    "source": "Bramus van Damme",
+    "sourceUrl": "https://www.bram.us/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "CSS",
+      "View Transitions",
+      "Scroll-driven Animations",
+      "Chrome"
+    ]
+  },
+  {
+    "title": "Why don't more developers 'use the platform'?",
+    "link": "https://javascriptweekly.com/issues/805",
+    "pubDate": "Tue, 6 Oct 2026 00:00:00 +0000",
+    "content": "#​805 — October 6, 2026 Read on the Web JavaScript Weekly Why Don't More Developers 'Use the Platform'? — A thoughtful look at why we often rebuild what browsers already offer, from someone usually on the platform's side. It kicked off an extensive Hacker News discussion, with many arguing native controls and APIs are too limited or awkward to depend on. Nolan Lawson Free Course: Build Ambitious Modern Interfaces Faster with OpenAI Codex — Join Katia Gil Guzman for this free Codex course and learn how agentic codi…",
+    "image": "",
+    "valueTags": [
+      "web_platform",
+      "javascript_ts",
+      "ai_coding"
+    ],
+    "source": "JavaScript Weekly",
+    "sourceUrl": "https://javascriptweekly.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "newsletter_curation",
+    "topics": [
+      "JavaScript",
+      "Frontend Frameworks"
+    ]
+  },
+  {
+    "title": "A-ha's Take on Me, recreated in pure JavaScript",
+    "link": "https://javascriptweekly.com/issues/804",
+    "pubDate": "Tue, 29 Sep 2026 00:00:00 +0000",
+    "content": "#​804 — September 29, 2026 Read on the Web JavaScript Weekly How Anthropic Made Claude's Apps 3x Faster in Two Weeks — A grab bag of performance lessons from a sprint that cut p75 'time-to-typeable' from 3.1s to 0.55s. Em dashes (the irony!) pushed V8 onto a slower regex path, a stray location.reload() caused half a million hidden reloads a day, and more. Wang, Attard, and G (Anthropic) Still Writing Tests? Meticulous Is Here — Notion, Dropbox and Wiz are now using a testing paradigm they can’t ship without. Built…",
+    "image": "",
+    "valueTags": [
+      "javascript_ts",
+      "performance",
+      "ai_coding"
+    ],
+    "source": "JavaScript Weekly",
+    "sourceUrl": "https://javascriptweekly.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "newsletter_curation",
+    "topics": [
+      "JavaScript",
+      "Frontend Frameworks"
+    ]
+  },
+  {
+    "title": "A Practical Guide To Naming Things",
+    "link": "https://smashingmagazine.com/2026/10/how-name-things/",
+    "pubDate": "Tue, 06 Oct 2026 10:00:00 GMT",
+    "content": "A practical guide to naming UI components, with useful resources, naming conventions, and structures. You’ll find more [useful guides](https://www.smashingmagazine.com/category/guides/) and [online workshops](https://smashingconf.com/online-workshops) here on Smashing Magazine, so make sure to browse and explore.",
+    "image": "http://files.smashing.media/articles/how-name-things-choose-accordion-icons/how-name-things.jpg",
+    "valueTags": [],
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "Web Design",
+      "Frontend",
+      "UX",
+      "Accessibility"
+    ]
+  },
+  {
+    "title": "#Corpowid and #Skynet Technologies Will Get You Sued",
+    "link": "https://adrianroselli.com/2026/09/corpowid-and-skynet-technologies-will-get-you-sued.html",
+    "pubDate": "Mon, 28 Sep 2026 20:50:47 +0000",
+    "content": "The market is flooded with so many accessibility overlays that it’s impossible to keep up. I’ve written about the biggest players (plus some also-rans) and provided enough technical details that most readers should know how to quickly evaluate their false claims and poor technology. Never mind their ethical failures as…",
+    "image": "",
+    "valueTags": [
+      "accessibility"
+    ],
+    "source": "Adrian Roselli",
+    "sourceUrl": "https://adrianroselli.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "accessibility",
+    "topics": [
+      "Accessibility",
+      "ARIA",
+      "WCAG"
+    ]
+  },
+  {
+    "title": "Help us shape device audio capture on the web",
+    "link": "https://patrickbrosset.com/articles/2026-10-07-help-us-shape-device-audio-capture-on-the-web/",
+    "pubDate": "2026-10-07T00:00:00.000Z",
+    "content": "Imagine you're building a web app that provides one of these experiences: Custom echo cancellation or voice processing. Note taking from a meeting or lecture playing in another tab or application. Livestream production or music creation tools, which process audio from different sources. To build these, your app needs access to the audio that's playing on the user's device. This could be the audio that's coming from a browser tab, another application, or somewhere else on the device. Let's call this device audio. O…",
+    "image": "",
+    "valueTags": [
+      "web_platform"
+    ],
+    "source": "Patrick Brosset",
+    "sourceUrl": "https://www.patrickbrosset.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "browser_standards",
+    "topics": [
+      "CSS",
+      "DevTools",
+      "Web Platform",
+      "Edge"
+    ]
+  },
+  {
+    "title": "Web Weekly #200 (#blogPost)",
+    "link": "https://www.stefanjudis.com/blog/web-weekly-200/",
+    "pubDate": "2026-10-05T22:00:00.000Z",
+    "content": "Guten Tag! Guten Tag! 👋 Do you know that fetch has two phases? Are you wishing for a better way than CSP to control outgoing network connections? And should you ship import maps in your sites? Turn on the Web Weekly tune and find some answers below. Enjoy! ::: song by=\"Ellen\" title=\"Joshua Idehen - Mum Does The Washing\" youtube=\"PS9Bc_GQBEs\" The first time I heard it, I laughed out loud. The second time, I laughed quietly. The third time, I got up and hung out the laundry that had been sitting in the drum since F…",
+    "image": "",
+    "valueTags": [],
+    "source": "Stefan Judis",
+    "sourceUrl": "https://www.stefanjudis.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "frontend_practice",
+    "topics": [
+      "JavaScript",
+      "CSS",
+      "Web Platform",
+      "Web Weekly"
+    ]
+  },
+  {
+    "title": "Opening the can of tooltips",
+    "link": "https://patrickbrosset.com/articles/2026-10-02-opening-the-can-of-tooltips/",
+    "pubDate": "2026-10-02T00:00:00.000Z",
+    "content": "Last week, I opened a can of worms. I asked on social media: Sometimes all you need is a trustworthy title HTML attribute for a text-only tooltip. Only problem is: it can't be styled! Do you want these tooltips to be stylable? Maybe with a ::tooltip pseudo? See the threads on Mastodon and on Bluesky. If only styling was the only problem! I quickly realized that I hadn't had to think about tooltips on the web for a long time. Turns out, the title attribute is strongly discouraged for most use cases, and for good re…",
+    "image": "",
+    "valueTags": [
+      "css_html"
+    ],
+    "source": "Patrick Brosset",
+    "sourceUrl": "https://www.patrickbrosset.com/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "dev",
+    "area": "dev",
+    "category": "browser_standards",
+    "topics": [
+      "CSS",
+      "DevTools",
+      "Web Platform",
+      "Edge"
+    ]
+  }
+]
