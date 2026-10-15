@@ -1,0 +1,830 @@
+[
+  {
+    "title": "AI 디자인 시스템의 헬베티카를 꿈꾸며",
+    "link": "https://designcompass.org/2026/10/12/the-helvetica-of-ai-design-systems/",
+    "pubDate": "Thu, 15 Oct 2026 01:24:39 GMT",
+    "content": "AI와 함께 프로덕트를 만들면 최소한의 기능을 구현하는 일이 훨씬 쉬워집니다. 원하는 것을 설명하고 몇 번 수정하면 어느 정도 사용할 수 있는 화면이 만들어집니다. 하지만 기능이 작동하는 것과 좋은 UX를 제공하는 것은 다릅니다. 평균 이상의 경험을 만들려면 결과를 계속 확인하고 세부적인 부분을 다듬어야 합니다. 그러다 보면 신경 써야 할 것이 많아집니다.",
+    "image": "https://designcompass.org/wp-content/uploads/2026/10/compass-06.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "29CM, 굵기에 따라 표정이 달라지는 첫 브랜드 서체 공개",
+    "link": "https://designcompass.org/2026/10/09/29cm-editorial-typeface/",
+    "pubDate": "Thu, 15 Oct 2026 01:24:39 GMT",
+    "content": "29CM가 한글날을 맞아 첫 브랜드 서체 ‘29CM 에디토리얼’을 공개했습니다. 새로운 브랜드 메시지 ‘모든 취향 곁에’와 함께 선보인 서체입니다. 패션에서 홈·라이프스타일, 키즈, 푸드 등으로 넓어진 카테고리를 하나의 시각 언어로 연결하도록 개발했습니다. 서로 다른 상품과 콘텐츠의 분위기를 담으면서도 29CM의 인상을 유지하는 데 초점을 맞췄습니다.",
+    "image": "https://designcompass.org/wp-content/uploads/2026/10/29cm-Editorial-Typeface-1-scaled.jpg",
+    "valueTags": [
+      "brand_expression",
+      "commerce_design",
+      "korean_reference",
+      "commerce_campaign_design",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "한국디자인진흥원, 네덜란드 델프트 공과대서 글로벌 AI 융합디자인 워크숍 개최 AI로 미래 모빌리티의 문제를 묻고, 디자인으로 답하다",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40757&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 15 Oct 2026 01:24:32 GMT",
+    "content": "한국디자인진흥원(원장 강윤주, 이하 KIDP)은 10월 4일부터 12일까지 네덜란드 델프트 공과대학교(TU Delft)에서 ‘코리아디자인멤버십 플러스(이하 KDM+)’와 ‘디지털융합디자인 전문인력양성사업’을 연...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20261014021243376_2888.0.jpg",
+    "valueTags": [
+      "korean_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "신당창작아케이드 입주작가 35인 기획전시 ‘각각의 각’ 오는 27일 개최",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40755&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 15 Oct 2026 01:24:32 GMT",
+    "content": "서울문화재단(대표이사 송형종) 신당창작아케이드는 서울공예박물관과 협력해 2026년 입주작가 기획전시 ‘각각의 각’을 오는 10월 27일(화)부터 11월 15일(일)까지 서울공예박물관 전시1동 1층에서 개최한다....",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20261013023326953_7116.0.jpg",
+    "valueTags": [
+      "korean_reference",
+      "promotion_event_design",
+      "commerce_campaign_design"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "'돌봄의 디자인'에서 살펴본 '공공디자인의 가치'",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40754&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 15 Oct 2026 01:24:32 GMT",
+    "content": "디자인 학과에 재학하면서 가장 많이 만나는 주제는",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20261013094911631_6915.0.jpg",
+    "valueTags": [],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "제네시스, GV90 특별 전시 개최",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40753&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 15 Oct 2026 01:24:32 GMT",
+    "content": "제네시스 브랜드(이하 제네시스)가 초대형 전동화 SUV ‘GV90’에 대한 고객들의 높은 관심에 부응하고자 대규모 전시를 개최한다. 제네시스 수지 GV90 특별 전시(1층) 제네시스는 오는 11월 8일(...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20261012093709563_4422.0.jpg",
+    "valueTags": [
+      "brand_expression",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "현대차, ‘디 올 뉴 투싼 테크·익스피리언스 데이’ 개최",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40752&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 15 Oct 2026 01:24:32 GMT",
+    "content": "현대자동차가 7일(수)부터 이틀간 현대 모터스튜디오 고양(경기도 고양시 소재)에서 ‘디 올 뉴 투싼 테크·익스피리언스 데이(The all-new TUCSON Tech·Experience Day)’를 열고 디 올...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20261012093512432_5052.0.jpg",
+    "valueTags": [],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "리빌더AI, 패션월드도쿄서 한국 기업 유일 연사 참여… 아식스와 공동 발표",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40751&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 15 Oct 2026 01:24:32 GMT",
+    "content": "리빌더AI가 일본 패션 전시회 ‘패션월드도쿄 2026(FaW TOKYO)’에서 한국 기업 중 유일하게 연사로 참여해 아식스와 함께 무대에 올랐다. 이번 발표에서는 디자인 생성부터 제조 데이터 활용, 향후 생산 ...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20261012093230795_1866.0.jpg",
+    "valueTags": [
+      "korean_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "위홈, 한글날 맞아 ‘My Hangul Name’ 무료 공개",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40750&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 15 Oct 2026 01:24:32 GMT",
+    "content": "대한민국 유일의 공유숙박 허가특례 플랫폼 위홈(Wehome.me)이 한글날을 맞아 전 세계 누구나 자국어 이름을 한글로 표현하고 다양한 글꼴로 다운받을 수 있는 ‘My Hangul Name’을 무료로 공개했다....",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20261012092758320_201.0.png",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "달라지는 AI 챗봇 트렌드, 지금 필요한 UX 설계는?",
+    "link": "https://ditoday.com/%eb%8b%ac%eb%9d%bc%ec%a7%80%eb%8a%94-ai-%ec%b1%97%eb%b4%87-%ed%8a%b8%eb%a0%8c%eb%93%9c-%ec%a7%80%ea%b8%88-%ed%95%84%ec%9a%94%ed%95%9c-ux-%ec%84%a4%ea%b3%84%eb%8a%94/",
+    "pubDate": "Thu, 15 Oct 2026 01:24:26 GMT",
+    "content": "AI 챗봇을 위한 사용자 신뢰 설계 UX",
+    "image": "https://ditoday.com/wp-content/uploads/2026/10/32b3ec7b-3bb2-490e-836d-b07870f2e28b.png",
+    "valueTags": [
+      "visual_trend",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "DIGITAL iNSIGHT - UIUX",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "VPC",
+    "link": "https://pxdstory.tistory.com/1929",
+    "pubDate": "Mon, 12 Oct 2026 14:30:00 +0900",
+    "content": "들어가며 최근 웹 서비스, 클라우드, 그리고 AI 애플리케이션 개발에서 인프라 구조를 이해하는 일은 점점 더 중요해지고 있습니다. 예전에는 서버 한 대에 웹 서버와 데이터베이스를 함께 올려 운영하는 경우도 많았지만, 요즘은 서비스 규모가 커지고 구조가 복잡해지면서 네트워크 설계 역시 중요한 요소가 되었습니다. AWS를 사용하다 보면 EC2, RDS, Load Balancer, NAT Gateway 같은 여러 서비스를 만나게 됩니다. 그리고 이 서비스들을 구성할 때 거의 항상 함께 등장하는 개념이 있습니다. 바로 VPC입니다. 처음에는 VPC라는 용어가 낯설 수 있습니다. Virtual Private Cloud라는 이름도 어렵게 느껴지고, Subnet, CIDR, Route Table, Internet Gateway, Security Group 같은 용어들이 한꺼번에 나오기 때문에 더 헷갈릴 수 있습니다. 하지만 VPC는 어렵게만 볼 개념은 아닙니다. 조금 쉽게 말하면, VPC는 클라우드 안에 만드는 우리 서비스만의…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "💌 최근 주목받은 해외 옥외광고 5가지 모음",
+    "link": "https://stib.ee/XBkO",
+    "pubDate": "2026-10-14T12:00:34.165370197+09:00",
+    "content": "#인스타트렌드 #옥외광고 #Y2K감성폰트",
+    "image": "",
+    "valueTags": [
+      "visual_trend"
+    ],
+    "scraped": true,
+    "source": "노폴레터 (Notefolio)",
+    "sourceUrl": "https://page.stibee.com/archives/75270/emails",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_newsletter",
+    "topics": [
+      "디자인 트렌드",
+      "타이포그래피",
+      "레퍼런스",
+      "전시·팝업"
+    ]
+  },
+  {
+    "title": "David Rudnick on the “borderline impossible” process of designing a bespoke blackletter typeface for Arsenal",
+    "link": "https://www.itsnicethat.com/features/david-rudnick-johnnie-campbell-arsenal-rocastle-typeface-graphic-design-spotlight-121026",
+    "pubDate": "Thu, 15 Oct 2026 01:25:37 GMT",
+    "content": "For the past four years, the designer has been building a hand-drawn, three-weight type family that pays homage to one of the most beloved players in Arsenal’s history: David Rocastle. Here, It’s Nice That sits down with David and Arsenal Creative Studio lead Johnnie Campbell to get behind the scenes of the mammoth project.",
+    "image": "https://m.itsnicethat.com/original_images/Arsenal_Rocastle_16x9_001.png?class=w1440",
+    "valueTags": [
+      "look_and_feel",
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Design with abandon! Núria Balinha’s zines are the result of working without inhibitions",
+    "link": "https://www.itsnicethat.com/articles/nuria-balinha-graphic-design-discover-141026",
+    "pubDate": "Thu, 15 Oct 2026 01:25:37 GMT",
+    "content": "For the designer, “thinking too much” is just another way of making work that feels “forced or silly”.",
+    "image": "https://m.itsnicethat.com/original_images/nuria-balinha-graphic-design-itsnicethat-still.png?class=w1440",
+    "valueTags": [],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Can motion design have a “body language”? Studio Kiln thinks so",
+    "link": "https://www.itsnicethat.com/articles/nicer-tuesdays-london-september-studio-kiln-141026",
+    "pubDate": "Thu, 15 Oct 2026 01:25:37 GMT",
+    "content": "Studio Kiln are behind motion design for MTV, Vinted, Netflix and even the Baftas, so that’s why Charlie Hockling and Nathan Smith joined our Nicer Tuesdays stage to take the audience behind the golden mask to learn how a brand can “have a body language” and craft, elegance and magic can be felt through expressive motion design.Special thanks to EartH (Evolutionary Arts Hackney).",
+    "image": "https://www.itsnicethat.com/images/social.jpg",
+    "valueTags": [
+      "brand_expression",
+      "motion_interaction",
+      "prototyping",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "“Less bank, more life”: Barkas gives Nigerian digital bank Kuda an identity with the pace of Lagos",
+    "link": "https://www.itsnicethat.com/articles/barkas-kuda-graphic-design-project-131026",
+    "pubDate": "Thu, 15 Oct 2026 01:25:37 GMT",
+    "content": "Spanning chunky geometric letterforms, a custom Naira sign and hand-drawn illustrations, the new brand moves Kuda on from its challenger days.",
+    "image": "https://m.itsnicethat.com/original_images/barkas-kuda-itsnicethat-2.jpeg?class=w1440",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "“I’m merely cosplaying as a type designer”: Raoul Gottschling on chasing ridiculous ‘what if’ questions",
+    "link": "https://www.itsnicethat.com/articles/raoul-gottschling-graphic-design-project-121026",
+    "pubDate": "Thu, 15 Oct 2026 01:25:37 GMT",
+    "content": "The Berlin-based designer talks to us about imposter syndrome, being self taught and the creative process behind his portfolio of imaginative, playful and robust fonts.",
+    "image": "https://m.itsnicethat.com/original_images/Gaueko.PNG?class=w1440",
+    "valueTags": [
+      "web_reference",
+      "look_and_feel"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Mucho reaches beyond Silicon Valley with the branding for Biotic, the organisation behind breakthrough biology",
+    "link": "https://www.itsnicethat.com/articles/mucho-biotic-spudcells-graphic-design-project-081026",
+    "pubDate": "Thu, 15 Oct 2026 01:25:37 GMT",
+    "content": "Boundary-pushing science is often difficult to understand, that’s where clear and accessible brand design often comes in to help. With the promising results from SpudCells, branding agency Mucho has stepped in to introduce innovation to the public.",
+    "image": "https://m.itsnicethat.com/original_images/mucho-biotic-graphic-design-itsnicethat-2.jpg?class=w1440",
+    "valueTags": [
+      "brand_expression",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "How Nomad named and branded six rugby sevens clubs with no home city — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/how-nomad-named-and-branded-six-rugby-sevens-clubs-with-no-home-city",
+    "pubDate": "Thu, 15 Oct 2026 01:24:58 GMT",
+    "content": "Ultimate Sevens is a rugby sevens league – backed by BIA Sports Group, the owners of Premier League football club Sunderland – whose first season took place in Cardiff, Biarritz and London in September 2026. It needed six club identities for that season, which were all created by London-based design studio Nomad. “We had six weeks to do it – to name them, the themes, and design them, and get them trademarked,” explains Co-founder & Executive Creative Director Stu Watson.",
+    "image": "https://the-brandidentity.com/uploads/videos/13992034.jpg",
+    "valueTags": [
+      "visual_trend",
+      "layout_pattern",
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "SMLXL’s identity for MoMA PS1’s Warm Up has letters that dance to music — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/smlxls-identity-for-moma-ps1s-warm-up-has-letters-that-dance-to-music",
+    "pubDate": "Thu, 15 Oct 2026 01:24:58 GMT",
+    "content": "Warm Up, MoMA PS1’s summer festival, has brought together music, art and community in New York for nearly three decades, with past line-ups including Arca, SOPHIE, Solange, Jamie xx, Four Tet and Grimes. Its 28th edition fell in the institution’s 50th anniversary year, with a line-up centred on experimental music. Ahead of its 24th July - 28th August 2026 run, New York and Barcelona-based design company SMLXL came on board to create Warm Up’s musical identity and campaign.",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/10/smlxls-identity-for-moma-ps1s-warm-up-has-letters-that-dance-to-music/MoMA-PS1s-Warm-Up-SMLXL-02.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "promotion_event_design",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Frequency leads LOTIPA and ImaginaryFriend’s identity for a DJ’s matcha — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/frequency-leads-lotipa-and-imaginaryfriends-identity-for-a-djs-matcha",
+    "pubDate": "Thu, 15 Oct 2026 01:24:58 GMT",
+    "content": "Matchalita is a brand of high-grade ceremonial matcha, founded by DJ and artist Carlita. US-based creative company ImaginaryFriend came on board to lead the creative direction for its identity, while Brazil and Portugal-based design studio LOTIPA developed the graphic design system, extending it into motion. “There wasn’t really a moment where ‘our bit’ ended and ‘their bit’ began,” ImaginaryFriend’s Co-Chief Creative Officer Dave Brown tells us.",
+    "image": "https://the-brandidentity.com/uploads/videos/13885755.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "motion_interaction",
+      "design_system",
+      "prototyping",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Why Carolanebel Studio turned a fleur-de-lys into a bird for Club Pays — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/why-carolanebel-studio-turned-a-fleur-de-lys-into-a-bird-for-club-pays",
+    "pubDate": "Thu, 15 Oct 2026 01:24:58 GMT",
+    "content": "Club Pays is a café on Montréal’s Plaza Saint-Hubert that becomes a room for shows, open mics, reading circles and talks in the evening. It is run by OUI Québec, a non-partisan umbrella organisation for the Québec independence movement, and its model comes from the casals of Catalonia and the herriko tabernas of the Basque Country – citizen-run bars that work as meeting places, mobilisation centres and fundraisers. Surpluses from Club Pays’ coffee, beer and events go back into the movement.",
+    "image": "https://the-brandidentity.com/uploads/videos/13888240.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "promotion_event_design",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "How Studio Dial turns tactile generative experiments into brand tools — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/interview/how-studio-dial-turns-tactile-generative-experiments-into-brand-tools",
+    "pubDate": "Thu, 15 Oct 2026 01:24:58 GMT",
+    "content": "Studio Dial bridges physical craft and digital tools to make identities, campaigns and experimental websites, working as a small, collaborative team that treats code as a tactile medium. The London-based practice draws on both sides of founder Natalia Witwicka’s experience, including branding at Pentagram and global AI campaigns with Google Creative Lab and DeepMind. In this interview, we talk about how freelancing led to starting the studio faster than she anticipated, how the team lets mistakes bring a human qua…",
+    "image": "https://the-brandidentity.com/uploads/videos/13951854.jpg",
+    "valueTags": [
+      "web_reference",
+      "look_and_feel",
+      "brand_expression",
+      "promotion_event_design",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Why Field of Practice treats branding as a practice of change — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/interview/why-field-of-practice-treats-branding-as-a-practice-of-change",
+    "pubDate": "Thu, 15 Oct 2026 01:24:58 GMT",
+    "content": "Field of Practice’s Co-founders Kristin Lueke and Nermin Moufti treat branding as a question of who is not in the room when the decisions get made. “Design is never neutral,” they tell us, so a brand that states values has to pay for them in how the business runs. The women and member-owned strategic design studio that they run from Chicago and New Mexico was taking on clients by January 2021, before it even had a name or a bank account. They built it to test whether two people could make a living on a four-day we…",
+    "image": "https://the-brandidentity.com/uploads/articles/2026/10/why-field-of-practice-treats-branding-as-a-practice-of-change/Field-of-Practice-01_2026-10-05-073551_ijmy.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "The idea of home shapes Base Design’s identity for Ray’s Waterfront — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/the-idea-of-home-shapes-base-designs-identity-for-rays-waterfront",
+    "pubDate": "Thu, 15 Oct 2026 01:24:58 GMT",
+    "content": "Ray’s Waterfront is a family-run restaurant and bar on the Small Boat Harbor on Resurrection Bay, in Seward, Alaska – a town of fewer than 3,000 people. Ray Simutis, a former New York taxi driver turned commercial fisherman, and Leslie Simutis, a trained cook, opened it in 1988, Ray working the bar and Leslie the kitchen. After both passed, the restaurant passed to their daughters, Anna and Janina.",
+    "image": "https://the-brandidentity.com/uploads/videos/13593439.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "How Sunny Side Up drew from David Carson’s editorial chaos to craft Co-Museum’s dynamic identity — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/how-sunny-side-up-drew-from-david-carsons-editorial-chaos-to-craft-co-museums-dynamic-identity",
+    "pubDate": "Thu, 15 Oct 2026 01:24:58 GMT",
+    "content": "Co-Museum is aiming to redefine the art landscape by offering asset-backed collectibles, where buyers purchase fractional ownership in underlying cultural assets. For Singapore-based brand agency Sunny Side Up, this mission to make art more inclusive and community-driven demanded a visual approach that would challenge traditional museum aesthetics while honouring the tactile nature of cultural heritage.",
+    "image": "https://the-brandidentity.com/uploads/articles/2025/06/how-sunny-side-up-drew-from-david-carsons-editorial-chaos-to-craft-co-museums-dynamic-identity/Co-Museum-SunnySideUp-01.jpg",
+    "valueTags": [
+      "visual_trend",
+      "look_and_feel",
+      "brand_expression",
+      "commerce_campaign_design",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "PARTERRE subdued identity for Max Manavi-Huber reflects the humanity and technicality in his work — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/parterres-subdued-identity-for-max-manavi-huber-reflects-the-humanity-and-technicality-in-his-work",
+    "pubDate": "Thu, 15 Oct 2026 01:24:58 GMT",
+    "content": "“The colour palette is inspired by Max’s photographs,” Kevin Nowak, Creative Director of Vienna-based design studio PARTERRE tells us, recounting the thought process behind their identity for Vienesse photographer Max Manavi-Huber. “A lot of his photos are shot outside in nature,” Nowak continues, “so it was clear to use an earthy colour palette, and grey, brown uncoated papers for the stationary,” allowing the photographs themselves to take centre stage.",
+    "image": "https://the-brandidentity.com/uploads/articles/2023/04/parterres-subdued-identity-for-max-manavi-huber-reflects-the-humanity-and-technicality-in-his-work/MaxManaviHuberr-Parterre-19.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Concrete poetry, history, and a Scottish wildflower blue collide in Warriors Studio’s brand for BARD — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/concrete-poetry-history-and-a-scottish-wildflower-blue-collide-in-warriors-studios-brand-for-bard",
+    "pubDate": "Thu, 15 Oct 2026 01:24:58 GMT",
+    "content": "BARD is an award-winning architecture practice that has built its vision on the legacy of Scottish architect, designer, and artist Charles Rennie Mackintosh, and are the only architects entrusted with building on Mackintosh’s oeuvre with their work at Grade A-listed building Windyhill.",
+    "image": "https://the-brandidentity.com/uploads/videos/3647859.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Nobody wants your AI app",
+    "link": "https://uxdesign.cc/nobody-wants-your-ai-app-cff8629064a4?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 14 Oct 2026 22:09:56 GMT",
+    "content": "The switchboard operator’s job was automated out of existence. The work it became, the invisible systems that now connect every call, is worth more than the job ever was. AI is about to do the same thing to the app. The people buying AI are blunt about the fact that the future is intelligence that disappears into existing platforms. Everyone wants it invisible and under their total control at the same time. We are all racing to build AI apps that nobody wants to open. Specifically, the standalone AI app, the thing…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "What I told the CFO when he asked why design matters",
+    "link": "https://uxdesign.cc/what-i-told-the-cfo-when-he-asked-why-design-matters-ceadb07c929e?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 14 Oct 2026 22:09:29 GMT",
+    "content": "How to sell design and show the impact of design outcomes to business and finance leaders. Many years ago a business unit CFO told me: “I don’t need another presentation explaining why design is important. I need to know whether investing another million dollars in design will outperform investing it in engineering or marketing.” That conversation changed how I talk about design. Showing the value of design with quantitative data is one of the greatest challenges for a design leader. Our field has been a C-suite p…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "How getting good at your job can stop you getting better",
+    "link": "https://uxdesign.cc/how-getting-good-at-your-job-can-stop-you-getting-better-023b6e7637ec?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 14 Oct 2026 08:53:49 GMT",
+    "content": "Many experienced people plateau out of sight. Whether they keep growing depends partly on the problems they’re given to tackle. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Taste is not a design methodology",
+    "link": "https://uxdesign.cc/taste-is-not-a-design-methodology-e02b37aea148?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 13 Oct 2026 22:27:46 GMT",
+    "content": "Judgment brings the facts. Agency puts them on the table. AI assisted. It has become our favorite answer to AI-generated sameness. The reality is good products come from judgment built on facts, and the agency to use them when the room prefers opinions. Ask Rick Rubin what he does and he’ll tell you he has “no technical ability” and knows nothing about music. In a 2023 interview with Anderson Cooper , the producer said artists pay him for confidence in his own taste. https://medium.com/media/1f83a53654c7bc936b0993…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "How to talk about a design that looks worse on paper",
+    "link": "https://uxdesign.cc/how-to-talk-about-a-design-that-looks-worse-on-paper-da73da6d7b57?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 13 Oct 2026 22:26:58 GMT",
+    "content": "Why it took Microsoft 5 years to roll out an ‘obvious fix’ Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "A Practical Guide To Naming Things",
+    "link": "https://smashingmagazine.com/2026/10/how-name-things/",
+    "pubDate": "Tue, 06 Oct 2026 10:00:00 GMT",
+    "content": "A practical guide to naming UI components, with useful resources, naming conventions, and structures. You’ll find more [useful guides](https://www.smashingmagazine.com/category/guides/) and [online workshops](https://smashingconf.com/online-workshops) here on Smashing Magazine, so make sure to browse and explore.",
+    "image": "http://files.smashing.media/articles/how-name-things-choose-accordion-icons/how-name-things.jpg",
+    "valueTags": [
+      "visual_trend",
+      "commerce_design",
+      "korean_uiux_case",
+      "design_system"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "How to Measure Design System AI Readiness (Open Design System Bench Tutorial)",
+    "link": "https://www.intodesignsystems.com/blog/measure-design-system-ai-readiness",
+    "pubDate": "Thu, 15 Oct 2026 01:25:38 GMT",
+    "content": "One free audit that runs in 10 seconds and one benchmark that grades real agent output on six dimensions: how Christoph Hellmuth from NordVPN found that models ignored his AGENTS.md in 41 of 57 generations and which single README sentence cut hand-rolled buttons from 72% to 22%.",
+    "image": "https://www.intodesignsystems.com/blog/og/measure-design-system-ai-readiness.jpg",
+    "valueTags": [
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Into Design Systems",
+    "sourceUrl": "https://www.intodesignsystems.com/blog",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "Secret agent bot: accessibility matters for the agents even if you can’t see them",
+    "link": "https://uxdesign.cc/secret-agent-bot-accessibility-matters-for-the-agents-even-if-you-cant-see-them-2f53a5670ec9?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 12 Oct 2026 20:19:31 GMT",
+    "content": "Two readers, one page. The agent never sees the surface you designed; it reads the structure underneath. AI assisted. The semantic structure screen readers have used for decades now also decide whether ChatGPT, Claude, Gemini, Grok, and Perplexity can read your page at all. In 2016 I had a series of calls with the federal government’s top accessibility expert as the leader of a design team, and I learned more in those conversations than in years of reading specifications. I had already been building accessible web…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "AI is hollowing out the middle of design, leaving an hourglass behind",
+    "link": "https://uxdesign.cc/ai-is-hollowing-out-the-middle-of-design-leaving-an-hourglass-behind-b7069db250fd?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 12 Oct 2026 20:17:45 GMT",
+    "content": "For fifteen years, the design process kept growing while the time left for making the product kept shrinking. Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "On M.F. Husain and multiple meanings of the colour orange",
+    "link": "https://uxdesign.cc/on-m-f-husain-and-multiple-meanings-of-the-colour-orange-bf4b1a6f5504?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 12 Oct 2026 11:35:46 GMT",
+    "content": "The painting that introduced me to the power and purpose of art Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  }
+]
