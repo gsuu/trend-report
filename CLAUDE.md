@@ -37,6 +37,7 @@ npm run feedback:template    # shortlist 후보별 평가 입력용 md 템플릿
 npm run feedback:apply       # 채운 feedback md를 runs/_feedback/preferences.json에 누적
 npm run feedback:score       # 누적 prefs로 오늘 후보의 feedback-bonus.json 생성
 npm run magazine:export-json # magazine-report.md → public/data/magazine.json
+npm run keywords:studio      # 스튜디오·촬영 키워드 전국 Top 30 + 시·도별 Top 30 (네이버 검색광고 API 키 필요)
 ```
 
 ## 사용자 피드백 누적 (soft sort bonus only)

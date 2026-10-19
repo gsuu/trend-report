@@ -16,6 +16,8 @@
     "feedback:template": "node scripts/feedback/generate_template.mjs",
     "feedback:apply": "node scripts/feedback/apply_feedback.mjs",
     "feedback:score": "node scripts/feedback/score_priority.mjs",
+    "keywords:studio": "node scripts/keywords/fetch_studio_keywords.mjs",
+    "naver:searchad-check": "node scripts/keywords/naver_searchad.mjs",
     "magazine:export-json": "python scripts/magazine/export_json.py",
     "images:fill": "python scripts/tracking/fill_missing_images.py",
     "images:fill:shot": "python scripts/tracking/fill_missing_images.py --screenshot",
