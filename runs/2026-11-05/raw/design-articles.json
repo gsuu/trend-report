@@ -1,0 +1,979 @@
+[
+  {
+    "title": "양손에 맥주를 들고 결제하는 해방감에 관하여",
+    "link": "https://toss.im/tossfeed/article/findyoursafezone-3c",
+    "pubDate": "Tue, 27 Oct 2026 00:09:00 GMT",
+    "content": "페이스페이 담당 마케터의 페스티벌 출장 분투기",
+    "image": "",
+    "valueTags": [
+      "promotion_event_design"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "2분에 1대씩 늘어나는 단말기, 토스플레이스는 오프라인에서 무엇을 보는가",
+    "link": "https://toss.im/tossfeed/article/tossplace-story-1",
+    "pubDate": "Fri, 23 Oct 2026 06:16:00 GMT",
+    "content": "오프라인 결제 시장의 판을 바꾸는 토스플레이스팀의 도전기",
+    "image": "",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "source": "Toss Blog",
+    "sourceUrl": "https://blog.toss.im/",
+    "sourceRole": "official",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_case",
+    "topics": [
+      "Toss",
+      "Design",
+      "Service"
+    ]
+  },
+  {
+    "title": "AI 크롤러 시대의 접근 제어, 그리고 에이전트가 방문하는 웹",
+    "link": "https://pxdstory.tistory.com/1930",
+    "pubDate": "Thu, 22 Oct 2026 17:10:34 +0900",
+    "content": "들어가며 드디어 시리즈 마지막 편입니다. 2편에서 검색엔진 크롤러가 사이트를 발견하는 과정을 다루면서, AI 크롤러(GPTBot, OAI-SearchBot 등)의 존재와 robots.txt에서의 허용 여부를 잠깐 언급했었습니다. 그때는 \"AI 검색에 노출되고 싶다면 열어두는 게 좋다\" 정도로 정리했는데, 이번 편에서는 이 주제를 제대로 다뤄보려고 합니다. 2026년 현재, AI 크롤러 생태계는 꽤 복잡해졌습니다. OpenAI만 해도 봇이 3종류이고, Anthropic도 올해 검색 전용 크롤러를 새로 출시했습니다. 어떤 봇을 막으면 AI 인용이 사라지고, 어떤 봇을 막아도 인용에는 영향이 없습니다. 이 구분을 모르고 \"AI 봇 전부 차단\" 같은 설정을 하면, 의도치 않게 AI 검색 생태계에서 완전히 사라질 수 있어요. 그리고 이제는 크롤러만의 문제가 아닙니다. AI 에이전트가 사용자를 대신해서 사이트를 방문하고, 상품을 비교하고, 결제까지 하는 시대가 시작됐거든요. 이번 편에서 이 흐름까지 정리하고 시리즈를 마무리하겠…",
+    "image": "",
+    "valueTags": [
+      "commerce_design",
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "pxd story",
+    "sourceUrl": "https://story.pxd.co.kr/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": [
+      "UIUX",
+      "Korean Design",
+      "Case Study",
+      "Design System",
+      "AI Tools"
+    ]
+  },
+  {
+    "title": "크리스털, 음악에 반응하는 워드마크로 만든 브랜드 정체성",
+    "link": "https://designcompass.org/2026/11/05/crystal-music-brand-identity-audio-reactive-wordmark/",
+    "pubDate": "Thu, 05 Nov 2026 03:26:52 GMT",
+    "content": "크리스털이 포럼과 함께 브랜드 정체성을 재정립했습니다. 세리프 서체와 단일 그리드를 바탕으로, 트랙의 개별 소리에 반응하는 워드마크를 결합했습니다.",
+    "image": "https://designcompass.org/wp-content/uploads/2026/11/Crystal-Shaped-by-Sound-2-web-thumbnail-scaled.jpg",
+    "valueTags": [
+      "layout_pattern",
+      "brand_expression",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "아이폰 20주년 모델, 측면까지 감싸는 곡면 유리 디자인 루머",
+    "link": "https://designcompass.org/2026/11/05/iphone-20th-anniversary-2027-curved-glass-design/",
+    "pubDate": "Thu, 05 Nov 2026 03:26:52 GMT",
+    "content": "아이폰 20주년 모델에 측면을 감싸는 곡면 유리와 화면 아래 카메라가 적용된다는 루머가 있습니다. 2027년 프로 모델이 대상으로 거론되며, 디자인과 제품명은 아직 확정되지 않았습니다.",
+    "image": "https://designcompass.org/wp-content/uploads/2026/11/iPhone-at-20-Curved-Glass-Rumors-1-web-thumbnail-scaled.jpg",
+    "valueTags": [],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "피그마와 산리오, 헬로키티를 협업 도구에 담은 디자인",
+    "link": "https://designcompass.org/2026/11/03/figma-sanrio-hello-kitty-friends-figjam/",
+    "pubDate": "Thu, 05 Nov 2026 03:26:52 GMT",
+    "content": "피그마와 산리오가 피그잼에 헬로키티와 친구들 12종을 선보였습니다. 캐릭터별 커서와 스티키 노트, 커뮤니티 프로필과 슬라이드 템플릿을 제공하며 뉴욕 팝업으로도 협업을 확장합니다.",
+    "image": "https://designcompass.org/wp-content/uploads/2026/11/Figma-%C3%97-Sanrio-Creating-with-Friends-2-web-thumbnail-scaled.jpg",
+    "valueTags": [
+      "promotion_event_design",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "Design Compass",
+    "sourceUrl": "https://designcompass.org/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "국내 기업 72%, AI 투자 확대… 걸림돌은 거버넌스·데이터 주권",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40796&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 05 Nov 2026 03:26:43 GMT",
+    "content": "클라우데라, ‘2026 기업용 AI 현황’ 보고서 발표 (자료=클라우데라) 국내 기업 10곳 중 7곳이 전년 대비 AI 투자를 늘리며 도입 확장에 속도 내고 있지만, 거버넌스와 데이터 주권 문제에 부딪혀...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20261105094242958_8134.0.jpg",
+    "valueTags": [
+      "korean_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "인터넷 검색부터 초안 작성까지… 행안부, ‘온AI’ 기능 확대 발표",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40795&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 05 Nov 2026 03:26:43 GMT",
+    "content": "공무원 업무에 AI 확대 지원 (자료=행정안전부) 행정안전부(이하 행안부)가 공무원이 정부 업무망에서 인공지능(AI)을 활용해 최신 인터넷 정보를 검색하고, 한글 보고서 초안까지 작성할 수 있도록 지능형...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20261105093613210_2565.0.jpg",
+    "valueTags": [
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "쓰고 그리며 만나는 케데헌… 스타빌로X케이팝 데몬 헌터스 리미티드 에디션 출시",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40794&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 05 Nov 2026 03:26:43 GMT",
+    "content": "글로벌 문구 브랜드 스타빌로(STABILO)가 넷플릭스 애니메이션 영화 ‘케이팝 데몬 헌터스(KPop Demon Hunters)’와 협업한 ‘스타빌로X케이팝 데몬 헌터스 리미티드 에디션’을 출시했다. 스타빌...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20261104093902923_7914.0.png",
+    "valueTags": [
+      "brand_expression",
+      "motion_interaction",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "2026 한국시각정보디자인협회 ‘한글, 새로운 100년’ 국제포스터전 성황리 개최",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40793&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 05 Nov 2026 03:26:43 GMT",
+    "content": "한국시각정보디자인협회(VIDAK, 회장 노상용)는 10월 31일(토) 오전 11시 서울 동대문디자인플라자(DDP) 뮤지엄 둘레길 C구간에서 국제포스터전 ‘한글, 새로운 100년’의 개막식을 열었다. 한국시각정보...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20261103094307961_1727.0.png",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "‘제26회 인간공학 디자인상’ 선정",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40792&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 05 Nov 2026 03:26:43 GMT",
+    "content": "대한인간공학회(회장 정홍인)가 주최하고 인간공학디자인상 위원회(위원장 박태준)가 주관하는 ‘제26회 인간공학 디자인상’의 수상작이 선정됐다. 시상식과 수상작 전시는 오는 11월 19일 제주 한라대학교 컨벤션센터...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20261103093634545_8719.0.png",
+    "valueTags": [],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "한국디자인진흥원, 2026 ISC 혁신성과 경진대회‘대상’수상",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40790&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 05 Nov 2026 03:26:43 GMT",
+    "content": "한국디자인진흥원(원장 강윤주, 이하 KIDP)이 운영하는 디자인·문화콘텐츠 산업별 인적자원개발위원회(ISC, Industrial Skills Council)가 고용노동부와 한국산업인력공단이 주관한 ‘2026 I...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20261102035655360_3417.0.jpg",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "한국디자인진흥원, 성남시 공공기관 협의체와 ESG 환경 실천",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40789&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 05 Nov 2026 03:26:43 GMT",
+    "content": "한국디자인진흥원(원장 강윤주, 이하 KIDP)이 10월 30일(금) 한국잡월드가 주관한 ESG 환경 행사",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20261102034935887_5648.0.png",
+    "valueTags": [
+      "korean_reference",
+      "promotion_event_design"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "“한컴, 문서만 만드는 회사 아닙니다” 한컴과 디지털다임의 브랜드 혁신기 [ICT어워드코리아 2026]",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40786&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 05 Nov 2026 03:26:43 GMT",
+    "content": "한컴 – AI 오케스트레이터 프로젝트 ICT어워드코리아는 치열한 고민과 전문성으로 국내 디지털 산업의 혁신을 이끄는 디지털 에이전시의 노고를 조명하는 자리입니다. 올해도 211개의 ICT 서비스가 출품됐는데...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20261102111317271_7245.0.png",
+    "valueTags": [
+      "brand_expression",
+      "korean_reference",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "하만, JBL 80주년 및 바워스앤윌킨스 60주년 기념 전시 성황리 마쳐",
+    "link": "https://www.designdb.com/?menuno=792&bbsno=40788&siteno=15&page=1&order=new&period=&act=view&ztag=rO0ABXQAOTxjYWxsIHR5cGU9ImJvYXJkIiBubz0iNTk3IiBza2luPSJwaG90b19iYnNfMjAxOSI%2bPC9jYWxsPg%3d%3d&writer=&search_type=&keyword=&key=community&sphereCode=",
+    "pubDate": "Thu, 05 Nov 2026 03:26:43 GMT",
+    "content": "라이프스타일 오디오 및 자동차 기술 분야의 글로벌 리더이자 삼성전자의 자회사인 하만(HARMAN)이 JBL 80주년과 바워스앤윌킨스(Bowers & Wilkins) 60주년을 맞아 서울에서 개최한 특별 전시 ‘...",
+    "image": "http://www.designdb.com/usr/upload/board_thumb/zboardphotogallery182/20261102112244194_1843.0.jpg",
+    "valueTags": [
+      "korean_reference"
+    ],
+    "scraped": true,
+    "source": "DesignDB - Design News",
+    "sourceUrl": "https://www.designdb.com/?menuno=792",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_media",
+    "topics": []
+  },
+  {
+    "title": "24년의 UI·UX 경험, AI 시대의 경쟁력으로... 디엔아이가 그리는 다음은",
+    "link": "https://ditoday.com/24%eb%85%84%ec%9d%98-ui%c2%b7ux-%ea%b2%bd%ed%97%98-ai-%ec%8b%9c%eb%8c%80%ec%9d%98-%ea%b2%bd%ec%9f%81%eb%a0%a5%ec%9c%bc%eb%a1%9c-%eb%94%94%ec%97%94%ec%95%84%ec%9d%b4%ea%b0%80-%ea%b7%b8%eb%a6%ac/",
+    "pubDate": "Thu, 05 Nov 2026 03:26:37 GMT",
+    "content": "디엔아이 황신혁 부사장 인터뷰",
+    "image": "https://ditoday.com/wp-content/uploads/2026/11/ditoday-155896.webp",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "DIGITAL iNSIGHT - UIUX",
+    "sourceUrl": "https://ditoday.com/ui-ux/",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_uiux_media",
+    "topics": []
+  },
+  {
+    "title": "💌 핫한 거만 가져왔어요! 유잼 웹사이트 총정리",
+    "link": "https://stib.ee/W95P",
+    "pubDate": "2026-11-04T12:00:34.780387167+09:00",
+    "content": "#인스타트렌드 #유잼웹사이트 #가을폰트",
+    "image": "",
+    "valueTags": [
+      "visual_trend",
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "노폴레터 (Notefolio)",
+    "sourceUrl": "https://page.stibee.com/archives/75270/emails",
+    "sourceRole": "reference",
+    "locale": "KR",
+    "audience": "uiux",
+    "area": "design",
+    "category": "kr_design_newsletter",
+    "topics": [
+      "디자인 트렌드",
+      "타이포그래피",
+      "레퍼런스",
+      "전시·팝업"
+    ]
+  },
+  {
+    "title": "“Designing a good poster is a dark art” – highlights from this year’s INTL poster competition",
+    "link": "https://www.itsnicethat.com/features/intl-poster-competition-graphic-design-spotlight-021126",
+    "pubDate": "Thu, 05 Nov 2026 03:27:24 GMT",
+    "content": "We chat to INTL festival co-founder James Gilchrist about how poster design has changed over the past decade and what to expect at this year’s show.",
+    "image": "https://m.itsnicethat.com/original_images/Hero_copy.png?class=w1440",
+    "valueTags": [],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "A lived-in approach to sportswear shapes Figur’s graphic systems for brands like Hoka, Sap and Unna",
+    "link": "https://www.itsnicethat.com/articles/figur-graphic-design-discover-041126",
+    "pubDate": "Thu, 05 Nov 2026 03:27:24 GMT",
+    "content": "From ultra marathons to mountaineering, founder of the Swedish studio Lukas Nässil doesn’t just design the brands supplying the adventure and endurance gear, he uses them.",
+    "image": "https://m.itsnicethat.com/original_images/Fig10_UNNA_3.jpg?class=w1440",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Welcome to Hot Cottage, the jack of all trades design studio that zigzags between methods and mediums",
+    "link": "https://www.itsnicethat.com/articles/hot-cottage-ed-davis-rob-cordiner-olivia-radonich-graphic-design-discover-031126",
+    "pubDate": "Thu, 05 Nov 2026 03:27:24 GMT",
+    "content": "Part of the Ed Davis visual universe, design studio Hot Cottage takes joy in the archive, the collage and the alternative references.",
+    "image": "https://m.itsnicethat.com/original_images/ItsNiceThat_HotCottage_BRAINDEAD_36.jpg?class=w1440",
+    "valueTags": [
+      "look_and_feel",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Never eaten a whole fish? This beautifully designed magazine will show you how to",
+    "link": "https://www.itsnicethat.com/articles/beam-eating-the-whole-fish-graphic-design-project-031126",
+    "pubDate": "Thu, 05 Nov 2026 03:27:24 GMT",
+    "content": "The eclectic magazine from US-based studio Beam creatively curates the words of chefs, fishermen, fishmongers, and scientists. What are they talking about? Fish!",
+    "image": "https://m.itsnicethat.com/original_images/BEAM_EatingtheWholeFish_Cover.png?class=w1440",
+    "valueTags": [
+      "visual_trend"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "Mistakes, chaos and meditation: inside the mind of Bráulio Amado",
+    "link": "https://www.itsnicethat.com/features/braulio-amado-graphic-design-spotlight-261026",
+    "pubDate": "Thu, 05 Nov 2026 03:27:24 GMT",
+    "content": "It’s Nice That chats to one of the most revered graphic designers of his generation, about finding idea gems in the sprawl of New York, and the routines and parameters that forge his best work.",
+    "image": "https://m.itsnicethat.com/original_images/Braulio_Hero.png?class=w1440",
+    "valueTags": [
+      "look_and_feel"
+    ],
+    "scraped": true,
+    "source": "It's Nice That",
+    "sourceUrl": "https://www.itsnicethat.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "visual_trend",
+    "topics": []
+  },
+  {
+    "title": "How Afternow put Kinetik’s identity and four products into one system — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/how-afternow-put-kinetiks-identity-and-four-products-into-one-system",
+    "pubDate": "Thu, 05 Nov 2026 03:27:15 GMT",
+    "content": "Kinetik is a healthcare transportation platform that gets members to their appointments, working with health plans, brokers and transportation providers. Croatian agency Afternow has worked with Kinetik for four years, leading its rebrand, redesigning its website twice and rebuilding the design system behind four of its products.",
+    "image": "https://fls-a308a4a0-40a0-4df8-8dbb-117b4b947e86.laravel.cloud/articles/2026/11/how-afternow-put-kinetiks-identity-and-four-products-into-one-system/Kinetik-Afternow-02_2026-11-02-142409_qqvi.jpg",
+    "valueTags": [
+      "web_reference",
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "design_system",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Children’s curiosity leads Kind Studio’s Hatching Dragons rebrand — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/childrens-curiosity-leads-kind-studios-hatching-dragons-rebrand",
+    "pubDate": "Thu, 05 Nov 2026 03:27:15 GMT",
+    "content": "Hatching Dragons is a group of multilingual nurseries in London whose brand had fallen behind what the business had become. “When we started, Hatching Dragons was known as a bilingual Mandarin nursery,” explains Head of Brand & Marketing Marisa Forstyk. “That was true, but it was no longer the whole story. Our curriculum had evolved, and we’d come to see ourselves as early-years development specialists.”",
+    "image": "https://fls-a308a4a0-40a0-4df8-8dbb-117b4b947e86.laravel.cloud/articles/_video-thumbnails/15147130.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Studio Kiln designs an identity for Reset that adapts like its app — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/studio-kiln-designs-an-identity-for-reset-that-adapts-like-its-app",
+    "pubDate": "Thu, 05 Nov 2026 03:27:15 GMT",
+    "content": "Reset is a weight-loss app for people who would rather not count every calorie. A 30-second face scan, read alongside a person’s answers about their habits and where they have struggled to lose weight, places them in one of five Reset types. Ester, Reset’s guide inside the app, then asks questions, learns from the answers and builds a person’s meals around that type – taking the effort out of deciding what and when to eat.",
+    "image": "https://fls-a308a4a0-40a0-4df8-8dbb-117b4b947e86.laravel.cloud/articles/_video-thumbnails/15077984.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "How OB Studio took Reci from a prototype to an identity and live app — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/how-ob-studio-took-reci-from-a-prototype-to-an-identity-and-live-app",
+    "pubDate": "Thu, 05 Nov 2026 03:27:15 GMT",
+    "content": "Reci is a private, invite-only app where people save, share and request service recommendations within a trusted circle of friends. When the Reci team reached out to Paris and London-based OB Studio, the app existed as its first web prototype, built to test that idea. “The next step was a mobile app that could be put in front of real users, and a brand that appealed to the people it was built for,” explains OB Studio’s Co-founder Julie Daled. The studio created the identity, then designed the mobile app and spent…",
+    "image": "https://fls-a308a4a0-40a0-4df8-8dbb-117b4b947e86.laravel.cloud/articles/2026/11/how-ob-studio-took-reci-from-a-prototype-to-an-identity-and-live-app/Reci-OB-Studio-00.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "prototyping",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "COPUS and Kontrapunkt design JUNO the bakery’s cookie brand and site — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/kontrapunkts-packaging-and-copus-site-take-juno-the-bakery-worldwide",
+    "pubDate": "Thu, 05 Nov 2026 03:27:15 GMT",
+    "content": "Since 2018, there has been a queue outside JUNO the bakery, which sits in a quiet corner of Copenhagen’s Østerbro district. Founded by Nina Schmiegelow and Emil Glaser, it is routinely named among the best bakeries in the world. With Danish Butter Cookies by JUNO the bakery, they are taking their first steps beyond the city. The cookies are handmade at JUNO’s facility in Nordvest, Copenhagen, and sold both in the bakery and through its first online shop. “For years, we wanted to make something that could travel, s…",
+    "image": "https://fls-a308a4a0-40a0-4df8-8dbb-117b4b947e86.laravel.cloud/articles/2026/10/kontrapunkts-packaging-and-copus-site-take-juno-the-bakery-worldwide/JUNO-the-bakery-Kontrapunkt-06.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "commerce_design",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "The new rules of finance branding, explained by Koto’s Tom Moloney — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/interview/the-new-rules-of-finance-branding-explained-by-kotos-tom-moloney",
+    "pubDate": "Thu, 05 Nov 2026 03:27:15 GMT",
+    "content": "Tom Moloney, Executive Strategy Director at Koto, argues that fintechs and established banks often end up chasing each other’s strengths as they grow. Fintechs have to prove they are safe and built to last, while banks have to feel faster and simpler. Their playbooks, he adds, now “often tell you the category, not the company,” which is why he wants finance brands to “stop treating creativity as the layer added at the end.” In our conversation, he draws on the global creative company’s work and examples from acros…",
+    "image": "https://fls-a308a4a0-40a0-4df8-8dbb-117b4b947e86.laravel.cloud/articles/_video-thumbnails/14912747.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Estúdio 017’s identity for Garde refuses to tie itself to one logo — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/est%C3%BAdio-017s-identity-for-garde-refuses-to-tie-itself-to-one-logo",
+    "pubDate": "Thu, 05 Nov 2026 03:27:15 GMT",
+    "content": "Garde is a non-profit foundation for contemporary art, fashion and cinema, based in Berlin and started by a collective of anonymous independent artists. Brazilian and Portuguese studio Estúdio 017 created its brand strategy, verbal identity, visual identity and editorial system ahead of its launch.",
+    "image": "https://fls-a308a4a0-40a0-4df8-8dbb-117b4b947e86.laravel.cloud/articles/_video-thumbnails/15160118.jpg",
+    "valueTags": [
+      "visual_trend",
+      "look_and_feel",
+      "brand_expression",
+      "commerce_campaign_design",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Seven years, then burnout: why Nika Belskaya has quit branding — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/interview/seven-years-then-burnout-why-nika-belskaya-has-quit-branding",
+    "pubDate": "Thu, 05 Nov 2026 03:27:15 GMT",
+    "content": "Nika Belskaya has quit designing identities for clients to focus on her work as an artist through Vivid Cereal, her creative practice. Branding was meant to be a temporary financial safety net while she built her art, but seven years went by. The more clients she took on, the less time was left for anything else. In January 2026, she planned a slow shift away from client work, but financial fears had her saying yes to every commercial offer. By October, she was burned out. She announced her exit in her Substack pi…",
+    "image": "https://fls-a308a4a0-40a0-4df8-8dbb-117b4b947e86.laravel.cloud/articles/2026/10/seven-years-then-burnout-why-nika-belskaya-has-quit-branding/Vivid-Cereal-01.JPG",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "Local feel, one look: The Collected Works rebrands shuttle firm Circuit — The Brand Identity – Home of the Greatest in Graphic & Brand Design",
+    "link": "https://the-brandidentity.com/project/local-feel-one-look-the-collected-works-rebrands-shuttle-firm-circuit",
+    "pubDate": "Thu, 05 Nov 2026 03:27:15 GMT",
+    "content": "Circuit is an on-demand electric shuttle service that works with cities to help people get around, often for free, mostly connecting them with local businesses, transit hubs and other nearby destinations. Founded by Alexander Esposito and James Mirras, it started in the Hamptons in 2011 and now runs in more than 50 US cities, where it has given more than 10 million rides – more than 16,000 a month in San Diego alone. New York City and New Orleans-based design studio The Collected Works was commissioned to rebrand…",
+    "image": "https://fls-a308a4a0-40a0-4df8-8dbb-117b4b947e86.laravel.cloud/articles/_video-thumbnails/14878001.jpg",
+    "valueTags": [
+      "look_and_feel",
+      "brand_expression",
+      "korean_uiux_case",
+      "visual_reference"
+    ],
+    "scraped": true,
+    "source": "The Brand Identity",
+    "sourceUrl": "https://the-brandidentity.com/",
+    "sourceRole": "inspiration",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "brand_expression",
+    "topics": []
+  },
+  {
+    "title": "In a world of panic, calm and certainty win",
+    "link": "https://uxdesign.cc/in-a-world-of-panic-calm-and-certainty-win-525c17dd927f?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 04 Nov 2026 22:13:21 GMT",
+    "content": "You can dread the future or help build it. The people who come through this already chose. While panic around what AI means for our industry is the reflex right now, calm is a decision. The calm that comes from knowing what you actually know is the rarest and most valuable thing you can bring to a moment like this. I recently turned 50 and reckoning with that did what it does to so many people. It made me think. Not in a hauntingly dramatic, staring-out-the-window way, but in an introspective way where you start t…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "AI can generate the interface. What makes it worth caring about?",
+    "link": "https://uxdesign.cc/ai-can-generate-the-interface-what-makes-it-worth-caring-about-a5f3a3e81986?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 04 Nov 2026 22:12:46 GMT",
+    "content": "As more product work is generated from shared patterns, designers need to decide where an experience should surprise, celebrate, or simply leave someone alone. Imagine asking an AI tool to design a task-completion state. The result has a checkmark, a friendly message, and a small burst of confetti. It uses the right components. The spacing matches the system. The animation is polished. Now imagine that same response after two different tasks. In one, someone has finished setting up a business they have spent month…",
+    "image": "",
+    "valueTags": [
+      "motion_interaction",
+      "design_system",
+      "prototyping",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "What AI has changed in Design Systems, and what is still up to us",
+    "link": "https://uxdesign.cc/what-ai-has-changed-in-design-systems-and-what-is-still-up-to-us-d4e8e8f4ceb2?source=rss----138adf9c44c---4",
+    "pubDate": "Wed, 04 Nov 2026 22:12:09 GMT",
+    "content": "Three design experts told me how AI is changing the way we build and maintain Design Systems. And led me to think that “the future” is already happening now. What is the human role in creating and maintaining a design system in the AI era? Credit: Anna Lefour with Gemini. You’ve probably read, or even written, one of those LinkedIn posts about someone building a complete Design System in 20 minutes with Claude. Or in 15 minutes with Gemini. Or… you get the idea. Those posts made me curious. I had never built a ful…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Everyone is building AI agents. Who’s designing the stop button?",
+    "link": "https://uxdesign.cc/your-ai-is-non-deterministic-but-your-product-cant-be-3ec2a0cf870c?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 03 Nov 2026 22:40:34 GMT",
+    "content": "We used to design predictable user flows. Now AI can interpret, decide, and act on its own. Here’s why the hardest design decisions happen where that autonomy ends. Showing where AI stops in the flow — by gpt In September 2025, researchers at Thinking Machines Lab ran the same prompt through a language model 1,000 times. They set the temperature to zero, a setting that should, in theory, make token selection deterministic. They got 80 different completions from the same prompt, model, and settings. What’s even mor…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_system",
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "I let AI build. I don’t let AI decide.",
+    "link": "https://uxdesign.cc/i-let-ai-build-i-dont-let-ai-decide-b3892a87feb3?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 03 Nov 2026 22:37:40 GMT",
+    "content": "A long workbench split down the middle, finished tools stacked on one side and a single open notebook on the other. My list of tasks I give models without a second thought and what I review until the tools evolve. I’ve used generative models for almost four years and designed machine learning applications for seven before that, so people ask what I delegate. I approach this as an apologist, someone who makes the case for the technology in the right context. That’s generous, since an OpenAI model declared me dead i…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "What do you do when a design solution is already pre-built?",
+    "link": "https://uxdesign.cc/what-do-you-do-when-a-design-solution-is-already-pre-built-85d20edba31f?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 03 Nov 2026 22:36:49 GMT",
+    "content": "How to deal with the “Fastest Idea in the Room” Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Agents struggle with the same bad UX we do",
+    "link": "https://uxdesign.cc/agents-struggle-with-the-same-bad-ux-we-do-98415f2b8981?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 03 Nov 2026 22:36:33 GMT",
+    "content": "Computer-use agents can’t guess, improvise, or ask a coworker. That makes them the most honest usability testers we’ve ever had. The first time I watched an agent fail on a vendor portal, I recognized the failure immediately. Not because I understood the model. Because I’d failed in exactly the same place myself. For example, I watched a run where an agent reached a form that had two buttons labeled “Continue” and “Submit”, chose the wrong one, and the run stalled. This wasn’t the agent’s fault, it was bad UX. I d…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_ai_workflow",
+      "ux_method"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "What I learned teaching AI prototyping at university",
+    "link": "https://uxdesign.cc/what-i-learned-teaching-ai-prototyping-at-university-b9fff222625e?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 03 Nov 2026 10:09:09 GMT",
+    "content": "Teaching students how to prototype with AI tools instead of Figma revealed exciting possibilities and uncomfortable trade-offs. It also offered valuable insight into how non-tech people can create apps with generative AI. I teach digital prototyping to fashion design undergraduates and master’s students at UPM’s Fashion School. My course focuses on exploring app concepts that can enrich the fashion experience. Past project ideas ranged from aesthetic affinity social communities (and dating) and live-action fashion…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "prototyping",
+      "design_ai_workflow"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "The pole and the stake",
+    "link": "https://uxdesign.cc/the-pole-and-the-stake-2cfba6c08bca?source=rss----138adf9c44c---4",
+    "pubDate": "Tue, 03 Nov 2026 10:08:25 GMT",
+    "content": "On going with the current, changing it, and what designers are asked to do Continue reading on UX Collective »",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "How to Run a Local LLM on Your Mac: Guide for Designers",
+    "link": "https://www.intodesignsystems.com/blog/how-to-run-local-llm-mac-designers",
+    "pubDate": "Thu, 05 Nov 2026 03:27:27 GMT",
+    "content": "Run Gemma or Qwen on your own Mac with LM Studio. Which model fits 8 to 64 GB of RAM, why you take the 4-bit MLX build and a Claude Code prompt that sets it all up for you.",
+    "image": "https://www.intodesignsystems.com/blog/img/local-llm-mac/cover.jpg",
+    "valueTags": [
+      "korean_uiux_case"
+    ],
+    "scraped": true,
+    "source": "Into Design Systems",
+    "sourceUrl": "https://www.intodesignsystems.com/blog",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "Zalando Design System: AI Prototyping with Claude Code",
+    "link": "https://www.intodesignsystems.com/blog/zalando-design-system-ai-prototyping-tool",
+    "pubDate": "Thu, 05 Nov 2026 03:27:27 GMT",
+    "content": "How the Zalando Design System team built an AI prototyping tool with Claude Code skills, the Figma MCP and design.md guidelines. 98 PRs from 20+ designers.",
+    "image": "https://www.intodesignsystems.com/blog/img/zalando-zds-capsule/00-cover.jpg",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_system",
+      "design_ai_workflow"
+    ],
+    "scraped": true,
+    "source": "Into Design Systems",
+    "sourceUrl": "https://www.intodesignsystems.com/blog",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "design_system",
+    "topics": []
+  },
+  {
+    "title": "A Spark Of Color In November’s Gray (2026 Wallpapers Edition)",
+    "link": "https://smashingmagazine.com/2026/10/desktop-wallpaper-calendars-november-2026/",
+    "pubDate": "Sat, 31 Oct 2026 08:00:00 GMT",
+    "content": "Let’s kick of November with a new collection of desktop wallpapers! Designed by creatives from across the globe, the wallpapers come in a variety of screen resolutions and can be downloaded for free. Enjoy!",
+    "image": "http://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/8edeb776-d8d5-4b5b-867f-6964f7addcd6/nov-17-colorful-autumn-preview-opt.png",
+    "valueTags": [
+      "visual_trend",
+      "look_and_feel",
+      "commerce_design",
+      "commerce_campaign_design"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  },
+  {
+    "title": "State of a system",
+    "link": "https://uxdesign.cc/state-of-a-system-5c8473db1e9?source=rss----138adf9c44c---4",
+    "pubDate": "Mon, 02 Nov 2026 17:56:46 GMT",
+    "content": "Almost eight years ago, I started working on a design system that I got the opportunity to revisit just a few years later. The second round became as big a push with far fewer people. Now, three years after ending the work I’m finally ready to share that experience. My thesis: A rigid design kit is a cache of design decisions, prone to becoming obsolete with the requirements constantly evolving. Documenting practices and boundaries leaves powerless responsibility for upholding coherence to designers and developers…",
+    "image": "",
+    "valueTags": [
+      "korean_uiux_case",
+      "design_system"
+    ],
+    "source": "UX Design (Medium)",
+    "sourceUrl": "https://uxdesign.cc/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "global_uiux_media",
+    "topics": [
+      "UX",
+      "interaction",
+      "case study"
+    ]
+  },
+  {
+    "title": "Accordion Icons: Which Work Best?",
+    "link": "https://smashingmagazine.com/2026/10/accordion-icons-which-work-best/",
+    "pubDate": "Fri, 23 Oct 2026 13:00:00 GMT",
+    "content": "A closer look at accordion icons, why split menus are harmful, and why it’s better not to have icons and text labels link to different actions. Plus, why the caret is the safest icon choice. You’ll find more [useful guides](https://www.smashingmagazine.com/category/guides/) and [online workshops](https://smashingconf.com/online-workshops) here on Smashing Magazine, so make sure to browse and explore.",
+    "image": "http://files.smashing.media/articles/how-name-things-choose-accordion-icons/accordion-icons-which-work-best.jpg",
+    "valueTags": [
+      "visual_trend",
+      "commerce_design",
+      "korean_uiux_case"
+    ],
+    "source": "Smashing Magazine - UX Design",
+    "sourceUrl": "https://www.smashingmagazine.com/category/ux-design/",
+    "sourceRole": "reference",
+    "locale": "global",
+    "audience": "uiux",
+    "area": "design",
+    "category": "ux_practice",
+    "topics": [
+      "UX",
+      "Design Practice",
+      "Case Study"
+    ]
+  }
+]
